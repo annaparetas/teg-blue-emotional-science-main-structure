@@ -13,11 +13,15 @@ One manifest drives everything. For each entry the script:
    reported;
 4. inserts a "carried" banner after <body>.
 
-Re-running the script regenerates every carried file from source, so edits
-belong in the manifest or the transforms, never in the carried files.
+Re-running the script regenerates active carried files from source. A file can
+graduate to site ownership after an explicit owner decision. Graduated files
+remain in the manifest for provenance and link mapping, but the carry command
+does not overwrite them. Later Engine research crosses into a graduated file
+only through a reviewed site edit and a dated decision entry.
 
 Usage:  python3 scripts/carry.py            (all entries)
         python3 scripts/carry.py 03-        (entries whose new path starts with 03-)
+        python3 scripts/carry.py --ownership (validate and report graduated files)
 """
 
 from __future__ import annotations
@@ -33,15 +37,15 @@ ENGINE = ROOT.parent / "inner-compass-nervous-system-organization-gradient"
 ENGINE_REL = "../inner-compass-nervous-system-organization-gradient"
 ESM_S1 = "codex/esm-s1-emotional-signal-map"   # newer signal-map text
 
-# Files that were carried once and are now edited on the site. They stay in the
-# manifest for provenance and link mapping but are never regenerated: re-running
-# would erase site-side edits (Fluid-reference decoupling, Fury and Frenzy rows,
-# Body-condition orientations, the 4 September wording pass).
-SITE_OWNED = {
-    "01-signal-map/emotion/fluid.html",
-    "01-signal-map/emotion/chronic.html",
-    "01-signal-map/grounding/neurochemistry.html",
-    "01-signal-map/grounding/recruitment-persistence-and-recovery.html",
+# These files crossed from the Engine as reviewed snapshots and then graduated
+# to site ownership. The Engine remains the home of later research and full
+# provenance; the site owns the current curated presentation. The date records
+# the owner decision that changed the transfer mode.
+GRADUATED_SITE_FILES = {
+    "01-signal-map/emotion/fluid.html": "4 September 2026",
+    "01-signal-map/emotion/chronic.html": "4 September 2026",
+    "01-signal-map/grounding/neurochemistry.html": "4 September 2026",
+    "01-signal-map/grounding/recruitment-persistence-and-recovery.html": "4 September 2026",
 }
 
 # ---------------------------------------------------------------- manifest
@@ -439,13 +443,39 @@ def source_text(old_rel: str, ref: str | None) -> str:
                           check=True, capture_output=True, text=True).stdout
 
 
+def report_ownership() -> int:
+    """Validate each graduated file and print its continuing Engine source."""
+    manifest = {new_rel: (old_rel, ref) for new_rel, old_rel, ref, _, _ in MANIFEST}
+    failed = False
+    print("Site-owned files with continuing Development Engine provenance:")
+    for new_rel, date in sorted(GRADUATED_SITE_FILES.items()):
+        if new_rel not in manifest:
+            print(f"ERROR  {new_rel} is not present in MANIFEST")
+            failed = True
+            continue
+        old_rel, ref = manifest[new_rel]
+        site_ok = (ROOT / new_rel).is_file()
+        try:
+            source_text(old_rel, ref)
+            source_ok = True
+        except (FileNotFoundError, subprocess.CalledProcessError):
+            source_ok = False
+        source_label = f"{old_rel} @ {ref or 'Engine working tree'}"
+        status = "ok" if site_ok and source_ok else "ERROR"
+        print(f"{status:5s}  {new_rel}  | graduated {date} | source {source_label}")
+        failed = failed or not (site_ok and source_ok)
+    return 1 if failed else 0
+
+
 def main() -> int:
+    if sys.argv[1:] == ["--ownership"]:
+        return report_ownership()
     only = sys.argv[1] if len(sys.argv) > 1 else ""
     for new_rel, old_rel, ref, transform, banner in MANIFEST:
         if not new_rel.startswith(only):
             continue
-        if new_rel in SITE_OWNED:
-            print(f"skip  site-owned  {new_rel}")
+        if new_rel in GRADUATED_SITE_FILES:
+            print(f"skip  site-owned since {GRADUATED_SITE_FILES[new_rel]}  {new_rel}")
             continue
         text = source_text(old_rel, ref)
         if transform:

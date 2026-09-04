@@ -3,22 +3,23 @@
 Dated entries, newest first. A decision recorded here changes the canon page
 only when the page is edited and its "last approved" date moves.
 
-## 2026-09-04 · Map of emotions as a generated view
+## 2026-09-04 · Interactive Signal Map as a generated view
 
 `map.html` shows the whole map as one navigable structure: two groups, nine
 families, thirty-five signals, the five proposed additional experiences drawn
-outside the families, and one record per signal with its Fluid reading and
-its Chronic reading. It is a view, not a second home. Every card is drawn
-from the rosters and the neurochemistry page by
+outside the families, and one record per signal. It is a view, not a second
+home. Records are drawn from the canon page, rosters and neurochemistry page by
 `scripts/build-signal-map-data.py` into `data/signals.js`, the same pattern
 the Inner Compass uses for Model 2's rows. Re-run the script after any roster
 edit.
 
-Rules the view keeps visible: a signal's place never changes with the reading
-or the selected Position; the Fluid Position strip shows illustrative
-foregrounding only; the Chronic strip selects a far Chronic reference profile
-to highlight, never a person; Body-condition signals show the roster's note
-instead of a Chronic table. Status: working view.
+The taxonomy is the primary map. Only Emotion records offer Fluid and Chronic
+tabs; their Chronic tab contains the Position selector as a comparison tool.
+Body-condition records show their Fluid record and a separate Chronic-access
+boundary because they do not have Chronic tables. Every proposed additional
+experience has a shareable URL. A signal's family never changes with the
+reading or selected Position, and a selected profile is a far Chronic reference
+pattern, never a person. Status: working view.
 
 ## 2026-09-04 · Wording pass and site ownership of the four carried pages
 
@@ -39,9 +40,13 @@ cannot identify "a Gradient Position" instead of "Organisation A". The family
 headers say the Fluid reference is characteristic and illustrative.
 
 The four carried Signal Map pages (Fluid roster, Chronic roster,
-neurochemistry, recruitment bridge) are now site-owned. `scripts/carry.py`
-keeps them in the manifest for provenance and link mapping but skips them on
-every run, so site-side edits are not regenerated away.
+neurochemistry, recruitment bridge) graduated to site ownership on 4 September
+2026. `scripts/carry.py` keeps their Engine source and reviewed ref in the
+manifest, validates the boundary through `--ownership`, and skips them during
+carry runs so an older snapshot cannot erase the current site synthesis. The
+Development Engine continues to own later research and full provenance. A
+later Engine finding crosses into these files only through review, an explicit
+site edit and a dated decision entry.
 
 Still open from the same note: an upstream F1 and F2 block on the Fluid page
 before the four guiding questions, and a matching bridge on the

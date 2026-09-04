@@ -18,15 +18,6 @@ window.TEG_SIGNALS = {
   "D": "Dominance & Repression",
   "Z": "Collapse / Shutdown"
  },
- "foregrounding": {
-  "X": "Contentment, ease, curiosity — quiet feeling that asks nothing of anyone.",
-  "A": "Gratitude, love, appreciation, care — feeling moves freely in both directions.",
-  "A↔B": "Disappointment, confusion, frustration, shame, guilt — felt fully, without mobilising energy.",
-  "B": "Fear, anger, alarm — telling us something is really wrong.",
-  "C": "The same fear, anger and alarm — held, and used to steer what needs doing.",
-  "D": "Rage, fury, frenzy — feeling becomes the force.",
-  "Z": "Flat, numb, far away — feeling no longer arrives."
- },
  "body_chronic_note": "Body Signals — breathlessness, pain, temperature, elimination, thirst, hunger, tiredness — do not get chronic tables of their own. Their participation can change through several routes. A signal may remain clear, move into the background, be noticed late, become difficult to differentiate, be interpreted differently or guide action without becoming a distinct feeling. Low-output, immobilisation and disconnection patterns can also affect access in different ways; the same report does not establish one mechanism. The nine signals themselves are defined on the Fluid page.",
  "groups": [
   {
