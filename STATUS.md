@@ -68,6 +68,13 @@ active Development Engine: it owns full research, owner review, open model
 development, branches and provenance. Material crosses into this site only
 through an explicit status and owner decision.
 
+The site owns the current curated canon and presentation. A carried working or
+grounding page can graduate to site ownership only through a dated concept
+decision. It keeps its Engine source in the carry manifest, but it is no longer
+overwritten automatically. Later Engine research crosses that boundary through
+review and an explicit site edit. Run `python3 scripts/carry.py --ownership` to
+validate the current list and its continuing Engine provenance.
+
 The sibling `teg-blue-emotional-science/` repository supplied the numbered
 site architecture adopted here on 4 September 2026. It remains preserved as
 migration history after this site passes verification.

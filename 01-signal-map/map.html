@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="The map of emotions: two signal groups, nine families and thirty-five signals, each read under Fluid and under Chronic organisation. A generated view of the Signal Map rosters.">
-  <title>Map of Emotions · Emotional Signal Map · TEG-Blue</title>
+  <meta name="description" content="A navigable map of nine Body-condition signals and twenty-six Emotion signals. Emotion records can be compared under Fluid and Chronic organisation; Body-condition records retain a separate Chronic-access boundary.">
+  <title>Body-condition and Emotion Signals · Emotional Signal Map · TEG-Blue</title>
   <link rel="stylesheet" href="../assets/teg-blue.css">
   <style>
     :root {
@@ -15,21 +15,14 @@
     .status-block { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 0 0 36px; }
     .status-block > div { padding: 16px 18px; background: rgba(255,255,255,.9); border: 1px solid var(--line); border-radius: 14px; font-size: 13px; }
     .status-block strong { display: block; margin-bottom: 6px; color: var(--muted); font: 800 10px/1.3 var(--utility); letter-spacing: .1em; text-transform: uppercase; }
-    .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px; margin: 0 0 18px; }
-    .controls .label { font: 800 10px/1.3 var(--utility); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
-    .choice-row { display: flex; flex-wrap: wrap; gap: 8px; }
-    .choice { padding: 9px 14px; border: 1px solid var(--line); border-radius: 10px; background: white; color: var(--ink); font: 750 13px/1.2 var(--body-font); cursor: pointer; }
-    .choice[aria-pressed="true"] { background: var(--ink); color: white; border-color: var(--ink); }
-    .choice small { display: block; margin-top: 3px; font: 500 11px/1.3 var(--body-font); opacity: .75; }
-    .position-strip { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; margin: 0 0 10px; }
+    .record-position { margin: 18px 0 0; padding: 14px; background: var(--ground); border: 1px solid var(--line); border-radius: 12px; }
+    .record-position > p { margin: 0 0 10px; font-size: 13px; color: var(--body); }
+    .position-strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin: 0; }
     .position-strip button { padding: 10px 8px; border: 1px solid var(--line); border-radius: 10px; background: white; text-align: left; cursor: pointer; color: var(--ink); }
     .position-strip button b { display: block; font: 800 13px/1.2 var(--utility); }
     .position-strip button span { display: block; margin-top: 4px; font-size: 11px; line-height: 1.3; color: var(--body); }
     .position-strip button[aria-pressed="true"] { outline: 2px solid var(--ink); outline-offset: 1px; }
-    .position-strip[data-plane="chronic"] button { border-top: 5px solid var(--pc); }
-    .position-strip[data-plane="fluid"] button { border-top: 5px solid var(--line); }
-    .strip-note { margin: 0 0 30px; padding: 14px 18px; background: #edfafd; border: 1px solid #bfeaf0; border-radius: 12px; font-size: 14px; }
-    .strip-note strong { color: var(--ink); }
+    .position-strip button { border-top: 5px solid var(--pc); }
     .map-layout { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr); gap: 26px; align-items: start; }
     .structure { min-width: 0; }
     .group { margin: 0 0 26px; padding: 20px 22px 8px; background: rgba(255,255,255,.85); border: 1px solid var(--line); border-radius: 16px; }
@@ -58,6 +51,8 @@
     .plane-tabs { display: flex; gap: 6px; margin: 18px 0 0; border-bottom: 1px solid var(--line); }
     .plane-tabs button { padding: 10px 12px 8px; border: 0; border-bottom: 3px solid transparent; background: none; color: var(--muted); font: 750 12px/1.2 var(--utility); letter-spacing: .06em; text-transform: uppercase; cursor: pointer; }
     .plane-tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--ink); }
+    .plane-tabs button:focus-visible, .position-strip button:focus-visible, .signal:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
+    .reading-panel { min-width: 0; }
     .fields { margin: 18px 0 0; }
     .fields > div { padding: 12px 0; border-bottom: 1px solid var(--line); }
     .fields > div:last-child { border-bottom: 0; }
@@ -97,11 +92,11 @@
     <section class="hero" aria-labelledby="page-title">
       <div class="hero__content">
         <p class="eyebrow">01 · Emotional Signal Map · map view</p>
-        <h1 id="page-title">The map of emotions</h1>
-        <p class="hero__lede">Two signal groups, nine families and thirty-five signals, each read twice: under Fluid organisation and under Chronic organisation. Choose a signal to open its record. Nothing here is written on this page; every card is drawn from the rosters.</p>
+        <h1 id="page-title">Body-condition and emotion signals</h1>
+        <p class="hero__lede">Two signal groups organise thirty-five signals into nine families. Choose a signal to open its record. The twenty-six Emotion signals can be compared under Fluid and Chronic organisation. The nine Body-condition signals retain their Fluid records and a separate boundary for how access can change under Chronic organisation.</p>
         <div class="hero__meta">
           <span class="status-chip">Group → family → signal</span>
-          <span class="status-chip">Identity does not change between readings</span>
+          <span class="status-chip">Family membership does not change</span>
           <span class="status-chip">No signal proves a Position</span>
         </div>
       </div>
@@ -110,23 +105,13 @@
 
   <main id="main" class="shell" style="padding-top:34px">
     <div class="status-block" aria-label="Page status">
-      <div><strong>Status</strong>Working view · generated from the rosters by <code>scripts/build-signal-map-data.py</code></div>
+      <div><strong>Status</strong>Working view · generated from the Signal Map sources by <code>scripts/build-signal-map-data.py</code></div>
       <div><strong>Owner</strong>01 · Emotional Signal Map. The families, members and records live on the <a href="index.html">canon page</a>, the <a href="emotion/fluid.html">Fluid roster</a> and the <a href="emotion/chronic.html">Chronic roster</a>.</div>
-      <div><strong>Reads</strong>The two rosters and the neurochemistry grounding page. Re-run the build script after any roster edit.</div>
+      <div><strong>Reads</strong>Signal records are generated from the canon page, the two rosters and the neurochemistry grounding page. Re-run the build script after any source edit.</div>
       <div><strong>Does not establish</strong>That a feeling's interpretation is complete, that one signal maps to one Gradient Position, or that any signal prescribes behaviour.</div>
     </div>
 
     <div class="counts" id="counts" aria-live="polite"></div>
-
-    <div class="controls">
-      <span class="label">Reading</span>
-      <div class="choice-row" id="plane-choices" role="group" aria-label="Choose the reading">
-        <button class="choice" type="button" data-plane="fluid" aria-pressed="true">Fluid<small>present-responsive organisation</small></button>
-        <button class="choice" type="button" data-plane="chronic" aria-pressed="false">Chronic<small>recurrent or difficult-to-update organisation</small></button>
-      </div>
-    </div>
-    <div class="position-strip" id="position-strip" data-plane="fluid" role="group" aria-label="Positions"></div>
-    <p class="strip-note" id="strip-note"></p>
 
     <div class="map-layout">
       <div class="structure" id="structure" aria-label="The map"></div>
@@ -148,8 +133,6 @@
     (function () {
       var D = window.TEG_SIGNALS, KEY = "teg.signalmap.v1";
       var POS = D.positions;
-      var FLUID_POS = { "X": "Baseline", "A": "Connection / Belonging", "A↔B": "Safety Checking", "B": "Protection / Defence", "C": "Strategic Management", "D": "Power Mobilisation", "Z": "Shutdown" };
-      var FLUID_COND = { "X": "Safe to be alone", "A": "Safe with others", "A↔B": "Safety uncertain", "B": "Threat", "C": "Persistent threat", "D": "Life threat", "Z": "Mobilisation unavailable" };
       var PCOL = { "X": "var(--p-X)", "A": "var(--p-A)", "A↔B": "var(--p-AB)", "B": "var(--p-B)", "C": "var(--p-C)", "D": "var(--p-D)", "Z": "var(--p-Z)" };
       var FAMCOL = { "belonging": "var(--fam-belonging)", "belonging-at-risk": "var(--fam-belonging-at-risk)", "threat-protection": "var(--fam-threat-protection)", "survival-rage": "var(--fam-survival-rage)" };
       var FLUID_FIELDS = [
@@ -165,6 +148,10 @@
         try { var raw = JSON.parse(localStorage.getItem(KEY)); if (raw) { if (raw.plane === "chronic") s.plane = "chronic"; if (POS.indexOf(raw.position) > -1) s.position = raw.position; } } catch (e) {}
         var h = decodeURIComponent(location.hash.replace(/^#/, ""));
         if (h && D.signals[h]) s.signal = h;
+        else if (h.indexOf("additional-") === 0) {
+          var additionalSlug = h.replace(/^additional-/, "");
+          D.additional.some(function (a, i) { if (slug(a.name) === additionalSlug) { s.signal = "additional:" + i; return true; } return false; });
+        }
         return s;
       }
       function save() { try { localStorage.setItem(KEY, JSON.stringify({ plane: state.plane, position: state.position })); } catch (e) {} }
@@ -185,6 +172,7 @@
         return out;
       }
       function slugOf(name) { for (var k in D.signals) if (D.signals[k].name.toLowerCase() === name.toLowerCase()) return k; return ""; }
+      function slug(name) { return String(name).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); }
 
       function renderCounts() {
         var body = 0, emo = 0; for (var k in D.signals) { if (D.signals[k].group === "body") body++; else emo++; }
@@ -193,20 +181,11 @@
           "<span><b>" + body + "</b>Body-condition signals</span><span><b>" + emo + "</b>Emotion signals</span><span><b>" + D.additional.length + "</b>proposed additional experiences, outside the families</span>";
       }
 
-      function renderStrip() {
-        var strip = document.getElementById("position-strip"), note = document.getElementById("strip-note");
-        strip.setAttribute("data-plane", state.plane);
-        strip.innerHTML = POS.map(function (p) {
-          var name = state.plane === "fluid" ? FLUID_POS[p] : D.chronic_profiles[p];
-          var sub = state.plane === "fluid" ? FLUID_COND[p] : "Chronic " + p;
-          return '<button type="button" data-position="' + esc(p) + '" aria-pressed="' + (state.position === p) + '" style="--pc:' + PCOL[p] + '"><b>' + esc(p) + "</b><span>" + esc(name) + "</span><span>" + esc(sub) + "</span></button>";
-        }).join("");
-        if (state.plane === "fluid") {
-          note.innerHTML = "<strong>Illustrative foregrounding at " + esc(state.position) + " · " + esc(FLUID_POS[state.position]) + ".</strong> " + esc(D.foregrounding[state.position] || "") +
-            " <em>These are examples of what may be readable under this organisation, not the contents of the Position. Every signal keeps its place in its family whatever the organisation.</em>";
-        } else {
-          note.innerHTML = "<strong>Chronic " + esc(state.position) + " · " + esc(D.chronic_profiles[state.position]) + ".</strong> Selecting a profile highlights that column in each record. The seven profiles are far Chronic reference patterns from Model 2: a pattern in a context and time, never a kind of person. The Fluid organisation with the same letter is the comparison point.";
-        }
+      function chronicPositionPicker() {
+        return '<div class="record-position"><p><strong>Choose a Chronic reference profile.</strong> This highlights one comparison row. A profile describes a pattern in a context and time, never a kind of person.</p>' +
+          '<div class="position-strip" role="group" aria-label="Choose a Chronic reference profile">' + POS.map(function (p) {
+            return '<button type="button" data-position="' + esc(p) + '" aria-pressed="' + (state.position === p) + '" style="--pc:' + PCOL[p] + '"><b>' + esc(p) + "</b><span>" + esc(D.chronic_profiles[p]) + "</span></button>";
+          }).join("") + "</div></div>";
       }
 
       function renderStructure() {
@@ -234,7 +213,7 @@
         var el = document.getElementById("record");
         if (!state.signal) {
           el.style.setProperty("--fam", "var(--line)");
-          el.innerHTML = '<p class="eyebrow">Record</p><h2>Choose a signal</h2><p class="empty">Each signal has one identity and two readings. The Fluid reading gives its function, felt experience, condition information, an example, a possible completing condition and what may carry over. The Chronic reading follows the same signal across the seven far Chronic reference profiles.</p><p class="empty" style="padding-top:0;font-size:13px;color:var(--muted)">Links open a record here and in the address bar, so a record can be shared by URL.</p>';
+          el.innerHTML = '<p class="eyebrow">Signal record</p><h2>Choose a signal</h2><p class="empty">Every signal opens one record. Emotion signals can be compared under Fluid and Chronic organisation. Body-condition signals show their Fluid record and a separate boundary for how access may change under Chronic organisation.</p><p class="empty" style="padding-top:0;font-size:13px;color:var(--muted)">The address changes with every selection, including proposed additional experiences, so the record can be shared by URL.</p>';
           return;
         }
         if (state.signal.indexOf("additional:") === 0) {
@@ -251,20 +230,27 @@
         var groupName = s.group === "body" ? "Body-condition signal" : "Emotion signal";
         var html = '<p class="eyebrow">' + esc(groupName) + " · " + esc(fam ? fam.name : "") + "</p><h2>" + esc(s.name) + "</h2>";
         html += '<p class="where">Family: <a href="' + esc(fam.canon) + '">' + esc(fam.name) + "</a> · " + esc(s.group === "body" ? fam.problem : fam.relationship) + "</p>";
-        html += '<p class="invariant">Identity holds across both readings: ' + esc(s.fluid.condition) + "</p>";
-        html += '<div class="plane-tabs" role="tablist"><button type="button" role="tab" data-tab="fluid" aria-selected="' + (state.plane === "fluid") + '">Fluid reading</button><button type="button" role="tab" data-tab="chronic" aria-selected="' + (state.plane === "chronic") + '">Chronic reading</button></div>';
-        if (state.plane === "fluid") {
-          html += '<dl class="fields">' + FLUID_FIELDS.filter(function (f) { return s.fluid[f[0]]; }).map(function (f) {
+        html += '<p class="invariant">' + (s.group === "body" ? "Core condition information: " : "Identity holds across both readings: ") + esc(s.fluid.condition) + "</p>";
+        if (s.group === "body") {
+          html += '<section class="reading-panel" aria-label="Fluid record"><dl class="fields">' + FLUID_FIELDS.filter(function (f) { return s.fluid[f[0]]; }).map(function (f) {
             return "<div><dt>" + esc(f[1]) + (f[2] ? "<small>" + esc(f[2]) + "</small>" : "") + "</dt><dd>" + esc(s.fluid[f[0]]) + "</dd></div>";
-          }).join("") + "</dl>";
-          if (s.group === "emotion" && fam.association) html += '<p class="note"><strong>Characteristic Fluid association.</strong> ' + esc(fam.association) + "</p>";
-        } else if (s.chronic) {
-          html += '<ul class="chronic-cells">' + POS.map(function (p) {
-            return '<li style="--pc:' + PCOL[p] + '" data-active="' + (state.position === p) + '"><b>' + esc(p) + " · Chronic " + esc(D.chronic_profiles[p]) + "</b>" + esc(s.chronic[p]) + "</li>";
-          }).join("") + "</ul>";
-          html += '<p class="note">Cells are characteristic possibilities, not verdicts. The Fluid record above is the comparison point: the same emotion, with access, weighting, interpretation, expression or use changed. It does not become another emotion.</p>';
+          }).join("") + '</dl><p class="note"><strong>Under Chronic organisation.</strong> ' + esc(D.body_chronic_note) + "</p></section>";
         } else {
-          html += '<p class="note"><strong>No Chronic table for Body-condition signals.</strong> ' + esc(D.body_chronic_note) + "</p>";
+          html += '<div class="plane-tabs" role="tablist" aria-label="Emotion reading"><button id="fluid-reading-tab" type="button" role="tab" data-tab="fluid" aria-controls="signal-reading" aria-selected="' + (state.plane === "fluid") + '" tabindex="' + (state.plane === "fluid" ? "0" : "-1") + '">Fluid reading</button><button id="chronic-reading-tab" type="button" role="tab" data-tab="chronic" aria-controls="signal-reading" aria-selected="' + (state.plane === "chronic") + '" tabindex="' + (state.plane === "chronic" ? "0" : "-1") + '">Chronic reading</button></div>';
+          html += '<section id="signal-reading" class="reading-panel" role="tabpanel" aria-labelledby="' + (state.plane === "fluid" ? "fluid-reading-tab" : "chronic-reading-tab") + '">';
+          if (state.plane === "fluid") {
+            html += '<dl class="fields">' + FLUID_FIELDS.filter(function (f) { return s.fluid[f[0]]; }).map(function (f) {
+              return "<div><dt>" + esc(f[1]) + (f[2] ? "<small>" + esc(f[2]) + "</small>" : "") + "</dt><dd>" + esc(s.fluid[f[0]]) + "</dd></div>";
+            }).join("") + "</dl>";
+            if (fam.association) html += '<p class="note"><strong>Characteristic Fluid association.</strong> ' + esc(fam.association) + " This describes possible foregrounding, not family membership or proof of a Position.</p>";
+          } else {
+            html += chronicPositionPicker();
+            html += '<ul class="chronic-cells">' + POS.map(function (p) {
+            return '<li style="--pc:' + PCOL[p] + '" data-active="' + (state.position === p) + '"><b>' + esc(p) + " · Chronic " + esc(D.chronic_profiles[p]) + "</b>" + esc(s.chronic[p]) + "</li>";
+            }).join("") + "</ul>";
+            html += '<p class="note">Rows are characteristic possibilities, not verdicts. The Fluid record is the comparison point: the same emotion, with access, weighting, interpretation, expression or use changed. It does not become another emotion.</p>';
+          }
+          html += "</section>";
         }
         html += '<p class="grounding">Grounding: <a href="' + esc(s.grounding) + '">neurochemistry entry</a>' + (s.grounding_status ? '<span class="status-word status-word--working">' + esc(s.grounding_status) + "</span>" : "") +
           ' · <a href="' + (s.group === "body" ? "emotion/fluid.html#body-signals" : "emotion/fluid.html#" + esc(fam.id === "belonging" ? "belonging-emotions" : fam.id)) + '">roster row</a>' +
@@ -273,31 +259,40 @@
       }
 
       function render() {
-        document.querySelectorAll("#plane-choices .choice").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.plane === state.plane)); });
-        renderStrip(); renderStructure(); renderRecord();
+        renderStructure(); renderRecord();
       }
       function open(id) {
         state.signal = id;
-        if (id && id.indexOf("additional:") !== 0) { if (location.hash !== "#" + id) history.replaceState(null, "", "#" + id); }
+        if (id) {
+          var hash = id.indexOf("additional:") === 0 ? "additional-" + slug(D.additional[+id.split(":")[1]].name) : id;
+          if (location.hash !== "#" + hash) history.replaceState(null, "", "#" + hash);
+        }
         render();
         if (window.innerWidth <= 960) document.getElementById("record").scrollIntoView({ behavior: "smooth", block: "start" });
       }
 
-      document.getElementById("plane-choices").addEventListener("click", function (e) {
-        var b = e.target.closest("[data-plane]"); if (!b) return; state.plane = b.dataset.plane; save(); render();
-      });
-      document.getElementById("position-strip").addEventListener("click", function (e) {
-        var b = e.target.closest("[data-position]"); if (!b) return; state.position = b.dataset.position; save(); render();
-      });
       document.getElementById("structure").addEventListener("click", function (e) {
         var b = e.target.closest("[data-signal],[data-additional]"); if (!b) return;
         open(b.dataset.signal || "additional:" + b.dataset.additional);
       });
       document.getElementById("record").addEventListener("click", function (e) {
         var t = e.target.closest("[data-tab]"); if (t) { state.plane = t.dataset.tab; save(); render(); return; }
+        var p = e.target.closest("[data-position]"); if (p) { state.position = p.dataset.position; save(); render(); return; }
         var o = e.target.closest("[data-open]"); if (o) { e.preventDefault(); open(o.dataset.open); }
       });
-      window.addEventListener("hashchange", function () { var h = decodeURIComponent(location.hash.replace(/^#/, "")); if (D.signals[h]) open(h); });
+      document.getElementById("record").addEventListener("keydown", function (e) {
+        var t = e.target.closest("[data-tab]"); if (!t || (e.key !== "ArrowLeft" && e.key !== "ArrowRight")) return;
+        e.preventDefault(); state.plane = state.plane === "fluid" ? "chronic" : "fluid"; save(); render();
+        document.querySelector('[data-tab="' + state.plane + '"]').focus();
+      });
+      window.addEventListener("hashchange", function () {
+        var h = decodeURIComponent(location.hash.replace(/^#/, ""));
+        if (D.signals[h]) open(h);
+        else if (h.indexOf("additional-") === 0) {
+          var additionalSlug = h.replace(/^additional-/, "");
+          D.additional.some(function (a, i) { if (slug(a.name) === additionalSlug) { open("additional:" + i); return true; } return false; });
+        }
+      });
 
       renderCounts(); render();
     })();

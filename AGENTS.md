@@ -28,7 +28,11 @@ Before editing:
    terminology authority;
 9. treat `../teg-blue-emotional-science/` as migration history after this
    structure has been verified, not as a second active site.
+10. treat files listed in `scripts/carry.py` as graduated site-owned files:
+    preserve their Engine provenance, but do not overwrite them from an older
+    Engine snapshot; later Engine research crosses through an explicit review,
+    a site edit and a dated decision entry.
 
 After editing, verify local links, HTML structure, keyboard access, responsive
-layout and Git scope. Commit this repository independently from the active
-development engine.
+layout, generated Signal Map data, the ownership report and Git scope. Commit
+this repository independently from the active development engine.
