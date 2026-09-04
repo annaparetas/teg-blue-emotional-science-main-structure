@@ -36,7 +36,6 @@
     .family h3 a:hover { text-decoration: underline; }
     .family .fam-line { margin: 4px 0 10px; font-size: 13px; color: var(--body); }
     .family .fam-assoc { margin: 0 0 10px; font-size: 12px; color: var(--muted); }
-    .family .fam-assoc[hidden] { display: none; }
     .signals { display: flex; flex-wrap: wrap; gap: 7px; margin: 0; padding: 0; list-style: none; }
     .signal { padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px; background: white; color: var(--ink); font: 650 13px/1.2 var(--body-font); cursor: pointer; }
     .signal:hover { border-color: var(--fam, var(--ink)); }
@@ -194,7 +193,7 @@
             g.families.map(function (f) {
               var col = famColour(f.id, g.id);
               var line = g.id === "body" ? f.problem : f.relationship;
-              var assoc = g.id === "emotion" ? '<p class="fam-assoc"' + (state.plane === "fluid" ? "" : " hidden") + ">Characteristic Fluid association · " + esc(f.association) + "</p>" : "";
+              var assoc = g.id === "emotion" ? '<p class="fam-assoc">Characteristic Fluid association · ' + esc(f.association) + "</p>" : "";
               return '<div class="family" style="--fam:' + col + '"><h3><a href="' + esc(f.canon) + '">' + esc(f.name) + '</a></h3><p class="fam-line">' + esc(line) + "</p>" + assoc +
                 '<ul class="signals">' + f.members.map(function (s) {
                   var sig = D.signals[s];
