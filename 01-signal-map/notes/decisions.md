@@ -3,6 +3,21 @@
 Dated entries, newest first. A decision recorded here changes the canon page
 only when the page is edited and its "last approved" date moves.
 
+## 2026-09-04 · All five Body-condition families now have an initial synthesis
+
+Thermal-balance, Visceral-capacity and Restorative-capacity now have the same
+five-field records as the first two families: condition, possible conscious
+access, what may raise priority, what may allow updating and interpretive
+boundary. Their grounding received an initial paper-level orientation. This
+closes the missing-family review; it does not turn the five TEG-Blue families
+into established scientific natural kinds or complete a systematic evidence
+review.
+
+Fury and Frenzy now have distinct seven-position readings in the Chronic
+roster, developed from their existing Fluid definitions. These are working
+framework syntheses. They do not establish that a Gradient Position produces
+an emotion or that an emotion identifies a Position.
+
 ## 2026-09-02 · Transferred into this folder; one home for the emotion list
 
 The families and members now live only on [index.html](../index.html) and
@@ -62,12 +77,9 @@ Signals as a separate section, and Fury and Frenzy as working cells.
 
 ## Open
 
-- Thermal-balance, visceral-capacity and restorative-capacity families:
-  detailed review pending.
 - Individual emotion records: split out of the rosters as each is reviewed.
   Love first; its evidence review is deferred.
 - Nine-layer filter and schema: cross-owner review with Models 1 to 3, F2 and
   Behaviour/HPR pending.
-- Fury and Frenzy: Chronic readings pending.
 - ~~Gradient-page duplicate of the emotion tables: drop when Model 2 moves.~~
   Done 2 September 2026: Model 2 transferred and the duplicate dropped.

@@ -4,7 +4,7 @@ The only board. Per concept: what is approved, what is open, what comes next.
 Updated whenever a canon page's "last approved" date moves or a concept is
 transferred. Dates only; no commit hashes, branch names or session codes.
 
-Last updated: 3 September 2026.
+Last updated: 4 September 2026.
 
 ## Status words
 
@@ -20,7 +20,7 @@ Last updated: 3 September 2026.
 | --- | --- | --- | --- | --- |
 | Foundations | Approved texts · working synthesis | 20 Aug 2026 (texts carried as governing) | Anna to confirm the canon page as the settled synthesis. Whether the compact formulation names Inner Compass as the product. Candidate "educational translation framework" language. | Anna reads the page. |
 | 00 · Emotions as Information | Approved | 2 Sept 2026 | Umbrella name is a working name. | None pending. Revisit only if the Signal Map changes the family level. |
-| 01 · Emotional Signal Map | Approved structure · working records | 2 Sept 2026 | Three Body-condition families await detailed review. Individual emotion records pending. Love evidence deferred. Nine-layer filter awaits cross-owner review. Fury and Frenzy Chronic readings pending. | Thermal-balance family review, then split the first individual emotion record (Love) out of the rosters. |
+| 01 · Emotional Signal Map | Approved structure · working records | 4 Sept 2026 | Individual emotions remain in the two complete rosters rather than separate pages. Love evidence remains explicitly deferred. The nine-layer filter awaits cross-owner review. | Anna reviews the three new Body-condition family syntheses and the Fury and Frenzy Chronic rows. Split Love into the first individual record when its evidence work resumes. |
 | 02 · Model 1 · ESS · CLS · ME | Approved names, relationship, access page · working definitions | 26 Aug 2026 (names, access page) | Anna to confirm the canon-page definitions (ESS seven components, CLS eight, ME, access, timing without a clock). ESS expansion (Emotional vs Embodied). One name for the three capacities. Felt access, non-CLS cognition, concern, integration, testability. M1-S1 handoff to export. Chronic capacity rows on the Gradient tables await owner review. ME Access Dials, the Model 1 add-on, built 3 Sept 2026 (working): Anna to confirm the ESS/CLS reading of the three capacities, the mode table and the tends-toward rule. | Anna reads the canon page and the controller; confirms the wiring; decides stage 2. |
 | 03 · Model 2 · Gradient | Approved name, positions, rules · working definitions | 26 Aug 2026 (name, positions, premise) | Position-by-position definitions under owner review. Display names (Baseline, Strategic Management, Power Mobilisation, Shutdown; "Gradient Position"). Fluid–Chronic profile proposed, revision required. Regulation definition gate not passed. Return matrices unwritten. Depth and intermediate-layers pages to merge. **Correction flagged:** the 27 Aug summary labelled X and A↔B differently from every table; canon follows the tables. | Anna confirms the X / A↔B labels, then the Regulation Pass definition gate. |
 | 04 · Model 3 · ESC | Approved name, ownership, two-cycle architecture · working grounding | 23 Aug 2026 (canonical page, name) · 27 Aug 2026 (ESC is Model 3) | Anna to confirm the canon page. Expanded name (Emotional–Somatic–Cognitive–Logical Cycle) proposed, not adopted. Claim-level grounding of completion, carryover, Return and learning. Cycle page's boundary labels to move to the three levels. Core source pack unreconciled (archived). | Anna reads the canon page; then F4–F12. |
