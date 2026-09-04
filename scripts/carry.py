@@ -33,6 +33,17 @@ ENGINE = ROOT.parent / "inner-compass-nervous-system-organization-gradient"
 ENGINE_REL = "../inner-compass-nervous-system-organization-gradient"
 ESM_S1 = "codex/esm-s1-emotional-signal-map"   # newer signal-map text
 
+# Files that were carried once and are now edited on the site. They stay in the
+# manifest for provenance and link mapping but are never regenerated: re-running
+# would erase site-side edits (Fluid-reference decoupling, Fury and Frenzy rows,
+# Body-condition orientations, the 4 September wording pass).
+SITE_OWNED = {
+    "01-signal-map/emotion/fluid.html",
+    "01-signal-map/emotion/chronic.html",
+    "01-signal-map/grounding/neurochemistry.html",
+    "01-signal-map/grounding/recruitment-persistence-and-recovery.html",
+}
+
 # ---------------------------------------------------------------- manifest
 # new path (relative to ROOT), old path (relative to the old repo root),
 # git ref to read from (None = working tree), transform name, banner.
@@ -432,6 +443,9 @@ def main() -> int:
     only = sys.argv[1] if len(sys.argv) > 1 else ""
     for new_rel, old_rel, ref, transform, banner in MANIFEST:
         if not new_rel.startswith(only):
+            continue
+        if new_rel in SITE_OWNED:
+            print(f"skip  site-owned  {new_rel}")
             continue
         text = source_text(old_rel, ref)
         if transform:
