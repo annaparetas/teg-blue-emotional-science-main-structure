@@ -3,36 +3,60 @@
 Dated entries, newest first. A decision recorded here changes a canon page
 only when the page is edited and its "last approved" date moves.
 
+## 2026-09-04 · Model 1 names and access boundaries settled
+
+Anna approved the following corrections after the Model 1 comparison with the
+active Development Engine:
+
+- **ESS remains Emotional Somatic System.** "Embodied" is broader than the
+  territory this grouping owns and could make ESS appear to include CLS.
+- The collective name is **ME access capacities**: bodily information access
+  and use, affective-sharing access, and mentalizing access and use.
+- Each capacity **draws primarily on** a processing territory. Bodily access
+  and affective sharing draw primarily on emotional–somatic processing;
+  mentalizing draws primarily on reflective–symbolic processing. None belongs
+  exclusively to one system, and all can require interaction across the whole
+  organism.
+- The ME Access Dials remain graded in four conceptual bands. The eight binary
+  configurations are landmarks made from the two lower and two upper bands;
+  they are not measurements or types.
+- A Model 1 access configuration does not assign, predict or tend toward a
+  Model 2 organisation or an Inner Compass mode. The automatic mode result and
+  mode table are removed from the add-on. A mode is read only from organisation,
+  position and plane in the Inner Compass.
+
+The Development Engine remains the active home of its owner pages, foundation,
+working records and provenance. The site canon is a reviewed synthesis connected
+to those sources. No Engine file is absorbed, frozen, replaced or suppressed by
+this decision.
+
 ## 2026-09-03 · The three capacities become the Model 1 add-on
 
 Anna's decision: the canon page explains the two information systems and ME
 freely; an add-on named the ME Access Dials, [me-access.html](../me-access.html),
-holds the three capacities as slider-toggles and shows visually what changes when ME can
-read one information system, both, or neither. The add-on merges the
-2 September controller and the carried capacities page: the dials and four
-bands, a reading per band, the eight configurations with Anna's three
-worked examples, the five quality dimensions, and a working table of the
-four modes over the three capacities with the mode each configuration tends
-toward if it stabilises. The controller is deleted; the carried capacities
-page moves to `notes/sources/relational-capacities.html` as provenance.
+holds the capacities as slider-toggles and shows visually what changes in their
+four bands and eight configurations. The add-on integrates the functions of
+the 2 September site controller and a reviewed snapshot of the Engine's
+relational-capacities page. The earlier site controller is retained in Git
+history; the carried snapshot remains at
+`notes/sources/relational-capacities.html` as provenance. The active Engine
+page remains in the Development Engine.
 The Inner Compass reads the setting and links here; it does not embed the
 controls.
 
-Recorded for Anna's confirmation, not yet approved:
+The following proposals were recorded here on 3 September and revised by the
+4 September decision above:
 
-- Bodily and affective access are ME reading ESS; mentalizing is ME using
-  CLS. The glossary still defines the capacities by process.
-- The "tends toward" rule and the mode table (Connection: both systems
-  readable; Protection: narrowed toward threat or absorbed into the other;
-  Control: CLS usable with ESS low; Dominance: CLS usable with neither ESS
-  dial reliably readable). Dominance is written as instrumental, not
-  superior, mentalizing, following the clinical bridge. The table describes
-  stabilised forms; Fluid D drops everything, mentalizing included.
+- The earlier exclusive ESS/CLS reading is replaced by the primary-contribution
+  language above.
+- The earlier "tends toward" rule and mode table are not adopted. Mode remains
+  an Inner Compass reading of Model 2 organisation, position and plane.
 - Dominance confirmed by Anna as the mode word.
 
 ## 2026-09-02 · Capacity controller built (stage 1)
 
-`controller.html` (deleted 3 September 2026, absorbed into the add-on) held the three capacity controls,
+`controller.html` (retired from the active site on 3 September 2026 and retained
+in Git history) held the capacity controls,
 graded in four bands, with the configuration named beneath and links that
 open the Gradient carrying the setting. Shared state in
 `assets/capacities.js`, kept in the viewer's browser and in the link. The
@@ -46,13 +70,13 @@ Anna's confirmation.
 
 ## 2026-09-02 · Transferred into this folder; definitions written to be settled
 
-- The canon page [index.html](../index.html) is new. It absorbs the 23
-  August companion draft (old `foundation/21`), the 21 August model sketch,
+- The canon page [index.html](../index.html) is new. It synthesises the 23
+  August companion draft (`foundation/21`), the 21 August model sketch,
   the 19 August terminology decision, the process-rows table from the old
   owner page and the 27 August summary from the former main structure. It
   defines ESS by seven components and CLS by eight, ME as participant,
   coordinated conscious access as the relationship, the presence-to-use
-  distinction, the three capacities, and the ethical branch after access.
+  distinction, the ME access capacities, and the ethical branch after access.
 - **Anna's decision, 2 September 2026:** keep the teaching lines. "Fast ·
   embodied · largely outside conscious awareness" stays as ESS's teaching
   line and "reflective · symbolic · able to work across time" as CLS's, each
@@ -72,11 +96,12 @@ Anna's confirmation.
   terminology decision and the model sketch are carried into `notes/`; the
   legacy deep dive and the description collection are archived under
   `notes/sources/`.
-- The old owner page `models/01-information-systems/ess-cls-me.html` is not
-  carried. Its content is absorbed; it stays in the frozen repository.
+- The Engine owner page `models/01-information-systems/ess-cls-me.html` is not
+  copied into the site. It remains a current owner page in the active
+  Development Engine and is connected to this site's reviewed synthesis.
 
 **Plan recorded from Anna, 2 September 2026.** Model 1 becomes the controller
-for the three capacities that currently sit as sliders on the Gradient page.
+for the capacities that currently sit as sliders on the Gradient page.
 Model 1 describes ESS, CLS and what ME is conscious of; moving the capacity
 controls shows the Model 2 dimensions change. Decisions still needed: binary
 or graded controls; which Gradient rows respond; whether depth moves per
@@ -122,13 +147,9 @@ completed the same day.
 
 ## Open
 
-- ESS expansion: Emotional or Embodied.
-- One name for the three capacities.
 - Felt access ownership; cognition that is not CLS; non-verbal reflection;
   concern and integration; testability; regulation.
 - Export the M1-S1 handoff.
 - Owner review of the Chronic capacity rows on the Gradient tables.
-- Anna confirms the add-on: the ESS/CLS reading of the three capacities,
-  the mode table and the tends-toward rule.
 - Per-band readings on the Compass cards (owner content).
 - Two diagrams: a full scientific architecture and a simpler public one.

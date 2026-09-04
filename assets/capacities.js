@@ -1,4 +1,4 @@
-/* TEG-Blue · shared state for the three ME-access capacities.
+/* TEG-Blue · shared state for the three ME access capacities.
  *
  * Model 1 owns the controls (02-model-1-ess-cls-me/me-access.html, the add-on).
  * The Inner Compass reads the same state; Model 2 pages only echo it.

@@ -165,7 +165,7 @@ Use BPD only for the diagnosed clinical research family or explicitly measured f
 
 ## What this permits TEG-Blue to say
 
-TEG-Blue can show that the three relational capacities may be available in calm conditions and become uneven under attachment stress. It can describe affective sharing without self-location, mentalizing that becomes overconfident, or identity information that changes with relationship conditions.
+TEG-Blue can show that the three ME access capacities may be available in calm conditions and become uneven under attachment stress. It can describe affective sharing without self-location, mentalizing that becomes overconfident, or identity information that changes with relationship conditions.
 
 It should not say that configuration `110` is BPD, that emotional intensity means fusion, that BPD means excessive empathy, that changing states mean dishonesty or that attachment adversity determines adult harm.
 

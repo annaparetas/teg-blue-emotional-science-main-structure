@@ -12,7 +12,7 @@ Synthesis companion: [Six-Cluster Synthesis and Emerging F3 Construct Families](
 
 ## The missing bridge
 
-The three capacities can vary independently:
+The three ME access capacities can vary independently:
 
 1. bodily information access and use;
 2. affective-sharing access;
@@ -115,7 +115,7 @@ These are candidate research routes, not diagnoses attached to codes.
 | **100 · self-contained** | Self-state is available while the other is neither felt nor represented. | interpersonal withdrawal · detachment · attachment avoidance · avoidant coping · social anhedonia · schizoid traits · situational self-protection | Is solitude adaptive, is other-processing unnecessary, or has recurrent withdrawal narrowed relationship and feedback? |
 | **101 · self + mentalizing** | Self and represented other are available without affective resonance. | low affective empathy · cognitive empathy · psychopathy traits · narcissistic antagonism · Machiavellianism · professional detachment · moral reasoning | What makes accurate social understanding constrain action—or become an instrument for personal outcome? |
 | **110 · shared affect** | Self and other are felt, but the other's perspective or cause is poorly represented. | emotional dysregulation · projection · misattribution · mentalization difficulty · borderline features · personal distress · conflict escalation | Can shared intensity be separated, checked and translated into proportionate action? |
-| **111 · integrated access** | All three capacities can participate. | empathy integration · reflective functioning · emotion differentiation · compassion · relational regulation · repair | Are the capacities accurate, flexible and ethically used, or merely available? |
+| **111 · integrated access** | All three ME access capacities can participate. | empathy integration · reflective functioning · emotion differentiation · compassion · relational regulation · repair | Are the capacities accurate, flexible and ethically used, or merely available? |
 
 ## Expanded research families
 

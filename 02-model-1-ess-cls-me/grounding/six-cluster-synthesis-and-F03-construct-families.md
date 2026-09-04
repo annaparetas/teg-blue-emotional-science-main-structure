@@ -158,7 +158,7 @@ Every future F3 construct must keep at least these variables visible:
 
 The following statements are sufficiently bounded for later interface work:
 
-- The three capacities describe what can participate; they do not predict personality, diagnosis or conduct.
+- The ME access capacities describe what can participate; they do not predict personality, diagnosis or conduct.
 - Similar outward behaviour can arise from different predictions, capacities, conditions and goals.
 - A capacity can be available without being accurate, flexible, revisable or ethically used.
 - Immediate relief is not the same as updating, Return or repair.

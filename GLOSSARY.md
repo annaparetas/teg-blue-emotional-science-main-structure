@@ -106,11 +106,12 @@ with emotion identity held stable.
 
 ## Model 1
 
-**ESS · Emotional Somatic System** · Approved name; expansion open · 02.
+**ESS · Emotional Somatic System** · Approved name and expansion · 02.
 Distributed biological information processing concerned with bodily
 information, emotional significance, biological weighting, felt qualities
 and action-readiness. Not "conscious emotion" and not "the body without the
-brain". Open: whether the E stands for Emotional or Embodied.
+brain". "Embodied" is broader than the territory ESS owns and could make it
+appear to include CLS.
 
 **CLS · Cognitive Logical System** · Approved · 02. Processing through
 which information may be represented, compared, sequenced, contextualised,
@@ -126,36 +127,37 @@ not a homunculus, not an executive outside the organism. Write "ME", never
 which some participating information may become experienceable or
 inspectable by ME. Not another biological system.
 
-**Three capacities** · Approved dimensions; single name open · 02. Bodily
+**ME access capacities** · Approved name and dimensions · 02. Bodily
 information access and use (feel myself; process: interoceptive
 processing); affective-sharing access (feel another, self and other
 distinct; process: affective sharing); mentalizing access and use (read and
 revise another; process: mentalizing). Each names how much of a process ME
 can notice and use; the process continues regardless. They vary unevenly and
-do not define a Position, personality, diagnosis or morality. Other names in
-use: three forms of access, ME-participation terms, relational capacities.
-Proposed 3 September 2026, awaiting Anna's confirmation: the first two are
-ME reading ESS, the third is ME using CLS.
+do not define a Position, personality, diagnosis or morality. Bodily access
+and affective sharing draw primarily on emotional–somatic processing;
+mentalizing draws primarily on reflective–symbolic processing. These are
+primary contributions, not exclusive system ownership.
 
-**ME Access Dials** · Working · 02. The Model 1 add-on,
-`02-model-1-ess-cls-me/me-access.html`: the three capacities as slider-toggles with four bands each, the
+**ME Access Dials** · Approved structure and boundaries; working readings · 02. The Model 1 add-on,
+`02-model-1-ess-cls-me/me-access.html`: the ME access capacities as sliders with four conceptual bands each, the
 configuration they combine into, the eight-configuration field, the five
-quality dimensions and the mode a pattern tends toward if it stabilises.
-Model 1 owns it; the Inner Compass reads its setting. Replaced the 2
-September controller and the carried capacities page on 3 September 2026.
+quality dimensions and the boundary that access does not determine a mode.
+Model 1 owns it; the Inner Compass reads its setting alongside Model 2
+organisation. It integrated the functions of the earlier site controller and
+a reviewed Engine snapshot on 3 September 2026.
 
 **Empathic concern** · Approved · 02. A relational output: whether another
 person's welfare can motivate, restrain or redirect action. Not a fourth
 capacity; cannot be inferred from the three.
 
-**Configuration** · Working · 02. The current relationship between the three
-capacities. Eight binary configurations (000 to 111) are entry points, read
+**Configuration** · Working · 02. The current relationship between the ME
+access capacities. Eight binary configurations (000 to 111) are entry points, read
 through five quality dimensions: availability, differentiation, self–other
 distinction, accuracy and updating, flexible recruitment. A configuration is
 access information, never a verdict, personality or diagnosis. Anna's three
 worked examples: 001 mentalizing only, 010 affective sharing dominant, 111
-all three available. Which mode a configuration tends toward if it
-stabilises is a working rule on the add-on, not yet approved.
+all three available. A configuration does not assign, predict or tend toward
+a mode; mode requires organisation, position and plane.
 
 **Presence, access, differentiation, interpretation, use** · Approved
 distinction · 02. Information present in the organism is not information

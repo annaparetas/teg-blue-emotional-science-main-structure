@@ -5,7 +5,7 @@
 | Working plan · stage 1 built | 02 · Model 1 (controls) · 06 · Inner Compass (display) · 03 · Model 2 (territory) | 2 September 2026 | Any new cell text as approved content; every reading is owner content until Anna approves it. |
 
 Anna's plan, 2 September 2026, in two steps. First: Model 1 becomes the
-controller for the three capacities that used to sit as sliders on the
+controller for the ME access capacities that used to sit as sliders on the
 Gradient page; Model 1 describes ESS, CLS and what ME is conscious of.
 Second, later the same day: the thing that visibly changes when the
 capacities move is not Model 2 but the Inner Compass.
@@ -21,7 +21,7 @@ from Model 2's rows and Model 1's capacities.
 Three consequences:
 
 1. Model 2 is the territory: its rows are canon and static.
-2. Model 1 owns the controls: the three capacities, four bands each.
+2. Model 1 owns the controls: the three ME access capacities, four bands each.
 3. Inner Compass owns the display: position, plane, mode, capacities, and
    the reading cards that fade as less of a process reaches ME.
 
@@ -29,9 +29,10 @@ Three consequences:
 
 - Shared state in `assets/capacities.js`, kept in the viewer's browser and
   carried in links as `?bia=&asa=&mau=`.
-- Controller at `02-model-1-ess-cls-me/controller.html`, absorbed on
-  3 September 2026 into the Model 1 add-on `02-model-1-ess-cls-me/me-access.html`
-  together with the carried capacities page.
+- The earlier site controller at `02-model-1-ess-cls-me/controller.html` was
+  retired from the active site on 3 September 2026 and remains in Git history.
+  Its functions continue in `02-model-1-ess-cls-me/me-access.html`, alongside
+  the reviewed Engine snapshot used for the configuration field.
 - Compass view at `06-inner-compass-four-modes/compass.html`. Its cards are
   generated from Model 2's canon tables by `scripts/build-compass-data.py`
   into `06-inner-compass-four-modes/data/readings.js`, so the view never
@@ -74,9 +75,15 @@ evidence, none of which changes with access.
 
 ## Decisions still needed
 
-- Confirm graded controls with four bands; the eight configurations are the
-  binary landmarks.
 - Whether the Compass surface embeds the controls or keeps linking to Model 1.
 - Stage 2 readings.
 - Depth per capacity after the profile decision.
-- One name for the three capacities.
+
+## Decisions settled 4 September 2026
+
+- The collective name is **ME access capacities**.
+- Controls remain graded in four conceptual bands; the eight configurations
+  are binary landmarks, not measurements or types.
+- Access configurations do not assign, predict or tend toward a mode. The
+  Compass reads mode from organisation, position and plane, then places access
+  beside it.

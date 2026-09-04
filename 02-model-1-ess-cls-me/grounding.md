@@ -2,7 +2,7 @@
 
 | Status | Owner | Last approved | Does not establish |
 | --- | --- | --- | --- |
-| Working | 02 · Model 1 | 2 September 2026 (structure) | That ESS and CLS are two natural biological systems. Their components are individually supported; the grouping is TEG-Blue's. |
+| Working | 02 · Model 1 | 4 September 2026 (capacity name and cross-model boundary) | That ESS and CLS are two natural biological systems. Their components are individually supported; the grouping is TEG-Blue's. |
 
 This file says what kind of claim each part of Model 1 makes and where its
 evidence lives. It does not restate the model. Read [index.html](index.html)
@@ -31,7 +31,7 @@ natural kinds.
 | Timing asymmetry without a universal clock | Grounded synthesis | Fast fear-selective amygdala responses around 74 ms in a specific task; early cortical differentiation of emotional faces around 80 to 100 ms; conscious visibility signatures later and shifting with expectation. Overlapping, recurrent processing, not one sequence. |
 | ESS and CLS as the two groupings | TEG-Blue educational grouping | Component claims are decomposed in the file below; each needs its own sources and limits. |
 | Coordinated conscious access as the access relationship | TEG-Blue synthesis | Rests on interoceptive awareness, emotion differentiation, metacognition and conscious-access research; none of those alone is the relationship. |
-| The three capacities | Established constructs used within a synthesis | Interoceptive processing, affective sharing and mentalizing are research terms. Their independence and their reading as ME access are TEG-Blue's. |
+| The ME access capacities | Established constructs used within a synthesis | Interoceptive processing, affective sharing and mentalizing are research terms. Their grouping as three capacities, graded bands and primary processing relationships are TEG-Blue's. None belongs exclusively to ESS or CLS. |
 | The eight configurations | TEG-Blue hypothesis | Structural possibilities under a binary simplification. Real configurations vary on five quality dimensions. |
 | Configuration to clinical-pattern routes | Research routing, not diagnosis | Six evidence pilots (05 to 10) tested the routes; see the bridge below. |
 | ME as participant; presence to use as five separate questions | TEG-Blue synthesis with an ethical boundary | Not a free-will claim in either direction. |
@@ -59,10 +59,11 @@ natural kinds.
   sequence (Craig, Porges, LeDoux, Damasio and its critics, Frijda, Panksepp,
   feeding regulation).
 
-## Relevant evidence in the frozen working repository
+## Relevant evidence and active Engine provenance
 
-Until `evidence/` is transferred these remain at
-`../inner-compass-nervous-system-organization-gradient/`:
+Reviewed site snapshots live in this repository's `evidence/` area. The full
+records, later research and working history remain active in the sibling
+`inner-compass-nervous-system-organization-gradient/` Development Engine:
 
 - `evidence/pilots/PILOT-02-interoception-bodily-representation-and-access.md`
 - `evidence/pilots/PILOT-04-ess-condition-reading-and-emotional-significance.md`
@@ -88,8 +89,9 @@ emotional–somatic organisation shapes what feels urgent, necessary or
 justified. The names were retained on 19 August 2026; the accessible name,
 subtitle and short label were settled on 26 August 2026, when the access
 relationship was renamed from Inner Compass to coordinated conscious access.
-The canon page absorbs the 23 August companion draft (old `foundation/21`),
+The canon page synthesises the 23 August companion draft (`foundation/21`),
 the 21 August model sketch, the 19 August decision and the 27 August summary
-from the former main structure. The earliest public statement of the
+from the former main structure. Those Engine records remain active sources and
+retain their own paths, history and ownership. The earliest public statement of the
 distinction is the old `what-is-teg-blue/foundation/10-ess-cls-educational-model.md`
 in the teg-blue workspace, which expands ESS as Embodied Somatic System.

@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="The Model 1 add-on: ME and the three capacities. Set how much of each information system ME can read and use, and see what changes.">
+  <meta name="description" content="The Model 1 add-on: three graded ME access capacities. Explore what becomes readable without inferring a mode, type or verdict.">
   <title>ME Access Dials · Model 1 add-on · TEG-Blue</title>
   <link rel="stylesheet" href="../assets/teg-blue.css">
   <style>
-    :root { --cap-bodily: #6ec7d9; --cap-affective: #8bbf27; --cap-mentalizing: #f0a13a; --mode-connection: #10b8cc; --mode-protection: #e0b83a; --mode-control: #ef6a3a; --mode-dominance: #c43d83; --mode-none: #7e8aa0; }
+    :root { --cap-bodily: #6ec7d9; --cap-affective: #8bbf27; --cap-mentalizing: #f0a13a; }
     .systems { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; margin: 20px 0 8px; }
     .system { padding: 20px 22px; background: white; border: 1px solid var(--line); border-radius: 15px; }
     .system h3 { margin: 4px 0 6px; font-size: 18px; }
@@ -44,15 +44,6 @@
     .open-links { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 0; }
     .open-links a, .open-links button { padding: 11px 15px; border-radius: 10px; border: 1px solid var(--line); background: white; color: var(--ink); font: 750 13px/1.2 var(--body-font); text-decoration: none; cursor: pointer; }
     .open-links a.primary { background: var(--ink); color: white; border-color: var(--ink); }
-    .tends { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 20px; align-items: center; margin: 16px 0 22px; padding: 20px 24px; background: white; border: 1px solid var(--line); border-left: 8px solid var(--tend-colour, var(--mode-none)); border-radius: 15px; }
-    .tends strong { display: block; font: 500 22px/1.2 var(--display); color: var(--ink); }
-    .tends .label { display: block; color: var(--muted); font: 750 11px/1.3 var(--utility); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 4px; }
-    .tends p { margin: 0; font-size: 14px; line-height: 1.6; color: var(--body); }
-    .modes { width: 100%; border-collapse: collapse; background: white; border: 1px solid var(--line); }
-    .modes th, .modes td { padding: 11px 13px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; font-size: 13px; line-height: 1.5; }
-    .modes thead th { background: #f6f8fb; color: var(--ink); font-size: 12px; }
-    .modes tbody th { width: 15%; color: var(--ink); border-left: 6px solid var(--row-colour, var(--mode-none)); }
-    .modes tr[data-current="true"] th, .modes tr[data-current="true"] td { background: #fffbea; }
     .field { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 20px 0; }
     .config-card { padding: 20px 22px; background: white; border: 1px solid var(--line); border-radius: 15px; transition: opacity .2s; }
     .config-card.dimmed { opacity: .58; }
@@ -69,7 +60,7 @@
     .quality article { padding: 16px; background: white; border: 1px solid var(--line); border-radius: 12px; }
     .quality h3 { margin: 0 0 6px; font-size: 14px; }
     .quality p { margin: 0; font-size: 12.5px; line-height: 1.5; color: var(--body); }
-    @media (max-width: 980px) { .controls, .systems, .field, .quality { grid-template-columns: 1fr; } .configuration, .tends { grid-template-columns: 1fr; } .configuration .mark { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 980px) { .controls, .systems, .field, .quality { grid-template-columns: 1fr; } .configuration { grid-template-columns: 1fr; } .configuration .mark { grid-template-columns: repeat(3, 1fr); } }
   </style>
 </head>
 <body data-page="model-1" data-root="../">
@@ -79,7 +70,7 @@
   <div class="shell">
     <div class="addon-strip" role="note">
       <span class="addon-strip__tag">Add-on</span>
-      <span>You are in the <strong>ME Access Dials</strong>, the add-on to Model 1. The canon page explains ESS, CLS and ME; this page is where you move the three sliders.</span>
+      <span>You are in the <strong>ME Access Dials</strong>, the add-on to Model 1. The canon page explains ESS, CLS and ME; this page is where you explore the three ME access capacities.</span>
       <a href="index.html">← Back to Model 1</a>
     </div>
     <section class="hero hero--addon" aria-labelledby="page-title">
@@ -87,7 +78,7 @@
         <span class="hero__name">Model 1 add-on · three sliders</span>
         <p class="eyebrow">02 · Model 1 · The Two Biological Information Systems and ME</p>
         <h1 id="page-title">ME Access Dials</h1>
-        <p class="hero__lede">Three sliders, one per capacity, set how much of each information system ME can currently read and use. Move them and the page shows what changes: the configuration, what it may look like, and the mode it tends toward if it stabilises. Model 1's canon page explains the two systems and ME; this add-on shows what happens when ME can read one of them, both, or neither. The setting describes access, never character, and never another person.</p>
+        <p class="hero__lede">Three graded sliders explore how much bodily information, affective sharing and mentalizing may currently be readable and usable by ME. Move them to see the four bands, the combined configuration and what it may look like. Model 1 describes access; it does not assign an Inner Compass mode or a Model 2 organisation. The setting describes one person's access in one context and time, never character and never another person.</p>
         <div class="hero__meta">
           <span class="status-chip">Two systems · three dials · four bands</span>
           <span class="status-chip">Setting kept in this browser only</span>
@@ -103,7 +94,7 @@
       <a href="#systems">Two systems, three dials</a>
       <a href="#capacity-key">The controls</a>
       <a href="#configuration">This configuration</a>
-      <a href="#tends">If it stabilises</a>
+      <a href="#mode-boundary">Why access is not a mode</a>
       <a href="#field">The eight configurations</a>
       <a href="#quality">Quality dimensions</a>
       <a href="#rules">Reading rules</a>
@@ -112,19 +103,19 @@
 
     <article class="article">
       <dl class="page-status" aria-label="Page status">
-        <div><dt>Status</dt><dd><span class="status-word status-word--working">Working</span> · the ME Access Dials, add-on to the Model 1 canon page</dd></div>
+        <div><dt>Status</dt><dd><span class="status-word status-word--approved">Approved</span> structure and boundaries · <span class="status-word status-word--working">Working</span> band and configuration readings</dd></div>
         <div><dt>Owner</dt><dd><strong>02 · Model 1</strong>; the Inner Compass reads this setting, never sets it</dd></div>
-        <div><dt>Last approved</dt><dd>Built 3 September 2026 from Anna's decision: the three capacities become an add-on to Model 1, so the canon page explains ESS, CLS and ME freely and the add-on shows visually what changes with access. It merges the 2 September controller and the carried capacities page. The reading of bodily and affective access as ME reading ESS, and mentalizing as ME using CLS, is Anna's claim of 3 September, recorded here for her confirmation. The "tends toward" rule is a working proposal.</dd></div>
+        <div><dt>Last approved</dt><dd>Built 3 September 2026 as the Model 1 add-on. On 4 September 2026 Anna approved ME access capacities as the collective name, four graded conceptual bands with eight binary landmarks, primary rather than exclusive processing relationships, and the boundary that an access configuration cannot assign, predict or tend toward a mode.</dd></div>
         <div><dt>Does not establish</dt><dd>A score, a diagnosis, a personality, a Gradient Position or plane, empathic concern, or anything about a person other than the one setting the controls for their own reflection.</dd></div>
       </dl>
 
       <section id="systems">
         <p class="section-label">Two systems, three dials</p>
         <h2>What ME can read of each information system.</h2>
-        <p class="lead">ESS and CLS keep working whether or not ME can read them. The three capacities name how much of each system's information becomes readable and usable by ME. Two of the dials read ESS: one's own bodily and emotional information, and another person's feeling as it arises in one's own body. One dial uses CLS: representing, checking and revising an understanding of another person.</p>
+        <p class="lead">ESS and CLS keep working whether or not their information becomes readable to ME. The three ME access capacities draw on overlapping processing across the organism. Bodily access and affective sharing draw primarily on emotional–somatic processing. Mentalizing draws primarily on reflective–symbolic processing. These are primary contributions, not exclusive system ownership.</p>
         <div class="systems">
           <div class="system">
-            <span class="meta-label">Reading ESS · the emotional–somatic system</span>
+            <span class="meta-label">Draws primarily on ESS · emotional–somatic processing</span>
             <h3>Feel myself, feel another</h3>
             <p class="who">Both are embodied information. Without self–other distinction the second becomes contagion rather than sharing.</p>
             <ul class="dials">
@@ -134,7 +125,7 @@
             <p class="reads" id="ess-reads" aria-live="polite"></p>
           </div>
           <div class="system">
-            <span class="meta-label">Using CLS · the reflective–symbolic system</span>
+            <span class="meta-label">Draws primarily on CLS · reflective–symbolic processing</span>
             <h3>Read and revise another</h3>
             <p class="who">Can stay detailed while the two ESS dials are low, and can serve reciprocal, defensive or instrumental action.</p>
             <ul class="dials">
@@ -144,8 +135,8 @@
           </div>
         </div>
         <div class="boundary">
-          <h3>A claim to confirm</h3>
-          <p>Assigning affective sharing to ESS treats resonance with another person as embodied information first. The glossary still defines the three capacities by their process, not by the system they read. Anna's decision of 3 September; recorded, not yet approved.</p>
+          <h3>Primary relationship, not exclusive ownership</h3>
+          <p>Affective sharing treats resonance with another person as embodied information, but differentiation, interpretation and use can also recruit reflective processing. Mentalizing is primarily reflective–symbolic, but what it represents can include emotional and bodily information. The dials describe access territories within one interacting organism.</p>
         </div>
       </section>
 
@@ -155,7 +146,7 @@
         <p class="lead">Uneven settings are the point: one capacity can stay usable while another continues biologically without becoming available. Beneath each dial the reading says what ME can and cannot use at that band.</p>
         <div class="controls">
           <div class="control" data-capacity="bodily" style="--control-accent:var(--cap-bodily)">
-            <span class="meta-label">Feel myself · reads ESS · interoceptive processing</span>
+            <span class="meta-label">Feel myself · primarily ESS · interoceptive processing</span>
             <h3>Bodily information access and use</h3>
             <p class="question">What bodily and emotional information can I notice, differentiate, interpret and use here?</p>
             <input type="range" min="0" max="3" step="1" value="3" aria-label="Bodily information access and use">
@@ -164,7 +155,7 @@
             <p class="reading"></p>
           </div>
           <div class="control" data-capacity="affective" style="--control-accent:var(--cap-affective)">
-            <span class="meta-label">Feel another · reads ESS · affective sharing</span>
+            <span class="meta-label">Feel another · primarily ESS · affective sharing</span>
             <h3>Affective-sharing access</h3>
             <p class="question">How much of another person's feeling arising within me can I notice while self and other stay distinct?</p>
             <input type="range" min="0" max="3" step="1" value="3" aria-label="Affective-sharing access">
@@ -173,7 +164,7 @@
             <p class="reading"></p>
           </div>
           <div class="control" data-capacity="mentalizing" style="--control-accent:var(--cap-mentalizing)">
-            <span class="meta-label">Read and revise another · uses CLS · mentalizing</span>
+            <span class="meta-label">Read and revise another · primarily CLS · mentalizing</span>
             <h3>Mentalizing access and use</h3>
             <p class="question">How much can I represent, check and revise my understanding of another person?</p>
             <input type="range" min="0" max="3" step="1" value="3" aria-label="Mentalizing access and use">
@@ -215,26 +206,14 @@
         </div>
       </section>
 
-      <section id="tends">
-        <p class="section-label">If it stabilises</p>
-        <h2>The mode this pattern of access tends toward.</h2>
-        <p class="lead">Any configuration can be momentary, protective or professional. When one becomes the default across relationships and time, its pattern of access is what the four modes describe. Bodily and affective access fall step by step from Connection to Dominance; mentalizing does not fall, it changes in kind. The setting alone never says where the organisation is on Model 2: that needs the situation and the plane, which the Inner Compass reads.</p>
-        <div class="tends" id="tends-card">
-          <div><span class="label">Tends toward, if stabilised</span><strong id="tends-mode"></strong></div>
-          <p id="tends-text"></p>
-        </div>
-        <table class="modes" id="modes-table">
-          <thead><tr><th scope="col">Mode</th><th scope="col">ME</th><th scope="col">Bodily access</th><th scope="col">Affective sharing</th><th scope="col">Mentalizing</th><th scope="col">Return (Model 2 row)</th></tr></thead>
-          <tbody>
-            <tr data-mode="connection" style="--row-colour:var(--mode-connection)"><th scope="row">Connection</th><td>Conscious of how body and mind work, of how ESS and CLS react and why; aware of the Gradient; can see its own defending and act accordingly.</td><td>Broad, including limits and needs</td><td>Broad, self and other distinct</td><td>Broad and revisable</td><td>High: connection and flexible engagement available</td></tr>
-            <tr data-mode="protection" style="--row-colour:var(--mode-protection)"><th scope="row">Protection</th><td>Access narrowed toward threat, or toward the other person when connection is kept to protect belonging.</td><td>Defensive signals first; quieter needs hard to reach, or the body lowest of the three</td><td>Narrowed and selective, or absorbed without self–other distinction</td><td>Narrowed to threat and rejection, or continuous but uncorrected</td><td>Constrained while protective readiness stays active</td></tr>
-            <tr data-mode="control" style="--row-colour:var(--mode-control)"><th scope="row">Control</th><td>Feeling converted quickly into analysis and strategy; signals that obstruct control discounted.</td><td>Selective around effort; fatigue and pain normalised</td><td>Suppressed or compartmentalised</td><td>Detailed and predictive, used to manage behaviour and outcomes</td><td>More constrained: management keeps controllable variables in priority</td></tr>
-            <tr data-mode="dominance" style="--row-colour:var(--mode-dominance)"><th scope="row">Dominance</th><td>The far end: neither bodily nor affective access developed; mentalizing usable and instrumental, not broad.</td><td>Suppressed; pain, injury and limits overridden</td><td>Overridden; detection without resonance</td><td>Instrumental, around leverage, compliance and resistance</td><td>Severely constrained while this organisation dominates</td></tr>
-          </tbody>
-        </table>
+      <section id="mode-boundary">
+        <p class="section-label">Cross-model boundary</p>
+        <h2>Access does not determine a mode.</h2>
+        <p class="lead">The same access configuration can occur briefly, under present demand, through learned narrowing, during professional focus or for reasons this tool cannot identify. Model 1 can describe what is readable and usable by ME. It cannot infer what the organism is organised for, whether the pattern is Fluid or Chronic, or which Inner Compass mode applies.</p>
         <div class="boundary">
-          <h3>Working rule, for Anna to confirm</h3>
-          <p>Connection when all three dials are at the two upper bands. Dominance when both ESS dials are not reliably available and mentalizing is at the two upper bands. Control when mentalizing is at the two upper bands and both ESS dials are low without being absent. Everything else with some relational access is Protection, whether narrowed toward threat or absorbed into the other. When nothing relational is readable the pattern sits outside the four modes, closer to shutdown. The row texts are drawn from Model 2's Chronic capacity rows and from Anna's descriptions of 3 September; Dominance follows the evidence that manipulation does not require superior mentalizing. Fluid D is different: during maximum survival mobilisation everything drops out, mentalizing included, so this table describes stabilised forms only.</p>
+          <h3>Where a mode comes from</h3>
+          <p>The Inner Compass reads a mode from Model 2 organisation, position and plane in a specific situation. It then places the ME access capacities beside that reading. No arrow runs backwards: low or uneven access does not establish Protection, Control, Dominance, shutdown, conduct, intent or character.</p>
+          <p><a href="../06-inner-compass-four-modes/compass.html">Open the Inner Compass to combine organisation and access without collapsing them →</a></p>
         </div>
       </section>
 
@@ -277,9 +256,9 @@
         <h2>Where this page comes from.</h2>
         <div class="source-panel">
           <ul>
-            <li>The Model 1 capacity controller of 2 September 2026 (three dials, four bands, shared state in <code>assets/capacities.js</code>), absorbed here.</li>
-            <li>The relational capacities page carried from the working repository, now kept as provenance at <a href="notes/sources/relational-capacities.html">notes/sources/relational-capacities.html</a>: the eight configurations, the worked examples and the five quality dimensions.</li>
-            <li>Model 2's <a href="../03-model-2-gradient/positions.html">capacity rows</a> for interoceptive processing, affective sharing, mentalizing and Return availability, from which the mode table is drawn.</li>
+            <li>The earlier site controller of 2 September 2026 supplied the three dials, four bands and shared state in <code>assets/capacities.js</code>. Its functions continue here; its file remains in Git history.</li>
+            <li>The active Development Engine's relational-capacities page supplies the eight configurations, worked examples and five quality dimensions. A reviewed snapshot remains at <a href="notes/sources/relational-capacities.html">notes/sources/relational-capacities.html</a> for provenance.</li>
+            <li>Model 2's <a href="../03-model-2-gradient/positions.html">capacity rows</a> for interoceptive processing, affective sharing, mentalizing and Return availability remain cross-owner material to review. They do not let this page infer a mode.</li>
             <li>The <a href="grounding/relational-configuration-clinical-pattern-bridge.md">configuration-to-clinical-pattern bridge</a>, which governs what may and may not be inferred from a configuration.</li>
             <li>Anna's decisions of 3 September 2026, recorded in <a href="notes/decisions.md">notes/decisions.md</a>.</li>
           </ul>
@@ -318,63 +297,47 @@
       };
 
       var CARDS = {
-        "000": { title: "Relational unavailability", kicker: "No reliable bodily access · no affective sharing · no mentalizing", systems: "Neither system readable",
+        "000": { title: "Relational unavailability", kicker: "No reliable bodily access · no affective sharing · no mentalizing", systems: "No ME access capacity reliably available",
           description: "Neither one's own felt state nor the other person's felt or represented state is sufficiently available for relational participation.",
           looks: ["Shutdown, numbness, exhaustion, dissociation, or relational withdrawal.", "Minimal response because all available capacity is assigned to conservation or immediate survival.", "A temporary pause in relational processing during overwhelm."],
           concern: "Empathic concern: the idea of care may remain, while motivation or capacity to act on it is unavailable.",
           caution: "Do not infer indifference, lack of attachment, or a fixed absence of empathy." },
-        "001": { title: "The mentalizing-only configuration", kicker: "Anna's example 1 · mentalizing only", systems: "CLS without ESS",
+        "001": { title: "The mentalizing-only configuration", kicker: "Anna's example 1 · mentalizing only", systems: "Mentalizing access only",
           description: "The other person can be read, predicted, or explained, while neither one's own felt experience nor affective resonance with the other is available to ME.",
           looks: ["Detached analysis, strategic interpersonal reading, or technically accurate perspective-taking.", "Knowing what another feels without feeling moved by it.", "Professional composure in a role that temporarily requires affective distance."],
           concern: "Empathic concern: cannot be inferred. Understanding may support care, restraint, management, persuasion, or exploitation.",
           caution: "Do not infer manipulation, psychopathy, or narcissism from this configuration alone." },
-        "010": { title: "The absorbed-other configuration", kicker: "Anna's example 2 · affective-sharing access dominant", systems: "ESS in part, without CLS",
+        "010": { title: "The absorbed-other configuration", kicker: "Anna's example 2 · affective-sharing access dominant", systems: "Affective-sharing access only",
           description: "Another person's affect enters strongly, but one's own experience is difficult to locate and mentalizing cannot reliably interpret whose feeling it is or what it means.",
           looks: ["Emotional contagion, overwhelm, fusion, or rapidly taking on another person's state.", "Compulsive soothing without checking what the other actually needs.", "Mistaking resonance for accurate knowledge of the other."],
           concern: "Empathic concern: may become compulsory action or self-erasure rather than freely chosen, proportionate care.",
           caution: "“Too much empathy” may be better described as affect sharing without sufficient self–other distinction, mentalizing, or regulation." },
-        "011": { title: "The other-centred configuration", kicker: "Affective sharing and mentalizing accessible · own bodily information not reliably usable", systems: "The other readable, the self not",
+        "011": { title: "The other-centred configuration", kicker: "Affective sharing and mentalizing accessible · own bodily information not reliably usable", systems: "Other-focused access; bodily access low",
           description: "The other person can be felt and understood in detail, while one's own feeling, need, limit, and preference remain outside usable reach.",
           looks: ["Highly attuned caregiving combined with self-silencing or absent boundaries.", "Organising choices around the other person's state and anticipated reaction.", "Relational expertise that does not include one's own position in the relationship."],
           concern: "Empathic concern: may be strong but difficult to distinguish from obligation, appeasement, or connection-preservation.",
           caution: "Do not assume generosity is false; the question is whether the self can also participate." },
-        "100": { title: "The self-contained configuration", kicker: "Bodily information accessible · other neither shared nor represented", systems: "ESS for the self only, without CLS",
+        "100": { title: "The self-contained configuration", kicker: "Bodily information accessible · other neither shared nor represented", systems: "Bodily access only",
           description: "One's own feeling and need are available, while the other person's state is not affectively shared or cognitively represented.",
           looks: ["Healthy solitude when no other person requires representation.", "Protective self-focus under pain, acute demand, or boundary defence.", "A relational blind spot if the configuration persists while another person is affected."],
           concern: "Empathic concern: may be irrelevant in solitude or reduced when the other's condition cannot enter the field.",
           caution: "Do not infer selfishness when the social capacities are simply not recruited or needed." },
-        "101": { title: "The interoceptive–mentalizing configuration", kicker: "Bodily and mentalizing access · affective sharing unavailable", systems: "CLS, with ESS for the self only",
+        "101": { title: "The interoceptive–mentalizing configuration", kicker: "Bodily and mentalizing access · affective sharing unavailable", systems: "Bodily and mentalizing access",
           description: "One's own experience remains available and the other can be understood, but the other person's affect does not resonate within oneself.",
           looks: ["Clear negotiation, boundary-setting, or calm decision-making without emotional merging.", "Compassionate understanding with low affective resonance.", "Instrumental social reasoning when concern and accountability are also reduced."],
           concern: "Empathic concern: is the differentiator between respectful distance and cognition used only for personal outcome.",
           caution: "Low affect sharing does not by itself mean low care or poor moral action." },
-        "110": { title: "The shared-affect configuration", kicker: "Self and other felt · other not mentally represented", systems: "ESS without CLS",
+        "110": { title: "The shared-affect configuration", kicker: "Self and other felt · other not mentally represented", systems: "Bodily and affective-sharing access",
           description: "Both one's own feeling and resonance with the other are present, but the other person's perspective, cause, or intention cannot yet be represented reliably.",
           looks: ["Deep emotional participation with limited perspective-taking.", "Knowing that both people are affected without understanding why or what each needs.", "Projection, misattribution, or action based on shared intensity rather than checked meaning."],
           concern: "Empathic concern: may be sincere and strong while the chosen response remains inaccurate or unhelpful.",
           caution: "Feeling with someone is not the same as knowing their experience." },
-        "111": { title: "The integrated configuration", kicker: "Anna's example 3 · all three forms of ME access available", systems: "Both systems readable",
+        "111": { title: "The integrated configuration", kicker: "Anna's example 3 · all three forms of ME access available", systems: "All three ME access capacities available",
           description: "One's own experience, affective resonance with the other, and a revisable understanding of the other can all participate without collapsing into one another.",
           looks: ["Reciprocal connection with self–other distinction and room for correction.", "Feeling moved by another while retaining one's own limit, perspective, and agency.", "Repair that integrates impact, intention, context, restraint, and action."],
           concern: "Empathic concern: can become proportionate, freely chosen action that respects both welfare and agency.",
           caution: "All three being present is not always optimal; flexible recruitment remains more important than permanent maximum openness." }
       };
-
-      var MODES = {
-        connection: { name: "Connection", colour: "var(--mode-connection)", text: "Both systems stay readable to ME. If this became the default it would be the organisation that can visit protection, control or force when conditions call for them and return." },
-        protection: { name: "Protection", colour: "var(--mode-protection)", text: "Some relational access remains, narrowed toward threat or absorbed into the other person. Stabilised, this is regulation organised around protecting the self or preserving belonging." },
-        control: { name: "Control", colour: "var(--mode-control)", text: "CLS stays usable while ESS access is low but not absent. Stabilised, this is regulation that depends on prediction and management, with feeling converted into strategy." },
-        dominance: { name: "Dominance", colour: "var(--mode-dominance)", text: "CLS is usable while neither ESS dial is reliably readable. Stabilised, this is the far end: an internal orientation in which asymmetric control over others is treated as the only route to stability. It does not establish Domination, which is conduct." },
-        none: { name: "Outside the four modes", colour: "var(--mode-none)", text: "Nothing relational is reliably readable. This is closer to shutdown or unavailability than to any of the four modes, and says nothing about what returns when capacity does." }
-      };
-
-      function tendsFor(s) {
-        var b = s.bodily, a = s.affective, m = s.mentalizing;
-        if (b >= 2 && a >= 2 && m >= 2) return "connection";
-        if (m >= 2 && b <= 1 && a <= 1) return (b === 0 && a === 0) ? "dominance" : "control";
-        if (b <= 1 && a <= 1 && m <= 1) return "none";
-        return "protection";
-      }
 
       function bandWord(n) { return ["not reliably", "in fragments", "partly", "broadly"][n]; }
 
@@ -411,13 +374,6 @@
         document.getElementById("config-looks").innerHTML = card.looks.map(function (l) { return "<li>" + l + "</li>"; }).join("");
         document.getElementById("config-concern").textContent = card.concern;
         document.getElementById("config-caution").textContent = card.caution;
-
-        var mode = tendsFor(state), M = MODES[mode];
-        var tc = document.getElementById("tends-card");
-        tc.style.setProperty("--tend-colour", M.colour);
-        document.getElementById("tends-mode").textContent = M.name;
-        document.getElementById("tends-text").textContent = M.text;
-        Array.prototype.forEach.call(document.querySelectorAll("#modes-table tbody tr"), function (tr) { tr.dataset.current = String(tr.dataset.mode === mode); });
 
         Array.prototype.forEach.call(document.querySelectorAll(".config-card"), function (el) {
           var sel = el.dataset.code === code;

@@ -505,7 +505,7 @@ All records below are **first-pass** unless a later review states otherwise.
 - **Phenomenon studied:** experience sharing and explicit consideration of another person's internal state as distinguishable empathy-related processes.
 - **Useful result:** supports separating affective sharing from mentalizing while identifying ecological and behavioural-validity limits in early neuroscience.
 - **Claim links:** MAI-01, MAI-02 and MAI-04.
-- **Cannot establish:** one-to-one brain localisation, naturalistic interpersonal accuracy, empathic concern, moral action or TEG-Blue's three capacities.
+- **Cannot establish:** one-to-one brain localisation, naturalistic interpersonal accuracy, empathic concern, moral action or TEG-Blue's ME access capacities.
 - **Decision:** **supports construct separation with methodological boundaries**.
 - **Review depth:** first-pass.
 - **Implementation use:** terminology and capacity separation.

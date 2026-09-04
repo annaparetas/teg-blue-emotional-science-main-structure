@@ -26,7 +26,7 @@ the current names:
 | Threat & Defence (Protection) | Protection Mode: Chronic X, A, A↔B, B, Z. The paper's "transitional state" reading is consistent with Protection being an umbrella over five routes. |
 | Strategy & Management (Control) | Control Mode: Chronic C |
 | Power & Dominance (Domination) | Split: Dominance Mode (Chronic D, internal) and Domination (observable conduct). The paper's fourth state mixes both. |
-| Interoceptive Self-Awareness as "the bridge between ESS and CLS" | Coordinated conscious access with three capacities; the paper measured only the first |
+| Interoceptive Self-Awareness as "the bridge between ESS and CLS" | Coordinated conscious access with three ME access capacities; the paper measured only the first |
 | ESS "does not need the CLS to function"; millisecond timing | Retired; see Model 1's boundaries |
 
 The study's limitations stand: single platform, self-report framing, English
@@ -37,7 +37,6 @@ expression of access rather than access itself.
 
 - Formations and positions: [03-model-2-gradient/grounding.md](../03-model-2-gradient/grounding.md).
 - Capacities and configurations: [02-model-1-ess-cls-me/grounding.md](../02-model-1-ess-cls-me/grounding.md).
-- Conduct, power and repair: Behaviour and responsibility (07, pending
-  transfer) and the harm, power and repair grounding in the frozen working
-  repository at `evidence/reviews/harm-power-and-repair.md`.
+- Conduct, power and repair: [Behaviour and responsibility](../07-reference/index.html)
+  and [harm, power and repair grounding](../07-reference/grounding/harm-power-and-repair.md).
 - Origins of the four-mode set: [foundations/notes/sources/origin-00-timeline.md](../foundations/notes/sources/origin-00-timeline.md).
