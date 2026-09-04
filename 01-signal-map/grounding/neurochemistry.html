@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Signal Neurochemistry — Grounding Index</title>
+  <link rel="stylesheet" href="../../assets/page-responsibility.css">
+  <style>
+    :root{--ink:#17231f;--body:#43504b;--muted:#72807a;--line:#d8e1dc;--paper:#fff;--wash:#f3f7f4;--cyan:#6eeafb;--lime:#b6fc50;--pending:#fff6d8}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:var(--wash);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+    a{color:inherit;text-underline-offset:3px} a:focus-visible{outline:3px solid var(--cyan);outline-offset:3px;border-radius:3px}
+    .shell{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:54px 0 90px}
+    .back{display:inline-flex;margin-bottom:28px;font-size:13px;font-weight:700;color:var(--body)}
+    .hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);gap:28px;align-items:end;padding-bottom:34px;border-bottom:1px solid var(--line)}
+    .eyebrow{margin:0 0 10px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+    h1{max-width:780px;margin:0;font-family:ui-serif,Georgia,"Times New Roman",serif;font-size:clamp(38px,6vw,72px);font-weight:560;line-height:.98;letter-spacing:-.035em}
+    .hero-note{margin:0;padding:18px 20px;border-left:4px solid var(--lime);background:var(--paper);font-size:14px;color:var(--body)}
+    .scope{max-width:850px;margin:24px 0 0;color:var(--body)}
+    .scope strong{color:var(--ink)}
+    .research-question{max-width:980px;margin:30px 0 0;padding:22px 24px;border:1px solid var(--ink);background:var(--paper);font:600 clamp(19px,2.4vw,28px)/1.35 ui-serif,Georgia,"Times New Roman",serif}
+    .research-question span{display:block;margin-bottom:8px;font:800 10px/1 ui-sans-serif,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+    .family{margin-top:58px;scroll-margin-top:24px}
+    .family-head{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+    .family-head p{margin:0 0 2px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+    .family-head h2{margin:0;font-family:ui-serif,Georgia,serif;font-size:27px;font-weight:600}
+    .position{display:grid;place-items:center;min-width:72px;height:46px;padding:0 12px;border:1px solid var(--ink);border-radius:50%;font:800 14px/1 ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--paper)}
+    .entries{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .entry{scroll-margin-top:18px;padding:20px;border:1px solid var(--line);background:var(--paper)}
+    .entry:target{border-color:var(--ink);box-shadow:inset 5px 0 0 var(--lime)}
+    .entry-title{display:flex;justify-content:space-between;gap:18px;align-items:baseline}
+    .entry h3{margin:0;font:600 22px/1.2 ui-serif,Georgia,serif}
+    .entry-title a{font-size:11px;font-weight:750;color:var(--muted);white-space:nowrap}
+    .status{display:inline-block;margin:12px 0 16px;padding:4px 8px;background:var(--pending);font-size:11px;font-weight:750}
+    dl{display:grid;grid-template-columns:1fr 1fr;margin:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+    dl div{padding:10px 11px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+    dl div:target{scroll-margin-top:22px;background:#f7ffe9;box-shadow:inset 4px 0 0 var(--lime)}
+    dt{font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+    dd{margin:3px 0 0;font-size:12px;color:var(--body)}
+    .trajectory-link{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center;margin-top:28px;padding:22px 24px;border:1px solid var(--line);border-left:5px solid var(--cyan);background:linear-gradient(90deg,#eafcff,var(--paper) 58%);box-shadow:0 12px 36px rgba(23,35,31,.06);text-decoration:none}
+    .trajectory-link span{display:block;color:var(--muted);font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .trajectory-link strong{display:block;margin-top:5px;font:600 21px/1.25 ui-serif,Georgia,serif}
+    .trajectory-link p{margin:7px 0 0;color:var(--body);font-size:12px}
+    .trajectory-link b{font-size:13px;white-space:nowrap}
+    footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+    @media(max-width:760px){.shell{width:min(100% - 20px,1180px);padding-top:30px}.hero,.trajectory-link{grid-template-columns:1fr}.entries{grid-template-columns:1fr}dl{grid-template-columns:1fr}h1{font-size:42px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="carried-banner" role="note"><strong>Carried grounding page · status working.</strong> Signal-by-signal neurochemistry hooks. Carried on 2 September 2026 from the working repository (ESM-S1 branch text). Evidence, not canon. <a href="../index.html">Back to the Signal Map canon page →</a></div>
+<a class="back" href="../emotion/fluid.html#body-signals">← Return to the Signals taxonomy</a>
+    <a class="back" href="../../03-model-2-gradient/premise.html">Read the model premise →</a>
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Grounding index · 9 Body Signals · 26 Situation Signals</p>
+        <h1>Signal neurochemistry, without chemical fingerprints.</h1>
+      </div>
+      <p class="hero-note">This file keeps neurochemical research separate from the functional signal tables. Each hook opens one Body Signal or emotion directly.</p>
+    </header>
+    <aside class="page-responsibility" aria-label="Page responsibility">
+      <div class="page-responsibility__heading">
+        <p class="page-responsibility__label">Page responsibility · Signal Map grounding companion</p>
+        <p class="page-responsibility__scope">Scientific-facing scope · neural, autonomic, endocrine, immune and metabolic participation in signal formation and regulation</p>
+      </div>
+      <p class="page-responsibility__question"><strong>Governing question</strong>Which interacting biological processes participate in a signal, what was measured and how far does the evidence allow us to infer?</p>
+      <div class="page-responsibility__grid">
+        <div class="page-responsibility__item"><strong>This page owns</strong><p>The mediator-level research hooks, measured variables, evidence status and limits attached to Signal Map entries.</p></div>
+        <div class="page-responsibility__item"><strong>It receives</strong><p>The <a href="../emotion/fluid.html">functional signal taxonomy</a> and the project’s <a href="../../evidence/protocol.html">claim-matched evidence protocol</a>.</p></div>
+        <div class="page-responsibility__item"><strong>It does not establish</strong><p>One chemical–one feeling fingerprints, causal identity from association or a person’s emotion, organisation or behaviour from one measurement.</p></div>
+      </div>
+    </aside>
+    <p class="scope"><strong>Research rule.</strong> A conscious signal is not produced by one neurotransmitter or hormone. Each entry must distinguish the condition being detected, central signalling, peripheral measurements, what researchers actually measured, context and limits. Association is not identity, necessity or proof that a chemical uniquely belongs to a signal.</p>
+
+    <a class="trajectory-link" href="recruitment-persistence-and-recovery.html">
+      <span>Shared trajectory layer<strong>What happens after biological recruitment begins?</strong><p>Follow resolution, continuing demand, uneven recovery, reconstruction, changed later recruitment and possible cumulative cost—without treating central signalling as one system that stays switched on.</p></span>
+      <b>Open the bridge →</b>
+    </a>
+
+    <section class="family" aria-labelledby="body-signal-neurochemistry">
+      <header class="family-head"><span class="position">BODY</span><div><p>Internal physiological conditions</p><h2 id="body-signal-neurochemistry">Body Signals</h2></div></header>
+      <p class="scope"><strong>Body Signal research path.</strong> Each entry follows the regulated variable, its detection, the systems that carry or regulate it, and the condition that allows it to update. These signals often have more specialised physiological starting points than Situation Signals, but none is reducible to one molecule.</p>
+      <div class="entries">
+        <article class="entry" id="breathlessness">
+          <div class="entry-title"><h3>Breathlessness</h3><a href="../emotion/fluid.html#body-signals" aria-label="Return to Breathlessness in the Body Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · individual system · papers pending</p>
+          <dl>
+            <div id="breathlessness-regulated-condition"><dt>Regulated condition</dt><dd>Blood and brain CO₂, O₂ and pH; ventilatory demand relative to respiratory capacity.</dd></div>
+            <div><dt>Detection</dt><dd>Peripheral carotid and aortic-body chemoreceptors, central CO₂/H⁺-sensitive brainstem circuits, pulmonary and respiratory-muscle afferents.</dd></div>
+            <div id="breathlessness-signalling-regulation"><dt>Signalling and regulation</dt><dd>Glutamatergic respiratory transmission with serotonergic, noradrenergic, orexinergic, cholinergic and other modulation; multiple transmitters may be released by carotid-body glomus cells.</dd></div>
+            <div><dt>Corrective condition</dt><dd>Ventilation and gas exchange sufficient to restore workable CO₂, O₂ and pH, together with reduced respiratory effort.</dd></div>
+            <div><dt>Context and limits</dt><dd>Air hunger is not a direct chemical meter. Conscious breathlessness combines chemoreception, respiratory motor command, afferent feedback, context and attention.</dd></div>
+            <div><dt>Evidence status</dt><dd>Initial orientation carried forward from the Body–Situation Signals working note. Individual pathways and wording still require paper-level review.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="pain">
+          <div class="entry-title"><h3>Pain</h3><a href="../emotion/fluid.html#body-signals" aria-label="Return to Pain in the Body Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · individual system · papers pending</p>
+          <dl>
+            <div id="pain-regulated-condition"><dt>Regulated condition</dt><dd>Actual or possible tissue threat, mechanical, thermal or chemical stimulation, inflammation or sensitisation.</dd></div>
+            <div><dt>Detection</dt><dd>Peripheral nociceptors and tissue- or organ-specific afferents; detection thresholds can change through inflammation and learning.</dd></div>
+            <div id="pain-signalling-regulation"><dt>Signalling and regulation</dt><dd>Glutamate and substance P in nociceptive transmission; bradykinin, prostaglandins, serotonin, NGF, cytokines and other inflammatory mediators; descending opioid, monoaminergic and endocannabinoid modulation.</dd></div>
+            <div><dt>Corrective condition</dt><dd>The source checked, damaging conditions stopped where possible, the region protected and recovery supported.</dd></div>
+            <div><dt>Context and limits</dt><dd>Pain is not a damage meter. Nociception, modulation, conscious pain and behavioural priority are related but distinct.</dd></div>
+            <div><dt>Evidence status</dt><dd>Initial orientation carried forward from the Body–Situation Signals working note. Individual pathways and wording still require paper-level review.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="overheating">
+          <div class="entry-title"><h3>Overheating</h3><a href="../emotion/fluid.html#body-signals" aria-label="Return to Overheating in the Body Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · individual system · papers pending</p>
+          <dl>
+            <div id="overheating-regulated-condition"><dt>Regulated condition</dt><dd>Core and skin temperature rising relative to a workable range.</dd></div>
+            <div><dt>Detection</dt><dd>Peripheral and central warm-sensitive neurons, including temperature-sensitive TRP channels, with hypothalamic integration.</dd></div>
+            <div id="overheating-signalling-regulation"><dt>Signalling and regulation</dt><dd>Glutamatergic and peptidergic signalling within thermoregulatory circuits; autonomic cholinergic control of sweating and vascular mechanisms supporting heat loss.</dd></div>
+            <div><dt>Corrective condition</dt><dd>Heat loss through cooling, sweating, reduced activity, vasodilation and movement towards a cooler environment.</dd></div>
+            <div><dt>Context and limits</dt><dd>The chemistry supports sensing and correction; no single transmitter is the conscious feeling of overheating.</dd></div>
+            <div><dt>Evidence status</dt><dd>Initial orientation carried forward from the Body–Situation Signals working note. Individual pathways and wording still require paper-level review.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="cold">
+          <div class="entry-title"><h3>Cold</h3><a href="../emotion/fluid.html#body-signals" aria-label="Return to Cold in the Body Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · individual system · papers pending</p>
+          <dl>
+            <div id="cold-regulated-condition"><dt>Regulated condition</dt><dd>Skin or core temperature falling relative to a workable range.</dd></div>
+            <div><dt>Detection</dt><dd>Peripheral cold-sensitive afferents, including TRP-channel mechanisms, and central thermoregulatory circuits.</dd></div>
+            <div id="cold-signalling-regulation"><dt>Signalling and regulation</dt><dd>Glutamatergic and peptidergic transmission; sympathetic noradrenergic participation in vasoconstriction and thermogenesis; endocrine and metabolic support when demand persists.</dd></div>
+            <div><dt>Corrective condition</dt><dd>Heat conservation and production through shelter, clothing, movement, shivering, vasoconstriction and metabolic thermogenesis.</dd></div>
+            <div><dt>Context and limits</dt><dd>Cold sensation, core-temperature defence and conscious discomfort can begin at different thresholds.</dd></div>
+            <div><dt>Evidence status</dt><dd>Initial orientation carried forward from the Body–Situation Signals working note. Individual pathways and wording still require paper-level review.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="needing-to-urinate">
+          <div class="entry-title"><h3>Needing to urinate</h3><a href="../emotion/fluid.html#body-signals" aria-label="Return to Needing to urinate in the Body Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · individual system · papers pending</p>
+          <dl>
+            <div id="needing-to-urinate-regulated-condition"><dt>Regulated condition</dt><dd>Bladder filling, wall stretch and pressure as stored urine approaches current capacity.</dd></div>
+            <div><dt>Detection</dt><dd>Urothelial and mechanosensitive signalling activates pelvic and hypogastric afferents communicating with spinal, brainstem and cortical circuits.</dd></div>
+            <div id="needing-to-urinate-signalling-regulation"><dt>Signalling and regulation</dt><dd>Stretch-related ATP/purinergic signalling; acetylcholine drives detrusor contraction during voiding, while noradrenergic and other autonomic signalling helps coordinate storage.</dd></div>
+            <div><dt>Corrective condition</dt><dd>A safe opportunity to empty the bladder, followed by reduced stretch and afferent signalling.</dd></div>
+            <div><dt>Context and limits</dt><dd>Urgency is not determined by volume alone; inflammation, attention, learning and afferent sensitivity can change the conscious signal.</dd></div>
+            <div><dt>Evidence status</dt><dd>Initial orientation carried forward from the Body–Situation Signals working note. Individual pathways and wording still require paper-level review.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="thirst">
+          <div class="entry-title"><h3>Thirst</h3><a href="../emotion/fluid.html#body-signals" aria-label="Return to Thirst in the Body Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · individual system · papers pending</p>
+          <dl>
+            <div id="thirst-regulated-condition"><dt>Regulated condition</dt><dd>Extracellular osmolality, sodium concentration, circulating volume and blood pressure, together with anticipatory oral and gastrointestinal information.</dd></div>
+            <div><dt>Detection</dt><dd>Osmosensitive neurons in circumventricular organs and lamina terminalis circuits; baroreceptor and visceral inputs.</dd></div>
+            <div id="thirst-signalling-regulation"><dt>Signalling and regulation</dt><dd>Angiotensin II and vasopressin-related regulation, glutamatergic and GABAergic circuit transmission, and rapid feed-forward signals produced by drinking.</dd></div>
+            <div><dt>Corrective condition</dt><dd>Enough fluid and appropriate electrolyte balance to restore the body’s working range.</dd></div>
+            <div><dt>Context and limits</dt><dd>Thirst can begin updating before absorbed water corrects the blood, showing that the sensation is predictive as well as reactive.</dd></div>
+            <div><dt>Evidence status</dt><dd>Initial orientation carried forward from the Body–Situation Signals working note. Individual pathways and wording still require paper-level review.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="needing-to-empty-the-bowels">
+          <div class="entry-title"><h3>Needing to empty the bowels</h3><a href="../emotion/fluid.html#body-signals" aria-label="Return to Needing to empty the bowels in the Body Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · individual system · papers pending</p>
+          <dl>
+            <div id="needing-to-empty-the-bowels-regulated-condition"><dt>Regulated condition</dt><dd>Rectal and colonic distension, movement of contents and local chemical and mechanical conditions.</dd></div>
+            <div><dt>Detection</dt><dd>Enteric sensory neurons, mechanoreceptors and visceral afferents communicating through pelvic and spinal pathways.</dd></div>
+            <div id="needing-to-empty-the-bowels-signalling-regulation"><dt>Signalling and regulation</dt><dd>Serotonin, acetylcholine, ATP, nitric oxide and multiple gastrointestinal peptides coordinate motility, secretion, sensation and sphincter control.</dd></div>
+            <div><dt>Corrective condition</dt><dd>A safe opportunity for defecation and sufficient motility and relaxation for contents to pass.</dd></div>
+            <div><dt>Context and limits</dt><dd>Urgency reflects interacting enteric, autonomic, spinal and conscious processes rather than one chemical or stretch value.</dd></div>
+            <div><dt>Evidence status</dt><dd>Initial orientation carried forward from the Body–Situation Signals working note. Individual pathways and wording still require paper-level review.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="hunger">
+          <div class="entry-title"><h3>Hunger</h3><a href="../emotion/fluid.html#body-signals" aria-label="Return to Hunger in the Body Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · individual system · papers pending</p>
+          <dl>
+            <div id="hunger-regulated-condition"><dt>Regulated condition</dt><dd>Energy and nutrient availability, gastrointestinal contents, stored energy and anticipated access to food.</dd></div>
+            <div><dt>Detection</dt><dd>Hypothalamic AgRP/NPY and POMC-related circuits integrate circulating, vagal, gastrointestinal and sensory information.</dd></div>
+            <div id="hunger-signalling-regulation"><dt>Signalling and regulation</dt><dd>Ghrelin, leptin, insulin, CCK, PYY, GLP-1, serotonin, GABA, NPY/AgRP and melanocortin systems interact with dopaminergic reward and learning systems.</dd></div>
+            <div><dt>Corrective condition</dt><dd>Enough appropriate nourishment for energy and nutrient availability to update, together with satiety signals.</dd></div>
+            <div><dt>Context and limits</dt><dd>Homeostatic hunger, appetite, wanting and food reward overlap but are not identical processes.</dd></div>
+            <div><dt>Evidence status</dt><dd>Initial orientation carried forward from the Body–Situation Signals working note. Individual pathways and wording still require paper-level review.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="tiredness">
+          <div class="entry-title"><h3>Tiredness</h3><a href="../emotion/fluid.html#body-signals" aria-label="Return to Tiredness in the Body Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · individual system · papers pending</p>
+          <dl>
+            <div id="tiredness-regulated-condition"><dt>Regulated condition</dt><dd>Accumulated wakefulness, sleep pressure, circadian phase, energy expenditure, immune activity and recovery state.</dd></div>
+            <div><dt>Detection</dt><dd>Sleep–wake and circadian networks integrate metabolic, neural, hormonal, immune and environmental timing information.</dd></div>
+            <div id="tiredness-signalling-regulation"><dt>Signalling and regulation</dt><dd>Adenosine contributes to sleep pressure; melatonin conveys circadian timing; orexin/hypocretin, histamine, acetylcholine, dopamine, noradrenaline, serotonin and GABA participate in arousal and sleep transitions.</dd></div>
+            <div><dt>Corrective condition</dt><dd>Enough rest and sleep, aligned where possible with circadian timing, for spent capacity and sleep pressure to update.</dd></div>
+            <div><dt>Context and limits</dt><dd>Tiredness is not a direct adenosine reading; illness, inflammation, exertion, mood, sleep loss and circadian timing can produce different routes to a similar feeling.</dd></div>
+            <div><dt>Evidence status</dt><dd>Initial orientation carried forward from the Body–Situation Signals working note. Individual pathways and wording still require paper-level review.</dd></div>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section class="family" aria-labelledby="situation-signal-neurochemistry">
+      <header class="family-head"><span class="position">A→D</span><div><p>Current and represented conditions</p><h2 id="situation-signal-neurochemistry">Situation Signals</h2></div></header>
+    </section>
+    <p class="research-question"><span>Central Situation Signal research question</span>As conditions move from connection through uncertain safety, direct threat and life threat, does the relative recruitment, timing and functional role of neurochemical systems change in ways consistent with these four families?</p>
+
+    <section class="family" aria-labelledby="family-a">
+      <header class="family-head"><span class="position">A</span><div><p>Situation Signal family</p><h2 id="family-a">Belonging Emotions</h2></div></header>
+      <div class="entries">
+        <article class="entry" id="love">
+          <div class="entry-title"><h3>Love</h3><a href="../emotion/fluid.html#situation-signals" aria-label="Return to Love in the Situation Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · family-level · papers pending</p>
+          <dl>
+            <div><dt>Central signalling</dt><dd>Oxytocinergic, dopaminergic, serotonergic and endogenous-opioid systems may participate in affiliation, social salience, learning, motivation, reward and regulation.</dd></div>
+            <div><dt>Peripheral hormones</dt><dd>Oxytocin and wider autonomic and endocrine activity may participate, but a peripheral concentration cannot identify this emotion or Organisation A.</dd></div>
+            <div><dt>Evidence carried forward</dt><dd>Current text transfers the earlier Organisation A synthesis. Individual-emotion measures and experimental paradigms have not yet been separated.</dd></div>
+            <div><dt>Context and limits</dt><dd>Provisional family-level association. Oxytocin is not love or proof of safety; dopamine is not pleasure; no listed system is unique to this signal.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="trust">
+          <div class="entry-title"><h3>Trust</h3><a href="../emotion/fluid.html#situation-signals" aria-label="Return to Trust in the Situation Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · family-level · papers pending</p>
+          <dl>
+            <div><dt>Central signalling</dt><dd>Oxytocinergic, dopaminergic, serotonergic and endogenous-opioid systems may participate in affiliation, social salience, learning, motivation, reward and regulation.</dd></div>
+            <div><dt>Peripheral hormones</dt><dd>Oxytocin and wider autonomic and endocrine activity may participate, but a peripheral concentration cannot identify this emotion or Organisation A.</dd></div>
+            <div><dt>Evidence carried forward</dt><dd>Current text transfers the earlier Organisation A synthesis. Individual-emotion measures and experimental paradigms have not yet been separated.</dd></div>
+            <div><dt>Context and limits</dt><dd>Provisional family-level association. Oxytocin is not love or proof of safety; dopamine is not pleasure; no listed system is unique to this signal.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="gratitude">
+          <div class="entry-title"><h3>Gratitude</h3><a href="../emotion/fluid.html#situation-signals" aria-label="Return to Gratitude in the Situation Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · family-level · papers pending</p>
+          <dl>
+            <div><dt>Central signalling</dt><dd>Oxytocinergic, dopaminergic, serotonergic and endogenous-opioid systems may participate in affiliation, social salience, learning, motivation, reward and regulation.</dd></div>
+            <div><dt>Peripheral hormones</dt><dd>Oxytocin and wider autonomic and endocrine activity may participate, but a peripheral concentration cannot identify this emotion or Organisation A.</dd></div>
+            <div><dt>Evidence carried forward</dt><dd>Current text transfers the earlier Organisation A synthesis. Individual-emotion measures and experimental paradigms have not yet been separated.</dd></div>
+            <div><dt>Context and limits</dt><dd>Provisional family-level association. Oxytocin is not love or proof of safety; dopamine is not pleasure; no listed system is unique to this signal.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="compassion">
+          <div class="entry-title"><h3>Compassion</h3><a href="../emotion/fluid.html#situation-signals" aria-label="Return to Compassion in the Situation Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · family-level · papers pending</p>
+          <dl>
+            <div><dt>Central signalling</dt><dd>Oxytocinergic, dopaminergic, serotonergic and endogenous-opioid systems may participate in affiliation, social salience, learning, motivation, reward and regulation.</dd></div>
+            <div><dt>Peripheral hormones</dt><dd>Oxytocin and wider autonomic and endocrine activity may participate, but a peripheral concentration cannot identify this emotion or Organisation A.</dd></div>
+            <div><dt>Evidence carried forward</dt><dd>Current text transfers the earlier Organisation A synthesis. Individual-emotion measures and experimental paradigms have not yet been separated.</dd></div>
+            <div><dt>Context and limits</dt><dd>Provisional family-level association. Oxytocin is not love or proof of safety; dopamine is not pleasure; no listed system is unique to this signal.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="admiration">
+          <div class="entry-title"><h3>Admiration</h3><a href="../emotion/fluid.html#situation-signals" aria-label="Return to Admiration in the Situation Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · family-level · papers pending</p>
+          <dl>
+            <div><dt>Central signalling</dt><dd>Oxytocinergic, dopaminergic, serotonergic and endogenous-opioid systems may participate in affiliation, social salience, learning, motivation, reward and regulation.</dd></div>
+            <div><dt>Peripheral hormones</dt><dd>Oxytocin and wider autonomic and endocrine activity may participate, but a peripheral concentration cannot identify this emotion or Organisation A.</dd></div>
+            <div><dt>Evidence carried forward</dt><dd>Current text transfers the earlier Organisation A synthesis. Individual-emotion measures and experimental paradigms have not yet been separated.</dd></div>
+            <div><dt>Context and limits</dt><dd>Provisional family-level association. Oxytocin is not love or proof of safety; dopamine is not pleasure; no listed system is unique to this signal.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="happiness">
+          <div class="entry-title"><h3>Happiness</h3><a href="../emotion/fluid.html#situation-signals" aria-label="Return to Happiness in the Situation Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · family-level · papers pending</p>
+          <dl>
+            <div><dt>Central signalling</dt><dd>Oxytocinergic, dopaminergic, serotonergic and endogenous-opioid systems may participate in affiliation, social salience, learning, motivation, reward and regulation.</dd></div>
+            <div><dt>Peripheral hormones</dt><dd>Oxytocin and wider autonomic and endocrine activity may participate, but a peripheral concentration cannot identify this emotion or Organisation A.</dd></div>
+            <div><dt>Evidence carried forward</dt><dd>Current text transfers the earlier Organisation A synthesis. Individual-emotion measures and experimental paradigms have not yet been separated.</dd></div>
+            <div><dt>Context and limits</dt><dd>Provisional family-level association. Oxytocin is not love or proof of safety; dopamine is not pleasure; no listed system is unique to this signal.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="joy">
+          <div class="entry-title"><h3>Joy</h3><a href="../emotion/fluid.html#situation-signals" aria-label="Return to Joy in the Situation Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · family-level · papers pending</p>
+          <dl>
+            <div><dt>Central signalling</dt><dd>Oxytocinergic, dopaminergic, serotonergic and endogenous-opioid systems may participate in affiliation, social salience, learning, motivation, reward and regulation.</dd></div>
+            <div><dt>Peripheral hormones</dt><dd>Oxytocin and wider autonomic and endocrine activity may participate, but a peripheral concentration cannot identify this emotion or Organisation A.</dd></div>
+            <div><dt>Evidence carried forward</dt><dd>Current text transfers the earlier Organisation A synthesis. Individual-emotion measures and experimental paradigms have not yet been separated.</dd></div>
+            <div><dt>Context and limits</dt><dd>Provisional family-level association. Oxytocin is not love or proof of safety; dopamine is not pleasure; no listed system is unique to this signal.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="pride">
+          <div class="entry-title"><h3>Pride</h3><a href="../emotion/fluid.html#situation-signals" aria-label="Return to Pride in the Situation Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · family-level · papers pending</p>
+          <dl>
+            <div><dt>Central signalling</dt><dd>Oxytocinergic, dopaminergic, serotonergic and endogenous-opioid systems may participate in affiliation, social salience, learning, motivation, reward and regulation.</dd></div>
+            <div><dt>Peripheral hormones</dt><dd>Oxytocin and wider autonomic and endocrine activity may participate, but a peripheral concentration cannot identify this emotion or Organisation A.</dd></div>
+            <div><dt>Evidence carried forward</dt><dd>Current text transfers the earlier Organisation A synthesis. Individual-emotion measures and experimental paradigms have not yet been separated.</dd></div>
+            <div><dt>Context and limits</dt><dd>Provisional family-level association. Oxytocin is not love or proof of safety; dopamine is not pleasure; no listed system is unique to this signal.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="hope">
+          <div class="entry-title"><h3>Hope</h3><a href="../emotion/fluid.html#situation-signals" aria-label="Return to Hope in the Situation Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · family-level · papers pending</p>
+          <dl>
+            <div><dt>Central signalling</dt><dd>Oxytocinergic, dopaminergic, serotonergic and endogenous-opioid systems may participate in affiliation, social salience, learning, motivation, reward and regulation.</dd></div>
+            <div><dt>Peripheral hormones</dt><dd>Oxytocin and wider autonomic and endocrine activity may participate, but a peripheral concentration cannot identify this emotion or Organisation A.</dd></div>
+            <div><dt>Evidence carried forward</dt><dd>Current text transfers the earlier Organisation A synthesis. Individual-emotion measures and experimental paradigms have not yet been separated.</dd></div>
+            <div><dt>Context and limits</dt><dd>Provisional family-level association. Oxytocin is not love or proof of safety; dopamine is not pleasure; no listed system is unique to this signal.</dd></div>
+          </dl>
+        </article>
+      </div>
+    </section>
+    <section class="family" aria-labelledby="family-ab">
+      <header class="family-head"><span class="position">A↔B</span><div><p>Situation Signal family</p><h2 id="family-ab">Belonging-at-Risk</h2></div></header>
+      <div class="entries">
+        <article class="entry" id="shame">
+          <div class="entry-title"><h3>Shame</h3><a href="../emotion/fluid.html#situation-signals" aria-label="Return to Shame in the Situation Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · family-level · papers pending</p>
+          <dl>
+            <div><dt>Central signalling</dt><dd>Noradrenergic, cholinergic, dopaminergic, HPA-related and other signalling may support orienting, vigilance, learning and updating under uncertain conditions.</dd></div>
+            <div><dt>Peripheral hormones</dt><dd>Catecholamine and cortisol responses may participate, with direction and magnitude varying by anticipation, social evaluation, controllability, timing and prior learning.</dd></div>
+            <div><dt>Evidence carried forward</dt><dd>Current text transfers the earlier Organisation A↔B synthesis. Individual-emotion measures and eliciting conditions have not yet been separated.</dd></div>
+            <div><dt>Context and limits</dt><dd>Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="guilt">
+          <div class="entry-title"><h3>Guilt</h3><a href="../emotion/fluid.html#situation-signals" aria-label="Return to Guilt in the Situation Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · family-level · papers pending</p>
+          <dl>
+            <div><dt>Central signalling</dt><dd>Noradrenergic, cholinergic, dopaminergic, HPA-related and other signalling may support orienting, vigilance, learning and updating under uncertain conditions.</dd></div>
+            <div><dt>Peripheral hormones</dt><dd>Catecholamine and cortisol responses may participate, with direction and magnitude varying by anticipation, social evaluation, controllability, timing and prior learning.</dd></div>
+            <div><dt>Evidence carried forward</dt><dd>Current text transfers the earlier Organisation A↔B synthesis. Individual-emotion measures and eliciting conditions have not yet been separated.</dd></div>
+            <div><dt>Context and limits</dt><dd>Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="loneliness">
+          <div class="entry-title"><h3>Loneliness</h3><a href="../emotion/fluid.html#situation-signals" aria-label="Return to Loneliness in the Situation Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · family-level · papers pending</p>
+          <dl>
+            <div><dt>Central signalling</dt><dd>Noradrenergic, cholinergic, dopaminergic, HPA-related and other signalling may support orienting, vigilance, learning and updating under uncertain conditions.</dd></div>
+            <div><dt>Peripheral hormones</dt><dd>Catecholamine and cortisol responses may participate, with direction and magnitude varying by anticipation, social evaluation, controllability, timing and prior learning.</dd></div>
+            <div><dt>Evidence carried forward</dt><dd>Current text transfers the earlier Organisation A↔B synthesis. Individual-emotion measures and eliciting conditions have not yet been separated.</dd></div>
+            <div><dt>Context and limits</dt><dd>Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="disappointment">
+          <div class="entry-title"><h3>Disappointment</h3><a href="../emotion/fluid.html#situation-signals" aria-label="Return to Disappointment in the Situation Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · family-level · papers pending</p>
+          <dl>
+            <div><dt>Central signalling</dt><dd>Noradrenergic, cholinergic, dopaminergic, HPA-related and other signalling may support orienting, vigilance, learning and updating under uncertain conditions.</dd></div>
+            <div><dt>Peripheral hormones</dt><dd>Catecholamine and cortisol responses may participate, with direction and magnitude varying by anticipation, social evaluation, controllability, timing and prior learning.</dd></div>
+            <div><dt>Evidence carried forward</dt><dd>Current text transfers the earlier Organisation A↔B synthesis. Individual-emotion measures and eliciting conditions have not yet been separated.</dd></div>
+            <div><dt>Context and limits</dt><dd>Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="sadness">
+          <div class="entry-title"><h3>Sadness</h3><a href="../emotion/fluid.html#situation-signals" aria-label="Return to Sadness in the Situation Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · family-level · papers pending</p>
+          <dl>
+            <div><dt>Central signalling</dt><dd>Noradrenergic, cholinergic, dopaminergic, HPA-related and other signalling may support orienting, vigilance, learning and updating under uncertain conditions.</dd></div>
+            <div><dt>Peripheral hormones</dt><dd>Catecholamine and cortisol responses may participate, with direction and magnitude varying by anticipation, social evaluation, controllability, timing and prior learning.</dd></div>
+            <div><dt>Evidence carried forward</dt><dd>Current text transfers the earlier Organisation A↔B synthesis. Individual-emotion measures and eliciting conditions have not yet been separated.</dd></div>
+            <div><dt>Context and limits</dt><dd>Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="grief">
+          <div class="entry-title"><h3>Grief</h3><a href="../emotion/fluid.html#situation-signals" aria-label="Return to Grief in the Situation Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · family-level · papers pending</p>
+          <dl>
+            <div><dt>Central signalling</dt><dd>Noradrenergic, cholinergic, dopaminergic, HPA-related and other signalling may support orienting, vigilance, learning and updating under uncertain conditions.</dd></div>
+            <div><dt>Peripheral hormones</dt><dd>Catecholamine and cortisol responses may participate, with direction and magnitude varying by anticipation, social evaluation, controllability, timing and prior learning.</dd></div>
+            <div><dt>Evidence carried forward</dt><dd>Current text transfers the earlier Organisation A↔B synthesis. Individual-emotion measures and eliciting conditions have not yet been separated.</dd></div>
+            <div><dt>Context and limits</dt><dd>Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="confusion">
+          <div class="entry-title"><h3>Confusion</h3><a href="../emotion/fluid.html#situation-signals" aria-label="Return to Confusion in the Situation Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · family-level · papers pending</p>
+          <dl>
+            <div><dt>Central signalling</dt><dd>Noradrenergic, cholinergic, dopaminergic, HPA-related and other signalling may support orienting, vigilance, learning and updating under uncertain conditions.</dd></div>
+            <div><dt>Peripheral hormones</dt><dd>Catecholamine and cortisol responses may participate, with direction and magnitude varying by anticipation, social evaluation, controllability, timing and prior learning.</dd></div>
+            <div><dt>Evidence carried forward</dt><dd>Current text transfers the earlier Organisation A↔B synthesis. Individual-emotion measures and eliciting conditions have not yet been separated.</dd></div>
+            <div><dt>Context and limits</dt><dd>Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="frustration">
+          <div class="entry-title"><h3>Frustration</h3><a href="../emotion/fluid.html#situation-signals" aria-label="Return to Frustration in the Situation Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · family-level · papers pending</p>
+          <dl>
+            <div><dt>Central signalling</dt><dd>Noradrenergic, cholinergic, dopaminergic, HPA-related and other signalling may support orienting, vigilance, learning and updating under uncertain conditions.</dd></div>
+            <div><dt>Peripheral hormones</dt><dd>Catecholamine and cortisol responses may participate, with direction and magnitude varying by anticipation, social evaluation, controllability, timing and prior learning.</dd></div>
+            <div><dt>Evidence carried forward</dt><dd>Current text transfers the earlier Organisation A↔B synthesis. Individual-emotion measures and eliciting conditions have not yet been separated.</dd></div>
+            <div><dt>Context and limits</dt><dd>Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="anxiety">
+          <div class="entry-title"><h3>Anxiety</h3><a href="../emotion/fluid.html#situation-signals" aria-label="Return to Anxiety in the Situation Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · family-level · papers pending</p>
+          <dl>
+            <div><dt>Central signalling</dt><dd>Noradrenergic, cholinergic, dopaminergic, HPA-related and other signalling may support orienting, vigilance, learning and updating under uncertain conditions.</dd></div>
+            <div><dt>Peripheral hormones</dt><dd>Catecholamine and cortisol responses may participate, with direction and magnitude varying by anticipation, social evaluation, controllability, timing and prior learning.</dd></div>
+            <div><dt>Evidence carried forward</dt><dd>Current text transfers the earlier Organisation A↔B synthesis. Individual-emotion measures and eliciting conditions have not yet been separated.</dd></div>
+            <div><dt>Context and limits</dt><dd>Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="stress">
+          <div class="entry-title"><h3>Stress</h3><a href="../emotion/fluid.html#situation-signals" aria-label="Return to Stress in the Situation Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · family-level · papers pending</p>
+          <dl>
+            <div><dt>Central signalling</dt><dd>Noradrenergic, cholinergic, dopaminergic, HPA-related and other signalling may support orienting, vigilance, learning and updating under uncertain conditions.</dd></div>
+            <div><dt>Peripheral hormones</dt><dd>Catecholamine and cortisol responses may participate, with direction and magnitude varying by anticipation, social evaluation, controllability, timing and prior learning.</dd></div>
+            <div><dt>Evidence carried forward</dt><dd>Current text transfers the earlier Organisation A↔B synthesis. Individual-emotion measures and eliciting conditions have not yet been separated.</dd></div>
+            <div><dt>Context and limits</dt><dd>Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion.</dd></div>
+          </dl>
+        </article>
+      </div>
+    </section>
+    <section class="family" aria-labelledby="family-b">
+      <header class="family-head"><span class="position">B</span><div><p>Situation Signal family</p><h2 id="family-b">Threat-Protection</h2></div></header>
+      <div class="entries">
+        <article class="entry" id="fear">
+          <div class="entry-title"><h3>Fear</h3><a href="../emotion/fluid.html#situation-signals" aria-label="Return to Fear in the Situation Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · family-level · papers pending</p>
+          <dl>
+            <div><dt>Central signalling</dt><dd>Noradrenergic, endogenous-opioid and other rapid protective signalling may participate alongside autonomic, attentional, pain-modulatory and metabolic systems.</dd></div>
+            <div><dt>Peripheral hormones</dt><dd>Adrenaline and noradrenaline may support rapid mobilisation; HPA-axis and cortisol effects unfold on a different timescale. Immune and metabolic changes may also participate.</dd></div>
+            <div><dt>Evidence carried forward</dt><dd>Current text transfers the earlier Organisation B synthesis. Individual-emotion measures, threat paradigms and response timing have not yet been separated.</dd></div>
+            <div><dt>Context and limits</dt><dd>Provisional family-level association. Adrenaline is not fear or anger, and no chemical pattern establishes which protective emotion is present.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="anger">
+          <div class="entry-title"><h3>Anger</h3><a href="../emotion/fluid.html#situation-signals" aria-label="Return to Anger in the Situation Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · family-level · papers pending</p>
+          <dl>
+            <div><dt>Central signalling</dt><dd>Noradrenergic, endogenous-opioid and other rapid protective signalling may participate alongside autonomic, attentional, pain-modulatory and metabolic systems.</dd></div>
+            <div><dt>Peripheral hormones</dt><dd>Adrenaline and noradrenaline may support rapid mobilisation; HPA-axis and cortisol effects unfold on a different timescale. Immune and metabolic changes may also participate.</dd></div>
+            <div><dt>Evidence carried forward</dt><dd>Current text transfers the earlier Organisation B synthesis. Individual-emotion measures, threat paradigms and response timing have not yet been separated.</dd></div>
+            <div><dt>Context and limits</dt><dd>Provisional family-level association. Adrenaline is not fear or anger, and no chemical pattern establishes which protective emotion is present.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="disgust">
+          <div class="entry-title"><h3>Disgust</h3><a href="../emotion/fluid.html#situation-signals" aria-label="Return to Disgust in the Situation Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · family-level · papers pending</p>
+          <dl>
+            <div><dt>Central signalling</dt><dd>Noradrenergic, endogenous-opioid and other rapid protective signalling may participate alongside autonomic, attentional, pain-modulatory and metabolic systems.</dd></div>
+            <div><dt>Peripheral hormones</dt><dd>Adrenaline and noradrenaline may support rapid mobilisation; HPA-axis and cortisol effects unfold on a different timescale. Immune and metabolic changes may also participate.</dd></div>
+            <div><dt>Evidence carried forward</dt><dd>Current text transfers the earlier Organisation B synthesis. Individual-emotion measures, threat paradigms and response timing have not yet been separated.</dd></div>
+            <div><dt>Context and limits</dt><dd>Provisional family-level association. Adrenaline is not fear or anger, and no chemical pattern establishes which protective emotion is present.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="suspicion">
+          <div class="entry-title"><h3>Suspicion</h3><a href="../emotion/fluid.html#situation-signals" aria-label="Return to Suspicion in the Situation Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · family-level · papers pending</p>
+          <dl>
+            <div><dt>Central signalling</dt><dd>Noradrenergic, endogenous-opioid and other rapid protective signalling may participate alongside autonomic, attentional, pain-modulatory and metabolic systems.</dd></div>
+            <div><dt>Peripheral hormones</dt><dd>Adrenaline and noradrenaline may support rapid mobilisation; HPA-axis and cortisol effects unfold on a different timescale. Immune and metabolic changes may also participate.</dd></div>
+            <div><dt>Evidence carried forward</dt><dd>Current text transfers the earlier Organisation B synthesis. Individual-emotion measures, threat paradigms and response timing have not yet been separated.</dd></div>
+            <div><dt>Context and limits</dt><dd>Provisional family-level association. Adrenaline is not fear or anger, and no chemical pattern establishes which protective emotion is present.</dd></div>
+          </dl>
+        </article>
+      </div>
+    </section>
+    <section class="family" aria-labelledby="family-d">
+      <header class="family-head"><span class="position">D</span><div><p>Situation Signal family</p><h2 id="family-d">Survival-Rage</h2></div></header>
+      <div class="entries">
+        <article class="entry" id="rage">
+          <div class="entry-title"><h3>Rage</h3><a href="../emotion/fluid.html#situation-signals" aria-label="Return to Rage in the Situation Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · family-level · papers pending</p>
+          <dl>
+            <div><dt>Central signalling</dt><dd>Catecholaminergic, endogenous-opioid and multiple neuromodulatory systems may support extreme attention, pain modulation, force and survival action.</dd></div>
+            <div><dt>Peripheral hormones</dt><dd>Adrenaline, noradrenaline, HPA mediators, cortisol and glucose regulation may help mobilise energy across different timescales.</dd></div>
+            <div><dt>Evidence carried forward</dt><dd>Current text transfers the earlier Organisation D synthesis. Evidence for the individual labels rage, fury and frenzy has not yet been separated.</dd></div>
+            <div><dt>Context and limits</dt><dd>Provisional family-level association. No chemical establishes rage, violence, dominance or life threat, and the same systems participate in other forms of intense action.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="fury">
+          <div class="entry-title"><h3>Fury</h3><a href="../emotion/fluid.html#situation-signals" aria-label="Return to Fury in the Situation Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · family-level · papers pending</p>
+          <dl>
+            <div><dt>Central signalling</dt><dd>Catecholaminergic, endogenous-opioid and multiple neuromodulatory systems may support extreme attention, pain modulation, force and survival action.</dd></div>
+            <div><dt>Peripheral hormones</dt><dd>Adrenaline, noradrenaline, HPA mediators, cortisol and glucose regulation may help mobilise energy across different timescales.</dd></div>
+            <div><dt>Evidence carried forward</dt><dd>Current text transfers the earlier Organisation D synthesis. Evidence for the individual labels rage, fury and frenzy has not yet been separated.</dd></div>
+            <div><dt>Context and limits</dt><dd>Provisional family-level association. No chemical establishes rage, violence, dominance or life threat, and the same systems participate in other forms of intense action.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="frenzy">
+          <div class="entry-title"><h3>Frenzy</h3><a href="../emotion/fluid.html#situation-signals" aria-label="Return to Frenzy in the Situation Signals table">↩ Signal table</a></div>
+          <p class="status">Working synthesis · family-level · papers pending</p>
+          <dl>
+            <div><dt>Central signalling</dt><dd>Catecholaminergic, endogenous-opioid and multiple neuromodulatory systems may support extreme attention, pain modulation, force and survival action.</dd></div>
+            <div><dt>Peripheral hormones</dt><dd>Adrenaline, noradrenaline, HPA mediators, cortisol and glucose regulation may help mobilise energy across different timescales.</dd></div>
+            <div><dt>Evidence carried forward</dt><dd>Current text transfers the earlier Organisation D synthesis. Evidence for the individual labels rage, fury and frenzy has not yet been separated.</dd></div>
+            <div><dt>Context and limits</dt><dd>Provisional family-level association. No chemical establishes rage, violence, dominance or life threat, and the same systems participate in other forms of intense action.</dd></div>
+          </dl>
+        </article>
+      </div>
+    </section>
+    <footer>TEG-Blue · Emotional Signal Map working research structure. Body Signal entries carry an initial system-level map; Situation Signal entries carry organisation-level hypotheses. Every signal still requires its own paper-grounded review.</footer>
+  </main>
+</body>
+</html>

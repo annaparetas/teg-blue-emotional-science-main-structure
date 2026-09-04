@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Regulation and Return — working tables</title>
+<style>
+  :root {
+    --ink:#0b1f42; --ink-soft:#24365c; --body:#3c4c6d; --muted:#64748b;
+    --line:#dbe3ef; --line-faint:#edf1f7; --paper:#fff; --page:#f6f8fc;
+    --working:#7c6fd0; --working-tint:#f7f4ff;
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; padding:48px 32px 96px; background:var(--page); color:var(--ink);
+    font:15px/1.55 ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif;
+  }
+  .wrap { max-width:1600px; margin:0 auto; }
+  h1,h2,h3 { font-family:ui-serif,Georgia,"Times New Roman",serif; font-weight:600; }
+  h1 { margin:0 0 8px; font-size:32px; }
+  h2 { margin:0 0 10px; font-size:23px; }
+  h3 { margin:40px 0 8px; font-size:19px; }
+  section { margin-bottom:56px; }
+  .source,.caption,.aside { max-width:900px; color:var(--body); }
+  .source { margin:0; font-size:13px; }
+  .caption { margin:0 0 18px; font-size:14px; }
+  .aside { margin:14px 0 0; font-size:13px; }
+  .status {
+    margin:28px 0 44px; padding:16px 18px; border:1px solid var(--line);
+    border-left:4px solid var(--working); border-radius:12px;
+    background:var(--working-tint); color:var(--ink-soft);
+  }
+  .definition {
+    padding:22px 24px; background:var(--paper); border:1px solid var(--line);
+    border-radius:14px; box-shadow:0 1px 2px rgba(11,31,66,.05);
+  }
+  .cards {
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:12px; margin:18px 0 0; padding:0;
+  }
+  .cards > div {
+    padding:14px 16px; background:var(--paper); border:1px solid var(--line);
+    border-top:3px solid var(--accent,var(--working)); border-radius:10px;
+  }
+  .cards dt { margin:0 0 4px; font-weight:750; color:var(--ink); }
+  .cards dd { margin:0; color:var(--body); font-size:13px; }
+  .code {
+    display:block; margin-bottom:5px; color:var(--ink);
+    font:750 12px/1.35 ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  .scroll {
+    overflow-x:auto; background:var(--paper); border:1px solid var(--line);
+    border-radius:14px; box-shadow:0 1px 2px rgba(11,31,66,.05);
+  }
+  table { border-collapse:collapse; width:100%; min-width:1500px; }
+  th,td {
+    padding:12px 14px; text-align:left; vertical-align:top;
+    border-bottom:1px solid var(--line-faint);
+  }
+  thead th { color:var(--ink); font-size:15px; font-weight:800; border-bottom:1px solid var(--line); }
+  thead th:first-child,tbody th { width:190px; min-width:190px; }
+  tbody th {
+    position:sticky; left:0; z-index:1; background:var(--paper); color:var(--muted);
+    border-right:1px solid var(--line); font-size:11px; font-weight:750;
+    letter-spacing:.06em; text-transform:uppercase;
+  }
+  td { color:var(--ink-soft); font-size:13px; }
+  tr.working th,tr.working td { background:var(--working-tint); }
+  .sequence {
+    display:grid; grid-template-columns:repeat(7,minmax(155px,1fr));
+    gap:0; min-width:1180px; margin:0; padding:0;
+  }
+  .sequence > div { position:relative; padding:14px 16px; background:var(--paper); border-right:1px solid var(--line); }
+  .sequence dt { margin:0 0 5px; color:var(--ink); font-size:12.5px; font-weight:750; }
+  .sequence dt span { display:block; margin-bottom:6px; color:var(--muted); font:700 10px/1 monospace; }
+  .sequence dd { margin:0; color:var(--body); font-size:12px; }
+  .question { display:block; margin-top:4px; color:var(--muted); font-size:11px; font-weight:500; text-transform:none; letter-spacing:0; }
+  .placeholder { color:var(--muted); font-style:italic; }
+  .back { display:inline-block; margin-top:18px; color:var(--muted); font-size:13px; }
+  @media (max-width:760px) { body { padding:28px 16px 72px; } }
+</style>
+</head>
+<body>
+<div class="carried-banner" role="note"><strong>Carried workbench · status archived.</strong> The 12 August 2026 regulation and Return workbench. Its settled concepts were absorbed into the Return page and the concepts note. Provenance only. <a href="../../index.html">Back to the Model 2 canon page →</a></div>
+<main class="wrap" id="top">
+  <header>
+    <h1>Regulation and Return</h1>
+    <p class="source">Separate working file · extracted from the Gradient map for slower conceptual development · <a href="../../premise.html">Read the governing model premise →</a></p>
+  </header>
+
+  <p class="status">
+    <strong>Provisional workbench.</strong> Nothing in this file is accepted into
+    the main Gradient table. Its purpose is to preserve the questions and drafts
+    while regulation, Return, recovery, restoration, and repair are reconsidered
+    one distinction at a time.
+  </p>
+
+  <section class="definition">
+    <h2>Current proposition under review</h2>
+    <p class="caption">
+      Regulation is the continuous organisation and adjustment of energy,
+      attention, perception, action, and available capacity in relation to
+      changing conditions. Every Position may therefore be regulatory without
+      “regulated” meaning calm, healthy, kind, accurate, or harmless.
+    </p>
+    <dl class="cards">
+      <div><dt>Regulation</dt><dd>The proposed encompassing process running across Positions.</dd></div>
+      <div><dt>Return</dt><dd>The proposed movement that reopens baseline X through genuine Connection A.</dd></div>
+      <div><dt>Recovery</dt><dd>Physiological rebuilding and remaining cost across different timescales.</dd></div>
+      <div><dt>Restoration</dt><dd>The energy strategy associated with baseline X.</dd></div>
+      <div><dt>Repair</dt><dd>Impact, accountability, agency, and possible relational rebuilding after rupture.</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Draft positional layer · Fluid Gradient</h2>
+    <p class="caption">Question under review: What is each organisation allocating its available resources to accomplish, and how available is Return?</p>
+    <div class="scroll"><table>
+      <thead><tr><th>Working row</th><th>X</th><th>A</th><th>A↔B</th><th>B</th><th>C</th><th>D</th><th>Z</th></tr></thead>
+      <tbody>
+        <tr class="working"><th>Regulatory task</th><td>Restore spent capacity and keep low-cost readiness available.</td><td>Organise through available connection while accumulating shared and individual capacity.</td><td>Prepare by checking what changed before committing to connection or defence.</td><td>Mobilise enough action to stop, escape, withstand, or establish an effective boundary.</td><td>Sustain protection through prediction, planning, and management of relevant variables.</td><td>Maximise immediate survival action while delaying information that cannot guide the next moment.</td><td>Conserve remaining capacity when active mobilisation is unavailable or too costly.</td></tr>
+        <tr><th>Return availability</th><td>Baseline has been re-accessed; restoration is available and movement remains open.</td><td>The only direct route into X when genuine connection completes.</td><td>Checking can release into A if uncertainty resolves.</td><td>Protection can release toward A and X, or loss of capacity can divert into Z.</td><td>Management can release toward A and X, or exhaustion can divert into Z.</td><td>Maximum force must cease being necessary; regulation can move toward A and X or divert into Z.</td><td>Z is not Return; sufficient capacity must re-enter before movement toward A and X.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Draft positional layer · Chronic Survival</h2>
+    <p class="caption">Question under review: What protective work remains organised when present conditions no longer reliably require it, and what blocks baseline re-access?</p>
+    <div class="scroll"><table>
+      <thead><tr><th>Working row</th><th>X</th><th>A</th><th>A↔B</th><th>B</th><th>C</th><th>D</th><th>Z</th></tr></thead>
+      <tbody>
+        <tr class="working"><th>Regulatory task</th><td>Maintain monitoring and conservation beneath apparent rest.</td><td>Preserve access to connection by tracking or accommodating another person before one’s own state.</td><td>Keep checking because uncertainty cannot close into reliable connection or proportionate defence.</td><td>Keep protection ready by treating possible threat as the default problem.</td><td>Maintain predicted safety or required outcomes by managing variables, timing, people, and information.</td><td>Preserve an imposed outcome through override, pressure, restriction, or force.</td><td>Minimise expenditure and contact because usable capacity cannot support engagement or active protection.</td></tr>
+        <tr><th>Return availability</th><td>The elevated resting level is not baseline X.</td><td>Conditional connection is not genuine A and can also collapse into Z.</td><td>Checking reconstructs uncertainty and can exhaust into Z.</td><td>Protection may release toward A and X or shift into Z.</td><td>Management may release toward A and X or collapse into Z.</td><td>Force may stop without Return; regulation may move toward A and X or into Z.</td><td>Z is not Return; capacity must re-emerge and regulation must still reach A before X.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Routes under review</h2>
+    <dl class="cards">
+      <div style="--accent:#8ef3a6"><dt><span class="code">X ↔ A</span>Two necessary non-defensive organisations</dt><dd>X restores and keeps movement free. A organises genuine connection. Neither replaces the other.</dd></div>
+      <div style="--accent:#6eeafb"><dt><span class="code">Any Return → A → X</span>Proposed baseline route</dt><dd>The current proposition is that baseline cannot be re-accessed without genuine Connection A becoming available first.</dd></div>
+      <div style="--accent:#a1adbf"><dt><span class="code">Fluid · B / C / D → Z</span>Fluid shutdown routes</dt><dd>Failed, blocked, overwhelmed, or unsustainable mobilisation may divert into conservation.</dd></div>
+      <div style="--accent:#ef823a"><dt><span class="code">Chronic · A / A↔B / B / C / D → Z</span>Chronic shutdown routes</dt><dd>Every chronic active organisation may exhaust or lose usable capacity into shutdown.</dd></div>
+      <div style="--accent:#5d6770"><dt><span class="code">Z → re-engagement</span>Not Return by itself</dt><dd>Orientation, responsiveness, and usable capacity must re-enter before movement toward A and X is possible.</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Possible biological sequence</h2>
+    <p class="caption">A working sequence to test, not an accepted series of stages or a universal clock.</p>
+    <div class="scroll"><dl class="sequence">
+      <div><dt><span>01</span>Condition or route changes</dt><dd>Has the demand or available response route actually changed?</dd></div>
+      <div><dt><span>02</span>Signal receives update</dt><dd>Has the emotion received credible condition-relevant evidence?</dd></div>
+      <div><dt><span>03</span>Recruitment can terminate</dt><dd>Can additional protective recruitment stop increasing?</dd></div>
+      <div><dt><span>04</span>Return begins</dt><dd>Can the activated organisation begin releasing its hold?</dd></div>
+      <div><dt><span>05</span>Capacity re-entry</dt><dd>Which awareness, reflection, and empathy capacities become usable?</dd></div>
+      <div><dt><span>06</span>Connection A</dt><dd>Can regulation organise through genuine connection?</dd></div>
+      <div><dt><span>07</span>Baseline X</dt><dd>Can lower-cost baseline access reopen while movement remains free?</dd></div>
+    </dl></div>
+    <dl class="cards">
+      <div><dt>Recovery may run alongside the sequence</dt><dd>Neural, autonomic, endocrine, immune, metabolic, muscular, pain, and sleep costs may recover at different rates.</dd></div>
+      <div><dt>Learning continues across later events</dt><dd>Re-accessing baseline once does not prove that the route will remain accessible.</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Completion pathways under review</h2>
+    <dl class="cards">
+      <div><dt>Environmental change</dt><dd>Danger ends, distance or shelter becomes available, or a material obstruction changes.</dd></div>
+      <div><dt>One’s own action</dt><dd>Protection succeeds, a boundary becomes effective, a task completes, or a goal changes.</dd></div>
+      <div><dt>Another nervous system</dt><dd>Recognition, reciprocity, clarification, co-regulation, accountability, or repair is genuinely relational.</dd></div>
+      <div><dt>Physiological recovery</dt><dd>The body receives rest, nourishment, treatment, sleep, or other restoration still required.</dd></div>
+      <div><dt>Grief and reorganisation</dt><dd>What cannot be restored is registered and life reorganises around the irreversible condition.</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Questions to settle before integration</h2>
+    <div class="scroll"><table>
+      <thead><tr><th>Candidate row</th><th colspan="7">Exact question still under review</th></tr></thead>
+      <tbody>
+        <tr><th>Regulatory function</th><td colspan="7">What is this organisation allocating resources to accomplish—and is that a distinct question from Summary and Resource allocation emphasis?</td></tr>
+        <tr><th>Resolution condition</th><td colspan="7">What must become true for the active organisation to release?</td></tr>
+        <tr><th>Pathway of completion</th><td colspan="7">Which route can actually change the condition or update the signal?</td></tr>
+        <tr><th>Evidence of Return</th><td colspan="7">What distinguishes movement toward baseline from pressure reduction, compliance, exhaustion, withdrawal, apology, or reconnection?</td></tr>
+        <tr><th>Recovery still required</th><td colspan="7">What physiological cost remains while or after baseline becomes accessible?</td></tr>
+        <tr><th>Chronic substitute</th><td colspan="7">What reduces pressure without reopening the actual route?</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <p class="aside">This file is intentionally independent. It does not establish accepted content in <code>inner-compass-nervous-system-organization-gradient.html</code> and does not connect to either Engine.</p>
+  <p><a class="back" href="#top">↑ Back to top</a></p>
+</main>
+</body>
+</html>

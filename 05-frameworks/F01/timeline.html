@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A provisional eight-expansion orientation map of the evolutionary capacities that participate many-to-many in the present TEG-Blue Fluid Gradient.">
+<title>F1 · Evolutionary Capacity Timeline · TEG-Blue</title>
+<style>
+  :root {
+    --bg:#0c1324; --surface:#111a30; --raised:#17223d; --inset:#080d19;
+    --text:#f4f7fb; --soft:#cbd6e7; --muted:#93a2b9; --hint:#64728a;
+    --line:rgba(170,188,216,.14); --line-strong:rgba(170,188,216,.32);
+    --cyan:#76e2ff; --aqua:#6eeafb; --green:#76faa1; --lime:#b6fc50;
+    --yellow:#e3fd54; --gold:#f7d448; --violet:#c6a8ff; --slate:#a1adbf;
+    --review:#ffce55; --mono:"JetBrains Mono","SFMono-Regular",Consolas,monospace;
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; scroll-padding-top:1.5rem; }
+  body { margin:0; padding:0 0 6rem; color:var(--text); background:
+    radial-gradient(circle at 82% -4%,rgba(118,226,255,.09),transparent 32rem),
+    linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px),var(--bg);
+    background-size:auto,32px 32px,32px 32px,auto;
+    font:15px/1.62 Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a { color:inherit; text-underline-offset:3px; }
+  a:focus-visible { outline:3px solid var(--cyan); outline-offset:4px; border-radius:3px; }
+  .wrap { width:min(1120px,calc(100% - 3rem)); margin:0 auto; }
+  .utility { display:flex; justify-content:space-between; flex-wrap:wrap; gap:.8rem 1.5rem; padding:1.3rem 0; color:var(--muted); font:700 10px/1.4 var(--mono); letter-spacing:.09em; text-transform:uppercase; }
+  .utility nav { display:flex; flex-wrap:wrap; gap:1rem; }
+  .utility a { text-decoration:none; }
+  .utility a:hover { color:var(--cyan); }
+  header { padding:clamp(3.5rem,8vw,6.5rem) 0 4rem; border-bottom:1px solid var(--line); }
+  .status { display:inline-block; margin-bottom:1.25rem; padding:.38rem .72rem; color:var(--review); border:1px solid rgba(255,206,85,.36); border-radius:999px; background:rgba(255,206,85,.08); font:700 10px/1.2 var(--mono); letter-spacing:.11em; text-transform:uppercase; }
+  .eyebrow,.section-id,.mini-label { color:var(--cyan); font:700 10px/1.4 var(--mono); letter-spacing:.14em; text-transform:uppercase; }
+  h1 { max-width:900px; margin:.75rem 0 1.25rem; font-size:clamp(2.25rem,6vw,5.3rem); line-height:.98; letter-spacing:-.055em; }
+  .standfirst { max-width:760px; margin:0; color:var(--soft); font-size:clamp(1.05rem,2vw,1.3rem); }
+  .thesis { display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); gap:1.2rem; align-items:center; margin:2.5rem 0 0; padding:1.35rem 1.5rem; border:1px solid var(--line); border-radius:14px; background:rgba(17,26,48,.78); }
+  .thesis div { min-width:0; }
+  .thesis strong { display:block; margin-top:.35rem; font-size:1rem; }
+  .thesis .arrow { color:var(--lime); font-size:1.5rem; }
+  .thesis .positions { color:var(--soft); font:700 clamp(.82rem,2vw,1rem)/1.6 var(--mono); letter-spacing:.04em; }
+  .reading-guard { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:2rem 0 0; }
+  .guard-card { padding:1.1rem 1.2rem; border-left:3px solid var(--accent); background:var(--surface); color:var(--muted); }
+  .guard-card strong { display:block; margin-bottom:.35rem; color:var(--text); }
+
+  .overview { padding:4rem 0 1.5rem; }
+  .overview h2,.stop h2,.handoff h2 { margin:.45rem 0 1rem; font-size:clamp(1.6rem,3vw,2.6rem); line-height:1.08; letter-spacing:-.03em; }
+  .lede { max-width:760px; margin:0 0 2rem; color:var(--muted); }
+  .rail { position:relative; display:grid; grid-template-columns:repeat(8,minmax(150px,1fr)); gap:.9rem; overflow-x:auto; padding:1rem .15rem 1.5rem; scrollbar-color:var(--line-strong) transparent; }
+  .rail::before { content:""; position:absolute; top:1.58rem; left:.2rem; right:.2rem; height:2px; background:linear-gradient(90deg,var(--cyan),var(--aqua),var(--green),var(--lime),var(--yellow),var(--gold),var(--violet),var(--slate)); }
+  .rail a { position:relative; min-height:225px; padding:2.2rem .9rem 1rem; color:var(--soft); text-decoration:none; border:1px solid var(--line); border-top:3px solid var(--accent); border-radius:0 0 10px 10px; background:linear-gradient(180deg,color-mix(in srgb,var(--accent) 9%,var(--surface)),var(--surface) 42%); }
+  .rail a::before { content:""; position:absolute; top:-.51rem; left:.8rem; width:.78rem; aspect-ratio:1; border:3px solid var(--bg); border-radius:50%; background:var(--accent); }
+  .rail a:hover { border-color:color-mix(in srgb,var(--accent) 60%,var(--line)); transform:translateY(-2px); }
+  .rail b { display:block; margin-bottom:.4rem; color:var(--accent); font:700 10px/1.3 var(--mono); letter-spacing:.12em; text-transform:uppercase; }
+  .rail strong { display:block; margin-bottom:.65rem; color:var(--text); font-size:.95rem; line-height:1.2; }
+  .rail span { display:block; color:var(--muted); font-size:.79rem; line-height:1.45; }
+  .continuity { margin-top:1.25rem; padding:1.2rem 1.3rem; border:1px solid var(--line); border-radius:10px; background:var(--inset); }
+  .continuity-track { height:.65rem; margin:.8rem 0; border-radius:999px; background:linear-gradient(90deg,var(--cyan),var(--aqua),var(--green),var(--lime),var(--yellow),var(--gold),var(--violet),var(--slate)); }
+  .continuity p { margin:0; color:var(--muted); font-size:.86rem; }
+
+  .stop { --accent:var(--cyan); display:grid; grid-template-columns:190px minmax(0,1fr); gap:2rem 3.2rem; padding:4.6rem 0; border-top:1px solid var(--line); }
+  .stop-side { position:sticky; top:1.5rem; align-self:start; }
+  .stop-no { display:grid; place-items:center; width:4rem; aspect-ratio:1; margin-bottom:1rem; color:var(--bg); border-radius:50%; background:var(--accent); font:800 1.2rem/1 var(--mono); }
+  .stop-side p { margin:.35rem 0 0; color:var(--muted); font:700 10px/1.45 var(--mono); letter-spacing:.08em; text-transform:uppercase; }
+  .stop-copy > p { max-width:760px; color:var(--soft); }
+  .problem { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:1.7rem 0; }
+  .problem article { padding:1.15rem 1.25rem; border:1px solid var(--line); border-top:3px solid var(--accent); border-radius:8px; background:var(--surface); }
+  .problem h3 { margin:0 0 .45rem; color:var(--hint); font:700 10px/1.4 var(--mono); letter-spacing:.1em; text-transform:uppercase; }
+  .problem p { margin:0; color:var(--soft); font-size:.92rem; }
+  .bridge { display:grid; grid-template-columns:1fr 1fr; overflow:hidden; margin-top:1.2rem; border:1px solid var(--line); border-radius:10px; background:var(--inset); }
+  .bridge div { padding:1.05rem 1.2rem; }
+  .bridge div + div { border-left:1px solid var(--line); }
+  .bridge strong { display:block; margin-bottom:.3rem; color:var(--accent); font:700 10px/1.4 var(--mono); letter-spacing:.1em; text-transform:uppercase; }
+  .bridge span { color:var(--muted); font-size:.87rem; }
+  .boundary { margin-top:1.2rem; padding:1.05rem 1.2rem; border-left:3px solid var(--review); background:rgba(255,206,85,.05); color:var(--muted); font-size:.88rem; }
+  .boundary strong { color:var(--review); }
+  .back { margin-top:1.3rem; font:700 10px/1.4 var(--mono); letter-spacing:.08em; text-transform:uppercase; }
+  .back a { color:var(--hint); text-decoration:none; }
+  .back a:hover { color:var(--cyan); }
+
+  .handoff { margin-top:1rem; padding:clamp(2rem,5vw,4rem); border:1px solid var(--line-strong); border-radius:18px; background:linear-gradient(135deg,var(--raised),var(--surface)); }
+  .handoff-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.3rem; margin-top:1.5rem; }
+  .handoff a { padding:1.2rem; color:var(--soft); text-decoration:none; border:1px solid var(--line); border-radius:10px; background:var(--inset); }
+  .handoff a:hover { border-color:var(--cyan); }
+  .handoff a strong { display:block; color:var(--text); }
+  .handoff a span { display:block; margin-top:.3rem; color:var(--muted); font-size:.84rem; }
+  footer { margin-top:4rem; padding-top:2rem; border-top:1px solid var(--line); color:var(--hint); font-size:.82rem; }
+  @media (max-width:760px) {
+    .wrap { width:min(100% - 2rem,1120px); }
+    .thesis,.reading-guard,.problem,.bridge,.handoff-grid { grid-template-columns:1fr; }
+    .thesis .arrow { transform:rotate(90deg); }
+    .stop { grid-template-columns:1fr; gap:1rem; }
+    .stop-side { position:static; display:grid; grid-template-columns:auto 1fr; gap:0 1rem; align-items:center; }
+    .stop-side p { grid-column:2; }
+    .bridge div + div { border-left:0; border-top:1px solid var(--line); }
+  }
+  @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .rail a { transition:none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="carried-banner" role="note"><strong>Carried visual account · status working.</strong> The provisional eight-expansion evolutionary capacity timeline. Carried on 2 September 2026 as F1's current visual account. An orientation and research map, not a dated ladder. The other F1 diagram files stay in the frozen repository. <a href="index.html">Back to the F1 canon page →</a></div>
+<div class="utility">
+    <span>F1 · evolutionary foundations</span>
+    <nav aria-label="Related F1 pages">
+      <a href="../index.html">F1 working account</a>
+      <a href="crosswalk.html">Position crosswalk</a>
+      <a href="review.md">Framework review</a>
+    </nav>
+  </div>
+
+  <header>
+    <div class="status">Provisional orientation map · comparative review required</div>
+    <div class="eyebrow">Deep time → present participation</div>
+    <h1>How the living repertoire expanded.</h1>
+    <p class="standfirst">Eight broad expansions made more kinds of condition detectable, more responses possible, and more routes for learning, coordination, updating and recovery available. They accumulated and recombined; they did not become eight stages or map one-to-one onto the seven Fluid Positions.</p>
+    <div class="thesis" aria-label="Evolutionary capacities participate many-to-many in present Fluid organisation">
+      <div><span class="mini-label">Evolutionary capacity field</span><strong>Sensing · action · care · communication · prediction · recovery</strong></div>
+      <span class="arrow" aria-hidden="true">⇢</span>
+      <div><span class="mini-label">Many-to-many participation now</span><strong class="positions">X · A · A↔B · B · C · D · Z</strong></div>
+    </div>
+    <div class="reading-guard">
+      <div class="guard-card" style="--accent:var(--cyan)"><strong>Deep time asks what became available.</strong> Different capacities have overlapping histories across lineages.</div>
+      <div class="guard-card" style="--accent:var(--lime)"><strong>The Fluid Gradient asks how capacities organise now.</strong> A Position is a present whole-organism configuration, not an evolutionary age.</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="overview" id="timeline" aria-labelledby="timeline-title">
+      <div class="section-id">Eight broad expansions</div>
+      <h2 id="timeline-title">A capacity timeline, not a dated ladder.</h2>
+      <p class="lede">The order is deliberately rough. Select a stop to see the problem-space it opened, its relevance now, and the boundary the claim must keep.</p>
+      <div class="rail" aria-label="Evolutionary capacity timeline">
+        <a href="#viability" style="--accent:var(--cyan)"><b>01 · Viability</b><strong>Internal sensitivity</strong><span>Conditions required for continued living become detectable and adjustable.</span></a>
+        <a href="#orientation" style="--accent:var(--aqua)"><b>02 · Orientation</b><strong>Sensation and movement</strong><span>Contact with opportunities and constraints can change through action.</span></a>
+        <a href="#coordination" style="--accent:var(--green)"><b>03 · Coordination</b><strong>Conserve or mobilise</strong><span>Wider bodily systems can be organised around differing demands.</span></a>
+        <a href="#care" style="--accent:var(--lime)"><b>04 · Relationship</b><strong>Care and affiliation</strong><span>Other organisms can change resources, information and regulatory demand.</span></a>
+        <a href="#learning" style="--accent:var(--yellow)"><b>05 · Learning</b><strong>Memory and prediction</strong><span>Prior outcomes can shape preparation and flexible action.</span></a>
+        <a href="#communication" style="--accent:var(--gold)"><b>06 · Communication</b><strong>Embodied social meaning</strong><span>Attention, alarm, care and refusal can coordinate without words.</span></a>
+        <a href="#symbolic" style="--accent:var(--violet)"><b>07 · Symbolic extension</b><strong>Language and culture</strong><span>Absent conditions, explanations, plans and norms can be shared.</span></a>
+        <a href="#updating" style="--accent:var(--slate)"><b>08 · Re-opening</b><strong>Updating and recovery</strong><span>Costly organisation can end and wider participation become available again.</span></a>
+      </div>
+      <div class="continuity"><span class="mini-label">Accumulation across the line</span><div class="continuity-track" aria-hidden="true"></div><p>Later capacities join, modify and depend on already living forms of sensing, coordination and action. The line shows continuity, not progress from lesser to greater organisms.</p></div>
+    </section>
+
+    <section class="stop" id="viability" style="--accent:var(--cyan)">
+      <aside class="stop-side"><div class="stop-no">01</div><p>Viability maintenance<br>and internal sensitivity</p></aside>
+      <div class="stop-copy"><div class="section-id">The living requirement</div><h2>Remain within viable limits.</h2><p>Living systems detect and respond to changes relevant to temperature, energy, hydration, chemical balance, tissue integrity and other conditions of continued living. Nervous systems later extend this work; they do not create the underlying viability problem.</p>
+        <div class="problem"><article><h3>Made more manageable</h3><p>Internal change that could otherwise move the organism outside conditions compatible with continued life.</p></article><article><h3>Capacity added or elaborated</h3><p>Maintenance, internal sensitivity, resource adjustment and response to favourable or damaging gradients.</p></article></div>
+        <div class="bridge"><div><strong>Present Gradient relevance</strong><span>Grounds the model in a living organism whose resources and internal conditions continually change.</span></div><div><strong>Participates beyond one Position</strong><span>X foregrounds restoration, but viability regulation continues across every Position.</span></div></div>
+        <div class="boundary"><strong>Boundary.</strong> X is not identical to homeostasis, a cellular stage, or the only organisation in which maintenance occurs.</div><div class="back"><a href="#timeline">↑ Return to timeline</a></div>
+      </div>
+    </section>
+
+    <section class="stop" id="orientation" style="--accent:var(--aqua)">
+      <aside class="stop-side"><div class="stop-no">02</div><p>Coordinated sensation,<br>movement and orientation</p></aside>
+      <div class="stop-copy"><div class="section-id">Changing contact</div><h2>Alter the relationship to conditions.</h2><p>Coordinated sensing and movement make approaching, avoiding, pausing, feeding, seeking shelter and selecting among environmental possibilities increasingly possible. The organism can change not only its internal activity, but its contact with what matters.</p>
+        <div class="problem"><article><h3>Made more manageable</h3><p>Opportunities and constraints distributed across a changing environment.</p></article><article><h3>Capacity added or elaborated</h3><p>Orientation, movement selection, action readiness and the ability to sample the consequences of action.</p></article></div>
+        <div class="bridge"><div><strong>Present Gradient relevance</strong><span>Contributes to perception, orienting, action availability and the capacity to alter distance, exposure or contact.</span></div><div><strong>Participates beyond one Position</strong><span>Orientation and movement can serve exploration, care, protection, strategic action or recovery.</span></div></div>
+        <div class="boundary"><strong>Boundary.</strong> Present behaviour cannot be reduced to one ancient reflex, circuit or evolutionary purpose.</div><div class="back"><a href="#timeline">↑ Return to timeline</a></div>
+      </div>
+    </section>
+
+    <section class="stop" id="coordination" style="--accent:var(--green)">
+      <aside class="stop-side"><div class="stop-no">03</div><p>Conservation, mobilisation<br>and bodily coordination</p></aside>
+      <div class="stop-copy"><div class="section-id">Resource direction</div><h2>Spend, redirect or conserve capacity.</h2><p>Wider coordination allows energy use, cardiovascular activity, respiration, endocrine participation, perception and action to change together under differing demands. Mobilisation and conservation are both possible forms of regulation, not opposites of regulation.</p>
+        <div class="problem"><article><h3>Made more manageable</h3><p>Conditions requiring rapid action, sustained effort, maximum survival action, or reduced expenditure when action is unavailable or too costly.</p></article><article><h3>Capacity added or elaborated</h3><p>Whole-body mobilisation, constrained-action conservation and changing allocation across immediate and continuing demands.</p></article></div>
+        <div class="bridge"><div><strong>Present Gradient relevance</strong><span>Helps make the differentiated configurations of B, C, D and Z biologically possible.</span></div><div><strong>Also participates elsewhere</strong><span>A↔B prepares before active mobilisation; restorative and social activity also require coordinated physiology.</span></div></div>
+        <div class="boundary"><strong>Boundary.</strong> Conservation, mobilisation and immobilisation must not be arranged into an unsupported fixed phylogenetic sequence or one-pathway state story.</div><div class="back"><a href="#timeline">↑ Return to timeline</a></div>
+      </div>
+    </section>
+
+    <section class="stop" id="care" style="--accent:var(--lime)">
+      <aside class="stop-side"><div class="stop-no">04</div><p>Care, affiliation<br>and social coordination</p></aside>
+      <div class="stop-copy"><div class="section-id">Relationship as a condition</div><h2>Meet some demands with and through others.</h2><p>Caregiving, affiliation, play, cooperation and coordinated activity allow another organism to change access to warmth, protection, information, learning and action. Relational availability can reduce demand; uncertainty or loss can make that availability survival-relevant.</p>
+        <div class="problem"><article><h3>Made more manageable</h3><p>Dependent care, obtaining help, shared protection, learning from others, play, cooperation and collective action.</p></article><article><h3>Capacity added or elaborated</h3><p>Caregiving, attachment, reciprocal coordination, social buffering and the use of relationship as information and resource.</p></article></div>
+        <div class="bridge"><div><strong>Present Gradient relevance</strong><span>A holds relationship available for engagement; A↔B checks whether safety, belonging or access may be changing.</span></div><div><strong>Participates beyond two Positions</strong><span>Care, help-seeking, cooperation and social information can remain relevant across protection and Return.</span></div></div>
+        <div class="boundary"><strong>Boundary.</strong> Care is not exclusive to mammals. Connection is not automatically safe, reciprocal, non-defensive or regulating.</div><div class="back"><a href="#timeline">↑ Return to timeline</a></div>
+      </div>
+    </section>
+
+    <section class="stop" id="learning" style="--accent:var(--yellow)">
+      <aside class="stop-side"><div class="stop-no">05</div><p>Learning, memory,<br>prediction and flexible action</p></aside>
+      <div class="stop-copy"><div class="section-id">Using prior outcomes</div><h2>Prepare from more than the immediate cue.</h2><p>Learning and memory allow organisms to discriminate conditions, use prior outcomes, anticipate change and revise action. Prediction lengthens the horizon of regulation while flexible action makes more than one response available.</p>
+        <div class="problem"><article><h3>Made more manageable</h3><p>Recurring, uncertain or delayed conditions whose meaning becomes clearer through experience.</p></article><article><h3>Capacity added or elaborated</h3><p>Discrimination, anticipation, sequencing, outcome comparison, inhibition and revision of action.</p></article></div>
+        <div class="bridge"><div><strong>Present Gradient relevance</strong><span>Supports present-responsive comparison rather than a response tied only to an immediate stimulus.</span></div><div><strong>Participates across the Gradient</strong><span>C foregrounds sustained anticipatory management, but cognition, learning and prediction do not belong only to C or D.</span></div></div>
+        <div class="boundary"><strong>Boundary.</strong> Cognition did not begin with language, and present Gradient order is not an evolutionary scale of cognitive sophistication.</div><div class="back"><a href="#timeline">↑ Return to timeline</a></div>
+      </div>
+    </section>
+
+    <section class="stop" id="communication" style="--accent:var(--gold)">
+      <aside class="stop-side"><div class="stop-no">06</div><p>Prelinguistic social-affective<br>communication</p></aside>
+      <div class="stop-copy"><div class="section-id">Meaning before words</div><h2>Coordinate attention and action without explanation.</h2><p>Voice, face, gaze, gesture, orientation, touch, proximity, withdrawal, rhythm and movement can coordinate attention, distance, care, alarm, play, invitation, refusal and shared activity. These channels remain active after language appears.</p>
+        <div class="problem"><article><h3>Made more manageable</h3><p>Social coordination when what matters cannot be named, or when speed and shared timing matter more than explanation.</p></article><article><h3>Capacity added or elaborated</h3><p>Multi-channel embodied communication of socially consequential conditions, intentions and readiness.</p></article></div>
+        <div class="bridge"><div><strong>Present Gradient relevance</strong><span>Bodies, faces, voices, gaze, touch and rhythm continue to shape Situation Signals and relational organisation.</span></div><div><strong>Not all feeling is communication</strong><span>Cold, hunger and many emotional events can organise the organism without primarily functioning as messages to another person.</span></div></div>
+        <div class="boundary"><strong>Boundary.</strong> Humans did not communicate through emotion alone. Communication was—and remains—multi-channel.</div><div class="back"><a href="#timeline">↑ Return to timeline</a></div>
+      </div>
+    </section>
+
+    <section class="stop" id="symbolic" style="--accent:var(--violet)">
+      <aside class="stop-side"><div class="stop-no">07</div><p>Language, symbolic modelling<br>and cumulative culture</p></aside>
+      <div class="stop-copy"><div class="section-id">Reflective-symbolic extension</div><h2>Make absent conditions jointly available.</h2><p>Language and symbolic modelling expand the ability to refer to absent events, share explanations, transmit knowledge, coordinate plans, build norms and question an initial interpretation. Culture extends what can be accumulated and handed on.</p>
+        <div class="problem"><article><h3>Made more manageable</h3><p>Conditions displaced across time and space, complex coordination, cumulative knowledge and collectively maintained possibilities or constraints.</p></article><article><h3>Capacity added or elaborated</h3><p>Naming, explanation, shared abstraction, long-horizon planning, negotiation and cultural transmission.</p></article></div>
+        <div class="bridge"><div><strong>Present Gradient relevance</strong><span>Expands reflective-symbolic participation and the ways remembered, predicted or socially interpreted meaning can alter organisation.</span></div><div><strong>ESS · CLS · ME boundary</strong><span>Embodied and reflective-symbolic information remain concurrent biological processes; ME may gain changing access to both.</span></div></div>
+        <div class="boundary"><strong>Boundary.</strong> Language did not create cognition, replace emotional–somatic information, or install a detached controller above the organism.</div><div class="back"><a href="#timeline">↑ Return to timeline</a></div>
+      </div>
+    </section>
+
+    <section class="stop" id="updating" style="--accent:var(--slate)">
+      <aside class="stop-side"><div class="stop-no">08</div><p>Expanded flexibility,<br>updating and recovery</p></aside>
+      <div class="stop-copy"><div class="section-id">Ending costly demand</div><h2>Change course when conditions change.</h2><p>An adaptive repertoire must do more than recruit action. It must sample outcomes, revise weighting and expectation, release costly demand, restore resources and make other forms of participation available again.</p>
+        <div class="problem"><article><h3>Made more manageable</h3><p>Conditions that change, actions that succeed or fail, finite resources, and the need to become available for another task after demand ends.</p></article><article><h3>Capacity added or elaborated</h3><p>Flexibility, reversibility, recovery, restoration, renewed action availability and continued responsiveness to evidence.</p></article></div>
+        <div class="bridge"><div><strong>Present Gradient relevance</strong><span>Explains why Fluid organisation depends on updating and renewed availability, not on calmness or one preferred state.</span></div><div><strong>Return connection</strong><span>Completion, release, re-entry of capacities and physiological recovery are related but non-identical processes.</span></div></div>
+        <div class="boundary"><strong>Boundary.</strong> Return is not one universal pathway. Restoration is not exclusive to X, and visible quiet does not establish that updating occurred.</div><div class="back"><a href="#timeline">↑ Return to timeline</a></div>
+      </div>
+    </section>
+
+    <section class="handoff" aria-labelledby="handoff-title">
+      <div class="section-id">Where the timeline hands over</div><h2 id="handoff-title">Capacities became available; present organisation combines them.</h2>
+      <p class="lede">The next question is not “which Position evolved next?” It is “how does a present organism allocate these overlapping capacities as internal, environmental, relational and represented conditions change?”</p>
+      <div class="handoff-grid">
+        <a href="crosswalk.html"><strong>Open the F1 → Fluid Positions crosswalk</strong><span>See how every Position combines several evolutionary capacity families.</span></a>
+        <a href="../../03-model-2-gradient/positions.html#panel-fluid"><strong>Open the canonical Fluid Gradient</strong><span>Continue into the full present-tense table and its scientific companions.</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>F1 · Evolutionary Capacity Timeline · working companion to the F1 framework review. The eight expansions are provisional orientation categories, not dated stages, species ranks or one-to-one origins of Fluid Positions. Created 22 August 2026.</footer>
+</div>
+</body>
+</html>

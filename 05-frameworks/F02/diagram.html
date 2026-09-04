@@ -1,0 +1,710 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="F2 working account of how ESS, CLS and conscious participation develop, and how repeated emotional overriding may alter access, expression and action over time.">
+<title>F2 — When Emotion Must Be Overridden · TEG-Blue</title>
+<style>
+  :root {
+    --bg: #111729;
+    --surface: #131a2f;
+    --raised: #182039;
+    --inset: #0a0d17;
+    --text: #f1f5f9;
+    --soft: #cbd5e1;
+    --muted: #94a3b8;
+    --hint: #64748b;
+    --line: rgba(148, 163, 184, .14);
+    --line-strong: rgba(148, 163, 184, .32);
+    --cyan: #6eeafb;
+    --green: #b6fc50;
+    --yellow: #f7d448;
+    --orange: #ef823a;
+    --pink: #fb7185;
+    --purple: #a78bfa;
+    --grounded: #4ade80;
+    --mono: "JetBrains Mono", "SF Mono", Consolas, monospace;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; padding: 0 0 6rem; background: var(--bg); color: var(--text);
+    font: 15px/1.62 Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-underline-offset: 3px; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 1.5rem; }
+  h1, h2 { letter-spacing: -.02em; }
+
+  header { padding: 4.5rem 0 3.5rem; border-bottom: 1px solid var(--line); }
+  .eyebrow {
+    margin: 0 0 1rem; color: var(--cyan); font: 700 11px/1.4 var(--mono);
+    letter-spacing: .18em; text-transform: uppercase;
+  }
+  h1 {
+    max-width: 900px; margin: 0; font-size: clamp(2.4rem, 6.5vw, 5.4rem);
+    font-weight: 680; line-height: .98;
+  }
+  .standfirst { max-width: 770px; margin: 1.6rem 0 0; color: var(--soft); font-size: 1.17rem; }
+  .scope {
+    max-width: 780px; margin: 1.7rem 0 0; padding: .2rem 0 .2rem 1.2rem;
+    border-left: 3px solid var(--green); color: var(--muted); font-size: .93rem;
+  }
+  .scope strong { color: var(--soft); }
+
+  main { padding-top: 4rem; }
+  section { margin-bottom: 5rem; }
+  .section-no {
+    margin-bottom: .55rem; color: var(--hint); font: 600 10.5px/1.4 var(--mono);
+    letter-spacing: .16em; text-transform: uppercase;
+  }
+  h2 { margin: 0 0 .85rem; font-size: clamp(1.75rem, 4vw, 2.55rem); line-height: 1.15; }
+  h3 { margin: 0; font-size: 1rem; }
+  .lede { max-width: 780px; margin: 0 0 1.6rem; color: var(--soft); font-size: 1.04rem; }
+
+  .rule {
+    display: grid; grid-template-columns: 190px 1fr; gap: 1.4rem;
+    margin: 2rem 0; padding: 1.45rem 1.6rem;
+    border: 1px solid rgba(110, 234, 251, .32); border-radius: 11px;
+    background: rgba(110, 234, 251, .055);
+  }
+  .rule strong { color: var(--cyan); font-family: var(--mono); font-size: .77rem; letter-spacing: .08em; text-transform: uppercase; }
+  .rule p { margin: 0; color: var(--soft); }
+
+  .model-route {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    margin: 1.8rem 0;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    background: var(--line);
+  }
+  .route-step { position: relative; padding: 1rem 1.15rem; background: var(--surface); text-decoration: none; }
+  .route-step:not(:last-child)::after {
+    content: "→";
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--yellow);
+    color: var(--bg);
+    font: 800 11px/20px var(--mono);
+    text-align: center;
+    transform: translateY(-50%);
+  }
+  .route-step span { color: var(--accent); font: 750 9px/1.3 var(--mono); letter-spacing: .09em; text-transform: uppercase; }
+  .route-step strong { display: block; margin-top: .35rem; font-size: .9rem; }
+  .route-step p { margin: .35rem 0 0; color: var(--muted); font-size: .78rem; line-height: 1.42; }
+
+  .signal-reference {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .35rem;
+    margin: 0 0 1rem;
+  }
+  .signal-reference strong { margin-right: .25rem; color: var(--hint); font: 650 9px/1.3 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+  .signal-reference a {
+    padding: .22rem .46rem;
+    border: 1px solid rgba(110, 234, 251, .25);
+    border-radius: 4px;
+    color: var(--cyan);
+    font: 650 9px/1.3 var(--mono);
+    text-decoration: none;
+  }
+
+  /* Signature: three developmental rivers that begin with different degrees of functional availability. */
+  .development-key {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px;
+    margin: 2rem 0 1rem; overflow: hidden; border: 1px solid var(--line);
+    border-radius: 11px; background: var(--line);
+  }
+  .development-key article { padding: 1.2rem 1.3rem; background: var(--surface); border-top: 3px solid var(--accent); }
+  .development-key span { color: var(--accent); font: 750 10px/1.3 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+  .development-key h3 { margin: .4rem 0 .45rem; }
+  .development-key p { margin: 0; color: var(--muted); font-size: .86rem; }
+
+  .river-shell { overflow-x: auto; padding: 1.25rem; border: 1px solid var(--line-strong); border-radius: 12px; background: var(--inset); }
+  .rivers { min-width: 860px; display: grid; grid-template-columns: 125px repeat(7, minmax(90px, 1fr)); gap: .45rem .25rem; align-items: center; }
+  .river-age { color: var(--hint); font: 650 9px/1.3 var(--mono); letter-spacing: .06em; text-align: center; text-transform: uppercase; }
+  .river-age:first-child { text-align: left; }
+  .river-label { color: var(--accent); font: 800 12px/1.25 var(--mono); letter-spacing: .08em; }
+  .river-label small { display: block; margin-top: .2rem; color: var(--hint); font: 500 9px/1.25 var(--mono); letter-spacing: 0; }
+  .river-segment { height: 18px; border-radius: 3px; background: var(--accent); opacity: var(--strength); }
+  .river-segment.foundation { border: 1px dashed var(--accent); background: repeating-linear-gradient(90deg, color-mix(in srgb, var(--accent) 38%, transparent) 0 7px, transparent 7px 12px); }
+  .river-segment.open { border: 1px dotted var(--accent); background: transparent; }
+  .river-caption { margin: .75rem 0 0; color: var(--hint); font: 550 9.5px/1.5 var(--mono); letter-spacing: .06em; text-transform: uppercase; }
+
+  .development-table { margin-top: 1.4rem; overflow-x: auto; border: 1px solid var(--line); border-radius: 11px; background: var(--surface); }
+  .development-table table { min-width: 1050px; }
+  .development-table tbody th { width: 13%; color: var(--yellow); font-family: var(--mono); }
+  .development-table td { width: 29%; }
+  .development-table td strong { display: block; margin-bottom: .25rem; color: var(--text); font-size: .82rem; }
+  .development-table td p { margin: 0; color: var(--muted); font-size: .8rem; line-height: 1.48; }
+
+  .translation-block {
+    margin-top: 1.5rem; padding: 1.4rem; border: 1px solid rgba(167, 139, 250, .28);
+    border-radius: 11px; background: rgba(167, 139, 250, .045);
+  }
+  .translation-block > h3 { color: var(--purple); font-size: 1.05rem; }
+  .translation-block > p { max-width: 790px; margin: .55rem 0 1.1rem; color: var(--soft); }
+  .translation-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
+  .translation-card {
+    padding: 1rem 1.05rem; border: 1px solid var(--line); border-radius: 8px;
+    background: rgba(10, 13, 23, .58);
+  }
+  .translation-card .old-term {
+    display: block; margin-bottom: .45rem; color: var(--hint);
+    font: 650 9.5px/1.3 var(--mono); letter-spacing: .08em; text-transform: uppercase;
+  }
+  .translation-card strong { display: block; margin-bottom: .28rem; color: var(--text); }
+  .translation-card p { margin: 0; color: var(--muted); font-size: .83rem; }
+
+  .emotion-logic {
+    margin-top: 1.5rem; overflow: hidden; border: 1px solid var(--line-strong);
+    border-radius: 12px; background: var(--inset);
+  }
+  .emotion-logic-header { padding: 1.3rem 1.4rem 1.1rem; border-bottom: 1px solid var(--line); }
+  .emotion-logic-header h3 { margin-bottom: .4rem; font-size: 1.08rem; }
+  .emotion-logic-header p { max-width: 800px; margin: 0; color: var(--muted); font-size: .88rem; }
+  .process-tracks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .process-track { padding: 1.3rem 1.4rem 1.45rem; }
+  .process-track + .process-track { border-left: 1px solid var(--line); }
+  .process-track .track-name {
+    display: block; margin-bottom: .25rem; color: var(--accent);
+    font: 750 10px/1.3 var(--mono); letter-spacing: .09em; text-transform: uppercase;
+  }
+  .process-track h4 { margin: 0 0 .8rem; color: var(--text); font-size: .98rem; }
+  .process-chain { display: flex; flex-wrap: wrap; align-items: center; gap: .38rem; }
+  .process-chain span {
+    padding: .38rem .52rem; border: 1px solid color-mix(in srgb, var(--accent) 32%, transparent);
+    border-radius: 5px; background: color-mix(in srgb, var(--accent) 7%, transparent);
+    color: var(--soft); font-size: .75rem;
+  }
+  .process-chain i { color: var(--accent); font: 700 10px/1 var(--mono); font-style: normal; }
+  .process-track p { margin: .85rem 0 0; color: var(--muted); font-size: .82rem; }
+  .participation-bridge {
+    padding: 1.25rem 1.4rem; border-top: 1px solid rgba(247, 212, 72, .22);
+    background: rgba(247, 212, 72, .045);
+  }
+  .participation-bridge .bridge-label {
+    color: var(--yellow); font: 750 10px/1.3 var(--mono); letter-spacing: .09em; text-transform: uppercase;
+  }
+  .participation-bridge h4 { margin: .4rem 0 .65rem; font-size: 1.02rem; }
+  .participation-bridge .participation-sequence {
+    display: flex; flex-wrap: wrap; align-items: center; gap: .35rem;
+  }
+  .participation-sequence span { color: var(--soft); font-size: .8rem; }
+  .participation-sequence i { color: var(--yellow); font: 700 10px/1 var(--mono); font-style: normal; }
+  .participation-bridge p { max-width: 820px; margin: .75rem 0 0; color: var(--muted); font-size: .83rem; }
+
+  .identity-bridge {
+    display: grid; grid-template-columns: minmax(190px, .58fr) minmax(0, 1.42fr);
+    gap: 1.25rem; margin-top: 1.5rem; padding: 1.35rem 1.45rem;
+    border-left: 3px solid var(--orange); background: var(--raised);
+  }
+  .identity-bridge .identity-label {
+    color: var(--orange); font: 750 10px/1.3 var(--mono); letter-spacing: .09em; text-transform: uppercase;
+  }
+  .identity-bridge h3 { margin-top: .4rem; font-size: 1.05rem; }
+  .identity-bridge p { margin: 0; color: var(--soft); }
+  .identity-examples { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .75rem; }
+  .identity-examples span {
+    padding: .35rem .52rem; border: 1px solid rgba(239, 130, 58, .25);
+    border-radius: 5px; color: var(--muted); font-size: .77rem;
+  }
+
+  .development-sources {
+    margin-top: 1rem; padding: 1rem 1.15rem; border: 1px solid var(--line);
+    border-radius: 9px; background: rgba(10, 13, 23, .48); color: var(--muted);
+    font-size: .78rem;
+  }
+  .development-sources strong { color: var(--soft); }
+  .development-sources a { color: var(--cyan); white-space: nowrap; }
+
+  .teaching-grid {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .85rem;
+  }
+  .teaching-card {
+    min-height: 170px; padding: 1.25rem 1.35rem;
+    border: 1px solid var(--line); border-top: 3px solid var(--accent);
+    border-radius: 10px; background: var(--surface);
+  }
+  .teaching-card h3 { color: var(--accent); margin-bottom: .55rem; }
+  .teaching-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+
+  .signal-shell {
+    overflow-x: auto; padding: 1.55rem; border: 1px solid var(--line-strong);
+    border-radius: 12px; background: var(--inset);
+  }
+  .signal-path {
+    display: grid; grid-template-columns: repeat(7, minmax(125px, 1fr));
+    min-width: 950px; position: relative;
+  }
+  .signal-path::before {
+    content: ""; position: absolute; left: 6%; right: 6%; top: 22px;
+    height: 1px; background: var(--line-strong);
+  }
+  .signal-step { position: relative; padding-right: 1rem; }
+  .signal-dot {
+    position: relative; z-index: 1; width: 45px; height: 45px; display: grid;
+    place-items: center; margin-bottom: .85rem; border-radius: 50%;
+    border: 2px solid var(--accent); background: var(--bg); color: var(--accent);
+    font: 750 11px/1 var(--mono);
+  }
+  .signal-step h3 { margin-bottom: .35rem; color: var(--text); font-size: .92rem; }
+  .signal-step p { margin: 0; color: var(--muted); font-size: .79rem; line-height: 1.45; }
+  .interrupt {
+    display: inline-block; margin-top: .65rem; padding: .2rem .42rem;
+    border: 1px solid rgba(251, 113, 133, .36); border-radius: 4px;
+    background: rgba(251, 113, 133, .08); color: var(--pink);
+    font: 650 9px/1.35 var(--mono); letter-spacing: .045em; text-transform: uppercase;
+  }
+
+  .learning-loop {
+    display: grid; grid-template-columns: repeat(5, minmax(0,1fr));
+    gap: 1px; overflow: hidden; border: 1px solid var(--line);
+    border-radius: 11px; background: var(--line);
+  }
+  .learning-loop article { position: relative; padding: 1.2rem; background: var(--surface); }
+  .learning-loop article:not(:last-child)::after {
+    content: "→"; position: absolute; z-index: 2; right: -9px; top: 1.2rem;
+    width: 18px; height: 18px; border-radius: 50%; background: var(--yellow);
+    color: var(--bg); font: 800 11px/18px var(--mono); text-align: center;
+  }
+  .learning-loop span { display: block; margin-bottom: .5rem; color: var(--yellow); font: 700 10px/1.3 var(--mono); letter-spacing: .08em; }
+  .learning-loop h3 { margin-bottom: .4rem; }
+  .learning-loop p { margin: 0; color: var(--muted); font-size: .82rem; }
+
+  .systems {
+    display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: .8rem;
+    margin-top: 1rem;
+  }
+  .system-card {
+    padding: 1.15rem 1.25rem; border: 1px solid var(--line); border-radius: 9px;
+    background: var(--raised);
+  }
+  .system-card .system-name { color: var(--purple); font: 750 10px/1.3 var(--mono); letter-spacing: .1em; }
+  .system-card h3 { margin: .35rem 0 .45rem; }
+  .system-card p { margin: 0; color: var(--muted); font-size: .84rem; }
+
+  .process-table { overflow-x: auto; border: 1px solid var(--line); border-radius: 11px; background: var(--surface); }
+  table { width: 100%; min-width: 860px; border-collapse: collapse; }
+  th, td { padding: .95rem 1rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child > * { border-bottom: 0; }
+  tr > *:last-child { border-right: 0; }
+  thead th { color: var(--hint); font: 650 10px/1.3 var(--mono); letter-spacing: .09em; text-transform: uppercase; text-align: left; }
+  tbody th { width: 21%; color: var(--text); font-size: .88rem; text-align: left; }
+  td { color: var(--soft); font-size: .85rem; }
+
+  .badge {
+    display: inline-block; padding: .22rem .46rem; border-radius: 4px;
+    font: 700 9px/1.3 var(--mono); letter-spacing: .05em; white-space: nowrap;
+  }
+  .direct { color: var(--grounded); border: 1px solid rgba(74,222,128,.34); background: rgba(74,222,128,.08); }
+  .bridge { color: var(--cyan); border: 1px solid rgba(110,234,251,.34); background: rgba(110,234,251,.08); }
+  .teg { color: var(--purple); border: 1px solid rgba(167,139,250,.38); background: rgba(167,139,250,.09); }
+  .mixed { color: var(--yellow); border: 1px solid rgba(247,212,72,.38); background: rgba(247,212,72,.08); }
+
+  .configuration-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: .85rem; }
+  .configuration {
+    padding: 1.2rem 1.3rem; border: 1px solid var(--line); border-radius: 10px;
+    background: var(--surface);
+  }
+  .configuration .code { color: var(--orange); font: 700 9.5px/1.4 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+  .configuration h3 { margin: .35rem 0 .5rem; }
+  .configuration p { margin: 0; color: var(--muted); font-size: .87rem; }
+
+  .guard {
+    margin: 1.5rem 0; padding: 1.25rem 1.4rem;
+    border: 1px solid rgba(251,113,133,.3); border-radius: 10px;
+    background: rgba(251,113,133,.065); color: var(--soft);
+  }
+  .guard strong { color: var(--pink); }
+
+  .evidence-list { display: grid; gap: .7rem; margin: 0; padding: 0; list-style: none; }
+  .evidence-list li {
+    display: grid; grid-template-columns: minmax(220px, .8fr) minmax(0,1.2fr);
+    gap: 1.1rem; padding: 1rem 1.1rem; border: 1px solid var(--line);
+    border-radius: 9px; background: var(--surface);
+  }
+  .evidence-list a { color: var(--cyan); font-weight: 650; }
+  .evidence-list p { margin: 0; color: var(--muted); font-size: .84rem; }
+
+  .questions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .8rem; }
+  .question {
+    padding: 1.05rem 1.15rem; border-left: 3px solid var(--yellow); background: var(--raised);
+  }
+  .question strong { display: block; margin-bottom: .3rem; }
+  .question p { margin: 0; color: var(--muted); font-size: .85rem; }
+
+  footer { margin-top: 5rem; padding-top: 2rem; border-top: 1px solid var(--line); color: var(--hint); font-size: .83rem; }
+  footer a { color: var(--cyan); }
+
+  @media (max-width: 820px) {
+    .model-route { grid-template-columns: 1fr; }
+    .route-step:not(:last-child)::after { content: "↓"; top: auto; right: 1rem; bottom: -10px; transform: none; }
+    .development-key { grid-template-columns: 1fr; }
+    .translation-grid, .process-tracks, .identity-bridge { grid-template-columns: 1fr; }
+    .process-track + .process-track { border-left: 0; border-top: 1px solid var(--line); }
+    .teaching-grid { grid-template-columns: 1fr; }
+    .learning-loop { grid-template-columns: 1fr; }
+    .learning-loop article:not(:last-child)::after { content: "↓"; right: 1rem; top: auto; bottom: -9px; }
+    .configuration-grid, .questions { grid-template-columns: 1fr; }
+    .systems { grid-template-columns: 1fr; }
+    .evidence-list li { grid-template-columns: 1fr; gap: .45rem; }
+  }
+  @media (max-width: 560px) {
+    header { padding-top: 3rem; }
+    .rule { grid-template-columns: 1fr; gap: .5rem; }
+  }
+</style>
+</head>
+<body>
+<div class="carried-banner" role="note"><strong>Carried active account · status working.</strong> What develops when emotion must be overridden: the seven layers where learning can intervene, the practice loop, the three forms of ME participation, and what the current sources carry. Carried on 2 September 2026 as F2's current active account. <a href="index.html">Back to the F2 canon page →</a></div>
+<header>
+  <div class="wrap">
+    <p class="eyebrow">F2 · developmental working file</p>
+    <h1>What develops when emotion must be overridden</h1>
+    <p class="standfirst">Emotional signals can organise the infant long before the child can name or explain them. As reflective and conscious participation develops, the child also learns what follows when those signals are attended to, expressed or used. When doing so threatens safety, belonging or the stability of a relationship, participation may be overridden without the underlying organism simply ceasing to feel.</p>
+    <p class="scope"><strong>Working scope.</strong> This file first maps what ESS, CLS and conscious participation may make available across broad developmental windows. It then asks how repeated emotion socialisation may reorganise access, expression and action. It does not diagnose a person, infer their childhood from current behaviour or claim one inevitable outcome.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="development" aria-labelledby="development-title">
+    <div class="section-no">01 · Development before overriding</div>
+    <h2 id="development-title">The organism can respond long before the child can explain</h2>
+    <p class="lede">Before asking what emotional overriding changes, we need to ask what each part of the developing organism could already do. ESS begins with substantial embodied capacity. The foundations of CLS are present, but its reflective and symbolic functions develop gradually. Conscious participation also changes—not as a third information system, but as the child becomes increasingly able to turn towards, interpret and use what becomes available.</p>
+
+    <div class="model-route" aria-label="Route from evolutionary origins through development to present nervous-system organisation">
+      <a class="route-step" style="--accent:var(--cyan)" href="../index.html"><span>F1 · origin</span><strong>Signal capacities become possible</strong><p>Evolutionary foundations of embodied, protective, relational and symbolic information.</p></a>
+      <div class="route-step" style="--accent:var(--yellow)"><span>F2 · development</span><strong>Access and interpretation develop</strong><p>The child learns what signals mean, whether they can be expressed and what actions follow.</p></div>
+      <a class="route-step" style="--accent:var(--green)" href="../../01-signal-map/index.html#emotion-families"><span>Model 2 · now</span><strong>Organisation changes availability</strong><p>The Gradient tracks how present conditions and nervous-system organisation shape signal access and use.</p></a>
+    </div>
+
+    <div class="development-key">
+      <article style="--accent:var(--cyan)">
+        <span>ESS · active from birth</span>
+        <h3>Embodied information is already moving</h3>
+        <p>The newborn detects internal and external change, organises arousal and distress, orients, responds and learns. What develops is its precision, differentiation, learned predictions and range of regulation.</p>
+      </article>
+      <article style="--accent:var(--green)">
+        <span>CLS · foundations first</span>
+        <h3>Learning is not yet reflective-symbolic thought</h3>
+        <p>Memory, discrimination and expectation appear early. Naming, deliberate comparison, explanation and planning across time develop later and should not be projected back onto the newborn.</p>
+      </article>
+      <article style="--accent:var(--yellow)">
+        <span>ME · participation develops</span>
+        <h3>Access does not appear all at once</h3>
+        <p>The person gradually becomes more able to notice, name, test, choose and revisit. This track does not date the beginning of consciousness or place an executive controller above the organism.</p>
+      </article>
+    </div>
+
+    <div class="river-shell" role="region" aria-label="Working developmental tracks for ESS, CLS and ME participation" tabindex="0">
+      <div class="rivers">
+        <div class="river-age">Broad windows</div>
+        <div class="river-age">Birth</div><div class="river-age">First year</div><div class="river-age">1–3</div><div class="river-age">3–5</div><div class="river-age">5–8</div><div class="river-age">8–12</div><div class="river-age">Adolescence +</div>
+
+        <div class="river-label" style="--accent:var(--cyan)">ESS<small>embodied + affective learning</small></div>
+        <div class="river-segment" style="--accent:var(--cyan);--strength:.72"></div><div class="river-segment" style="--accent:var(--cyan);--strength:.78"></div><div class="river-segment" style="--accent:var(--cyan);--strength:.83"></div><div class="river-segment" style="--accent:var(--cyan);--strength:.88"></div><div class="river-segment" style="--accent:var(--cyan);--strength:.92"></div><div class="river-segment" style="--accent:var(--cyan);--strength:.96"></div><div class="river-segment" style="--accent:var(--cyan);--strength:1"></div>
+
+        <div class="river-label" style="--accent:var(--green)">CLS<small>cognition → reflective logic</small></div>
+        <div class="river-segment foundation" style="--accent:var(--green);--strength:.35"></div><div class="river-segment foundation" style="--accent:var(--green);--strength:.46"></div><div class="river-segment" style="--accent:var(--green);--strength:.55"></div><div class="river-segment" style="--accent:var(--green);--strength:.68"></div><div class="river-segment" style="--accent:var(--green);--strength:.78"></div><div class="river-segment" style="--accent:var(--green);--strength:.88"></div><div class="river-segment" style="--accent:var(--green);--strength:1"></div>
+
+        <div class="river-label" style="--accent:var(--yellow)">ME<small>conscious participation</small></div>
+        <div class="river-segment open" style="--accent:var(--yellow);--strength:.28"></div><div class="river-segment foundation" style="--accent:var(--yellow);--strength:.35"></div><div class="river-segment" style="--accent:var(--yellow);--strength:.48"></div><div class="river-segment" style="--accent:var(--yellow);--strength:.62"></div><div class="river-segment" style="--accent:var(--yellow);--strength:.74"></div><div class="river-segment" style="--accent:var(--yellow);--strength:.86"></div><div class="river-segment" style="--accent:var(--yellow);--strength:1"></div>
+      </div>
+    </div>
+    <p class="river-caption">Colour strength marks expanding functional range—not a score, a fixed maturity level or a universal timetable · dashed segments mark foundations · windows overlap</p>
+
+    <div class="development-table">
+      <table>
+        <thead><tr><th>Broad window</th><th>ESS · embodied learning + emotion</th><th>CLS · cognition + reflective logic</th><th>ME · possible conscious participation</th></tr></thead>
+        <tbody>
+          <tr>
+            <th>Birth</th>
+            <td><strong>Already active</strong><p>Internal and external detection, autonomic organisation, pain and distress, orienting, approach–withdrawal responses and sensitivity to familiar prenatal sensory patterns are already present.</p></td>
+            <td><strong>Developmental foundations</strong><p>Learning, memory, discrimination and expectation are possible. These capacities should not yet be redescribed as naming, explanation or deliberate symbolic reflection.</p></td>
+            <td><strong>No absence-of-consciousness claim</strong><p>The newborn can experience and act without the reflective participation defined here. F2 does not assign an age at which consciousness begins.</p></td>
+          </tr>
+          <tr>
+            <th>First year</th>
+            <td><strong>Co-regulation and rapid learning</strong><p>Arousal and attention are organised heavily through caregiver interaction. Familiarity, attachment, movement and repeated sensory–affective patterns expand what can be detected and predicted.</p></td>
+            <td><strong>Prediction and intentional action expand</strong><p>Memory, categorisation, means–end action and increasingly coordinated social attention develop. Joint attention and social referencing become important later in this window and beyond.</p></td>
+            <td><strong>Participation remains deeply relational</strong><p>The infant increasingly directs attention, action and communication, while relying on others to help organise arousal, meaning and response.</p></td>
+          </tr>
+          <tr>
+            <th>1–3 years</th>
+            <td><strong>Signals acquire words and social consequences</strong><p>Bodily and emotional patterns become increasingly linked with language, memories, expectations and the consequences of autonomy, frustration and boundaries.</p></td>
+            <td><strong>Language changes what can be represented</strong><p>Words and symbols make absent objects, simple event sequences, intentions and early narratives increasingly available.</p></td>
+            <td><strong>The self becomes more explicitly representable</strong><p>The child can increasingly recognise aspects of their body and experience, use some emotion words and revisit an event with another person’s help.</p></td>
+          </tr>
+          <tr>
+            <th>3–5 years</th>
+            <td><strong>Differentiation and regulation expand</strong><p>Emotional patterns and available responses become more varied, though their organisation remains strongly dependent on relationship and context.</p></td>
+            <td><strong>Explicit social and emotional explanation grows</strong><p>Perspective-taking, causal explanation, temporal language, emotion knowledge and early executive functions develop rapidly without becoming adult-like.</p></td>
+            <td><strong>Reflection becomes more usable with support</strong><p>The child can increasingly name, compare and revisit experience, while stress, language and the response of adults still shape what becomes readable.</p></td>
+          </tr>
+          <tr>
+            <th>5–8 years</th>
+            <td><strong>Signals can be held without immediate enactment</strong><p>Internal states may become easier to recognise and behaviour easier to modulate, although this varies with emotion, demand, safety and learning.</p></td>
+            <td><strong>Executive functions strengthen</strong><p>Working memory, inhibition, shifting, rule use and deliberate attention become more reliable but remain uneven and task-dependent.</p></td>
+            <td><strong>Monitoring and revision begin to broaden</strong><p>The child can more often pause, explain, ask for help and reconsider, while confidence in an interpretation may still exceed its accuracy.</p></td>
+          </tr>
+          <tr>
+            <th>8–12 years</th>
+            <td><strong>The social field becomes more complex</strong><p>Belonging, status, fairness, exclusion, embarrassment, pride, shame, competence and comparison can carry increasingly organised significance.</p></td>
+            <td><strong>Several perspectives can be coordinated</strong><p>Planning, causal reasoning, mixed-emotion understanding and metacognitive monitoring continue to expand.</p></td>
+            <td><strong>Competing information can be considered</strong><p>The child can increasingly compare motives, feelings and consequences. Pressure and belonging risk may still narrow that participation.</p></td>
+          </tr>
+          <tr>
+            <th>Adolescence onward</th>
+            <td><strong>Embodied priorities recalibrate and keep learning</strong><p>Reward, attraction, novelty, status, belonging and social evaluation can acquire new weight. Embodied predictions and thresholds remain plastic into adulthood.</p></td>
+            <td><strong>Abstract and long-horizon cognition expands</strong><p>Future simulation, hypothetical reasoning, inhibition, metacognition and coordination of complex goals continue refining; there is no single finish line at age 18 or 25.</p></td>
+            <td><strong>Integration can become more flexible</strong><p>The person may increasingly use information from both systems to test conclusions and choose a response. Availability still depends on conditions, health, learning and support.</p></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="translation-block" id="old-language-translation">
+      <h3>What the old diagrams were reaching for</h3>
+      <p>The diagrams held one important developmental asymmetry: the child can already be affected, learn patterns and organise action before they can explain what is happening. Their original labels are too absolute for the present model, so F2 carries the mechanism forward in more precise language.</p>
+      <div class="translation-grid">
+        <article class="translation-card">
+          <span class="old-term">Old language · “feeling = being”</span>
+          <strong>Embodied-affective organisation comes before reflective explanation</strong>
+          <p>Feeling is not the whole person, but bodily and affective processing can organise attention, action and learning before the child can describe the experience.</p>
+        </article>
+        <article class="translation-card">
+          <span class="old-term">Old language · “emotion before cognition”</span>
+          <strong>Broad cognition is early; reflective logic develops later</strong>
+          <p>Perception, memory, discrimination and prediction are already cognitive. Language-based explanation, deliberate comparison and metacognition require later-developing CLS capacities.</p>
+        </article>
+        <article class="translation-card">
+          <span class="old-term">Old language · “real self / role mask”</span>
+          <strong>Signal, access, expression, action and self-explanation can diverge</strong>
+          <p>A child may still feel while inhibiting expression, adopting a role or learning an explanation about what their feelings mean. None of those layers alone defines a hidden “real” identity.</p>
+        </article>
+        <article class="translation-card">
+          <span class="old-term">Old language · “logic controls emotion”</span>
+          <strong>Reflective logic can investigate; it does not become the organism’s ruler</strong>
+          <p>CLS may help contextualise, test and revise an interpretation. Its healthiest function here is participation with ESS information—not automatic override of it.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="emotion-logic" id="emotion-and-logic">
+      <div class="emotion-logic-header">
+        <h3>Emotion and logic do not replace one another</h3>
+        <p>Emotion is not a fourth biological information system, and logic is not a late-arriving opposite of feeling. The two tracks below show the developmental asymmetry more accurately: embodied-affective learning accumulates while the reflective tools able to interpret it are still developing.</p>
+      </div>
+      <div class="process-tracks">
+        <article class="process-track" style="--accent:var(--cyan)">
+          <span class="track-name">ESS-weighted sequence</span>
+          <h4>Experience becomes embodied learning</h4>
+          <div class="process-chain" aria-label="ESS-weighted learning sequence">
+            <span>conditions + event</span><i>→</i><span>bodily-affective response</span><i>→</i><span>attention + action</span><i>→</i><span>outcome</span><i>→</i><span>repeated prediction</span>
+          </div>
+          <p>This sequence can alter what feels urgent, safe, costly or possible without waiting for a verbal account.</p>
+        </article>
+        <article class="process-track" style="--accent:var(--green)">
+          <span class="track-name">CLS developmental sequence</span>
+          <h4>Experience becomes increasingly investigable</h4>
+          <div class="process-chain" aria-label="CLS developmental sequence">
+            <span>perception + memory</span><i>→</i><span>symbols + language</span><i>→</i><span>causal explanation</span><i>→</i><span>self–other representation</span><i>→</i><span>perspective + metacognition</span>
+          </div>
+          <p>These capacities do not arrive together. As their range expands, experience can be represented across time, compared with other perspectives and deliberately reconsidered.</p>
+        </article>
+      </div>
+      <div class="participation-bridge">
+        <span class="bridge-label">ME participation · the developing bridge</span>
+        <h4>What becomes possible when information from both systems is sufficiently available?</h4>
+        <div class="participation-sequence" aria-label="Developing conscious participation sequence">
+          <span>experience</span><i>→</i><span>notice</span><i>→</i><span>name</span><i>→</i><span>understand</span><i>→</i><span>question an interpretation</span><i>→</i><span>compare it with conditions and evidence</span><i>→</i><span>choose, act and learn</span>
+        </div>
+        <p>This is not a one-way ladder and not a promise of constant access. It describes a widening possibility for ME to participate in what happens next, while ESS and CLS continue operating as interacting biological information systems.</p>
+      </div>
+    </div>
+
+    <div class="identity-bridge" id="self-explanation">
+      <div>
+        <span class="identity-label">Identity-making bridge</span>
+        <h3>Later explanations may form around earlier learning</h3>
+      </div>
+      <div>
+        <p>When a relational outcome repeats, ESS may learn what protects connection or reduces danger before the child can place the adult’s behaviour in a wider context. As CLS develops, the child may use the information available to construct explanations about self, emotion and relationship. Those explanations can become familiar and behaviourally powerful without becoming an essence or an inevitable lifelong identity.</p>
+        <div class="identity-examples" aria-label="Examples of possible learned self-explanations">
+          <span>“My need causes trouble.”</span><span>“Anger costs connection.”</span><span>“I must read the other person first.”</span><span>“What I feel cannot be trusted.”</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="development-sources">
+      <strong>Initial evidence anchors—not a completed milestone review.</strong> Newborn responsiveness to familiar prenatal voice: <a href="https://pubmed.ncbi.nlm.nih.gov/7981479/">Fifer &amp; Moon (1994)</a>; newborn visual preferences and their limits: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1287965/">Farroni et al. (2005)</a>; parental regulation in infancy: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9022471/">Graf et al. (2022)</a>; joint-attention development: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2663908/">Mundy &amp; Newell (2007)</a>; early body self-representation: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3351035/">Brownell, Zerwas &amp; Ramani (2007)</a>; emotion vocabulary from 16–30 months: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10121903/">Nencheva, Tamir &amp; Lew-Williams (2023)</a>; language, emotion understanding and theory of mind from ages 3–8: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5962725/">Grazzani et al. (2018)</a>; executive-function development through adolescence: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3058827/">Best &amp; Miller (2010)</a>; dynamic and bidirectional emotion socialisation: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7041841/">Bridgett et al. (2020)</a>; self-representations and autobiographical memory across childhood: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9292623/">Wang et al. (2022)</a>; parents’ emotion-related beliefs, behaviours and children’s emotion recognition: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4437215/">Castro et al. (2015)</a>. Each source grounds a component process or developmental relation, not ESS, CLS or ME as scientific entities.
+    </div>
+
+    <div class="rule"><strong>Developmental boundary</strong><p>These are broad, overlapping windows rather than deadlines. Development varies across children, tasks, cultures, relationships and conditions. The next research pass must distinguish what is present at birth, learned rapidly, supported by another person and gradually available for independent reflective use.</p></div>
+  </section>
+
+  <section id="developmental-conditions" aria-labelledby="meaning-title">
+    <div class="section-no">02 · Conditions around emotion</div>
+    <h2 id="meaning-title">“Override it” can be taught in several ways</h2>
+    <p class="lede">The lesson may be explicit or implicit, harsh or affectionate, occasional or pervasive. What matters scientifically is the response the child repeatedly encounters, the emotion involved, the developmental timing and whether repair is available.</p>
+    <div class="teaching-grid">
+      <article class="teaching-card" style="--accent:var(--pink)"><h3>Punish or shame</h3><p>“Stop crying.” “Don’t be angry.” Ridicule, threat, withdrawal or punishment makes expression costly.</p></article>
+      <article class="teaching-card" style="--accent:var(--orange)"><h3>Minimise or misread</h3><p>The feeling is called excessive, unjustified, manipulative or irrelevant, so the child’s interpretation loses relational support.</p></article>
+      <article class="teaching-card" style="--accent:var(--yellow)"><h3>Reward toughness or compliance</h3><p>Belonging, praise or reduced conflict becomes easier when need, pain, fear, anger or disagreement stays out of view.</p></article>
+      <article class="teaching-card" style="--accent:var(--purple)"><h3>Require role reversal</h3><p>The child monitors, comforts or stabilises the adult; the other person’s state receives priority over the child’s own signal.</p></article>
+      <article class="teaching-card" style="--accent:var(--cyan)"><h3>Model suppression</h3><p>Adults hide their own activation or avoid emotional language. The lesson is carried by interaction, not only by instruction.</p></article>
+      <article class="teaching-card" style="--accent:var(--green)"><h3>Dampen positive emotion</h3><p>Pride, excitement, affection, gratitude or joy may also be discouraged when visibility, pleasure or enthusiasm is treated as unsafe or inappropriate.</p></article>
+    </div>
+    <div class="process-table">
+      <table>
+        <thead><tr><th>Condition family</th><th>What repeatedly becomes important</th><th>What the child may have less opportunity to practise</th></tr></thead>
+        <tbody>
+          <tr><th>Unpredictability, severe threat or adult dysregulation</th><td>Small changes in another person or the environment may need to be detected quickly. Monitoring, anticipation and protection can become highly useful.</td><td>Remaining responsive to present conditions when danger or relational cost decreases; allowing reliable new outcomes to influence the next prediction. Continuing danger must remain visible.</td></tr>
+          <tr><th>Invalidation, incongruence, criticism or imposed explanations</th><td>Embodied information may conflict with what the child is told is true: “nothing happened”, “you are too sensitive” or “the problem is you”.</td><td>Trusting a signal enough to investigate it while still testing its interpretation against wider evidence.</td></tr>
+          <tr><th>Conditional connection, withdrawal, role reversal or loyalty conflict</th><td>Belonging may depend on hiding some feelings, reading another person first or managing competing relationships.</td><td>Distinguishing one’s own position from another person’s state and participating without making connection conditional on self-erasure.</td></tr>
+          <tr><th>Boundary violation, entrapment or unavailable action</th><td>A signal may be accurate while refusal, escape, protest or help-seeking remains impossible or costly.</td><td>Using information to choose an effective action and experiencing that action change the conditions.</td></tr>
+          <tr><th>Neglect, low attunement or absence of repair</th><td>Need and distress may not reliably bring recognition, correction or support. Greater intensity may sometimes be required to produce a response.</td><td>Turning towards a signal early, communicating it, receiving a fitting response and learning that the original requirement can close.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="rule"><strong>First boundary</strong><p>Caregivers sometimes limit expression for safety, timing, cultural coordination or respect without teaching disconnection from emotion. The research question is not whether every limit is invalidating, but whether the child can still recognise the signal, receive help understanding it and use it flexibly later.</p></div>
+    <div class="rule"><strong>No one-to-one developmental route</strong><p>These condition families are research territories, not causes assigned to a Gradient Position. Similar conditions can be met by different adaptations, and similar adult patterns can arise through different developmental and later-life routes. F2 cannot be used to infer a person’s history from present behaviour.</p></div>
+  </section>
+
+  <section aria-labelledby="layers-title">
+    <div class="section-no">03 · The seven layers</div>
+    <h2 id="layers-title">Where the learning can intervene</h2>
+    <p class="lede">These layers influence one another but must not be treated as synonyms. Reduced expression is not proof of absent subjective feeling; difficulty naming a feeling is not proof that no bodily change occurred.</p>
+    <div class="signal-reference" aria-label="Direct links to present-day Signal Map and Nervous System Gradient territories">
+      <strong>Gradient territories</strong>
+      <a href="../../01-signal-map/emotion/fluid.html#body-signals">Body Signals</a>
+      <a href="../../01-signal-map/emotion/fluid.html#situation-signals">Situation Signals</a>
+      <a href="../../01-signal-map/index.html#emotion-families">Emotions</a>
+      <a href="../../01-signal-map/emotion/fluid.html#belonging-emotions">Belonging</a>
+      <a href="../../01-signal-map/emotion/fluid.html#belonging-at-risk">Belonging-at-Risk</a>
+      <a href="../../01-signal-map/emotion/fluid.html#threat-protection">Threat-Protection</a>
+      <a href="../../01-signal-map/emotion/fluid.html#survival-rage">Survival-Rage</a>
+    </div>
+    <div class="signal-shell">
+      <div class="signal-path">
+        <article class="signal-step" style="--accent:#fff"><div class="signal-dot">01</div><h3>Signal generation</h3><p>An event changes affective and action-related organisation.</p><span class="interrupt">not directly chosen</span></article>
+        <article class="signal-step" style="--accent:var(--cyan)"><div class="signal-dot">02</div><h3>Bodily representation</h3><p>Internal change is represented through interoceptive processing.</p><span class="interrupt">may be downweighted</span></article>
+        <article class="signal-step" style="--accent:#76faa1"><div class="signal-dot">03</div><h3>Subjective access</h3><p>The experience becomes sufficiently available to conscious participation.</p><span class="interrupt">attention can turn away</span></article>
+        <article class="signal-step" style="--accent:var(--green)"><div class="signal-dot">04</div><h3>Identification</h3><p>The feeling becomes differentiated, named and connected to context.</p><span class="interrupt">language can remain thin</span></article>
+        <article class="signal-step" style="--accent:#e3fd54"><div class="signal-dot">05</div><h3>Expression</h3><p>Face, voice, posture and words make some of the experience visible.</p><span class="interrupt">can be inhibited</span></article>
+        <article class="signal-step" style="--accent:var(--yellow)"><div class="signal-dot">06</div><h3>Action</h3><p>The signal can inform protection, approach, refusal, repair or need.</p><span class="interrupt">can be overridden</span></article>
+        <article class="signal-step" style="--accent:var(--orange)"><div class="signal-dot">07</div><h3>Emotion belief</h3><p>The child learns whether this emotion is valid, safe, useful or relationally dangerous.</p><span class="interrupt">feeds back next time</span></article>
+      </div>
+    </div>
+    <div class="guard"><strong>Evidence boundary.</strong> Adult laboratory suppression directly shows that expression can decrease while subjective emotion remains present. It does not by itself establish how years of childhood socialisation alter interoception, emotional differentiation or the three Gradient processes.</div>
+  </section>
+
+  <section id="developmental-learning-route" aria-labelledby="loop-title">
+    <div class="section-no">04 · Repetition and learning</div>
+    <h2 id="loop-title">What receives practice can become easier to recruit</h2>
+    <p class="lede">This is the developmental bridge that Chronic research must test. It separates what ESS detects, what actions are possible, what CLS learns and what ME can practise. Each arrow needs evidence; the sequence is not assumed to occur in every child.</p>
+    <div class="learning-loop">
+      <article><span>ESS · RELEVANCE</span><h3>A signal forms</h3><p>Pain, fear, anger, shame, sadness, joy, pride, love, need or another change becomes organism-relevant.</p></article>
+      <article><span>ACTION + OUTCOME</span><h3>Some responses are possible; others are costly</h3><p>Approach, refusal, escape, expression or help-seeking may bring support, dismissal, punishment, withdrawal—or no change at all.</p></article>
+      <article><span>CLS · LEARNING</span><h3>A relational expectation may develop</h3><p>Repeated outcomes may increase expectations such as “showing this brings help”, “anger costs connection”, “their state comes first” or “nothing I do changes it”. Other relationships and contexts may carry different learning.</p></article>
+      <article><span>ME · PRACTICE</span><h3>Participation widens or narrows</h3><p>The child practises what can be noticed, trusted, differentiated, checked, expressed and used for action.</p></article>
+      <article><span>RECRUITMENT + UPDATING</span><h3>The available route becomes familiar</h3><p>A practised solution may become quicker to reach. If the original requirement cannot be acted upon or repaired, the learned expectation may remain difficult to update.</p></article>
+    </div>
+    <div class="systems" aria-label="TEG-Blue translation into ESS, CLS and ME">
+      <article class="system-card"><span class="system-name">ESS · WORKING TRANSLATION</span><h3>The signal can still move first</h3><p>Emotional and bodily organisation may begin before reflection. Developmental learning may change its weighting or accessibility without proving that the signal was never generated.</p></article>
+      <article class="system-card"><span class="system-name">CLS · WORKING TRANSLATION</span><h3>Cognition learns the relational rule</h3><p>Prediction, attention, inhibition and explanation can be recruited to hide, redirect or overrule what would otherwise be expressed or acted upon.</p></article>
+      <article class="system-card"><span class="system-name">ME · WORKING TRANSLATION</span><h3>Conclusions are formed from what becomes available</h3><p>The person may consciously decide that the feeling is excessive, unsafe or irrelevant—or later revisit that conclusion when wider access and safer conditions become possible.</p></article>
+    </div>
+    <div class="rule"><strong>Not destiny</strong><p>Temperament, the specific emotion, other caregivers, peers, culture, present safety, language, health, adversity type and opportunities for repair can all alter this pathway. Children also affect caregivers; socialisation is dynamic and bidirectional.</p></div>
+  </section>
+
+  <section id="me-capacities" aria-labelledby="capacities-title">
+    <div class="section-no">05 · Connection to the three processes</div>
+    <h2 id="capacities-title">Three forms of ME participation can develop unevenly</h2>
+    <p class="lede">ME is not created or destroyed by adversity. What develops through experience is the person’s access to, trust in and use of information. These forms of participation need separate developmental questions and cannot be represented by one general “awareness” measure.</p>
+    <div class="participation-bridge">
+      <span class="bridge-label">ME participation · what receives practice</span>
+      <h4>A signal becoming conscious is only one part of the route</h4>
+      <div class="participation-sequence" aria-label="Developmental sequence through which ME learns to use information">
+        <span>notice</span><i>→</i><span>differentiate</span><i>→</i><span>trust enough to investigate</span><i>→</i><span>integrate ESS + CLS</span><i>→</i><span>test the interpretation</span><i>→</i><span>choose and act</span><i>→</i><span>observe the outcome</span><i>→</i><span>update</span>
+      </div>
+      <p>A child may have access to a signal yet be unable to act on it, or understand another person accurately while their own experience remains backgrounded. Chronic change can therefore involve reduced access, but also fusion, mistrust, rigid certainty, compulsory use or instrumental use.</p>
+    </div>
+    <div class="process-table">
+      <table>
+        <thead><tr><th>Form of ME participation</th><th>Underlying biological process</th><th>Developmental question</th><th>Chronic forms to distinguish</th></tr></thead>
+        <tbody>
+          <tr><th><a href="../../03-model-2-gradient/positions.html#me-interoceptive-access">Bodily information access and use</a><span class="badge bridge">HUMAN TRANSLATION</span></th><td>Interoceptive and affective processing can register and represent internal change before ME identifies or uses it. Bodily channel, detection, attention, felt clarity, self-report and confidence–performance correspondence remain distinguishable.</td><td>What can I detect, notice, differentiate and identify? What do I take it to mean, how much do I trust that interpretation, and can the information contribute to effective action?</td><td>One or more dimensions may be diffuse, inaccessible, intense, undifferentiated, mistrusted, overridden, context-bound or flexibly usable. This is not one high-or-low capacity.</td></tr>
+          <tr><th><a href="../../03-model-2-gradient/positions.html#me-affective-sharing-access">Affective-sharing access</a><span class="badge bridge">HUMAN TRANSLATION</span></th><td>Another person’s affective state can become represented within one’s own organism without being the same as one’s own state.</td><td>Can I feel something of another person’s experience while preserving self–other distinction and access to my own position?</td><td>Reduced; selective; fused or contagious; high but compulsory or self-erasing; available with clear distinction.</td></tr>
+          <tr><th><a href="../../03-model-2-gradient/positions.html#me-mentalizing-access">Mentalizing access and use</a><span class="badge bridge">HUMAN TRANSLATION</span></th><td>Representing another person’s perspective draws on social cognition, memory, language and inference.</td><td>Can I wonder, check and revise—or must I predict another person quickly and treat the prediction as certain?</td><td>Unavailable or uncertain; threat-biased; hypermentalizing beyond observable evidence; rigid; instrumentally detailed; flexible and revisable.</td></tr>
+          <tr><th>Empathic concern<span class="badge teg">RELATIONAL OUTPUT</span></th><td>Concern is not a fourth slider. It is a motivational output that may draw on sharing, mentalizing, values, context and regulation.</td><td>Can another person’s welfare matter without fear, duty, fusion or strategy organising the visible response?</td><td>Low or selective concern; concern without accurate understanding; compulsory caretaking; visible care without concern; concern that genuinely constrains action.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="guard"><strong>Evidence boundary.</strong> Current studies support keeping affective and cognitive empathy separable and treating mentalizing errors as more than simple absence. They do not establish these TEG-Blue configurations as developmental types or prove that a particular childhood condition produced an adult pattern. <a href="https://pubmed.ncbi.nlm.nih.gov/18601753/">Jones et al. (2010)</a> found relative cognitive perspective-taking alongside affective difficulty in one small conduct-problem subgroup; <a href="https://pubmed.ncbi.nlm.nih.gov/40688548/">Sharp, Barr &amp; Vanwoerden (2025)</a> operationalised hypermentalizing as inference beyond observable data; and <a href="https://pubmed.ncbi.nlm.nih.gov/37539005/">Martin-Gagnon et al. (2023)</a> found associations between reported emotional abuse, mental-state uncertainty and adolescent symptoms in a clinical sample. These studies ground distinctions, not a single causal sequence.</div>
+    <div class="rule"><strong>Configuration bridge</strong><p>F2 asks how access and use may be shaped across development. The companion <a href="../../02-model-1-ess-cls-me/me-access.html#capacity-key">Relational Capacity Configurations</a> file tests how the three forms of participation may combine in the present. The Chronic table must then distinguish what persists within one episode from what recovers incompletely, is reconstructed later, acquires a lower recruitment threshold, generalises, loses discrimination, updates only in some contexts or remains relevant because adverse conditions continue.</p></div>
+    <div class="guard"><strong>Several Chronic routes.</strong> A developmental pattern does not become Chronic through one universal sequence. Chronic organisation may involve prolonged persistence, interrupted recovery, repeated reconstruction, broader generalisation, reduced danger–safety discrimination, restricted expectations about effective action, context-bound updating, repeated mental reactivation or ongoing correspondence with continuing conditions. These routes may combine, and each requires different evidence.</div>
+  </section>
+
+  <section aria-labelledby="config-title">
+    <div class="section-no">06 · Possible outcomes to investigate</div>
+    <h2 id="config-title">Several adaptations can look like “not feeling”</h2>
+    <p class="lede">These are research distinctions, not personality types and not conclusions about any individual.</p>
+    <div class="configuration-grid">
+      <article class="configuration"><span class="code">Expression inhibited</span><h3>Felt but hidden</h3><p>The child experiences and may understand the emotion, while face, voice, words or action remain controlled.</p></article>
+      <article class="configuration"><span class="code">Access narrowed</span><h3>Bodily pressure without a clear feeling</h3><p>Activation or discomfort may be available while identification, localisation or meaning remains vague.</p></article>
+      <article class="configuration"><span class="code">Agency interrupted</span><h3>Felt and understood, but no viable action</h3><p>The child can accurately recognise anger, fear, hurt or need while refusal, approach, escape, help-seeking or repair remains unsafe or ineffective.</p></article>
+      <article class="configuration"><span class="code">Other foregrounded</span><h3>The relationship is read before the self</h3><p>The caregiver’s mood and likely response receive priority while the child’s signal waits or becomes difficult to locate.</p></article>
+      <article class="configuration"><span class="code">Capacity dissociated</span><h3>Another can be read without being affectively shared</h3><p>Mentalizing may remain detailed while affective sharing, self-access or concern differs. High availability is not the same as accurate, flexible or prosocial use.</p></article>
+      <article class="configuration"><span class="code">Context-sensitive recovery</span><h3>Access can return elsewhere</h3><p>A child may remain expressive with safe people, in private or later in life. Suppression in one relationship is not proof of global incapacity.</p></article>
+    </div>
+  </section>
+
+  <section aria-labelledby="evidence-title">
+    <div class="section-no">07 · Initial evidence ledger</div>
+    <h2 id="evidence-title">What the current sources can carry</h2>
+    <p class="lede">These anchors prepare the research programme. No single study establishes the full developmental sequence above.</p>
+    <ul class="evidence-list">
+      <li><div><a href="https://pubmed.ncbi.nlm.nih.gov/8326473/">Gross &amp; Levenson (1993)</a><br><span class="badge direct">DIRECT · EXPRESSION</span></div><p>Experimental suppression reduced visible expression without reducing subjective emotion and altered physiology. Adult, short-term evidence; it does not establish developmental effects.</p></li>
+      <li><div><a href="https://pubmed.ncbi.nlm.nih.gov/32324017/">Waters et al. (2020)</a><br><span class="badge direct">DIRECT · DYADIC EXPERIMENT</span></div><p>Parent suppression changed physiological linkage and reduced warmth and engagement during parent–child interaction. It tests an immediate interaction, not a chronic child outcome.</p></li>
+      <li><div><a href="https://pubmed.ncbi.nlm.nih.gov/37418119/">Reschke et al. (2024)</a><br><span class="badge bridge">BRIDGE · LONGITUDINAL</span></div><p>Parent questions and emotion talk showed prospective relations with children’s emotion knowledge. Association does not make language the only developmental mechanism.</p></li>
+      <li><div><a href="https://pubmed.ncbi.nlm.nih.gov/39133049/">Edler et al. (2025)</a><br><span class="badge bridge">BRIDGE · LONGITUDINAL</span></div><p>Emotion-dismissing family profiles were longitudinally associated with later adjustment outcomes. Profiles are heterogeneous and do not identify Gradient Positions.</p></li>
+      <li><div><a href="https://pubmed.ncbi.nlm.nih.gov/18826533/">Yap et al. (2008)</a><br><span class="badge bridge">BRIDGE · POSITIVE AFFECT</span></div><p>Dampening or invalidating adolescents’ positive affect related to dysregulated behaviour, strategies and depressive symptoms. The design does not prove a single causal route.</p></li>
+      <li><div><a href="https://pubmed.ncbi.nlm.nih.gov/28551198/">O’Neal et al. (2017)</a><br><span class="badge bridge">BRIDGE · ANGER-SPECIFIC</span></div><p>Observed discouragement of preschool anger predicted change in later depression, moderated by child anger intensity. It shows why emotion and temperament must be specified.</p></li>
+      <li><div><a href="https://pubmed.ncbi.nlm.nih.gov/23834255/">Louie et al. (2013)</a><br><span class="badge mixed">CONTEXT BOUNDARY</span></div><p>Links among parental control and children’s expression differed across Korean, Asian American and European American families. Meaning cannot be detached from culture.</p></li>
+      <li><div><a href="https://pubmed.ncbi.nlm.nih.gov/38779471/">Zhu et al. (2024)</a><br><span class="badge mixed">BIDIRECTIONALITY BOUNDARY</span></div><p>Observed mother–child coaching, dismissing and expression changed dynamically from ages three to six. Children participate in the socialisation process; arrows cannot be assumed one-way.</p></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="next-title">
+    <div class="section-no">08 · Research before Chronic rows</div>
+    <h2 id="next-title">Questions the next search must answer</h2>
+    <div class="questions">
+      <article class="question"><strong>Which emotion?</strong><p>Fear, anger, sadness, shame, joy, love, pride and need may receive different responses and produce different adaptations.</p></article>
+      <article class="question"><strong>Which layer changed?</strong><p>Separate bodily representation, access, differentiation, expression, action and belief rather than using “awareness” as one variable.</p></article>
+      <article class="question"><strong>What was the relational contingency?</strong><p>Measure support, minimisation, punishment, withdrawal, role reversal, inconsistency and repair—not only a total adversity score.</p></article>
+      <article class="question"><strong>Was danger still present?</strong><p>Do not call strategic suppression dysfunctional when expression remains genuinely unsafe in the current environment.</p></article>
+      <article class="question"><strong>Did the pattern generalise?</strong><p>Test whether it appears across people and contexts, and whether safe relationships restore access or expression.</p></article>
+      <article class="question"><strong>What remained possible?</strong><p>Look for resilience, selective access, private feeling, alternative caregivers, later learning and successful recovery—not only impairment.</p></article>
+    </div>
+    <div class="guard"><strong>Model boundary.</strong> F2 can ground mechanisms by which emotion participation may be shaped. It cannot establish a child’s history from adult behaviour, turn socialisation into a diagnosis, equate emotional restraint with pathology or use protective learning to erase later impact and responsibility. The next Chronic pass must describe the present organisation first; developmental history remains one possible explanatory route, not a conclusion contained in the cell.</div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>F2 working file · Emotion socialisation, access, expression and action must remain separable. Companion evolutionary account: <a href="../index.html">F1 — Evolution of Nervous System Organisation</a>.</p>
+</footer>
+</body>
+</html>

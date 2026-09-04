@@ -1,0 +1,1576 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Nervous System Organisation Gradient</title>
+<link rel="stylesheet" href="../assets/page-responsibility.css">
+<link rel="stylesheet" href="../assets/model-coupling.css">
+<style>
+  :root {
+    --ink: #0b1f42;
+    --ink-soft: #24365c;
+    --body: #3c4c6d;
+    --muted: #64748b;
+    --line: #dbe3ef;
+    --line-faint: #edf1f7;
+    --paper: #ffffff;
+    --head: #4b5666;
+    --awareness-tint: #f1f7ff;
+    --awareness-tint-hover: #e8f2ff;
+    --empathy-tint: #f1faf4;
+    --empathy-tint-hover: #e7f6ec;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 48px 32px 96px;
+    background: #f6f8fc;
+    color: var(--ink);
+    font: 15px/1.55 ui-sans-serif, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1600px; margin: 0 auto; }
+  h1 {
+    font-family: ui-serif, Georgia, "Times New Roman", serif;
+    font-size: 32px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 8px;
+  }
+  .source { color: var(--muted); font-size: 13px; margin: 0; max-width: 620px; }
+
+  .vocabulary {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px; max-width: 1120px; margin: 0 0 48px;
+  }
+  .vocabulary > div {
+    background: var(--paper); border: 1px solid var(--line);
+    border-radius: 12px; padding: 16px 18px;
+  }
+  .vocabulary > .systems-key { grid-column: 1 / -1; padding: 20px; background: #f9fbff; }
+  .vocabulary > .inner-compass-key,
+  .vocabulary > .organisation-key { grid-column: 1 / -1; }
+  .definition-hook { display: inline-block; margin-top: 9px; font-size: 12px; font-weight: 700; }
+  .systems-key > dd { max-width: none; }
+  .systems-key-intro { display: block; max-width: 820px; }
+  .systems-mini {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px; max-width: 850px; margin-top: 16px;
+  }
+  .systems-mini a {
+    display: block; padding: 13px 15px; text-decoration: none;
+    background: var(--paper); border: 1px solid var(--line);
+    border-top: 4px solid var(--accent); border-radius: 9px;
+  }
+  .systems-mini a:hover { border-color: var(--ink); }
+  .systems-mini a:focus-visible { outline: 3px solid #6eeafb; outline-offset: 3px; }
+  .systems-mini .me-mini { grid-column: 1 / -1; width: min(520px, 100%); margin: 0 auto 6px; }
+  .systems-mini strong { display: block; color: var(--ink); font-size: 14px; }
+  .systems-mini span { display: block; margin-top: 3px; color: var(--body); font-size: 12px; }
+  .vocabulary > .gradient-guide-key { grid-column: 1 / -1; padding: 0; overflow: hidden; }
+  .gradient-guide-key > dt { padding: 18px 20px 0; }
+  .gradient-guide-key > dd { margin-top: 14px; }
+  .gradient-guide {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px; background: var(--line); border-top: 1px solid var(--line);
+  }
+  .gradient-lens { padding: 18px 20px 20px; background: #f9fbff; border-top: 5px solid var(--accent); }
+  .gradient-lens.chronic { background: #fff9f5; }
+  .gradient-lens > strong { display: block; margin-bottom: 8px; color: var(--ink); font-size: 14px; }
+  .gradient-lens p { margin: 0; color: var(--body); font-size: 12.5px; }
+  .gradient-lens .gradient-question { margin-top: 13px; padding-top: 11px; border-top: 1px solid var(--line); }
+  .gradient-question strong {
+    display: block; margin-bottom: 4px; color: var(--muted); font-size: 9.5px;
+    font-weight: 800; letter-spacing: .09em; text-transform: uppercase;
+  }
+  .gradient-guide-boundary {
+    display: grid; grid-template-columns: 118px minmax(0, 1fr) auto;
+    grid-column: 1 / -1; align-items: center; gap: 18px;
+    padding: 17px 20px; background: var(--paper);
+  }
+  .gradient-guide-boundary p { margin: 0; color: var(--body); font-size: 12.5px; }
+  .gradient-guide-boundary p strong { color: var(--ink); }
+  .gradient-guide-links { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+  .gradient-guide-links a {
+    color: var(--ink-soft); font-size: 11.5px; font-weight: 800;
+    line-height: 1.35; text-decoration: none;
+  }
+  .gradient-guide-links a:hover { color: #087f91; text-decoration: underline; text-underline-offset: 3px; }
+  .gradient-guide-links a:focus-visible { outline: 3px solid #6eeafb; outline-offset: 3px; }
+  .vocabulary dt { font-weight: 750; font-size: 15px; margin-bottom: 4px; }
+  .vocabulary dd { margin: 0; color: var(--body); font-size: 13.5px; }
+
+  .depth-model-planes { position: relative; min-height: 66px; }
+  .depth-model-plane {
+    position: absolute; width: 82px; height: 39px;
+    border: 2px solid var(--plane); border-radius: 8px;
+    background: #fff;
+    background: color-mix(in srgb, var(--plane) 9%, white);
+  }
+  .depth-model-plane.far { top: 0; left: 28px; --plane: #ef823a; }
+  .depth-model-plane.middle { top: 10px; left: 14px; --plane: #b6fc50; }
+  .depth-model-plane.near { top: 20px; left: 0; --plane: #12bdd0; }
+
+  .me-participation {
+    max-width: 1120px; margin: -22px 0 52px; overflow: hidden;
+    background: var(--ink); color: #fff;
+    border: 1px solid var(--ink); border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(11, 31, 66, 0.12);
+  }
+  .me-participation-head {
+    display: flex; align-items: baseline; justify-content: space-between; gap: 24px;
+    padding: 18px 20px 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  }
+  .me-participation-kicker {
+    margin: 0; color: #6eeafb; font-size: 10.5px; font-weight: 800;
+    letter-spacing: .1em; text-transform: uppercase;
+  }
+  .me-participation-head h2 {
+    margin: 2px 0 0; color: #fff; font-size: 21px;
+  }
+  .me-participation-head > p:last-child {
+    max-width: 570px; margin: 0; color: #c6d5ef; font-size: 12.5px;
+  }
+  .me-config-link {
+    display: inline-block; margin-top: 9px; color: #b6fc50; font-size: 10.5px;
+    font-weight: 800; text-decoration: none;
+  }
+  .me-config-link:hover { color: #fff; text-decoration: underline; }
+  .me-config-link:focus-visible { outline: 3px solid #6eeafb; outline-offset: 3px; }
+  .me-processes {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .me-process {
+    min-width: 0; padding: 17px 20px 19px;
+    border-right: 1px solid rgba(255, 255, 255, 0.16);
+  }
+  .me-process:last-child { border-right: 0; }
+  .me-process h3 {
+    margin: 0 0 4px; color: #b6fc50; font-size: 13px; font-weight: 800;
+    letter-spacing: .025em;
+  }
+  .me-process p { margin: 0; color: #fff; font-size: 12.5px; line-height: 1.45; }
+  .me-process-route {
+    display: block; margin-bottom: 10px; color: #9fb2d0;
+    font: 750 9px/1.35 ui-monospace, SFMono-Regular, Menlo, monospace;
+    letter-spacing: .06em; text-transform: uppercase;
+  }
+  .me-access-question { min-height: 55px; }
+  .me-access-control { margin-top: 16px; }
+  .me-access-control input[type="range"] {
+    display: block; width: 100%; height: 22px; margin: 0;
+    appearance: none; -webkit-appearance: none; background: transparent; cursor: pointer;
+  }
+  .me-access-control input[type="range"]:focus-visible { outline: 3px solid #6eeafb; outline-offset: 4px; border-radius: 999px; }
+  .me-access-control input[type="range"]::-webkit-slider-runnable-track {
+    height: 8px; border-radius: 999px;
+    background: linear-gradient(90deg, #ef823a 0%, #f7d448 48%, #6eeafb 76%, #b6fc50 100%);
+  }
+  .me-access-control input[type="range"]::-moz-range-track {
+    height: 8px; border: 0; border-radius: 999px;
+    background: linear-gradient(90deg, #ef823a 0%, #f7d448 48%, #6eeafb 76%, #b6fc50 100%);
+  }
+  .me-access-control input[type="range"]::-webkit-slider-thumb {
+    width: 20px; height: 20px; margin-top: -6px; appearance: none; -webkit-appearance: none;
+    border: 3px solid #fff; border-radius: 50%; background: var(--ink); box-shadow: 0 0 0 2px rgba(182, 252, 80, .92);
+  }
+  .me-access-control input[type="range"]::-moz-range-thumb {
+    width: 15px; height: 15px; border: 3px solid #fff; border-radius: 50%;
+    background: var(--ink); box-shadow: 0 0 0 2px rgba(182, 252, 80, .92);
+  }
+  .me-access-ends {
+    display: flex; justify-content: space-between; gap: 12px; margin-top: 2px;
+    color: #9fb2d0; font-size: 8.5px; font-weight: 700; line-height: 1.25;
+  }
+  .me-access-ends span:last-child { text-align: right; }
+  .me-access-readout {
+    min-height: 34px; margin-top: 9px; color: #fff; font-size: 11px; font-weight: 750;
+  }
+  .me-row-link {
+    display: inline-flex; margin-top: 12px; padding: 5px 8px; border: 1px solid rgba(182, 252, 80, .4);
+    border-radius: 999px; color: #dfffb5; font-size: 9.5px; font-weight: 800; text-decoration: none;
+  }
+  .me-row-link:hover { border-color: #b6fc50; background: rgba(182, 252, 80, .1); color: #fff; }
+  .me-row-link:focus-visible { outline: 3px solid #6eeafb; outline-offset: 2px; }
+  .me-combination {
+    display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; align-items: center;
+    margin: 0; padding: 12px 20px; border-top: 1px solid rgba(255, 255, 255, .16);
+    background: #102a56; color: #dce8fa; font-size: 11.5px;
+  }
+  .me-combination strong { color: #6eeafb; font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
+  .me-reveal {
+    display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0; padding: 10px 20px;
+    border-top: 1px solid rgba(255, 255, 255, .16); background: #173866;
+  }
+  .me-reveal[hidden] { display: none; }
+  .me-reveal span { margin-right: 3px; color: #9fb2d0; font-size: 9px; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
+  .me-reveal a {
+    padding: 5px 8px; border: 1px solid rgba(110, 234, 251, .36); border-radius: 999px;
+    color: #d7faff; font-size: 9.5px; font-weight: 800; text-decoration: none;
+  }
+  .me-reveal a:hover { border-color: #6eeafb; color: #fff; }
+  .me-process .cell-hooks { margin-top: 11px; }
+  .me-process .cell-hooks a {
+    border-color: rgba(255, 255, 255, 0.28); background: rgba(255, 255, 255, 0.08);
+    color: #dce8fa;
+  }
+  .me-process .cell-hooks a:hover { border-color: #6eeafb; color: #fff; }
+  .me-boundary {
+    margin: 0; padding: 13px 20px 15px;
+    background: #6eeafb; color: var(--ink); font-size: 12.5px; line-height: 1.5;
+  }
+  .row-pair { display: block; margin-top: 7px; text-transform: none; letter-spacing: 0; }
+  .row-pair a {
+    display: inline-block; padding: 3px 6px; border: 1px solid #bcd1ef; border-radius: 999px;
+    color: #315482; font-size: 8.5px; font-weight: 800; text-decoration: none;
+  }
+  .row-pair a:hover { border-color: #087f91; color: #087f91; }
+
+  .masthead {
+    display: flex; flex-wrap: wrap; align-items: flex-end;
+    justify-content: space-between; gap: 24px;
+    margin-bottom: 44px;
+  }
+  /*
+    The toggle sits on an ink pill because #ef823a needs a dark ground to clear
+    AA, and white on white would vanish against this paper. Ink on #ef823a
+    measures 5.9:1, and #ef823a on ink measures the same.
+  */
+  .toggle {
+    display: flex; gap: 4px; flex: none;
+    padding: 4px; border-radius: 10px;
+    background: var(--ink);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  .toggle button {
+    font: inherit; font-size: 13px; font-weight: 600;
+    padding: 8px 16px; border: 0; border-radius: 7px;
+    background: transparent; cursor: pointer;
+    transition: background-color 200ms, color 200ms;
+  }
+  .toggle button:focus-visible { outline: 2px solid #6eeafb; outline-offset: 2px; }
+  #t-fluid { color: #c6d5ef; }
+  #t-fluid:hover { background: rgba(255, 255, 255, 0.92); color: var(--ink); }
+  #t-fluid[aria-pressed="true"] { background: #ffffff; color: var(--ink); }
+  #t-chronic { color: #ef823a; }
+  #t-chronic:hover { background: #ef823a; color: var(--ink); }
+  #t-chronic[aria-pressed="true"] { background: #ef823a; color: var(--ink); }
+  .panel[hidden] { display: none; }
+
+  h2 {
+    font-family: ui-serif, Georgia, "Times New Roman", serif;
+    font-size: 23px; font-weight: 600; margin: 0 0 10px;
+  }
+  .caption { max-width: 860px; color: var(--body); font-size: 14px; margin: 0 0 20px; }
+  section { margin-bottom: 64px; }
+  .scroll {
+    overflow-x: auto;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: 0 1px 2px rgba(11, 31, 66, 0.05);
+  }
+  table { border-collapse: collapse; width: 100%; min-width: 1360px; }
+  th, td {
+    text-align: left; vertical-align: top;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--line-faint);
+    font-weight: 400;
+  }
+  /*
+    The Position row names the columns, so it carries no fill: it is the
+    reference key, not a reading of anything. Colour now belongs to the
+    Organisation row, which is the thing the gradient measures.
+  */
+  thead th.pos {
+    background: var(--paper); color: var(--ink);
+    border-bottom: 1px solid var(--line);
+    padding: 12px 14px 11px;
+    width: 12.6%;
+    font-size: 17px; font-weight: 800;
+  }
+  th.axis {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--muted);
+    text-align: center; padding: 10px 14px 8px;
+    border-bottom: 1px solid var(--line-faint);
+  }
+  th.axis + th.axis { border-left: 1px solid var(--line-faint); }
+  .corner { background: var(--paper); border-bottom: 1px solid var(--line); }
+  tbody th[scope="row"], thead .corner {
+    position: sticky; left: 0; z-index: 1;
+    background: var(--paper);
+    width: 150px; min-width: 150px;
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.07em; color: var(--muted);
+    border-right: 1px solid var(--line);
+  }
+  td { font-size: 13.5px; line-height: 1.5; color: var(--ink-soft); }
+  td.research { color: var(--body); font-size: 13px; }
+  tr.rule > * { border-top: 1px solid var(--line); }
+
+  /*
+    Environmental Conditions is the same in both tables — it is what is
+    happening around the person, not a reading of it. Dark ground so it reads
+    with the Position row as one header block, and so the two tables are
+    visibly answering the same conditions.
+  */
+  tr.env > th[scope="row"], tr.env > td {
+    background: var(--head); color: #ffffff;
+    border-bottom-color: rgba(255, 255, 255, 0.16);
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  tr.env > th[scope="row"] { color: rgba(255, 255, 255, 0.78); border-right-color: var(--head); }
+  tr.env > td { font-weight: 600; }
+  tr.env .off { display: block; font-weight: 400; opacity: 0.72; font-size: 12.5px; }
+
+  td.org {
+    background: var(--fill); color: var(--on);
+    font-weight: 650; font-size: 14.5px;
+    box-shadow: inset 0 0 0 1px rgba(11, 31, 66, 0.09);
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  td.org .hex {
+    display: block; margin-top: 3px;
+    font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    opacity: 0.72;
+  }
+
+  tbody tr:not(.env):hover td:not(.org) { background: #f8fafd; }
+
+  tbody tr.capacity-awareness > th[scope="row"],
+  tbody tr.capacity-awareness > td { background: var(--awareness-tint); }
+  tbody tr.capacity-awareness:hover > th[scope="row"],
+  tbody tr.capacity-awareness:hover > td { background: var(--awareness-tint-hover); }
+  tbody tr.capacity-empathy > th[scope="row"],
+  tbody tr.capacity-empathy > td { background: var(--empathy-tint); }
+  tbody tr.capacity-empathy:hover > th[scope="row"],
+  tbody tr.capacity-empathy:hover > td { background: var(--empathy-tint-hover); }
+
+  /* A row header that has its own note below links to it; the rest do not. */
+  tbody th[scope="row"] a {
+    color: inherit; text-underline-offset: 3px;
+    text-decoration-color: var(--line);
+  }
+  tbody th[scope="row"] a:hover { text-decoration-color: currentColor; }
+  .row-alias {
+    display: block; margin-top: 2px; font-size: 10px; font-weight: 600;
+    text-transform: none; letter-spacing: 0;
+  }
+
+  .note {
+    max-width: 860px; margin: 18px 0 0;
+    padding: 14px 16px;
+    border-left: 3px solid #ef823a;
+    background: #fff6ee;
+    color: #7a4413; font-size: 13.5px; line-height: 1.6;
+  }
+  /*
+    Row notes sit outside the toggle. What a row reads does not change between
+    Fluid and Chronic, so duplicating the note inside each panel would make one
+    explanation into two that can drift apart.
+  */
+  .notes { border-top: 1px solid var(--line); padding-top: 40px; }
+  /*
+    These tables answer four fixed questions, not seven Positions, so the
+    gradient table's 1360px minimum would put a scrollbar under four columns
+    that do not need one.
+  */
+  .notes table { min-width: 1120px; table-layout: fixed; }
+  .notes table tr > :nth-child(1) { width: 14%; }
+  .notes table tr > :nth-child(2) { width: 22%; }
+  .notes table tr > :nth-child(3) { width: 20%; }
+  .notes table tr > :nth-child(4) { width: 22%; }
+  .notes table tr > :nth-child(5) { width: 22%; }
+  .notes th.q {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.07em; color: var(--muted);
+    border-bottom: 1px solid var(--line);
+    padding: 12px 14px 10px;
+  }
+  .notes tbody th[scope="row"] {
+    position: static; min-width: 140px;
+    font-size: 14px; font-weight: 650;
+    text-transform: none; letter-spacing: 0; color: var(--ink);
+  }
+  .domain-table table { min-width: 980px; }
+  .domain-table table tr > :nth-child(1) { width: 20%; }
+  .domain-table table tr > :nth-child(2) { width: 38%; }
+  .domain-table table tr > :nth-child(3) { width: 42%; }
+  .access-table table { min-width: 980px; }
+  .access-table table tr > :nth-child(1) { width: 22%; }
+  .access-table table tr > :nth-child(2) { width: 48%; }
+  .access-table table tr > :nth-child(3) { width: 30%; }
+  .access-table tbody th[scope="row"] {
+    background: var(--awareness-tint); color: var(--ink-soft);
+  }
+  .taxonomy-axes {
+    display: grid; grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 10px; max-width: 1120px; margin: 16px 0;
+  }
+  .taxonomy-axes > div {
+    padding: 13px 15px; border: 1px solid var(--line);
+    border-radius: 10px; background: var(--paper);
+  }
+  .taxonomy-axes dt { margin: 0 0 4px; font-size: 13px; font-weight: 750; }
+  .taxonomy-axes dd { margin: 0; color: var(--body); font-size: 12.5px; line-height: 1.5; }
+  .axis-question { display: block; margin-bottom: 7px; color: var(--ink-soft); font-weight: 700; }
+  .axis-connection { display: block; margin-top: 10px; padding-top: 9px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+  .axis-connection a { color: var(--ink-soft); text-underline-offset: 3px; }
+  .signal-examples {
+    max-width: 980px; margin: 16px 0 0; padding: 14px 16px;
+    border-left: 3px solid #b6fc50; background: #f7ffe9;
+    color: var(--body); font-size: 12.5px; line-height: 1.55;
+  }
+  .cell-hooks {
+    display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px;
+  }
+  .cell-hooks a {
+    display: inline-block; padding: 3px 6px; border: 1px solid var(--line);
+    border-radius: 999px; background: var(--paper); color: var(--muted);
+    font-size: 9.5px; font-weight: 750; line-height: 1.2;
+    text-decoration: none;
+  }
+  .cell-hooks a:hover { border-color: var(--ink-soft); color: var(--ink); }
+  .cell-hooks a:focus-visible { outline: 2px solid #6eeafb; outline-offset: 2px; }
+  .survival-function-row th,
+  .survival-function-row td { background: #f7ffe9; }
+  .survival-function-row td { color: var(--body); }
+  .survival-function-row strong { color: var(--ink); }
+  .autonomic-pathway-row td a {
+    display: block; color: inherit; text-decoration-style: dotted;
+    text-decoration-color: var(--muted); text-underline-offset: 3px;
+  }
+  .autonomic-pathway-row td a:hover { color: var(--ink); text-decoration-style: solid; }
+  .autonomic-pathway-row td a:focus-visible { outline: 2px solid var(--awareness); outline-offset: 3px; }
+  .notes h3 {
+    font-family: ui-serif, Georgia, "Times New Roman", serif;
+    font-size: 19px; font-weight: 600; margin: 44px 0 8px;
+  }
+  .notes h4 {
+    font-family: ui-serif, Georgia, "Times New Roman", serif;
+    font-size: 16.5px; font-weight: 600; margin: 34px 0 6px;
+  }
+  /*
+    The tag dot reuses the Position colour of the family's own territory —
+    #6eeafb for connection, #b6fc50 for protection — so the survival problem is
+    read against a scale the page has already taught, not a second one.
+  */
+  .tag {
+    display: inline-flex; align-items: center; gap: 7px;
+    margin: 0 0 14px; padding: 5px 12px 5px 9px;
+    border: 1px solid var(--line); border-radius: 999px;
+    background: var(--paper);
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.07em; color: var(--muted);
+  }
+  .tag::before {
+    content: ""; width: 9px; height: 9px; border-radius: 50%;
+    background: var(--dot);
+    box-shadow: inset 0 0 0 1px rgba(11, 31, 66, 0.18);
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  .groups {
+    display: grid; gap: 14px; margin: 0 0 16px; padding: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 1120px;
+  }
+  .signal-group-card {
+    position: relative; overflow: hidden; background: var(--paper);
+    border: 1px solid var(--line); border-radius: 14px; padding: 20px;
+  }
+  .signal-group-card::before {
+    content: ""; position: absolute; inset: 0 auto 0 0; width: 4px;
+    background: var(--group-accent);
+  }
+  .signal-group-card.body-group { --group-accent: #6eeafb; }
+  .signal-group-card.situation-group { --group-accent: #b6fc50; }
+  .group-kicker {
+    margin: 0 0 7px; color: var(--muted); font-size: 10px;
+    font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+  }
+  .signal-group-card h4 {
+    margin: 0; font-family: ui-serif, Georgia, "Times New Roman", serif;
+    font-size: 24px; line-height: 1.15;
+  }
+  .signal-group-card h4 a { text-decoration: none; }
+  .signal-group-card h4 a::after {
+    content: " ↓"; color: var(--group-accent); font: 700 14px/1 ui-sans-serif, system-ui, sans-serif;
+  }
+  .signal-group-card h4 a:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .signal-group-card h4 a:focus-visible { outline: 2px solid var(--group-accent); outline-offset: 4px; border-radius: 3px; }
+  .group-question { margin: 8px 0 18px; color: var(--ink-soft); font-size: 15px; }
+  .group-details { display: grid; gap: 10px; margin: 0; }
+  .group-details > div { padding-top: 10px; border-top: 1px solid var(--line); }
+  .group-details dt {
+    margin: 0 0 3px; color: var(--muted); font-size: 9.5px;
+    font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+  }
+  .group-details dd { margin: 0; color: var(--body); font-size: 12.5px; line-height: 1.5; }
+  .family-set { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--line); }
+  .family-set h5 { margin: 0 0 9px; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
+  .family-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+  .family-list li {
+    padding: 4px 7px; border: 1px solid var(--line); border-radius: 999px;
+    background: var(--wash); color: var(--body); font-size: 10.5px; line-height: 1.25;
+  }
+  .family-list li:has(a) { padding: 0; }
+  .family-list a { display: block; padding: 4px 7px; border-radius: 999px; text-decoration: none; }
+  .family-list a:hover { background: var(--paper); box-shadow: inset 0 0 0 1px var(--group-accent); }
+  .family-list a:focus-visible { outline: 2px solid var(--group-accent); outline-offset: 2px; }
+  #body-signals, #situation-signals, #belonging-emotions,
+  #belonging-at-risk, #threat-protection, #survival-rage { scroll-margin-top: 24px; }
+  .family-list strong { color: var(--ink); }
+  .group-distinction {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px; max-width: 1120px; margin: 14px 0 0;
+    border: 1px solid var(--line); background: var(--line);
+  }
+  .group-distinction > div { padding: 14px 15px; background: var(--paper); }
+  .group-distinction dt { margin: 0 0 5px; font-size: 11px; font-weight: 800; }
+  .group-distinction dd { margin: 0; color: var(--body); font-size: 11.5px; line-height: 1.5; }
+  .aside { max-width: 860px; color: var(--body); font-size: 13px; margin: 16px 0 0; }
+  .aside a { color: var(--ink-soft); text-underline-offset: 3px; }
+  .back { display: inline-block; margin-top: 32px; font-size: 13px; color: var(--muted); }
+
+  .chronic-origin {
+    display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(320px, .88fr);
+    gap: 1px; max-width: 1180px; margin: 0 0 24px;
+    border: 1px solid var(--line); border-top: 4px solid #ef823a;
+    border-radius: 14px; overflow: hidden; background: var(--line);
+    box-shadow: 0 1px 2px rgba(11, 31, 66, 0.05);
+  }
+  .chronic-origin > div { padding: 22px 24px; background: var(--paper); }
+  .chronic-origin .origin-kicker {
+    margin: 0 0 7px; color: #a94c18; font-size: 10.5px;
+    font-weight: 800; letter-spacing: .11em; text-transform: uppercase;
+  }
+  .chronic-origin h3 {
+    margin: 0 0 12px; color: var(--ink); font-family: ui-serif, Georgia, "Times New Roman", serif;
+    font-size: 22px; font-weight: 600; letter-spacing: -.01em;
+  }
+  .chronic-origin p { margin: 0; color: var(--body); font-size: 13.5px; }
+  .chronic-origin p + p { margin-top: 11px; }
+  .origin-conditions h4 {
+    margin: 0 0 11px; color: var(--muted); font-size: 10.5px;
+    font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+  }
+  .origin-conditions ul { margin: 0; padding: 0; list-style: none; }
+  .origin-conditions li {
+    position: relative; padding-left: 18px; color: var(--ink-soft); font-size: 13px;
+  }
+  .origin-conditions li + li { margin-top: 9px; }
+  .origin-conditions li::before {
+    content: ""; position: absolute; left: 0; top: .62em;
+    width: 7px; height: 7px; border-radius: 50%; background: #ef823a;
+  }
+  .origin-sequence {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-column: 1 / -1; gap: 1px; padding: 0 !important; background: var(--line) !important;
+  }
+  .origin-sequence span {
+    position: relative; padding: 11px 15px; background: #f8fafd;
+    color: var(--ink-soft); font-size: 11.5px; font-weight: 750; text-align: center;
+  }
+  .origin-sequence span:not(:last-child)::after {
+    content: "→"; position: absolute; z-index: 1; right: -8px; top: 10px;
+    width: 16px; height: 16px; border-radius: 50%;
+    background: var(--ink); color: #fff; font-size: 10px; line-height: 15px;
+  }
+  .origin-boundary {
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .9fr) 260px;
+    grid-column: 1 / -1; align-items: center; gap: 24px;
+    padding: 16px 24px !important; border-left: 4px solid var(--ink);
+    background: #f4f7fb !important;
+  }
+  .origin-boundary p { color: var(--ink-soft); font-size: 12.5px; }
+  .origin-boundary p strong { color: var(--ink); }
+  .future-hook {
+    display: inline-block; color: var(--muted); font-size: 11px;
+    font-weight: 750; letter-spacing: .04em;
+  }
+
+  .return-section { border-top: 1px solid var(--line); padding-top: 40px; }
+  .return-sequence {
+    display: grid; grid-template-columns: repeat(7, minmax(150px, 1fr));
+    gap: 0; margin: 24px 0 18px; min-width: 1120px;
+  }
+  .return-sequence > div {
+    position: relative; padding: 14px 16px 16px;
+    background: var(--paper); border: 1px solid var(--line);
+    border-right: 0;
+  }
+  .return-sequence > div:first-child { border-radius: 12px 0 0 12px; }
+  .return-sequence > div:last-child {
+    border-right: 1px solid var(--line); border-radius: 0 12px 12px 0;
+  }
+  .return-sequence > div:not(:last-child)::after {
+    content: "→"; position: absolute; z-index: 1; right: -9px; top: 15px;
+    width: 18px; height: 18px; border-radius: 50%;
+    background: var(--ink); color: #fff; text-align: center;
+    font-size: 11px; line-height: 17px;
+  }
+  .return-sequence dt {
+    margin: 0 0 5px; color: var(--ink); font-size: 12.5px;
+    font-weight: 750; line-height: 1.3;
+  }
+  .return-sequence dt span {
+    display: block; margin-bottom: 7px; color: var(--muted);
+    font: 700 10px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+    letter-spacing: 0.08em;
+  }
+  .return-sequence dd { margin: 0; color: var(--body); font-size: 12px; line-height: 1.45; }
+  .return-matrix table { min-width: 1600px; table-layout: fixed; }
+  .return-matrix table tr > :first-child { width: 190px; }
+  .return-matrix tbody th[scope="row"] {
+    position: sticky; min-width: 190px; font-size: 13px;
+    text-transform: none; letter-spacing: 0; color: var(--ink);
+  }
+  .return-matrix .row-question {
+    display: block; margin-top: 4px; color: var(--muted);
+    font-size: 10.5px; font-weight: 500; line-height: 1.4;
+    text-transform: none; letter-spacing: 0;
+  }
+  .working-cell { color: var(--muted); font-style: italic; }
+  .repair-territories { margin-top: 18px; }
+
+  @media (max-width: 760px) {
+    body { padding: 28px 16px 72px; }
+    .masthead { margin-bottom: 32px; }
+    .vocabulary { grid-template-columns: 1fr; margin-top: -8px; }
+    .vocabulary > .inner-compass-key,
+    .vocabulary > .organisation-key { grid-column: auto; }
+    .vocabulary > .gradient-guide-key { grid-column: auto; }
+    .gradient-guide { grid-template-columns: 1fr; }
+    .gradient-guide-boundary { grid-template-columns: 100px minmax(0, 1fr); }
+    .gradient-guide-links { grid-column: 1 / -1; }
+    .vocabulary > .systems-key { grid-column: auto; }
+    .systems-mini { grid-template-columns: 1fr; }
+    .systems-mini .me-mini { grid-column: auto; width: 100%; margin-bottom: 0; }
+    .me-participation { margin-top: -20px; }
+    .me-participation-head { display: block; }
+    .me-participation-head > p:last-child { margin-top: 9px; }
+    .me-processes { grid-template-columns: 1fr; }
+    .me-process { border-right: 0; border-bottom: 1px solid rgba(255, 255, 255, 0.16); }
+    .me-process:last-child { border-bottom: 0; }
+    .me-access-question { min-height: 0; }
+    .me-combination { grid-template-columns: 1fr; gap: 4px; }
+    .taxonomy-axes { grid-template-columns: 1fr; }
+    .groups, .group-distinction { grid-template-columns: 1fr; }
+    .chronic-origin { grid-template-columns: 1fr; }
+    .origin-sequence, .origin-boundary { grid-column: auto; }
+    .origin-sequence { grid-template-columns: 1fr; }
+    .origin-sequence span:not(:last-child)::after { content: "↓"; right: 12px; top: auto; bottom: -8px; }
+    .origin-boundary { grid-template-columns: 1fr; gap: 10px; }
+  }
+
+  .emotion-process-row th { border-left: 4px solid #ef823a; }
+  .emotion-process-row td { background: #fffaf6; }
+  .emotion-process-row:hover td { background: #fff4eb; }
+  .chronic-section-row th {
+    padding: 11px 14px; color: #8f3e16; background: #fff0e5;
+    border-top: 2px solid #ef823a; border-bottom: 1px solid #efc4aa;
+    font-size: 11px; font-weight: 800; letter-spacing: .045em;
+    text-align: left; text-transform: uppercase;
+  }
+  .chronic-section-row span {
+    display: inline-block; margin-left: 8px; color: var(--body);
+    font-size: 10px; font-weight: 650; letter-spacing: 0; text-transform: none;
+  }
+  .chronic-emotion-boundary {
+    display: grid; grid-template-columns: minmax(260px, .8fr) minmax(0, 1.2fr);
+    gap: 22px; max-width: 1180px; margin-top: 30px; padding: 22px 24px;
+    border: 1px solid #f0c6a8; border-left: 5px solid #ef823a;
+    border-radius: 12px; background: #fff9f5;
+  }
+  .chronic-emotion-kicker {
+    margin: 0 0 6px; color: #a94c18; font-size: 10px; font-weight: 800;
+    letter-spacing: .1em; text-transform: uppercase;
+  }
+  .chronic-emotion-boundary h3 {
+    margin: 0 0 9px; font-family: ui-serif, Georgia, "Times New Roman", serif;
+    font-size: 20px; font-weight: 600; line-height: 1.25;
+  }
+  .chronic-emotion-boundary p { margin: 0; color: var(--body); font-size: 12.5px; }
+  .chronic-emotion-route {
+    display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-column: 1 / -1; gap: 1px; margin: 0; padding: 1px;
+    border: 1px solid var(--line); background: var(--line); list-style: none;
+  }
+  .chronic-emotion-route li { position: relative; padding: 12px 13px; background: var(--paper); }
+  .chronic-emotion-route li:not(:last-child)::after {
+    content: "→"; position: absolute; z-index: 1; top: 12px; right: -8px;
+    width: 16px; height: 16px; border-radius: 50%; background: var(--ink);
+    color: #fff; font-size: 10px; line-height: 15px; text-align: center;
+  }
+  .chronic-emotion-route strong { display: block; margin-bottom: 4px; color: var(--ink); font-size: 11px; }
+  .chronic-emotion-route span { display: block; color: var(--muted); font-size: 10.5px; line-height: 1.4; }
+  .chronic-emotion-caveat {
+    grid-column: 1 / -1; padding-top: 13px; border-top: 1px solid #f0c6a8;
+  }
+
+  @media (max-width: 760px) {
+    .chronic-emotion-boundary, .chronic-emotion-route { grid-template-columns: 1fr; }
+    .chronic-emotion-route li:not(:last-child)::after { content: "↓"; top: auto; right: 12px; bottom: -8px; }
+    .chronic-emotion-caveat { grid-column: auto; }
+  }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .scroll { border: none; box-shadow: none; overflow: visible; }
+    .toggle, .back { display: none; }
+    section { break-inside: avoid; }
+    table { min-width: 0; font-size: 9px; }
+    td { font-size: 8.5px; }
+    @page { size: A3 landscape; margin: 12mm; }
+  }
+</style>
+<noscript><style>
+  /* Without JS nothing can switch the panels, so show both and drop the control. */
+  .panel[hidden] { display: block; }
+  .toggle { display: none; }
+</style></noscript>
+
+<style>
+  /* Capacity controls are set on Model 1; the reading that changes is the Inner Compass. */
+  .me-access-slider[disabled] { opacity: .85; cursor: not-allowed; }
+  .capacity-echo { margin: 14px 0 0; padding: 12px 16px; background: #edfafd; border: 1px solid #bfeaf0; border-left: 6px solid #10b8cc; border-radius: 10px; font-size: 13px; line-height: 1.5; }
+  .capacity-echo strong { color: #0b1f42; }
+  .capacity-echo a { color: #076170; font-weight: 700; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="carried-banner" role="note"><strong>Carried page · status working.</strong> The row-by-row Fluid and Chronic tables for the seven Positions. Carried on 2 September 2026 from the working repository's main Gradient page. The emotion tables it used to duplicate were removed; the Signal Map is their only home. The ME access controls are set on the <a href="../02-model-1-ess-cls-me/me-access.html">Model 1 add-on</a>; the reading that changes with them is the <a href="../06-inner-compass-four-modes/compass.html">Inner Compass</a>, drawn from these rows. <a href="index.html">Back to the Model 2 canon page →</a></div>
+<div class="masthead" id="top">
+      <div>
+        <h1>The Nervous System Organisation Gradient</h1>
+        <p class="source">
+          The Gradient maps dynamic nervous system states. It is a functional
+          map of nervous system organisation: the conditions that shape it and
+          what remains available through coordinated conscious access.<br>
+          <a href="premise.html">Read the governing model premise →</a>
+          · <a href="../index.html">See how the project files work together →</a>
+        </p>
+      </div>
+      <div class="toggle" role="group" aria-label="Gradient mode">
+        <button id="t-fluid" type="button" aria-pressed="true" aria-controls="panel-fluid">Fluid Gradient</button>
+        <button id="t-chronic" type="button" aria-pressed="false" aria-controls="panel-chronic">Chronic Survival</button>
+      </div>
+    </div>
+
+    <aside class="page-responsibility" aria-label="Page responsibility">
+      <div class="page-responsibility__heading">
+        <p class="page-responsibility__label">Page responsibility · Model 2 · The Nervous System Organisation Gradient</p>
+        <p class="page-responsibility__scope">Scientific-facing scope · Present organism-level resource and capacity organisation across Fluid and Chronic reference positions</p>
+      </div>
+      <p class="page-responsibility__question"><strong>Governing question</strong>What problem does the nervous system currently appear to be organising the organism to solve, and what remains available while it does so?</p>
+      <div class="page-responsibility__grid">
+        <div class="page-responsibility__item"><strong>This page owns</strong><p>The seven Positions, the Fluid and far Chronic reference profiles and the row-by-row account of organisation, resource allocation and capacity access.</p></div>
+        <div class="page-responsibility__item"><strong>It receives</strong><p>Information from the <a href="../01-signal-map/emotion/fluid.html">Signal Map</a> and <a href="../02-model-1-ess-cls-me/access.html">Model 1</a>; <a href="../04-model-3-esc/cycle.html">ESC</a> indexes how successive organisation configurations change through time.</p></div>
+        <div class="page-responsibility__item"><strong>It does not establish</strong><p>A whole-person classification, emotion, behaviour, diagnosis, moral scale or complete causal mechanism. Regulation does not mean calm.</p></div>
+      </div>
+    </aside>
+
+    <aside class="model-coupling" aria-label="How Model 2 participates in the shared event record">
+      <div class="model-coupling__head">
+        <div><p class="model-coupling__label">Shared event record</p><h2>Model 2 supplies the organisation configuration at each ESC moment.</h2></div>
+        <p>A Position is not the event. It is one time-indexed reading of the organism’s present priorities, resources and capacity access inside that event.</p>
+      </div>
+      <div class="model-coupling__owners">
+        <article class="model-coupling__owner model-coupling__owner--systems"><span>Model 1 · simultaneous reading</span><strong>ESS · CLS · ME</strong><p>ESS and CLS processing, conscious availability to ME and possible ME participation.</p></article>
+        <article class="model-coupling__owner model-coupling__owner--gradient" data-current="true"><span>Model 2 · current owner</span><strong>Position · depth · resources</strong><p>Organisation, context-specific Fluid–Chronic depth, resource allocation, capacity access, fit and flexibility.</p></article>
+        <article class="model-coupling__owner model-coupling__owner--esc"><span>Model 3 · temporal owner</span><strong>Moment · transition · later outcome</strong><p>Whether organisation holds, intensifies, shifts, Returns, recovers or becomes differently available later.</p></article>
+      </div>
+      <div class="model-coupling__foot"><p>ESC must name which Gradient variable changed; “the nervous system updated” is not specific enough.</p><a href="../04-model-3-esc/shared-event-record.html">Open the full shared event record →</a></div>
+    </aside>
+
+    <dl class="vocabulary" aria-label="Gradient vocabulary">
+      <div class="systems-key">
+        <dt>One conscious participant · two biological information systems</dt>
+        <dd>
+          <span class="systems-key-intro">ME can gradually recognise and use information arising through ESS and CLS. The three are related, but they are not three equivalent systems.</span>
+          <span class="systems-mini">
+            <a class="me-mini" style="--accent:#f7d448" href="../02-model-1-ess-cls-me/index.html#me"><strong>ME · conscious participant</strong><span>The lived person who can notice, reflect, choose, learn and take responsibility.</span></a>
+            <a style="--accent:#6eeafb" href="../02-model-1-ess-cls-me/index.html#ess"><strong>ESS · Emotional Somatic System</strong><span>Fast, embodied information processing that works largely outside conscious awareness.</span></a>
+            <a style="--accent:#b6fc50" href="../02-model-1-ess-cls-me/index.html#cls"><strong>CLS · Cognitive Logical System</strong><span>Reflective, symbolic information processing that can compare, explain and plan across time.</span></a>
+          </span>
+        </dd>
+      </div>
+      <div class="inner-compass-key">
+        <dt>Coordinated conscious access</dt>
+        <dd>Coordinated conscious access is the relationship through which bodily information, differentiated feeling, situational meaning and direction may become consciously readable. It does not perform the underlying detection or evaluation, and it is not a separate biological system. In Porges’s theoretical framework, <strong>neuroception</strong> names a proposed form of below-awareness safety, danger and life-threat evaluation; it is not another name for coordinated conscious access. Nervous system organisation changes how much of the organism’s information becomes available and usable by ME.<br><a class="definition-hook" href="../02-model-1-ess-cls-me/access.html#functional-sequence">Open the functional sequence →</a></dd>
+      </div>
+      <div class="organisation-key">
+        <dt>Nervous System Organisation</dt>
+        <dd>This card explains the <strong>Nervous system organisation</strong> row in both tables. Organisation is the whole-organism configuration through which the nervous system reallocates energy, attention, perception, feeling, connection and action in response to present or learned conditions. Each Position names a different organisation—not a personality, identity, emotion or behaviour.<br><a class="definition-hook" href="#fluid-nervous-system-organisation">Fluid row</a> · <a class="definition-hook" href="#chronic-nervous-system-organisation">Chronic row</a></dd>
+      </div>
+      <div class="gradient-guide-key">
+        <dt>How to read the two tables</dt>
+        <dd>
+          <div class="gradient-guide">
+            <article class="gradient-lens" style="--accent:#6eeafb">
+              <strong>Fluid · present-condition organisation</strong>
+              <p>The Fluid table follows how nervous system organisation changes as present conditions change.</p>
+              <p class="gradient-question"><strong>Scientific question</strong> What is recruited now, and does organisation update and Return when conditions change?</p>
+            </article>
+            <article class="gradient-lens chronic" style="--accent:#ef823a">
+              <strong>Chronic · learned protective availability</strong>
+              <p>The Chronic table follows protection that may remain easier to recruit, harder to update or slower to release.</p>
+              <p class="gradient-question"><strong>Scientific question</strong> How can repeated or developmental experience alter recruitment, weighting, felt access, interpretation, action and recovery?</p>
+            </article>
+            <div class="gradient-guide-boundary">
+              <div class="depth-model-planes" aria-hidden="true">
+                <span class="depth-model-plane far"></span>
+                <span class="depth-model-plane middle"></span>
+                <span class="depth-model-plane near"></span>
+              </div>
+              <p><strong>These are reference planes, not two kinds of people.</strong> Between them are degrees of recurrent bias, learned restriction and recovery. A pattern may sit at a different depth across processes and contexts.</p>
+              <nav class="gradient-guide-links" aria-label="Two-table supporting files">
+                <a href="depth.html#axes">Open the three-dimensional depth model →</a>
+                <a href="../evidence/protocol.html">See how evidence is selected and bounded →</a>
+              </nav>
+            </div>
+          </div>
+        </dd>
+      </div>
+    </dl>
+
+    <aside class="me-participation" aria-labelledby="me-participation-title">
+      <div class="me-participation-head">
+        <div>
+          <p class="me-participation-kicker">ME participation · human translation</p>
+          <h2 id="me-participation-title">What ME can read, understand and use</h2>
+        </div>
+        <p>The three linked rows describe biological processes that may continue without ME participation. Each control represents how much of that process can become readable, understandable and usable by ME. Move them independently: this is a conceptual model, not a clinical score.<br><a class="me-config-link" href="../02-model-1-ess-cls-me/me-access.html#capacity-key">Open the eight relational configurations →</a></p>
+      </div>
+      <div class="me-processes">
+        <article class="me-process" id="me-interoceptive-access">
+          <h3 id="me-interoceptive-title">Bodily information access and use</h3>
+          <span class="me-process-route">Biological process · Interoceptive processing</span>
+          <p class="me-access-question" id="access-interoceptive-question">What bodily information can I notice, differentiate, interpret and use here?</p>
+          <div class="me-access-control">
+            <input id="access-interoceptive" class="me-access-slider" type="range" min="0" max="100" value="82" aria-labelledby="me-interoceptive-title access-interoceptive-question" aria-describedby="access-interoceptive-readout">
+            <div class="me-access-ends" aria-hidden="true"><span>Not reliably readable</span><span>Broadly readable and usable</span></div>
+            <p class="me-access-readout" id="access-interoceptive-readout" aria-live="polite">Broadly available to ME</p>
+          </div>
+          <a class="me-row-link" href="#fluid-interoceptive-processing">Open biological row →</a>
+        </article>
+        <article class="me-process" id="me-affective-sharing-access">
+          <h3 id="me-affective-title">Affective-sharing access</h3>
+          <span class="me-process-route">Biological process · Affective sharing</span>
+          <p class="me-access-question" id="access-affective-question">How much of another person’s feeling arising within me can I notice while preserving self–other distinction?</p>
+          <div class="me-access-control">
+            <input id="access-affective" class="me-access-slider" type="range" min="0" max="100" value="82" aria-labelledby="me-affective-title access-affective-question" aria-describedby="access-affective-readout">
+            <div class="me-access-ends" aria-hidden="true"><span>Not reliably readable</span><span>Broadly readable and usable</span></div>
+            <p class="me-access-readout" id="access-affective-readout" aria-live="polite">Broadly available to ME</p>
+          </div>
+          <a class="me-row-link" href="#fluid-affective-sharing">Open biological row →</a>
+        </article>
+        <article class="me-process" id="me-mentalizing-access">
+          <h3 id="me-mentalizing-title">Mentalizing access and use</h3>
+          <span class="me-process-route">Biological process · Mentalizing</span>
+          <p class="me-access-question" id="access-mentalizing-question">How much can I represent, check and revise my understanding of another person?</p>
+          <div class="me-access-control">
+            <input id="access-mentalizing" class="me-access-slider" type="range" min="0" max="100" value="82" aria-labelledby="me-mentalizing-title access-mentalizing-question" aria-describedby="access-mentalizing-readout">
+            <div class="me-access-ends" aria-hidden="true"><span>Not reliably usable</span><span>Broadly usable and revisable</span></div>
+            <p class="me-access-readout" id="access-mentalizing-readout" aria-live="polite">Broadly available to ME</p>
+          </div>
+          <a class="me-row-link" href="#fluid-mentalizing">Open biological row →</a>
+        </article>
+      </div>
+      <p class="me-combination"><strong>Current conceptual combination</strong><span id="me-access-summary" aria-live="polite">All three processes are broadly available to ME. Move each control separately to reveal uneven access.</span></p>
+      <div class="me-reveal" id="me-access-reveal" hidden><span>This combination opens</span><a href="../02-model-1-ess-cls-me/access.html#functional-sequence">ESS → CLS → ME functional sequence</a><a href="depth.html#depth">Intermediate Fluid–Chronic layers</a></div>
+      <p class="me-boundary"><strong>The conscious choice is not whether the underlying information initially appears.</strong> ME may use CLS to turn towards, test and act on what becomes available—or to dismiss or rationalise it. Neither route makes the underlying biological processing disappear; using CLS to dismiss an ESS signal does not stop that signal from forming. Participation makes reflection and choice possible, not guaranteed; mentalizing can remain usable when affective sharing or concern is low.</p>
+    </aside>
+
+    <section class="panel" id="panel-fluid">
+      <h2>Fluid Gradient</h2>
+      <p class="caption">In the Fluid Gradient, nervous system organisation moves with present conditions. The Environmental conditions row names what is happening; the Nervous system organisation row names the response. The two remain connected. The rows below separate present biological organisation from the proposed Model 1 participation bridge, the Model 3 (ESC) temporal bridge and the Behaviour/HPR repair boundary. Biological processing may continue without becoming equally or consciously available to ME.</p>
+      <div class="scroll">
+      <table>
+        <thead>
+          <tr><td class="corner"></td><th class="axis" colspan="2" scope="colgroup">Non-defensive</th><th class="axis" colspan="5" scope="colgroup">Defensive organisation</th></tr>
+          <tr>
+            <th scope="row" class="corner">Position</th>
+            <th scope="col" class="pos">X</th>
+            <th scope="col" class="pos">A</th>
+            <th scope="col" class="pos">A↔B</th>
+            <th scope="col" class="pos">B</th>
+            <th scope="col" class="pos">C</th>
+            <th scope="col" class="pos">D</th>
+            <th scope="col" class="pos">Z</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr class="env">
+          <th scope="row">Environmental conditions</th>
+          <td>Safe to be alone <span class="off">(off the gradient)</span></td><td>Safe with others</td><td>Safety uncertain</td><td>Threat</td><td>Persistent threat</td><td>Life threat</td><td><span class="off">(off the gradient)</span></td>
+        </tr>
+        <tr>
+          <th scope="row" id="fluid-nervous-system-organisation">Nervous system organisation</th>
+          <td class="org" style="--fill:#ffffff;--on:#0b1f42">Baseline<span class="hex">#ffffff</span></td><td class="org" style="--fill:#6eeafb;--on:#0b1f42">Connection / Belonging<span class="hex">#6eeafb</span></td><td class="org" style="--fill:#8ef3a6;--on:#0b1f42">Safety Checking<span class="hex">#8ef3a6</span></td><td class="org" style="--fill:#b6fc50;--on:#0b1f42">Protection / Defence<span class="hex">#b6fc50</span></td><td class="org" style="--fill:#e3fd54;--on:#0b1f42">Strategic Management<span class="hex">#e3fd54</span></td><td class="org" style="--fill:#f7d448;--on:#0b1f42">Power Mobilisation<span class="hex">#f7d448</span></td><td class="org" style="--fill:#a1adbf;--on:#0b1f42">Shutdown<span class="hex">#a1adbf</span></td>
+        </tr>
+        <tr>
+          <th scope="row">Also known as</th>
+          <td>rest-and-digest</td><td>social engagement</td><td>belonging at risk</td><td>fight · flight · fawn</td><td>control / management</td><td>power mobilisation</td><td>freeze · collapse</td>
+        </tr>
+        <tr class="survival-function-row">
+          <th scope="row"><a href="#survival-function">Organisational problem-space</a></th>
+          <td><strong>Viability, restoration and readiness</strong> when no present demand requires defence.</td><td><strong>Available relationship and engagement</strong> through safe belonging, reciprocity, care, play, exploration and participation.</td><td><strong>Relational or situational uncertainty</strong> while the organism clarifies whether safety, belonging, access or another valued condition may be changing or at risk.</td><td><strong>Organism-protection</strong> through immediate boundary defence, resistance, escape or protective engagement.</td><td><strong>Organism-protection</strong> across persistent threat through prediction, planning and sustained management.</td><td><strong>Organism-protection</strong> under life threat through maximum force, movement and survival action.</td><td><strong>Organism-protection</strong> through conservation and disengagement when active mobilisation is unavailable or too costly.</td>
+        </tr>
+        <tr class="autonomic-pathway-row">
+          <th scope="row"><a href="autonomic.html#how-to-read-autonomic-organisation">Autonomic pathway</a></th>
+          <td><a href="autonomic.html#fluid-x">parasympathetic · rest &amp; restore</a></td><td><a href="autonomic.html#fluid-a">parasympathetic · ventral vagal</a></td><td><a href="autonomic.html#fluid-ab">mixed · orienting response</a></td><td><a href="autonomic.html#fluid-b">sympathetic · mobilisation</a></td><td><a href="autonomic.html#fluid-c">sympathetic · sustained</a></td><td><a href="autonomic.html#fluid-d">sympathetic · maximum</a></td><td><a href="autonomic.html#fluid-z">dorsal vagal · conservation</a></td>
+        </tr>
+        <tr>
+          <th scope="row">Resource allocation emphasis</th>
+          <td>Restoration</td><td>Relational coordination</td><td>Preparation and checking</td><td>Protective mobilisation</td><td>Strategic mobilisation</td><td>Power mobilisation</td><td>Protective conservation</td>
+        </tr>
+        <tr class="rule">
+          <th scope="row">Summary</th>
+          <td>Restorative ground. Rest, digestion, recovery, and replenishment are available.</td><td>Safety with others — social engagement and co-regulation are available.</td><td>Safety or belonging is uncertain. Defensive organisation begins by checking what changed.</td><td>Immediate threat. Fight, flight, guarding, defence, or appeasement move forward.</td><td>Persistent threat. Cognition organises around prediction, management, and control of variables.</td><td>Maximum protection. Force, power, and outcome become primary while empathy and impact may narrow.</td><td>Capacity exceeded. Mobilisation drops and conservation, withdrawal, or collapse become primary.</td>
+        </tr>
+        <tr class="rule">
+          <th scope="row">Perception</th>
+          <td>Narrow and unguarded — one thing at a time: the body’s own state, a book, a task.</td><td>Widest — the whole field stays readable: people, place, detail, and what carries no urgency.</td><td>Narrowing toward the change — what’s different, who moved.</td><td>Narrowed to the threat — context and nuance drop away.</td><td>Selective — scanning for what can be predicted or controlled.</td><td>Tunnel — only outcome and obstacle remain.</td><td>Dim and distant — the field greys out.</td>
+        </tr>
+        <tr>
+          <th scope="row">Time / tempo</th>
+          <td>Flexible — the future can be planned and scheduled precisely; nothing else claims it.</td><td>Present — time is barely felt and can vanish entirely, because being here is enough.</td><td>Paused — waiting on more information.</td><td>Fast — act now, evaluate later.</td><td>Planning tempo — living ahead of the present moment.</td><td>Maximum urgency — force now.</td><td>Absent — no awareness of time at all; it stops mattering.</td>
+        </tr>
+        <tr>
+          <th scope="row"><a href="../01-signal-map/index.html#emotion-families">Emotions</a></th>
+          <td>Contentment, ease, curiosity — quiet feeling that asks nothing of anyone.</td><td>Gratitude, love, appreciation, care — feeling moves freely in both directions.</td><td>Disappointment, confusion, frustration, shame, guilt — felt fully, without mobilising energy.</td><td>Fear, anger, alarm — telling us something is really wrong.</td><td>The same fear, anger and alarm — held, and used to steer what needs doing.</td><td>Rage, fury, frenzy — feeling becomes the force.</td><td>Flat, numb, far away — feeling no longer arrives.</td>
+        </tr>
+        <tr class="capacity-awareness">
+          <th scope="row">Coordinated conscious access<span class="row-alias">Model 1 interface · conscious availability to ME; possible ME participation remains separate</span></th>
+          <td>Quiet and readable — internal signals, feeling, context, and self-directed preference can guide action without urgency.</td><td>Open and integrated — one’s own signals and another person’s reality can both inform connection without losing self–other distinction.</td><td>Actively orienting — a change becomes consciously readable, but the reading remains provisional while more information arrives.</td><td>Narrowed toward protection — danger and immediate need become clearest while nuance, competing needs, and longer-term direction recede.</td><td>Recruited into management — selected signals guide prediction and control while needs that do not serve the plan are backgrounded.</td><td>Overridden by maximum survival demand — immediate force and outcome organise action before reflective guidance can enter.</td><td>Difficult or impossible to read — depletion and disengagement interrupt access to signals, meaning, preference, and usable direction.</td>
+        </tr>
+        <tr class="capacity-awareness">
+          <th scope="row" id="fluid-interoceptive-processing"><a href="#signal-access">Interoceptive processing</a><span class="row-alias">biological process · internal-state representation</span><span class="row-pair"><a href="#me-interoceptive-access">ME slider · Bodily information access and use ↑</a></span></th>
+          <td>Internal maintenance state is broadly represented without defensive urgency: breathing, digestion, temperature, pain, hunger, thirst, fatigue and recovery demand. Embodied components of Situation Signals can also remain available.<span class="cell-hooks" aria-label="Signal connections"><a href="../01-signal-map/emotion/fluid.html#body-signals">Body Signals</a><a href="../01-signal-map/emotion/fluid.html#situation-signals">Situation Signals</a></span></td>
+          <td>Internal state remains represented while social information receives greater priority; connection-related bodily change can participate without displacing maintenance needs.<span class="cell-hooks" aria-label="Signal connections"><a href="../01-signal-map/emotion/fluid.html#body-signals">Body Signals</a><a href="../01-signal-map/emotion/fluid.html#belonging-emotions">Belonging family</a></span></td>
+          <td>Orienting-related changes in breath, skin, stomach and muscle tone gain priority while homeostatic and restorative information recedes.<span class="cell-hooks" aria-label="Signal connections"><a href="../01-signal-map/emotion/fluid.html#body-signals">Body Signals</a><a href="../01-signal-map/emotion/fluid.html#belonging-at-risk">Belonging-at-Risk</a></span></td>
+          <td>Cardiorespiratory mobilisation, muscular readiness and action-related signals dominate; hunger, fatigue and some pain information are downweighted.<span class="cell-hooks" aria-label="Signal connections"><a href="../01-signal-map/emotion/fluid.html#body-signals">Body Signals</a><a href="../01-signal-map/emotion/fluid.html#threat-protection">Threat-Protection</a></span></td>
+          <td>Internal information is selectively weighted around sustained effort and output; tension may normalise while fatigue and restorative demand remain backgrounded.<span class="cell-hooks" aria-label="Signal connections"><a href="../01-signal-map/emotion/fluid.html#body-signals">Body Signals</a><a href="../01-signal-map/emotion/fluid.html#threat-protection">Threat-Protection</a></span></td>
+          <td>Signals supporting force and immediate action dominate while pain, injury and internal limits may be suppressed.<span class="cell-hooks" aria-label="Signal connections"><a href="../01-signal-map/emotion/fluid.html#body-signals">Body Signals</a><a href="../01-signal-map/emotion/fluid.html#survival-rage">Survival-Rage</a></span></td>
+          <td>Internal information may be compressed into heaviness, cold, depletion, numbness or undifferentiated discomfort, with reduced localisation and usability.<span class="cell-hooks" aria-label="Signal connections"><a href="../01-signal-map/emotion/fluid.html#body-signals">Body Signals</a><a href="../01-signal-map/emotion/fluid.html#situation-signals">Situation Signals</a></span></td>
+        </tr>
+        <tr class="capacity-empathy">
+          <th scope="row" id="fluid-affective-sharing"><a href="#signal-access">Affective sharing</a><span class="row-alias">biological process · experience sharing</span><span class="row-pair"><a href="#me-affective-sharing-access">ME slider · Affective-sharing access ↑</a></span></th>
+          <td>The process remains available but is not recruited when no other person’s present state is being encountered.<span class="cell-hooks" aria-label="Signal connection"><a href="../01-signal-map/emotion/fluid.html#situation-signals">Situation Signals</a></span></td>
+          <td>Another person’s affective state can resonate broadly while self and other remain distinct.<span class="cell-hooks" aria-label="Signal connections"><a href="../01-signal-map/emotion/fluid.html#situation-signals">Situation Signals</a><a href="../01-signal-map/emotion/fluid.html#belonging-emotions">Belonging family</a></span></td>
+          <td>Sharing is partially gated while the safety of receiving the other person’s state is checked.<span class="cell-hooks" aria-label="Signal connections"><a href="../01-signal-map/emotion/fluid.html#situation-signals">Situation Signals</a><a href="../01-signal-map/emotion/fluid.html#belonging-at-risk">Belonging-at-Risk</a></span></td>
+          <td>Sharing is attenuated because the other person’s state competes with immediate protection.<span class="cell-hooks" aria-label="Signal connections"><a href="../01-signal-map/emotion/fluid.html#situation-signals">Situation Signals</a><a href="../01-signal-map/emotion/fluid.html#threat-protection">Threat-Protection</a></span></td>
+          <td>Sharing is selected or suppressed so prediction, planning and sustained response can remain stable.<span class="cell-hooks" aria-label="Signal connections"><a href="../01-signal-map/emotion/fluid.html#situation-signals">Situation Signals</a><a href="../01-signal-map/emotion/fluid.html#threat-protection">Threat-Protection</a></span></td>
+          <td>The other person’s state does not become affectively represented during maximum survival mobilisation.<span class="cell-hooks" aria-label="Signal connections"><a href="../01-signal-map/emotion/fluid.html#situation-signals">Situation Signals</a><a href="../01-signal-map/emotion/fluid.html#survival-rage">Survival-Rage</a></span></td>
+          <td>There is insufficient capacity for the other person’s state to become affectively represented.<span class="cell-hooks" aria-label="Signal connection"><a href="../01-signal-map/emotion/fluid.html#situation-signals">Situation Signals</a></span></td>
+        </tr>
+        <tr class="capacity-empathy">
+          <th scope="row" id="fluid-mentalizing"><a href="#signal-access">Mentalizing</a><span class="row-alias">biological process · cognitive representation of another</span><span class="row-pair"><a href="#me-mentalizing-access">ME slider · Mentalizing access and use ↑</a></span></th>
+          <td>The process remains available but is not recruited when no other mind is relevant to the present situation.<span class="cell-hooks" aria-label="Signal connection"><a href="../01-signal-map/emotion/fluid.html#situation-signals">Situation Signals</a></span></td>
+          <td>Another person’s perspective, intention and feeling can be represented broadly and revised through new information.<span class="cell-hooks" aria-label="Signal connections"><a href="../01-signal-map/emotion/fluid.html#situation-signals">Situation Signals</a><a href="../01-signal-map/emotion/fluid.html#belonging-emotions">Belonging family</a></span></td>
+          <td>The existing model of the other person is revised as cues change; uncertainty can remain open while more information arrives.<span class="cell-hooks" aria-label="Signal connections"><a href="../01-signal-map/emotion/fluid.html#situation-signals">Situation Signals</a><a href="../01-signal-map/emotion/fluid.html#belonging-at-risk">Belonging-at-Risk</a></span></td>
+          <td>Representation narrows to threat, intention and the action the other person may take next.<span class="cell-hooks" aria-label="Signal connections"><a href="../01-signal-map/emotion/fluid.html#situation-signals">Situation Signals</a><a href="../01-signal-map/emotion/fluid.html#threat-protection">Threat-Protection</a></span></td>
+          <td>Representation becomes detailed and predictive around behaviour relevant to managing persistent threat.<span class="cell-hooks" aria-label="Signal connections"><a href="../01-signal-map/emotion/fluid.html#situation-signals">Situation Signals</a><a href="../01-signal-map/emotion/fluid.html#threat-protection">Threat-Protection</a></span></td>
+          <td>Representation of the other mind drops out; movement, obstacle and immediate action remain.<span class="cell-hooks" aria-label="Signal connections"><a href="../01-signal-map/emotion/fluid.html#situation-signals">Situation Signals</a><a href="../01-signal-map/emotion/fluid.html#survival-rage">Survival-Rage</a></span></td>
+          <td>There is insufficient capacity to represent another mind.<span class="cell-hooks" aria-label="Signal connection"><a href="../01-signal-map/emotion/fluid.html#situation-signals">Situation Signals</a></span></td>
+        </tr>
+        <tr class="capacity-empathy">
+          <th scope="row" id="fluid-empathic-concern"><a href="#signal-access">Empathic concern</a><span class="row-alias">relational output</span></th>
+          <td>Available but not recruited when no other person’s welfare requires a response.</td><td>Concern for the other’s wellbeing is fully available, including restraint and respect for their agency.</td><td>Concern remains available while approach, welcome and relational safety are checked.</td><td>Concern narrows toward those under immediate protection while broader welfare loses priority.</td><td>Concern is allocated where it can coexist with the outcome required under persistent threat.</td><td>Another person’s welfare cannot influence action during the immediate maximum-survival window.</td><td>Concern may remain, but the capacity to mobilise care or protective action is unavailable.</td>
+        </tr>
+        <tr class="rule">
+          <th scope="row"><a href="#return">Current availability for transition and Return</a><span class="row-alias">Model 2 · present organisation</span></th>
+          <td>High — low-cost readiness and wider information are available, although physiological restoration may still be under way.</td><td>High — connection and flexible engagement are available without protective organisation dominating.</td><td>Variable — orienting and checking remain active while movement towards a less-defensive organisation stays close at hand.</td><td>Constrained — immediate protective readiness limits movement towards a less-defensive organisation.</td><td>More constrained — sustained management keeps selected demands and controllable variables in priority.</td><td>Severely constrained — maximum force and urgent action dominate the present repertoire.</td><td>Constrained by low capacity — orientation, energy and re-engagement may be difficult to recruit.</td>
+        </tr>
+        <tr class="rule">
+          <th scope="row"><a href="#repair">Availability for repair participation</a><span class="row-alias">Model 2 · present capacities only</span></th>
+          <td>Attention, energy and inhibition are available for low-cost participation; connection and feedback tolerance depend on the situation.</td><td>Connection, communication, feedback tolerance, inhibition, energy and attention are broadly available.</td><td>Connection and communication remain available, while checking and uncertainty may narrow feedback tolerance.</td><td>Feedback tolerance, flexible communication and inhibition may be constrained while immediate protection dominates.</td><td>Communication and attention may remain available but become selective around outcome; feedback tolerance and inhibition may narrow.</td><td>Energy and attention may support force while connection, feedback tolerance and inhibition are severely constrained.</td><td>Energy, attention, communication and sustained engagement may be unavailable or intermittent.</td>
+        </tr>
+        <tr class="rule">
+          <th scope="row">Repair ownership boundary<span class="row-alias">proposed Behaviour/HPR bridge · owner review pending</span></th>
+          <td colspan="7">Present organisation may widen or constrain capacities relevant to repair, but it cannot establish whether repair is attempted, adequate, accepted or completed. Acknowledgement, stopping harm, accountability, boundaries, restitution and changed conduct belong to Behaviour/HPR.</td>
+        </tr>
+        <tr class="rule">
+          <th scope="row">Grounding</th>
+          <td class="research">Homeostatic and allostatic recovery, parasympathetic reactivation, sleep, metabolism, digestion, interoception, reward learning, agency, mastery, curiosity, and goal completion ground restorative and self-directed availability. Recovery is multisystem and has no single autonomic marker or fixed clock (McEwen; Roddick et al., 2025).</td><td class="research">Attachment, social safety, interpersonal emotion regulation, positive affect, exploratory attention, social perception, mentalizing, and empathy ground the reduced cost and wider information field possible with trusted others. Mentalizing, affect sharing, and concern remain separable capacities rather than one “social-engagement system” (Slavich, 2020; Reeck et al., 2016; Kanske et al., 2016).</td><td class="research">Research on orienting, uncertainty, anticipatory threat, prediction error, attention to change, and safety learning grounds checking before the situation is settled. The strength and direction of the response depend on expected threat, ambiguity, controllability, and prior learning (Grupe &amp; Nitschke, 2013).</td><td class="research">Acute-stress research grounds rapid sympathetic and HPA recruitment, salience-led attention, altered pain access, and reduced working-memory and cognitive flexibility under immediate threat. Effects on inhibition, mentalizing, and empathy are contextual rather than uniformly absent (Arnsten et al., 2015; Shields et al., 2016; Nitschke &amp; Bartz, 2023).</td><td class="research">Research on sustained and anticipated threat, stress controllability, prospective control, perseverative cognition, and HPA duration grounds keeping selected variables active across time. “Strategic Management” is a TEG-Blue integration: evidence supports prediction and control processes, not a discrete biological state or inevitable interpersonal control (Herman et al., 2016; Ottaviani et al., 2016).</td><td class="research">Human and comparative research on the defensive cascade, periaqueductal-gray networks, active defence, pain modulation, and extreme action urgency grounds maximum protective mobilisation. It does not establish violence, domination, loss of empathy, or one universal “rage circuit” from arousal alone (Linnman et al., 2012; Kozlowska et al., 2015; Nitschke &amp; Bartz, 2023).</td><td class="research">Research on attentive freezing, immobility under attack, tonic immobility, collapsed immobility, dissociation, and post-threat recovery grounds reduced movement or engagement when active response is unavailable or overwhelmed. These are distinguishable patterns with variable heart-rate and autonomic profiles, not one proven “dorsal-vagal shutdown” (Kozlowska et al., 2015; Volchan et al., 2017).</td>
+        </tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="note"><strong>Grounding scope.</strong> The Grounding row is an orientation map of relevant research domains and claim boundaries, not the final source trace. It identifies where later cell-by-cell grounding should expand, test, qualify, or separate TEG-Blue integration from established findings. These process rows describe characteristic allocation under each Environmental condition, not an all-or-nothing switch or a required experience. A process may remain available while not being recruited, and an active signal may organise action without becoming differentiated feeling.</p>
+      <p class="aside">The evidence questions and selection boundaries used to ground the Fluid and Chronic tables are explained in the <a href="../evidence/protocol.html">Science Grounding Protocol</a>. Current research anchors for the Fluid organisations remain in the working notes while row-level grounding develops.</p>
+    </section>
+
+    <section class="panel" id="panel-chronic" hidden>
+      <h2>Chronic Survival</h2>
+      <div class="chronic-origin" aria-labelledby="chronic-origin-title">
+        <div class="origin-explanation">
+          <p class="origin-kicker">Learning, not duration alone</p>
+          <h3 id="chronic-origin-title">How protective organisation becomes easier to reach</h3>
+          <p>Chronic Survival is not defined by duration alone. It describes protective organisation that has become easier to recruit, harder to update or slower to release after repeated or developmental conditions.</p>
+        </div>
+        <div class="origin-conditions">
+          <h4>Conditions that can contribute</h4>
+          <ul>
+            <li>Unsafe or unpredictable conditions during development.</li>
+            <li>Repeated threat, neglect, coercion, instability, loss or overwhelm.</li>
+            <li>Prolonged stress with too little rest, safety, support or recovery.</li>
+          </ul>
+        </div>
+        <div class="origin-sequence" aria-label="How repeated organisation becomes available">
+          <span>Protection repeatedly required</span>
+          <span>Protective organisation repeatedly recruited</span>
+          <span>Becomes easier to enter or slower to release</span>
+        </div>
+        <div class="origin-boundary">
+          <p><strong>Protection explains function; it does not erase impact.</strong> Responsibility, repair and whether the pattern changes still matter.</p>
+          <p>Developmental, stress, learning and autonomic research can ground these mechanisms. The seven Positions remain a working map, not a clinical taxonomy.</p>
+          <a class="future-hook" href="../05-frameworks/F02/diagram.html#developmental-learning-route">Open F2: how emotional participation can widen or narrow through development →</a>
+        </div>
+      </div>
+      <p class="caption">The Environmental conditions row preserves the Fluid reference point for each Position; it does not claim that those conditions are happening now. In Chronic Survival, organisation and present conditions may no longer match. The table keeps present Model 2 organisation separate from proposed bridges into Model 1 participation, Model 3 (ESC) temporal process, the Fluid–Chronic profile and Behaviour/HPR. Underlying processing may continue when its information is not equally differentiated, readable or usable by ME.</p>
+      <div class="scroll">
+      <table>
+        <thead>
+          <tr><td class="corner"></td><th class="axis" colspan="7" scope="colgroup">Defensive organisation</th></tr>
+          <tr>
+            <th scope="row" class="corner">Position</th>
+            <th scope="col" class="pos">X</th>
+            <th scope="col" class="pos">A</th>
+            <th scope="col" class="pos">A↔B</th>
+            <th scope="col" class="pos">B</th>
+            <th scope="col" class="pos">C</th>
+            <th scope="col" class="pos">D</th>
+            <th scope="col" class="pos">Z</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr class="env">
+          <th scope="row">Environmental conditions</th>
+          <td>Safe to be alone <span class="off">(off the gradient)</span></td><td>Safe with others</td><td>Safety uncertain</td><td>Threat</td><td>Persistent threat</td><td>Life threat</td><td><span class="off">(off the gradient)</span></td>
+        </tr>
+        <tr class="chronic-section-row"><th colspan="8">Organisation and recruitment <span>What becomes easier to enter or sustain beyond the conditions that first required it</span></th></tr>
+        <tr>
+          <th scope="row" id="chronic-nervous-system-organisation">Nervous system organisation</th>
+          <td class="org" style="--fill:#fbe78e;--on:#0b1f42">Chronic Elevated Baseline<span class="hex">#fbe78e</span></td><td class="org" style="--fill:#f7d34d;--on:#0b1f42">Chronic Conditional Belonging<span class="hex">#f7d34d</span></td><td class="org" style="--fill:#f1a43c;--on:#0b1f42">Chronic Safety Checking<span class="hex">#f1a43c</span></td><td class="org" style="--fill:#ef823a;--on:#0b1f42">Chronic Protection / Defence<span class="hex">#ef823a</span></td><td class="org" style="--fill:#ec6430;--on:#0b1f42">Chronic Control &amp; Strategic Management<span class="hex">#ec6430</span></td><td class="org" style="--fill:#eb5151;--on:#0b1f42">Chronic Dominance &amp; Repression<span class="hex">#eb5151</span></td><td class="org" style="--fill:#5d6770;--on:#ffffff">Chronic Collapse / Shutdown<span class="hex">#5d6770</span></td>
+        </tr>
+        <tr class="survival-function-row">
+          <th scope="row" id="chronic-recruitment-pattern"><a href="depth.html#depth-variables">Protective recruitment</a><span class="row-alias">depth variable · recruitment threshold</span></th>
+          <td>Background monitoring or conservation may remain recruited when present conditions would permit fuller restoration.</td><td>Connection-preserving strategies may be recruited when approval, usefulness or another person’s regulation has become linked to safety.</td><td>Belonging and danger remain unresolved, so new or ambiguous cues repeatedly restart checking.</td><td>Guarding, avoidance, appeasement or defence may begin before present threat has been established.</td><td>Prediction and management may become the preferred route for reducing uncertainty and protecting the required outcome.</td><td>Dominance, override or forced outcome may become repeated routes. Their protective function does not make them necessary or permissible.</td><td>Withdrawal and conservation may become easier to reach when demand is expected to exceed capacity.</td>
+        </tr>
+        <tr class="autonomic-pathway-row">
+          <th scope="row"><a href="autonomic.html#how-to-read-autonomic-organisation">Autonomic participation</a><span class="row-alias">working question · not a one-pathway signature</span></th>
+          <td><a href="autonomic.html#chronic-x">Does baseline activation or recovery remain inflexible even during apparent rest?</a></td><td><a href="autonomic.html#chronic-a">Can social engagement be maintained through effort while restoration remains limited?</a></td><td><a href="autonomic.html#chronic-ab">Do orienting and checking continue after the cue has settled?</a></td><td><a href="autonomic.html#chronic-b">Does defensive mobilisation remain recruited outside present threat?</a></td><td><a href="autonomic.html#chronic-c">Can sustained mobilisation coexist with controlled outward behaviour?</a></td><td><a href="autonomic.html#chronic-d">Which systems support repeated high mobilisation, and when can they stand down?</a></td><td><a href="autonomic.html#chronic-z">Which low-output mechanisms are present? One dorsal-vagal route cannot be assumed.</a></td>
+        </tr>
+        <tr class="rule">
+          <th scope="row" id="chronic-information-weighting"><a href="depth.html#depth-variables">Information weighting</a><span class="row-alias">depth variable · what moves forward and what recedes</span></th>
+          <td>Background monitoring receives priority; restorative signals, curiosity and self-directed preference may remain faint.</td><td>Another person’s mood, approval and likely response receive priority over one’s own need, limit or direction.</td><td>Ambiguity, inconsistency and possible rejection receive sustained attention while settling cues carry less corrective weight.</td><td>Possible threat, escape, defence and immediate protection receive priority over wider context.</td><td>Outcome-relevant and controllable variables move forward; needs that interrupt the plan may recede without disappearing.</td><td>The obstacle and required outcome may dominate while pain, internal limits, impact and another person’s reality receive reduced weight.</td><td>Demand and effort reduction receive priority; the wider sensory and relational field may become dim or difficult to use.</td>
+        </tr>
+        <tr class="chronic-section-row"><th colspan="8">Emotional and biological processing <span>Signal formation and bodily representation remain distinct, and may continue without equal or conscious availability to ME</span></th></tr>
+        <tr class="emotion-process-row" id="chronic-emotions">
+          <th scope="row"><a href="../01-signal-map/index.html#emotion-families">ESS emotional signal formation</a><span class="row-alias">human translation · emotional information forms</span></th>
+          <td>Earlier unresolved signals remain among the conditions from which new feelings form, creating background pressure even without a clear event.</td><td>Relational signals continue to form, including feelings that might threaten approval, usefulness or access to connection.</td><td>Connection and Belonging-at-Risk information remain active together; each new cue can restart the unresolved read.</td><td>A wide range of cues is weighted towards protection. Connection signals do not disappear, but arrive inside a defensive field.</td><td>Emotional information still forms, while signals relevant to prediction, performance and control receive greater priority than signals that interrupt the plan.</td><td>Maximum-protection information can dominate while fear, shame, pain, care and impact also arise but are overridden, fused or disowned.</td><td>Condition information may remain active while signal formation, differentiation and felt access become compressed by depletion and conservation.</td>
+        </tr>
+        <tr class="capacity-awareness">
+          <th scope="row" id="chronic-interoceptive-processing"><a href="#signal-access">Interoceptive processing</a><span class="row-alias">biological process · internal-state representation</span><span class="row-pair"><a href="#me-interoceptive-access">ME slider · Bodily information access and use ↑</a></span></th>
+          <td>Internal state may remain represented as sustained tension, unease or depletion while restorative and self-directed information receives less weight.</td><td>Relationally linked bodily change may remain highly represented while hunger, fatigue, anger, sadness or personal limits are backgrounded.</td><td>Orienting-related changes in breath, skin, stomach and muscle tone may recur without settling into a clear, trusted reading.</td><td>Defensive bodily information can receive persistent priority while quieter maintenance and connection signals remain harder to use.</td><td>Signals supporting effort and output may remain foregrounded while fatigue, pain and recovery demand become normalised or delayed.</td><td>Force and urgent action signals may dominate while pain, injury and internal limits are suppressed or overridden; this does not establish their absence.</td><td>Internal state may be represented globally as heaviness, numbness, fog or exhaustion, with reduced localisation and differentiation.</td>
+        </tr>
+        <tr class="chronic-section-row"><th colspan="8">Model 1 interface <span>ESS contribution, coordinated conscious access, CLS contribution and possible ME participation</span></th></tr>
+        <tr class="emotion-process-row capacity-awareness">
+          <th scope="row" id="chronic-me-felt-access"><a href="#signal-access">Conscious availability to ME</a><span class="row-alias">ESM-facing record variable · what becomes consciously available to ME</span><span class="row-pair"><a href="#me-interoceptive-access">ME slider · Bodily information access and use ↑</a></span></th>
+          <td>Unease, tension or restless flatness remains detectable, while contentment, curiosity, need and preference stay faint.</td><td>Another person’s mood and permitted affiliative feelings may be easier to feel than one’s own anger, sadness, limit or direction.</td><td>Feelings are available but fused and distrusted—shame with fear, guilt with anger, love with anticipated loss.</td><td>Fear, anger and alarm become easiest to reach; vulnerability, grief and quieter needs may appear only later.</td><td>Feeling is converted quickly into analysis, judgement or strategic information. Signals that obstruct control are discounted.</td><td>Urgency, certainty or rage may dominate access while vulnerability, pain, limit and another person’s impact become difficult—not necessarily impossible—to feel.</td><td>Numbness, fog, heaviness or exhaustion leave little differentiated feeling; fragments may appear when capacity briefly returns.</td>
+        </tr>
+        <tr class="capacity-awareness">
+          <th scope="row">Coordinated conscious access<span class="row-alias">Model 1 interface · access relationship, not signal formation or participation</span></th>
+          <td>Continuous monitoring may make needs, preference and self-directed movement difficult to read clearly.</td><td>The other person’s state may become easier to read than one’s own signals, limits or direction.</td><td>Signals are noticed but repeatedly checked, so no reading feels sufficient to settle uncertainty.</td><td>Protective interpretation may reach action before wider context and competing needs can be consulted.</td><td>Internal information may be admitted when it serves prediction or management and discounted when it interrupts the plan.</td><td>Vulnerability, limit, impact and competing feeling may be overridden or disowned and therefore fail to constrain the required outcome.</td><td>Numbness, depletion and disengagement may obscure signals, meaning, preference and usable direction.</td>
+        </tr>
+        <tr class="emotion-process-row">
+          <th scope="row" id="chronic-cls-interpretation">CLS contribution to interpretation<span class="row-alias">Model 1 interface · reflective–symbolic contribution</span></th>
+          <td>Carried activation is normalised as personality, ordinary stress or “nothing in particular”, so its source is not investigated.</td><td>Feelings are evaluated by whether they preserve belonging: can this be felt or shown without losing connection?</td><td>Each feeling becomes possible evidence of rejection or danger, but no interpretation feels reliable enough to close the question.</td><td>Emotional urgency is treated as proof of present danger before the wider situation has been checked.</td><td>Feeling is converted into explanation, prediction, blame or a management problem. Source, target, scale or responsibility may become mismatched.</td><td>The required outcome can be interpreted as necessary for survival, and opposition as the cause of the internal state. No emotional signal establishes entitlement to harm.</td><td>Experience may be interpreted globally as hopeless, meaningless or overwhelming, or remain too indistinct to interpret.</td>
+        </tr>
+        <tr class="emotion-process-row">
+          <th scope="row" id="chronic-expression-action">Action-readiness, available repertoire and controllability<span class="row-alias">Model 2 · present action field</span></th>
+          <td>Sustained functioning, monitoring and low-cost regulation may remain readily available while restorative or self-directed responses are harder to recruit.</td><td>Connection-preserving approach, mirroring or caretaking may be highly available while protective limit-setting is harder to recruit.</td><td>Approach, withdrawal, checking and reassurance-seeking tendencies may coexist while controllability remains uncertain.</td><td>Guarding, avoidance, appeasement, confrontation and defence become readily available while the wider repertoire narrows.</td><td>Inhibition and planned action can remain strong when they serve prediction, output or control; alternative responses recede.</td><td>Force and outcome-directed action-readiness dominate while inhibition and alternative repertoires may be severely constrained. This does not authorise conduct.</td><td>Movement and sustained output are difficult to recruit; withdrawal or immobility may dominate the available repertoire.</td>
+        </tr>
+        <tr class="emotion-process-row">
+          <th scope="row">Possible ME participation<span class="row-alias">separate Model 1 question · deliberate use, expression or inhibition is not guaranteed</span></th>
+          <td>Where sufficient access exists, ME may pause, express, inhibit or continue functioning; limited access can leave the route outside deliberate use.</td><td>ME may express permitted affiliative feeling while concealing anger, sadness, need or limits; this distinction is available only to the degree the information can participate.</td><td>ME may seek clarification, pause between approach and withdrawal, or inhibit expression while uncertainty is examined.</td><td>ME may be able to examine, express or inhibit protective impulses when enough wider information remains available.</td><td>ME may deliberately contain, delay or organise expression, although usable mentalizing does not establish accurate interpretation or ethical use.</td><td>Deliberate inhibition and reconsideration may be difficult to recruit while maximum force dominates; reduced availability does not determine conduct.</td><td>ME participation in expression or inhibition may be intermittent while energy, orientation and differentiated access remain low.</td>
+        </tr>
+        <tr class="rule">
+          <th scope="row">Action ownership boundary<span class="row-alias">proposed Model 3 (ESC) and Behaviour/HPR bridges · owner review pending</span></th>
+          <td colspan="7">When action occurs, it enters response and feedback through Model 3 (ESC). Observable conduct—including pressure, punishment, coercion, forced outcomes, restraint, stopping and impact—belongs to Behaviour/HPR. Present organisation and emotion neither cause nor authorise that conduct.</td>
+        </tr>
+        <tr class="emotion-process-row">
+          <th scope="row" id="chronic-updating-recovery"><a href="#return-chronic">Current organisation persistence, transition and Return availability</a><span class="row-alias">Model 2 · present organisation</span></th>
+          <td>Background activation or conservation remains easy to sustain while low-cost readiness and restoration are less available.</td><td>Connection-preserving organisation remains easy to sustain while self-directed needs and limits receive less weight; transition availability may still vary by context.</td><td>Checking remains easy to re-enter and difficult to relinquish; transition availability fluctuates with uncertainty.</td><td>Protective readiness remains active across cues while less-defensive organisation and wider information are harder to recruit.</td><td>Strategic management remains stable and transition away from controllable variables is constrained.</td><td>Maximum force and outcome priority may persist; transition and Return availability are severely constrained while this organisation dominates.</td><td>Low-output conservation remains dominant; transition availability is constrained by limited orientation, energy and usable repertoire.</td>
+        </tr>
+        <tr class="emotion-process-row">
+          <th scope="row">Feedback, non-completion and carryover<span class="row-alias">proposed Model 3 (ESC) bridge · owner review pending</span></th>
+          <td>Pressure may fall without rebuilding a restorative baseline; whether the condition completes or carries forward is a temporal question.</td><td>Connection may reduce immediate pressure while the person’s own need, grief or boundary remains open.</td><td>New evidence may fail to settle the read when uncertainty is repeatedly reconstructed.</td><td>Protection may continue after an event changes while positive, relational or repair information has not yet revised the trajectory.</td><td>Control may create temporary certainty without releasing the underlying demand; the original need or feeling can remain outside the response.</td><td>Force may stop while outcome, power or a defensive account continues to organise later response and competing information has not re-entered.</td><td>Output may end without orientation, energy and usable feeling returning; inactivity alone does not establish completion or recovery.</td>
+        </tr>
+        <tr class="rule">
+          <th scope="row">Fluid–Chronic profile boundary<span class="row-alias">proposed owner bridge · review pending</span></th>
+          <td colspan="7">Recurrence, generalisation, difficult revision, context sensitivity and recovery profile belong to the Fluid–Chronic foundation/profile. Model 3 (ESC) owns feedback, completion and non-completion, carryover, updating, learning and later entry. Completion, Return and recovery are distinct questions.</td>
+        </tr>
+        <tr class="chronic-section-row"><th colspan="8">Relational processes and output <span>How another person becomes represented and whether their welfare can influence action</span></th></tr>
+        <tr class="capacity-empathy">
+          <th scope="row" id="chronic-affective-sharing"><a href="#signal-access">Affective sharing</a><span class="row-alias">biological process · feeling another</span><span class="row-pair"><a href="#me-affective-sharing-access">ME slider · Affective-sharing access ↑</a></span></th>
+          <td>Affective sharing may remain available in some contexts while continuous self-monitoring reduces its use in immediate relationship.</td><td>Another person’s state may become highly available while self–other distinction and access to one’s own position narrow.</td><td>Another person’s feeling may be registered and quickly folded into a read of possible danger or rejection.</td><td>Sharing may narrow during chronic guarding while remaining more available with selected people or when protection eases.</td><td>Sharing may be selectively suppressed, compartmentalised or used only when it does not interrupt management.</td><td>Another person’s feeling may be reduced, overridden or kept separate from action while cognitive detection remains available.</td><td>Another person’s state may become faint, delayed or difficult to use when low capacity and withdrawal dominate.</td>
+        </tr>
+        <tr class="capacity-empathy">
+          <th scope="row" id="chronic-mentalizing"><a href="#signal-access">Mentalizing</a><span class="row-alias">biological process · reading another</span><span class="row-pair"><a href="#me-mentalizing-access">ME slider · Mentalizing access and use ↑</a></span></th>
+          <td>Representation of another may continue through rehearsal, replay and anticipated evaluation even when no person is present.</td><td>Another person’s mood and displeasure may be predicted continuously, while direct information receives less corrective weight.</td><td>The model of the other person may be revised repeatedly without becoming stable or trusted.</td><td>Representation may narrow towards possible threat, rejection or harmful intention.</td><td>Understanding may become detailed and predictive while being used mainly to manage behaviour and outcomes.</td><td>Representation may become narrow or instrumental around leverage, compliance and resistance while the other person’s wider perspective receives less weight.</td><td>Representing another mind may become slower, intermittent or unavailable while shutdown and low capacity dominate.</td>
+        </tr>
+        <tr class="capacity-empathy">
+          <th scope="row" id="chronic-empathic-concern"><a href="#signal-access">Empathic concern</a><span class="row-alias">relational output · care can constrain action</span></th>
+          <td>Concern may remain present while depleted capacity, obligation or continuous responsibility narrows how freely it can guide action.</td><td>Concern may become high and compulsory, organised around preserving connection while one’s own limits recede.</td><td>Concern may remain mixed with checking, caution and the need for repeated evidence before approach.</td><td>Concern may narrow towards selected people or immediate protection while broader welfare receives less priority.</td><td>Concern may coexist with management or be displayed for strategic effect; visible care alone does not establish its source.</td><td>Another person’s welfare may have reduced influence or be overridden by the required outcome; this does not establish total absence of concern.</td><td>Concern may remain while motivation, energy and the capacity to act on it become difficult to access.</td>
+        </tr>
+        <tr class="chronic-section-row"><th colspan="8">Participation and evidence boundary <span>What present organisation can make available without claiming that repair occurs</span></th></tr>
+        <tr class="rule">
+          <th scope="row"><a href="#repair">Availability for repair participation</a><span class="row-alias">Model 2 · present capacities only</span></th>
+          <td>Attention, energy and inhibition may support participation intermittently while continuous monitoring narrows feedback tolerance.</td><td>Connection and communication may be readily available while feedback tolerance and access to one’s own limit or impact remain narrower.</td><td>Connection, communication and attention remain available, but checking may make feedback difficult to tolerate or use.</td><td>Communication, inhibition and feedback tolerance may be constrained while guarding and immediate protection remain readily available.</td><td>Attention and planned communication may remain strong, while feedback tolerance and flexible inhibition narrow around control of outcome.</td><td>Energy may support force and sustained attention while connection, feedback tolerance and inhibition are severely constrained.</td><td>Energy, attention, communication and sustained participation may be unavailable or intermittent.</td>
+        </tr>
+        <tr class="rule">
+          <th scope="row">Repair ownership boundary<span class="row-alias">proposed Behaviour/HPR bridge · owner review pending</span></th>
+          <td colspan="7">Present organisation may widen or constrain capacities relevant to repair, but it cannot establish whether repair is attempted, adequate, accepted or completed. Acknowledgement, stopping harm, accountability, boundaries, restitution and changed conduct belong to Behaviour/HPR.</td>
+        </tr>
+        <tr class="rule">
+          <th scope="row">Grounding</th>
+          <td class="research">Allostatic-load, impaired stress-recovery, sleep, autonomic-flexibility, and perseverative-cognition research ground cumulative multisystem dysregulation despite apparent rest. Allostatic load is a composite research construct with heterogeneous measures, not a synonym for this Position (Ottaviani et al., 2016; McCrory et al., 2023; Roddick et al., 2025).</td><td class="research">Attachment insecurity, social-evaluative threat, rejection sensitivity, ostracism, self-silencing, and interpersonal emotion-regulation research ground connection used to protect belonging. Hyperactivating and deactivating strategies are supported; a unitary biological “appeasement state” is not yet established (Williams, 2007; Malik et al., 2015).</td><td class="research">Uncertainty, deficient safety learning, threat expectancy, fear generalisation, and sustained attention to threat ground checking that does not resolve. PTSD eye-tracking evidence is stronger for difficulty disengaging from threat than for universally faster threat detection, so “hypervigilance” must remain component-specific (Grupe &amp; Nitschke, 2013; Lazarov et al., 2019).</td><td class="research">Chronic-stress, sensitisation, threat generalisation, impaired safety learning, and defensive-habit research ground protection recruited across situations that no longer differ clearly. Research must keep actual ongoing threat separate from a generalised read of safety as danger; diagnosis does not define the Position (fear-generalisation research, PMID 29282161; ongoing-threat review, PMID 34139653).</td><td class="research">Perseverative cognition, anticipatory stress, controllability, executive control, and instrumental social-cognition research ground sustained prediction and outcome management. The claim that management “becomes the relationship” is TEG-Blue integration, not an established autonomic category; detailed mentalizing can remain intact while being used instrumentally (Ottaviani et al., 2016; Kanske et al., 2016; Tafet &amp; Ortiz Alonso, 2025).</td><td class="research">Coercive-control, dominance, repeated aggression, restored-versus-restricted agency, accountability, and recurrence research ground patterned power and its impact. Current evidence describes behaviour, relational power, danger, and outcomes; it does not establish a unique autonomic profile, trauma re-enactment, or absent empathy as the cause (Dichter et al., 2018; Lohmann et al., 2024; Hilton &amp; Radatz, 2025).</td><td class="research">Burnout, exhaustion, cognitive impairment, social withdrawal, dissociation, learned helplessness, immobility, depression, and autonomic-recovery research ground persistent low-output states. These constructs overlap but are not interchangeable, and chronic collapse is not established as one dorsal-vagal mechanism (Volchan et al., 2017; Parker et al., 2021; Tafet &amp; Ortiz Alonso, 2025).</td>
+        </tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="note"><strong>Grounding scope.</strong> The Grounding row is an orientation map of relevant research domains and claim boundaries, not the final source trace. The current Chronic table is the far reference plane of the depth model. It describes patterns that have become strongly persistent or difficult to update; it does not describe every chronic adaptation or place a whole person in one column. A capacity may remain highly active while becoming threat-biased, rigid, fused, compulsory or instrumental. Reduced access is only one possible form of chronic change.</p>
+
+      <aside class="chronic-emotion-boundary" aria-labelledby="chronic-emotion-boundary-title">
+        <div>
+          <p class="chronic-emotion-kicker">Emotion remains information</p>
+          <h3 id="chronic-emotion-boundary-title">Override changes participation, not the original biological reason for signalling</h3>
+          <p>ESS continues to contribute bodily, relational and environmental significance when relevant conditions arise. Chronic organisation changes present weighting and the capacities that may become available; it does not establish what ME understands, which action occurs, whether the condition completes or whether repair happens. Model 1 owns access and possible participation, Model 3 (ESC) owns the temporal trajectory, and observable conduct remains with Behaviour/HPR.<br><a class="definition-hook" href="../01-signal-map/emotion/chronic.html">Open the dedicated page: Emotions and Feelings — Chronic Survival →</a></p>
+        </div>
+        <ol class="chronic-emotion-route" aria-label="How emotional information can become chronically overridden">
+          <li><strong>Signal forms</strong><span>The organism registers that something matters.</span></li>
+          <li><strong>A cost or constraint has been learned</strong><span>Attention, expression or action may previously have threatened safety or belonging, failed, or brought no repair.</span></li>
+          <li><strong>Participation narrows</strong><span>The feeling may be dismissed, mistrusted, fused, redirected or kept outside reflective use.</span></li>
+          <li><strong>The requirement remains open</strong><span>Behaviour can still be organised by information the person cannot yet use deliberately.</span></li>
+        </ol>
+        <p class="chronic-emotion-caveat"><strong>Not every override is a present conscious decision.</strong> A person may deliberately push a feeling away, but the route can also become learned and automatic. A real emotion establishes organism relevance; it does not by itself prove the external interpretation or authorise an action.</p>
+      </aside>
+    </section>
+
+    <section class="notes">
+      <h2 id="processes">Three processes</h2>
+      <p class="caption">The emotion tables that used to sit here now live only on the <a href="../01-signal-map/index.html">Emotional Signal Map</a>: the <a href="../01-signal-map/emotion/fluid.html">Fluid roster</a> and the <a href="../01-signal-map/emotion/chronic.html">Chronic roster</a>. The three-process block below stays because the table rows point to it.</p>
+      <h3 id="signal-access">Three processes and their human translation</h3>
+      <p class="caption">
+        The scientific rows describe how each nervous system organisation allocates
+        three underlying processes. The participation card for ME translates what those
+        processes may make consciously possible. The optimal Fluid design is not
+        maximum recruitment at all times, but flexible access, self–other distinction
+        and updating in response to what the situation actually requires.
+      </p>
+      <div class="scroll access-table">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" class="q">Underlying process</th>
+              <th scope="col" class="q">What the process does</th>
+              <th scope="col" class="q">Important boundary</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Interoceptive processing <span class="row-alias">(internal-state representation)</span></th>
+              <td>The nervous system senses, represents and integrates internal bodily information arising from Body Signals and from the embodied components of Situation Signals.</td>
+              <td>Interoception does not by itself identify an experience as love, shame, fear or anger, and internal information can influence action without becoming consciously felt or named.</td>
+            </tr>
+            <tr>
+              <th scope="row">Affective sharing <span class="row-alias">(experience sharing)</span></th>
+              <td>Another person’s affective state becomes represented within one’s own organism while remaining identifiable as the other person’s experience.</td>
+              <td>Affective resonance is not accuracy, agreement or obligation. Without self–other distinction it may become emotional contagion rather than empathy.</td>
+            </tr>
+            <tr>
+              <th scope="row">Mentalizing <span class="row-alias">(cognitive representation of another)</span></th>
+              <td>Another person’s perspective, intention, feeling and likely action are represented and can be revised through new information.</td>
+              <td>Understanding can remain cognitively detailed while affective sharing or concern is reduced; it can therefore be used reciprocally, defensively or instrumentally.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="aside">
+        <strong>Empathic concern is shown separately as relational output.</strong>
+        It asks whether another person’s welfare can motivate, restrain or redirect
+        action. Concern can draw on affective sharing and mentalizing, but it is
+        not identical to either process.
+      </p>
+
+      <h4>Three layers that must not collapse into one another</h4>
+      <dl class="taxonomy-axes">
+        <div>
+          <dt>Signal classification</dt>
+          <dd><span class="axis-question">What kind of information is being generated?</span>Identifies a <strong>Body Signal</strong> or <strong>Situation Signal</strong>, its working cluster or family, and the individual signal. Classification tells us what the signal is; it does not determine how it will be felt or used relationally.<span class="axis-connection">Connects to the <a href="../01-signal-map/emotion/fluid.html#body-signals">Body Signals table</a> and the <a href="../01-signal-map/emotion/fluid.html#situation-signals">Situation Signals families</a>.</span></dd>
+        </div>
+        <div>
+          <dt id="survival-function">Organisational problem-space</dt>
+          <dd><span class="axis-question">What condition, opportunity or problem is the organism organising around?</span>Locates what is at stake without forcing every Position into one of two defensive categories. Viability and restoration, available engagement, relational or situational uncertainty, and organism-protection can each organise priorities. These territories overlap; they are not an exhaustive biological taxonomy or a personality type.</dd>
+        </div>
+        <div>
+          <dt>Process configuration</dt>
+          <dd><span class="axis-question">How are interoceptive processing, affective sharing and mentalizing currently allocated?</span>In the Fluid Gradient their allocation changes with present conditions and can update. How development may shape their recurrent allocation in Chronic Survival requires a separate analysis rather than a direct transfer of the Fluid cells.<span class="axis-connection">Connects the three process rows to their human translation and to empathic concern as a separate relational output.</span></dd>
+        </div>
+      </dl>
+      <p class="aside">
+        <a href="../02-model-1-ess-cls-me/me-access.html">Explore all eight relational-capacity configurations →</a>
+      </p>
+    </section>
+
+    <section class="return-section" id="return">
+      <h2>Return</h2>
+      <p class="caption">
+        Return is movement toward non-defensive organisation after the organism
+        registers that its present protective configuration is no longer
+        required, or can be interrupted. Return can become biologically
+        available before physiological recovery is complete.
+      </p>
+      <p class="aside">
+        Return is not simply calming down, ending visible conflict, complying,
+        withdrawing, becoming exhausted, apologising, or reconnecting. It does
+        not establish that impact has been repaired, that the relationship is
+        restored, or that later organisation has changed.
+      </p>
+
+      <h3>The biological sequence</h3>
+      <p class="caption">
+        These are gates, not fixed stages or a universal clock. Different
+        systems can reopen at different times, and movement can reverse if the
+        conditions change again.
+      </p>
+      <div class="scroll" aria-label="Biological sequence of Return">
+        <dl class="return-sequence">
+          <div>
+            <dt><span>01</span>Environmental resolution</dt>
+            <dd>Has the danger, rupture, demand, loss, or uncertainty actually changed?</dd>
+          </div>
+          <div>
+            <dt><span>02</span>Defensive completion</dt>
+            <dd>Has the required protective action succeeded, stopped, or become unnecessary?</dd>
+          </div>
+          <div>
+            <dt><span>03</span>Updated situation read</dt>
+            <dd>Can the organism detect that the present conditions are now different?</dd>
+          </div>
+          <div>
+            <dt><span>04</span>Return availability</dt>
+            <dd>Can defensive organisation begin relinquishing control of action?</dd>
+          </div>
+          <div>
+            <dt><span>05</span>Capacity re-entry</dt>
+            <dd>Which capacities for feeling oneself, feeling another, understanding another, and concern become usable again?</dd>
+          </div>
+          <div>
+            <dt><span>06</span>Physiological recovery</dt>
+            <dd>What activation, depletion, pain, hormonal, metabolic, or sleep cost remains?</dd>
+          </div>
+          <div>
+            <dt><span>07</span>Learning and integration</dt>
+            <dd>Does this update change how the organism organises in later situations?</dd>
+          </div>
+        </dl>
+      </div>
+
+      <h3>Pathways of completion</h3>
+      <p class="caption">
+        The condition domain changes what can complete the configuration.
+        Completion may use more than one pathway, and only some pathways require
+        another nervous system.
+      </p>
+      <dl class="groups">
+        <div>
+          <dt>Environmental change</dt>
+          <dd>Danger ends, distance or shelter becomes available, a resource arrives, or the material obstruction changes.</dd>
+        </div>
+        <div>
+          <dt>One’s own action</dt>
+          <dd>Protection succeeds, a boundary becomes effective, a task completes, a solution works, or a goal is revised.</dd>
+        </div>
+        <div>
+          <dt>Another nervous system</dt>
+          <dd>Reception, recognition, reciprocity, clarification, co-regulation, accountability, or repair is genuinely relational.</dd>
+        </div>
+        <div>
+          <dt>Physiological recovery</dt>
+          <dd>Mobilisation releases and the body receives the rest, nourishment, treatment, sleep, or restoration still required.</dd>
+        </div>
+        <div>
+          <dt>Grief and reorganisation</dt>
+          <dd>What cannot be restored is registered, expectation changes, and life reorganises around the irreversible condition.</dd>
+        </div>
+      </dl>
+      <p class="aside">
+        The pathway is determined by what the signal concerns. External praise
+        cannot complete a purely physical escape route, and solitary calming
+        cannot supply mutual recognition when the unresolved condition is
+        genuinely relational.
+      </p>
+
+      <h3>Return across the Fluid Gradient</h3>
+      <p class="caption">
+        The main-table row gives the current positional summary. This working
+        matrix fixes the questions that the fuller descriptions must answer
+        before those descriptions are written.
+      </p>
+      <div class="scroll return-matrix">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" class="corner">Return question</th>
+              <th scope="col" class="pos">X</th>
+              <th scope="col" class="pos">A</th>
+              <th scope="col" class="pos">A↔B</th>
+              <th scope="col" class="pos">B</th>
+              <th scope="col" class="pos">C</th>
+              <th scope="col" class="pos">D</th>
+              <th scope="col" class="pos">Z</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Organisation held active<span class="row-question">Why can the organism not yet release this configuration?</span></th>
+              <td colspan="7" class="working-cell">Position descriptions will be developed after the question is settled.</td>
+            </tr>
+            <tr>
+              <th scope="row">Resolution condition<span class="row-question">What must become true for the configuration to complete?</span></th>
+              <td colspan="7" class="working-cell">Position descriptions will be developed after the question is settled.</td>
+            </tr>
+            <tr>
+              <th scope="row">Pathway of completion<span class="row-question">Does completion require environmental change, one’s own action, another nervous system, physiological recovery, or reorganisation?</span></th>
+              <td colspan="7" class="working-cell">Position descriptions will be developed after the question is settled.</td>
+            </tr>
+            <tr>
+              <th scope="row">Earliest sign of Return<span class="row-question">What is the first detectable evidence that movement has begun?</span></th>
+              <td colspan="7" class="working-cell">Position descriptions will be developed after the question is settled.</td>
+            </tr>
+            <tr>
+              <th scope="row">Capacities re-entering<span class="row-question">What can the organism now perceive, feel, distinguish, or reconsider?</span></th>
+              <td colspan="7" class="working-cell">Position descriptions will be developed after the question is settled.</td>
+            </tr>
+            <tr>
+              <th scope="row">Recovery still required<span class="row-question">What does the body need even after Return begins?</span></th>
+              <td colspan="7" class="working-cell">Position descriptions will be developed after the question is settled.</td>
+            </tr>
+            <tr>
+              <th scope="row">Biological timing<span class="row-question">What timing range is plausible here, without turning it into a fixed clock?</span></th>
+              <td colspan="7" class="working-cell">Position descriptions will be developed after the question is settled.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 id="return-chronic">Return under Chronic Survival</h3>
+      <p class="caption">
+        This is not the Fluid table written negatively. It asks what happens
+        when protective organisation is learned, repeatedly reconstructed, or
+        no longer updates reliably from present conditions.
+      </p>
+      <div class="scroll return-matrix">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" class="corner">Return question</th>
+              <th scope="col" class="pos">X</th>
+              <th scope="col" class="pos">A</th>
+              <th scope="col" class="pos">A↔B</th>
+              <th scope="col" class="pos">B</th>
+              <th scope="col" class="pos">C</th>
+              <th scope="col" class="pos">D</th>
+              <th scope="col" class="pos">Z</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Reconstructed condition<span class="row-question">Which danger, loss, obligation, or required outcome remains active?</span></th>
+              <td colspan="7" class="working-cell">Position descriptions will be developed after the question is settled.</td>
+            </tr>
+            <tr>
+              <th scope="row">Pathway of completion<span class="row-question">Which route could actually complete the condition, and which substitute route is repeatedly used instead?</span></th>
+              <td colspan="7" class="working-cell">Position descriptions will be developed after the question is settled.</td>
+            </tr>
+            <tr>
+              <th scope="row">Substitute for Return<span class="row-question">What reduces pressure without changing the underlying organisation?</span></th>
+              <td colspan="7" class="working-cell">Position descriptions will be developed after the question is settled.</td>
+            </tr>
+            <tr>
+              <th scope="row">Updating blocked<span class="row-question">Why does contrary information fail to revise the situation read?</span></th>
+              <td colspan="7" class="working-cell">Position descriptions will be developed after the question is settled.</td>
+            </tr>
+            <tr>
+              <th scope="row">Opening for Return<span class="row-question">What makes another organisation briefly possible?</span></th>
+              <td colspan="7" class="working-cell">Position descriptions will be developed after the question is settled.</td>
+            </tr>
+            <tr>
+              <th scope="row">Capacity to be built<span class="row-question">What cannot simply be recovered because it was never reliably established?</span></th>
+              <td colspan="7" class="working-cell">Position descriptions will be developed after the question is settled.</td>
+            </tr>
+            <tr>
+              <th scope="row">Evidence across time<span class="row-question">What would show that the organisation, not only immediate behaviour, has changed?</span></th>
+              <td colspan="7" class="working-cell">Position descriptions will be developed after the question is settled.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="aside">
+        Time belongs to three different questions: how soon Return can become
+        available after conditions change, how long physiological restoration
+        continues, and how much repeated evidence is required before later
+        organisation changes. No Position carries a universal countdown.
+      </p>
+
+      <h3 id="repair">Repair after rupture</h3>
+      <p class="caption">
+        Repair is adjacent to Return but not contained inside it. Enough Return
+        may make accountability biologically possible; it does not guarantee
+        that repair occurs, that recovery is complete, or that a relationship
+        will be rebuilt.
+      </p>
+      <dl class="groups repair-territories">
+        <div>
+          <dt>Actor-side reparation</dt>
+          <dd>What can the person who caused harm stop, acknowledge, take responsibility for, restore, or change?</dd>
+        </div>
+        <div>
+          <dt>Harmed-person recovery</dt>
+          <dd>What safety, distance, support, justice, meaning, grief, or other recovery belongs to the person harmed?</dd>
+        </div>
+        <div>
+          <dt>Relational rebuilding</dt>
+          <dd>Do all involved voluntarily choose renewed contact, trust, or reconciliation?</dd>
+        </div>
+      </dl>
+      <p class="aside">
+        Actor-side reparation can continue without forgiveness or renewed
+        access. Harmed-person recovery does not require reconciliation, and
+        relational rebuilding may never occur.
+      </p>
+
+      <p><a class="back" href="#top">↑ Back to the tables</a></p>
+    </section>
+  </div>
+
+<script>
+  // #chronic in the URL opens on that table, so either view can be linked to.
+  // replaceState rather than a hash assignment: switching view is not a step
+  // to go back through.
+  var MODES = ['fluid', 'chronic']
+  function show(mode, push) {
+    MODES.forEach(function (m) {
+      document.getElementById('panel-' + m).hidden = m !== mode
+      document.getElementById('t-' + m).setAttribute('aria-pressed', String(m === mode))
+    })
+    document.body.setAttribute('data-gradient-mode', mode)
+    if (push) history.replaceState(null, '', '#' + mode)
+  }
+  MODES.forEach(function (m) {
+    document.getElementById('t-' + m).addEventListener('click', function () {
+      show(m, true)
+    })
+  })
+
+  // The controls show conceptual depth, not a psychometric or clinical score.
+  // Their independence is the point: biological processing can continue while
+  // conscious access and use differ across the three capacities.
+  var ACCESS_LABELS = [
+    { max: 19, text: 'Not reliably available to ME' },
+    { max: 44, text: 'Fragments may become readable' },
+    { max: 69, text: 'Partly available and usable' },
+    { max: 100, text: 'Broadly available to ME' }
+  ]
+  var accessSliders = Array.prototype.slice.call(document.querySelectorAll('.me-access-slider'))
+  function accessBand(value) {
+    for (var i = 0; i < ACCESS_LABELS.length; i += 1) {
+      if (value <= ACCESS_LABELS[i].max) return i
+    }
+    return ACCESS_LABELS.length - 1
+  }
+  function updateAccessModel() {
+    var bands = accessSliders.map(function (slider) {
+      var band = accessBand(Number(slider.value))
+      var readout = document.getElementById(slider.id + '-readout')
+      readout.textContent = ACCESS_LABELS[band].text
+      slider.setAttribute('aria-valuetext', ACCESS_LABELS[band].text)
+      return band
+    })
+    var summary = document.getElementById('me-access-summary')
+    var highest = Math.max.apply(null, bands)
+    var lowest = Math.min.apply(null, bands)
+    if (lowest === 3) {
+      summary.textContent = 'All three processes are broadly available to ME. Move each control separately to reveal uneven access.'
+    } else if (highest - lowest >= 2) {
+      summary.textContent = 'Access is strongly uneven. One process may remain usable while another continues biologically without becoming equally available to ME.'
+    } else if (highest !== lowest) {
+      summary.textContent = 'Access is uneven. The three processes can occupy different depths between the Fluid and far Chronic reference planes.'
+    } else if (highest <= 1) {
+      summary.textContent = 'Biological processing may continue while little of it becomes consciously readable or usable by ME.'
+    } else {
+      summary.textContent = 'All three processes are partly available. Availability can still change by context, relationship and nervous-system organisation.'
+    }
+  }
+  accessSliders.forEach(function (slider) {
+    slider.addEventListener('input', function () {
+      document.getElementById('me-access-reveal').hidden = false
+      updateAccessModel()
+    })
+  })
+  updateAccessModel()
+
+  function fromHash() {
+    var m = location.hash.slice(1)
+    if (MODES.indexOf(m) > -1) {
+      show(m, false)
+      return
+    }
+    var target = document.getElementById(m)
+    if (target && target.closest('#panel-chronic')) show('chronic', false)
+    if (target && target.closest('#panel-fluid')) show('fluid', false)
+  }
+  fromHash()
+  window.addEventListener('hashchange', fromHash)
+</script>
+
+<script src="../assets/capacities.js"></script>
+<script>
+  (function () {
+    var C = window.TEG && window.TEG.capacities; if (!C) return;
+    var SLIDERS = {"bodily": "access-interoceptive", "affective": "access-affective", "mentalizing": "access-mentalizing"}, VALUES = [10, 35, 60, 85];
+    var CONTROLLER = "../02-model-1-ess-cls-me/me-access.html";
+    var COMPASS = "../06-inner-compass-four-modes/compass.html";
+    function apply(state) {
+      Object.keys(SLIDERS).forEach(function (k) {
+        var s = document.getElementById(SLIDERS[k]); if (!s) return;
+        s.value = VALUES[state[k]]; s.disabled = true; s.setAttribute("aria-readonly", "true");
+      });
+      if (typeof updateAccessModel === "function") updateAccessModel();
+      var echo = document.getElementById("capacity-echo");
+      if (echo) {
+        var code = C.code(state);
+        echo.innerHTML = "<strong>Set on Model 1.</strong> Current configuration " + code + " · " + C.CONFIGS[code] +
+          ". These tables do not change with the setting: they describe the organism's organisation, which is the same whatever ME can read of it. " +
+          "The reading that changes is the Inner Compass. " +
+          '<a href="index.html">Open the Compass view →</a> · ' +
+          '<a href="index.html">Adjust the capacities on Model 1 →</a>';
+      }
+    }
+    var reveal = document.getElementById("me-access-reveal");
+    if (reveal) {
+      var echo = document.createElement("div"); echo.id = "capacity-echo"; echo.className = "capacity-echo"; echo.setAttribute("role", "note");
+      reveal.parentNode.insertBefore(echo, reveal);
+    }
+    apply(C.get());
+    window.addEventListener("storage", function (e) { if (e.key === "teg.capacities.v1") apply(C.get()); });
+  })();
+</script>
+</body>
+</html>

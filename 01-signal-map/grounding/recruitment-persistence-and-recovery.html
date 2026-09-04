@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A TEG-Blue scientific bridge from signal recruitment through resolution, persistence, reconstruction, recovery and possible cumulative cost.">
+  <title>Signal Recruitment, Persistence and Recovery · TEG-Blue</title>
+  <link rel="stylesheet" href="../../assets/page-responsibility.css">
+  <style>
+    :root {
+      --ink: #10211d;
+      --body: #40534c;
+      --muted: #718079;
+      --line: #d7e2dc;
+      --line-strong: #b7c8c0;
+      --paper: #ffffff;
+      --wash: #f2f7f4;
+      --cyan: #52d8e8;
+      --cyan-soft: #e9fbfd;
+      --lime: #a8ed54;
+      --lime-soft: #f1fbe5;
+      --amber: #f0b64f;
+      --amber-soft: #fff7e7;
+      --coral: #e8755f;
+      --coral-soft: #fff0ec;
+      --violet: #8b78c7;
+      --violet-soft: #f4f1fb;
+      --shadow: 0 18px 55px rgba(16, 33, 29, .07);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        linear-gradient(rgba(16, 33, 29, .025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(16, 33, 29, .025) 1px, transparent 1px),
+        var(--wash);
+      background-size: 32px 32px;
+      color: var(--ink);
+      font: 15px/1.6 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-underline-offset: 3px; }
+    a:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; border-radius: 3px; }
+    .shell { width: min(1220px, calc(100% - 36px)); margin: 0 auto; padding: 44px 0 88px; }
+    .utility { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; margin-bottom: 34px; }
+    .utility a { color: var(--body); font-size: 12px; font-weight: 750; }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, .55fr);
+      gap: 40px;
+      align-items: end;
+      padding: 38px 0 42px;
+      border-top: 1px solid var(--line-strong);
+      border-bottom: 1px solid var(--line-strong);
+    }
+    .eyebrow, .label, .route-tag, .owner {
+      margin: 0;
+      color: var(--muted);
+      font: 800 10px/1.35 ui-monospace, SFMono-Regular, Menlo, monospace;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 { font-family: ui-serif, Georgia, "Times New Roman", serif; }
+    h1 { max-width: 840px; margin: 12px 0 0; font-size: clamp(44px, 7vw, 82px); font-weight: 560; line-height: .94; letter-spacing: -.045em; }
+    h2 { margin: 8px 0 0; font-size: clamp(28px, 4vw, 44px); font-weight: 570; line-height: 1.06; letter-spacing: -.025em; }
+    h3 { margin: 0; font-size: 21px; font-weight: 620; line-height: 1.25; }
+    .hero-note { margin: 0; padding: 20px 22px; border-left: 4px solid var(--lime); background: var(--paper); color: var(--body); box-shadow: var(--shadow); }
+    .hero-note strong { display: block; margin-bottom: 7px; color: var(--ink); }
+    section { margin-top: 74px; scroll-margin-top: 24px; }
+    .section-head { display: grid; grid-template-columns: minmax(0, .8fr) minmax(300px, 1fr); gap: 44px; align-items: end; margin-bottom: 24px; }
+    .section-head > p { max-width: 650px; margin: 0; color: var(--body); }
+    .boundary {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 26px;
+      margin-top: 22px;
+      padding: 22px 24px;
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--cyan);
+      background: var(--paper);
+    }
+    .boundary strong { font-size: 17px; }
+    .boundary p { margin: 0; color: var(--body); }
+
+    /* The page signature: one recruitment line opening into several trajectories. */
+    .trajectory {
+      overflow: hidden;
+      border: 1px solid var(--line-strong);
+      border-radius: 18px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+    .trajectory-entry {
+      display: grid;
+      grid-template-columns: 150px 1fr 180px;
+      gap: 22px;
+      align-items: center;
+      padding: 26px 28px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(90deg, var(--cyan-soft), #fff 46%);
+    }
+    .trajectory-entry strong { font: 650 25px/1.2 ui-serif, Georgia, serif; }
+    .trajectory-entry p { margin: 0; color: var(--body); }
+    .feedback-pill { justify-self: end; padding: 8px 12px; border: 1px solid var(--line-strong); border-radius: 999px; color: var(--body); font-size: 11px; font-weight: 750; }
+    .trajectory-branch {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      padding-top: 34px;
+    }
+    .trajectory-branch::before {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 12.5%;
+      right: 12.5%;
+      border-top: 1px solid var(--line-strong);
+    }
+    .route { position: relative; min-height: 265px; padding: 30px 22px 24px; border-right: 1px solid var(--line); background: var(--route-soft); }
+    .route:last-child { border-right: 0; }
+    .route::before { content: ""; position: absolute; top: -18px; left: 50%; height: 18px; border-left: 1px solid var(--line-strong); }
+    .route::after { content: ""; position: absolute; top: -22px; left: calc(50% - 4px); width: 8px; height: 8px; border: 2px solid var(--route); border-radius: 50%; background: var(--paper); }
+    .route .route-tag { color: var(--route); }
+    .route h3 { margin-top: 10px; }
+    .route p { margin: 10px 0 0; color: var(--body); font-size: 13px; }
+    .route ul { margin: 14px 0 0; padding-left: 17px; color: var(--body); font-size: 12px; }
+    .route li + li { margin-top: 5px; }
+    .route.resolve { --route: #4e9b66; --route-soft: var(--lime-soft); }
+    .route.continue { --route: #b78227; --route-soft: var(--amber-soft); }
+    .route.recover { --route: #c55f4d; --route-soft: var(--coral-soft); }
+    .route.reconstruct { --route: #6f5dad; --route-soft: var(--violet-soft); }
+    .trajectory-foot {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      border-top: 1px solid var(--line-strong);
+      background: var(--line);
+    }
+    .trajectory-foot p { margin: 0; padding: 18px 22px; background: #fbfdfc; color: var(--body); font-size: 12px; }
+    .trajectory-foot strong { color: var(--ink); }
+
+    .term-table { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; background: var(--paper); box-shadow: var(--shadow); }
+    table { width: 100%; min-width: 980px; border-collapse: collapse; }
+    th, td { padding: 15px 17px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th:last-child, td:last-child { border-right: 0; }
+    tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
+    thead th { background: #e9f0ec; color: var(--muted); font: 800 10px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .08em; text-transform: uppercase; }
+    tbody th { width: 22%; color: var(--ink); font-size: 13px; }
+    td { color: var(--body); font-size: 12px; }
+    td strong { color: var(--ink); }
+    .term { display: inline-block; margin: 0 4px 5px 0; padding: 4px 7px; border: 1px solid var(--line-strong); border-radius: 999px; background: var(--wash); color: var(--ink); font-size: 10px; font-weight: 750; white-space: nowrap; }
+
+    .allostasis-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 24px; }
+    .allostasis-card { padding: 22px; border: 1px solid var(--line); border-top: 4px solid var(--accent); background: var(--paper); }
+    .allostasis-card p { margin: 9px 0 0; color: var(--body); font-size: 13px; }
+    .allostasis-card small { display: block; margin-top: 14px; color: var(--muted); font-size: 11px; }
+    .not-equation { margin-top: 14px; padding: 19px 22px; background: var(--ink); color: white; font: 600 clamp(18px, 2.6vw, 27px)/1.35 ui-serif, Georgia, serif; }
+
+    .ownership { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+    .ownership article { display: flex; flex-direction: column; min-height: 220px; padding: 19px; border: 1px solid var(--line); border-top: 5px solid var(--accent); background: var(--paper); }
+    .ownership .owner { color: var(--accent); }
+    .ownership h3 { margin-top: 10px; font-size: 18px; }
+    .ownership p { margin: 8px 0 0; color: var(--body); font-size: 12px; }
+    .ownership a { margin-top: auto; padding-top: 16px; color: var(--ink); font-size: 11px; font-weight: 780; }
+
+    .evidence-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .evidence-card { padding: 20px 22px; border: 1px solid var(--line); background: var(--paper); }
+    .evidence-card h3 { font-size: 18px; }
+    .evidence-card p { margin: 8px 0 0; color: var(--body); font-size: 12px; }
+    .evidence-card a { color: var(--ink); font-weight: 720; }
+    .quiet-close { max-width: 860px; margin: 68px 0 0; padding-top: 22px; border-top: 1px solid var(--line-strong); color: var(--body); }
+    .quiet-close strong { color: var(--ink); }
+    footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; margin-top: 68px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+    @media (max-width: 980px) {
+      .hero, .section-head { grid-template-columns: 1fr; }
+      .trajectory-branch { grid-template-columns: 1fr 1fr; padding-top: 0; }
+      .trajectory-branch::before, .route::before, .route::after { display: none; }
+      .route { min-height: 0; border-top: 1px solid var(--line); }
+      .allostasis-grid { grid-template-columns: 1fr; }
+      .ownership { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 650px) {
+      .shell { width: calc(100% - 20px); padding-top: 28px; }
+      h1 { font-size: 46px; }
+      .trajectory-entry, .boundary { grid-template-columns: 1fr; }
+      .feedback-pill { justify-self: start; }
+      .trajectory-branch, .trajectory-foot, .ownership, .evidence-grid { grid-template-columns: 1fr; }
+      .route { border-right: 0; }
+      .utility { flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="carried-banner" role="note"><strong>Carried grounding page · status working.</strong> Scientific bridge from recruitment to persistence and recovery. Carried on 2 September 2026 from the working repository. Evidence, not canon. <a href="../index.html">Back to the Signal Map canon page →</a></div>
+<nav class="utility" aria-label="Page connections">
+      <a href="neurochemistry.html">← Signal neurochemistry</a>
+      <a href="../../04-model-3-esc/cycle.html#operating-sequence">ESC · follow the event through time →</a>
+    </nav>
+
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Signal Map · scientific bridge</p>
+        <h1>Signal recruitment, persistence and recovery.</h1>
+      </div>
+      <p class="hero-note"><strong>A signal does not simply switch on and off.</strong> The relevant condition may change while neural, autonomic, endocrine, immune, metabolic, cognitive and behavioural processes continue to change on different timescales.</p>
+    </header>
+
+    <aside class="page-responsibility" aria-label="Page responsibility">
+      <div class="page-responsibility__heading">
+        <p class="page-responsibility__label">Page responsibility · cross-model scientific bridge</p>
+        <p class="page-responsibility__scope">Scientific-facing scope · response trajectories after biological recruitment begins</p>
+      </div>
+      <p class="page-responsibility__question"><strong>Governing question</strong>Once a condition has recruited biological activity, what may resolve, continue, recover slowly, recur, become reconstructed or change later recruitment?</p>
+      <div class="page-responsibility__grid">
+        <div class="page-responsibility__item"><strong>This page owns</strong><p>The translation between an observed trajectory and the scientific terms used to investigate it.</p></div>
+        <div class="page-responsibility__item"><strong>It receives</strong><p>Recruitment hypotheses from <a href="neurochemistry.html">Signal Neurochemistry</a>, temporal structure from <a href="../../04-model-3-esc/cycle.html">ESC</a>, organisation and Return from <a href="../../03-model-2-gradient/index.html">the Gradient</a>, and persistence routes from the <a href="../../03-model-2-gradient/grounding/chronic-scientific-spine.md">Chronic scientific spine</a>.</p></div>
+        <div class="page-responsibility__item"><strong>It does not establish</strong><p>One stuck-on central system, one Chronic physiology, inevitable harm, or an emotion, mechanism or whole-person state from one measurement.</p></div>
+      </div>
+    </aside>
+
+    <div class="boundary">
+      <strong>Completion is not a chemical event.</strong>
+      <p>ESC uses <em>completion</em> for the event-specific point at which the currently required response no longer needs to remain recruited in the same form. Research may instead measure response termination, recovery kinetics, repeated recruitment, learning or cumulative multisystem cost. None of those measures alone proves that the event has completed for the organism.</p>
+    </div>
+
+    <section id="trajectory" aria-labelledby="trajectory-title">
+      <div class="section-head">
+        <div><p class="label">01 · The missing bridge</p><h2 id="trajectory-title">One recruitment can lead into several trajectories.</h2></div>
+        <p>The branches are not a ladder from healthy to unhealthy. More than one can occur in the same event, and different response channels may take different branches.</p>
+      </div>
+      <div class="trajectory" role="group" aria-label="Possible trajectories after signal recruitment">
+        <div class="trajectory-entry">
+          <span class="route-tag">Current or represented condition</span>
+          <strong>Biological recruitment begins</strong>
+          <span class="feedback-pill">response + feedback</span>
+        </div>
+        <div class="trajectory-branch">
+          <article class="route resolve">
+            <p class="route-tag">Condition changes</p>
+            <h3>Recruitment can update</h3>
+            <p>The required action, support or environmental change becomes available. Priority can fall while recovery continues.</p>
+            <ul><li>response termination</li><li>channel-specific recovery</li><li>Return may become available</li></ul>
+          </article>
+          <article class="route continue">
+            <p class="route-tag">Condition continues</p>
+            <h3>Recruitment remains relevant</h3>
+            <p>Danger, pain, deprivation, uncertainty, relational rupture or demand may still be present. Persistence can remain condition-matched.</p>
+            <ul><li>sustained demand</li><li>ongoing stressor exposure</li><li>restricted alternatives</li></ul>
+          </article>
+          <article class="route recover">
+            <p class="route-tag">Channels diverge</p>
+            <h3>Recovery is uneven or interrupted</h3>
+            <p>Some processes settle while others remain altered, or a later demand arrives before recovery has progressed.</p>
+            <ul><li>delayed recovery</li><li>prolonged or repeated activation</li><li>blunted or poorly coordinated response</li></ul>
+          </article>
+          <article class="route reconstruct">
+            <p class="route-tag">Later recruitment changes</p>
+            <h3>Demand is reconstructed or more readily recruited</h3>
+            <p>Anticipation, learned weighting, generalisation, context or altered thresholds can re-present significance after the original event.</p>
+            <ul><li>perseverative cognition</li><li>generalisation or context-bound retrieval</li><li>sensitisation or non-habituation</li></ul>
+          </article>
+        </div>
+        <div class="trajectory-foot">
+          <p><strong>Carryover is wider than residual activation.</strong> It can include an unresolved condition, altered physiology, reconstructed demand, changed expectation or narrowed action.</p>
+          <p><strong>Chronic is wider than incomplete recovery.</strong> Continuing conditions, learning, development, social transaction and constrained action can each produce recurrence through different routes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="terms" aria-labelledby="terms-title">
+      <div class="section-head">
+        <div><p class="label">02 · Research vocabulary</p><h2 id="terms-title">Name the event that was observed.</h2></div>
+        <p>“The signal stayed activated” is a useful observation, but not yet a mechanism. The next question is what persisted, on which measure, for how long and under which conditions.</p>
+      </div>
+      <div class="term-table">
+        <table>
+          <thead><tr><th scope="col">Observed trajectory</th><th scope="col">Relevant scientific terms</th><th scope="col">What would need to be measured</th><th scope="col">Boundary</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">The condition remains present</th><td><span class="term">ongoing stressor</span><span class="term">sustained demand</span></td><td>Present bodily, material, relational and environmental conditions; available action and power.</td><td>Do not reinterpret an accurate continuing response as failure to regulate.</td></tr>
+            <tr><th scope="row">One response channel settles slowly</th><td><span class="term">recovery kinetics</span><span class="term">delayed recovery</span><span class="term">prolonged response</span></td><td>A time series for the named autonomic, endocrine, immune, metabolic, subjective or behavioural measure.</td><td>One altered channel does not establish whole-organism non-recovery or failed completion.</td></tr>
+            <tr><th scope="row">Demand returns before settling</th><td><span class="term">repeated activation</span><span class="term">interrupted recovery</span></td><td>Event timing, interval, baseline, sleep, health, exposure and the response trajectory across events.</td><td>A new recruitment is not necessarily the original response remaining continuously active.</td></tr>
+            <tr><th scope="row">Anticipation or thought re-presents demand</th><td><span class="term">anticipatory stress</span><span class="term">perseverative cognition</span></td><td>Thought form, content, timing, voluntariness, context and concurrent physiological change.</td><td>Thinking may reconstruct demand without being the original cause or making present danger unreal.</td></tr>
+            <tr><th scope="row">Responding spreads to related cues</th><td><span class="term">stimulus generalisation</span><span class="term">context generalisation</span><span class="term">reduced discrimination</span></td><td>Responses to both danger and safety cues across a defined similarity gradient and more than one measure.</td><td>Strong responding is not the same as broad generalisation or poor discrimination.</td></tr>
+            <tr><th scope="row">Earlier responding returns outside the learning context</th><td><span class="term">extinction retrieval</span><span class="term">renewal</span><span class="term">reinstatement</span><span class="term">spontaneous recovery</span></td><td>Acquisition, new learning, retention, context change, later exposure and the exact return-of-response effect.</td><td>Newer learning may remain available; its expression can depend on retrieval conditions.</td></tr>
+            <tr><th scope="row">Later responding becomes easier or stronger</th><td><span class="term">sensitisation</span><span class="term">altered recruitment threshold</span><span class="term">non-habituation</span></td><td>The named response, threshold or magnitude across repeated conditions and a comparison trajectory.</td><td>These terms are response- and paradigm-specific, not labels for a person or nervous system.</td></tr>
+            <tr><th scope="row">Later responding becomes lower or less coordinated</th><td><span class="term">blunted responsivity</span><span class="term">poor cross-system coordination</span></td><td>The direction and timing of several named channels, together with the current demand.</td><td>Lower activation does not automatically mean less demand, successful recovery or greater flexibility.</td></tr>
+            <tr><th scope="row">Cost accumulates across time and systems</th><td><span class="term">allostatic load</span><span class="term">multisystem physiological dysregulation</span></td><td>A specified multisystem biomarker method, population, timeframe and health outcome.</td><td>Allostatic load is heterogeneous, not an episode label, diagnosis or Fluid–Chronic depth score.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="allostasis" aria-labelledby="allostasis-title">
+      <div class="section-head">
+        <div><p class="label">03 · Where allostasis fits</p><h2 id="allostasis-title">Adaptation, trajectory and accumulated cost are different questions.</h2></div>
+        <p>Allostasis helps explain changing regulation under changing demand. It should not be asked to name every reason a response persists or every process TEG-Blue places inside Return.</p>
+      </div>
+      <div class="allostasis-grid">
+        <article class="allostasis-card" style="--accent:var(--cyan)"><h3>Allostasis</h3><p>Physiological viability can be maintained through changing activity across regulatory systems. The term concerns adaptive regulation, not only responses that fail to end.</p><small>Research-level regulatory principle</small></article>
+        <article class="allostasis-card" style="--accent:var(--amber)"><h3>Response and recovery trajectory</h3><p>A particular measure can rise, fall, remain altered, recur or become blunted. Different channels can follow different time courses inside the same event.</p><small>Episode- and measure-level observation</small></article>
+        <article class="allostasis-card" style="--accent:var(--coral)"><h3>Allostatic load</h3><p>Repeated, prolonged or inefficient patterns may contribute to cumulative multisystem cost. Current indices use heterogeneous biomarkers and do not reveal one causal route.</p><small>Longer-term multisystem construct</small></article>
+      </div>
+      <div class="not-equation">Allostasis ≠ failed completion &nbsp;·&nbsp; allostatic load ≠ Chronic &nbsp;·&nbsp; Return ≠ one baseline biomarker</div>
+    </section>
+
+    <section id="ownership" aria-labelledby="ownership-title">
+      <div class="section-head">
+        <div><p class="label">04 · Architectural ownership</p><h2 id="ownership-title">The bridge connects the models without collapsing them.</h2></div>
+        <p>Each part of the architecture asks a different question about the same event. The link becomes useful when every page keeps its own responsibility.</p>
+      </div>
+      <div class="ownership">
+        <article style="--accent:var(--cyan)"><p class="owner">Signal Map grounding</p><h3>Recruitment and measurement</h3><p>Which interacting biological processes may participate, and what did researchers actually measure?</p><a href="neurochemistry.html">Open Signal Neurochemistry →</a></article>
+        <article style="--accent:var(--amber)"><p class="owner">Model 3 · ESC</p><h3>Trajectory through time</h3><p>Did the event move towards completion, carry over, become reconstructed or produce a mixed outcome?</p><a href="../../04-model-3-esc/cycle.html#cycles">Open the two-cycle model →</a></article>
+        <article style="--accent:var(--lime)"><p class="owner">Model 2 · Gradient</p><h3>Organisation and Return</h3><p>What is the organism organised for now, what remains available, and what recovery is still required?</p><a href="../../03-model-2-gradient/return.html">Open Completion, Return and Recovery →</a></article>
+        <article style="--accent:var(--violet)"><p class="owner">Model 1 · ESS · CLS · ME</p><h3>Changed future processing</h3><p>What later receives weight, how is it interpreted, what becomes consciously available to ME and which participation becomes possible?</p><a href="../../02-model-1-ess-cls-me/access.html">Open coordinated conscious access →</a></article>
+        <article style="--accent:var(--coral)"><p class="owner">Chronic scientific spine</p><h3>Persistence routes</h3><p>Which continuing, learned, developmental, relational, cognitive or recovery route may explain recurrence?</p><a href="../../03-model-2-gradient/grounding/chronic-scientific-spine.md#the-persistence-routes">Open the route register →</a></article>
+      </div>
+    </section>
+
+    <section id="evidence" aria-labelledby="evidence-title">
+      <div class="section-head">
+        <div><p class="label">05 · Grounding route</p><h2 id="evidence-title">The terms have different evidence homes.</h2></div>
+        <p>The local source records remain canonical. These links show which evidence programme should govern each part of the page before any emotion-specific claim is strengthened.</p>
+      </div>
+      <div class="evidence-grid">
+        <article class="evidence-card"><h3>Allostasis and multisystem cost</h3><p>McEwen; Ramsay and Woods; Mauss et al.; McCrory et al. <a href="../../evidence/sources/shared-source-record-index.md#alr-s01--mcewen-1998--stress-adaptation-and-disease">Open the ALR source records →</a></p></article>
+        <article class="evidence-card"><h3>Multi-timescale response and recovery</h3><p>Herman et al. provides a mechanistic HPA example; the claim remains channel-specific. <a href="../../evidence/sources/shared-source-record-index.md#alr-s04--herman-et-al-2016--hpa-response-regulation">Open ALR-S04 →</a></p></article>
+        <article class="evidence-card"><h3>Generalisation, extinction and retrieval</h3><p>Dunsmoor and Paz; Bouton et al.; Craske et al.; Milad and Quirk. <a href="../../evidence/sources/shared-source-record-index.md#lcu-s02--dunsmoor-and-paz-2015--fear-generalisation-and-anxiety">Open the LCU source records →</a></p></article>
+        <article class="evidence-card"><h3>Perseverative reconstruction</h3><p>Ottaviani et al. grounds group-level physiological associations with worry, rumination and related cognition. <a href="../../evidence/sources/shared-source-record-index.md#csr-s04--ottaviani-et-al-2016--physiology-of-perseverative-cognition">Open CSR-S04 →</a></p></article>
+      </div>
+    </section>
+
+    <p class="quiet-close"><strong>Implementation rule.</strong> Signal Neurochemistry can point to this shared trajectory layer, but it should not add a generic “what happens when signalling stays on” field to every emotion. Individual entries should only name persistence or recovery when a study has measured that trajectory for that condition, signal, population and response channel.</p>
+
+    <footer><span>TEG-Blue · Signal Recruitment, Persistence and Recovery</span><span>Scientific bridge · not a diagnostic tool</span></footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,931 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Emotional–Somatic Cycle (ESC): a temporal model of the Fluid Cycle, Chronic Cognitive-Override Cycle, cascade, carryover, and the participation of ESS, CLS, ME and the Nervous System Gradient.">
+  <title>The Emotional–Somatic Cycle (ESC) · Fluid and Chronic Cycles · TEG-Blue</title>
+  <link rel="stylesheet" href="../assets/page-responsibility.css">
+  <style>
+    :root {
+      --bg: #080c13;
+      --surface: #0f1520;
+      --surface-2: #151d2a;
+      --surface-3: #1b2535;
+      --ink: #eef3fb;
+      --body: #aab6c9;
+      --muted: #717e94;
+      --line: rgba(238, 243, 251, .12);
+      --line-strong: rgba(238, 243, 251, .22);
+      --blue: #356efd;
+      --blue-deep: #1255fc;
+      --blue-soft: rgba(53, 110, 253, .14);
+      --ess: #0aefff;
+      --ess-soft: rgba(10, 239, 255, .1);
+      --cls: #ffd300;
+      --cls-soft: rgba(255, 211, 0, .1);
+      --me: #a1ff0a;
+      --me-soft: rgba(161, 255, 10, .09);
+      --fluid: #68e9a7;
+      --fluid-soft: rgba(104, 233, 167, .1);
+      --chronic: #ff5a05;
+      --chronic-deep: #ff3031;
+      --chronic-soft: rgba(255, 90, 5, .1);
+      --violet: #a78bfa;
+      --radius: 12px;
+      --shadow: 0 24px 70px rgba(0, 0, 0, .34);
+      --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 82% 4%, rgba(53, 110, 253, .14), transparent 25%),
+        linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px),
+        var(--bg);
+      background-size: auto, 32px 32px, 32px 32px, auto;
+      font: 15px/1.65 var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--ess); text-underline-offset: 3px; }
+    a:hover { color: white; }
+    a:focus-visible, summary:focus-visible { outline: 2px solid var(--ess); outline-offset: 4px; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2 { letter-spacing: -.035em; }
+    h1 { margin-bottom: 22px; font-size: clamp(44px, 7vw, 86px); line-height: .94; font-weight: 620; }
+    h2 { margin-bottom: 0; font-size: clamp(30px, 4vw, 50px); line-height: 1.04; font-weight: 610; }
+    h3 { margin-bottom: 0; font-size: 17px; line-height: 1.3; }
+
+    .shell { width: min(1440px, calc(100% - 40px)); margin: 0 auto; }
+    .label, .eyebrow, .section-kicker, .status, .owner, .step-no, .mini-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    .utility {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 22px 0;
+      color: var(--muted);
+      font: 700 10px/1.4 var(--mono);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .utility div { display: flex; flex-wrap: wrap; gap: 18px; }
+    .utility a { color: inherit; text-decoration: none; }
+
+    .page-responsibility {
+      --pr-ink: var(--ink);
+      --pr-body: var(--body);
+      --pr-muted: var(--muted);
+      --pr-line: var(--line-strong);
+      --pr-paper: var(--surface);
+      --pr-accent: var(--blue);
+      box-shadow: 0 16px 42px rgba(0, 0, 0, .2);
+    }
+    .page-responsibility__label,
+    .page-responsibility__question strong,
+    .page-responsibility__item strong { color: var(--ink); }
+    .page-responsibility__scope,
+    .page-responsibility__item p { color: var(--body); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(340px, .8fr);
+      gap: clamp(34px, 6vw, 86px);
+      align-items: end;
+      min-height: 620px;
+      padding: clamp(48px, 7vw, 94px);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: linear-gradient(135deg, #111a2a 0%, #090d14 64%);
+      box-shadow: var(--shadow);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 82% 20%, rgba(10,239,255,.13), transparent 26%),
+        linear-gradient(112deg, transparent 0 57%, rgba(255,255,255,.035) 57% 57.15%, transparent 57.15% 100%);
+    }
+    .hero-copy, .cycle-emblem { position: relative; z-index: 1; }
+    .eyebrow { margin-bottom: 18px; color: var(--ess); }
+    .scientific-name { max-width: 820px; margin: 0; color: var(--body); font-size: 12px; }
+    .scientific-name strong { color: #dce6f6; }
+    .hero-thesis { max-width: 760px; margin: 24px 0 0; color: #c3cede; font-size: clamp(17px, 2vw, 20px); line-height: 1.55; }
+
+    .cycle-emblem { display: grid; place-items: center; min-height: 350px; }
+    .cycle-ring {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: min(100%, 360px);
+      aspect-ratio: 1;
+      border: 1px solid var(--line-strong);
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(53,110,253,.12), transparent 62%);
+    }
+    .cycle-ring::before {
+      content: "";
+      position: absolute;
+      inset: 22px;
+      border: 2px dashed rgba(10,239,255,.34);
+      border-radius: inherit;
+    }
+    .cycle-ring::after {
+      content: "↻";
+      position: absolute;
+      right: 17px;
+      top: 46%;
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      color: var(--ess);
+      background: var(--surface);
+      border: 1px solid var(--line-strong);
+      border-radius: 50%;
+      font-size: 23px;
+    }
+    .cycle-ring strong { max-width: 210px; text-align: center; font-size: 29px; line-height: 1.08; }
+    .cycle-ring span { position: absolute; bottom: 48px; color: var(--muted); font: 700 9px/1.3 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+
+    .ownership-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 24px 0 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius) var(--radius) 0 0;
+      background: var(--surface);
+    }
+    .ownership-card { padding: 22px; border-right: 1px solid var(--line); }
+    .ownership-card:last-child { border-right: 0; }
+    .ownership-card .owner { display: block; margin-bottom: 9px; color: var(--accent); }
+    .ownership-card strong { display: block; font-size: 15px; }
+    .ownership-card p { margin: 8px 0 0; color: var(--body); font-size: 12px; }
+    .ownership-card.current { background: var(--blue-soft); }
+    .ownership-foot { display: flex; justify-content: space-between; gap: 16px 24px; padding: 13px 18px; border: 1px solid var(--line); border-top: 0; border-radius: 0 0 var(--radius) var(--radius); background: #090d14; color: var(--muted); font-size: 11px; }
+    .ownership-foot p { margin: 0; }
+    .ownership-foot a { color: var(--ess); font-weight: 750; }
+
+    .layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: clamp(38px, 6vw, 80px); padding: 72px 0 110px; }
+    .toc { position: sticky; top: 22px; align-self: start; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(15,21,32,.9); backdrop-filter: blur(14px); }
+    .toc-head { padding: 18px; border-bottom: 1px solid var(--line); }
+    .toc-head .status { color: var(--fluid); }
+    .toc-head p { margin: 8px 0 0; color: var(--body); font-size: 11px; }
+    .toc ol { margin: 0; padding: 0; list-style: none; counter-reset: nav; }
+    .toc li { counter-increment: nav; border-bottom: 1px solid var(--line); }
+    .toc li:last-child { border-bottom: 0; }
+    .toc a { display: grid; grid-template-columns: 27px 1fr; gap: 7px; padding: 11px 16px; color: var(--body); font-size: 11px; text-decoration: none; }
+    .toc a::before { content: counter(nav, decimal-leading-zero); color: var(--blue); font: 700 9px/1.8 var(--mono); }
+    .toc a:hover { color: white; background: rgba(255,255,255,.035); }
+
+    main section { margin-bottom: 94px; }
+    .section-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, .65fr); gap: 46px; align-items: end; margin-bottom: 28px; }
+    .section-kicker { margin: 0 0 10px; color: var(--blue); }
+    .section-head > p { margin: 0; color: var(--body); font-size: 15px; }
+    .lead { max-width: 820px; color: var(--body); font-size: 16px; }
+    .lead strong { color: white; }
+
+    .thesis-card {
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--ess);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+    .thesis-card p { margin: 0; font-size: clamp(19px, 2.4vw, 27px); line-height: 1.42; letter-spacing: -.018em; }
+    .not-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 14px; }
+    .not-grid div { padding: 16px; border: 1px solid var(--line); border-radius: 8px; color: var(--body); background: var(--surface); font-size: 12px; }
+    .not-grid strong { display: block; margin-bottom: 5px; color: var(--chronic); }
+
+    .model-loop {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      align-items: stretch;
+      margin-top: 28px;
+    }
+    .model-box { padding: 24px; border: 1px solid var(--line); border-top: 3px solid var(--accent); border-radius: var(--radius); background: var(--surface); }
+    .model-box .mini-label { color: var(--accent); }
+    .model-box h3 { margin-top: 9px; }
+    .model-box p { margin: 9px 0 0; color: var(--body); font-size: 12px; }
+    .model-box a { color: inherit; }
+    .loop-back { grid-column: 1 / -1; margin-top: 2px; padding: 12px 16px; border: 1px dashed var(--line-strong); border-radius: 8px; color: var(--muted); text-align: center; font: 700 9px/1.4 var(--mono); letter-spacing: .07em; text-transform: uppercase; }
+
+    .cycle-table { overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); }
+    .cycle-row { display: grid; grid-template-columns: 190px 1fr 1fr; }
+    .cycle-row + .cycle-row { border-top: 1px solid var(--line); }
+    .cycle-row.header { background: var(--surface-2); }
+    .cycle-cell { padding: 20px; border-right: 1px solid var(--line); }
+    .cycle-cell:last-child { border-right: 0; }
+    .cycle-row.header .cycle-cell { color: var(--muted); font: 700 10px/1.4 var(--mono); letter-spacing: .07em; text-transform: uppercase; }
+    .cycle-row.header .fluid-head { color: var(--fluid); }
+    .cycle-row.header .chronic-head { color: var(--chronic); }
+    .step-cell { background: rgba(255,255,255,.017); }
+    .step-no { display: block; margin-bottom: 7px; color: var(--blue); }
+    .step-cell strong { display: block; font-size: 15px; }
+    .step-cell span, .cycle-cell p { display: block; margin: 6px 0 0; color: var(--body); font-size: 12px; line-height: 1.55; }
+    .cycle-cell b { color: white; }
+    .next-entry { padding: 15px 20px; border-top: 1px dashed var(--line-strong); color: var(--body); text-align: right; font-size: 12px; }
+    .next-entry strong { color: var(--ess); }
+
+    .operating-sequence {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 1fr);
+      gap: 16px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+    .regulation-rail {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100%;
+      padding: 20px 17px;
+      overflow: hidden;
+      border: 1px solid rgba(53,110,253,.36);
+      border-radius: 9px;
+      background: var(--blue-soft);
+    }
+    .regulation-rail::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 116px;
+      bottom: 58px;
+      width: 1px;
+      border-left: 1px dashed rgba(53,110,253,.55);
+    }
+    .regulation-rail .mini-label { color: var(--blue); }
+    .regulation-rail strong { display: block; margin-top: 8px; font-size: 15px; line-height: 1.25; }
+    .regulation-rail p { position: relative; z-index: 1; margin: 14px 0 0; color: var(--body); font-size: 11px; }
+    .regulation-rail span:last-child { position: relative; z-index: 1; color: var(--blue); font: 700 20px/1 var(--mono); text-align: center; }
+    .flow-stack { display: flex; flex-direction: column; gap: 7px; }
+    .flow-node { padding: 14px 17px; border: 1px solid var(--line); border-left: 3px solid var(--flow); border-radius: 8px; background: var(--surface-2); }
+    .flow-node .mini-label { color: var(--flow); }
+    .flow-node strong { display: block; margin-top: 4px; font-size: 14px; }
+    .flow-node p { margin: 5px 0 0; color: var(--body); font-size: 11px; }
+    .flow-node.conditions { --flow: var(--fluid); }
+    .flow-node.participation { --flow: var(--me); }
+    .flow-node.response { --flow: var(--cls); }
+    .flow-node.feedback { --flow: var(--ess); }
+    .flow-node.outcome { --flow: var(--violet); }
+    .flow-arrow { height: 17px; color: var(--muted); text-align: center; font: 700 14px/17px var(--mono); }
+    .coupled-reading { display: grid; grid-template-columns: repeat(3, 1fr); overflow: hidden; border: 1px solid rgba(10,239,255,.28); border-radius: 9px; background: #0b111b; }
+    .coupled-head { grid-column: 1 / -1; padding: 11px 15px; border-bottom: 1px solid var(--line); color: var(--ess); font: 700 9px/1.35 var(--mono); letter-spacing: .07em; text-transform: uppercase; }
+    .coupled-cell { padding: 16px; border-right: 1px solid var(--line); }
+    .coupled-cell:last-child { border-right: 0; }
+    .coupled-cell .mini-label { color: var(--coupled); }
+    .coupled-cell strong { display: block; margin-top: 6px; font-size: 13px; }
+    .coupled-cell p { margin: 6px 0 0; color: var(--body); font-size: 11px; }
+    .coupled-cell.m1 { --coupled: var(--ess); }
+    .coupled-cell.m2 { --coupled: var(--fluid); }
+    .coupled-cell.me { --coupled: var(--me); }
+    .outcome-branches { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .outcome-branch { padding: 18px; border: 1px solid var(--line); border-top: 3px solid var(--branch); border-radius: 9px; background: #0b1018; }
+    .outcome-branch .mini-label { color: var(--branch); }
+    .outcome-branch h3 { margin-top: 7px; }
+    .outcome-branch p { margin: 7px 0 0; color: var(--body); font-size: 11px; }
+    .outcome-branch ul { margin: 12px 0 0; padding: 0; list-style: none; }
+    .outcome-branch li { padding: 8px 0; border-top: 1px solid var(--line); color: #cad4e2; font-size: 11px; }
+    .outcome-branch.completion { --branch: var(--fluid); }
+    .outcome-branch.carryover { --branch: var(--chronic); }
+    .mixed-outcome { margin: 2px 0 0; padding: 10px 13px; border: 1px dashed var(--line-strong); border-radius: 7px; color: var(--body); text-align: center; font-size: 10px; }
+    .mixed-outcome strong { color: white; }
+    .later-processes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .later-process { padding: 13px; border: 1px solid var(--line); border-radius: 7px; background: var(--surface-2); }
+    .later-process b { display: block; color: var(--violet); font: 700 9px/1.35 var(--mono); letter-spacing: .06em; text-transform: uppercase; }
+    .later-process span { display: block; margin-top: 4px; color: var(--body); font-size: 10px; }
+    .next-condition { padding: 18px; border: 1px solid rgba(53,110,253,.42); border-radius: 9px; background: var(--blue-soft); text-align: center; }
+    .next-condition .mini-label { color: var(--blue); }
+    .next-condition strong { display: block; margin-top: 5px; font-size: 17px; }
+
+    .route-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .route { overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+    .route > header { min-height: 220px; padding: 28px; border-top: 5px solid var(--route); background: var(--route-soft); }
+    .route > header .mini-label { color: var(--route); }
+    .route > header h3 { margin-top: 12px; font-size: 28px; line-height: 1.08; }
+    .route > header p { margin: 12px 0 0; color: var(--body); }
+    .route ol { margin: 0; padding: 0; list-style: none; counter-reset: route; }
+    .route li { counter-increment: route; display: grid; grid-template-columns: 36px 1fr; gap: 10px; padding: 17px 20px; border-top: 1px solid var(--line); }
+    .route li::before { content: counter(route, decimal-leading-zero); color: var(--route); font: 700 10px/1.8 var(--mono); }
+    .route li strong { display: block; font-size: 13px; }
+    .route li span { display: block; margin-top: 3px; color: var(--body); font-size: 11px; line-height: 1.5; }
+    .route footer { padding: 18px 20px; border-top: 1px solid var(--line); color: var(--body); background: #090d14; font-size: 11px; }
+    .route.fluid { --route: var(--fluid); --route-soft: var(--fluid-soft); }
+    .route.chronic { --route: var(--chronic); --route-soft: var(--chronic-soft); }
+
+    .override-principle { display: grid; grid-template-columns: minmax(220px, .65fr) minmax(0, 1.35fr); gap: 28px; margin-top: 18px; padding: 26px; border: 1px solid rgba(255,90,5,.36); border-radius: var(--radius); background: var(--chronic-soft); }
+    .override-principle h3 { font-size: 24px; }
+    .override-principle p { margin: 0; color: #d2b7ab; }
+    .override-principle strong { color: white; }
+
+    .availability-map {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+    .availability-map::before {
+      content: "";
+      position: absolute;
+      left: 43px;
+      top: 94px;
+      bottom: 82px;
+      width: 2px;
+      background: linear-gradient(var(--ess), rgba(10,239,255,.2));
+      box-shadow: 0 0 18px rgba(10,239,255,.42);
+    }
+    .availability-key {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(90deg, var(--ess-soft), var(--chronic-soft));
+    }
+    .availability-key div { color: var(--body); font-size: 11px; }
+    .availability-key b { display: block; margin-bottom: 5px; color: white; font: 700 9px/1.35 var(--mono); letter-spacing: .07em; text-transform: uppercase; }
+    .availability-key .signal b { color: var(--ess); }
+    .availability-key .override b { color: var(--chronic); }
+    .availability-row {
+      position: relative;
+      display: grid;
+      grid-template-columns: 86px minmax(150px, .55fr) minmax(0, 1.15fr) minmax(180px, .75fr);
+      align-items: stretch;
+      min-height: 112px;
+      border-bottom: 1px solid var(--line);
+    }
+    .availability-row:last-of-type { border-bottom: 0; }
+    .availability-index { position: relative; display: grid; place-items: center; }
+    .availability-index span {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      border: 1px solid rgba(10,239,255,.58);
+      border-radius: 50%;
+      background: var(--surface);
+      color: var(--ess);
+      box-shadow: 0 0 0 7px rgba(10,239,255,.045);
+      font: 700 10px/1 var(--mono);
+    }
+    .availability-layer, .availability-question, .availability-boundary { padding: 20px; }
+    .availability-layer { border-left: 1px solid var(--line); }
+    .availability-layer .mini-label { color: var(--ess); }
+    .availability-layer h3 { margin-top: 7px; }
+    .availability-question { border-left: 1px solid var(--line); background: rgba(255,255,255,.015); }
+    .availability-question b, .availability-boundary b { display: block; margin-bottom: 6px; color: var(--chronic); font: 700 9px/1.35 var(--mono); letter-spacing: .06em; text-transform: uppercase; }
+    .availability-question p, .availability-boundary p { margin: 0; color: var(--body); font-size: 11px; }
+    .availability-boundary { border-left: 1px solid var(--line); background: var(--chronic-soft); }
+    .availability-boundary b { color: #ff9a66; }
+    .availability-context {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 20px;
+      padding: 20px 24px;
+      border-top: 1px solid rgba(255,90,5,.34);
+      background: #0b1018;
+    }
+    .availability-context strong { color: var(--chronic); font: 700 10px/1.4 var(--mono); letter-spacing: .07em; text-transform: uppercase; }
+    .availability-context p { margin: 0; color: var(--body); font-size: 12px; }
+
+    .cascade {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: clamp(20px, 4vw, 38px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+    .cascade-node { position: relative; padding: 15px 18px; border: 1px solid var(--line); border-left: 3px solid var(--node); border-radius: 8px; background: var(--surface-2); }
+    .cascade-node .mini-label { color: var(--node); }
+    .cascade-node strong { display: block; margin-top: 5px; font-size: 14px; }
+    .cascade-node p { margin: 5px 0 0; color: var(--body); font-size: 12px; }
+    .cascade-node.trigger { --node: var(--cls); background: var(--cls-soft); }
+    .cascade-node.block { --node: var(--chronic); }
+    .cascade-node.merge { --node: var(--violet); }
+    .cascade-node.outcome { --node: var(--chronic-deep); background: rgba(255,48,49,.1); }
+    .cascade-arrow { height: 18px; color: var(--muted); text-align: center; font: 700 15px/18px var(--mono); }
+    .cascade-branches { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .cascade-branch { padding: 16px; border: 1px solid var(--line); border-top: 3px solid var(--branch); border-radius: 9px; background: #0b1018; }
+    .cascade-branch .mini-label { color: var(--branch); }
+    .cascade-branch h3 { margin-top: 7px; }
+    .cascade-branch p { margin: 7px 0 0; color: var(--body); font-size: 12px; }
+    .cascade-branch.update { --branch: var(--fluid); }
+    .cascade-branch.carry { --branch: var(--chronic); }
+    .branch-exit { margin-top: 10px; padding: 9px 11px; border-left: 2px solid var(--fluid); color: var(--body); background: var(--fluid-soft); font-size: 10px; }
+    .cascade-audit { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 12px; }
+    .cascade-audit div { padding: 14px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-2); color: var(--body); font-size: 11px; }
+    .cascade-audit b { display: block; margin-bottom: 6px; color: var(--blue); font: 700 9px/1.3 var(--mono); letter-spacing: .06em; }
+    .harm-boundary { margin-top: 14px; padding: 17px 19px; border-left: 3px solid var(--chronic); background: var(--chronic-soft); color: #d8bcb0; font-size: 12px; }
+    .harm-boundary strong { color: white; }
+
+    .condition-grid { display: grid; grid-template-columns: repeat(3, 1fr); overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+    .condition { min-height: 370px; padding: 26px; border-right: 1px solid var(--line); border-top: 5px solid var(--condition); }
+    .condition:last-child { border-right: 0; }
+    .condition .mini-label { color: var(--condition); }
+    .condition h3 { margin-top: 10px; font-size: 23px; }
+    .condition > p { margin: 10px 0 22px; color: var(--body); }
+    .condition dl { margin: 0; }
+    .condition dt { margin-top: 14px; color: var(--muted); font: 700 9px/1.4 var(--mono); letter-spacing: .07em; text-transform: uppercase; }
+    .condition dd { margin: 4px 0 0; color: #d7dfeb; font-size: 12px; }
+    .condition.baseline { --condition: var(--fluid); }
+    .condition.acute { --condition: var(--cls); }
+    .condition.chronic { --condition: var(--chronic-deep); }
+    .activation-return { display: grid; grid-template-columns: 1fr 46px 1fr 46px 1fr; align-items: stretch; margin-top: 16px; }
+    .activation-return div:not(.activation-arrow) { padding: 15px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--body); font-size: 11px; }
+    .activation-return b { display: block; margin-bottom: 5px; color: var(--blue); font: 700 9px/1.35 var(--mono); letter-spacing: .06em; text-transform: uppercase; }
+    .activation-return .activation-arrow { display: grid; place-items: center; color: var(--chronic); font-size: 20px; }
+
+    .terms { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .term { min-height: 200px; padding: 20px; border: 1px solid var(--line); border-top: 3px solid var(--term); border-radius: 9px; background: var(--surface); }
+    .term .mini-label { color: var(--term); }
+    .term h3 { margin-top: 8px; }
+    .term p { margin: 8px 0 0; color: var(--body); font-size: 12px; }
+    .term:nth-child(1), .term:nth-child(4) { --term: var(--blue); }
+    .term:nth-child(2), .term:nth-child(5) { --term: var(--fluid); }
+    .term:nth-child(3), .term:nth-child(6) { --term: var(--violet); }
+
+    .handoff-list { overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+    .handoff { display: grid; grid-template-columns: 180px 180px 1fr; gap: 18px; padding: 18px 20px; border-bottom: 1px solid var(--line); align-items: start; }
+    .handoff:last-child { border-bottom: 0; }
+    .handoff .owner { color: var(--handoff); }
+    .handoff strong { font-size: 13px; }
+    .handoff p { margin: 0; color: var(--body); font-size: 12px; }
+    .handoff a { color: inherit; }
+    .handoff.m1 { --handoff: var(--ess); }
+    .handoff.m2 { --handoff: var(--fluid); }
+    .handoff.m3 { --handoff: var(--blue); background: var(--blue-soft); }
+    .handoff.map { --handoff: var(--me); }
+    .handoff.fw { --handoff: var(--violet); }
+
+    .boundary-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .boundary { padding: 22px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); }
+    .boundary .mini-label { color: var(--blue); }
+    .boundary h3 { margin-top: 8px; }
+    .boundary p { margin: 8px 0 0; color: var(--body); font-size: 12px; }
+    .synthesis { margin-top: 16px; padding: 24px; border: 1px solid rgba(167,139,250,.32); border-radius: var(--radius); background: rgba(167,139,250,.08); }
+    .synthesis .mini-label { color: var(--violet); }
+    .synthesis p { margin: 8px 0 0; color: #d3cbed; }
+
+    .footer { display: flex; justify-content: space-between; gap: 24px; padding: 28px 0 50px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+
+    @media (max-width: 1060px) {
+      .hero { grid-template-columns: 1fr; }
+      .cycle-emblem { min-height: 300px; }
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; }
+      .toc ol { columns: 2; }
+      .model-loop { grid-template-columns: 1fr; gap: 10px; }
+      .loop-back { grid-column: auto; margin: 0; }
+      .activation-return { grid-template-columns: 1fr; gap: 8px; }
+      .activation-return .activation-arrow { transform: rotate(90deg); }
+      .route-grid, .condition-grid { grid-template-columns: 1fr; }
+      .condition { min-height: 0; border-right: 0; border-bottom: 1px solid var(--line); }
+      .condition:last-child { border-bottom: 0; }
+      .operating-sequence { grid-template-columns: 1fr; }
+      .regulation-rail { min-height: 0; }
+      .regulation-rail::after { display: none; }
+      .availability-row { grid-template-columns: 72px minmax(130px, .55fr) 1fr; }
+      .availability-boundary { grid-column: 2 / -1; border-top: 1px solid var(--line); }
+    }
+
+    @media (max-width: 760px) {
+      .shell { width: min(100% - 24px, 1440px); }
+      .utility, .footer, .ownership-foot { flex-direction: column; }
+      .hero { min-height: auto; padding: 38px 22px; border-radius: 12px; }
+      .cycle-emblem { display: none; }
+      .ownership-strip, .not-grid, .cascade-branches, .cascade-audit, .terms, .boundary-grid, .coupled-reading, .outcome-branches, .later-processes { grid-template-columns: 1fr; }
+      .coupled-head { grid-column: auto; }
+      .coupled-cell { border-right: 0; border-bottom: 1px solid var(--line); }
+      .coupled-cell:last-child { border-bottom: 0; }
+      .ownership-card { border-right: 0; border-bottom: 1px solid var(--line); }
+      .ownership-card:last-child { border-bottom: 0; }
+      .layout { padding-top: 42px; }
+      .toc ol { columns: 1; }
+      .section-head, .override-principle { grid-template-columns: 1fr; gap: 15px; }
+      .cycle-table { overflow-x: auto; }
+      .cycle-row { min-width: 760px; }
+      .handoff { grid-template-columns: 1fr; gap: 7px; }
+      .availability-key, .availability-context { grid-template-columns: 1fr; }
+      .availability-map::before { left: 35px; }
+      .availability-row { grid-template-columns: 70px 1fr; }
+      .availability-question, .availability-boundary { grid-column: 2; border-top: 1px solid var(--line); }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .cycle-ring::before { animation: orbit 18s linear infinite; }
+      .route, .condition, .term { transition: transform .18s ease, border-color .18s ease; }
+      .route:hover, .condition:hover, .term:hover { transform: translateY(-2px); border-color: var(--line-strong); }
+      @keyframes orbit { to { transform: rotate(360deg); } }
+    }
+
+    @media print {
+      body { color: #111; background: white; }
+      .utility, .toc, .cycle-emblem { display: none; }
+      .shell { width: 100%; }
+      .hero, .cycle-table, .route, .cascade, .condition-grid, .term, .handoff-list, .boundary, .synthesis, .thesis-card { color: #111; background: white; box-shadow: none; }
+      .hero-thesis, .scientific-name, .lead, .section-head > p, .cycle-cell p, .route li span, .route footer, .cascade-node p, .condition > p, .condition dd, .term p, .handoff p, .boundary p { color: #333; }
+      .layout { display: block; }
+      main section { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body id="top">
+  <div class="carried-banner" role="note"><strong>Carried page · status approved architecture.</strong> The canonical two-cycle page: the shared event spine, the whole operating sequence, the Fluid and Chronic Cognitive-Override comparison, the seven override distinctions, the Chronic cascade and the bridge to Model 2. Canonical since 23 August 2026; carried on 2 September 2026. The canon page summarises it; this is the full statement. <a href="index.html">Back to the Model 3 canon page →</a></div>
+<div class="shell">
+    <nav class="utility" aria-label="Project navigation">
+      <div>
+        <a href="../index.html">← Project map</a>
+        <a href="notes/sources/esc-and-escalation-pathways-archive.html">Earlier ESC page</a>
+        <a href="../02-model-1-ess-cls-me/index.html">ESS · CLS · ME</a>
+        <a href="../03-model-2-gradient/index.html">Nervous System Gradient</a>
+      </div>
+      <span>Canonical Model 3 · active working architecture</span>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Accessible working name · Model 3</p>
+        <h1>The Emotional–Somatic Cycle (ESC)</h1>
+        <p class="scientific-name"><strong>Scientific-facing subtitle</strong> · Time-indexed emotional–somatic and reflective–symbolic processing across conditions, organism organisation, conscious participation, action, feedback, recovery and learning.</p>
+        <p class="hero-thesis">ESC follows one event from current conditions through information, organisation, participation, response and feedback—and shows how completion or carryover changes the conditions from which the next cycle begins.</p>
+      </div>
+      <div class="cycle-emblem" aria-label="One recurring cycle with Fluid and Chronic forms">
+        <div class="cycle-ring"><strong>One cycle.<br>Two forms.</strong><span>Fluid ↔ Chronic</span></div>
+      </div>
+    </header>
+
+    <aside class="page-responsibility" aria-label="Page responsibility">
+      <div class="page-responsibility__heading">
+        <p class="page-responsibility__label">Page responsibility · Model 3 · The Emotional–Somatic Cycle (ESC)</p>
+        <p class="page-responsibility__scope">Scientific-facing scope · time-indexed emotional–somatic and reflective–symbolic processing across conditions, organism organisation, conscious participation, feedback, recovery and learning</p>
+      </div>
+      <p class="page-responsibility__question"><strong>Governing question</strong>What changes through one event, and how does its outcome become part of the conditions from which the next event begins?</p>
+      <div class="page-responsibility__grid">
+        <div class="page-responsibility__item"><strong>This page owns</strong><p>The recurring temporal sequence, the Fluid and Chronic Cognitive-Override comparison, completion and carryover branches, and how outcomes enter later conditions.</p></div>
+        <div class="page-responsibility__item"><strong>It receives</strong><p>Emotional information from the <a href="../01-signal-map/emotion/fluid.html">Signal Map</a>, the shared <a href="../07-reference/sociality.html">human-sociality premise</a>, information processing and participation from <a href="../02-model-1-ess-cls-me/index.html">Model 1</a>, and organism organisation from <a href="../03-model-2-gradient/index.html">Model 2</a>.</p></div>
+        <div class="page-responsibility__item"><strong>It does not establish</strong><p>A universal biological sequence, a diagnosis, behaviour from nervous-system organisation, or responsibility and repair from internal process alone.</p></div>
+      </div>
+    </aside>
+
+    <div class="ownership-strip" aria-label="Three-model ownership">
+      <article class="ownership-card" style="--accent:var(--ess)"><span class="owner">Model 1 supplies</span><strong>ESS · CLS · ME</strong><p>What registers, what is interpreted, what becomes usable and how ME participates.</p></article>
+      <article class="ownership-card" style="--accent:var(--fluid)"><span class="owner">Model 2 supplies</span><strong>Position · depth · resources</strong><p>What the organism is organised for and which capacities are currently available.</p></article>
+      <article class="ownership-card current" style="--accent:var(--blue)"><span class="owner">Model 3 owns</span><strong>Moment · transition · later outcome</strong><p>How successive processing and organisation configurations change through time and what becomes part of the next entry.</p></article>
+    </div>
+    <div class="ownership-foot"><p>All three readings stay available at each moment. Unknown fields remain unknown rather than becoming a generic “state”.</p><a href="shared-event-record.html">Open the shared event record →</a></div>
+
+    <div class="layout">
+      <aside class="toc" aria-label="On this page">
+        <div class="toc-head"><span class="status">Canonical Model 3 · working architecture</span><p>The accepted two-cycle architecture with active scientific boundaries.</p></div>
+        <ol>
+          <li><a href="#definition">What ESC models</a></li>
+          <li><a href="#interfaces">How the models connect</a></li>
+          <li><a href="#spine">The shared event spine</a></li>
+          <li><a href="#operating-sequence">The whole sequence</a></li>
+          <li><a href="#cycles">Fluid and Chronic</a></li>
+          <li><a href="#override-layers">Seven override distinctions</a></li>
+          <li><a href="#cascade">The Chronic Cascade</a></li>
+          <li><a href="#activation">How a later cycle can begin</a></li>
+          <li><a href="#vocabulary">Shared vocabulary</a></li>
+          <li><a href="#handoffs">Model ownership</a></li>
+          <li><a href="#boundaries">Scientific boundaries</a></li>
+        </ol>
+      </aside>
+
+      <main>
+        <section id="definition">
+          <div class="section-head">
+            <div><p class="section-kicker">01 · Definition</p><h2>One recurring event model with two forms</h2></div>
+            <p>ESC is not another organ, nervous-system state or information system. It is the temporal model that follows what happens across one event and how that outcome enters the next.</p>
+          </div>
+          <div class="thesis-card"><p><strong>Current condition → conditions register → ESS, CLS, ME and Gradient organisation participate → response → feedback → updated situation read → completion or carryover → Return, recovery, updating, learning and integration → next condition.</strong></p></div>
+          <p class="lead" style="margin-top:22px">These are functional distinctions inside a recursive process, not fixed biological stations. Processes overlap, feedback can arrive at several points, and different parts of the organism can update at different rates. <strong>In this model, Chronic Cycle names the recurrent cognitive-override form—not every possible cause of persistent nervous-system organisation.</strong></p>
+          <div class="not-grid" aria-label="What ESC is not">
+            <div><strong>Not calm versus distressed</strong>Fluid mobilisation can be intense and adaptive.</div>
+            <div><strong>Not expression equals completion</strong>Pressure reduction does not by itself establish updating, Return or recovery.</div>
+            <div><strong>Not physiology equals behaviour</strong>Organisation shapes the available field; ME still participates in what happens next.</div>
+          </div>
+        </section>
+
+        <section id="interfaces">
+          <div class="section-head">
+            <div><p class="section-kicker">02 · Model interfaces</p><h2>The cycle does not run alone</h2></div>
+            <p>At every ESC moment, information processing and organism organisation are already present. ESC indexes their movement; it does not replace either model.</p>
+          </div>
+          <div class="model-loop" aria-label="How the three models connect through one event">
+            <article class="model-box" style="--accent:var(--ess)"><span class="mini-label">Model 1 · Information</span><h3><a href="../02-model-1-ess-cls-me/index.html">ESS · CLS · ME</a></h3><p>ESS contributes emotional–somatic information. CLS contributes reflective–symbolic interpretation. ME participates through what becomes accessible and usable.</p></article>
+            <article class="model-box" style="--accent:var(--fluid)"><span class="mini-label">Model 2 · Organisation</span><h3><a href="../03-model-2-gradient/index.html">Nervous System Gradient</a></h3><p>Describes the organism-level Position, depth, resource allocation and capacity field at each moment.</p></article>
+            <article class="model-box" style="--accent:var(--blue)"><span class="mini-label">Model 3 · Time</span><h3>ESC</h3><p>Indexes successive coupled configurations, action, feedback, immediate and longer outcomes, recovery, learning and carryover.</p></article>
+            <div class="loop-back">Simultaneous readings at each moment · ESC compares moments · the outcome changes the next entry</div>
+          </div>
+        </section>
+
+        <section id="spine">
+          <div class="section-head">
+            <div><p class="section-kicker">03 · Shared event spine</p><h2>The same event scaffold can remain Fluid or become Chronic</h2></div>
+            <p>The two cycles do not have different stages. They move through the same event hinges while differing in information usability, response flexibility and whether feedback can revise the coupled configuration.</p>
+          </div>
+          <div class="cycle-table" role="table" aria-label="Shared event hinges in the Fluid and Chronic Emotional–Somatic Cycles">
+            <div class="cycle-row header" role="row"><div class="cycle-cell" role="columnheader">Shared event hinge</div><div class="cycle-cell fluid-head" role="columnheader">Fluid Cycle</div><div class="cycle-cell chronic-head" role="columnheader">Chronic Cognitive-Override Cycle</div></div>
+            <div class="cycle-row" role="row">
+              <div class="cycle-cell step-cell" role="rowheader"><span class="step-no">Hinge 01</span><strong>Current condition</strong><span>The internal, environmental, relational and represented conditions from which this event begins.</span></div>
+              <div class="cycle-cell" role="cell"><b>Present information can alter the read</b><p>Prior learning participates, but current conditions can still change weighting, expectation and organisation.</p></div>
+              <div class="cycle-cell" role="cell"><b>Carryover already shapes the read</b><p>Residual demand, learned prediction, reduced capacity or a familiar Gradient organisation is more readily reconstructed.</p></div>
+            </div>
+            <div class="cycle-row" role="row">
+              <div class="cycle-cell step-cell" role="rowheader"><span class="step-no">Hinge 02</span><strong>Coupled reading</strong><span>Conditions register while information, organisation and capacity availability change together.</span></div>
+              <div class="cycle-cell" role="cell"><b>Difference remains usable</b><p>ESS information and CLS interpretation may agree, conflict or unfold at different speeds without either being excluded from the working read.</p></div>
+              <div class="cycle-cell" role="cell"><b>ESS participates without sufficient authority</b><p>Emotional–somatic information may be faint, fused, delayed, costly, distrusted or treated as noise while CLS supplies coherence.</p></div>
+            </div>
+            <div class="cycle-row" role="row">
+              <div class="cycle-cell step-cell" role="rowheader"><span class="step-no">Hinge 03</span><strong>ME participation + response</strong><span>ME participates through the information and capacities currently available.</span></div>
+              <div class="cycle-cell" role="cell"><b>More than one route remains possible</b><p>ME may feel, reflect, pause, check, seek support, set a boundary or revise action as new information arrives.</p></div>
+              <div class="cycle-cell" role="cell"><b>ME proceeds through the dominant CLS account</b><p>A rule, role, explanation or goal becomes the workable account while relevant ESS information remains insufficiently usable.</p></div>
+            </div>
+            <div class="cycle-row" role="row">
+              <div class="cycle-cell step-cell" role="rowheader"><span class="step-no">Hinge 04</span><strong>Feedback + updated situation read</strong><span>Action outcomes, the body, the environment and other people provide new information.</span></div>
+              <div class="cycle-cell" role="cell"><b>Feedback can revise the coupled configuration</b><p>The working read, organisation or response route can change when credible information becomes available.</p></div>
+              <div class="cycle-cell" role="cell"><b>Feedback is absent, unsafe, discounted or absorbed</b><p>Immediate pressure may change while the established account and organising demand remain difficult to revise.</p></div>
+            </div>
+            <div class="cycle-row" role="row">
+              <div class="cycle-cell step-cell" role="rowheader"><span class="step-no">Hinge 05</span><strong>Outcome + next condition</strong><span>Completion, carryover or a mixed outcome changes the next entry.</span></div>
+              <div class="cycle-cell" role="cell"><b>Completion and updating become possible</b><p>Recruitment can change course; Return may begin; recovery, learning and integration continue on their own timescales.</p></div>
+              <div class="cycle-cell" role="cell"><b>Carryover preserves or reconstructs the route</b><p>Residual demand, weighting, reduced capacity, expectation or cost becomes part of the next condition.</p></div>
+            </div>
+            <div class="next-entry"><strong>↶ The outcome becomes input.</strong> Completion, partial completion, continuing protection, new learning or accumulated cost enters the next cycle.</div>
+          </div>
+        </section>
+
+        <section id="operating-sequence">
+          <div class="section-head">
+            <div><p class="section-kicker">04 · Whole-cycle operating sequence</p><h2>The shared spine in full</h2></div>
+            <p>This is the expanded sequence behind the five event hinges. It keeps the three models visible while showing how feedback becomes completion, carryover or a mixed outcome that enters the next cycle.</p>
+          </div>
+          <div class="operating-sequence">
+            <aside class="regulation-rail" aria-label="Regulation continues throughout the whole cycle">
+              <div><span class="mini-label">Continuous process</span><strong>Regulation continues throughout</strong><p>Resources and capacities remain organised and reallocated in relation to detected or predicted demand. Regulation is not a late stage and does not mean calm.</p></div>
+              <span aria-hidden="true">↓</span>
+            </aside>
+
+            <div class="flow-stack" aria-label="The whole Emotional–Somatic Cycle operating sequence">
+              <div class="flow-node conditions"><span class="mini-label">Entry</span><strong>Current internal, environmental, relational and represented conditions</strong></div>
+              <div class="flow-arrow" aria-hidden="true">↓</div>
+              <div class="flow-node conditions"><span class="mini-label">Conditions register</span><strong>Change becomes relevant to the organism.</strong><p>Detection is shaped by present information, prior learning, prediction and the organisation already in place.</p></div>
+              <div class="flow-arrow" aria-hidden="true">↓</div>
+
+              <div class="coupled-reading" aria-label="Simultaneous Model 1, Model 2 and ME readings">
+                <div class="coupled-head">Coupled event reading · simultaneous, recursive and differently paced</div>
+                <article class="coupled-cell m1"><span class="mini-label">Model 1 · ESS + CLS</span><strong>Information is generated and interpreted</strong><p>ESS registers emotional–somatic relevance. CLS interprets, predicts and models. Their information may agree, conflict or carry different weight.</p></article>
+                <article class="coupled-cell m2"><span class="mini-label">Model 2 · Gradient</span><strong>Organisation and capacities change</strong><p>Position, depth, resource allocation, salience, action readiness and available capacities reorganise around the current problem.</p></article>
+                <article class="coupled-cell me"><span class="mini-label">ME · Access</span><strong>Information becomes unevenly usable</strong><p>What reaches conscious participation varies in accessibility, differentiation, credibility, cost and authority.</p></article>
+              </div>
+
+              <div class="flow-arrow" aria-hidden="true">↓</div>
+              <div class="flow-node participation"><span class="mini-label">Conscious participation</span><strong>ME can notice, interpret, pause, choose, seek support or proceed through the field currently available.</strong></div>
+              <div class="flow-arrow" aria-hidden="true">↓</div>
+              <div class="flow-node response"><span class="mini-label">Response</span><strong>Action, inhibition, communication, mobilisation, withdrawal or continued observation meets the situation.</strong><p>Organisation shapes what is easier or harder; it does not author or justify the behaviour.</p></div>
+              <div class="flow-arrow" aria-hidden="true">↓</div>
+              <div class="flow-node feedback"><span class="mini-label">Feedback</span><strong>The body, environment, action outcome and other people provide new information.</strong><p>Feedback may be available, absent, ambiguous, unsafe, discounted, delayed or strong enough to revise the working configuration.</p></div>
+              <div class="flow-arrow" aria-hidden="true">↓</div>
+              <div class="flow-node feedback"><span class="mini-label">Updated situation read</span><strong>What changed in the condition, ESS–CLS–ME relationship and Gradient organisation?</strong></div>
+              <div class="flow-arrow" aria-hidden="true">↓</div>
+              <div class="flow-node outcome"><span class="mini-label">Outcome record</span><strong>The cycle compares what was recruited with what is true or required now.</strong><p>The result is not forced into success or failure. Several parts of the event may have different outcomes.</p></div>
+              <div class="flow-arrow" aria-hidden="true">↓</div>
+
+              <div class="outcome-branches" aria-label="Completion and carryover outcomes">
+                <article class="outcome-branch completion"><span class="mini-label">Completion pathway</span><h3>The relevant demand is sufficiently met, changed, escaped, repaired, recognised or accurately known.</h3><ul><li>Signal priority and prediction can update.</li><li>The previous recruitment is no longer required in the same form.</li><li>Return may begin before recovery is complete.</li><li>Recovery and restoration replenish and repair across their own timescales.</li></ul></article>
+                <article class="outcome-branch carryover"><span class="mini-label">Carryover pathway</span><h3>The condition continues, remains unmet or the coupled configuration does not sufficiently update.</h3><ul><li>Unresolved demand or residual activation may remain.</li><li>Prediction, response route and recruitment threshold may carry forward.</li><li>Reduced capacity and physiological or relational cost may enter later events.</li><li>Continuing danger may keep protection accurately recruited.</li></ul></article>
+              </div>
+              <div class="mixed-outcome"><strong>Completion and carryover can coexist.</strong> One part of the condition may resolve while another demand, cost, relationship or recovery process remains active.</div>
+              <div class="synthesis"><span class="mini-label">Scientific trajectory bridge</span><p>Carryover is not one central system remaining switched on. A condition may continue; one channel may recover slowly; later demand may interrupt recovery; cognition may reconstruct the event; or learning may change later recruitment. The <a href="../01-signal-map/grounding/recruitment-persistence-and-recovery.html">Signal Recruitment, Persistence and Recovery map</a> connects these ESC outcomes to their scientific terms and measurement boundaries.</p></div>
+              <div class="flow-arrow" aria-hidden="true">↓</div>
+
+              <div class="later-processes" aria-label="Updating, learning and integration after an outcome">
+                <div class="later-process"><b>Updating</b><span>Current condition, signal priority, prediction, access or organisation changes.</span></div>
+                <div class="later-process"><b>Learning</b><span>The outcome alters later expectation, weighting, skill, threshold or route availability.</span></div>
+                <div class="later-process"><b>Integration</b><span>Previously separated information or capacities become more jointly usable by ME.</span></div>
+              </div>
+              <div class="flow-arrow" aria-hidden="true">↓</div>
+              <div class="next-condition"><span class="mini-label">Recursive close</span><strong>Next conditions → next cycle</strong></div>
+            </div>
+          </div>
+          <p class="lead" style="margin-top:18px">Updating, learning and integration are not required to wait until recovery is complete. They may begin during feedback, remain partial, unfold later or fail to generalise across contexts.</p>
+        </section>
+
+        <section id="cycles">
+          <div class="section-head">
+            <div><p class="section-kicker">05 · Two forms</p><h2>The difference is responsiveness</h2></div>
+            <p>Fluid does not mean calm, and Chronic does not mean false. The key question is whether ESS and CLS can remain jointly usable by ME and whether relevant feedback can revise processing and organisation.</p>
+          </div>
+          <div class="route-grid">
+            <article class="route fluid">
+              <header><span class="mini-label">Fluid Cycle</span><h3>Information remains available for revision.</h3><p>ESS, CLS and ME can remain sufficiently connected for current conditions and feedback to alter what happens next.</p></header>
+              <ol>
+                <li><div><strong>Current conditions can change the read.</strong><span>Prior learning informs detection without wholly deciding it.</span></div></li>
+                <li><div><strong>Difference remains usable.</strong><span>Embodied and reflective information can agree, conflict or unfold at different speeds.</span></div></li>
+                <li><div><strong>ME retains more than one possible route.</strong><span>Action can be delayed, revised, supported or redirected as new information arrives.</span></div></li>
+                <li><div><strong>The response can meet the relevant condition.</strong><span>Action, evidence or relational response may change the situation—or confirm that protection is still needed.</span></div></li>
+                <li><div><strong>The next entry carries usable learning.</strong><span>Completion may occur; Return may begin; recovery and integration continue on their own timescales.</span></div></li>
+              </ol>
+              <footer>Fluidity is the capacity to update—not an assurance of comfort, success or a rapid return to baseline.</footer>
+            </article>
+
+            <article class="route chronic">
+              <header><span class="mini-label">Chronic Cycle · Cognitive Override</span><h3>ME builds coherence through CLS while ESS is treated as noise.</h3><p>Emotional–somatic information is still generated, but it is unavailable, undifferentiated, distrusted or given too little authority to participate sufficiently in what ME understands and does.</p></header>
+              <ol>
+                <li><div><strong>Carryover shapes the starting field.</strong><span>Prior prediction, residual demand and current Gradient organisation influence what becomes salient.</span></div></li>
+                <li><div><strong>ESS still contributes information.</strong><span>Emotional–somatic relevance continues to affect physiology, salience and action readiness.</span></div></li>
+                <li><div><strong>The information does not become sufficiently usable by ME.</strong><span>The issue is conscious usability and authority—not the disappearance of ESS processing.</span></div></li>
+                <li><div><strong>CLS supplies the coherent account.</strong><span>A narrative, rule, role or goal makes sense of the situation using what is available.</span></div></li>
+                <li><div><strong>The outcome may stabilise pressure without updating the cycle.</strong><span>The response route, cost and narrowed organisation become part of the next entry.</span></div></li>
+              </ol>
+              <footer>The route can be learned and automatic. It may feel like competence, duty, certainty, self-control or simply reality.</footer>
+            </article>
+          </div>
+
+          <div class="override-principle">
+            <div><span class="mini-label" style="color:var(--chronic)">Central Chronic distinction</span><h3>ESS is not absent. Its information is omitted from the working account.</h3></div>
+            <p><strong>ESS registers → its information has reduced usability → CLS supplies coherence → ME participates through that account → pressure may change without sufficient completion → carryover enters the next cycle.</strong><br><br>“Omission” does not require a deliberate choice. CLS is not inherently false or harmful; the chronic problem is recurrent closed dominance that is difficult to revise with relevant feedback.</p>
+          </div>
+        </section>
+
+        <section id="override-layers">
+          <div class="section-head">
+            <div><p class="section-kicker">06 · Seven override distinctions</p><h2>The signal can remain alive while its participation changes</h2></div>
+            <p>These are research distinctions, not seven stages. They prevent “override” from becoming one vague event and show where emotional–somatic information may remain present while becoming less usable by ME.</p>
+          </div>
+          <div class="availability-map" aria-label="Seven distinctions required when examining Chronic Cognitive Override">
+            <div class="availability-key">
+              <div class="signal"><b>Cyan thread · ESS participation continues</b>Signal generation or bodily representation can remain active even when later access, expression or action is constrained.</div>
+              <div class="override"><b>Orange field · possible override location</b>Each layer asks a different question. Evidence at one layer cannot silently stand in for another.</div>
+            </div>
+            <article class="availability-row">
+              <div class="availability-index"><span>01</span></div>
+              <div class="availability-layer"><span class="mini-label">Biological information</span><h3>Signal generation</h3></div>
+              <div class="availability-question"><b>Chronic question</b><p>Did emotional significance arise and organise salience, physiology or action readiness?</p></div>
+              <div class="availability-boundary"><b>Do not infer</b><p>A later cognitive account does not establish that ESS failed to activate.</p></div>
+            </article>
+            <article class="availability-row">
+              <div class="availability-index"><span>02</span></div>
+              <div class="availability-layer"><span class="mini-label">Internal condition</span><h3>Bodily representation</h3></div>
+              <div class="availability-question"><b>Chronic question</b><p>Was internal bodily information represented, even if it did not become clear feeling?</p></div>
+              <div class="availability-boundary"><b>Do not infer</b><p>Low report or low felt clarity does not prove absent biological participation.</p></div>
+            </article>
+            <article class="availability-row">
+              <div class="availability-index"><span>03</span></div>
+              <div class="availability-layer"><span class="mini-label">ME access</span><h3>Subjective access</h3></div>
+              <div class="availability-question"><b>Chronic question</b><p>Could ME feel, identify or differentiate what was happening?</p></div>
+              <div class="availability-boundary"><b>Do not infer</b><p>Information can remain biologically influential while conscious usability narrows.</p></div>
+            </article>
+            <article class="availability-row">
+              <div class="availability-index"><span>04</span></div>
+              <div class="availability-layer"><span class="mini-label">Communication</span><h3>Expression</h3></div>
+              <div class="availability-question"><b>Chronic question</b><p>Could the information be shown, spoken, named or made visible in this context?</p></div>
+              <div class="availability-boundary"><b>Do not infer</b><p>Concealment, inhibition and non-expression are not the same as non-feeling.</p></div>
+            </article>
+            <article class="availability-row">
+              <div class="availability-index"><span>05</span></div>
+              <div class="availability-layer"><span class="mini-label">Organisation</span><h3>Regulation</h3></div>
+              <div class="availability-question"><b>Chronic question</b><p>Was the response modulated, suppressed, amplified, avoided or repeatedly reconstructed?</p></div>
+              <div class="availability-boundary"><b>Do not infer</b><p>Different routes can look similar and require different evidence.</p></div>
+            </article>
+            <article class="availability-row">
+              <div class="availability-index"><span>06</span></div>
+              <div class="availability-layer"><span class="mini-label">Participation</span><h3>Action</h3></div>
+              <div class="availability-question"><b>Chronic question</b><p>Could emotional–somatic information influence a boundary, choice, request or response?</p></div>
+              <div class="availability-boundary"><b>Do not infer</b><p>Information can be present without becoming usable action guidance.</p></div>
+            </article>
+            <article class="availability-row">
+              <div class="availability-index"><span>07</span></div>
+              <div class="availability-layer"><span class="mini-label">CLS model</span><h3>Emotion belief</h3></div>
+              <div class="availability-question"><b>Chronic question</b><p>Was emotion treated as acceptable, safe, useful, dangerous, irrational or mere noise?</p></div>
+              <div class="availability-boundary"><b>Do not infer</b><p>Belief can shape authority without proving that generation, representation or access was absent.</p></div>
+            </article>
+            <div class="availability-context"><strong>Context belongs in every row</strong><p>Who responded to the emotion, how consistently, under which cultural and material conditions, what power and viable options were present, and whether repair or contradictory experience became available?</p></div>
+          </div>
+        </section>
+
+        <section id="cascade">
+          <div class="section-head">
+            <div><p class="section-kicker">07 · The Chronic Cascade</p><h2>Override changes participation, then feedback shapes what can carry forward</h2></div>
+            <p>This is the working Chronic route. It preserves the shared event spine while locating Cognitive Override in the relationship among ESS information, CLS interpretation and what becomes usable by ME.</p>
+          </div>
+          <div class="cascade" aria-label="The Chronic Cognitive-Override Cascade">
+            <div class="cascade-node trigger"><span class="mini-label">01 · Current condition registers</span><strong>ESS generates emotional–somatic information while CLS interprets, predicts and models the situation.</strong><p>Model 2 records the simultaneous organism organisation. Nothing here requires conscious awareness, one-to-one agreement or a fixed order between the participating processes.</p></div>
+            <div class="cascade-arrow" aria-hidden="true">↓</div>
+            <div class="cascade-node block"><span class="mini-label">02 · Availability profile</span><strong>Across generation, bodily representation, access, expression, regulation, action and emotion belief, ESS information becomes unevenly usable.</strong><p>The seven distinctions are not stages. They identify where emotional–somatic information remains active, where it becomes constrained and where “emotion is noise” may become part of the CLS model.</p></div>
+            <div class="cascade-arrow" aria-hidden="true">↓</div>
+            <div class="cascade-node block"><span class="mini-label">03 · CLS account + ME participation</span><strong>A rule, role, explanation, narrative or goal becomes the coherent working account.</strong><p>ME participates through what is available. The account may be intelligent, protective or temporarily necessary; Chronicity concerns recurrent dominance that remains difficult to revise, not the existence of CLS or reflection.</p></div>
+            <div class="cascade-arrow" aria-hidden="true">↓</div>
+            <div class="cascade-node merge"><span class="mini-label">04 · Response + feedback</span><strong>ME responds; the body, action outcome, environment and other people provide new information.</strong><p>Feedback may change the condition, confirm that protection is still needed, reduce immediate pressure, contradict the CLS account or fail to become safe and usable.</p></div>
+            <div class="cascade-arrow" aria-hidden="true">↓</div>
+            <div class="cascade-node merge"><span class="mini-label">05 · Updated situation read</span><strong>Did the relevant condition and coupled configuration update, or did only immediate pressure change?</strong><p>Relief is real information, but it does not by itself establish completion, reinforcement, accurate interpretation or future recurrence.</p></div>
+            <div class="cascade-arrow" aria-hidden="true">↓</div>
+            <div class="cascade-branches" aria-label="Two possible outcomes after feedback">
+              <article class="cascade-branch update"><span class="mini-label">Outcome A · Revision becomes possible</span><h3>Feedback changes the working configuration</h3><p>ESS information becomes more usable, the CLS account revises, the condition changes or the Gradient can reorganise. The event may move toward completion, Return and recovery.</p><div class="branch-exit">A Chronic route can become more Fluid; no person or cycle is permanently assigned to one form.</div></article>
+              <article class="cascade-branch carry"><span class="mini-label">Outcome B · Carryover remains</span><h3>Pressure changes while the recruiting configuration persists or reconstructs</h3><p>Residual demand, learned weighting, expectation, route availability, reduced capacity or cost enters the next condition. Continuing danger may also keep protection accurately recruited.</p><div class="branch-exit">Carryover is decomposable. It is not a stored substance, one unfinished emotion or proof of past adversity.</div></article>
+            </div>
+            <div class="cascade-arrow" aria-hidden="true">↓</div>
+            <div class="cascade-node outcome"><span class="mini-label">06 · Next condition</span><strong>The next cycle begins from the updated—or carried-forward—information and organisation now available.</strong><p>Repeated carryover can contribute to recurrent or more restricted Chronic organisation. Repeated revision can widen later responsiveness without guaranteeing one permanent endpoint.</p></div>
+          </div>
+
+          <div class="cascade-audit" aria-label="Questions required before classifying a cascade">
+            <div><b>CONDITION</b>Did the relevant internal, material or relational condition actually change?</div>
+            <div><b>ORGANISATION</b>Could recruitment update and could wider capacities become available?</div>
+            <div><b>TIME + COST</b>What recurred, what accumulated, and did the cost remain internal or move onto another person?</div>
+          </div>
+          <p class="harm-boundary"><strong>Behavioural boundary:</strong> the cascade does not infer coercion, predation or harm from physiology. Harm and escalation require their own evidence: behaviour, power, viable refusal, impact, response to limits, recurrence and repair. See <a href="../07-reference/behaviour.html">Behaviour and Responsibility</a>.</p>
+        </section>
+
+        <section id="activation">
+          <div class="section-head">
+            <div><p class="section-kicker">08 · Bridge to Model 2</p><h2>How a later cycle can begin</h2></div>
+            <p>These are three relationships between demand, organisation and recovery—not three kinds of person, moral categories or a simple scale from calm to distressed.</p>
+          </div>
+          <div class="condition-grid">
+            <article class="condition baseline"><span class="mini-label">Opening condition 01</span><h3>Physiological baseline</h3><p>A resting configuration in which resources are not currently recruited for a specific demand.</p><dl><dt>ESC</dt><dd>No active cycle demand is being tested, though learning and prior organisation remain.</dd><dt>Gradient</dt><dd>Baseline is not itself one Gradient Position; it is a resting condition from which organisation can change.</dd><dt>Capacity</dt><dd>A wider range may be available, but this cannot be assumed from low arousal alone.</dd></dl></article>
+            <article class="condition acute"><span class="mini-label">Opening condition 02</span><h3>Fluid activation</h3><p>An acute, event-timescale reorganisation of resources and capacities in response to present or predicted demand.</p><dl><dt>ESC</dt><dd>Detection, response and feedback are active; intense mobilisation may be adaptive.</dd><dt>Gradient</dt><dd>Organisation shifts toward the biological problem currently being solved.</dd><dt>Capacity</dt><dd>Some functions are prioritised and others temporarily constrained; updating and Return remain possible when conditions change.</dd></dl></article>
+            <article class="condition chronic"><span class="mini-label">Opening condition 03</span><h3>Chronic-shaped entry</h3><p>A recurrent, persistent or difficult-to-revise organisation shaped by carryover, learned weighting, reduced capacity, repeated reconstruction or continuing adverse conditions.</p><dl><dt>ESC</dt><dd>The cognitive-override relationship may be more readily reconstructed, while other Chronic routes remain possible outside this specific cycle model.</dd><dt>Gradient</dt><dd>Position, depth, recruitment thresholds and resource allocation may become narrower, deeper or more rapidly reconstructed.</dd><dt>Capacity</dt><dd>ESS readability, flexibility, recovery and integration may become more constrained—not necessarily absent or permanent.</dd></dl></article>
+          </div>
+          <div class="activation-return" aria-label="How repeated ESC outcomes connect to chronic Gradient organisation"><div><b>Cycle outcome</b>Completion, partial completion, continuing demand or incompletion closes the current pass.</div><div class="activation-arrow" aria-hidden="true">→</div><div><b>Carryover + learning</b>Prediction, ESS usability, route availability, thresholds, resources and cost may change.</div><div class="activation-arrow" aria-hidden="true">→</div><div><b>Next organisation</b>The Gradient records the configuration from which the next cycle now begins.</div></div>
+          <p class="lead" style="margin-top:18px">The Gradient describes the organisation present at each moment. ESC explains how outcomes and learning can contribute to the organisation encountered later. Fluid activation becomes relevant to chronicity because of persistence, recurrence, restricted updating, accumulated cost or continuing conditions—not because mobilisation was intense. In research contexts, <em>acute</em> still names the event timescale; in the ESC model, <em>Fluid</em> names the cycle’s responsiveness to present conditions and feedback.</p>
+        </section>
+
+        <section id="vocabulary">
+          <div class="section-head">
+            <div><p class="section-kicker">09 · Shared vocabulary</p><h2>Different words own different changes</h2></div>
+            <p>These processes can overlap, but collapsing them into “regulation” hides what actually changed and which model should describe it.</p>
+          </div>
+          <div class="terms">
+            <article class="term"><span class="mini-label">Organisation</span><h3>Regulation</h3><p>The ongoing organisation and allocation of biological resources and capacities in relation to current demands. It does not mean calm.</p></article>
+            <article class="term"><span class="mini-label">Condition + response</span><h3>Completion</h3><p>The relevant condition has been met, changed, escaped, repaired, recognised or sufficiently updated so the previous recruitment is no longer required.</p></article>
+            <article class="term"><span class="mini-label">Reorganisation</span><h3>Return</h3><p>Movement toward a more flexible Gradient organisation when the previous demand no longer requires the same allocation of resources.</p></article>
+            <article class="term"><span class="mini-label">Restoration</span><h3>Recovery</h3><p>The replenishment, repair and settling processes that continue after or alongside Return. Recovery may take longer than the triggering event.</p></article>
+            <article class="term"><span class="mini-label">Changed expectation</span><h3>Learning</h3><p>Outcome information changes later prediction, weighting, access, skill, threshold or response availability.</p></article>
+            <article class="term"><span class="mini-label">Coordinated availability</span><h3>Integration</h3><p>Previously separated information, capacities or responses become more jointly accessible and usable by ME across later situations.</p></article>
+          </div>
+        </section>
+
+        <section id="handoffs">
+          <div class="section-head">
+            <div><p class="section-kicker">10 · Ownership and links</p><h2>ESC connects the system without swallowing it</h2></div>
+            <p>Each page answers a different governing question. The links below are interfaces, not additional stages inside ESC.</p>
+          </div>
+          <div class="handoff-list">
+            <div class="handoff m1"><span class="owner">Model 1</span><strong><a href="../02-model-1-ess-cls-me/index.html">ESS · CLS · ME</a></strong><p>Owns information processing, access and conscious participation: what ESS registers, what CLS interprets and what ME can use.</p></div>
+            <div class="handoff m2"><span class="owner">Model 2</span><strong><a href="../03-model-2-gradient/index.html">Nervous System Gradient</a></strong><p>Owns present organism organisation: Position, depth, resource allocation, capacity availability, updating and Return.</p></div>
+            <div class="handoff m3"><span class="owner">Model 3 · This page</span><strong>Emotional–Somatic Cycle (ESC)</strong><p>Owns movement through time: entry, detection, response, outcome, completion or incompletion, cascade, carryover, learning and later entry.</p></div>
+            <div class="handoff map"><span class="owner">Reference map</span><strong><a href="../01-signal-map/emotion/fluid.html">Emotional Signal Map</a></strong><p>Owns differentiated emotional information and condition-matched completion routes; it is not a fourth causal model.</p></div>
+            <div class="handoff fw"><span class="owner">Explanatory layers</span><strong><a href="../05-frameworks/index.html">F1–F12</a></strong><p>Explain why a cycle may develop, persist, reorganise, become relationally patterned or operate across collective scale. They are not stages in the cycle.</p></div>
+          </div>
+        </section>
+
+        <section id="boundaries">
+          <div class="section-head">
+            <div><p class="section-kicker">11 · Scientific boundary</p><h2>The components have research homes</h2></div>
+            <p>The complete two-cycle architecture and its exact assembly remain a TEG-Blue synthesis requiring claim-by-claim grounding.</p>
+          </div>
+          <div class="boundary-grid">
+            <article class="boundary"><span class="mini-label">Component evidence</span><h3>Detection, mobilisation and recovery</h3><p>Emotion processes, autonomic and endocrine recruitment, interoception, action readiness, stress-response termination, physiological recovery and learning.</p></article>
+            <article class="boundary"><span class="mini-label">Component evidence</span><h3>Persistence and updating</h3><p>Allostasis, perseverative cognition, state-dependent processing, reinforcement, habit, social buffering and context-dependent capacity restriction.</p></article>
+            <article class="boundary"><span class="mini-label">Supported interpretation</span><h3>Relief and completion can diverge</h3><p>Immediate pressure can change without establishing that the relevant condition, prediction or organism organisation has sufficiently updated.</p></article>
+            <article class="boundary"><span class="mini-label">Evidence plane</span><h3>Behaviour and harm remain separate</h3><p>No internal cycle configuration establishes intention, diagnosis, moral character, coercion, safety or what another person owes.</p></article>
+          </div>
+          <div class="synthesis"><span class="mini-label">TEG-Blue synthesis / hypothesis</span><p>The shared ESC event spine, Fluid and Chronic Cognitive-Override comparison, seven-layer override audit, cascade structure, carryover formulation and exact interfaces among ESS, CLS, ME and the Nervous System Gradient presented here are theoretical model architecture—not established biological mechanisms in this assembled form. The focused <a href="grounding/ESC-cognitive-override-grounding.md">Cognitive-Override evidence pass</a> grounds the component distinctions and feedback routes while retaining that boundary. Apply the <a href="../evidence/protocol.html">Science Grounding Protocol</a> before strengthening any causal claim.</p></div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer"><span>TEG-Blue · The Emotional–Somatic Cycle (ESC) · Canonical Model 3 page</span><span>Fluid and Chronic Cognitive-Override Cycles · Not a diagnostic tool</span></footer>
+  </div>
+</body>
+</html>

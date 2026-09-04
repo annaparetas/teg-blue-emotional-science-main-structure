@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Science Grounding Protocol — Fluid and Chronic Gradients</title>
+  <link rel="stylesheet" href="../assets/page-responsibility.css">
+<style>
+  :root {
+    --ink: #0b1f42;
+    --ink-soft: #24365c;
+    --body: #3c4c6d;
+    --muted: #64748b;
+    --line: #dbe3ef;
+    --paper: #ffffff;
+    --ground: #f6f8fc;
+    --fluid: #6eeafb;
+    --fluid-deep: #087f91;
+    --chronic: #ef823a;
+    --chronic-deep: #a94c18;
+    --bridge: #b6fc50;
+    --caution: #f7d448;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--ground); color: var(--ink);
+    font: 15px/1.58 ui-sans-serif, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-underline-offset: 3px; }
+  .wrap { width: min(1320px, calc(100% - 48px)); margin: 0 auto; }
+  h1, h2, h3 { font-family: ui-serif, Georgia, "Times New Roman", serif; }
+
+  .hero { padding: 64px 0 46px; background: var(--ink); color: #fff; }
+  .eyebrow {
+    margin: 0 0 15px; color: var(--bridge); font-size: 11px; font-weight: 800;
+    letter-spacing: .12em; text-transform: uppercase;
+  }
+  h1 {
+    max-width: 940px; margin: 0; font-size: clamp(40px, 6vw, 72px);
+    font-weight: 540; line-height: 1; letter-spacing: -.04em;
+  }
+  .hero-intro {
+    max-width: 830px; margin: 24px 0 0; color: #d7e1f3;
+    font-size: clamp(17px, 2vw, 20px);
+  }
+
+  .question-pair {
+    display: grid; grid-template-columns: 1fr 86px 1fr;
+    margin-top: 38px; border: 1px solid rgba(255,255,255,.18);
+    border-radius: 16px; overflow: hidden;
+  }
+  .question {
+    min-height: 190px; padding: 24px 26px 26px;
+    background: rgba(255,255,255,.055);
+  }
+  .question-label {
+    display: inline-block; margin-bottom: 13px; padding: 4px 9px;
+    border-radius: 999px; color: var(--ink); font-size: 10px;
+    font-weight: 850; letter-spacing: .08em; text-transform: uppercase;
+  }
+  .fluid .question-label { background: var(--fluid); }
+  .chronic .question-label { background: var(--chronic); }
+  .question h2 { margin: 0 0 9px; color: #fff; font-size: 22px; font-weight: 580; }
+  .question p { margin: 0; color: #c6d5ef; }
+  .hinge {
+    display: grid; place-items: center; padding: 12px;
+    background: var(--caution); color: var(--ink); text-align: center;
+    font: 800 10px/1.35 ui-monospace, SFMono-Regular, Menlo, monospace;
+    letter-spacing: .07em; text-transform: uppercase;
+  }
+
+  main { padding: 56px 0 88px; }
+  section { margin-bottom: 72px; }
+  .section-head { max-width: 840px; margin-bottom: 23px; }
+  .section-head h2 { margin: 0 0 8px; font-size: 29px; font-weight: 600; }
+  .section-head p { margin: 0; color: var(--body); }
+
+  .core-rule {
+    display: grid; grid-template-columns: 210px 1fr; gap: 22px;
+    padding: 22px 24px; border-left: 5px solid var(--bridge);
+    background: var(--paper); box-shadow: 0 1px 2px rgba(11,31,66,.06);
+  }
+  .core-rule strong { font-size: 17px; }
+  .core-rule p { margin: 0; color: var(--body); }
+
+  .protocol-table {
+    overflow-x: auto; border: 1px solid var(--line); border-radius: 14px;
+    background: var(--paper); box-shadow: 0 1px 2px rgba(11,31,66,.05);
+  }
+  table { width: 100%; min-width: 940px; border-collapse: collapse; }
+  th, td { padding: 15px 17px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child > * { border-bottom: 0; }
+  tr > *:last-child { border-right: 0; }
+  thead th { color: var(--ink); font-size: 12px; text-align: left; }
+  thead th:first-child { width: 18%; background: #f3f6fb; }
+  thead .fluid-head { width: 41%; background: #eefdff; border-top: 4px solid var(--fluid); }
+  thead .chronic-head { width: 41%; background: #fff3e9; border-top: 4px solid var(--chronic); }
+  tbody th { background: #f8fafd; color: var(--ink-soft); font-size: 12.5px; text-align: left; }
+  tbody td { color: var(--body); font-size: 13px; }
+
+  .domain-grid, .boundary-grid, .evidence-axes {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px;
+  }
+  .domain-card, .boundary-card, .label-axis {
+    padding: 21px 22px; border: 1px solid var(--line); border-radius: 14px;
+    background: var(--paper); box-shadow: 0 1px 2px rgba(11,31,66,.05);
+  }
+  .domain-card { border-top: 4px solid var(--accent); }
+  .domain-card h3, .boundary-card h3, .label-axis h3 { margin: 0 0 10px; font-size: 18px; font-weight: 600; }
+  .domain-card ul, .boundary-card ul { margin: 0; padding-left: 19px; color: var(--body); }
+  .domain-card li + li, .boundary-card li + li { margin-top: 6px; }
+  .domain-card p, .boundary-card p, .label-axis p { margin: 0; color: var(--body); font-size: 13.5px; }
+
+  .bridge-strip {
+    grid-column: 1 / -1; padding: 18px 21px;
+    border: 1px solid #d9efb7; border-radius: 12px; background: #f7ffe9;
+  }
+  .bridge-strip strong { display: block; margin-bottom: 4px; }
+  .bridge-strip p { margin: 0; color: var(--body); font-size: 13.5px; }
+
+  .boundary-card.include { border-left: 5px solid var(--bridge); }
+  .boundary-card.stop { border-left: 5px solid var(--caution); }
+  .boundary-card strong { color: var(--ink); }
+
+  .label-axis { border-top: 4px solid var(--accent); }
+  .label-list { display: grid; gap: 9px; margin: 16px 0 0; }
+  .label-list div {
+    display: grid; grid-template-columns: 108px 1fr; gap: 11px;
+    padding-top: 9px; border-top: 1px solid var(--line);
+  }
+  .label-list dt {
+    margin: 0; color: var(--ink); font: 800 11px/1.35 ui-monospace, SFMono-Regular, Menlo, monospace;
+    letter-spacing: .04em;
+  }
+  .label-list dd { margin: 0; color: var(--body); font-size: 12.5px; }
+  .label-example {
+    grid-column: 1 / -1; margin: 0; padding: 14px 17px;
+    border: 1px solid #d9efb7; border-radius: 10px; background: #f7ffe9;
+    color: var(--body); font-size: 13px;
+  }
+  .label-example code { color: var(--ink); font-weight: 800; }
+
+  .research-program {
+    display: grid; grid-template-columns: minmax(220px, .75fr) minmax(0, 1.25fr);
+    overflow: hidden; border: 1px solid var(--line); border-top: 4px solid var(--chronic);
+    border-radius: 14px; background: var(--paper);
+  }
+  .program-intro { padding: 22px 24px; background: #fff3e9; }
+  .program-intro h3 { margin: 0 0 9px; font-size: 21px; }
+  .program-intro p { margin: 0; color: var(--body); font-size: 13.5px; }
+  .program-layers {
+    display: grid; grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 1px; margin: 0; padding: 0; list-style: none; background: var(--line);
+  }
+  .program-layers li { padding: 12px 15px; background: var(--paper); color: var(--body); font-size: 12.5px; }
+  .program-layers strong { color: var(--ink); }
+
+  .record {
+    display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px; overflow: hidden; border: 1px solid var(--line);
+    border-radius: 13px; background: var(--line);
+  }
+  .record div { padding: 15px 17px; background: var(--paper); }
+  .record dt { margin: 0 0 4px; color: var(--ink); font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; }
+  .record dd { margin: 0; color: var(--body); font-size: 12.5px; }
+
+  .sources { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; }
+  .source-column {
+    overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--paper);
+  }
+  .source-column > h3 {
+    margin: 0; padding: 15px 18px; border-top: 4px solid var(--accent);
+    border-bottom: 1px solid var(--line); font-size: 18px;
+  }
+  .source-list { margin: 0; padding: 0; list-style: none; }
+  .source-list li { padding: 14px 18px; border-bottom: 1px solid var(--line); }
+  .source-list li:last-child { border-bottom: 0; }
+  .source-list a { color: var(--ink-soft); font-weight: 750; }
+  .source-list span { display: block; margin-top: 4px; color: var(--muted); font-size: 11.5px; line-height: 1.45; }
+
+  .scope-note {
+    margin-top: 16px; padding: 15px 17px; background: #fff9de;
+    border-left: 4px solid var(--caution); color: var(--body); font-size: 12.5px;
+  }
+  .question-zero {
+    display: grid; grid-template-columns: minmax(190px,.65fr) minmax(0,1.35fr);
+    gap: 1px; overflow: hidden; border: 1px solid var(--line);
+    border-top: 4px solid var(--bridge); border-radius: 14px; background: var(--line);
+  }
+  .question-zero > div { padding: 22px 24px; background: var(--paper); }
+  .question-zero .zero-prompt { background: #f7ffe9; }
+  .question-zero h3 { margin: 0 0 8px; font-size: 21px; }
+  .question-zero p { margin: 0; color: var(--body); font-size: 13.5px; }
+  .question-zero ul { margin: 0; padding-left: 19px; color: var(--body); }
+  .question-zero li + li { margin-top: 6px; }
+  .working-link { margin-top: 14px !important; font-size: 12.5px !important; }
+  .back { display: inline-block; margin-top: 8px; color: var(--muted); font-size: 13px; }
+
+  @media (max-width: 900px) {
+    .question-pair { grid-template-columns: 1fr; }
+    .hinge { min-height: 54px; }
+    .domain-grid, .boundary-grid, .evidence-axes, .sources { grid-template-columns: 1fr; }
+    .bridge-strip { grid-column: auto; }
+    .label-example { grid-column: auto; }
+    .research-program { grid-template-columns: 1fr; }
+    .question-zero { grid-template-columns: 1fr; }
+    .record { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  }
+  @media (max-width: 620px) {
+    .wrap { width: min(100% - 28px, 1320px); }
+    .hero { padding-top: 42px; }
+    .core-rule { grid-template-columns: 1fr; gap: 6px; }
+    .program-layers, .record { grid-template-columns: 1fr; }
+  }
+  @media print {
+    body { background: #fff; }
+    .hero { padding: 30px 0; }
+    section { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+  <div class="carried-banner" role="note"><strong>Carried page · status approved protocol.</strong> The Science Grounding Protocol: the governing rule, question zero, the two searches, the evidence families, the selection boundaries, the protected research programme, the two labels and the minimum record. Governing since 22 August 2026; carried on 3 September 2026. <a href="index.html">Back to the Evidence canon page →</a></div>
+<header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">TEG-Blue · evidence selection protocol</p>
+      <h1>One Gradient, two scientific questions</h1>
+      <p class="hero-intro">Fluid and Chronic organisation can involve some of the same biological systems. They cannot be grounded by making the same inference from the same study. The difference lies in the time window, the comparison and what the evidence is being asked to explain. <a href="../03-model-2-gradient/premise.html">Read the governing model premise →</a> <a href="../foundations/notes/20-working-architectural-language.md">Read the architectural-language rule →</a></p>
+      <div class="question-pair" aria-label="The two grounding questions">
+        <article class="question fluid">
+          <span class="question-label">Fluid Gradient</span>
+          <h2>What changes while present conditions change?</h2>
+          <p>Follow state-dependent allocation, action, updating and Return while the environmental event and the organism’s response remain coupled.</p>
+        </article>
+        <div class="hinge">Same organism<br>different inference</div>
+        <article class="question chronic">
+          <span class="question-label">Chronic Survival</span>
+          <h2>What was learned, and what stays available after conditions change?</h2>
+          <p>Follow development, repetition, altered thresholds, generalisation, persistence and recovery when organisation may no longer match the present environment.</p>
+        </article>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <aside class="page-responsibility" aria-label="Page responsibility">
+      <div class="page-responsibility__heading">
+        <p class="page-responsibility__label">Page responsibility · Evidence protocol</p>
+        <p class="page-responsibility__scope">Scientific-facing scope · claim decomposition, study-design matching, evidence classification and inference boundaries</p>
+      </div>
+      <p class="page-responsibility__question"><strong>Governing question</strong>What kind of claim is being made, and what evidence can support that claim without being asked to prove something else?</p>
+      <div class="page-responsibility__grid">
+        <div class="page-responsibility__item"><strong>This page owns</strong><p>The grounding workflow: separating claims, matching time window and comparison, recording evidence status and limiting inference.</p></div>
+        <div class="page-responsibility__item"><strong>It receives</strong><p>Decomposed claims from the Signal Map, the three models, companion pages and F1–F12 reviews, together with the <a href="../foundations/notes/20-working-architectural-language.md">three-level architectural-language rule</a>.</p></div>
+        <div class="page-responsibility__item"><strong>It does not establish</strong><p>That one study validates the whole architecture or that TEG-Blue synthesis is an established mechanism, diagnosis or clinical instrument.</p></div>
+      </div>
+    </aside>
+
+    <section aria-labelledby="rule-title">
+      <div class="core-rule">
+        <strong id="rule-title">The governing rule</strong>
+        <p><strong>Match the study design to the claim.</strong> Acute experiments can ground immediate organisation but not the developmental origin of a recurrent pattern. Cross-sectional group differences can locate an association but cannot show how it formed. A chronic diagnosis cannot stand in for a Gradient Position, and behaviour alone cannot reveal a person’s history or internal mechanism.</p>
+        <p><strong>Match the evidential demand to the level.</strong> Established findings ground functional territory; convergent findings can support a grounded synthesis; TEG-Blue terminology organises that synthesis. A Level 3 architectural term does not need to appear under the same name in Level 1 research.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="question-zero-title">
+      <div class="section-head">
+        <h2 id="question-zero-title">Before the two searches: identify the kind of claim</h2>
+        <p>The same sentence can contain a biological observation, an interpretation of lived experience, a developmental proposal and an ethical conclusion. Those parts need to be separated before evidence is selected.</p>
+      </div>
+      <div class="question-zero">
+        <div class="zero-prompt">
+          <h3>Question zero</h3>
+          <p><strong>What kind of claim is this, at what level of human life, and what kind of knowledge could responsibly inform it?</strong></p>
+          <p class="working-link"><a href="reviews/scientific-lineage-and-integrative-grounding.md">Open the working integrative-grounding foundation →</a></p>
+        </div>
+        <div>
+          <ul>
+            <li><strong>Locate the level:</strong> biological, experiential, developmental, relational, behavioural and ethical, or material, cultural and systemic.</li>
+            <li><strong>Name the timescale:</strong> moment, event, repeated, developmental, intergenerational or institutional and historical.</li>
+            <li><strong>Choose the knowledge family:</strong> empirical research, clinical practice, lived experience, social or cultural scholarship, philosophical and ethical work, community knowledge, education, design or AI research.</li>
+            <li><strong>Protect the boundary:</strong> one level may inform another, but it cannot silently replace it.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="comparison-title">
+      <div class="section-head">
+        <h2 id="comparison-title">How the searches must differ</h2>
+        <p>These are selection rules for future cell-by-cell grounding, not claims that every listed process is already established for every Position.</p>
+      </div>
+      <div class="protocol-table">
+        <table>
+          <thead>
+            <tr><th scope="col">Search decision</th><th scope="col" class="fluid-head">Fluid Gradient</th><th scope="col" class="chronic-head">Chronic Survival</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Primary question</th><td>How does organisation change as safety, uncertainty, threat, persistence or imminence changes now?</td><td>How do repeated or developmental conditions change what is expected, prioritised, inhibited, generalised or difficult to release?</td></tr>
+            <tr><th scope="row">Unit of analysis</th><td>State and within-person transition: reactivity, allocation, action, updating and Return.</td><td>Learning trajectory and recurrent organisation: threshold, default, persistence, generalisation, recovery and context sensitivity.</td></tr>
+            <tr><th scope="row">Time window</th><td>Seconds, minutes, hours and the immediate recovery period; days when using intensive within-person sampling.</td><td>Repeated episodes, developmental periods, months or years; include timing, duration, recency and opportunities for repair.</td></tr>
+            <tr><th scope="row">Priority designs</th><td>Within-person experiments, condition manipulation, time-resolved physiology, repeated measures, ecological momentary assessment and recovery paradigms.</td><td>Prospective longitudinal cohorts, repeated developmental observation, exposure-timing designs, learning/generalisation studies, natural experiments and intervention or recovery follow-up.</td></tr>
+            <tr><th scope="row">Required comparator</th><td>The same person or comparable participants across clearly specified present conditions and time points.</td><td>Exposure and non-exposure groups with appropriate controls; repeated measurement before and after learning, adversity or intervention; present threat separated from learned expectation.</td></tr>
+            <tr><th scope="row">What must be measured</th><td>Environmental condition plus one or more response channels: behaviour, report, autonomic/endocrine measure, cognition, neural activity and recovery.</td><td>The conditions or learning history, timing and dose; the proposed process; present context; recurrence or persistence; functioning, change and alternative explanations.</td></tr>
+            <tr><th scope="row">Recovery test</th><td>Does organisation widen, update or relinquish protection when conditions change?</td><td>Can the learned organisation discriminate new safety, vary by context and change through lived safety, support, accountability, practice or intervention?</td></tr>
+            <tr><th scope="row">Prohibited leap</th><td>Do not turn an acute average into a fixed stage, universal sequence or total loss of a capacity.</td><td>Do not turn an association, diagnosis or group mean into a person’s origin story, personality, inevitable outcome or unique biological state.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="domains-title">
+      <div class="section-head">
+        <h2 id="domains-title">Science domains to recruit intentionally</h2>
+        <p>Some domains bridge both tables, but their role changes with the question.</p>
+      </div>
+      <div class="domain-grid">
+        <article class="domain-card" style="--accent:var(--fluid)">
+          <h3>Fluid evidence families</h3>
+          <ul>
+            <li>Homeostasis, allostasis and moment-to-moment interoceptive processing.</li>
+            <li>Acute stress physiology, threat imminence and defensive action.</li>
+            <li>Attention, working memory, inhibition, pain modulation and action selection under present demand.</li>
+            <li>Safety learning, uncertainty, prediction error and rapid updating.</li>
+            <li>Social safety, co-regulation, affective sharing, mentalizing and empathic concern.</li>
+            <li>Recovery dynamics: reactivity, Return, restoration and renewed flexibility.</li>
+          </ul>
+        </article>
+        <article class="domain-card" style="--accent:var(--chronic)">
+          <h3>Chronic evidence families</h3>
+          <ul>
+            <li>Developmental psychobiology, attachment, caregiving and co-regulation.</li>
+            <li>Threat, deprivation and unpredictability considered separately rather than collapsed into one adversity score.</li>
+            <li>Emotion socialisation: coaching, dismissal, punishment, invalidation and suppression.</li>
+            <li>Repeated and prolonged stress, cumulative load and impaired recovery.</li>
+            <li>Conditioning, sensitisation, threat generalisation, safety discrimination and extinction.</li>
+            <li>Habit, perseverative cognition, learned controllability and context-insensitive prediction.</li>
+            <li>Dissociation, immobility, exhaustion, relational adaptation and recovery across time.</li>
+          </ul>
+        </article>
+        <div class="bridge-strip">
+          <strong>Bridge domains do not erase the distinction.</strong>
+          <p>Stress neurobiology, learning, predictive processing, interoception, social cognition and autonomic regulation may inform both tables. Fluid asks how they allocate resources during a present event. Chronic asks how experience changes their thresholds, coupling, interpretation, recurrence and capacity to update.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="boundaries-title">
+      <div class="section-head">
+        <h2 id="boundaries-title">Selection boundaries</h2>
+        <p>A source belongs only when its methods can carry the claim assigned to it.</p>
+      </div>
+      <div class="boundary-grid">
+        <article class="boundary-card include">
+          <h3>Include or prioritise when</h3>
+          <ul>
+            <li>The population, condition, timescale and comparator are explicit.</li>
+            <li>The measured variable matches the proposed process rather than merely sitting nearby.</li>
+            <li>State change is separated from stable individual difference.</li>
+            <li>Present threat is distinguished from learned threat expectation.</li>
+            <li>Null, mixed and resilience findings are retained alongside confirming results.</li>
+            <li>The source permits a narrower claim than the Gradient cell currently makes.</li>
+          </ul>
+        </article>
+        <article class="boundary-card stop">
+          <h3>Stop, narrow or relabel when</h3>
+          <ul>
+            <li>A single autonomic, hormonal or neural marker is treated as proof of a whole Position.</li>
+            <li>Animal findings are presented as direct evidence of human subjective or relational experience.</li>
+            <li>A clinical diagnosis is treated as one mechanism or one Chronic organisation.</li>
+            <li>Cross-sectional correlation is written as developmental causation.</li>
+            <li>Actual ongoing danger is relabelled as an outdated response or context mismatch.</li>
+            <li>Reduced task performance is called absence of empathy, awareness or moral concern.</li>
+            <li>A protective origin is used to infer intent or erase impact, responsibility and repair.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="override-title">
+      <div class="section-head">
+        <h2 id="override-title">Protected research programme: being taught to override emotion</h2>
+        <p>This question belongs to the Chronic search, but it must be investigated before any Chronic process row is rewritten.</p>
+      </div>
+      <div class="research-program">
+        <div class="program-intro">
+          <h3>Do not treat “overriding” as one event or one outcome</h3>
+          <p>Emotion socialisation may affect what is expressed, attended to, believed, named, regulated or acted upon. Hidden expression does not prove absent feeling, and absent naming does not prove absent bodily representation.</p>
+        </div>
+        <ol class="program-layers">
+          <li><strong>1 · Signal generation</strong><br>Did the emotional signal arise?</li>
+          <li><strong>2 · Bodily representation</strong><br>Was its internal bodily pattern represented?</li>
+          <li><strong>3 · Subjective access</strong><br>Could the person feel or identify it?</li>
+          <li><strong>4 · Expression</strong><br>Could it be shown, spoken or made visible?</li>
+          <li><strong>5 · Regulation</strong><br>Was it modulated, suppressed, amplified or avoided?</li>
+          <li><strong>6 · Action</strong><br>Could its information influence behaviour or boundaries?</li>
+          <li><strong>7 · Emotion belief</strong><br>Was the emotion treated as acceptable, safe, useful or dangerous?</li>
+          <li><strong>Required context</strong><br>Who responded, how consistently, under what cultural and material conditions, and whether repair was available?</li>
+        </ol>
+      </div>
+    </section>
+
+    <section aria-labelledby="status-title">
+      <div class="section-head">
+        <h2 id="status-title">Two evidence labels for every future cell</h2>
+        <p>One axis records how closely the evidence matches the claim. The other records how strong, mixed or incomplete that evidence is. Keeping them separate prevents “indirect but replicated” from being confused with “directly tested.”</p>
+      </div>
+      <div class="evidence-axes">
+        <article class="label-axis" style="--accent:var(--fluid)">
+          <h3>Axis 1 · Relationship to the claim</h3>
+          <p>How far does the source travel before it reaches the cell?</p>
+          <dl class="label-list">
+            <div><dt>DIRECT</dt><dd>Tests substantially the same process, condition and timescale.</dd></div>
+            <div><dt>BRIDGE</dt><dd>Supports a component mechanism, but not the complete cell or Position.</dd></div>
+            <div><dt>INDIRECT</dt><dd>Uses animal, clinical, trait-level or neighbouring-construct evidence requiring translation.</dd></div>
+            <div><dt>TEG-BLUE</dt><dd>Marks project integration or interpretation not directly tested.</dd></div>
+          </dl>
+        </article>
+        <article class="label-axis" style="--accent:var(--chronic)">
+          <h3>Axis 2 · Strength and consistency</h3>
+          <p>How stable is the result across the available evidence?</p>
+          <dl class="label-list">
+            <div><dt>A · CONVERGENT</dt><dd>Replicated across strong studies or methods.</dd></div>
+            <div><dt>B · SUPPORTED</dt><dd>Supported by several studies but heterogeneous or context-dependent.</dd></div>
+            <div><dt>C · PRELIMINARY</dt><dd>Limited samples, single studies or an early literature.</dd></div>
+            <div><dt>M · MIXED</dt><dd>Credible findings disagree or moderators change the direction.</dd></div>
+            <div><dt>U · UNTESTED</dt><dd>No adequate direct test has been located.</dd></div>
+          </dl>
+        </article>
+        <p class="label-example"><strong>Example:</strong> <code>BRIDGE–B</code> means several studies support a component mechanism, while <code>TEG-BLUE–U</code> clearly identifies an integration the project proposes but science has not directly tested.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="record-title">
+      <div class="section-head">
+        <h2 id="record-title">Minimum record for a selected source</h2>
+        <p>A citation should remain traceable to what it can—and cannot—support.</p>
+      </div>
+      <dl class="record">
+        <div><dt>Claim</dt><dd>The exact cell sentence or clause being tested.</dd></div>
+        <div><dt>Population</dt><dd>Species, age, sample, clinical status and relevant context.</dd></div>
+        <div><dt>Condition</dt><dd>Present event, exposure history, manipulation and comparator.</dd></div>
+        <div><dt>Timescale</dt><dd>Acute, recovery, repeated, developmental or longitudinal.</dd></div>
+        <div><dt>Measure</dt><dd>Behaviour, report, physiology, hormone, neural signal or observation.</dd></div>
+        <div><dt>Finding</dt><dd>What changed, for whom, compared with what and with what uncertainty.</dd></div>
+        <div><dt>Inference limit</dt><dd>What the design cannot establish.</dd></div>
+        <div><dt>Evidence labels</dt><dd>Relationship label plus strength label, for example DIRECT–B or TEG-BLUE–U.</dd></div>
+        <div><dt>Claim level</dt><dd>Biological, experiential, developmental, relational, behavioural and ethical, or material, cultural and systemic.</dd></div>
+        <div><dt>Knowledge family</dt><dd>The kind of source and the role it can responsibly play in this claim.</dd></div>
+        <div><dt>Current construct</dt><dd>The present Model 1, Model 2 or wider TEG-Blue construct the source is being asked to inform.</dd></div>
+        <div><dt>Last reviewed</dt><dd>Date the search, source record and cell wording were last checked.</dd></div>
+      </dl>
+    </section>
+
+    <section aria-labelledby="anchors-title">
+      <div class="section-head">
+        <h2 id="anchors-title">Initial evidence anchors</h2>
+        <p>These studies demonstrate the kinds of designs each search needs. They are starting points, not a completed source trace.</p>
+      </div>
+      <div class="sources">
+        <article class="source-column" style="--accent:var(--fluid)">
+          <h3>Fluid design anchors</h3>
+          <ul class="source-list">
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/17717184/">Mobbs et al. (2007) · threat imminence</a><span>Human active-avoidance experiment showing organisation changes as a threat approaches. It supports graded present-condition effects, not fixed personality stages.</span></li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/22116887/">Hermans et al. (2011) · acute stress network reconfiguration</a><span>Experimental human evidence linking acute stress and noradrenergic participation to large-scale network reconfiguration. It does not define one complete Gradient Position.</span></li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/27129794/">Kanske et al. (2016) · affective sharing and mentalizing</a><span>Behavioural and neural evidence that empathy and mentalizing are dissociable. It supports separate rows, not perfect inference about either process in one person.</span></li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/39530726/">Toledo et al. (2024) · real-time stress dynamics</a><span>Intensive within-person sampling distinguishes reactivity, recovery and stressor pile-up. It illustrates why dynamic Fluid claims require moment-level data.</span></li>
+          </ul>
+        </article>
+        <article class="source-column" style="--accent:var(--chronic)">
+          <h3>Chronic design anchors</h3>
+          <ul class="source-list">
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/25280904/">Gee et al. (2014) · caregiver buffering</a><span>Developmental human evidence that caregiver presence can alter regulation and amygdala–prefrontal coupling during childhood. It supports developmental context, not a universal pathway.</span></li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/23627952/">Halligan et al. (2013) · longitudinal regulation development</a><span>Repeated observation from infancy to age five links psychosocial risk, maternal sensitivity and regulation trajectories. Associations still require care with causal wording.</span></li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/29282161/">Stegmann et al. (2018) · fear generalisation</a><span>Experimental comparison in adults with prolonged childhood-maltreatment-related PTSD separates risk judgement, uncertainty and generalisation components.</span></li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/39133049/">Edler et al. (2025) · parental responses to emotion</a><span>Longitudinal family-profile evidence connects emotion-dismissing patterns with later adjustment while preserving heterogeneity across caregivers and families.</span></li>
+          </ul>
+        </article>
+      </div>
+      <p class="scope-note"><strong>Counterevidence is part of grounding.</strong> A large prospective population cohort found no association between measured childhood adversity and facial-emotion recognition deficits (<a href="https://pubmed.ncbi.nlm.nih.gov/29512866/">population-based study, 2018</a>), while a longitudinal study found enhanced laboratory emotion-regulation capacity after moderate childhood adversity (<a href="https://pubmed.ncbi.nlm.nih.gov/26341903/">Schweizer et al., 2016</a>). Chronic research must therefore preserve adaptation, resilience, heterogeneity and null findings rather than assume uniform impairment.</p>
+    </section>
+
+    <section aria-labelledby="boundary-title">
+      <div class="core-rule">
+        <strong id="boundary-title">Current model boundary</strong>
+        <p>This protocol can guide responsible searching and wording. It does not establish the seven Fluid or seven Chronic Positions as validated biological categories, a clinical taxonomy or a method for reading a person’s history from behaviour. Where a claim goes beyond one study’s direct design, classify it as grounded synthesis or TEG-Blue integration according to whether the step is a convergent conclusion or the architecture used to organise it.</p>
+      </div>
+    </section>
+
+    <a class="back" href="../03-model-2-gradient/index.html">← Return to the Nervous System Organisation Gradient</a>
+  </main>
+</body>
+</html>

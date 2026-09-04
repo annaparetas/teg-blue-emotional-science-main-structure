@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Autonomic Organisation and Pathway Participation</title>
+  <link rel="stylesheet" href="../assets/page-responsibility.css">
+  <style>
+    :root{--ink:#0b1f42;--body:#405276;--muted:#71809a;--line:#d8e1f0;--paper:#fff;--wash:#f5f7fb;--cyan:#6eeafb;--lime:#b6fc50;--pending:#fff6d8}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}
+    body{margin:0;background:var(--wash);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+    a{color:inherit;text-underline-offset:3px}a:focus-visible{outline:3px solid var(--cyan);outline-offset:3px;border-radius:3px}
+    .shell{width:min(1220px,calc(100% - 32px));margin:0 auto;padding:54px 0 90px}
+    .back{display:inline-flex;margin-bottom:28px;font-size:13px;font-weight:750;color:var(--body)}
+    .hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);gap:28px;align-items:end;padding-bottom:34px;border-bottom:1px solid var(--line)}
+    .eyebrow{margin:0 0 10px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+    h1{max-width:850px;margin:0;font-family:ui-serif,Georgia,"Times New Roman",serif;font-size:clamp(38px,6vw,72px);font-weight:560;line-height:.98;letter-spacing:-.035em}
+    .hero-note{margin:0;padding:18px 20px;border-left:4px solid var(--lime);background:var(--paper);font-size:14px;color:var(--body)}
+    .question{max-width:1020px;margin:30px 0 0;padding:22px 24px;border:1px solid var(--ink);background:var(--paper);font:600 clamp(19px,2.4vw,28px)/1.35 ui-serif,Georgia,"Times New Roman",serif}
+    .question span{display:block;margin-bottom:8px;font:800 10px/1 ui-sans-serif,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+    .scope{max-width:930px;margin:22px 0 0;color:var(--body)}
+    .reading{margin-top:34px;padding:22px;border:1px solid var(--line);background:var(--paper);scroll-margin-top:24px}
+    .reading h2{margin:0 0 12px;font:600 25px/1.2 ui-serif,Georgia,serif}
+    .reading-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+    .reading-grid div{padding:14px;background:var(--paper)}.reading-grid h3{margin:0 0 5px;font-size:12px}.reading-grid p{margin:0;color:var(--body);font-size:12px}
+    .mode{margin-top:62px}.mode-head{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:end;margin-bottom:16px}
+    .mode-head p{margin:0;color:var(--body);font-size:13px}.mode-head div>p{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+    .mode-head h2{margin:2px 0 0;font:600 32px/1.1 ui-serif,Georgia,serif}
+    .position-rail{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;margin-bottom:12px}
+    .position-rail a{padding:9px 6px;border-top:4px solid var(--accent);background:var(--paper);text-align:center;text-decoration:none;font:800 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace}
+    .position-rail a:hover{box-shadow:inset 0 0 0 1px var(--ink)}
+    .entries{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .entry{scroll-margin-top:18px;border:1px solid var(--line);border-top:5px solid var(--accent);background:var(--paper);padding:20px}
+    .entry:target{border-color:var(--ink);box-shadow:0 0 0 2px var(--accent)}
+    .entry-head{display:grid;grid-template-columns:auto 1fr auto;gap:13px;align-items:center}
+    .entry-head>span{display:grid;place-items:center;min-width:45px;height:38px;border:1px solid var(--ink);border-radius:50%;font:800 13px/1 ui-monospace,SFMono-Regular,Menlo,monospace}
+    .entry-head p{margin:0;color:var(--muted);font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.07em}.entry-head h3{margin:1px 0 0;font:600 21px/1.2 ui-serif,Georgia,serif}
+    .entry-head a{font-size:10.5px;font-weight:750;color:var(--muted);white-space:nowrap}
+    .status{display:inline-block;margin:13px 0 15px;padding:4px 8px;background:var(--pending);font-size:10.5px;font-weight:750}
+    dl{display:grid;grid-template-columns:1fr 1fr;margin:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+    dl div{padding:10px 11px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}dl .wide{grid-column:1/-1}
+    dt{font-size:9.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}dd{margin:3px 0 0;font-size:11.5px;color:var(--body)}
+    footer{margin-top:62px;padding-top:20px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+    @media(max-width:760px){.shell{width:min(100% - 20px,1220px);padding-top:30px}.hero,.mode-head{grid-template-columns:1fr}.entries,.reading-grid{grid-template-columns:1fr}.position-rail{grid-template-columns:repeat(4,1fr)}dl{grid-template-columns:1fr}dl .wide{grid-column:auto}h1{font-size:42px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="carried-banner" role="note"><strong>Carried grounding page · status working.</strong> Autonomic participation for the fourteen organisations, without one-pathway state claims. Every entry is a functional synthesis awaiting paper-grounded review. Carried on 2 September 2026. <a href="index.html">Back to the Model 2 canon page →</a></div>
+<a class="back" href="index.html">← Return to the Gradient</a>
+    <a class="back" href="premise.html">Read the model premise →</a>
+    <header class="hero">
+      <div><p class="eyebrow">Working grounding index · 14 nervous system organisations</p><h1>Autonomic organisation is coordinated participation, not one pathway switched on.</h1></div>
+      <p class="hero-note">This file opens the compact Autonomic pathway row. It separates functional task, pathway participation, organ-level change, timing, conscious access and evidence limits.</p>
+    </header>
+    <aside class="page-responsibility" aria-label="Page responsibility">
+      <div class="page-responsibility__heading">
+        <p class="page-responsibility__label">Page responsibility · Model 2 physiology companion</p>
+        <p class="page-responsibility__scope">Scientific-facing scope · coordinated autonomic, central, endocrine, metabolic and organ-level participation across Gradient organisations</p>
+      </div>
+      <p class="page-responsibility__question"><strong>Governing question</strong>How may pathway participation, organ regulation and timing differ as the organism recruits different functional organisations?</p>
+      <div class="page-responsibility__grid">
+        <div class="page-responsibility__item"><strong>This page owns</strong><p>The expanded reading of the Gradient’s compact autonomic row, including pathway, organ, timing, measurement and evidence limits.</p></div>
+        <div class="page-responsibility__item"><strong>It receives</strong><p>The seven <a href="index.html">Gradient Positions</a> and the project’s <a href="../evidence/protocol.html">claim-matched grounding rules</a>.</p></div>
+        <div class="page-responsibility__item"><strong>It does not establish</strong><p>One pathway–one state identities, a body-wide switch, a vagal hierarchy or a complete organisation from behaviour, heart rate or HRV alone.</p></div>
+      </div>
+    </aside>
+    <p class="question"><span>Central research question</span>As the organism moves from restoration and connection through uncertainty, direct defence, sustained management, life threat and shutdown, how do the coordination, timing and functional role of autonomic pathways change?</p>
+    <p class="scope">The labels in the main table are functional shorthand. Sympathetic and parasympathetic activity can occur together; organs can show different patterns at the same time; neural and hormonal responses unfold on different timescales. No behaviour, feeling, heart-rate value or HRV value can establish a complete autonomic organisation by itself.</p>
+    <section class="reading" id="how-to-read-autonomic-organisation">
+      <h2>How to read autonomic organisation</h2>
+      <div class="reading-grid">
+        <div><h3>Not one exclusive branch</h3><p>An organisation coordinates sympathetic, parasympathetic, enteric, central, endocrine and metabolic participation according to the task.</p></div>
+        <div><h3>Not one body-wide setting</h3><p>Heart, lungs, blood vessels, digestion, pupils, bladder, temperature and muscle can be regulated differently within the same response.</p></div>
+        <div><h3>Not a diagnosis from behaviour</h3><p>Similar behaviour can arise through different physiology, and overlapping physiology can support different actions. Measurement and context must stay together.</p></div>
+      </div>
+    </section>
+
+    <section class="mode fluid" aria-labelledby="fluid-heading">
+      <header class="mode-head"><div><p>Responsive organisation</p><h2 id="fluid-heading">Fluid Gradient</h2></div><p>Autonomic participation changes with present conditions and can update when those conditions change.</p></header>
+      <nav class="position-rail" aria-label="Fluid Gradient positions"><a href="#fluid-x" style="--accent:#ffffff">X</a><a href="#fluid-a" style="--accent:#6eeafb">A</a><a href="#fluid-ab" style="--accent:#8ef3a6">A↔B</a><a href="#fluid-b" style="--accent:#b6fc50">B</a><a href="#fluid-c" style="--accent:#e3fd54">C</a><a href="#fluid-d" style="--accent:#f7d448">D</a><a href="#fluid-z" style="--accent:#a1adbf">Z</a></nav>
+      <div class="entries">
+        <article class="entry" id="fluid-x" style="--accent:#ffffff">
+          <header class="entry-head"><span>X</span><div><p>Fluid Gradient</p><h3>Baseline</h3></div><a href="positions.html#panel-fluid" aria-label="Return to Baseline in the Fluid Gradient table">↩ Main table</a></header>
+          <p class="status">Working synthesis · papers pending</p>
+          <dl>
+            <div><dt>Functional autonomic task</dt><dd>Restoration and internal maintenance while no defensive demand requires priority.</dd></div>
+            <div><dt>Likely pathway participation</dt><dd>Parasympathetic activity can support digestion, cardiac flexibility and recovery while sympathetic tone continues at ordinary background levels.</dd></div>
+            <div><dt>Organ-level pattern</dt><dd>Heart and breathing can vary flexibly; digestive, thermoregulatory and restorative processes remain available.</dd></div>
+            <div><dt>Timing</dt><dd>Neural autonomic adjustments occur continuously; endocrine and metabolic restoration unfolds across longer periods.</dd></div>
+            <div><dt>What may become conscious</dt><dd>Quiet breath, digestive activity, warmth, heaviness, comfort or tiredness may become perceptible without urgency.</dd></div>
+            <div><dt>What allows updating</dt><dd>A new demand can recruit orienting or defence; continued safety allows restoration to continue.</dd></div>
+            <div class="wide"><dt>Measurement and evidence limits</dt><dd>Baseline cannot be diagnosed from a low heart rate or high HRV. Organ systems can differ, and ordinary parasympathetic activity is not a unitary state.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="fluid-a" style="--accent:#6eeafb">
+          <header class="entry-head"><span>A</span><div><p>Fluid Gradient</p><h3>Connection / Belonging</h3></div><a href="positions.html#panel-fluid" aria-label="Return to Connection / Belonging in the Fluid Gradient table">↩ Main table</a></header>
+          <p class="status">Working synthesis · papers pending</p>
+          <dl>
+            <div><dt>Functional autonomic task</dt><dd>Support reciprocal social engagement, co-regulation and relational coordination while defensive demand may remain lower.</dd></div>
+            <div><dt>Likely pathway participation</dt><dd>Flexible parasympathetic and sympathetic coordination may support face, voice, listening, movement and engagement. Vagal cardiac regulation can participate without becoming a single ventral-vagal switch.</dd></div>
+            <div><dt>Organ-level pattern</dt><dd>Cardiac and respiratory timing can remain responsive to interaction while digestion, warmth and movement stay available.</dd></div>
+            <div><dt>Timing</dt><dd>Adjustment can track another person moment by moment; social buffering and recovery effects can continue after contact.</dd></div>
+            <div><dt>What may become conscious</dt><dd>Face, voice, breath, warmth, ease, energy and relational timing may be available together.</dd></div>
+            <div><dt>What allows updating</dt><dd>Connection updates from direct relational information. Separation, uncertainty or threat can recruit a different organisation.</dd></div>
+            <div class="wide"><dt>Measurement and evidence limits</dt><dd>Social engagement cannot be inferred from vagal tone alone. Ventral-vagal language is a functional shorthand, not a complete anatomical measurement.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="fluid-ab" style="--accent:#8ef3a6">
+          <header class="entry-head"><span>A↔B</span><div><p>Fluid Gradient</p><h3>Safety Checking</h3></div><a href="positions.html#panel-fluid" aria-label="Return to Safety Checking in the Fluid Gradient table">↩ Main table</a></header>
+          <p class="status">Working synthesis · papers pending</p>
+          <dl>
+            <div><dt>Functional autonomic task</dt><dd>Interrupt ongoing activity long enough to establish what changed and whether safety or belonging remains available.</dd></div>
+            <div><dt>Likely pathway participation</dt><dd>Brief sympathetic recruitment, parasympathetic adjustment and orienting circuits can combine as attention, posture, breath and sensory gain change.</dd></div>
+            <div><dt>Organ-level pattern</dt><dd>Heart rate, pupil size, skin conductance, muscle tone, head movement and breathing may shift while information is gathered.</dd></div>
+            <div><dt>Timing</dt><dd>Orienting is rapid and provisional. It should close or reorganise when enough information arrives.</dd></div>
+            <div><dt>What may become conscious</dt><dd>A stomach drop, held breath, skin change, stillness, widened attention or urge to look may become conscious.</dd></div>
+            <div><dt>What allows updating</dt><dd>Clear information can restore connection or baseline; confirmed danger can move organisation towards B.</dd></div>
+            <div class="wide"><dt>Measurement and evidence limits</dt><dd>No one autonomic measure separates curiosity, novelty, uncertainty and threat. The defining feature is functional updating, not arousal alone.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="fluid-b" style="--accent:#b6fc50">
+          <header class="entry-head"><span>B</span><div><p>Fluid Gradient</p><h3>Protection / Defence</h3></div><a href="positions.html#panel-fluid" aria-label="Return to Protection / Defence in the Fluid Gradient table">↩ Main table</a></header>
+          <p class="status">Working synthesis · papers pending</p>
+          <dl>
+            <div><dt>Functional autonomic task</dt><dd>Make rapid protection, resistance, escape, guarding or appeasement available under direct threat.</dd></div>
+            <div><dt>Likely pathway participation</dt><dd>Sympathetic neural signalling and possible cardiac vagal withdrawal support rapid mobilisation; parasympathetic processes may still participate by organ and response route.</dd></div>
+            <div><dt>Organ-level pattern</dt><dd>Heart, circulation, breathing, pupils, sweating, skeletal muscle, digestion and bladder function can be reprioritised around immediate action.</dd></div>
+            <div><dt>Timing</dt><dd>Autonomic changes begin within seconds; catecholamine and HPA participation unfold on overlapping but different timescales.</dd></div>
+            <div><dt>What may become conscious</dt><dd>Heartbeat, rapid breath, heat, cold, shaking, bracing, nausea or urgent movement may dominate awareness.</dd></div>
+            <div><dt>What allows updating</dt><dd>The response can reduce when danger ends, protection succeeds or a viable route becomes available.</dd></div>
+            <div class="wide"><dt>Measurement and evidence limits</dt><dd>Fight, flight, fawn and freezing do not have one diagnostic autonomic profile. Behaviour alone cannot reveal pathway activity.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="fluid-c" style="--accent:#e3fd54">
+          <header class="entry-head"><span>C</span><div><p>Fluid Gradient</p><h3>Strategic Management</h3></div><a href="positions.html#panel-fluid" aria-label="Return to Strategic Management in the Fluid Gradient table">↩ Main table</a></header>
+          <p class="status">Working synthesis · papers pending</p>
+          <dl>
+            <div><dt>Functional autonomic task</dt><dd>Sustain prediction, planning and management when threat persists across time.</dd></div>
+            <div><dt>Likely pathway participation</dt><dd>Continued sympathetic and autonomic-endocrine participation may support vigilance and effort while selected parasympathetic functions continue. Coordination can vary with controllability and task demands.</dd></div>
+            <div><dt>Organ-level pattern</dt><dd>Cardiovascular and muscular readiness may remain elevated; digestion, pain, fatigue and restorative processes can be backgrounded rather than absent.</dd></div>
+            <div><dt>Timing</dt><dd>Rapid autonomic adjustments are repeatedly recruited while slower endocrine, metabolic and immune effects accumulate and recover.</dd></div>
+            <div><dt>What may become conscious</dt><dd>Jaw, shoulder or chest tension, shallow breathing, restlessness or narrowed awareness of fatigue may be perceptible.</dd></div>
+            <div><dt>What allows updating</dt><dd>Resolution, reduced demand and enough time for recovery allow sustained mobilisation to stand down.</dd></div>
+            <div class="wide"><dt>Measurement and evidence limits</dt><dd>C cannot be defined as sustained sympathetic activation alone. Focused work, exercise and ordinary challenge can recruit overlapping physiology.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="fluid-d" style="--accent:#f7d448">
+          <header class="entry-head"><span>D</span><div><p>Fluid Gradient</p><h3>Power Mobilisation</h3></div><a href="positions.html#panel-fluid" aria-label="Return to Power Mobilisation in the Fluid Gradient table">↩ Main table</a></header>
+          <p class="status">Working synthesis · papers pending</p>
+          <dl>
+            <div><dt>Functional autonomic task</dt><dd>Make maximum force, movement and survival action available when life is at stake and ordinary protection is insufficient.</dd></div>
+            <div><dt>Likely pathway participation</dt><dd>Intense sympathetic, catecholaminergic, HPA, opioid, respiratory and metabolic participation may combine. Freezing, bradycardic or mixed responses can also occur depending on route and imminence.</dd></div>
+            <div><dt>Organ-level pattern</dt><dd>Circulation, breathing, glucose availability, muscle recruitment, pain modulation, perception and visceral function can be radically reprioritised.</dd></div>
+            <div><dt>Timing</dt><dd>Some defensive changes occur immediately; hormonal, inflammatory, metabolic and recovery consequences continue after the event.</dd></div>
+            <div><dt>What may become conscious</dt><dd>Force, heat, tunnel vision, altered pain, shaking, breath disruption or an experience of action happening before reflection may occur.</dd></div>
+            <div><dt>What allows updating</dt><dd>Ending danger, reaching a viable route and substantial physiological recovery allow wider capacity to return.</dd></div>
+            <div class="wide"><dt>Measurement and evidence limits</dt><dd>Maximum activation is not a chemical or autonomic signature for rage, violence or dominance. Human life-threat data are difficult to obtain and responses vary.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="fluid-z" style="--accent:#a1adbf">
+          <header class="entry-head"><span>Z</span><div><p>Fluid Gradient</p><h3>Shutdown</h3></div><a href="positions.html#panel-fluid" aria-label="Return to Shutdown in the Fluid Gradient table">↩ Main table</a></header>
+          <p class="status">Working synthesis · papers pending</p>
+          <dl>
+            <div><dt>Functional autonomic task</dt><dd>Conserve remaining capacity and reduce engagement when active mobilisation is unavailable, unsuccessful or too costly.</dd></div>
+            <div><dt>Likely pathway participation</dt><dd>Reduced movement and engagement can involve parasympathetic, sympathetic and central inhibitory processes in different combinations. Bradycardia, hypotension or immobility may occur, but are not universal.</dd></div>
+            <div><dt>Organ-level pattern</dt><dd>Cardiovascular output, muscle tone, breathing, temperature, digestion, attention and responsiveness may reduce or become unstable.</dd></div>
+            <div><dt>Timing</dt><dd>Shutdown may occur rapidly or follow prolonged mobilisation. Recovery can be slow and uneven across systems.</dd></div>
+            <div><dt>What may become conscious</dt><dd>Cold, heaviness, numbness, distance, weakness, faintness, fog or immobility may become dominant or difficult to interpret.</dd></div>
+            <div><dt>What allows updating</dt><dd>Reduced demand, physical safety, warmth, energy and gradual re-engagement can make mobilisation and connection available again.</dd></div>
+            <div class="wide"><dt>Measurement and evidence limits</dt><dd>“Dorsal vagal” is a functional shorthand, not a complete diagnosis. Collapse, fainting, freezing, fatigue and dissociation must not be treated as one autonomic event.</dd></div>
+          </dl>
+        </article>
+      </div>
+    </section>
+    <section class="mode chronic" aria-labelledby="chronic-heading">
+      <header class="mode-head"><div><p>Persistent or reconstructed organisation</p><h2 id="chronic-heading">Chronic Survival</h2></div><p>Autonomic participation remains active, becomes easier to reconstruct, or no longer updates reliably from present conditions.</p></header>
+      <nav class="position-rail" aria-label="Chronic Survival positions"><a href="#chronic-x" style="--accent:#fbe78e">X</a><a href="#chronic-a" style="--accent:#f7d34d">A</a><a href="#chronic-ab" style="--accent:#f1a43c">A↔B</a><a href="#chronic-b" style="--accent:#ef823a">B</a><a href="#chronic-c" style="--accent:#ec6430">C</a><a href="#chronic-d" style="--accent:#eb5151">D</a><a href="#chronic-z" style="--accent:#5d6770">Z</a></nav>
+      <div class="entries">
+        <article class="entry" id="chronic-x" style="--accent:#fbe78e">
+          <header class="entry-head"><span>X</span><div><p>Chronic Survival</p><h3>Chronic Elevated Baseline</h3></div><a href="positions.html#panel-chronic" aria-label="Return to Chronic Elevated Baseline in the Chronic Survival table">↩ Main table</a></header>
+          <p class="status">Working synthesis · papers pending</p>
+          <dl>
+            <div><dt>Functional autonomic task</dt><dd>Maintain background protection when the organism does not fully register that restoration is available.</dd></div>
+            <div><dt>Likely pathway participation</dt><dd>Low-level sympathetic monitoring, reduced cardiac flexibility or incomplete parasympathetic recovery may persist or recur, but patterns vary by person and organ.</dd></div>
+            <div><dt>Organ-level pattern</dt><dd>Resting heart, breath, muscle tone, sleep, digestion and recovery may remain subtly organised around readiness.</dd></div>
+            <div><dt>Timing</dt><dd>Activation may be modest at any moment yet repeat across hours and days, interrupting complete recovery.</dd></div>
+            <div><dt>What may become conscious</dt><dd>Jaw or chest tension, shallow rest, vague unease or difficulty feeling restorative needs may remain in the background.</dd></div>
+            <div><dt>What allows updating</dt><dd>Repeated evidence of safety, usable rest and completion of unresolved demands may gradually widen autonomic flexibility.</dd></div>
+            <div class="wide"><dt>Measurement and evidence limits</dt><dd>A chronic elevated baseline cannot be inferred from one HRV, cortisol or heart-rate value. Longitudinal patterns matter more than a snapshot.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="chronic-a" style="--accent:#f7d34d">
+          <header class="entry-head"><span>A</span><div><p>Chronic Survival</p><h3>Chronic Conditional Belonging</h3></div><a href="positions.html#panel-chronic" aria-label="Return to Chronic Conditional Belonging in the Chronic Survival table">↩ Main table</a></header>
+          <p class="status">Working synthesis · papers pending</p>
+          <dl>
+            <div><dt>Functional autonomic task</dt><dd>Preserve connection by monitoring and regulating around another person rather than resting in reciprocal safety.</dd></div>
+            <div><dt>Likely pathway participation</dt><dd>Autonomic coordination remains contingent on social cues; appeasement, vigilance and compensatory engagement may prevent parasympathetic settling from deepening.</dd></div>
+            <div><dt>Organ-level pattern</dt><dd>Face, voice, breath, stomach, throat and cardiac responses may organise around another person’s approval, mood or availability.</dd></div>
+            <div><dt>Timing</dt><dd>Moment-to-moment social adjustment repeats without completing into stable recovery.</dd></div>
+            <div><dt>What may become conscious</dt><dd>Another person’s state may be highly legible while fatigue, hunger, limits or self-directed preference remain faint.</dd></div>
+            <div><dt>What allows updating</dt><dd>Connection that tolerates difference, boundaries and direct information can reduce the need for continuous adjustment.</dd></div>
+            <div class="wide"><dt>Measurement and evidence limits</dt><dd>People-pleasing has no unique autonomic signature. Similar outward warmth can arise from safety, strategy, fear or learned social behaviour.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="chronic-ab" style="--accent:#f1a43c">
+          <header class="entry-head"><span>A↔B</span><div><p>Chronic Survival</p><h3>Chronic Safety Checking</h3></div><a href="positions.html#panel-chronic" aria-label="Return to Chronic Safety Checking in the Chronic Survival table">↩ Main table</a></header>
+          <p class="status">Working synthesis · papers pending</p>
+          <dl>
+            <div><dt>Functional autonomic task</dt><dd>Keep uncertainty open because no amount of checking produces a trusted conclusion about safety or belonging.</dd></div>
+            <div><dt>Likely pathway participation</dt><dd>Repeated orienting may combine sympathetic bursts, breath interruption, sensory gain and incomplete parasympathetic recovery.</dd></div>
+            <div><dt>Organ-level pattern</dt><dd>Pupils, skin conductance, heart, breath, posture and gastrointestinal sensations may shift repeatedly with each possible cue.</dd></div>
+            <div><dt>Timing</dt><dd>Short orienting responses recur so often that checking becomes the baseline rather than a temporary interruption.</dd></div>
+            <div><dt>What may become conscious</dt><dd>Skin and breath changes, startle, stomach movement, tension or scanning may remain continuously available.</dd></div>
+            <div><dt>What allows updating</dt><dd>Reliable information, tolerable uncertainty and experiences in which checking can end may gradually restore closure.</dd></div>
+            <div class="wide"><dt>Measurement and evidence limits</dt><dd>Persistent checking cannot be established from arousal alone. Attention, learning, sleep, medication and medical conditions can produce overlapping measures.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="chronic-b" style="--accent:#ef823a">
+          <header class="entry-head"><span>B</span><div><p>Chronic Survival</p><h3>Chronic Protection / Defence</h3></div><a href="positions.html#panel-chronic" aria-label="Return to Chronic Protection / Defence in the Chronic Survival table">↩ Main table</a></header>
+          <p class="status">Working synthesis · papers pending</p>
+          <dl>
+            <div><dt>Functional autonomic task</dt><dd>Keep protection ready before present threat is established or after the initiating danger has ended.</dd></div>
+            <div><dt>Likely pathway participation</dt><dd>Sustained or easily re-recruited sympathetic mobilisation and reduced engagement-related flexibility may support guarding, appeasement or rapid defence.</dd></div>
+            <div><dt>Organ-level pattern</dt><dd>Cardiovascular readiness, breathing, sweating, muscle tone, digestion, pain and sleep may remain organised around protection.</dd></div>
+            <div><dt>Timing</dt><dd>Protective bursts may be frequent, prolonged or slow to recover rather than continuously maximal.</dd></div>
+            <div><dt>What may become conscious</dt><dd>Heartbeat, bracing, heat, shaking, irritability, urgency or numbing of competing bodily needs may recur.</dd></div>
+            <div><dt>What allows updating</dt><dd>Accurate present-moment updating, effective boundaries and repeated recovery can help defence stand down.</dd></div>
+            <div class="wide"><dt>Measurement and evidence limits</dt><dd>Chronic defensiveness is not identical to chronic sympathetic activation. Behavioural pattern and physiology must be assessed separately.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="chronic-c" style="--accent:#ec6430">
+          <header class="entry-head"><span>C</span><div><p>Chronic Survival</p><h3>Chronic Control & Strategic Management</h3></div><a href="positions.html#panel-chronic" aria-label="Return to Chronic Control & Strategic Management in the Chronic Survival table">↩ Main table</a></header>
+          <p class="status">Working synthesis · papers pending</p>
+          <dl>
+            <div><dt>Functional autonomic task</dt><dd>Use prediction, management and control to prevent threat from becoming unmanageable.</dd></div>
+            <div><dt>Likely pathway participation</dt><dd>Repeated sympathetic, HPA, metabolic and attentional recruitment may support continuous planning while tension and effort become normalised.</dd></div>
+            <div><dt>Organ-level pattern</dt><dd>Muscle tone, cardiovascular load, sleep, digestion, immune regulation and awareness of fatigue may be affected across different timescales.</dd></div>
+            <div><dt>Timing</dt><dd>Fast mobilisation repeats within slower allostatic adaptation and incomplete recovery.</dd></div>
+            <div><dt>What may become conscious</dt><dd>Tension may feel ordinary or disappear from awareness while output, planning and monitoring remain high.</dd></div>
+            <div><dt>What allows updating</dt><dd>Reduced demand, relinquished control, tolerable uncertainty and genuine recovery can make internal limits readable again.</dd></div>
+            <div class="wide"><dt>Measurement and evidence limits</dt><dd>Control behaviour does not prove a particular autonomic state. Strategic cognition can remain high under several physiological configurations.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="chronic-d" style="--accent:#eb5151">
+          <header class="entry-head"><span>D</span><div><p>Chronic Survival</p><h3>Chronic Dominance & Repression</h3></div><a href="positions.html#panel-chronic" aria-label="Return to Chronic Dominance & Repression in the Chronic Survival table">↩ Main table</a></header>
+          <p class="status">Working synthesis · papers pending</p>
+          <dl>
+            <div><dt>Functional autonomic task</dt><dd>Preserve the required outcome through repeated override when vulnerability, limit or another person’s reality cannot constrain action.</dd></div>
+            <div><dt>Likely pathway participation</dt><dd>High-effort sympathetic and metabolic recruitment may be repeatedly accessed, while pain, fatigue and interoceptive limits are suppressed, ignored or unavailable.</dd></div>
+            <div><dt>Organ-level pattern</dt><dd>Circulation, muscle force, breath, glucose regulation, pain modulation and visceral functions may be organised around imposed action.</dd></div>
+            <div><dt>Timing</dt><dd>Mobilisation may surge rapidly and recur before recovery, accumulating cardiovascular, metabolic and relational cost.</dd></div>
+            <div><dt>What may become conscious</dt><dd>Force and outcome may dominate while exhaustion, injury, fear and impact become conscious only later or not at all.</dd></div>
+            <div><dt>What allows updating</dt><dd>Ending override, restoring limits and allowing recovery and accountability are necessary for wider information to return.</dd></div>
+            <div class="wide"><dt>Measurement and evidence limits</dt><dd>No autonomic pattern establishes coercion, intent or responsibility. Those require behavioural evidence over time; physiology does not excuse harm.</dd></div>
+          </dl>
+        </article>
+        <article class="entry" id="chronic-z" style="--accent:#5d6770">
+          <header class="entry-head"><span>Z</span><div><p>Chronic Survival</p><h3>Chronic Collapse / Shutdown</h3></div><a href="positions.html#panel-chronic" aria-label="Return to Chronic Collapse / Shutdown in the Chronic Survival table">↩ Main table</a></header>
+          <p class="status">Working synthesis · papers pending</p>
+          <dl>
+            <div><dt>Functional autonomic task</dt><dd>Conserve capacity through withdrawal and reduced engagement when demand repeatedly exceeds what can be mobilised.</dd></div>
+            <div><dt>Likely pathway participation</dt><dd>Low or unstable autonomic output, parasympathetic and sympathetic mixtures, central inhibition, inflammatory and metabolic processes may contribute through different routes.</dd></div>
+            <div><dt>Organ-level pattern</dt><dd>Movement, blood pressure, temperature, digestion, sleep-wake regulation, attention and responsiveness may remain reduced or difficult to coordinate.</dd></div>
+            <div><dt>Timing</dt><dd>Collapse can persist, recur or lift unevenly; different organ systems recover on different schedules.</dd></div>
+            <div><dt>What may become conscious</dt><dd>Cold, heaviness, numbness, fog, weakness, faintness or inability to locate needs may become familiar.</dd></div>
+            <div><dt>What allows updating</dt><dd>Reduced demand, medical assessment where needed, warmth, energy, safety and gradual re-engagement can support return.</dd></div>
+            <div class="wide"><dt>Measurement and evidence limits</dt><dd>Burnout, depression, dissociation, fatigue, syncope and medical illness cannot be collapsed into a single dorsal-vagal explanation.</dd></div>
+          </dl>
+        </article>
+      </div>
+    </section>
+    <footer>TEG-Blue · Model 2 working autonomic research structure. Every entry is a functional synthesis that still requires a paper-grounded review.</footer>
+  </main>
+</body>
+</html>

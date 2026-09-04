@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Inner Compass view: locate your present organisation on the Gradient, read it through the four modes, and see what ME can read of it given the three capacities.">
+  <title>Inner Compass · view · TEG-Blue</title>
+  <link rel="stylesheet" href="../assets/teg-blue.css">
+  <style>
+    .visit { margin: 0 0 8px; font: 750 12px/1.4 var(--utility); letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+    :root { --mode-connection: #10b8cc; --mode-protection: #e0b83a; --mode-control: #ef6a3a; --mode-dominance: #c43d83; --mode-none: #7e8aa0; }
+    .step { margin-bottom: 56px; }
+    .choice-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
+    .choice { padding: 10px 14px; border: 1px solid var(--line); border-radius: 10px; background: white; color: var(--ink); font: 750 13px/1.2 var(--body-font); cursor: pointer; }
+    .choice[aria-pressed="true"] { background: var(--ink); color: white; border-color: var(--ink); }
+    .choice small { display: block; margin-top: 3px; font: 500 11px/1.3 var(--body-font); opacity: .75; }
+    .plane-row .choice { min-width: 150px; }
+    .mode-bar { position: relative; height: 14px; margin: 26px 0 8px; border-radius: 999px; background: linear-gradient(90deg, var(--mode-connection) 0 25%, var(--mode-protection) 25% 50%, var(--mode-control) 50% 75%, var(--mode-dominance) 75% 100%); }
+    .mode-bar::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(90deg, transparent 0 calc(25% - 1px), rgba(11,31,66,.45) calc(25% - 1px) 25%); border-radius: 999px; }
+    .mode-marker { position: absolute; top: 50%; width: 22px; height: 22px; border-radius: 50%; background: white; border: 4px solid var(--ink); transform: translate(-50%, -50%); transition: left 260ms ease; box-shadow: 0 2px 8px rgba(11,31,66,.25); }
+    .mode-marker[hidden] { display: none; }
+    .mode-labels { display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; font: 800 10px/1.4 var(--utility); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+    .mode-labels span[data-active="true"] { color: var(--ink); }
+    .mode-labels span[data-active="true"]::after { content: ""; display: block; margin: 5px auto 0; width: 28px; height: 3px; border-radius: 3px; background: var(--active-mode, var(--ink)); }
+    .reading-head { margin: 26px 0 0; padding: 24px 28px; background: var(--ink); color: #d3deed; border-radius: 16px; border-left: 10px solid var(--active-mode, var(--mode-none)); }
+    .reading-head .eyebrow { color: var(--active-mode, #9fb0cb); margin-bottom: 8px; }
+    .reading-head h3 { margin: 0; color: white; font: 500 clamp(24px, 3vw, 34px)/1.15 var(--display); }
+    .reading-head p { margin: 10px 0 0; font-size: 15px; }
+    .capacity-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 14px 0 0; }
+    .capacity-chip { padding: 12px 14px; background: white; border: 1px solid var(--line); border-radius: 12px; font-size: 12px; }
+    .capacity-chip strong { display: block; color: var(--ink); font-size: 12px; margin-bottom: 4px; }
+    .capacity-chip[data-band="0"] { border-color: #d8dde5; background: #f1f3f6; }
+    .capacity-chip[data-band="1"] { border-color: #f2d09c; background: #fff6e8; }
+    .capacity-chip[data-band="3"] { border-color: #10b8cc; background: #edfafd; }
+    .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 18px 0 0; }
+    .rcard { padding: 20px 20px 18px; background: white; border: 1px solid var(--line); border-top: 5px solid var(--active-mode, var(--mode-none)); border-radius: 14px; transition: opacity 240ms ease; }
+    .rcard .meta-label { color: var(--muted); }
+    .rcard h4 { margin: 6px 0 8px; font-size: 15px; color: var(--ink); }
+    .rcard p { margin: 0; font-size: 13.5px; line-height: 1.6; }
+    .rcard .band { display: inline-block; margin-top: 10px; padding: 3px 8px; border-radius: 999px; font: 800 10px/1.3 var(--utility); letter-spacing: .05em; text-transform: uppercase; }
+    .rcard[data-band="3"] .band { color: #076170; background: #edfafd; border: 1px solid #10b8cc; }
+    .rcard[data-band="2"] .band { color: #076170; background: #f4fbfd; border: 1px solid #bfeaf0; }
+    .rcard[data-band="1"] .band { color: #79531a; background: #fff6e8; border: 1px solid #f2d09c; }
+    .rcard[data-band="0"] .band { color: #5b6473; background: #f1f3f6; border: 1px solid #d8dde5; }
+    .rcard[data-band="2"] p { opacity: .85; }
+    .rcard[data-band="1"] p { opacity: .6; }
+    .rcard[data-band="0"] p { opacity: .38; }
+    .rcard.wide { grid-column: 1 / -1; }
+    .group-label { margin: 26px 0 0; color: var(--ink); font: 800 11px/1.3 var(--utility); letter-spacing: .09em; text-transform: uppercase; }
+    .group-note { margin: 4px 0 0; color: var(--muted); font-size: 12.5px; }
+    .unknown-box { margin-top: 18px; padding: 22px 24px; background: #fff6e8; border: 1px solid #f2d09c; border-radius: 14px; }
+    .unknown-box ul { margin: 8px 0 0; padding-left: 20px; font-size: 14px; }
+    @media (max-width: 980px) { .cards { grid-template-columns: 1fr 1fr; } .capacity-strip { grid-template-columns: 1fr; } }
+    @media (max-width: 660px) { .cards { grid-template-columns: 1fr; } .mode-labels { font-size: 9px; } }
+  </style>
+</head>
+<body data-page="inner-compass" data-root="../">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header data-site-header></header>
+
+  <div class="shell">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero__content">
+        <p class="eyebrow">06 · Inner Compass · view</p>
+        <h1 id="page-title">Where is my organisation landing, and what can I read of it?</h1>
+        <p class="hero__lede">A reading of your own present organisation: the position it has taken, whether it is still updating with present conditions, what that compresses to in the four modes, and what ME can read of it given the three capacities. Not a type, not a score, not a verdict. Never a reading of someone else.</p>
+        <div class="hero__meta">
+          <span class="status-chip">Self-reflection only</span>
+          <span class="status-chip">Readings are Model 2's own rows</span>
+          <span class="status-chip">Conduct stays off the map</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <main id="main" class="shell content-layout">
+    <aside class="page-toc" aria-label="On this page">
+      <strong>On this page</strong>
+      <a href="#position">1 · Position</a>
+      <a href="#plane">2 · Fluid or Chronic</a>
+      <a href="#mode">3 · Mode</a>
+      <a href="#capacities">4 · Capacities</a>
+      <a href="#reading">5 · The reading</a>
+      <a href="#rules">Rules</a>
+    </aside>
+
+    <article class="article">
+      <dl class="page-status" aria-label="Page status">
+        <div><dt>Status</dt><dd><span class="status-word status-word--working">Working</span> · first Compass view</dd></div>
+        <div><dt>Owner</dt><dd><strong>06 · Inner Compass</strong>; reads Model 1's capacities and Model 2's rows, owns neither</dd></div>
+        <div><dt>Last approved</dt><dd>The four-mode mapping and the two-plane rule, 24–25 August 2026. This view was built on 2 September 2026 and follows Anna's plan: the capacities are set on Model 1, and the reading that changes is the Compass. Card text is Model 2's canon rows, unchanged.</dd></div>
+        <div><dt>Does not establish</dt><dd>A person's type, diagnosis, morality, history, intent, or conduct. Domination is never read from a mode. Mixed and unknown readings are valid outputs.</dd></div>
+      </dl>
+
+      <section id="position" class="step">
+        <p class="section-label">Step 1 · organisation</p>
+        <h2>What is the organism organised for right now?</h2>
+        <p class="lead">Choose the position that fits this situation, in this context, now. Read it from conditions and organisation, not from how safe you feel alone. A position is a coordinate, not who you are.</p>
+        <div class="choice-row" id="position-choices" role="group" aria-label="Position"></div>
+      </section>
+
+      <section id="plane" class="step">
+        <p class="section-label">Step 2 · relationship with present conditions</p>
+        <h2>Is this organisation still updating, or has it become the repeated home?</h2>
+        <div class="choice-row plane-row" id="plane-choices" role="group" aria-label="Fluid or Chronic">
+          <button class="choice" type="button" data-plane="fluid" aria-pressed="true">Fluid<small>Present-responsive; it changes as conditions and outcomes change</small></button>
+          <button class="choice" type="button" data-plane="chronic" aria-pressed="false">Chronic<small>Recurrent, generalised, persistent or difficult to revise</small></button>
+          <button class="choice" type="button" data-plane="unknown" aria-pressed="false">Mixed or unknown<small>Keep the question open; no mode is assigned</small></button>
+        </div>
+        <div class="boundary">
+          <h3>Keep current demand visible</h3>
+          <p>A pattern that persists because danger, deprivation, coercion or illness continues is not evidence of failed updating. Ask first: is the demand still present, uncertain or mixed, changed, or is there not enough information? Fluid does not mean calm; Chronic does not mean severe, permanent or chosen.</p>
+        </div>
+      </section>
+
+      <section id="mode" class="step">
+        <p class="section-label">Step 3 · the four modes</p>
+        <h2>The mode, and the position visited.</h2>
+        <div class="mode-bar" aria-hidden="true"><div class="mode-marker" id="mode-marker"></div></div>
+        <div class="mode-labels" aria-hidden="true">
+          <span data-mode="connection">Connection</span><span data-mode="protection">Protection</span><span data-mode="control">Control</span><span data-mode="dominance">Dominance</span>
+        </div>
+        <div class="reading-head" id="reading-head">
+          <p class="eyebrow" id="mode-eyebrow"></p>
+          <h3 id="mode-title"></h3>
+          <p id="mode-visit" class="visit"></p>
+          <p id="mode-meaning"></p>
+        </div>
+      </section>
+
+      <section id="capacities" class="step">
+        <p class="section-label">Step 4 · what ME can read of it</p>
+        <h2>The three capacities, set on Model 1.</h2>
+        <div class="capacity-strip" id="capacity-strip"></div>
+        <p class="prose" style="margin-top:12px"><a id="controller-link" href="../02-model-1-ess-cls-me/me-access.html">Adjust the ME Access Dials (Model 1 add-on) →</a> The configuration is named there. The capacities describe access, never character.</p>
+      </section>
+
+      <section id="reading" class="step">
+        <p class="section-label">Step 5 · the reading</p>
+        <h2>Model 2's rows for this position, read through your access.</h2>
+        <p class="lead">Each card is a row from the Gradient tables, in its own words. Cards about a process ME reads carry a band from Step 4 and fade when less of that process reaches ME. The biology in every card is unchanged by the band; what changes is how much of it is readable.</p>
+        <div id="reading-body"></div>
+        <div class="boundary" style="margin-top:22px">
+          <h3>Not on the Compass</h3>
+          <p>Behaviour, power, impact, response to feedback, recurrence and repair are assessed on their own evidence plane, never read from a position, a plane or a capacity. Domination is observable conduct, not the fourth mode. See <a href="../07-reference/index.html">Behaviour and responsibility</a>.</p>
+        </div>
+      </section>
+
+      <section id="rules">
+        <p class="section-label">Reading rules</p>
+        <h2>What a reading is.</h2>
+        <div class="card-grid">
+          <article class="card"><h3>One situation, one time</h3><p>A reading locates a pattern in a context. The same person shows different positions, planes and access by relationship, condition and time. No reading is a whole-person location.</p></article>
+          <article class="card"><h3>No arrow runs backwards</h3><p>A mode does not establish conduct; conduct does not establish a mode. Reduced access explains nothing about innocence or guilt. Observing another person, name what was done, with what power, and what happened to them.</p></article>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer data-site-footer></footer>
+  <script src="../assets/navigation.js"></script>
+  <script src="../assets/capacities.js"></script>
+  <script src="data/readings.js"></script>
+  <script>
+    (function () {
+      var C = window.TEG.capacities, R = window.TEG_READINGS;
+      var KEY = "teg.compass.v1";
+      var POS = R.positions;
+      var POS_META = {
+        "X": ["Baseline", "Safe to be alone"], "A": ["Connection / Belonging", "Safe with others"], "A↔B": ["Safety Checking", "Safety uncertain"],
+        "B": ["Protection / Defence", "Threat"], "C": ["Strategic Management", "Persistent threat"], "D": ["Power Mobilisation", "Life threat"], "Z": ["Shutdown", "Mobilisation unavailable"]
+      };
+      var MODES = {
+        connection: { name: "Connection", colour: "var(--mode-connection)", meaning: "Organised around Position A and returning there. Present-responsive awareness and participation remain sufficiently available; the organisation visits mobilisation, defence, strategic action, power mobilisation or shutdown when they fit present conditions, updates, and comes back. It does not mean calm or never leaving A." },
+        protection: { name: "Protection", colour: "var(--mode-protection)", meaning: "Organised around Position B, or protecting by one of its Chronic neighbours: elevated readiness, conditional belonging, repeated safety checking, collapse or conservation. Regulation has come to depend on protecting the self or preserving belonging. The pattern may still correspond to continuing adversity." },
+        control: { name: "Control", colour: "var(--mode-control)", meaning: "Organised around Position C. Regulation has come to depend on sustained monitoring, certainty, strategy or management of conditions and outcomes. Chronic C alone does not establish manipulation, coercion, concealed intent or harm; whether another person's agency is constrained is a separate question." },
+        dominance: { name: "Dominance", colour: "var(--mode-dominance)", meaning: "Organised around Position D. Regulation is organised as though maintaining asymmetric control over relevant others is the only functionally available route to stability, certainty or continuation. An internal orientation: not confidence, leadership, authority or personality, and it does not establish Domination." },
+        none: { name: "Mode not established", colour: "var(--mode-none)", meaning: "Mixed, partial and unknown readings are valid. Keep the four condition questions open: is the demand present, uncertain or mixed, changed, or not enough information? The Gradient rows can still be read below without assigning a mode." }
+      };
+      var CARDS = {
+        fluid: [
+          ["Conditions and organisation", null, [["Environmental conditions", "Conditions", null], ["Nervous system organisation", "Organisation", null], ["Summary", "Summary", null], ["Perception", "Perception", null], ["Time / tempo", "Time and tempo", null], ["Emotions", "Emotional foregrounding", null]]],
+          ["What ME can read", "Bands from Step 4. The process runs regardless; the band is how much of it reaches ME.", [["Coordinated conscious access", "Coordinated conscious access", "bodily"], ["Interoceptive processing", "Bodily information", "bodily"], ["Affective sharing", "Feeling another", "affective"], ["Mentalizing", "Reading another", "mentalizing"], ["Empathic concern", "Empathic concern", "concern"]]],
+          ["Movement", "Present availability only; completion and repair are separate questions.", [["Current availability for transition and Return", "Return availability", null], ["Availability for repair participation", "Repair participation", null]]]
+        ],
+        chronic: [
+          ["Conditions and organisation", "The conditions row keeps the Fluid reference; under Chronic organisation the organisation and the present conditions may no longer match.", [["Environmental conditions", "Reference conditions", null], ["Nervous system organisation", "Organisation", null], ["Protective recruitment", "Protective recruitment", null], ["Information weighting", "Information weighting", null], ["ESS emotional signal formation", "Emotional signal formation", null]]],
+          ["What ME can read", "Bands from Step 4. The process runs regardless; the band is how much of it reaches ME.", [["Interoceptive processing", "Bodily information", "bodily"], ["Conscious availability to ME", "Conscious availability", "bodily"], ["Coordinated conscious access", "Coordinated conscious access", "bodily"], ["CLS contribution to interpretation", "Interpretation", null], ["Affective sharing", "Feeling another", "affective"], ["Mentalizing", "Reading another", "mentalizing"], ["Empathic concern", "Empathic concern", "concern"]]],
+          ["Field and movement", "What present organisation makes available; it neither causes nor authorises conduct.", [["Action-readiness", "Action field", null], ["Possible ME participation", "Possible ME participation", null], ["Current organisation persistence", "Persistence and Return availability", null], ["Availability for repair participation", "Repair participation", null]]]
+        ]
+      };
+
+      var state = load();
+      function load() {
+        var s = { position: "A", plane: "fluid" };
+        try { var raw = JSON.parse(localStorage.getItem(KEY)); if (raw) { if (POS.indexOf(raw.position) > -1) s.position = raw.position; if (["fluid", "chronic", "unknown"].indexOf(raw.plane) > -1) s.plane = raw.plane; } } catch (e) {}
+        var q = new URLSearchParams(location.search);
+        if (q.get("pos") && POS.indexOf(q.get("pos")) > -1) s.position = q.get("pos");
+        if (["fluid", "chronic", "unknown"].indexOf(q.get("plane")) > -1) s.plane = q.get("plane");
+        return s;
+      }
+      function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+
+      function modeFor(pos, plane) {
+        if (plane === "unknown") return "none";
+        if (plane === "fluid") return "connection";
+        if (pos === "C") return "control";
+        if (pos === "D") return "dominance";
+        return "protection";
+      }
+      function markerLeft(mode, pos) {
+        var seg = { connection: 0, protection: 1, control: 2, dominance: 3 }[mode];
+        if (seg === undefined) return null;
+        var members = mode === "connection" ? POS : mode === "protection" ? ["X", "A", "A↔B", "B", "Z"] : [pos];
+        var i = members.indexOf(pos), n = members.length;
+        return (seg + (i + 1) / (n + 1)) * 25;
+      }
+      function rowFor(plane, prefix) {
+        var rows = R[plane] || {}, keys = Object.keys(rows);
+        for (var i = 0; i < keys.length; i++) if (keys[i].toLowerCase().indexOf(prefix.toLowerCase()) === 0) return rows[keys[i]];
+        return null;
+      }
+      function esc(s) { return String(s).replace(/[&<>]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]; }); }
+
+      function render() {
+        var caps = C.get(), mode = modeFor(state.position, state.plane), M = MODES[mode];
+        document.documentElement.style.setProperty("--active-mode", M.colour);
+        document.querySelectorAll("#position-choices .choice").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.position === state.position)); });
+        document.querySelectorAll("#plane-choices .choice").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.plane === state.plane)); });
+        var left = markerLeft(mode, state.position), marker = document.getElementById("mode-marker");
+        if (left === null) marker.hidden = true; else { marker.hidden = false; marker.style.left = left + "%"; }
+        document.querySelectorAll(".mode-labels span").forEach(function (s) { s.dataset.active = String(s.dataset.mode === mode); });
+        var meta = POS_META[state.position];
+        var formation = state.plane === "chronic" ? (rowFor("chronic", "Nervous system organisation") || [])[POS.indexOf(state.position)] : meta[0];
+        document.getElementById("mode-eyebrow").textContent = state.plane === "unknown" ? "Position " + state.position + " · plane open" : (state.plane === "fluid" ? "Fluid " : "Chronic ") + state.position + " · " + (formation || meta[0]);
+        document.getElementById("mode-title").textContent = M.name + (mode === "none" ? "" : " Mode");
+        document.getElementById("mode-meaning").textContent = M.meaning;
+        var VISIT = { "X": "Baseline, off the gradient", "A": "the Connection position", "A↔B": "Safety Checking, between Connection and Protection", "B": "the Protection position", "C": "the Control position", "D": "the Dominance position", "Z": "Shutdown, beyond the four" };
+        var visit = document.getElementById("mode-visit");
+        if (state.plane === "fluid") visit.textContent = state.position === "A" ? "Organised around A and at home there." : "Organised around A · visiting " + VISIT[state.position] + " · returning.";
+        else if (state.plane === "chronic") visit.textContent = "Stabilised at " + state.position + " · " + VISIT[state.position] + " · not returning.";
+        else visit.textContent = "Position " + state.position + " · " + VISIT[state.position] + " · visited or stabilised unknown.";
+
+        var strip = document.getElementById("capacity-strip");
+        strip.innerHTML = C.KEYS.map(function (k) {
+          return '<div class="capacity-chip" data-band="' + caps[k] + '"><strong>' + esc(C.NAMES[k]) + '</strong>' + esc(C.BANDS[caps[k]]) + '</div>';
+        }).join("");
+        document.getElementById("controller-link").href = C.link("../02-model-1-ess-cls-me/me-access.html", caps);
+
+        var body = document.getElementById("reading-body"), plane = state.plane === "unknown" ? null : state.plane, idx = POS.indexOf(state.position), html = "";
+        var planes = plane ? [plane] : ["fluid", "chronic"];
+        planes.forEach(function (pl) {
+          if (!plane) html += '<p class="group-label" style="margin-top:32px">' + (pl === "fluid" ? "If Fluid" : "If Chronic") + '</p><p class="group-note">Both readings are shown because the plane is open.</p>';
+          CARDS[pl].forEach(function (group) {
+            html += '<p class="group-label">' + esc(group[0]) + '</p>' + (group[1] ? '<p class="group-note">' + esc(group[1]) + '</p>' : "") + '<div class="cards">';
+            group[2].forEach(function (card) {
+              var cells = rowFor(pl, card[0]); if (!cells) return;
+              var text = cells[idx] || "", cap = card[2], attrs = "", badge = "";
+              if (cap === "concern") { badge = '<span class="band" style="color:#5b6473;background:#f1f3f6;border:1px solid #d8dde5">Relational output · not inferred from the capacities</span>'; }
+              else if (cap) { attrs = ' data-band="' + caps[cap] + '"'; badge = '<span class="band">ME access · ' + esc(C.BANDS[caps[cap]]) + '</span>'; }
+              html += '<article class="rcard"' + attrs + '><span class="meta-label">' + esc(card[0]) + '</span><h4>' + esc(card[1]) + '</h4><p>' + esc(text) + '</p>' + badge + '</article>';
+            });
+            html += "</div>";
+          });
+        });
+        body.innerHTML = html;
+      }
+
+      var pc = document.getElementById("position-choices");
+      POS.forEach(function (p) {
+        var b = document.createElement("button"); b.className = "choice"; b.type = "button"; b.dataset.position = p;
+        b.innerHTML = "<strong>" + esc(p) + "</strong> · " + esc(POS_META[p][0]) + "<small>" + esc(POS_META[p][1]) + "</small>";
+        b.addEventListener("click", function () { state.position = p; save(); render(); });
+        pc.appendChild(b);
+      });
+      document.querySelectorAll("#plane-choices .choice").forEach(function (b) {
+        b.addEventListener("click", function () { state.plane = b.dataset.plane; save(); render(); });
+      });
+      window.addEventListener("storage", function (e) { if (e.key === "teg.capacities.v1") render(); });
+      render();
+    })();
+  </script>
+</body>
+</html>

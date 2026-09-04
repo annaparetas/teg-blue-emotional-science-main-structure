@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A bridge between the Fluid Gradient and Chronic Survival reference tables, showing how recruitment, information, felt access, interpretation, action and Return can change with depth.">
+<title>From Fluid Response to Chronic Pattern · TEG-Blue</title>
+<link rel="stylesheet" href="../assets/page-responsibility.css">
+<style>
+  :root {
+    --ink:#0b1f42; --ink-2:#24365c; --body:#40506e; --muted:#687891;
+    --paper:#fff; --ground:#f3f7fb; --line:#d7e1ed; --line-2:#e9eef5;
+    --fluid:#42cfe4; --bias:#79d99f; --restriction:#dfbd3f;
+    --entrenched:#ef8b40; --chronic:#e45151;
+    --serif:Georgia,"Times New Roman",serif;
+    --sans:Avenir Next,Avenir,"Segoe UI",sans-serif;
+    --mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--ground);color:var(--ink);font:15px/1.58 var(--sans);-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-underline-offset:3px}
+  button{font:inherit}
+  .wrap{width:min(1160px,calc(100% - 40px));margin-inline:auto}
+  .hero{position:relative;overflow:hidden;padding:70px 0 62px;background:var(--ink);color:#fff}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(112deg,transparent 34%,rgba(66,207,228,.11),rgba(223,189,63,.08),rgba(228,81,81,.13));pointer-events:none}
+  .hero .wrap{position:relative;z-index:1}
+  .eyebrow{margin:0 0 16px;color:#aef2fb;font:800 10px/1.3 var(--mono);letter-spacing:.12em;text-transform:uppercase}
+  h1,h2{font-family:var(--serif);font-weight:600;letter-spacing:-.025em}
+  h1{max-width:910px;margin:0;font-size:clamp(2.65rem,7vw,5.5rem);line-height:.98}
+  .standfirst{max-width:800px;margin:23px 0 0;color:#cbd8eb;font-size:1.08rem}
+  .hero-rule{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;max-width:840px;margin-top:25px;padding-top:19px;border-top:1px solid rgba(255,255,255,.2);color:#fff}
+  .hero-rule b{color:var(--fluid);font:800 11px/1.5 var(--mono);text-transform:uppercase}
+  main{padding:66px 0 80px}
+  section{margin-bottom:74px;scroll-margin-top:18px}
+  h2{margin:0 0 12px;font-size:clamp(1.9rem,4vw,2.9rem);line-height:1.06}
+  h3{margin:0;color:var(--ink);font-size:1rem}
+  .lede{max-width:820px;margin:0 0 26px;color:var(--body);font-size:1rem}
+  .thesis{display:grid;grid-template-columns:1fr 1fr;gap:1px;overflow:hidden;border:1px solid var(--line);border-radius:14px;background:var(--line)}
+  .reference{min-height:230px;padding:27px;background:var(--paper)}
+  .reference.fluid{border-top:7px solid var(--fluid)}
+  .reference.chronic{border-top:7px solid var(--chronic)}
+  .reference .label{display:block;margin-bottom:11px;color:var(--muted);font:800 9px/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase}
+  .reference h3{font:600 1.55rem/1.1 var(--serif)}
+  .reference p{margin:13px 0 0;color:var(--body)}
+  .between{grid-column:1/-1;padding:18px 27px;background:#eef5fa;color:var(--ink-2)}
+  .between strong{margin-right:8px}
+  .coordinates{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin-top:24px}
+  .coordinate{padding:14px 12px;border:1px solid var(--line);background:var(--paper);text-align:center}
+  .coordinate:first-child{border-radius:10px 0 0 10px}.coordinate:last-child{border-radius:0 10px 10px 0}
+  .coordinate b{display:block;margin-bottom:4px;font:800 9px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .coordinate span{font-size:13px;color:var(--ink-2)}
+  .depth-shell{overflow:hidden;border:1px solid #253b61;border-radius:17px;background:var(--ink);box-shadow:0 17px 38px rgba(11,31,66,.16)}
+  .depth-head{padding:29px 30px 20px;color:#fff}
+  .depth-head h2{color:#fff}.depth-head p{max-width:760px;margin:0;color:#bdcae0}
+  .depth-controls{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;padding:0 12px;background:rgba(255,255,255,.13)}
+  .depth-control{position:relative;min-height:132px;padding:17px 14px;border:0;border-top:6px solid var(--accent);background:#10284e;color:#d7e1ef;text-align:left;cursor:pointer;transition:background-color .18s,transform .18s}
+  .depth-control:hover{background:#17345f}.depth-control:focus-visible{outline:3px solid #fff;outline-offset:-3px}
+  .depth-control[aria-selected="true"]{background:#fff;color:var(--ink);transform:translateY(-5px)}
+  .depth-control small{display:block;margin-bottom:8px;color:var(--accent);font:800 9px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+  .depth-control strong{display:block;font-size:13px;line-height:1.25}
+  .depth-reading{display:grid;grid-template-columns:245px 1fr;gap:28px;min-height:205px;padding:29px 30px 32px;background:#fff}
+  .reading-position{padding-right:24px;border-right:1px solid var(--line)}
+  .reading-position span{display:block;margin-bottom:9px;color:var(--active);font:800 9px/1.3 var(--mono);letter-spacing:.07em;text-transform:uppercase}
+  .reading-position h3{font:600 1.55rem/1.1 var(--serif)}
+  .reading-position p,.reading-copy{margin:12px 0 0;color:var(--body)}
+  .reading-copy{font-size:1.02rem}
+  .reading-note{margin-top:15px;padding:12px 14px;border-left:4px solid var(--active);background:#f5f8fb;color:var(--ink-2);font-size:13px}
+  .variable-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .variable{position:relative;min-height:220px;padding:23px 22px 21px;overflow:hidden;border:1px solid var(--line);border-radius:10px;background:var(--paper)}
+  .variable::before{content:"";position:absolute;inset:0 auto 0 0;width:5px;background:linear-gradient(var(--fluid),var(--restriction),var(--chronic))}
+  .route{display:block;margin-bottom:9px;color:var(--muted);font:800 9px/1.3 var(--mono);letter-spacing:.07em;text-transform:uppercase}
+  .variable p{margin:10px 0 0;color:var(--body);font-size:13px}
+  .question{display:block;margin-top:15px;padding-top:12px;border-top:1px solid var(--line-2);color:var(--ink-2);font-size:12px;font-weight:650}
+  .matrix-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:13px;background:var(--paper);box-shadow:0 1px 2px rgba(11,31,66,.04)}
+  table{width:100%;min-width:1080px;border-collapse:collapse}
+  th,td{padding:16px 15px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+  thead th{font:800 9px/1.4 var(--mono);letter-spacing:.055em;text-transform:uppercase;background:#f6f9fc;color:var(--muted)}
+  thead th:not(:first-child){border-top:5px solid var(--accent)}
+  tbody th{width:15%;color:var(--ink);font-size:12.5px}
+  td{width:17%;color:var(--body);font-size:11.5px}
+  tbody tr:last-child>*{border-bottom:0}
+  tbody tr:hover td{background:#f8fbfd}
+  .evidence-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .evidence{padding:23px;border:1px solid var(--line);border-top:5px solid var(--accent);border-radius:10px;background:var(--paper)}
+  .evidence span{display:block;margin-bottom:9px;color:var(--accent);font:800 9px/1.3 var(--mono);letter-spacing:.07em;text-transform:uppercase}
+  .evidence p{margin:10px 0 0;color:var(--body);font-size:13px}
+  .map{display:grid;grid-template-columns:215px 1fr;gap:1px;overflow:hidden;border:1px solid var(--line);border-radius:12px;background:var(--line)}
+  .map-row{display:contents}.map dt,.map dd{margin:0;padding:16px 18px;background:var(--paper)}
+  .map dt{font-weight:750;color:var(--ink)}.map dd{color:var(--body);font-size:13px}
+  .boundary{display:grid;grid-template-columns:1fr 1fr;gap:1px;overflow:hidden;border:1px solid #efcbb6;border-radius:14px;background:#efcbb6}
+  .boundary article{padding:26px;background:#fffaf6}.boundary article:first-child{background:#effcff}
+  .boundary .label{color:var(--accent);font:800 9px/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+  .boundary h3{margin-top:9px;font:600 1.35rem/1.2 var(--serif)}
+  .boundary ul{margin:14px 0 0;padding-left:18px;color:var(--body);font-size:13px}.boundary li+li{margin-top:7px}
+  .not-equation{margin-top:12px;padding:17px 19px;border-left:5px solid var(--chronic);background:var(--paper);color:var(--ink-2)}
+  .not-equation strong{display:block;font:800 12px/1.4 var(--mono)}
+  .handoff{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:center;padding:25px 27px;border-radius:14px;background:var(--ink);color:#fff}
+  .handoff a{display:block;text-decoration:none}.handoff a:last-child{text-align:right}
+  .handoff span{display:block;color:#9fb0cb;font:800 9px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.07em}
+  .handoff strong{display:block;margin-top:4px}.handoff i{color:var(--restriction);font-style:normal}
+  footer{padding:0 0 38px;color:var(--muted);font-size:12px}
+  @media(max-width:820px){.variable-grid,.evidence-grid{grid-template-columns:1fr 1fr}.depth-controls{grid-template-columns:1fr}.depth-control{min-height:0}.depth-reading{grid-template-columns:1fr}.reading-position{padding:0 0 18px;border:0;border-bottom:1px solid var(--line)}.coordinates{grid-template-columns:1fr}.coordinate:first-child,.coordinate:last-child{border-radius:8px}.handoff{grid-template-columns:1fr}.handoff i{display:none}.handoff a:last-child{text-align:left}}
+  @media(max-width:600px){.wrap{width:min(100% - 28px,1160px)}.hero{padding:48px 0}.thesis,.boundary{grid-template-columns:1fr}.between{grid-column:auto}.variable-grid,.evidence-grid{grid-template-columns:1fr}.map{grid-template-columns:1fr}.map-row{display:block}.map dt{padding-bottom:4px}.map dd{padding-top:4px}.depth-head,.depth-reading{padding-inline:20px}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.depth-control{transition:none}}
+  @media print{body{background:#fff}.hero{padding:30px 0}.depth-control{color:#fff}.depth-control[aria-selected="true"]{color:var(--ink)}section{break-inside:avoid}.matrix-scroll{overflow:visible}table{min-width:0;font-size:8px}.handoff{display:none}}
+</style>
+</head>
+<body>
+<div class="carried-banner" role="note"><strong>Carried page · status working.</strong> The intermediate field between the Fluid and far Chronic reference planes, with the six-variable matrix. Carried on 2 September 2026. To be merged with the depth page. <a href="fluid-chronic.html">Back to the Fluid and Chronic canon page →</a></div>
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Nervous System Gradient · layers between two reference tables</p>
+    <h1>From Fluid Response to Chronic Pattern</h1>
+    <p class="standfirst">The Fluid Gradient and Chronic Survival tables describe two reference planes. Between them, the same organisation can become easier to recruit, harder to question and slower to release—while other capacities remain fluid.</p>
+    <p><a href="premise.html">Read the governing model premise →</a></p>
+    <div class="hero-rule"><b>Locate a pattern</b><span>Context + organisation + processing layer + depth + time. The model does not place a whole person at one permanent coordinate.</span></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <aside class="page-responsibility" aria-label="Page responsibility">
+    <div class="page-responsibility__heading">
+      <p class="page-responsibility__label">Page responsibility · Model 2 intermediate field</p>
+      <p class="page-responsibility__scope">Scientific-facing scope · graded changes in recruitment, weighting, access, generalisation, updating and Return between Fluid and far Chronic references</p>
+    </div>
+    <p class="page-responsibility__question"><strong>Governing question</strong>What can change between a present-responsive organisation and a recurrent pattern that current information no longer revises reliably?</p>
+    <div class="page-responsibility__grid">
+      <div class="page-responsibility__item"><strong>This page owns</strong><p>The variables and evidence questions used to describe uneven intermediate depth within a defined context and processing layer.</p></div>
+      <div class="page-responsibility__item"><strong>It receives</strong><p>The <a href="index.html">Fluid and far Chronic reference profiles</a> and the <a href="depth.html">three-coordinate field</a>.</p></div>
+      <div class="page-responsibility__item"><strong>It does not establish</strong><p>Universal stages, a one-way progression, severity, permanence or one coordinate for the whole person.</p></div>
+    </div>
+  </aside>
+
+  <section id="reference-planes">
+    <h2>Two endpoints, not two kinds of people</h2>
+    <p class="lede">The tables become clearer when they are read as limits of a field. Fluid names organisation that remains responsive to present conditions. Far Chronic names a protective pattern that present information no longer corrects reliably.</p>
+    <div class="thesis">
+      <article class="reference fluid"><span class="label">Near reference plane</span><h3>Fluid Gradient</h3><p>The organisation corresponds closely enough to present conditions. Competing information remains usable, several actions remain possible, and the system can update and Return when the condition changes.</p></article>
+      <article class="reference chronic"><span class="label">Far reference plane</span><h3>Chronic Survival</h3><p>The organisation is readily reconstructed or remains active beyond its original conditions. Access, interpretation, action or Return may be substantially narrowed.</p></article>
+      <div class="between"><strong>The intermediate field is uneven.</strong> A pattern can be deep in one relationship, emotion family or processing layer and fluid in another.</div>
+    </div>
+    <div class="coordinates" aria-label="The five coordinates needed to locate a pattern">
+      <div class="coordinate"><b>Context</b><span>Where and with whom?</span></div>
+      <div class="coordinate"><b>Organisation</b><span>What is recruited?</span></div>
+      <div class="coordinate"><b>Processing layer</b><span>What participation changes?</span></div>
+      <div class="coordinate"><b>Depth</b><span>How restricted is it?</span></div>
+      <div class="coordinate"><b>Time</b><span>Does it update?</span></div>
+    </div>
+  </section>
+
+  <section class="depth-shell" id="depth-lens" aria-labelledby="depth-title">
+    <div class="depth-head"><h2 id="depth-title">The depth lens</h2><p>Select a reference layer to read what changes. These are working descriptions, not diagnoses, scores or fixed stages. Movement can occur in either direction.</p></div>
+    <div class="depth-controls" role="tablist" aria-label="Depth reference layers">
+      <button class="depth-control" id="depth-tab-0" role="tab" aria-selected="true" aria-controls="depth-reading" data-depth="0" style="--accent:var(--fluid)"><small>Near plane</small><strong>Fluid reference</strong></button>
+      <button class="depth-control" id="depth-tab-1" role="tab" aria-selected="false" aria-controls="depth-reading" data-depth="1" style="--accent:var(--bias)"><small>Early depth</small><strong>Recurrent bias</strong></button>
+      <button class="depth-control" id="depth-tab-2" role="tab" aria-selected="false" aria-controls="depth-reading" data-depth="2" style="--accent:var(--restriction)"><small>Selective depth</small><strong>Learned restriction</strong></button>
+      <button class="depth-control" id="depth-tab-3" role="tab" aria-selected="false" aria-controls="depth-reading" data-depth="3" style="--accent:var(--entrenched)"><small>Deep restriction</small><strong>Entrenched protection</strong></button>
+      <button class="depth-control" id="depth-tab-4" role="tab" aria-selected="false" aria-controls="depth-reading" data-depth="4" style="--accent:var(--chronic)"><small>Far plane</small><strong>Far Chronic reference</strong></button>
+    </div>
+    <div class="depth-reading" id="depth-reading" role="tabpanel" tabindex="0" style="--active:var(--fluid)" aria-live="polite">
+      <div class="reading-position"><span id="reading-kicker">Near plane</span><h3 id="reading-title">Fluid reference</h3><p id="reading-summary">Organisation changes with present conditions closely enough to use available information, choose among responses and Return.</p></div>
+      <div><p class="reading-copy" id="reading-copy">Protective recruitment is proportionate to the situation. Body and Situation Signals can enter participation without one family consistently excluding the others. The first interpretation remains revisable, and changed conditions can change the response.</p><div class="reading-note"><strong>Look across time:</strong> <span id="reading-note">the organisation can stand down without requiring the same protective action to be repeated.</span></div></div>
+    </div>
+  </section>
+
+  <section id="variables">
+    <h2>Six variables carry the change</h2>
+    <p class="lede">Depth is not simply “more activation.” It describes how the whole sequence changes: what starts it, what information gets through, what can be felt and understood, what actions remain available, and what happens after conditions change.</p>
+    <div class="variable-grid">
+      <article class="variable"><span class="route">ESS + organisation</span><h3>Recruitment threshold</h3><p>How much present evidence is needed before a protective organisation is recruited?</p><span class="question">Does a smaller, more ambiguous or represented cue now produce the response?</span></article>
+      <article class="variable"><span class="route">ESS · signal selection</span><h3>Information weighting</h3><p>Which Body and Situation Signals move forward, and which become difficult to use?</p><span class="question">What receives priority—and what recedes without being biologically absent?</span></article>
+      <article class="variable"><span class="route">ESS → ME</span><h3>Felt access and differentiation</h3><p>Can emotion, bodily change, need, prediction and another person’s state be distinguished?</p><span class="question">Do signals arrive clearly, fused, faint, delayed or inaccessible?</span></article>
+      <article class="variable"><span class="route">ME ↔ CLS</span><h3>Interpretive flexibility</h3><p>Can the first explanation remain provisional and be revised with context?</p><span class="question">What contrary information can still change what the signal is made to mean?</span></article>
+      <article class="variable"><span class="route">ME · expression and action</span><h3>Action flexibility</h3><p>Can the person pause, include competing needs and choose among several responses?</p><span class="question">Has one route become habitual, compulsory or instrumental?</span></article>
+      <article class="variable"><span class="route">Whole sequence</span><h3>Updating, persistence and Return</h3><p>Can new information enter when conditions change, allowing pressure to fall and capacities to return?</p><span class="question">Does relief complete the condition, or only interrupt immediate pressure?</span></article>
+    </div>
+  </section>
+
+  <section id="depth-matrix">
+    <h2>How the six variables move through depth</h2>
+    <p class="lede">This matrix describes directional differences rather than diagnostic thresholds. A responsible reading uses several relevant rows, a defined context and evidence across time.</p>
+    <div class="matrix-scroll">
+      <table>
+        <thead><tr><th scope="col">Variable</th><th scope="col" style="--accent:var(--fluid)">Fluid</th><th scope="col" style="--accent:var(--bias)">Recurrent bias</th><th scope="col" style="--accent:var(--restriction)">Learned restriction</th><th scope="col" style="--accent:var(--entrenched)">Entrenched protection</th><th scope="col" style="--accent:var(--chronic)">Far Chronic</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Recruitment</th><td>Corresponds to present conditions.</td><td>A familiar route starts sooner.</td><td>Particular territories recruit it reliably.</td><td>Small or ambiguous cues can be sufficient.</td><td>Organisation persists or is reconstructed without corresponding conditions.</td></tr>
+          <tr><th scope="row">Information</th><td>Competing signals remain usable.</td><td>Familiar evidence receives extra weight.</td><td>Some information becomes difficult to use in specific contexts.</td><td>Protective evidence increasingly dominates the field.</td><td>Contrary evidence poorly corrects the read.</td></tr>
+          <tr><th scope="row">Felt access</th><td>Signals can be felt and differentiated.</td><td>Some signals arrive later or feel less trustworthy.</td><td>Access narrows by context, relationship or emotion.</td><td>Signals become fused, overridden, faint or inaccessible.</td><td>Competing needs and feelings rarely enter usable participation.</td></tr>
+          <tr><th scope="row">Interpretation</th><td>Explanations remain provisional.</td><td>A familiar explanation comes first but can change.</td><td>Alternatives require safety, effort or support.</td><td>One interpretation increasingly feels necessary.</td><td>Interpretation remains resistant to present evidence.</td></tr>
+          <tr><th scope="row">Action</th><td>Several responses remain available.</td><td>A habitual response is preferred.</td><td>Alternatives become difficult in a defined territory.</td><td>The route becomes automatic, compulsory or instrumental.</td><td>Action is severely narrowed and competing welfare may not constrain it.</td></tr>
+          <tr><th scope="row">Updating and Return</th><td>Changed conditions permit Return.</td><td>Updating occurs, but more slowly or with repetition.</td><td>Return requires particular conditions or support.</td><td>Pressure may fall without reorganisation.</td><td>Updating, Return and repair are unreliable.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="evidence">
+    <h2>Read behaviour in three time frames</h2>
+    <p class="lede">The same visible behaviour can occur at several depths. Its position becomes clearer through correspondence, flexibility and what happens next—not through appearance alone.</p>
+    <div class="evidence-grid">
+      <article class="evidence" style="--accent:var(--fluid)"><span>Now · observable</span><h3>What can another person see?</h3><p>Action, speech, attention, decision-making, boundaries, response to limits and use of power can be observed. These do not disclose the whole internal process.</p></article>
+      <article class="evidence" style="--accent:var(--restriction)"><span>Inside · inferred carefully</span><h3>What may be organising it?</h3><p>Body state, emotion, felt access, organising pull, inner narrative and views of self or others require report, context or cautious inference.</p></article>
+      <article class="evidence" style="--accent:var(--chronic)"><span>After · longitudinal</span><h3>What happens when conditions change?</h3><p>Watch whether the behaviour can stop, feedback can enter, alternatives return, impact becomes representable and repair follows across time.</p></article>
+    </div>
+  </section>
+
+  <section id="behaviour-map">
+    <h2>Where the behaviour domains belong</h2>
+    <p class="lede">The behaviour vocabulary translates the six internal variables into questions that tools and observation can carry. It is evidence for a depth reading, not a separate depth scale.</p>
+    <dl class="map">
+      <div class="map-row"><dt>Recruitment threshold</dt><dd>Core pattern · attention · nervous-system settling and startling</dd></div>
+      <div class="map-row"><dt>Information weighting</dt><dd>Attention · body · emotions · organising pull</dd></div>
+      <div class="map-row"><dt>Felt access</dt><dd>Body · emotions · possible inner narrative</dd></div>
+      <div class="map-row"><dt>Interpretive flexibility</dt><dd>Mind · view of self · view of others</dd></div>
+      <div class="map-row"><dt>Action flexibility</dt><dd>Communication · decision-making · boundaries · relationships · empathy as visible participation</dd></div>
+      <div class="map-row"><dt>Updating and Return</dt><dd>Response to feedback · capacity to stand down · repair after conflict</dd></div>
+    </dl>
+  </section>
+
+  <section id="harm-boundary">
+    <h2>Depth and harm require separate readings</h2>
+    <p class="lede">Internal restriction describes what is available inside the organism. Harm describes what repeatedly happens to other people. Neither scale can substitute for the other.</p>
+    <div class="boundary">
+      <article style="--accent:var(--fluid)"><span class="label">Internal organisation</span><h3>How restricted has this process become?</h3><ul><li>Does present evidence still update it?</li><li>Are alternative capacities available?</li><li>Is the restriction specific or widespread?</li><li>Can the organisation Return when conditions change?</li></ul></article>
+      <article style="--accent:var(--chronic)"><span class="label">Behaviour in relationship</span><h3>What happens to other people?</h3><ul><li>What action occurred, and was it repeated?</li><li>What power, pressure or coercion was used?</li><li>What was the impact?</li><li>What happened when limits or consequences appeared?</li><li>Did accountability, change and repair follow?</li></ul></article>
+    </div>
+    <div class="not-equation"><strong>Chronic depth ≠ harmfulness ≠ diagnosis</strong> Understanding a protective function does not authorise behaviour or remove responsibility for impact.</div>
+  </section>
+
+  <nav class="handoff" aria-label="Return to the two reference tables">
+    <a href="positions.html#panel-fluid"><span>Near reference plane</span><strong>Open the Fluid Gradient →</strong></a>
+    <i>the intermediate field</i>
+    <a href="positions.html#panel-chronic"><span>Far reference plane</span><strong>Open Chronic Survival →</strong></a>
+  </nav>
+</main>
+
+<footer class="wrap">TEG-Blue working architecture. This page describes patterns and capacities in context; it is not a diagnostic instrument or a fixed whole-person classification.</footer>
+
+<script>
+  const readings = [
+    {accent:'var(--fluid)',kicker:'Near plane',title:'Fluid reference',summary:'Organisation changes with present conditions closely enough to use available information, choose among responses and Return.',copy:'Protective recruitment is proportionate to the situation. Body and Situation Signals can enter participation without one family consistently excluding the others. The first interpretation remains revisable, and changed conditions can change the response.',note:'the organisation can stand down without requiring the same protective action to be repeated.'},
+    {accent:'var(--bias)',kicker:'Early depth',title:'Recurrent bias',summary:'One familiar route is recruited more easily, while alternatives remain accessible and corrective information can still enter.',copy:'Attention leans toward familiar evidence, and one explanation or action may arrive first. The pattern is noticeable across repetitions, but it can still be questioned, interrupted and updated without rebuilding the whole sequence.',note:'the familiar route starts sooner or lasts longer, yet genuine correction still changes it.'},
+    {accent:'var(--restriction)',kicker:'Selective depth',title:'Learned restriction',summary:'Specific signals, feelings, interpretations or actions become difficult in particular relationships, conditions or territories.',copy:'The pattern is not global. A person may remain reflective at work while shame becomes fused and difficult to use in intimate conflict. Alternatives exist, but access may depend on particular safety, support, boundaries or time.',note:'name the territory precisely—relationship, emotion family, context or processing capacity.'},
+    {accent:'var(--entrenched)',kicker:'Deep restriction',title:'Entrenched protection',summary:'Protective expectation increasingly organises perception, interpretation and action across changing conditions.',copy:'Smaller or more ambiguous cues recruit the route. Competing information carries less corrective weight, and the preferred action becomes automatic or compulsory. Immediate relief can occur without resolving the organisation that produced it.',note:'pressure falling is not the same as Return; check whether competing capacities actually re-enter.'},
+    {accent:'var(--chronic)',kicker:'Far plane',title:'Far Chronic reference',summary:'Present information poorly corrects the organisation; competing capacities and reliable Return are severely constrained.',copy:'The protective pattern persists or is reconstructed beyond the conditions that originally required it. Access, interpretation and action may be narrow, fused or instrumental. This remains a reference description of a pattern—not a person, diagnosis or moral identity.',note:'look for evidence across time, including response to limits, accountability, changed action and repair.'}
+  ];
+  const tabs=[...document.querySelectorAll('.depth-control')];
+  const panel=document.querySelector('#depth-reading');
+  function selectDepth(index,focus=false){
+    const item=readings[index];
+    tabs.forEach((tab,i)=>{tab.setAttribute('aria-selected',String(i===index));tab.tabIndex=i===index?0:-1});
+    panel.setAttribute('aria-labelledby','depth-tab-'+index);
+    panel.style.setProperty('--active',item.accent);
+    document.querySelector('#reading-kicker').textContent=item.kicker;
+    document.querySelector('#reading-title').textContent=item.title;
+    document.querySelector('#reading-summary').textContent=item.summary;
+    document.querySelector('#reading-copy').textContent=item.copy;
+    document.querySelector('#reading-note').textContent=item.note;
+    if(focus) tabs[index].focus();
+  }
+  tabs.forEach((tab,index)=>{
+    tab.addEventListener('click',()=>selectDepth(index));
+    tab.addEventListener('keydown',event=>{
+      if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home','End'].includes(event.key))return;
+      event.preventDefault();
+      let next=index;
+      if(event.key==='Home')next=0;else if(event.key==='End')next=tabs.length-1;else next=(index+(event.key==='ArrowRight'||event.key==='ArrowDown'?1:-1)+tabs.length)%tabs.length;
+      selectDepth(next,true);
+    });
+  });
+  selectDepth(0);
+</script>
+</body>
+</html>

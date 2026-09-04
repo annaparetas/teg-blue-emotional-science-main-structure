@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Human Sociality and the Two Survival Functions · TEG-Blue</title>
+  <meta name="description" content="A canonical TEG-Blue reference establishing the convergent scientific foundation for human sociality, organism-protection and connection-preservation across the architecture.">
+  <style>
+    :root {
+      --fog:#edf3f5;
+      --paper:#f8fbfc;
+      --white:#ffffff;
+      --ink:#11243c;
+      --body:#334a61;
+      --muted:#65798b;
+      --line:#cbd8df;
+      --line-strong:#9db1bd;
+      --social:#087f91;
+      --social-soft:#d9f1f2;
+      --direct:#a85a20;
+      --direct-soft:#f5e7d7;
+      --bridge:#685a9d;
+      --bridge-soft:#e8e3f4;
+      --evidence:#44705a;
+      --evidence-soft:#e0eee6;
+      --theory:#9a6b15;
+      --theory-soft:#f5eccf;
+      --integration:#865080;
+      --integration-soft:#f1e2ee;
+      --mono:"SFMono-Regular","Cascadia Code","Roboto Mono",monospace;
+      --sans:"Avenir Next","Segoe UI",Arial,sans-serif;
+      --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0;
+      background:
+        radial-gradient(circle at 8% 3%, rgba(8,127,145,.10), transparent 27rem),
+        radial-gradient(circle at 94% 14%, rgba(104,90,157,.09), transparent 29rem),
+        var(--fog);
+      color:var(--body);
+      font:16px/1.65 var(--sans);
+    }
+    a { color:var(--social); text-underline-offset:3px; }
+    a:hover { color:var(--ink); }
+    a:focus-visible { outline:3px solid rgba(8,127,145,.35); outline-offset:3px; border-radius:3px; }
+    .wrap { width:min(1240px, calc(100% - 36px)); margin:0 auto; }
+    .utility {
+      display:flex; justify-content:space-between; gap:1rem; align-items:center;
+      padding:18px 0 12px; color:var(--muted); font:700 10px/1.4 var(--mono);
+      letter-spacing:.09em; text-transform:uppercase;
+    }
+    .utility a { color:inherit; text-decoration:none; }
+    .utility a:hover { color:var(--social); }
+    header { padding:64px 0 50px; }
+    .eyebrow { color:var(--social); font:750 11px/1.4 var(--mono); letter-spacing:.16em; text-transform:uppercase; }
+    h1,h2,h3 { color:var(--ink); }
+    h1 {
+      max-width:980px; margin:14px 0 20px; font:600 clamp(3rem,7vw,6.8rem)/.93 var(--serif);
+      letter-spacing:-.055em;
+    }
+    .standfirst { max-width:900px; margin:0; color:var(--body); font-size:clamp(1.15rem,2vw,1.5rem); line-height:1.55; }
+    .status-line { display:flex; flex-wrap:wrap; gap:8px; margin-top:30px; }
+    .pill {
+      display:inline-flex; align-items:center; min-height:29px; padding:5px 9px;
+      border:1px solid var(--line); border-radius:999px; background:rgba(255,255,255,.58);
+      color:var(--muted); font:700 10px/1.3 var(--mono); letter-spacing:.035em;
+    }
+    .pill.canonical { border-color:rgba(8,127,145,.35); background:var(--social-soft); color:#075f6d; }
+    .jump-nav {
+      position:sticky; top:0; z-index:10; margin:0 0 34px; border:1px solid var(--line);
+      border-radius:12px; background:rgba(248,251,252,.94); box-shadow:0 10px 32px rgba(17,36,60,.08);
+      backdrop-filter:blur(14px);
+    }
+    .jump-nav ul { display:flex; gap:2px; margin:0; padding:6px; overflow-x:auto; list-style:none; }
+    .jump-nav a {
+      display:block; padding:8px 10px; border-radius:7px; color:var(--muted);
+      font:700 10px/1.3 var(--mono); letter-spacing:.055em; text-decoration:none; text-transform:uppercase; white-space:nowrap;
+    }
+    .jump-nav a:hover { background:var(--social-soft); color:var(--ink); }
+    main { padding-bottom:70px; }
+    section { scroll-margin-top:78px; margin-top:28px; padding:clamp(24px,4vw,48px); border:1px solid var(--line); border-radius:18px; background:rgba(248,251,252,.90); box-shadow:0 14px 38px rgba(17,36,60,.055); }
+    section h2 { max-width:900px; margin:0 0 14px; font:600 clamp(2rem,4vw,3.35rem)/1.08 var(--serif); letter-spacing:-.035em; }
+    section h3 { margin:0 0 8px; font-size:1rem; line-height:1.35; }
+    .section-label { display:block; margin-bottom:12px; color:var(--social); font:750 10px/1.4 var(--mono); letter-spacing:.14em; text-transform:uppercase; }
+    .lede { max-width:920px; margin:0 0 24px; font-size:1.08rem; }
+    .responsibility { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1px; margin-top:32px; border:1px solid var(--line); border-radius:12px; overflow:hidden; background:var(--line); }
+    .responsibility article { padding:20px; background:var(--white); }
+    .responsibility b { display:block; margin-bottom:7px; color:var(--ink); font:750 10px/1.4 var(--mono); letter-spacing:.08em; text-transform:uppercase; }
+    .responsibility p { margin:0; font-size:.88rem; }
+
+    /* The page signature: one viability node branching into two routes, then braided by dependence. */
+    .survival-map { position:relative; max-width:1020px; margin:28px auto 0; padding-top:84px; }
+    .viability-node {
+      position:absolute; top:0; left:50%; transform:translateX(-50%); width:min(420px,82%);
+      padding:14px 22px; border:1px solid var(--ink); border-radius:999px; background:var(--ink); color:white;
+      text-align:center;
+    }
+    .viability-node b { display:block; font:750 11px/1.35 var(--mono); letter-spacing:.12em; text-transform:uppercase; }
+    .viability-node span { display:block; margin-top:3px; color:#c8d9e3; font-size:.83rem; }
+    .route-grid { position:relative; display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+    .route-grid::before {
+      content:""; position:absolute; top:-43px; left:25%; right:25%; height:43px;
+      border-top:1px solid var(--line-strong); border-left:1px solid var(--line-strong); border-right:1px solid var(--line-strong);
+    }
+    .route {
+      position:relative; min-height:270px; padding:28px; border:1px solid var(--line); border-top:5px solid var(--accent);
+      border-radius:14px; background:var(--white);
+    }
+    .route::before { content:""; position:absolute; top:-44px; left:50%; height:39px; border-left:1px solid var(--line-strong); }
+    .route.direct { --accent:var(--direct); }
+    .route.social { --accent:var(--social); }
+    .route .route-name { color:var(--accent); font:750 10px/1.4 var(--mono); letter-spacing:.12em; text-transform:uppercase; }
+    .route h3 { margin:8px 0 11px; font:600 1.7rem/1.1 var(--serif); }
+    .route p { margin:0; }
+    .route ul { margin:15px 0 0; padding-left:1.15rem; font-size:.9rem; }
+    .route li + li { margin-top:4px; }
+    .braid {
+      display:grid; grid-template-columns:auto 1fr; gap:16px; align-items:start; max-width:850px; margin:28px auto 0;
+      padding:19px 22px; border:1px solid rgba(104,90,157,.30); border-radius:12px; background:var(--bridge-soft);
+    }
+    .braid-mark { display:grid; place-items:center; width:38px; height:38px; border-radius:50%; background:var(--bridge); color:white; font:750 15px/1 var(--mono); }
+    .braid h3 { margin:0 0 4px; color:#51467e; }
+    .braid p { margin:0; font-size:.92rem; }
+
+    .distinctions { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:24px; }
+    .distinction { padding:20px; border:1px solid var(--line); border-radius:12px; background:var(--white); }
+    .distinction b { display:block; margin-bottom:6px; color:var(--ink); }
+    .distinction p { margin:0; font-size:.9rem; }
+    .not { border-left:4px solid var(--bridge); }
+
+    .evidence-levels { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1px; margin:24px 0 30px; border:1px solid var(--line); border-radius:13px; overflow:hidden; background:var(--line); }
+    .evidence-level { padding:22px; background:var(--white); }
+    .evidence-level span { display:block; margin-bottom:8px; color:var(--level); font:800 10px/1.4 var(--mono); letter-spacing:.1em; text-transform:uppercase; }
+    .evidence-level h3 { margin-bottom:7px; }
+    .evidence-level p { margin:0; font-size:.88rem; }
+
+    .evidence-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin-top:24px; }
+    .evidence-card { padding:22px; border:1px solid var(--line); border-radius:13px; background:var(--white); }
+    .evidence-head { display:flex; justify-content:space-between; gap:12px; align-items:flex-start; margin-bottom:10px; }
+    .evidence-head h3 { max-width:72%; font-size:1.03rem; }
+    .claim-status { flex:0 0 auto; padding:4px 7px; border-radius:999px; font:750 9px/1.3 var(--mono); letter-spacing:.04em; text-transform:uppercase; }
+    .supported { background:var(--evidence-soft); color:#315a44; }
+    .active-theory { background:var(--theory-soft); color:#79500d; }
+    .bounded { background:var(--integration-soft); color:#704069; }
+    .evidence-card p { margin:0; font-size:.9rem; }
+    .evidence-card .boundary { margin-top:10px; padding-top:10px; border-top:1px solid var(--line); color:var(--muted); font-size:.82rem; }
+    .evidence-card .source-link { display:inline-block; margin-top:11px; font:700 10px/1.4 var(--mono); }
+
+    .scale-path { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1px; margin-top:24px; border:1px solid var(--line); border-radius:13px; overflow:hidden; background:var(--line); }
+    .scale-step { position:relative; padding:22px; background:var(--white); }
+    .scale-step + .scale-step::before { content:"→"; position:absolute; left:-9px; top:21px; z-index:2; color:var(--social); font-weight:800; }
+    .scale-step b { display:block; color:var(--social); font:750 10px/1.4 var(--mono); letter-spacing:.08em; text-transform:uppercase; }
+    .scale-step h3 { margin:7px 0; }
+    .scale-step p { margin:0; font-size:.87rem; }
+
+    .position-strip { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin-top:24px; }
+    .position { padding:19px; border:1px solid var(--line); border-top:5px solid var(--pos); border-radius:11px; background:var(--white); }
+    .position .letter { color:var(--pos); font:800 1.6rem/1 var(--mono); }
+    .position h3 { margin:9px 0 6px; }
+    .position p { margin:0; font-size:.85rem; }
+    .row-separation { margin-top:18px; overflow-x:auto; border:1px solid var(--line); border-radius:12px; background:var(--white); }
+    table { width:100%; border-collapse:collapse; }
+    th,td { padding:13px 15px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { color:var(--ink); font:750 10px/1.35 var(--mono); letter-spacing:.055em; text-transform:uppercase; }
+    td { font-size:.87rem; }
+    tr:last-child > * { border-bottom:0; }
+
+    .outcomes { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:24px; }
+    .outcome { padding:21px; border:1px solid var(--line); border-radius:12px; background:var(--white); }
+    .outcome span { color:var(--bridge); font:750 10px/1.4 var(--mono); letter-spacing:.08em; text-transform:uppercase; }
+    .outcome h3 { margin:7px 0; }
+    .outcome p { margin:0; font-size:.88rem; }
+
+    .handoff-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-top:24px; }
+    .handoff {
+      display:block; min-height:150px; padding:19px; border:1px solid var(--line); border-radius:11px;
+      background:var(--white); color:var(--body); text-decoration:none;
+    }
+    .handoff:hover { border-color:var(--social); color:var(--body); transform:translateY(-1px); }
+    .handoff b { display:block; margin-bottom:7px; color:var(--ink); }
+    .handoff span { display:block; font-size:.86rem; }
+    .handoff em { display:block; margin-top:13px; color:var(--social); font:700 10px/1.4 var(--mono); font-style:normal; text-transform:uppercase; }
+
+    .sources { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin:20px 0 0; padding:0; list-style:none; }
+    .sources li { padding:15px 17px; border:1px solid var(--line); border-radius:10px; background:var(--white); font-size:.84rem; }
+    .sources b { color:var(--ink); }
+    .quiet-end { margin:30px 0 0; color:var(--muted); font:600 1.15rem/1.55 var(--serif); }
+    footer { padding:24px 0 46px; color:var(--muted); font-size:.78rem; }
+
+    @media (max-width:900px) {
+      .responsibility,.distinctions,.outcomes,.handoff-grid,.evidence-levels { grid-template-columns:1fr; }
+      .evidence-grid,.scale-path,.position-strip { grid-template-columns:1fr 1fr; }
+      .scale-step + .scale-step::before { display:none; }
+    }
+    @media (max-width:620px) {
+      .wrap { width:min(100% - 22px,1240px); }
+      header { padding:42px 4px 34px; }
+      h1 { font-size:clamp(2.8rem,16vw,4.5rem); }
+      section { padding:23px 18px; border-radius:14px; }
+      .route-grid,.evidence-grid,.scale-path,.position-strip,.sources { grid-template-columns:1fr; }
+      .route-grid { gap:16px; }
+      .route-grid::before,.route::before { display:none; }
+      .survival-map { padding-top:88px; }
+      .braid { grid-template-columns:1fr; }
+      .utility { align-items:flex-start; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      html { scroll-behavior:auto; }
+      .handoff { transition:none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="carried-banner" role="note"><strong>Carried page · status approved reference.</strong> Human sociality and the two survival functions: the central proposition, the evidence stack, the cross-model ownership map, the claim-status ledger and the core source routes. Canonical since 23 August 2026; carried on 3 September 2026. <a href="index.html">Back to the Reference canon page →</a></div>
+<div class="utility">
+      <a href="../index.html">TEG-Blue architecture</a>
+      <span>Canonical cross-model reference · 23 August 2026</span>
+    </div>
+
+    <header>
+      <div class="eyebrow">Human sociality · shared biological premise</div>
+      <h1>Human Sociality and the Two Survival Functions</h1>
+      <p class="standfirst">Humans survive and develop within social ecologies. Other people can alter access to care, resources, information, protection, effort and recovery. TEG-Blue uses that observation to distinguish two interacting ways viability can be served: through direct protection of the organism and through maintaining access to consequential others.</p>
+      <div class="status-line">
+        <span class="pill canonical">Canonical cross-model reference</span>
+        <span class="pill">Established evidence → grounded synthesis → TEG-Blue integration</span>
+        <span class="pill">Shared vocabulary for the complete architecture</span>
+      </div>
+
+      <div class="responsibility" aria-label="Page responsibility">
+        <article><b>This page owns</b><p>The shared biological proposition behind human sociality, the two survival functions and their handoffs across the TEG-Blue system.</p></article>
+        <article><b>It receives</b><p>Evolutionary, developmental, attachment, cooperation, social-buffering and interpersonal-regulation research, assessed claim by claim.</p></article>
+        <article><b>It keeps bounded</b><p>An architectural survival function is not an anatomical structure. Human sociality does not imply universal sociability, safe relationships, prescribed behaviour or what another person owes.</p></article>
+      </div>
+    </header>
+
+    <nav class="jump-nav" aria-label="Page sections">
+      <ul>
+        <li><a href="#proposition">Proposition</a></li>
+        <li><a href="#evidence">Evidence stack</a></li>
+        <li><a href="#development">Development</a></li>
+        <li><a href="#gradient">Gradient</a></li>
+        <li><a href="#completion">Completion</a></li>
+        <li><a href="#chronic">Chronic</a></li>
+        <li><a href="#handoffs">System handoffs</a></li>
+        <li><a href="#claims">Claim status</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="proposition">
+        <span class="section-label">Central biological proposition</span>
+        <h2>Relationship is not outside survival. For a social organism, it can be one of survival’s conditions.</h2>
+        <p class="lede">Humans did not evolve as fully self-sufficient individuals who later added relationships for comfort. Across human life history, other people have participated in provisioning, childcare, learning, defence, cooperation, risk sharing and the regulation of demand. This does not make every relationship necessary or beneficial. It makes social availability biologically consequential.</p>
+
+        <div class="survival-map" aria-label="Survival and viability branching into two interacting functional routes">
+          <div class="viability-node"><b>Survival / viability</b><span>The organism remains alive, workable and able to participate.</span></div>
+          <div class="route-grid">
+            <article class="route direct">
+              <span class="route-name">Through direct protection</span>
+              <h3>Organism-protection</h3>
+              <p>Conditions require maintenance, restoration, distance, defence, escape, shelter, nourishment or another action that changes bodily demand or exposure.</p>
+              <ul><li>bodily integrity and viable internal conditions</li><li>resources, distance, shelter and effective action</li><li>direct protection from harmful conditions</li></ul>
+            </article>
+            <article class="route social">
+              <span class="route-name">Through access to others</span>
+              <h3>Connection-preservation</h3>
+              <p>Access to a consequential person or group affects care, cooperation, recognition, information, shared effort, protection or the possibility of relational restoration.</p>
+              <ul><li>availability, belonging and reciprocal access</li><li>care, shared information and coordinated action</li><li>recognition, accountability and repair where mutuality is required</li></ul>
+            </article>
+          </div>
+          <div class="braid">
+            <div class="braid-mark">↔</div>
+            <div><h3>Early dependency couples both</h3><p>For dependent young, caregiver connection may also provide warmth, nourishment, transport, protection, orientation and conditions for recovery. Preserving connection can therefore participate directly in organism-protection. <a href="../05-frameworks/F02/notes/developmental-entries.md#entry-002-borrowing-regulation">F2 Entry 002 follows this developmental route.</a></p></div>
+          </div>
+        </div>
+
+        <div class="distinctions">
+          <article class="distinction"><b>Same ultimate purpose</b><p>Both functions can serve viability. The distinction concerns where the immediate problem sits and what kind of change could answer it.</p></article>
+          <article class="distinction"><b>Different possible answer-source</b><p>A boundary or environmental change can answer some direct-protection problems. Mutual recognition or repair cannot be produced by one person alone.</p></article>
+          <article class="distinction not"><b>Not sociality as personality</b><p>Introversion, chosen solitude and independence remain ordinary. “Social animal” describes a species history and ecology, not a requirement for constant company.</p></article>
+        </div>
+      </section>
+
+      <section id="evidence">
+        <span class="section-label">Convergent grounding</span>
+        <h2>Convergent evidence grounds the functional territory; TEG-Blue gives it an architectural form.</h2>
+        <p class="lede">The question is not whether one paper has already named connection-preservation. The question is whether independent findings jointly support the biological importance of maintaining access to socially consequential others. They do. TEG-Blue then organises that grounded territory so it can operate consistently across the models, frameworks, diagrams and Signal Map. This page applies the governing <a href="../foundations/notes/20-working-architectural-language.md">Working Architectural Language and Scientific Synthesis</a> rule.</p>
+
+        <div class="evidence-levels" aria-label="Three evidence levels used by this reference">
+          <article class="evidence-level" style="--level:var(--evidence)"><span>1 · Established evidence</span><h3>What research directly supports</h3><p>Human dependency, attachment behaviour, cooperation, social buffering, interpersonal influence and consequential responses to social availability, loss and exclusion.</p></article>
+          <article class="evidence-level" style="--level:var(--theory)"><span>2 · Grounded synthesis</span><h3>What convergence lets us conclude</h3><p>Maintaining access to socially consequential others is a biologically meaningful problem for humans, even though its processes are distributed across fields and levels of explanation.</p></article>
+          <article class="evidence-level" style="--level:var(--integration)"><span>3 · TEG-Blue integration</span><h3>How the architecture organises it</h3><p><strong>Connection-preservation</strong> names that functional territory; <strong>organism-protection</strong> names the interacting territory of direct maintenance and protection. The terms can now be used consistently across TEG-Blue.</p></article>
+        </div>
+
+        <div class="evidence-grid">
+          <article class="evidence-card">
+            <div class="evidence-head"><h3>Prolonged dependency and cooperative care</h3><span class="claim-status supported">Supported territory</span></div>
+            <p>Human children develop over a long period and receive care, provisioning and protection from networks that can extend beyond one parent. Comparative and developmental accounts treat cooperative care as important in human life history.</p>
+            <p class="boundary">Boundary: cooperative-breeding accounts are evolutionary hypotheses with competing and composite explanations; they do not establish one origin story for human sociality.</p>
+            <a class="source-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5524848/">Tomasello &amp; Gonzalez-Cabrera, 2017</a>
+          </article>
+          <article class="evidence-card">
+            <div class="evidence-head"><h3>Cooperation, provisioning and shared risk</h3><span class="claim-status supported">Supported territory</span></div>
+            <p>Human cooperation includes food sharing, care, information exchange and coordinated work among kin and non-kin. Field evidence also shows that the form of sharing changes with socio-ecological conditions.</p>
+            <p class="boundary">Boundary: humans are not uniformly cooperative. Reciprocity, demand sharing, kinship, power, norms, conflict and ecology produce different arrangements.</p>
+            <a class="source-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4968462/">Smith et al., 2016</a>
+          </article>
+          <article class="evidence-card">
+            <div class="evidence-head"><h3>Attachment and caregiver availability</h3><span class="claim-status supported">Research programme</span></div>
+            <p>Attachment research studies how young children use familiar caregivers when alarmed and how separation, reunion, exploration and caregiver response vary under specified conditions.</p>
+            <p class="boundary">Boundary: attachment classifications are not Gradient Positions, diagnoses, moral types or complete accounts of a relationship.</p>
+            <a class="source-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5600694/">Granqvist et al., 2017</a>
+          </article>
+          <article class="evidence-card">
+            <div class="evidence-head"><h3>Social Baseline Theory</h3><span class="claim-status active-theory">Active theory</span></div>
+            <p>Social Baseline Theory proposes that access to familiar, interdependent others participates in estimates of risk, resources and effort, rather than functioning only as an optional reward added to an otherwise solitary baseline.</p>
+            <p class="boundary">Boundary: this is a theoretical synthesis, not proof that every brain expects the same relationships or that being alone necessarily means greater demand.</p>
+            <a class="source-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4375548/">Coan &amp; Sbarra, 2015</a>
+          </article>
+          <article class="evidence-card">
+            <div class="evidence-head"><h3>Social buffering and measured stress responses</h3><span class="claim-status supported">Conditionally supported</span></div>
+            <p>Across species and developmental periods, the presence or assistance of another organism can alter measured responses to threat or challenge. Human effects depend on age, relationship, context and the outcome measured.</p>
+            <p class="boundary">Boundary: buffering is not state transfer. Lower cortisol, lower neural threat response or visible settling does not establish completion, safety or beneficial regulation by itself.</p>
+            <a class="source-link" href="https://pubmed.ncbi.nlm.nih.gov/23607429/">Hostinar, Sullivan &amp; Gunnar, 2014</a>
+          </article>
+          <article class="evidence-card">
+            <div class="evidence-head"><h3>Interpersonal emotion regulation</h3><span class="claim-status active-theory">Research model</span></div>
+            <p>Another person's actions can alter the situation, attention, interpretation, expression or response processes through which emotion unfolds. The regulator and the person being affected remain separate participants.</p>
+            <p class="boundary">Boundary: interpersonal influence is not automatically accurate, caring, consensual or helpful. It can also misread, suppress, escalate or control.</p>
+            <a class="source-link" href="https://pubmed.ncbi.nlm.nih.gov/26564248/">Reeck, Ames &amp; Ochsner, 2016</a>
+          </article>
+          <article class="evidence-card">
+            <div class="evidence-head"><h3>Rejection, separation and social pain</h3><span class="claim-status bounded">Real distress · disputed mapping</span></div>
+            <p>Rejection, exclusion and loss can produce consequential distress, attention and action. Some studies report overlap with processes involved in physical pain; quantitative reviews contest a simple shared “pain matrix.”</p>
+            <p class="boundary">Boundary: social pain should not be presented as physical injury, one neural circuit or proof that a particular relationship must be restored.</p>
+            <a class="source-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3761131/">Cacioppo et al., 2013 · quantitative boundary</a>
+          </article>
+          <article class="evidence-card">
+            <div class="evidence-head"><h3>The two survival functions</h3><span class="claim-status bounded">TEG-Blue integration</span></div>
+            <p>TEG-Blue organises these converging territories into organism-protection and connection-preservation so the active problem, available information and completing condition can be distinguished across ESS, CLS, ME, the Fluid Positions, ESC and the Situation Signal families.</p>
+            <p class="boundary">Evidence boundary: these are architectural survival functions, not claims of two dedicated anatomical systems or a one-to-one mapping between one function and one emotion, pathway or Gradient Position.</p>
+            <a class="source-link" href="../evidence/protocol.html">Apply the Science Grounding Protocol</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="development">
+        <span class="section-label">Changing scale</span>
+        <h2>A species-level dependency becomes a developmental condition, then a present event.</h2>
+        <p class="lede">The same proposition changes meaning as the level of explanation changes. Keeping those levels separate prevents evolutionary plausibility from becoming a childhood story or a prediction about present behaviour.</p>
+        <div class="scale-path">
+          <article class="scale-step"><b>F1 · repertoire</b><h3>Social capacities become available</h3><p>Caregiving, signalling, attachment, cooperation, learning and shared action belong to an inherited and culturally elaborated repertoire.</p></article>
+          <article class="scale-step"><b>F2 · development</b><h3>Other people change conditions</h3><p>Caregivers provide resources and responses while the child's own organism senses, acts, reorganises and learns from what follows.</p></article>
+          <article class="scale-step"><b>Models 1 + 2</b><h3>Social information meets organisation</h3><p>Another person's availability, expression and action enter the information field while present organisation changes access, priority and capacity.</p></article>
+          <article class="scale-step"><b>ESC · event</b><h3>Response becomes feedback</h3><p>What the other person does may change the condition, support updating, leave demand open or become carryover into the next cycle.</p></article>
+        </div>
+        <p class="quiet-end">Development can shape which relational routes become easier to recruit. It cannot be reconstructed from one adult response.</p>
+      </section>
+
+      <section id="gradient">
+        <span class="section-label">Connection to the Nervous System Gradient</span>
+        <h2>The survival function and defensive recruitment are different rows.</h2>
+        <p class="lede">A and X remain non-defensive while still serving survival functions. A↔B marks the beginning of defensive checking because belonging or safety has become uncertain. B gives direct organism-protection greater priority.</p>
+        <div class="position-strip">
+          <article class="position" style="--pos:#7b8da0"><span class="letter">X</span><h3>Restorative availability</h3><p>Organism-protection is served non-defensively through maintenance, restoration and readiness.</p></article>
+          <article class="position" style="--pos:#20a9bb"><span class="letter">A</span><h3>Connection available</h3><p>Connection-preservation is served non-defensively through belonging, reciprocity, exploration and participation.</p></article>
+          <article class="position" style="--pos:#4aa776"><span class="letter">A↔B</span><h3>Access uncertain</h3><p>Connection-preservation and organism-protection interact while the ESS checks whether safety and belonging remain available.</p></article>
+          <article class="position" style="--pos:#94b924"><span class="letter">B</span><h3>Direct protection</h3><p>Threat, intrusion or obstruction gives immediate boundary defence, resistance, escape or protective engagement greater priority.</p></article>
+        </div>
+        <div class="row-separation">
+          <table>
+            <thead><tr><th>Question</th><th>What it distinguishes</th><th>Example</th></tr></thead>
+            <tbody>
+              <tr><td>Survival function</td><td>What larger biological problem is being served?</td><td>Connection-preservation at A; organism-protection at X; their intersection at A↔B.</td></tr>
+              <tr><td>Defensive recruitment</td><td>Has uncertainty or threat recruited checking, mobilisation or conservation?</td><td>No at X and A; begins at A↔B.</td></tr>
+              <tr><td>Present organisational task</td><td>How is the function being served under these conditions?</td><td>Reciprocal participation, safety checking, boundary defence or restoration.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="quiet-end"><a href="../05-frameworks/F01/crosswalk.html">Open the F1 → Fluid Gradient crosswalk</a> for the complete many-to-many capacity mapping.</p>
+      </section>
+
+      <section id="completion">
+        <span class="section-label">Relational conditions and Return</span>
+        <h2>Another person can be part of the completing condition without becoming the only route to Return.</h2>
+        <p class="lede">When the unresolved condition is mutual recognition, reciprocity, accountability, trust or repair, one person cannot produce relational restoration alone. The organism may still update to the relationship's unavailability through evidence, grief, an effective boundary or revised expectation.</p>
+        <div class="outcomes">
+          <article class="outcome"><span>Outcome 1</span><h3>Relational restoration</h3><p>The relevant people participate in recognition, reciprocity, accountability, changed conduct or repair. Mutuality is part of what changed.</p></article>
+          <article class="outcome"><span>Outcome 2</span><h3>Organism-level updating and Return</h3><p>Demand changes enough for recruitment to release and wider participation or restoration to become available. Another person may help without mutual repair being the active condition.</p></article>
+          <article class="outcome"><span>Outcome 3</span><h3>Return without relational restoration</h3><p>The relationship remains unavailable or unrepaired while grief, protection, revised expectation or reorganisation allows the organism to respond to that reality.</p></article>
+        </div>
+        <p class="quiet-end">The <a href="../01-signal-map/emotion/fluid.html#relational-completion-cases">Fluid Signal Map compares four relational cases</a>; F2 Entry 003 records where the developmental completion distinction currently lives.</p>
+      </section>
+
+      <section id="chronic">
+        <span class="section-label">Fluid and Chronic boundary</span>
+        <h2>Social dependence explains why relational information matters. It does not determine what repetition will produce.</h2>
+        <p class="lede">Repeated non-response, unpredictability, punishment or role reversal may shape expectation, attention, expression, help-seeking and protective practice. But no single relational history produces one inevitable organisation, interpretation or behaviour.</p>
+        <div class="distinctions">
+          <article class="distinction"><b>Fluid question</b><p>Does organisation change as current social availability, uncertainty, threat or repair changes?</p></article>
+          <article class="distinction"><b>Chronic question</b><p>Have repeated outcomes altered thresholds, expectations, signal weighting, recovery or the routes that remain easy to use?</p></article>
+          <article class="distinction not"><b>Behaviour boundary</b><p>History and organisation may constrain capacity. They do not establish intention, excuse harm or decide whether accountability and repair occurred.</p></article>
+        </div>
+        <p class="quiet-end">This is why the social-animal premise reaches the Chronic Gradient and F3 only through learning, persistence and updating evidence—not by direct evolutionary inference.</p>
+      </section>
+
+      <section id="handoffs">
+        <span class="section-label">Cross-model ownership map</span>
+        <h2>One shared premise; different questions in each destination.</h2>
+        <p class="lede">These pages should receive this biological premise without reproducing its complete argument. Each destination owns what happens at its own scale.</p>
+        <div class="handoff-grid">
+          <a class="handoff" href="../05-frameworks/F01/review.md"><b>F1 · Evolutionary foundations</b><span>Why social detection, care, cooperation and regulation-through-relationship became available in the repertoire.</span><em>Open F1 review →</em></a>
+          <a class="handoff" href="../05-frameworks/F02/notes/developmental-entries.md#entry-002-borrowing-regulation"><b>F2 · Development</b><span>How caregiver-provided conditions, responses and repeated outcomes participate while the child's own organism regulates and learns.</span><em>Open Entry 002 →</em></a>
+          <a class="handoff" href="../02-model-1-ess-cls-me/index.html"><b>Model 1 · ESS, CLS and ME</b><span>How another person's signals, behaviour and availability enter emotional–somatic and reflective–symbolic information processing.</span><em>Open Model 1 →</em></a>
+          <a class="handoff" href="../03-model-2-gradient/index.html"><b>Model 2 · Nervous System Gradient</b><span>How social availability, uncertainty and threat participate in present organisation without becoming one social-engagement circuit.</span><em>Open Model 2 →</em></a>
+          <a class="handoff" href="../01-signal-map/emotion/fluid.html#situation-signals"><b>Emotional Signal Map</b><span>Which condition a relational signal concerns, what it may need and what can remain open when the response does not arrive.</span><em>Open Fluid signals →</em></a>
+          <a class="handoff" href="../04-model-3-esc/cycle.html"><b>Model 3 · ESC</b><span>How another person's response becomes feedback, condition change, completion, carryover or part of the next cycle.</span><em>Open ESC →</em></a>
+          <a class="handoff" href="../01-signal-map/emotion/chronic.html"><b>Chronic organisation</b><span>How relational information may remain biologically real while access, interpretation, response and updating become recurrently narrowed.</span><em>Open Chronic signals →</em></a>
+          <a class="handoff" href="../03-model-2-gradient/return.html"><b>Return and recovery</b><span>How relational restoration, organism-level Return, recovery and later repair remain distinguishable outcomes.</span><em>Open Return reference →</em></a>
+          <a class="handoff" href="behaviour.html"><b>Behaviour and responsibility</b><span>Why social need, activation or developmental history cannot establish harmlessness, entitlement, consent or completed repair.</span><em>Open boundary reference →</em></a>
+          <a class="handoff" href="../05-frameworks/index.html"><b>The Twelve Foundational Frameworks</b><span>How the shared premise changes scale across evolution, development, adult revision, power, recovery and continuity.</span><em>Open frameworks →</em></a>
+          <a class="handoff" href="../05-frameworks/F01/index.html"><b>Evidence routing</b><span>Which research families ground evolutionary availability, Fluid organisation and Chronic persistence—and where each stops.</span><em>Open grounding crosswalk →</em></a>
+          <a class="handoff" href="../evidence/protocol.html"><b>Science Grounding Protocol</b><span>How component evidence, theory, TEG-Blue integration and speculation must remain visibly classified.</span><em>Open protocol →</em></a>
+        </div>
+      </section>
+
+      <section id="claims">
+        <span class="section-label">Claim-status ledger</span>
+        <h2>Where evidence ends, synthesis begins and the architecture takes responsibility.</h2>
+        <div class="row-separation">
+          <table>
+            <thead><tr><th>Claim</th><th>Status</th><th>Boundary</th></tr></thead>
+            <tbody>
+              <tr><td>Human survival and development have occurred within cooperative social ecologies.</td><td><span class="claim-status supported">Supported territory</span></td><td>The exact evolutionary routes remain debated and culturally variable.</td></tr>
+              <tr><td>Caregiver and social conditions can alter measured stress, threat and emotion processes.</td><td><span class="claim-status supported">Conditionally supported</span></td><td>Specify person, relationship, context, measure, direction and timescale.</td></tr>
+              <tr><td>The human brain uses access to trusted others as a social baseline for estimating risk and effort.</td><td><span class="claim-status active-theory">Active theory</span></td><td>Social Baseline Theory organises evidence; it is not a universal biological law.</td></tr>
+              <tr><td>Social rejection and physical pain use the same neural system.</td><td><span class="claim-status bounded">Do not state</span></td><td>Distress is real; evidence does not support a simple identical “pain matrix.”</td></tr>
+              <tr><td>Maintaining access to socially consequential others is a biologically meaningful problem for humans.</td><td><span class="claim-status active-theory">Grounded synthesis</span></td><td>Convergent support comes from several research territories; no single theory is asked to carry the proposition.</td></tr>
+              <tr><td>Organism-protection and connection-preservation are two interacting survival functions.</td><td><span class="claim-status bounded">TEG-Blue integration</span></td><td>They are functional problem-spaces, not discovered anatomical systems.</td></tr>
+              <tr><td>A, A↔B and B organise social availability, relational uncertainty and direct protection.</td><td><span class="claim-status bounded">TEG-Blue model</span></td><td>Component processes are grounded separately; the Positions are not validated natural kinds.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top:30px">Core source routes</h3>
+        <ul class="sources">
+          <li><b>Coan &amp; Sbarra (2015).</b> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4375548/">Social Baseline Theory: The Social Regulation of Risk and Effort.</a></li>
+          <li><b>Coan, Schaefer &amp; Davidson (2006).</b> <a href="https://pubmed.ncbi.nlm.nih.gov/17201784/">Lending a hand: social regulation of the neural response to threat.</a></li>
+          <li><b>Hostinar, Sullivan &amp; Gunnar (2014).</b> <a href="https://pubmed.ncbi.nlm.nih.gov/23607429/">Psychobiological mechanisms underlying social buffering of the HPA axis.</a></li>
+          <li><b>Reeck, Ames &amp; Ochsner (2016).</b> <a href="https://pubmed.ncbi.nlm.nih.gov/26564248/">The Social Regulation of Emotion.</a></li>
+          <li><b>Tomasello &amp; Gonzalez-Cabrera (2017).</b> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5524848/">The Role of Ontogeny in the Evolution of Human Cooperation.</a></li>
+          <li><b>Smith et al. (2016).</b> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4968462/">Camp stability predicts patterns of hunter–gatherer cooperation.</a></li>
+          <li><b>Granqvist et al. (2017).</b> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5600694/">Disorganised attachment in infancy: levels, evidence and boundaries.</a></li>
+          <li><b>Cacioppo et al. (2013).</b> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3761131/">Quantitative meta-analysis of functional imaging studies of social rejection.</a></li>
+        </ul>
+        <p class="quiet-end">The scientific foundation supports the functional territory. TEG-Blue takes responsibility for naming it, organising it and using it consistently across the architecture.</p>
+      </section>
+    </main>
+
+    <footer>TEG-Blue · The Emotional Gradient Blueprint · canonical cross-model reference · evidence last checked 23 August 2026.</footer>
+  </div>
+</body>
+</html>

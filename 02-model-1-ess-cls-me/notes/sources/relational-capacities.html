@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relational Capacity Configurations — Working Matrix</title>
+<link rel="stylesheet" href="../../../assets/page-responsibility.css">
+<style>
+  :root {
+    --ink: #0b1f42;
+    --ink-soft: #24365c;
+    --body: #3c4c6d;
+    --muted: #64748b;
+    --line: #dbe3ef;
+    --line-faint: #edf1f7;
+    --paper: #ffffff;
+    --ground: #f6f8fc;
+    --interoceptive: #6eeafb;
+    --affective: #b6fc50;
+    --mentalizing: #f7d448;
+    --chronic: #ef823a;
+    --off: #d8dfeb;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font: 15px/1.58 ui-sans-serif, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  button, a { font: inherit; }
+  a { color: inherit; text-underline-offset: 3px; }
+  .wrap { width: min(1440px, calc(100% - 48px)); margin: 0 auto; }
+
+  .hero {
+    position: relative;
+    overflow: hidden;
+    padding: 64px 0 56px;
+    background: var(--ink);
+    color: #fff;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    right: -8vw;
+    bottom: -210px;
+    width: 620px;
+    height: 620px;
+    border-radius: 50%;
+    border: 92px solid rgba(110, 234, 251, 0.09);
+    box-shadow:
+      0 0 0 92px rgba(182, 252, 80, 0.055),
+      0 0 0 184px rgba(247, 212, 72, 0.04);
+    pointer-events: none;
+  }
+  .hero-inner { position: relative; z-index: 1; max-width: 960px; }
+  .eyebrow {
+    margin: 0 0 18px;
+    color: var(--interoceptive);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+  }
+  h1, h2, h3 { font-family: ui-serif, Georgia, "Times New Roman", serif; }
+  h1 {
+    max-width: 920px;
+    margin: 0;
+    font-size: clamp(38px, 6.4vw, 76px);
+    line-height: 0.98;
+    font-weight: 540;
+    letter-spacing: -0.045em;
+  }
+  .hero .thesis {
+    max-width: 770px;
+    margin: 28px 0 0;
+    color: #d7e1f3;
+    font-size: clamp(17px, 2vw, 21px);
+    line-height: 1.5;
+  }
+  .hero .boundary {
+    max-width: 720px;
+    margin: 30px 0 0;
+    padding-left: 16px;
+    border-left: 3px solid var(--affective);
+    color: #aebdd6;
+    font-size: 13px;
+  }
+
+  main { padding: 54px 0 88px; }
+  section { margin-bottom: 72px; }
+  .section-head { max-width: 860px; margin-bottom: 24px; }
+  h2 { margin: 0 0 10px; font-size: 28px; font-weight: 600; letter-spacing: -0.015em; }
+  .caption { margin: 0; color: var(--body); }
+
+  .source-bridge {
+    display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px; align-items: center;
+    margin: 0 0 48px; padding: 18px 20px; border: 1px solid #b9ddec;
+    border-left: 5px solid var(--interoceptive); border-radius: 12px;
+    background: #eefcff; box-shadow: 0 1px 2px rgba(11, 31, 66, 0.04);
+  }
+  .source-bridge strong { display: block; margin-bottom: 3px; color: var(--ink); font-size: 13px; }
+  .source-bridge p { margin: 0; color: var(--body); font-size: 12.5px; }
+  .source-bridge a {
+    padding: 9px 12px; border-radius: 8px; background: var(--ink); color: #fff;
+    font-size: 11.5px; font-weight: 800; text-decoration: none;
+  }
+  .source-bridge a:hover { background: var(--ink-soft); }
+  .source-bridge a:focus-visible { outline: 3px solid var(--interoceptive); outline-offset: 3px; }
+
+  .capacity-key {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .capacity-key article {
+    position: relative;
+    overflow: hidden;
+    min-height: 205px;
+    padding: 22px 22px 24px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--paper);
+    box-shadow: 0 1px 2px rgba(11, 31, 66, 0.05);
+  }
+  .capacity-key article::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 5px;
+    background: var(--accent);
+  }
+  .capacity-key .plain { margin: 0 0 3px; font-weight: 800; font-size: 18px; }
+  .capacity-key .term { margin: 0 0 16px; color: var(--muted); font-size: 11px; font-weight: 750; letter-spacing: .04em; text-transform: uppercase; }
+  .capacity-key .question { margin: 0 0 9px; color: var(--ink-soft); font-weight: 700; }
+  .capacity-key .definition { margin: 0; color: var(--body); font-size: 13.5px; }
+  .capacity-key .process-link {
+    display: inline-block; margin-top: 13px; color: var(--ink-soft); font-size: 10.5px; font-weight: 800;
+  }
+
+  .conduct-boundary {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(260px, .8fr);
+    overflow: hidden;
+    margin-top: 16px;
+    border: 1px solid var(--line);
+    border-radius: 15px;
+    background: var(--paper);
+    box-shadow: 0 6px 24px rgba(11, 31, 66, .06);
+  }
+  .conduct-boundary .thesis {
+    padding: 26px;
+    background: var(--ink);
+    color: white;
+  }
+  .conduct-boundary .label { margin: 0 0 10px; color: var(--affective); font-size: 9px; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+  .conduct-boundary .thesis p:last-of-type { margin: 0; font-size: clamp(19px, 2.3vw, 27px); line-height: 1.35; font-weight: 650; letter-spacing: -.018em; }
+  .conduct-boundary .thesis a { display: inline-block; margin-top: 15px; color: var(--interoceptive); font-size: 11px; font-weight: 800; }
+  .conduct-boundary .separate-plane { padding: 26px; }
+  .conduct-boundary .separate-plane h3 { margin: 0 0 9px; font-size: 14px; }
+  .conduct-boundary .separate-plane p { margin: 0; color: var(--body); font-size: 12.5px; }
+  .conduct-boundary .separate-plane p + p { margin-top: 10px; }
+  .conduct-boundary .separate-plane strong { color: var(--ink); }
+
+  .selector-shell {
+    padding: 24px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--paper);
+    box-shadow: 0 8px 32px rgba(11, 31, 66, 0.07);
+  }
+  .selector {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .switch {
+    display: grid;
+    grid-template-columns: 42px 1fr auto;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    background: #fbfcfe;
+    color: var(--ink);
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 160ms, background-color 160ms, transform 160ms;
+  }
+  .switch:hover { transform: translateY(-1px); border-color: var(--ink-soft); }
+  .switch:focus-visible, .config-card:focus-visible {
+    outline: 3px solid rgba(110, 234, 251, 0.7);
+    outline-offset: 3px;
+  }
+  .switch-dot {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 28px;
+    border-radius: 999px;
+    background: var(--off);
+    transition: background-color 160ms;
+  }
+  .switch-dot::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #fff;
+    transform: translateX(-7px);
+    box-shadow: 0 1px 3px rgba(11, 31, 66, 0.3);
+    transition: transform 160ms;
+  }
+  .switch[aria-pressed="true"] { background: #f5fbff; border-color: var(--accent); }
+  .switch[aria-pressed="true"] .switch-dot { background: var(--accent); }
+  .switch[aria-pressed="true"] .switch-dot::after { transform: translateX(7px); }
+  .switch strong { display: block; font-size: 13.5px; }
+  .switch small { display: block; color: var(--muted); font-size: 11.5px; }
+  .switch-state { color: var(--muted); font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+  .selection-readout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line-faint);
+  }
+  .selection-readout p { margin: 0; color: var(--body); }
+  .selection-readout strong { color: var(--ink); }
+  .jump {
+    flex: none;
+    padding: 9px 13px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--ink);
+    color: #fff;
+    cursor: pointer;
+  }
+  .jump:hover { background: var(--ink-soft); }
+
+  .field-note {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 16px 0 0;
+  }
+  .field-note p {
+    margin: 0;
+    padding: 14px 15px;
+    border-radius: 10px;
+    background: #edf5ff;
+    color: var(--ink-soft);
+    font-size: 13px;
+  }
+  .field-note p:last-child { background: #f6ffe8; }
+
+  .config-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+  .config-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 142px 1fr;
+    gap: 22px;
+    min-height: 370px;
+    padding: 24px;
+    border: 1px solid var(--line);
+    border-radius: 15px;
+    background: var(--paper);
+    box-shadow: 0 1px 2px rgba(11, 31, 66, 0.05);
+    scroll-margin-top: 20px;
+    transition: border-color 180ms, box-shadow 180ms, opacity 180ms;
+  }
+  .config-card[aria-current="true"] {
+    border-color: var(--ink);
+    box-shadow: 0 0 0 3px rgba(11, 31, 66, 0.08), 0 14px 38px rgba(11, 31, 66, 0.12);
+  }
+  .config-card.dimmed { opacity: 0.52; }
+  .configuration-mark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding-top: 3px;
+  }
+  .capacity-node {
+    display: grid;
+    place-items: center;
+    width: 112px;
+    min-height: 70px;
+    padding: 8px;
+    border: 2px solid var(--off);
+    border-radius: 18px;
+    background: #fff;
+    color: var(--muted);
+    font-size: 9px;
+    font-weight: 800;
+    line-height: 1.15;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .capacity-node.on { border-color: var(--node); background: color-mix(in srgb, var(--node) 21%, #fff); color: var(--ink); }
+  .capacity-node.dominant { box-shadow: 0 0 0 6px color-mix(in srgb, var(--node) 18%, transparent); }
+  .connector { width: 2px; height: 24px; background: var(--off); }
+  .connector.on { background: var(--ink-soft); }
+  .bit-code {
+    margin-top: 14px;
+    color: var(--muted);
+    font: 700 11px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+    letter-spacing: 0.13em;
+  }
+  .config-body .kicker { margin: 0 0 3px; color: var(--muted); font-size: 10.5px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }
+  .config-body h3 { margin: 0 0 8px; font-size: 23px; font-weight: 600; letter-spacing: -0.015em; }
+  .structure { margin: 0 0 18px; color: var(--ink-soft); font-size: 14px; }
+  .config-body h4 { margin: 14px 0 5px; color: var(--muted); font-size: 10.5px; letter-spacing: 0.09em; text-transform: uppercase; }
+  .config-body ul { margin: 0; padding-left: 18px; color: var(--body); font-size: 13px; }
+  .config-body li + li { margin-top: 4px; }
+  .concern {
+    margin: 15px 0 0;
+    padding: 11px 12px;
+    border-left: 3px solid var(--affective);
+    background: #f7ffe9;
+    color: var(--ink-soft);
+    font-size: 12.5px;
+  }
+  .boundary-copy { margin: 10px 0 0; color: var(--muted); font-size: 11.5px; }
+
+  .quality-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .quality-grid article {
+    padding: 17px;
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    background: var(--paper);
+  }
+  .quality-grid h3 { margin: 0 0 6px; font: 800 13px/1.3 ui-sans-serif, -apple-system, "Segoe UI", sans-serif; }
+  .quality-grid p { margin: 0; color: var(--body); font-size: 12.5px; }
+
+  .naming-table {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--paper);
+  }
+  table { width: 100%; border-collapse: collapse; min-width: 850px; }
+  th, td { padding: 14px 16px; border-bottom: 1px solid var(--line-faint); text-align: left; vertical-align: top; }
+  th { color: var(--muted); font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; }
+  td { color: var(--body); font-size: 13px; }
+  tbody tr:last-child td { border-bottom: 0; }
+  td:first-child { color: var(--ink); font-weight: 800; }
+  .recommended { display: inline-block; margin-top: 5px; color: var(--ink-soft); font-size: 11px; font-weight: 700; }
+
+  .closing {
+    padding: 26px;
+    border-radius: 14px;
+    background: var(--ink);
+    color: #fff;
+  }
+  .closing h2 { margin-bottom: 10px; }
+  .closing p { max-width: 900px; margin: 0; color: #d7e1f3; }
+  .back { display: inline-block; margin-top: 26px; color: var(--muted); font-size: 13px; }
+
+  @media (max-width: 920px) {
+    .capacity-key, .selector, .quality-grid, .conduct-boundary { grid-template-columns: 1fr; }
+    .config-grid { grid-template-columns: 1fr; }
+    .quality-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 620px) {
+    .wrap { width: min(100% - 28px, 1440px); }
+    .hero { padding: 44px 0; }
+    main { padding-top: 34px; }
+    .selector-shell { padding: 16px; }
+    .selection-readout { align-items: flex-start; flex-direction: column; }
+    .config-card { grid-template-columns: 1fr; padding: 20px; }
+    .configuration-mark { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; width: 100%; }
+    .capacity-node { width: 100%; min-height: 60px; padding: 6px 3px; font-size: 7.5px; }
+    .connector { display: none; }
+    .bit-code { grid-column: 1 / -1; margin: 3px 0 0; text-align: center; }
+    .field-note, .quality-grid { grid-template-columns: 1fr; }
+    .source-bridge { grid-template-columns: 1fr; gap: 12px; }
+    .source-bridge a { justify-self: start; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition-duration: 0.01ms !important; }
+  }
+  @media print {
+    body { background: #fff; }
+    .hero { padding: 28px 0; }
+    .selector-shell, .back { display: none; }
+    .config-card { break-inside: avoid; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+<div class="carried-banner" role="note"><strong>Carried source · status archived.</strong> The eight configurations and the five quality dimensions as carried from the working repository on 2 September 2026. Superseded on 3 September 2026 by the <a href="../../me-access.html">ME access add-on</a>, which absorbed this page and the capacity controller. Kept as provenance; the switches still read and write the shared setting. <a href="../../index.html">Back to the Model 1 canon page →</a></div>
+<header class="hero">
+  <div class="wrap hero-inner">
+    <p class="eyebrow">ME participation · three capacities · eight configurations</p>
+    <h1>How three forms of access combine within ME</h1>
+    <p class="thesis">A configuration is not a personality. It is the current relationship between bodily information access and use, affective-sharing access, and mentalizing access and use. Personality-like patterns may begin to emerge when one configuration becomes recurrent, generalised, and difficult to update.</p>
+    <p class="boundary"><strong>Working boundary.</strong> “Available” and “unavailable” are deliberately simplified here. A capacity may be faint, selective, distorted, fused, over-recruited, or intact but not currently needed. The binary field reveals structure; the quality dimensions below restore the complexity. <a href="../../../03-model-2-gradient/premise.html">Read the governing model premise →</a></p>
+  </div>
+</header>
+
+<main class="wrap">
+  <aside class="page-responsibility" aria-label="Page responsibility">
+    <div class="page-responsibility__heading">
+      <p class="page-responsibility__label">Page responsibility · Model 1 capacity companion</p>
+      <p class="page-responsibility__scope">Scientific-facing scope · configurations of bodily-information access, affective sharing and mentalizing within conscious participation</p>
+    </div>
+    <p class="page-responsibility__question"><strong>Governing question</strong>What becomes possible when different forms of relational information access are available together, unevenly or not yet usable?</p>
+    <div class="page-responsibility__grid">
+      <div class="page-responsibility__item"><strong>This page owns</strong><p>The combinatorial matrix and the quality dimensions that prevent “available” and “unavailable” from being treated as simple binaries.</p></div>
+      <div class="page-responsibility__item"><strong>It receives</strong><p>The <a href="../../index.html">ESS · CLS · ME distinction</a> and the Gradient’s <a href="../../../03-model-2-gradient/positions.html#me-participation-title">capacity-access conditions</a>.</p></div>
+      <div class="page-responsibility__item"><strong>It does not establish</strong><p>A personality type, diagnosis, moral category, relational safety or the behaviour a person will choose.</p></div>
+    </div>
+  </aside>
+
+  <aside class="source-bridge" aria-label="Link to ME participation model">
+    <div><strong>The same three controls, viewed as combinations</strong><p>The Gradient separates each ME-access control from the biological process underneath it. This file tests what becomes possible when the three forms of access are available in different combinations.</p></div>
+    <a href="../../../03-model-2-gradient/positions.html#me-participation-title">Open ME participation card →</a>
+  </aside>
+
+  <section id="capacity-key" aria-labelledby="capacity-key-title">
+    <div class="section-head">
+      <h2 id="capacity-key-title">The three capacities under test</h2>
+      <p class="caption">ME-participation terms now lead. The familiar phrases remain underneath as human translations.</p>
+    </div>
+    <div class="capacity-key">
+      <article id="capacity-interoceptive" style="--accent:var(--interoceptive)">
+        <p class="plain">Bodily information access and use</p>
+        <p class="term">Human translation · feel myself</p>
+        <p class="question">Can I feel my own feeling, need, limit, and preference?</p>
+        <p class="definition">Names how much internal bodily and emotional information becomes readable, differentiated, and usable by ME. The biological process may continue without that access.</p>
+        <a class="process-link" href="../../../03-model-2-gradient/positions.html#fluid-interoceptive-processing">Open the Interoceptive processing row →</a>
+      </article>
+      <article id="capacity-affective-sharing" style="--accent:var(--affective)">
+        <p class="plain">Affective-sharing access</p>
+        <p class="term">Human translation · feel another</p>
+        <p class="question">Does another person’s feeling resonate within me?</p>
+        <p class="definition">Names how much affective sharing becomes readable and usable by ME. Self–other distinction separates sharing from emotional contagion or fusion.</p>
+        <a class="process-link" href="../../../03-model-2-gradient/positions.html#fluid-affective-sharing">Open the Affective sharing row →</a>
+      </article>
+      <article id="capacity-mentalizing" style="--accent:var(--mentalizing)">
+        <p class="plain">Mentalizing access and use</p>
+        <p class="term">Human translation · read and understand another</p>
+        <p class="question">Can I represent and revise what another person may feel or mean?</p>
+        <p class="definition">Can remain detailed without affective sharing or concern, and can be used reciprocally, defensively, or instrumentally.</p>
+        <a class="process-link" href="../../../03-model-2-gradient/positions.html#fluid-mentalizing">Open the Mentalizing row →</a>
+      </article>
+    </div>
+    <aside class="conduct-boundary" aria-label="Configuration and behaviour boundary">
+      <div class="thesis"><p class="label">Governing boundary</p><p>Nervous-system organisation shapes the field of information and action available to ME; it does not author, justify or excuse the behaviour that follows.</p><a href="../../../03-model-2-gradient/premise.html#state-shaped-perception">Open state-shaped perception and responsibility →</a></div>
+      <div class="separate-plane"><h3>A configuration is access information—not a behavioural verdict.</h3><p>Restricted access may narrow what ME can notice or use. Greater access may widen participation. Neither determines what the person will do.</p><p><strong>Do not infer:</strong> innocence, guilt, safety, harmfulness, personality or diagnosis from any configuration.</p><p><strong>Assess separately:</strong> behaviour, power, impact, available alternatives, response to feedback, recurrence and repair.</p></div>
+    </aside>
+  </section>
+
+  <section aria-labelledby="selector-title">
+    <div class="section-head">
+      <h2 id="selector-title">Build a configuration</h2>
+      <p class="caption">Switch each form of ME access on or off. The matching field card will come forward. The initial selection is mentalizing access without interoceptive or affective-sharing access.</p>
+    </div>
+    <div class="selector-shell">
+      <div class="selector" role="group" aria-label="Relational capacity selector">
+        <button class="switch" type="button" data-capacity="interoceptive" aria-pressed="false" style="--accent:var(--interoceptive)">
+          <span class="switch-dot" aria-hidden="true"></span>
+          <span><strong>Bodily information access and use</strong><small>Feel myself</small></span>
+          <span class="switch-state">Off</span>
+        </button>
+        <button class="switch" type="button" data-capacity="affective" aria-pressed="false" style="--accent:var(--affective)">
+          <span class="switch-dot" aria-hidden="true"></span>
+          <span><strong>Affective-sharing access</strong><small>Feel another</small></span>
+          <span class="switch-state">Off</span>
+        </button>
+        <button class="switch" type="button" data-capacity="mentalizing" aria-pressed="true" style="--accent:var(--mentalizing)">
+          <span class="switch-dot" aria-hidden="true"></span>
+          <span><strong>Mentalizing access and use</strong><small>Read and understand another</small></span>
+          <span class="switch-state">On</span>
+        </button>
+      </div>
+      <div class="selection-readout" aria-live="polite">
+        <p>Selected: <strong id="selected-title">The mentalizing-only configuration</strong> <span id="selected-code">· 001</span></p>
+        <button class="jump" type="button" id="jump-to-card">Read this configuration</button>
+      </div>
+    </div>
+    <div class="field-note">
+      <p><strong>Access is not optimality.</strong> A capacity can be available but inaccurate, fused, involuntary, or recruited for protection.</p>
+      <p><strong>Low access is not absent processing.</strong> The biological process may be intact but unnecessary, inhibited, unreadable, or too costly for ME to use in the current organisation.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="field-title">
+    <div class="section-head">
+      <h2 id="field-title">The eight-configuration field</h2>
+      <p class="caption">Each card describes a pattern of ME access, not a person and not the presence or absence of the underlying biological processes. The same configuration can be adaptive for a moment, protective under pressure, or personality-like when it becomes the default across time and relationships.</p>
+    </div>
+    <div class="config-grid" id="configuration-field">
+
+      <article class="config-card" id="config-000" data-code="000" tabindex="-1">
+        <div class="configuration-mark" aria-label="All three forms of ME access unavailable">
+          <span class="capacity-node" style="--node:var(--interoceptive)">Interoceptive<br>access</span><span class="connector"></span>
+          <span class="capacity-node" style="--node:var(--affective)">Affective-sharing<br>access</span><span class="connector"></span>
+          <span class="capacity-node" style="--node:var(--mentalizing)">Mentalizing<br>access &amp; use</span><span class="bit-code">000</span>
+        </div>
+        <div class="config-body">
+          <p class="kicker">No reliable bodily information access or use · no affective-sharing access · no mentalizing access</p>
+          <h3>Relational unavailability</h3>
+          <p class="structure">Neither one’s own felt state nor the other person’s felt or represented state is sufficiently available for relational participation.</p>
+          <h4>May look like</h4>
+          <ul><li>Shutdown, numbness, exhaustion, dissociation, or relational withdrawal.</li><li>Minimal response because all available capacity is assigned to conservation or immediate survival.</li><li>A temporary pause in relational processing during overwhelm.</li></ul>
+          <p class="concern"><strong>Empathic concern:</strong> the idea of care may remain, while motivation or capacity to act on it is unavailable.</p>
+          <p class="boundary-copy">Do not infer indifference, lack of attachment, or a fixed absence of empathy.</p>
+        </div>
+      </article>
+
+      <article class="config-card" id="config-001" data-code="001" tabindex="-1" aria-current="true">
+        <div class="configuration-mark" aria-label="Only mentalizing access and use is available">
+          <span class="capacity-node" style="--node:var(--interoceptive)">Interoceptive<br>access</span><span class="connector"></span>
+          <span class="capacity-node" style="--node:var(--affective)">Affective-sharing<br>access</span><span class="connector on"></span>
+          <span class="capacity-node on" style="--node:var(--mentalizing)">Mentalizing<br>access &amp; use</span><span class="bit-code">001</span>
+        </div>
+        <div class="config-body">
+          <p class="kicker">Your example 1 · mentalizing only</p>
+          <h3>The mentalizing-only configuration</h3>
+          <p class="structure">The other person can be read, predicted, or explained, while neither one’s own felt experience nor affective resonance with the other is available to ME.</p>
+          <h4>May look like</h4>
+          <ul><li>Detached analysis, strategic interpersonal reading, or technically accurate perspective-taking.</li><li>Knowing what another feels without feeling moved by it.</li><li>Professional composure in a role that temporarily requires affective distance.</li></ul>
+          <p class="concern"><strong>Empathic concern:</strong> cannot be inferred. Understanding may support care, restraint, management, persuasion, or exploitation.</p>
+          <p class="boundary-copy">Do not infer manipulation, psychopathy, or narcissism from this configuration alone.</p>
+        </div>
+      </article>
+
+      <article class="config-card" id="config-010" data-code="010" tabindex="-1">
+        <div class="configuration-mark" aria-label="Only affective-sharing access is available">
+          <span class="capacity-node" style="--node:var(--interoceptive)">Interoceptive<br>access</span><span class="connector on"></span>
+          <span class="capacity-node on dominant" style="--node:var(--affective)">Affective-sharing<br>access</span><span class="connector"></span>
+          <span class="capacity-node" style="--node:var(--mentalizing)">Mentalizing<br>access &amp; use</span><span class="bit-code">010</span>
+        </div>
+        <div class="config-body">
+          <p class="kicker">Your example 2 · affective-sharing access dominant</p>
+          <h3>The absorbed-other configuration</h3>
+          <p class="structure">Another person’s affect enters strongly, but one’s own experience is difficult to locate and mentalizing cannot reliably interpret whose feeling it is or what it means.</p>
+          <h4>May look like</h4>
+          <ul><li>Emotional contagion, overwhelm, fusion, or rapidly taking on another person’s state.</li><li>Compulsive soothing without checking what the other actually needs.</li><li>Mistaking resonance for accurate knowledge of the other.</li></ul>
+          <p class="concern"><strong>Empathic concern:</strong> may become compulsory action or self-erasure rather than freely chosen, proportionate care.</p>
+          <p class="boundary-copy">“Too much empathy” may be better described as affect sharing without sufficient self–other distinction, mentalizing, or regulation.</p>
+        </div>
+      </article>
+
+      <article class="config-card" id="config-011" data-code="011" tabindex="-1">
+        <div class="configuration-mark" aria-label="Affective-sharing and mentalizing access are available; bodily information is not reliably accessible or usable">
+          <span class="capacity-node" style="--node:var(--interoceptive)">Interoceptive<br>access</span><span class="connector on"></span>
+          <span class="capacity-node on" style="--node:var(--affective)">Affective-sharing<br>access</span><span class="connector on"></span>
+          <span class="capacity-node on" style="--node:var(--mentalizing)">Mentalizing<br>access &amp; use</span><span class="bit-code">011</span>
+        </div>
+        <div class="config-body">
+          <p class="kicker">Affective sharing and mentalizing accessible · bodily information not reliably accessible or usable</p>
+          <h3>The other-centred configuration</h3>
+          <p class="structure">The other person can be felt and understood in detail, while one’s own feeling, need, limit, and preference remain outside usable reach.</p>
+          <h4>May look like</h4>
+          <ul><li>Highly attuned caregiving combined with self-silencing or absent boundaries.</li><li>Organising choices around the other person’s state and anticipated reaction.</li><li>Relational expertise that does not include one’s own position in the relationship.</li></ul>
+          <p class="concern"><strong>Empathic concern:</strong> may be strong but difficult to distinguish from obligation, appeasement, or connection-preservation.</p>
+          <p class="boundary-copy">Do not assume generosity is false; the question is whether the self can also participate.</p>
+        </div>
+      </article>
+
+      <article class="config-card" id="config-100" data-code="100" tabindex="-1">
+        <div class="configuration-mark" aria-label="Only bodily information access and use is available">
+          <span class="capacity-node on" style="--node:var(--interoceptive)">Interoceptive<br>access</span><span class="connector"></span>
+          <span class="capacity-node" style="--node:var(--affective)">Affective-sharing<br>access</span><span class="connector"></span>
+          <span class="capacity-node" style="--node:var(--mentalizing)">Mentalizing<br>access &amp; use</span><span class="bit-code">100</span>
+        </div>
+        <div class="config-body">
+          <p class="kicker">Bodily information accessible and usable · other neither shared nor represented</p>
+          <h3>The self-contained configuration</h3>
+          <p class="structure">One’s own feeling and need are available, while the other person’s state is not affectively shared or cognitively represented.</p>
+          <h4>May look like</h4>
+          <ul><li>Healthy solitude when no other person requires representation.</li><li>Protective self-focus under pain, acute demand, or boundary defence.</li><li>A relational blind spot if the configuration persists while another person is affected.</li></ul>
+          <p class="concern"><strong>Empathic concern:</strong> may be irrelevant in solitude or reduced when the other’s condition cannot enter the field.</p>
+          <p class="boundary-copy">Do not infer selfishness when the social capacities are simply not recruited or needed.</p>
+        </div>
+      </article>
+
+      <article class="config-card" id="config-101" data-code="101" tabindex="-1">
+        <div class="configuration-mark" aria-label="Interoceptive and mentalizing access are available; affective-sharing access is unavailable">
+          <span class="capacity-node on" style="--node:var(--interoceptive)">Interoceptive<br>access</span><span class="connector"></span>
+          <span class="capacity-node" style="--node:var(--affective)">Affective-sharing<br>access</span><span class="connector on"></span>
+          <span class="capacity-node on" style="--node:var(--mentalizing)">Mentalizing<br>access &amp; use</span><span class="bit-code">101</span>
+        </div>
+        <div class="config-body">
+          <p class="kicker">Interoceptive and mentalizing access · affective-sharing access unavailable</p>
+          <h3>The interoceptive–mentalizing configuration</h3>
+          <p class="structure">One’s own experience remains available and the other can be understood, but the other person’s affect does not resonate within oneself.</p>
+          <h4>May look like</h4>
+          <ul><li>Clear negotiation, boundary-setting, or calm decision-making without emotional merging.</li><li>Compassionate understanding with low affective resonance.</li><li>Instrumental social reasoning when concern and accountability are also reduced.</li></ul>
+          <p class="concern"><strong>Empathic concern:</strong> is the differentiator between respectful distance and cognition used only for personal outcome.</p>
+          <p class="boundary-copy">Low affect sharing does not by itself mean low care or poor moral action.</p>
+        </div>
+      </article>
+
+      <article class="config-card" id="config-110" data-code="110" tabindex="-1">
+        <div class="configuration-mark" aria-label="Interoceptive and affective-sharing access are available; mentalizing access is unavailable">
+          <span class="capacity-node on" style="--node:var(--interoceptive)">Interoceptive<br>access</span><span class="connector on"></span>
+          <span class="capacity-node on" style="--node:var(--affective)">Affective-sharing<br>access</span><span class="connector"></span>
+          <span class="capacity-node" style="--node:var(--mentalizing)">Mentalizing<br>access &amp; use</span><span class="bit-code">110</span>
+        </div>
+        <div class="config-body">
+          <p class="kicker">Self and other felt · other not mentally represented</p>
+          <h3>The shared-affect configuration</h3>
+          <p class="structure">Both one’s own feeling and resonance with the other are present, but the other person’s perspective, cause, or intention cannot yet be represented reliably.</p>
+          <h4>May look like</h4>
+          <ul><li>Deep emotional participation with limited perspective-taking.</li><li>Knowing that both people are affected without understanding why or what each needs.</li><li>Projection, misattribution, or action based on shared intensity rather than checked meaning.</li></ul>
+          <p class="concern"><strong>Empathic concern:</strong> may be sincere and strong while the chosen response remains inaccurate or unhelpful.</p>
+          <p class="boundary-copy">Feeling with someone is not the same as knowing their experience.</p>
+        </div>
+      </article>
+
+      <article class="config-card" id="config-111" data-code="111" tabindex="-1">
+        <div class="configuration-mark" aria-label="All three forms of ME access are available">
+          <span class="capacity-node on" style="--node:var(--interoceptive)">Interoceptive<br>access</span><span class="connector on"></span>
+          <span class="capacity-node on" style="--node:var(--affective)">Affective-sharing<br>access</span><span class="connector on"></span>
+          <span class="capacity-node on" style="--node:var(--mentalizing)">Mentalizing<br>access &amp; use</span><span class="bit-code">111</span>
+        </div>
+        <div class="config-body">
+          <p class="kicker">Your example 3 · all three forms of ME access available</p>
+          <h3>The integrated configuration</h3>
+          <p class="structure">One’s own experience, affective resonance with the other, and a revisable understanding of the other can all participate without collapsing into one another.</p>
+          <h4>May look like</h4>
+          <ul><li>Reciprocal connection with self–other distinction and room for correction.</li><li>Feeling moved by another while retaining one’s own limit, perspective, and agency.</li><li>Repair that integrates impact, intention, context, restraint, and action.</li></ul>
+          <p class="concern"><strong>Empathic concern:</strong> can become proportionate, freely chosen action that respects both welfare and agency.</p>
+          <p class="boundary-copy">All three being present is not always optimal; flexible recruitment remains more important than permanent maximum openness.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="quality-title">
+    <div class="section-head">
+      <h2 id="quality-title">Binary access is only the first pass</h2>
+      <p class="caption">To connect the eight structures to the Fluid and Chronic Gradients, each form of access must also be read through five quality dimensions.</p>
+    </div>
+    <div class="quality-grid">
+      <article><h3>Availability</h3><p>Can the capacity participate at all, and at what cost?</p></article>
+      <article><h3>Differentiation</h3><p>Is the information specific, or fused into undifferentiated pressure?</p></article>
+      <article><h3>Self–other distinction</h3><p>Can my experience and your experience remain related but separate?</p></article>
+      <article><h3>Accuracy and updating</h3><p>Can the representation be corrected by present evidence?</p></article>
+      <article><h3>Flexible recruitment</h3><p>Can the capacity enter and leave according to actual conditions?</p></article>
+    </div>
+  </section>
+
+  <section id="translation-key" aria-labelledby="naming-title">
+    <div class="section-head">
+      <h2 id="naming-title">One vocabulary across the two files</h2>
+      <p class="caption">ME-participation terminology names access and use. The linked Fluid row names the biological process underneath it. These are related, but they are not the same layer.</p>
+    </div>
+    <div class="naming-table">
+      <table>
+        <thead><tr><th>Human translation</th><th>ME-participation term</th><th>Linked biological row</th><th>Boundary</th></tr></thead>
+        <tbody>
+          <tr><td>Feel myself</td><td>Bodily information access and use <span class="recommended">ME access and use</span></td><td><a href="../../../03-model-2-gradient/positions.html#fluid-interoceptive-processing">Interoceptive processing</a></td><td>Internal processing can continue when bodily and emotional information is not reliably readable, differentiated, interpreted or usable by ME.</td></tr>
+          <tr><td>Feel another</td><td>Affective-sharing access <span class="recommended">ME access and use</span></td><td><a href="../../../03-model-2-gradient/positions.html#fluid-affective-sharing">Affective sharing</a></td><td>Sharing requires self–other distinction. Emotional contagion, personal distress, fusion, and projection are not equivalent to clear access.</td></tr>
+          <tr><td>Read and understand another</td><td>Mentalizing access and use <span class="recommended">ME access and use</span></td><td><a href="../../../03-model-2-gradient/positions.html#fluid-mentalizing">Mentalizing</a></td><td>Availability does not establish accuracy, concern, or ethical use. Mentalizing can remain detailed while the other two forms of access are low.</td></tr>
+          <tr><td>Let another’s welfare affect action</td><td>Empathic concern <span class="recommended">Separate relational output</span></td><td><a href="../../../03-model-2-gradient/positions.html#fluid-empathic-concern">Empathic concern</a></td><td>This is not a fourth access control. It cannot be inferred from the other three capacities and may not be translated into action.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="closing" aria-labelledby="gradient-bridge-title">
+    <h2 id="gradient-bridge-title">Bridge back to the Gradient</h2>
+    <p>The Fluid Gradient describes how the underlying processes are recruited by present conditions. This matrix asks how much of those processes becomes available to ME in combination. Chronic Survival can then examine which pattern of access has become the familiar relational solution. Personality-like expression belongs to recurrence and generalisation—not to a single state or binary combination.</p>
+  </section>
+
+  <a class="back" href="../../../03-model-2-gradient/positions.html#me-participation-title">← Return to ME participation card</a>
+</main>
+
+<script>
+  const switches = [...document.querySelectorAll('.switch')];
+  const cards = [...document.querySelectorAll('.config-card')];
+  const selectedTitle = document.getElementById('selected-title');
+  const selectedCode = document.getElementById('selected-code');
+  const jumpButton = document.getElementById('jump-to-card');
+  const titles = {
+    '000': 'Relational unavailability',
+    '001': 'The mentalizing-only configuration',
+    '010': 'The absorbed-other configuration',
+    '011': 'The other-centred configuration',
+    '100': 'The self-contained configuration',
+    '101': 'The interoceptive–mentalizing configuration',
+    '110': 'The shared-affect configuration',
+    '111': 'The integrated configuration'
+  };
+
+  function currentCode() {
+    return switches.map(button => button.getAttribute('aria-pressed') === 'true' ? '1' : '0').join('');
+  }
+
+  function updateField() {
+    const code = currentCode();
+    switches.forEach(button => {
+      const on = button.getAttribute('aria-pressed') === 'true';
+      button.querySelector('.switch-state').textContent = on ? 'On' : 'Off';
+    });
+    cards.forEach(card => {
+      const selected = card.dataset.code === code;
+      card.toggleAttribute('aria-current', selected);
+      card.classList.toggle('dimmed', !selected);
+    });
+    selectedTitle.textContent = titles[code];
+    selectedCode.textContent = ` · ${code}`;
+    jumpButton.dataset.target = `config-${code}`;
+  }
+
+  switches.forEach(button => {
+    button.addEventListener('click', () => {
+      const next = button.getAttribute('aria-pressed') !== 'true';
+      button.setAttribute('aria-pressed', String(next));
+      updateField();
+    });
+  });
+
+  jumpButton.addEventListener('click', () => {
+    const target = document.getElementById(jumpButton.dataset.target);
+    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    target.focus({ preventScroll: true });
+  });
+
+  updateField();
+</script>
+
+<script src="../../../assets/capacities.js"></script>
+<script>
+  (function () {
+    var C = window.TEG && window.TEG.capacities; if (!C) return;
+    var MAP = { interoceptive: "bodily", affective: "affective", mentalizing: "mentalizing" };
+    var buttons = Array.prototype.slice.call(document.querySelectorAll(".switch"));
+    function fromState(state) {
+      buttons.forEach(function (b) { b.setAttribute("aria-pressed", String(state[MAP[b.dataset.capacity]] >= 2)); });
+      if (typeof updateField === "function") updateField();
+    }
+    buttons.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var partial = {}, on = b.getAttribute("aria-pressed") === "true", current = C.get()[MAP[b.dataset.capacity]];
+        partial[MAP[b.dataset.capacity]] = on ? (current >= 2 ? current : 3) : (current < 2 ? current : 0);
+        C.set(partial);
+      });
+    });
+    fromState(C.get());
+  })();
+</script>
+</body>
+</html>

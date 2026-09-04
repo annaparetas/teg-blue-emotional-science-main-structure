@@ -1,39 +1,113 @@
-# TEG-Blue Emotional Science Architecture
+# TEG-Blue Emotional Science
 
-This repository is the clean, living main structure of TEG-Blue.
+This is the canonical, navigable TEG-Blue site: emotions as information, the
+Emotional Signal Map, three connected models, the twelve frameworks, the
+Inner Compass with its four modes, and the shared reference distinctions.
 
-It receives concise, Anna-approved definitions, relationships, dynamics and
-boundaries from the working development repository at
-`../inner-compass-nervous-system-organization-gradient/`.
+The deep research and development work remains active in the sibling
+`inner-compass-nervous-system-organization-gradient/` repository. Approved
+canon and explicitly labelled working or grounding material can be carried
+from that Development Engine into the concept that owns it here.
 
-It is not a duplicate of that repository. Research, debate, evidence review,
-experiments and specialist handoffs remain in the development space. Only
-approved synthesis crosses into this structure.
+This numbered structure was assembled first in the sibling
+`teg-blue-emotional-science/` repository and adopted here on 4 September 2026.
+That repository is migration history after verification; it is not a second
+active site. The transfer register in [STATUS.md](STATUS.md) records what has
+moved and what remains open.
 
-## Page rule
+Start with [index.html](index.html).
 
-One HTML page owns each major conceptual domain. Smaller definitions remain
-inside their owner page. `index.html` connects the whole architecture.
+## How the folder is organised
 
-Every page distinguishes:
+One concept, one folder, one canon page.
 
-- approved architecture;
-- provisional working ideas;
-- open decisions;
-- supporting foundations;
-- development sources;
-- last approved update.
+```
+index.html                     the spine and the reading rule
+README.md                      this file
+STATUS.md                      the only board: approved, open, next, per concept
+GLOSSARY.md                    the only terminology authority
+assets/                        one stylesheet, one navigation script
+scripts/                       link checker; carry.py transfers reviewed material from the Development Engine
+foundations/                   what TEG-Blue is, premises, posture, ethics, origins · governs every folder below
+00-emotions-as-information/    canon · grounding · notes
+01-signal-map/                 canon · rosters · grounding · notes
+02-model-1-ess-cls-me/         canon · companions · grounding · notes
+03-model-2-gradient/           canon · companions · grounding · notes
+04-model-3-esc/                canon · cycle page · shared event record · grounding · notes
+05-frameworks/                 canon map · F01/ to F12/ each with canon page and review; F01 and F02 carry companions
+06-inner-compass-four-modes/   canon · compass view · data (generated) · grounding · notes
+07-reference/                  canon · behaviour.html · sociality.html · grounding/ · notes/
+evidence/                      canon · protocol.html · sources/ · claims/ · pilots/ · reviews/ · notes/
+archive/                       frozen material, one-line reason each
+```
 
-## Current pages
+Inside a concept folder every file is one of three kinds:
 
-- `index.html`
-- `emotions-as-information.html`
-- `model-1-two-biological-information-systems-and-me.html`
-- `model-2-nervous-system-organisation-gradient.html`
-- `model-3-emotional-somatic-cycle.html`
-- `twelve-frameworks-map.html`
-- `inner-compass-four-mode-gradient.html`
+| Kind | File | What it is |
+| --- | --- | --- |
+| Canon | `index.html` | What TEG-Blue says now. Opens with a status block. |
+| Grounding | `grounding.md`, `grounding/` | Why it may be said: evidence level, sources, limits. Never restates the definition. |
+| Notes | `notes/` | Dated decisions, working drafts, carried sources. Notes may propose change; they do not override the canon page. |
 
-The working umbrella name **TEG-Blue Emotional Science Architecture** may be
-reviewed later. The folder name and current architecture do not by themselves
-claim that TEG-Blue is an independently established scientific discipline.
+## Rules that keep it clear
+
+1. **One home per concept.** If a concept is described in two places, one of
+   them is wrong. Cross-references link; they do not restate.
+2. **Three statuses only**: approved, working, archived. Every file opens
+   with status, owner, last approved date, and what it does not establish.
+   "Approved but not public" is working plus a release note in STATUS.md.
+3. **Site context lives with its concept.** A concept can contain canon,
+   grounding and dated site-working notes. The complete research laboratory,
+   owner review and branch history remain in the Development Engine. Carried
+   notes are snapshots, not a second development authority.
+4. **One board.** STATUS.md holds what is approved, what is open and what
+   comes next. Provenance is a date and a sentence, never a commit hash or a
+   branch name.
+5. **One branch.** `main` is the truth. A session works on a short branch and
+   merges the same day. No long-lived worktrees.
+6. **Nothing is lost.** Superseded site material moves to `archive/` with a
+   one-line reason. Full development provenance stays in the Development
+   Engine and repository history.
+
+## Interpretive rules carried from the Development Engine
+
+These apply to every page.
+
+- Do not use regulation as a synonym for calm, low arousal or parasympathetic
+  dominance.
+- Do not equate nervous-system organisation with a behaviour, an emotion, a
+  personality or a moral category.
+- Treat organisation as shaping the field of information and action
+  available to ME; never use it to author, justify or excuse behaviour.
+- Treat bodily information, affective-sharing and mentalizing configurations
+  as descriptions of access, not as evidence of innocence, guilt, safety,
+  harmfulness, personality or diagnosis.
+- Assess behaviour, power, impact, alternatives, response to feedback,
+  recurrence and repair on their own evidence plane.
+- Keep three levels distinct: established evidence, grounded synthesis and
+  TEG-Blue integration. Do not demand that science already use a Level 3
+  term; test whether Levels 1 and 2 responsibly ground its territory. Once a
+  term's status is established, use it consistently rather than hedging it.
+- Write "ME", never "the ME". Keep an accessible working name and a
+  scientific-facing subtitle visible on every model while it is developed.
+
+## After editing
+
+Run the link checker from the folder root:
+
+```bash
+python3 scripts/check-local-links.py
+```
+
+After re-running `scripts/carry.py`, regenerate the Compass reading data so
+the view keeps showing Model 2's current rows:
+
+```bash
+python3 scripts/build-compass-data.py
+```
+
+Commit this site on its own. Development Engine changes remain separate and
+cross only through an explicit, reviewed transfer.
+
+The umbrella name "Emotional Science" is a working name. It does not claim
+that TEG-Blue is an established scientific discipline.

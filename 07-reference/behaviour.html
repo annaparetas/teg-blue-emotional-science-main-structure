@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Behaviour Across the Gradient</title>
+<link rel="stylesheet" href="../assets/page-responsibility.css">
+<style>
+  :root {
+    --ink: #0b1f42;
+    --ink-soft: #24365c;
+    --body: #3c4c6d;
+    --muted: #64748b;
+    --line: #dbe3ef;
+    --line-faint: #edf1f7;
+    --paper: #ffffff;
+    --head: #4b5666;
+    --inside-tint: #f6f4fd;
+    --inside-tint-hover: #efebfb;
+    --after-tint: #f1f7ff;
+    --after-tint-hover: #e8f2ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 48px 32px 96px;
+    background: #f6f8fc;
+    color: var(--ink);
+    font: 15px/1.55 ui-sans-serif, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1600px; margin: 0 auto; }
+  h1 {
+    font-family: ui-serif, Georgia, "Times New Roman", serif;
+    font-size: 32px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 8px;
+  }
+  .source { color: var(--muted); font-size: 13px; margin: 0; max-width: 620px; }
+
+  .masthead {
+    display: flex; flex-wrap: wrap; align-items: flex-end;
+    justify-content: space-between; gap: 24px;
+    margin-bottom: 44px;
+  }
+  /*
+    The same control, in the same place, as the twin files, so the set is read
+    as one page in four views. Ink pill because #ef823a needs a dark ground to
+    clear AA.
+  */
+  .toggle {
+    display: flex; gap: 4px; flex: none;
+    padding: 4px; border-radius: 10px;
+    background: var(--ink);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  .toggle button {
+    font: inherit; font-size: 13px; font-weight: 600;
+    padding: 8px 16px; border: 0; border-radius: 7px;
+    background: transparent; cursor: pointer;
+    transition: background-color 200ms, color 200ms;
+  }
+  .toggle button:focus-visible { outline: 2px solid #6eeafb; outline-offset: 2px; }
+  #t-fluid { color: #c6d5ef; }
+  #t-fluid:hover { background: rgba(255, 255, 255, 0.92); color: var(--ink); }
+  #t-fluid[aria-pressed="true"] { background: #ffffff; color: var(--ink); }
+  #t-chronic { color: #ef823a; }
+  #t-chronic:hover { background: #ef823a; color: var(--ink); }
+  #t-chronic[aria-pressed="true"] { background: #ef823a; color: var(--ink); }
+  .panel[hidden] { display: none; }
+
+  .orientation {
+    max-width: 1120px; margin: 0 0 20px;
+    padding: 24px 26px 26px;
+    background: var(--paper); border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: 0 1px 2px rgba(11, 31, 66, 0.05);
+  }
+  .orientation h2 { margin-bottom: 8px; }
+  .orientation > p { max-width: 900px; margin: 0; color: var(--body); }
+  .orientation-grid {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px; margin-top: 22px;
+  }
+  .orientation-grid > div { padding-top: 15px; border-top: 3px solid var(--accent); }
+  .orientation-grid h3 { margin: 0 0 6px; color: var(--ink); font-size: 15px; font-weight: 750; }
+  .orientation-grid p { margin: 0; color: var(--body); font-size: 13.5px; }
+  .orientation .boundary {
+    max-width: 900px; margin-top: 20px; padding: 13px 15px;
+    background: #f8fafd; border-left: 3px solid var(--ink);
+    color: var(--ink-soft); font-size: 13.5px;
+  }
+
+  .vocabulary {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px; max-width: 980px; margin: 0 0 48px;
+  }
+  .vocabulary > div {
+    background: var(--paper); border: 1px solid var(--line);
+    border-radius: 12px; padding: 16px 18px;
+  }
+  .vocabulary > .position-key { grid-column: 1 / -1; }
+  .vocabulary dt { font-weight: 750; font-size: 15px; margin-bottom: 4px; }
+  .vocabulary dd { margin: 0; color: var(--body); font-size: 13.5px; }
+  .vocabulary a { color: var(--ink-soft); text-underline-offset: 3px; }
+
+  h2 {
+    font-family: ui-serif, Georgia, "Times New Roman", serif;
+    font-size: 23px; font-weight: 600; margin: 0 0 10px;
+  }
+  .caption { max-width: 880px; color: var(--body); font-size: 14px; margin: 0 0 20px; }
+  section { margin-bottom: 64px; }
+  .scroll {
+    overflow-x: auto;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: 0 1px 2px rgba(11, 31, 66, 0.05);
+  }
+  table { border-collapse: collapse; width: 100%; min-width: 1500px; }
+  th, td {
+    text-align: left; vertical-align: top;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--line-faint);
+    font-weight: 400;
+  }
+  /*
+    The Position row names the columns, so it carries no fill: it is the
+    reference key, not a reading of anything. Colour belongs to the
+    Organisation row, exactly as in the twin files.
+  */
+  thead th.pos {
+    background: var(--paper); color: var(--ink);
+    border-bottom: 1px solid var(--line);
+    padding: 12px 14px 11px;
+    width: 12.6%;
+    font-size: 17px; font-weight: 800;
+  }
+  th.axis {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--muted);
+    text-align: center; padding: 10px 14px 8px;
+    border-bottom: 1px solid var(--line-faint);
+  }
+  th.axis + th.axis { border-left: 1px solid var(--line-faint); }
+  .corner { background: var(--paper); border-bottom: 1px solid var(--line); }
+  tbody th[scope="row"], thead .corner {
+    position: sticky; left: 0; z-index: 1;
+    background: var(--paper);
+    width: 168px; min-width: 168px;
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.07em; color: var(--muted);
+    border-right: 1px solid var(--line);
+  }
+  td { font-size: 13.5px; line-height: 1.5; color: var(--ink-soft); }
+  tr.rule > * { border-top: 1px solid var(--line); }
+
+  /*
+    Environmental Conditions is the same in every table in this set — it is what
+    is happening around the person, not a reading of it. Dark ground so it reads
+    with the Position row as one header block.
+  */
+  tr.env > th[scope="row"], tr.env > td {
+    background: var(--head); color: #ffffff;
+    border-bottom-color: rgba(255, 255, 255, 0.16);
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  tr.env > th[scope="row"] { color: rgba(255, 255, 255, 0.78); border-right-color: var(--head); }
+  tr.env > td { font-weight: 600; }
+  tr.env .off { display: block; font-weight: 400; opacity: 0.72; font-size: 12.5px; }
+
+  td.org {
+    background: var(--fill); color: var(--on);
+    font-weight: 650; font-size: 14.5px;
+    box-shadow: inset 0 0 0 1px rgba(11, 31, 66, 0.09);
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  td.org .hex {
+    display: block; margin-top: 3px;
+    font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    opacity: 0.72;
+  }
+
+  /* The band that separates what can be seen from what is being inferred. */
+  tr.group th {
+    background: #f2f5fa; color: var(--ink);
+    font-size: 10.5px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 0.1em; padding: 9px 14px;
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  }
+  tr.group th span { font-weight: 500; letter-spacing: 0.02em; text-transform: none; color: var(--muted); }
+
+  tbody tr:not(.env):not(.group):hover td:not(.org) { background: #f8fafd; }
+
+  /*
+    Two tinted blocks, because these rows are not the same kind of statement as
+    the behaviour rows above them. Inferred rows and after-rows are tinted so a
+    reader cannot mistake either for something observed in a single moment.
+  */
+  tbody tr.inside > th[scope="row"], tbody tr.inside > td { background: var(--inside-tint); }
+  tbody tr.inside:hover > th[scope="row"], tbody tr.inside:hover > td { background: var(--inside-tint-hover); }
+  tbody tr.after > th[scope="row"], tbody tr.after > td { background: var(--after-tint); }
+  tbody tr.after:hover > th[scope="row"], tbody tr.after:hover > td { background: var(--after-tint-hover); }
+
+  td.voice { font-style: italic; color: var(--ink-soft); }
+  td.voice::before { content: "\201C"; }
+  td.voice::after { content: "\201D"; }
+
+  .row-alias {
+    display: block; margin-top: 2px; font-size: 10px; font-weight: 600;
+    text-transform: none; letter-spacing: 0;
+  }
+
+  .note {
+    max-width: 900px; margin: 18px 0 0;
+    padding: 14px 16px;
+    border-left: 3px solid #ef823a;
+    background: #fff6ee;
+    color: #7a4413; font-size: 13.5px; line-height: 1.6;
+  }
+  .aside { max-width: 900px; color: var(--body); font-size: 13px; margin: 16px 0 0; line-height: 1.6; }
+  .aside a { color: var(--ink-soft); text-underline-offset: 3px; }
+
+  .guardrails {
+    background: var(--paper); border: 1px solid var(--line);
+    border-radius: 14px; padding: 20px 24px 22px; max-width: 1000px;
+  }
+  .guardrails h2 { font-size: 19px; margin-bottom: 6px; }
+  .guardrails > p { margin: 0 0 14px; color: var(--body); font-size: 13.5px; max-width: 880px; }
+  .guardrails ul { margin: 0; padding-left: 20px; color: var(--body); font-size: 13.5px; line-height: 1.6; }
+  .guardrails li { margin-bottom: 7px; }
+  .guardrails b { color: var(--ink); }
+  .back { display: inline-block; margin-top: 32px; font-size: 13px; color: var(--muted); }
+
+  @media (max-width: 760px) {
+    body { padding: 28px 16px 72px; }
+    .masthead { margin-bottom: 32px; }
+    .orientation { padding: 20px 18px 22px; }
+    .orientation-grid { grid-template-columns: 1fr; }
+    .vocabulary { grid-template-columns: 1fr; }
+    .vocabulary > .position-key { grid-column: auto; }
+  }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .scroll { border: none; box-shadow: none; overflow: visible; }
+    .toggle, .back { display: none; }
+    section { break-inside: avoid; }
+    table { min-width: 0; font-size: 9px; }
+    td { font-size: 8.5px; }
+    @page { size: A3 landscape; margin: 12mm; }
+  }
+</style>
+<noscript><style>
+  /* Without JS nothing can switch the panels, so show both and drop the control. */
+  .panel[hidden] { display: block; }
+  .toggle { display: none; }
+</style></noscript>
+</head>
+<body>
+  <div class="wrap">
+    <div class="carried-banner" role="note"><strong>Carried page · status approved reference.</strong> Behaviour across the Gradient: the seven Positions on both planes written as what another person could observe, with the inferred and from-inside rows marked as such. Canonical cross-model reference since 23 August 2026; carried on 3 September 2026. <a href="index.html">Back to the Reference canon page →</a></div>
+<div class="masthead" id="top">
+      <div>
+        <h1>Behaviour Across the Gradient</h1>
+        <p class="source">
+          The same seven nervous system organisations, read as what someone
+          could observe: what is done, said, attended to, decided, and what
+          happens once the conditions change. This is the layer tools are
+          written from.<br>
+          <a href="../03-model-2-gradient/premise.html">Read the governing model premise →</a>
+        </p>
+      </div>
+      <div class="toggle" role="group" aria-label="Gradient mode">
+        <button id="t-fluid" type="button" aria-pressed="true" aria-controls="panel-fluid">Fluid Gradient</button>
+        <button id="t-chronic" type="button" aria-pressed="false" aria-controls="panel-chronic">Chronic Survival</button>
+      </div>
+    </div>
+
+    <aside class="page-responsibility" aria-label="Page responsibility">
+      <div class="page-responsibility__heading">
+        <p class="page-responsibility__label">Page responsibility · Behaviour and responsibility evidence plane</p>
+        <p class="page-responsibility__scope">Scientific-facing scope · observable conduct, power, impact, alternatives, feedback, recurrence, repair and accountability</p>
+      </div>
+      <p class="page-responsibility__question"><strong>Governing question</strong>What was done, under what conditions, with what power and impact, and what happens when feedback or the possibility of repair appears?</p>
+      <div class="page-responsibility__grid">
+        <div class="page-responsibility__item"><strong>This page owns</strong><p>The separate record of behaviour, consequences, available alternatives, responsiveness to feedback, recurrence, repair and responsibility.</p></div>
+        <div class="page-responsibility__item"><strong>It receives</strong><p>Bounded descriptions of organisation, access and change through time from the <a href="../index.html">three models</a>.</p></div>
+        <div class="page-responsibility__item"><strong>It does not establish</strong><p>Conduct, intention, guilt, safety or accountability from an emotion, Gradient Position, capacity profile or physiological measurement.</p></div>
+      </div>
+    </aside>
+
+    <section class="orientation" aria-labelledby="orientation-title">
+      <h2 id="orientation-title">The same behaviour appears in both tables</h2>
+      <p>
+        Someone can be short, guarded, silent, watchful, or forceful in either
+        table. A single moment shows the behaviour and the conditions it is
+        happening under, and both tables answer the same seven conditions. What
+        separates them is what happens afterwards: whether the stance comes
+        down when the pressure does, whether the reading updates when new
+        information arrives, and whether repair becomes possible.
+      </p>
+      <div class="orientation-grid">
+        <div style="--accent:#8ef3a6">
+          <h3>Behaviour that can stand down</h3>
+          <p>
+            In the Fluid Gradient, the behaviour is doing something the present
+            conditions ask for. It ends when they change: force is relinquished,
+            attention widens again, the appointment matters again, and what
+            happened can be gone back to and named.
+          </p>
+        </div>
+        <div style="--accent:#ec6430">
+          <h3>Behaviour that has become the default</h3>
+          <p>
+            In Chronic Survival, the same behaviour runs before the conditions
+            call for it and continues after they pass. Guarding, pleasing,
+            checking, managing, pressuring, or withdrawing is reached faster
+            than rest or open connection, and repair is delayed, traded, or
+            refused.
+          </p>
+        </div>
+      </div>
+      <p class="boundary">
+        <strong>A Position is read from a pattern over time, not from one row.</strong>
+        Any cell here can describe a person for an afternoon for reasons this
+        table does not cover — a bad night, illness, grief, an unfamiliar
+        language, or a culture with different rules about volume, directness,
+        and eye contact. What makes a reading usable is repetition, the
+        conditions it happens under, and what follows when those conditions
+        change. A protective origin does not make harmful behaviour harmless,
+        and naming the mechanism is not agreeing to the behaviour.
+      </p>
+    </section>
+
+    <dl class="vocabulary" aria-label="Behaviour table vocabulary">
+      <div>
+        <dt>Behaviour</dt>
+        <dd>What is done, said, attended to, and decided — the part another person could witness and describe without interpreting it. It is the applied layer, not the mechanism: the internal capacities behind these rows are in <a href="../03-model-2-gradient/index.html">How Humans Respond to Safety and Threat</a>.</dd>
+      </div>
+      <div>
+        <dt>What the tinted rows are</dt>
+        <dd>Two blocks are not observation. <em>What organises it</em> is inferred from the pattern rather than seen in it. <em>From inside</em> is a working hypothesis about how the same organisation may be experienced, including a first-person narrative row nobody can verify from outside.</dd>
+      </div>
+      <div class="position-key">
+        <dt>How to read a Position here</dt>
+        <dd>Each column — X, A, A↔B, B, C, D, and Z — is a Position, and each Position names a different nervous system organisation, not a person, a personality, or a permanent identity. The Position row, the Environmental conditions row, and the Nervous system organisation row connect this page to <a href="../03-model-2-gradient/index.html">the main Gradient</a>. In the Fluid Gradient, organisation changes with present conditions. In Chronic Survival, an organisation persists or is rebuilt when the present environment no longer corresponds to it, so every column there is defensive even when the person looks calm or connected.</dd>
+      </div>
+    </dl>
+
+    <section class="panel" id="panel-fluid">
+      <h2>Fluid Gradient</h2>
+      <p class="caption">Behaviour that moves with present conditions. The Environmental conditions row names what is happening; the rows below name what someone could observe while it is happening. Each of these behaviours ends when the condition it answers ends.</p>
+      <div class="scroll">
+      <table>
+        <thead>
+          <tr><td class="corner"></td><th class="axis" colspan="2" scope="colgroup">Non-defensive</th><th class="axis" colspan="5" scope="colgroup">Defensive organisation</th></tr>
+          <tr>
+            <th scope="row" class="corner">Position</th>
+            <th scope="col" class="pos">X</th>
+            <th scope="col" class="pos">A</th>
+            <th scope="col" class="pos">A↔B</th>
+            <th scope="col" class="pos">B</th>
+            <th scope="col" class="pos">C</th>
+            <th scope="col" class="pos">D</th>
+            <th scope="col" class="pos">Z</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr class="env">
+          <th scope="row">Environmental conditions</th>
+          <td>Safe to be alone <span class="off">(off the gradient)</span></td><td>Safe with others</td><td>Safety uncertain</td><td>Threat</td><td>Persistent threat</td><td>Life threat</td><td><span class="off">(off the gradient)</span></td>
+        </tr>
+        <tr>
+          <th scope="row">Nervous system organisation</th>
+          <td class="org" style="--fill:#ffffff;--on:#0b1f42">Baseline<span class="hex">#ffffff</span></td><td class="org" style="--fill:#6eeafb;--on:#0b1f42">Connection / Belonging<span class="hex">#6eeafb</span></td><td class="org" style="--fill:#8ef3a6;--on:#0b1f42">Safety Checking<span class="hex">#8ef3a6</span></td><td class="org" style="--fill:#b6fc50;--on:#0b1f42">Protection / Defence<span class="hex">#b6fc50</span></td><td class="org" style="--fill:#e3fd54;--on:#0b1f42">Strategic Management<span class="hex">#e3fd54</span></td><td class="org" style="--fill:#f7d448;--on:#0b1f42">Power Mobilisation<span class="hex">#f7d448</span></td><td class="org" style="--fill:#a1adbf;--on:#0b1f42">Shutdown<span class="hex">#a1adbf</span></td>
+        </tr>
+
+        <tr class="group">
+          <th colspan="8" scope="colgroup">Behaviour <span>· what another person could observe</span></th>
+        </tr>
+        <tr>
+          <th scope="row">Core pattern</th>
+          <td>One thing, for its own sake. Nothing is being tracked and nothing is being produced.</td><td>Being with someone and letting the exchange go where it goes. Nothing is managed.</td><td>Checking what changed before going further. Action pauses while the reading updates.</td><td>Acting to stop what is happening now. Everything not part of that is set down.</td><td>Working the situation ahead of time — planning, arranging, keeping variables in hand.</td><td>Forcing the outcome. Speed and effect replace consultation, and the cost lands later.</td><td>Doing less until demand drops. Output falls away rather than being redirected.</td>
+        </tr>
+        <tr>
+          <th scope="row">Body</th>
+          <td>Settled and unposed — slouched, breathing easily, hungry when hungry, tired when tired.</td><td>Turned toward the other person — face mobile, voice varied, movement matched to theirs.</td><td>Stilled mid-action — breath held, head turned, hands paused where they were.</td><td>Fast and committed — braced, loud or entirely silent, moving before the sentence ends.</td><td>Held steady for hours — jaw and shoulders working, meals and sleep pushed to the edges.</td><td>Everything at once — full force, no guard, injury and exhaustion arriving unnoticed.</td><td>Slowed to the minimum — flat voice, heavy limbs, movement costing more than it returns.</td>
+        </tr>
+        <tr>
+          <th scope="row">Mind</th>
+          <td>One thought at a time, following what interests it. Nothing has to be resolved today.</td><td>Thinking out loud with someone, and changing position when what they say is better.</td><td>Re-reading the last few minutes for what changed. Conclusions stay provisional.</td><td>One question only — what stops this. Alternatives drop out until it has been handled.</td><td>Running the situation forward — scenarios, contingencies, what each person will do.</td><td>No deliberation at all. The route is taken and reviewed afterwards, if ever.</td><td>Thin and slow — a decision that took a minute yesterday will not assemble today.</td>
+        </tr>
+        <tr>
+          <th scope="row">Emotions</th>
+          <td>Contentment and curiosity, quietly. Nothing needs saying and nothing asks for reply.</td><td>Gratitude, love and care arrive and are shown, in both directions, without staging.</td><td>Disappointment, confusion, shame, guilt — felt fully, and not yet turned into action.</td><td>Fear and anger arrive at full size and show plainly. They fit what is happening.</td><td>The same fear and anger, held and steered — used to keep the response going, not vented.</td><td>Rage or fury becomes the force itself. No gap remains between feeling and acting.</td><td>Nothing arrives. The face goes still, and questions about feeling get no answer.</td>
+        </tr>
+        <tr>
+          <th scope="row">Relationships</th>
+          <td>Alone by choice, with others still in mind. Solitude is not distance from anyone.</td><td>Give and take moves freely — either can lead, disagree, need something, and stay.</td><td>Approach slows. Contact continues while the other person’s signals are read again.</td><td>The relationship waits. Protection comes first, whether or not that gets said.</td><td>Kept working by arrangement — the relationship is managed alongside the threat.</td><td>Not in frame. Whoever is present becomes route or obstacle for the length of it.</td><td>Contact drops away. Messages go unanswered, and the drop is not explained.</td>
+        </tr>
+        <tr>
+          <th scope="row">Communication</th>
+          <td>Little of it, and unhurried. Speech is not being used to manage anything.</td><td>Direct and unguarded — questions asked, disagreement said plainly, silence easy.</td><td>Careful and checking — questions that test the ground before more is offered.</td><td>Short and blunt, or nothing at all. Explanation waits until it is over.</td><td>Precise and prepared — what is said is chosen for what it will produce.</td><td>Commands, threats, or no words at all. Nothing said invites a reply.</td><td>Sparse and delayed. Replies come short, late, or do not come.</td>
+        </tr>
+        <tr>
+          <th scope="row">Attention</th>
+          <td>Rests on one thing and stays there. Interruption is felt as interruption.</td><td>On the person and the exchange. Nothing else is competing for it just now.</td><td>Pulled to what changed, and held there until the change has been accounted for.</td><td>Locked on the threat. Names, plans and appointments do not register at all.</td><td>Divided across everything that could go wrong, and kept there for weeks.</td><td>On the obstacle only. Everything else is not seen rather than set aside.</td><td>Uncollected — it drifts, returns, and cannot be sent anywhere on request.</td>
+        </tr>
+        <tr>
+          <th scope="row">Decision making</th>
+          <td>Unhurried and reversible — options can be held, slept on, and then dropped.</td><td>Made together where it affects both. Being talked out of one is not a loss.</td><td>Postponed. Nothing is committed to while the reading is still moving.</td><td>Immediate, on one criterion: what stops this. Cost is counted afterwards.</td><td>Made in advance for a situation that has not arrived, and defended once made.</td><td>Not made — taken. Consulting would cost the window it is being taken in.</td><td>Not reached. The choice stays open until it expires or someone else makes it.</td>
+        </tr>
+        <tr>
+          <th scope="row">Boundaries</th>
+          <td>Not in question. Nothing is pressing on them, so nothing needs to be stated.</td><td>Said easily and heard easily. A no changes the plan, not the relationship.</td><td>Held provisionally — a smaller yes, while what is being asked is worked out.</td><td>Stated once, plainly, and enforced. Explanation is not part of stating it.</td><td>Enforced by arrangement — the situation is set up so the line is not reached.</td><td>Overridden, one’s own included — pain and limit stop registering as limits.</td><td>Not maintained. Whatever arrives is absorbed, because refusing costs more.</td>
+        </tr>
+        <tr>
+          <th scope="row">Empathy<span class="row-alias">what it looks like from outside</span></th>
+          <td>Available and not called on — no one’s state is in the room to respond to.</td><td>Reads the other accurately and acts on it, while staying a separate person.</td><td>Reading continues; acting on it waits until approach feels safe enough to make.</td><td>Narrows to whoever is being protected. Other people’s states register late.</td><td>Allocated where it fits the outcome — accurate reading, selective response.</td><td>Out of reach for the length of the window. It returns once force ends.</td><td>Registered perhaps, but nothing can be mobilised to act on what is registered.</td>
+        </tr>
+
+        <tr class="group">
+          <th colspan="8" scope="colgroup">What organises it <span>· inferred from the pattern, not seen in one moment</span></th>
+        </tr>
+        <tr class="inside">
+          <th scope="row">Organising pull<span class="row-alias">motivation</span></th>
+          <td>Restore, and follow what interests you. Nothing is owed to anyone right now.</td><td>Be with them. The exchange is the point, not anything it is meant to produce.</td><td>Find out what changed, before moving further in either direction.</td><td>Stop it now. Everything else can wait until it has actually stopped.</td><td>Keep it from happening again, by staying far enough ahead of it.</td><td>Survive this, at any cost, including the costs that will land afterwards.</td><td>Reduce demand to what can still be met, and hold there until it drops.</td>
+        </tr>
+        <tr class="inside">
+          <th scope="row">Experience of time<span class="row-alias">how it is handled</span></th>
+          <td>An hour can go to one thing, and it does not feel like an hour spent.</td><td>Appointments slide, because the conversation is not finished yet.</td><td>Waiting, on purpose. The next step is not taken until the picture settles.</td><td>Now, only. What was scheduled for this afternoon stops existing.</td><td>Every hour has a job weeks out. Unassigned time gets assigned.</td><td>The window is closing. Anything that takes time is cut out of the route.</td><td>Days pass without shape. What was due is discovered afterwards.</td>
+        </tr>
+        <tr class="inside">
+          <th scope="row">Nervous system<span class="row-alias">settling and startling</span></th>
+          <td>Settles without help. Nothing has to be done for the body to come down.</td><td>Comes down further in company — being with them does the settling.</td><td>Up and alert, and it drops as soon as the question has been answered.</td><td>Full mobilisation, and it discharges — shaking, tears, or a long breath after.</td><td>Stays up across days, and comes down when the situation actually changes.</td><td>Maximum, then a crash. The cost of it arrives once it is over.</td><td>Down and low, and it lifts once rest, safety, and someone present return.</td>
+        </tr>
+
+        <tr class="group">
+          <th colspan="8" scope="colgroup">From inside <span>· working hypothesis, not observable and not verifiable from outside</span></th>
+        </tr>
+        <tr class="inside">
+          <th scope="row">Possible inner narrative</th>
+          <td class="voice">Nothing is owed here. This hour can go wherever it goes.</td><td class="voice">I can say the real thing to them, and we will still be fine.</td><td class="voice">Something just changed. I need to know what, before I go further.</td><td class="voice">This has to stop now. Everything else can wait until it has.</td><td class="voice">If I stay far enough ahead of it, it will not reach us again.</td><td class="voice">Whatever it takes. Nothing that happens after this counts yet.</td><td class="voice">I cannot do any more of this. There is nothing left to do it with.</td>
+        </tr>
+        <tr class="inside">
+          <th scope="row">View of self</th>
+          <td>Not an open question. Attention is on the thing, not on how one is doing.</td><td>Held lightly and honestly — able to be wrong without it costing standing.</td><td>Uncertain. Whether one is welcome here is exactly what is being checked.</td><td>Not consulted. No attention is spare for how one is coming across.</td><td>The one who has to hold it together, because someone has to hold it.</td><td>Whatever the situation requires, for as long as it requires it.</td><td>Out of reach. There is not enough available to form a view with.</td>
+        </tr>
+        <tr class="inside">
+          <th scope="row">View of others</th>
+          <td>Present in mind without being tracked. Nobody is a task right now.</td><td>Separate people with their own reasons, which can simply be asked about.</td><td>Not yet readable. The same person could be safe or not, and it matters.</td><td>Sorted fast into what helps and what threatens, and re-sorted afterwards.</td><td>Predictable, and worth predicting. What each will do is worked out ahead.</td><td>Route or obstacle. Whoever is there stops being a person for the duration.</td><td>At a distance, and demanding. Even offers of help arrive as demand.</td>
+        </tr>
+
+        <tr class="group">
+          <th colspan="8" scope="colgroup">Afterwards <span>· where the two tables separate</span></th>
+        </tr>
+        <tr class="after">
+          <th scope="row">Response to feedback</th>
+          <td>Taken in without event. There is capacity to consider it and nothing riding on it.</td><td>Heard, checked against one’s own view, and acted on where it lands.</td><td>Read twice — once for the content, once for what it means about standing.</td><td>Not now. It is heard afterwards, when protection is no longer running.</td><td>Accepted where it improves the plan, set aside where it would slow it.</td><td>Does not reach. Nothing said inside the window changes the route.</td><td>Registers as more demand, whatever it says and however kindly it is said.</td>
+        </tr>
+        <tr class="after">
+          <th scope="row">Repair after conflict<span class="row-alias">actor-side</span></th>
+          <td>Nothing outstanding. If something were, there is capacity to go back to it.</td><td>Comes back to it, names what happened, and does not need it minimised.</td><td>Reaches for reassurance first, then for what actually happened.</td><td>Comes after, once protection stands down — and it does stand down.</td><td>Traded rather than given — an offer attached to what happens next.</td><td>Nothing while it runs. Afterwards, the impact can be looked at and named.</td><td>Waits for capacity. It becomes possible once rest and safety return.</td>
+        </tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="note"><strong>What a Fluid cell claims.</strong> A cell describes what is characteristic while the condition above it holds, not what must happen, and not something a person is. Two people in the same Position will not produce the same sentence, the same volume, or the same silence. The behaviour rows describe the observable layer only; which internal capacity narrowed, stayed intact, or was simply not recruited is a separate reading, and it is in <a href="../03-model-2-gradient/index.html">the capacities table</a>.</p>
+    </section>
+
+    <section class="panel" id="panel-chronic" hidden>
+      <h2>Chronic Survival</h2>
+      <p class="caption">Behaviour that runs before the conditions call for it and continues after they pass. The Environmental conditions row keeps the reference point for each Position; it does not claim those conditions are happening now. Every Position below is defensive, including the two that look like rest and connection.</p>
+      <div class="scroll">
+      <table>
+        <thead>
+          <tr><td class="corner"></td><th class="axis" colspan="7" scope="colgroup">Defensive organisation</th></tr>
+          <tr>
+            <th scope="row" class="corner">Position</th>
+            <th scope="col" class="pos">X</th>
+            <th scope="col" class="pos">A</th>
+            <th scope="col" class="pos">A↔B</th>
+            <th scope="col" class="pos">B</th>
+            <th scope="col" class="pos">C</th>
+            <th scope="col" class="pos">D</th>
+            <th scope="col" class="pos">Z</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr class="env">
+          <th scope="row">Environmental conditions</th>
+          <td>Safe to be alone <span class="off">(off the gradient)</span></td><td>Safe with others</td><td>Safety uncertain</td><td>Threat</td><td>Persistent threat</td><td>Life threat</td><td><span class="off">(off the gradient)</span></td>
+        </tr>
+        <tr>
+          <th scope="row">Nervous system organisation</th>
+          <td class="org" style="--fill:#fbe78e;--on:#0b1f42">Chronic Elevated Baseline<span class="hex">#fbe78e</span></td><td class="org" style="--fill:#f7d34d;--on:#0b1f42">Chronic Conditional Belonging<span class="hex">#f7d34d</span></td><td class="org" style="--fill:#f1a43c;--on:#0b1f42">Chronic Safety Checking<span class="hex">#f1a43c</span></td><td class="org" style="--fill:#ef823a;--on:#0b1f42">Chronic Protection / Defence<span class="hex">#ef823a</span></td><td class="org" style="--fill:#ec6430;--on:#0b1f42">Chronic Control &amp; Strategic Management<span class="hex">#ec6430</span></td><td class="org" style="--fill:#eb5151;--on:#0b1f42">Chronic Dominance &amp; Repression<span class="hex">#eb5151</span></td><td class="org" style="--fill:#5d6770;--on:#ffffff">Chronic Collapse / Shutdown<span class="hex">#5d6770</span></td>
+        </tr>
+
+        <tr class="group">
+          <th colspan="8" scope="colgroup">Behaviour <span>· what another person could observe</span></th>
+        </tr>
+        <tr>
+          <th scope="row">Core pattern</th>
+          <td>One thing, while part of attention stays on duty. The task never gets all of it.</td><td>Keeping the other person comfortable, continuously, as the condition of being welcome.</td><td>Checking that never closes. Each answer holds until the next inconsistency appears.</td><td>Guarding before anything has happened. The stance is already up when the day starts.</td><td>Running people the way one runs variables — testing, steering, arranging what they do.</td><td>Overriding, repeatedly. Another person’s refusal is treated as an obstacle to route around.</td><td>Doing less and less, with no lift afterwards. Withdrawal becomes the resting position.</td>
+        </tr>
+        <tr>
+          <th scope="row">Body</th>
+          <td>Rest that does not land — sleep short or broken, shoulders up, the day starting tired.</td><td>Shaped to the other person — smile held, voice light, own needs postponed until later.</td><td>Never fully still — scanning the room, tracking exits, startling at ordinary sound.</td><td>Braced by default — quick to tense, slow to unclench, tired from holding it all day.</td><td>Kept running on stimulants and short sleep, at whatever level the plan needs today.</td><td>Size and volume used as argument — standing over, closing distance, filling the room.</td><td>Heavy and depleted — long sleep that does not restore, tasks abandoned partway.</td>
+        </tr>
+        <tr>
+          <th scope="row">Mind</th>
+          <td>A background list that never empties. Rest fills with what has not been done yet.</td><td>Rehearsing the conversation before and after — what to say, how it landed, what to fix.</td><td>Reading meaning into small things — a delayed reply, a word choice, a changed tone.</td><td>Ambiguity is resolved as threat first. The ordinary reading arrives late or not at all.</td><td>Several moves ahead of everyone present, with a contingency for each likely response.</td><td>Certain, and unavailable to correction. Contradiction is filed as opposition.</td><td>Fog — instructions slide off, decisions stall, the same paragraph read four times.</td>
+        </tr>
+        <tr>
+          <th scope="row">Emotions</th>
+          <td>Flat calm with unease underneath, attached to nothing that can be named or located.</td><td>Warmth performed accurately with no bond under it — the look of care, learned.</td><td>Shame arriving already fused with fear, guilt with anger. Never one feeling alone.</td><td>Ordinary ambiguity sets off fear and anger, carrying shame and guilt in with them.</td><td>Envy, contempt, resentment — feeling reshaped into a verdict about someone else.</td><td>Rage as the one available route, reached after everything else has fused into it.</td><td>Numbness and exhaustion as the resting state, rather than an episode that passes.</td>
+        </tr>
+        <tr>
+          <th scope="row">Relationships</th>
+          <td>Present and slightly apart — reachable, but the last part never quite arrives.</td><td>Organised around the other’s mood. One’s own need is raised last, or never at all.</td><td>Closeness offered and withdrawn — each opening followed by a check for proof.</td><td>Contact starts pre-defended. Ordinary requests are met as though they were demands.</td><td>Steered rather than met — what the other person does is arranged before they arrive.</td><td>Access, money, movement and contact are decided for the other person, not with them.</td><td>Withdrawn from everyone, including those who would help. Invitations expire unread.</td>
+        </tr>
+        <tr>
+          <th scope="row">Communication</th>
+          <td>Fine, thanks — the answer is ready before the question has finished.</td><td>Softened, hedged and apologised for. The real request is buried or dropped.</td><td>The same question in different forms, seeking a certainty no answer can give.</td><td>Answers arrive as defence — the reason offered before anyone has asked for one.</td><td>Framed to produce a response. What is left out does as much work as what is said.</td><td>Interruption, volume, and the last word. Disagreement is treated as attack.</td><td>Long silences, then a short message. Explaining costs more than it returns.</td>
+        </tr>
+        <tr>
+          <th scope="row">Attention</th>
+          <td>Split as a rule — part of it always on standby, alone, at home, at night.</td><td>On the other person’s face, continuously, in preference to anything else.</td><td>Scanning without stopping. There is no state in which checking is finished.</td><td>Pre-allocated to threat, so what is safe gets checked before it is enjoyed.</td><td>On the plan, permanently. What falls outside it does not get looked at.</td><td>On compliance — who is complying, who is not, and what will change that.</td><td>Not available to direct. It goes where it goes and brings nothing usable back.</td>
+        </tr>
+        <tr>
+          <th scope="row">Decision making</th>
+          <td>Small choices take too long. No state arrives in which one feels rested enough.</td><td>Deferred to whoever else is present, then regretted privately afterwards.</td><td>Reopened after being made. The same decision is checked again, and again.</td><td>Made from the worst available reading, and defended before it is questioned.</td><td>Kept from others until settled, then presented as the only option there was.</td><td>Made for other people, about their lives, and announced rather than proposed.</td><td>Avoided entirely. Deadlines pass, and the consequence is preferred to choosing.</td>
+        </tr>
+        <tr>
+          <th scope="row">Boundaries</th>
+          <td>Given away on request, then paid for later in exhaustion nobody else sees.</td><td>Not set at all. A yes arrives before the question has finished being asked.</td><td>Set at maximum, then dropped completely. There is no middle setting.</td><td>Defended before they are tested. A neutral request meets a full refusal.</td><td>Yours are negotiable; theirs are fixed. The line moves for one party only.</td><td>Another person’s no is treated as an opening position, not as an answer.</td><td>Absent — not from openness, but because holding one costs energy that is gone.</td>
+        </tr>
+        <tr>
+          <th scope="row">Empathy<span class="row-alias">what it looks like from outside</span></th>
+          <td>Given as duty. Responding is automatic, and declining never appears as an option.</td><td>Absorbs the other’s state instead of reading it — their mood becomes one’s own.</td><td>Held back until repeated evidence makes offering it feel safe enough.</td><td>Reserved for those inside the protective line, and unavailable past it.</td><td>Read in detail and used instrumentally — accuracy that changes no outcome.</td><td>Another’s distress registers as leverage or as noise, not as a reason to stop.</td><td>The idea of it remains; the capacity to act on it does not.</td>
+        </tr>
+
+        <tr class="group">
+          <th colspan="8" scope="colgroup">What organises it <span>· inferred from the pattern, not seen in one moment</span></th>
+        </tr>
+        <tr class="inside">
+          <th scope="row">Organising pull<span class="row-alias">motivation</span></th>
+          <td>Stay ready. Standing down has come to feel like the thing that would cost.</td><td>Keep them settled. Being needed is the form in which belonging is available.</td><td>Be certain before being open — and certainty never quite arrives.</td><td>Be unreachable by harm. Protection runs whether or not anything is happening.</td><td>Keep hold of what people do, because what cannot be predicted reads as danger.</td><td>Hold position. Another person’s independence registers as a threat to it.</td><td>Stop the demand. Nothing further than that is reachable from here.</td>
+        </tr>
+        <tr class="inside">
+          <th scope="row">Experience of time<span class="row-alias">how it is handled</span></th>
+          <td>A free hour arrives and goes on standby. Rest is never actually taken.</td><td>Time goes on producing the next moment’s safety, so none of it is one’s own.</td><td>Waiting permanently, for a confirmation that would settle it and never comes.</td><td>Everything is urgent, so nothing can be planned. The week is a series of nows.</td><td>Booked to the edge, months out, and still behind. Nothing ever closes.</td><td>Other people’s time is spent as though available. Waiting is for them to do.</td><td>Formless — anything scheduled feels impossible, and days pass unmarked.</td>
+        </tr>
+        <tr class="inside">
+          <th scope="row">Nervous system<span class="row-alias">settling and startling</span></th>
+          <td>Never all the way down. Falling asleep takes an hour that does not restore.</td><td>Settles only when the other person is settled, and rises again with their mood.</td><td>Startles at ordinary sound, and takes a long time to come back down after.</td><td>Up before anything happens, and it does not discharge — nothing finishes it.</td><td>Held high on purpose, because coming down would feel like dropping the guard.</td><td>High and unfelt — the body’s own cost does not register while it is running.</td><td>Low and stuck. Rest does not lift it, and effort does not raise it.</td>
+        </tr>
+
+        <tr class="group">
+          <th colspan="8" scope="colgroup">From inside <span>· working hypothesis, not observable and not verifiable from outside</span></th>
+        </tr>
+        <tr class="inside">
+          <th scope="row">Possible inner narrative</th>
+          <td class="voice">I should be resting. I do not know how to stop being ready.</td><td class="voice">If they are all right with me, then I am all right.</td><td class="voice">Something is off. If I look closely enough, I will find it.</td><td class="voice">It is going to happen again. Better ready than caught out.</td><td class="voice">If I let go of this for one day, the whole thing falls apart.</td><td class="voice">They are the problem. If they did as asked, none of this would.</td><td class="voice">Nothing I do changes anything. There is no point starting.</td>
+        </tr>
+        <tr class="inside">
+          <th scope="row">View of self</th>
+          <td>Fine, as long as nobody looks. Stopping would show what stopping costs.</td><td>Worth what one is useful for. Being needed is the evidence of belonging.</td><td>Probably at fault — the search for what one did wrong runs continuously.</td><td>Someone who gets it wrong and gets caught for it, so gets in first.</td><td>The only one who sees it clearly, and therefore the one who has to run it.</td><td>Correct, and entitled to act on it. Being questioned reads as being attacked.</td><td>Beyond fixing, and no longer arguing about it. The verdict has settled.</td>
+        </tr>
+        <tr class="inside">
+          <th scope="row">View of others</th>
+          <td>Fine, as long as nothing more is asked. Being needed is what is braced for.</td><td>Fragile and easily lost, which is why they have to be kept comfortable.</td><td>Likely to leave. It is only a matter of finding the sign in time.</td><td>Assumed to be about to do it again. Evidence otherwise lands late.</td><td>Variables with preferences — knowable, and therefore steerable.</td><td>Positions in a hierarchy. A refusal reads as insubordination.</td><td>Far away and unreachable, including the ones who are still there.</td>
+        </tr>
+
+        <tr class="group">
+          <th colspan="8" scope="colgroup">Afterwards <span>· where the two tables separate</span></th>
+        </tr>
+        <tr class="after">
+          <th scope="row">Response to feedback</th>
+          <td>Agreed with quickly, then added to the list of what one is behind on.</td><td>Absorbed whole and apologised for, before it has even been understood.</td><td>Confirms what was already suspected, and then is carried for weeks.</td><td>Met with the reason before it has finished — defence arrives first.</td><td>Turned around. The exchange ends with the other person explaining themselves.</td><td>Treated as attack. Whoever gave it becomes the subject instead of the point.</td><td>Nothing is done with it. Agreement is given and nothing follows from it.</td>
+        </tr>
+        <tr class="after">
+          <th scope="row">Repair after conflict<span class="row-alias">actor-side</span></th>
+          <td>Handled quickly so it can be closed, without much of it being felt.</td><td>Apologises immediately, for everything, before the harm has been named.</td><td>Needs proof it is safe, then re-checks the proof. Closing takes weeks.</td><td>Hard to start. Saying it happened feels like handing over a weapon.</td><td>A concession, timed — enough to end the conversation, not to change it.</td><td>Refused. The account is corrected instead, and the other person withdraws it.</td><td>Nothing starts. The rupture stays open, with nothing available to bring to it.</td>
+        </tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="note"><strong>What a Chronic cell claims.</strong> Chronic does not mean severe, and Fluid does not mean mild — the two tables differ in whether the organisation is answering present conditions, not in how much it costs. A person may look calm or connected while guarding, monitoring, pleasing, managing, or conserving is still running. A capacity may stay highly active while becoming inaccurate, uncorrectable, fused, compulsory, or instrumental; reduced access is not the only form chronic change takes. The C and D columns describe behaviour and its cost to another person. Understanding what organises that behaviour does not reduce the harm of it, is not a reason for the person receiving it to doubt their own experience, and is never a condition of their setting a boundary, seeking support, or leaving.</p>
+    </section>
+
+    <section class="guardrails" aria-labelledby="tools-title">
+      <h2 id="tools-title">What a behaviour tool has to carry</h2>
+      <p>
+        These rows are written for tools that help someone recognise a pattern.
+        Each item below is a distinction the table depends on, and each one is
+        cheap to lose once the rows become questions.
+      </p>
+      <ul>
+        <li><b>Ask what happened afterwards, not only what happened.</b> One behaviour is in both tables. Whether the stance came down when the pressure did is the question that separates them, and a tool that only samples the moment cannot answer it.</li>
+        <li><b>Never return a Position from a single row.</b> A Position is a pattern across rows, across time, and under known conditions. A cell match is one observation, not a result.</li>
+        <li><b>Show the conditions with any reading.</b> A behaviour without what it was answering says nothing, and the Environmental conditions row is why the same cell means different things in the two tables.</li>
+        <li><b>Keep Chronic apart from severe, and Fluid apart from mild.</b> Fluid D is maximum protective mobilisation under life threat. It is not a milder version of coercive control, and the tool must not let one read as the other.</li>
+        <li><b>Name behaviour and its cost, not another person’s Position.</b> A self-reading belongs to the person doing it. Reading someone else stays with what they did, how often, under what conditions, and what it cost — the observable layer, which is the only one another person has access to.</li>
+        <li><b>Keep the mechanism from doing the work of a verdict.</b> Explaining what organises a behaviour is not excusing it, and a tool that offers an explanation where someone needs a boundary has changed sides without saying so.</li>
+        <li><b>Let a reading update.</b> Nothing here is a type. Any result a tool returns should be reversible by new information, in the same way the organisation it describes is.</li>
+      </ul>
+      <p class="aside">
+        The internal mechanism behind these rows — what stays available to the
+        coordinated conscious access, and which of the three empathy capacities narrows — is in
+        <a href="../03-model-2-gradient/index.html">How Humans Respond to Safety and Threat</a>.
+        The evidence boundaries used to ground the two tables are in the
+        <a href="../evidence/protocol.html">Science Grounding Protocol</a>.
+        The role of this page within the wider working system is in the
+        <a href="../index.html">TEG-Blue Repository Map</a>.
+      </p>
+      <p><a class="back" href="#top">↑ Back to the tables</a></p>
+    </section>
+  </div>
+
+<script>
+  // #chronic in the URL opens on that table, so either view can be linked to.
+  // replaceState rather than a hash assignment: switching view is not a step
+  // to go back through.
+  var MODES = ['fluid', 'chronic']
+  function show(mode, push) {
+    MODES.forEach(function (m) {
+      document.getElementById('panel-' + m).hidden = m !== mode
+      document.getElementById('t-' + m).setAttribute('aria-pressed', String(m === mode))
+    })
+    if (push) history.replaceState(null, '', '#' + mode)
+  }
+  MODES.forEach(function (m) {
+    document.getElementById('t-' + m).addEventListener('click', function () {
+      show(m, true)
+    })
+  })
+  function fromHash() {
+    var m = location.hash.slice(1)
+    if (MODES.indexOf(m) > -1) show(m, false)
+  }
+  fromHash()
+  window.addEventListener('hashchange', fromHash)
+</script>
+</body>
+</html>

@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A TEG-Blue working account of how internal, external and represented conditions become sensory information, nervous-system organisation and possible conscious participation.">
+  <title>How the Body Reads Conditions · TEG-Blue</title>
+  <link rel="stylesheet" href="../assets/page-responsibility.css">
+  <style>
+    :root {
+      --ink: #0b1f42;
+      --body: #405276;
+      --muted: #71809a;
+      --line: #d8e1f0;
+      --paper: #ffffff;
+      --wash: #f5f7fb;
+      --cyan: #6eeafb;
+      --cyan-deep: #057b91;
+      --lime: #b6fc50;
+      --green: #5be6a2;
+      --gold: #f7d448;
+      --orange: #ef823a;
+      --rose: #d96878;
+      --shadow: 0 18px 45px rgba(11, 31, 66, .08);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        linear-gradient(90deg, rgba(110, 234, 251, .08) 1px, transparent 1px),
+        linear-gradient(rgba(110, 234, 251, .08) 1px, transparent 1px),
+        var(--wash);
+      background-size: 44px 44px;
+      color: var(--ink);
+      font: 15px/1.6 Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    a { color: inherit; text-underline-offset: 3px; }
+    a:focus-visible { outline: 3px solid var(--cyan-deep); outline-offset: 4px; }
+    h1, h2, h3 { font-family: ui-serif, Georgia, "Times New Roman", serif; }
+    section { scroll-margin-top: 28px; }
+
+    .shell { width: min(1320px, calc(100% - 32px)); margin: auto; padding: 32px 0 88px; }
+    .utility {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 30px;
+      color: var(--body);
+      font-size: 12px;
+      font-weight: 780;
+    }
+    .utility div { display: flex; flex-wrap: wrap; gap: 18px; }
+
+    .hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(300px, .75fr);
+      gap: 44px;
+      overflow: hidden;
+      padding: clamp(34px, 6vw, 74px);
+      border: 1px solid #18365f;
+      background: var(--ink);
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      right: -170px;
+      top: -190px;
+      border: 64px solid rgba(110, 234, 251, .12);
+      border-radius: 50%;
+    }
+    .eyebrow, .label {
+      margin: 0 0 11px;
+      font-size: 10px;
+      font-weight: 880;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .eyebrow { color: var(--cyan); }
+    .label { color: var(--cyan-deep); }
+    h1 {
+      max-width: 830px;
+      margin: 0;
+      font-size: clamp(48px, 8vw, 92px);
+      font-weight: 540;
+      line-height: .94;
+      letter-spacing: -.045em;
+    }
+    .hero .dek {
+      max-width: 750px;
+      margin: 28px 0 0;
+      color: #cbd8ed;
+      font-size: clamp(17px, 2vw, 22px);
+      line-height: 1.5;
+    }
+    .hero-aside {
+      position: relative;
+      z-index: 1;
+      align-self: end;
+      border-top: 7px solid var(--lime);
+      background: #fff;
+      color: var(--ink);
+    }
+    .hero-aside p { margin: 0; padding: 17px 20px; border-bottom: 1px solid var(--line); }
+    .hero-aside p:last-child { border-bottom: 0; }
+    .hero-aside span {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--muted);
+      font: 850 9px/1.3 ui-monospace, SFMono-Regular, Menlo, monospace;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .intro-band {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      border: 1px solid var(--line);
+      background: var(--line);
+    }
+    .intro-band article { padding: 20px; background: var(--paper); }
+    .intro-band strong { display: block; margin-bottom: 5px; }
+    .intro-band p { margin: 0; color: var(--body); font-size: 12.5px; }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(260px, .78fr) minmax(0, 1.22fr);
+      gap: 38px;
+      align-items: end;
+      margin: 76px 0 25px;
+    }
+    h2 {
+      margin: 0;
+      font-size: clamp(31px, 4vw, 48px);
+      font-weight: 570;
+      line-height: 1.06;
+      letter-spacing: -.02em;
+    }
+    .section-head > p { margin: 0; color: var(--body); font-size: 16px; }
+
+    /* The page's signature: several information currents enter one living field. */
+    .reading-field {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.06fr .82fr .96fr 1.15fr 1.02fr;
+      gap: 10px;
+      padding: 28px;
+      border: 1px solid #1d3a62;
+      background: #071a38;
+      box-shadow: var(--shadow);
+    }
+    .reading-field::before {
+      content: "";
+      position: absolute;
+      left: 7%;
+      right: 7%;
+      top: 57px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--cyan), var(--green), var(--lime), var(--gold), var(--orange));
+      opacity: .85;
+    }
+    .field-step {
+      position: relative;
+      min-height: 390px;
+      padding: 24px 18px 18px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.055);
+      color: #fff;
+    }
+    .field-step::after {
+      content: "→";
+      position: absolute;
+      z-index: 2;
+      right: -18px;
+      top: 13px;
+      color: #fff;
+      font-weight: 900;
+    }
+    .field-step:last-of-type::after { content: none; }
+    .field-step .n {
+      display: inline-grid;
+      position: relative;
+      z-index: 1;
+      width: 40px;
+      height: 40px;
+      place-items: center;
+      border: 2px solid currentColor;
+      border-radius: 50%;
+      background: #071a38;
+      color: var(--accent);
+      font: 850 10px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    .field-step h3 { margin: 24px 0 8px; font-size: 24px; line-height: 1.08; }
+    .field-step > p { margin: 0 0 14px; color: #c8d6ea; font-size: 12.5px; }
+    .current, .micro {
+      margin-top: 8px;
+      padding: 10px;
+      border-left: 3px solid var(--accent);
+      background: rgba(255,255,255,.06);
+      color: #e5edf8;
+      font-size: 11.5px;
+    }
+    .current strong, .micro strong { display: block; color: #fff; }
+    .territory {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 5px 8px;
+      border: 1px solid rgba(255,255,255,.25);
+      color: var(--accent);
+      font: 800 9px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .recurrence {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-top: 4px;
+      padding: 15px 18px;
+      border: 1px dashed rgba(255,255,255,.35);
+      color: #d6e3f5;
+      font-size: 12px;
+    }
+    .recurrence strong { color: var(--cyan); }
+    .recurrence a { white-space: nowrap; font-weight: 800; }
+
+    .signal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .signal-card {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-top: 8px solid var(--accent);
+      background: var(--paper);
+      box-shadow: 0 10px 28px rgba(11, 31, 66, .045);
+    }
+    .signal-card h3 { margin: 0 0 4px; font-size: 30px; }
+    .signal-card .question { margin: 0 0 16px; font-size: 17px; font-weight: 820; }
+    .signal-card p { margin: 0; color: var(--body); }
+    .input-list { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 19px; }
+    .input-list span {
+      padding: 6px 9px;
+      border: 1px solid var(--line);
+      background: var(--wash);
+      color: var(--body);
+      font-size: 10.5px;
+      font-weight: 750;
+    }
+    .overlap-note {
+      display: grid;
+      grid-template-columns: 230px 1fr;
+      gap: 22px;
+      margin-top: 14px;
+      padding: 20px 24px;
+      border-left: 7px solid var(--cyan);
+      background: #eaf9fc;
+    }
+    .overlap-note strong { font-family: ui-serif, Georgia, serif; font-size: 22px; line-height: 1.2; }
+    .overlap-note p { margin: 0; color: var(--body); }
+
+    .distinction {
+      display: grid;
+      grid-template-columns: .72fr 1.28fr;
+      border: 1px solid var(--line);
+      background: var(--paper);
+    }
+    .distinction-title { padding: 30px; background: var(--ink); color: #fff; }
+    .distinction-title h3 { margin: 0 0 13px; font-size: 34px; line-height: 1.08; }
+    .distinction-title p { margin: 0; color: #c7d4e8; }
+    .distinction-steps { display: grid; grid-template-columns: repeat(2, 1fr); }
+    .distinction-steps article { padding: 22px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .distinction-steps article:nth-child(even) { border-right: 0; }
+    .distinction-steps article:nth-last-child(-n+2) { border-bottom: 0; }
+    .distinction-steps b { display: block; margin-bottom: 6px; color: var(--cyan-deep); }
+    .distinction-steps p { margin: 0; color: var(--body); font-size: 12.5px; }
+
+    .data-note {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      margin-top: 14px;
+      border: 1px solid #d8c570;
+      background: #d8c570;
+    }
+    .data-note div { padding: 23px; background: #fffbea; }
+    .data-note strong { display: block; margin-bottom: 6px; font-family: ui-serif, Georgia, serif; font-size: 21px; }
+    .data-note p { margin: 0; color: var(--body); }
+
+    .systems { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .system-card { position: relative; min-height: 330px; padding: 25px; border: 1px solid var(--line); background: var(--paper); }
+    .system-card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 7px; background: var(--accent); }
+    .system-card .system-name { color: var(--muted); font: 860 10px/1.3 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .12em; }
+    .system-card h3 { margin: 13px 0 9px; font-size: 29px; }
+    .system-card p { margin: 0 0 14px; color: var(--body); }
+    .system-card .not {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .systems-rule {
+      margin-top: 12px;
+      padding: 21px 25px;
+      background: var(--ink);
+      color: #fff;
+      font-size: 16px;
+    }
+    .systems-rule strong { color: var(--cyan); }
+
+    .capacities { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .capacity { display: flex; flex-direction: column; min-height: 330px; border: 1px solid var(--line); background: var(--paper); }
+    .capacity header { padding: 20px; border-top: 7px solid var(--lime); }
+    .capacity h3 { margin: 0 0 6px; font-size: 23px; }
+    .capacity header p { margin: 0; color: var(--body); font-size: 12.5px; }
+    .capacity .mechanical, .capacity .human { padding: 17px 20px; border-top: 1px solid var(--line); }
+    .capacity .human { flex: 1; background: #f5fce9; }
+    .capacity span { display: block; margin-bottom: 5px; color: var(--muted); font-size: 9px; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+    .capacity p { margin: 0; color: var(--body); font-size: 12.5px; }
+    .capacity a { display: block; padding: 13px 20px; border-top: 1px solid var(--line); font-size: 11px; font-weight: 820; }
+
+    .gradient-track {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 4px;
+      padding: 7px;
+      background: var(--ink);
+    }
+    .gradient-track article { min-height: 190px; padding: 16px 12px; border-top: 7px solid var(--accent); background: #fff; }
+    .gradient-track b { font: 850 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .gradient-track h3 { margin: 10px 0 6px; font: 800 13px/1.25 ui-sans-serif, system-ui, sans-serif; }
+    .gradient-track p { margin: 0; color: var(--body); font-size: 10.5px; }
+    .gradient-note { margin: 12px 0 0; color: var(--body); font-size: 12px; }
+
+    .loop-map {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 8px;
+      padding: 26px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+    }
+    .loop-map article { position: relative; padding: 17px; border: 1px solid var(--line); border-top: 6px solid var(--accent); background: var(--wash); }
+    .loop-map article::after { content: "→"; position: absolute; right: -14px; top: 14px; z-index: 2; font-weight: 900; }
+    .loop-map article:last-child::after { content: "↺"; right: 10px; color: var(--cyan-deep); }
+    .loop-map strong { display: block; margin-bottom: 5px; }
+    .loop-map p { margin: 0; color: var(--body); font-size: 11px; }
+
+    .connections { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .connection {
+      display: flex;
+      min-height: 180px;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 22px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      text-decoration: none;
+    }
+    .connection:hover { border-color: var(--cyan-deep); transform: translateY(-2px); }
+    .connection span { color: var(--muted); font-size: 9px; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+    .connection strong { display: block; margin: 8px 0; font: 650 21px/1.2 ui-serif, Georgia, serif; }
+    .connection p { margin: 0; color: var(--body); font-size: 11.5px; }
+    .connection b { margin-top: 12px; color: var(--cyan-deep); font-size: 12px; }
+
+    .boundaries {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      border: 1px solid var(--line);
+      background: var(--line);
+    }
+    .boundaries p { margin: 0; padding: 17px 19px; background: var(--paper); color: var(--body); font-size: 12.5px; }
+    .boundaries strong { color: var(--ink); }
+    details { margin-top: 16px; border: 1px solid var(--line); background: var(--paper); }
+    summary { padding: 17px 20px; cursor: pointer; font-weight: 820; }
+    details ol { columns: 2; column-gap: 44px; margin: 0; padding: 0 38px 22px 55px; }
+    details li { break-inside: avoid; margin-bottom: 9px; color: var(--body); font-size: 11.5px; }
+    .source-note { color: var(--muted); font-size: 11.5px; }
+    footer { margin-top: 70px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11.5px; }
+
+    @media (max-width: 1100px) {
+      .reading-field { grid-template-columns: repeat(3, 1fr); }
+      .field-step:nth-of-type(3)::after { content: none; }
+      .field-step { min-height: 330px; }
+      .field-step:nth-of-type(4), .field-step:nth-of-type(5) { grid-column: span 1; }
+      .gradient-track { grid-template-columns: repeat(4, 1fr); }
+      .loop-map { grid-template-columns: repeat(3, 1fr); }
+      .loop-map article:nth-child(3)::after { content: none; }
+    }
+    @media (max-width: 820px) {
+      .hero, .section-head, .distinction { grid-template-columns: 1fr; }
+      .intro-band, .systems, .capacities, .connections { grid-template-columns: 1fr; }
+      .signal-grid { grid-template-columns: 1fr; }
+      .reading-field { grid-template-columns: 1fr 1fr; }
+      .field-step:nth-of-type(2)::after, .field-step:nth-of-type(4)::after { content: none; }
+      .field-step:nth-of-type(3)::after { content: "→"; }
+      .overlap-note { grid-template-columns: 1fr; }
+      .gradient-track { grid-template-columns: repeat(2, 1fr); }
+      .systems .system-card { min-height: auto; }
+      details ol { columns: 1; }
+    }
+    @media (max-width: 560px) {
+      .shell { width: min(100% - 20px, 1320px); padding-top: 18px; }
+      .hero { padding: 30px 22px; }
+      h1 { font-size: 48px; }
+      .reading-field { grid-template-columns: 1fr; padding: 14px; }
+      .field-step { min-height: auto; }
+      .field-step::after, .field-step:nth-of-type(3)::after { content: "↓"; right: auto; top: auto; left: 26px; bottom: -18px; }
+      .field-step:last-of-type::after { content: none; }
+      .recurrence { align-items: flex-start; flex-direction: column; }
+      .distinction-steps, .data-note, .boundaries { grid-template-columns: 1fr; }
+      .distinction-steps article { border-right: 0; }
+      .distinction-steps article:nth-last-child(2) { border-bottom: 1px solid var(--line); }
+      .gradient-track, .loop-map { grid-template-columns: 1fr; }
+      .loop-map article::after, .loop-map article:nth-child(3)::after { content: "↓"; right: auto; top: auto; left: 20px; bottom: -16px; }
+      .loop-map article:last-child::after { content: "↺"; left: auto; right: 12px; top: 12px; bottom: auto; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .connection { transition: none; }
+    }
+  </style>
+</head>
+<body>
+<div class="carried-banner" role="note"><strong>Carried grounding page · status working.</strong> How the body reads conditions before conscious access: the processing field, detection versus emotion, and the research foundations. Carried on 2 September 2026. Grounding, not canon. <a href="index.html">Back to the Model 1 canon page →</a></div>
+<main class="shell" id="top">
+  <nav class="utility" aria-label="Page navigation">
+    <div>
+      <a href="access.html#functional-sequence">← Return to the functional sequence</a>
+      <a href="../01-signal-map/emotion/fluid.html#body-signals">Open the Gradient</a>
+      <a href="../03-model-2-gradient/premise.html">Model premise</a>
+    </div>
+    <div>
+      <a href="#field">Processing field</a>
+      <a href="#participation">ESS · CLS · ME</a>
+      <a href="#connections">Connections</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Sensory and biological processing · working companion</p>
+      <h1>How the body reads conditions</h1>
+      <p class="dek">Before a person can name an emotion, the organism is already detecting change, combining information, reallocating resources and preparing possible action. This page makes the less visible processing before coordinated conscious access easier to see.</p>
+    </div>
+    <aside class="hero-aside" aria-label="Scope of this page">
+      <p><span>Zooms into</span><strong>Conditions → conscious access</strong></p>
+      <p><span>Keeps separate</span><strong>Detection, emotion and interpretation</strong></p>
+      <p><span>Returns to</span><strong>Action, updating, Return and learning</strong></p>
+    </aside>
+  </header>
+
+  <aside class="page-responsibility" aria-label="Page responsibility">
+    <div class="page-responsibility__heading">
+      <p class="page-responsibility__label">Page responsibility · Model 1 processing companion</p>
+      <p class="page-responsibility__scope">Scientific-facing scope · sensory, interoceptive and social-information processing before and during conscious access</p>
+    </div>
+    <p class="page-responsibility__question"><strong>Governing question</strong>How does a change in conditions become a coordinated biological event that may become consciously available?</p>
+    <div class="page-responsibility__grid">
+      <div class="page-responsibility__item"><strong>This page owns</strong><p>The close view from conditions through detection, integration, coordination and possible conscious access.</p></div>
+      <div class="page-responsibility__item"><strong>It receives</strong><p>Signal categories from the <a href="../01-signal-map/emotion/fluid.html">Signal Map</a> and operating conditions from the <a href="../03-model-2-gradient/index.html">Gradient</a>.</p></div>
+      <div class="page-responsibility__item"><strong>It does not establish</strong><p>That detection is conscious, that emotion is the first event, that a signal is factually complete or that processing follows one anatomical conveyor belt.</p></div>
+    </div>
+  </aside>
+
+  <div class="intro-band" aria-label="Reading boundaries">
+    <article><strong>Information begins before words.</strong><p>Detection, evaluation and bodily adjustment can occur without conscious report.</p></article>
+    <article><strong>Emotion is not the first event.</strong><p>It emerges within a wider pattern of biological relevance, organisation and action readiness.</p></article>
+    <article><strong>The pathway is not a conveyor belt.</strong><p>Its functions overlap, recur and influence what the organism notices next.</p></article>
+  </div>
+
+  <section id="field" aria-labelledby="field-title">
+    <div class="section-head">
+      <div><p class="label">The processing field</p><h2 id="field-title">Several currents become one changing organisation.</h2></div>
+      <p>The blocks below separate functions so they can be examined. They do not describe five sealed anatomical compartments or a single direction of travel.</p>
+    </div>
+
+    <div class="reading-field" aria-label="Conditions to conscious participation working map">
+      <article class="field-step" style="--accent:var(--cyan)">
+        <span class="n">01</span>
+        <h3>Conditions</h3>
+        <p>Something changes inside the organism, around it, or within a remembered, imagined or anticipated situation.</p>
+        <div class="current"><strong>Internal</strong>Respiratory chemistry, tissue condition, temperature, pain, hydration, energy and recovery demand.</div>
+        <div class="current"><strong>External</strong>Objects, people, voices, movement, surfaces, temperature, proximity and events.</div>
+        <div class="current"><strong>Represented</strong>Memory, expectation, prediction, imagined futures, goals and social meaning.</div>
+      </article>
+
+      <article class="field-step" style="--accent:#7dd9f5">
+        <span class="n">02</span>
+        <h3>Detection + transmission</h3>
+        <p>Sensory and physiological systems register change and carry information through peripheral and central pathways.</p>
+        <div class="micro"><strong>From outside</strong>Exteroceptive, vestibular, tactile, thermal and nociceptive information.</div>
+        <div class="micro"><strong>From within</strong>Interoceptive, proprioceptive, visceral, metabolic and immune-related information.</div>
+        <span class="territory">Not necessarily conscious</span>
+      </article>
+
+      <article class="field-step" style="--accent:var(--green)">
+        <span class="n">03</span>
+        <h3>Evaluation + integration</h3>
+        <p>Distributed processes combine incoming information with the organism's present condition and prior learning.</p>
+        <div class="micro"><strong>What is being integrated?</strong>Body state, context, memory, prediction, goals, novelty, controllability and social information.</div>
+        <div class="micro"><strong>What is being evaluated?</strong>Need, relevance, opportunity, belonging, demand, expected cost and possible danger.</div>
+        <span class="territory">Broader than safety versus threat</span>
+      </article>
+
+      <article class="field-step" style="--accent:var(--lime)">
+        <span class="n">04–06</span>
+        <h3>The organism reorganises</h3>
+        <p>Signals, resource allocation and action readiness develop together across multiple bodily systems.</p>
+        <div class="micro"><strong>Coordination</strong>Autonomic, endocrine, metabolic, respiratory, muscular, immune, attentional and motivational processes.</div>
+        <div class="micro"><strong>Readiness</strong>Maintain, explore, seek, approach, support, resist, protect, withdraw or conserve.</div>
+        <span class="territory">ESS territory in the working model</span>
+      </article>
+
+      <article class="field-step" style="--accent:var(--gold)">
+        <span class="n">07</span>
+        <h3>Access + participation</h3>
+        <p>Some of the organism's information may become consciously available as bodily experience, differentiated feeling and situational meaning.</p>
+        <div class="micro"><strong>CLS may contribute</strong>Name, compare, contextualise, reason, predict, plan and revise.</div>
+        <div class="micro"><strong>ME may participate</strong>Turn towards what is available, test it and decide how to respond.</div>
+        <span class="territory">Access varies with organisation and learning</span>
+      </article>
+
+      <div class="recurrence"><span><strong>The field is recursive.</strong> Current organisation changes attention and perception; action changes conditions; new conditions become new input.</span><a href="#loop">See the updating loop ↓</a></div>
+    </div>
+  </section>
+
+  <section id="signal-groups" aria-labelledby="signals-title">
+    <div class="section-head">
+      <div><p class="label">Two informational questions</p><h2 id="signals-title">Body Signals and Situation Signals are not two sets of senses.</h2></div>
+      <p>They name two problems the organism is solving from overlapping biological inputs.</p>
+    </div>
+    <div class="signal-grid">
+      <article class="signal-card" style="--accent:var(--cyan)">
+        <h3>Body Signals</h3>
+        <p class="question">What is happening within the organism?</p>
+        <p>These signals concern maintenance, viable internal conditions, bodily need and recovery. They may become especially visible through interoceptive information, but they are not identical to interoception.</p>
+        <div class="input-list"><span>breathing</span><span>circulation</span><span>temperature</span><span>pain</span><span>gut</span><span>energy</span><span>hydration</span><span>fatigue</span></div>
+      </article>
+      <article class="signal-card" style="--accent:var(--lime)">
+        <h3>Situation Signals</h3>
+        <p class="question">What is happening between the organism and its situation?</p>
+        <p>These signals concern relationship, opportunity, obstacle, belonging, danger, goal and context. They draw on the body as well as current, remembered and anticipated conditions.</p>
+        <div class="input-list"><span>faces</span><span>voices</span><span>distance</span><span>movement</span><span>context</span><span>memory</span><span>prediction</span><span>social meaning</span></div>
+      </article>
+    </div>
+    <div class="overlap-note"><strong>Both groups are embodied.</strong><p>A racing heart can contribute to a Body Signal about physiological demand and to a Situation Signal about possible danger. The informational question changes; the underlying biological inputs can overlap.</p></div>
+  </section>
+
+  <section id="emotion" aria-labelledby="emotion-title">
+    <div class="section-head">
+      <div><p class="label">A crucial distinction</p><h2 id="emotion-title">Detection is not yet emotion.</h2></div>
+      <p>A sudden sound can be transmitted and evaluated before the person can say “I am afraid”. The consciously reportable feeling is relatively downstream from earlier sensory and regulatory activity.</p>
+    </div>
+    <div class="distinction">
+      <div class="distinction-title"><h3>The body does more than generate a feeling.</h3><p>It prepares for anticipated needs by changing the organism that will meet them.</p></div>
+      <div class="distinction-steps">
+        <article><b>Detection</b><p>Something changed. Sensory and physiological systems register it.</p></article>
+        <article><b>Evaluation</b><p>The change is processed in relation to context, need, learning and expectation.</p></article>
+        <article><b>Organisation</b><p>Resources, attention, perception and bodily systems are adjusted.</p></article>
+        <article><b>Experience</b><p>Part of the pattern may become available as bodily sensation, feeling and meaning.</p></article>
+      </div>
+    </div>
+    <div class="data-note">
+      <div><strong>Emotions are real information.</strong><p>Fear carries information that danger has been detected or predicted. Shame carries information about a perceived threat to belonging or social standing.</p></div>
+      <div><strong>Information is not an infallible conclusion.</strong><p>Fear does not prove that the present situation is dangerous. Shame does not prove personal defectiveness. Cognition can test the signal, but it cannot test information that has been excluded from consideration.</p></div>
+    </div>
+  </section>
+
+  <section id="participation" aria-labelledby="participation-title">
+    <div class="section-head">
+      <div><p class="label">TEG-Blue translation</p><h2 id="participation-title">ESS and CLS provide information. ME participates when access permits.</h2></div>
+      <p>These names organise the working model. They do not divide the brain into three physical modules.</p>
+    </div>
+    <div class="systems">
+      <article class="system-card" style="--accent:var(--cyan)">
+        <span class="system-name">ESS · Emotional Somatic System</span>
+        <h3>Embodied information</h3>
+        <p>ESS names the distributed emotional–somatic stream through which biological relevance, bodily organisation, signal formation and action readiness can develop.</p>
+        <p>Much of this work occurs before reflective thought and cannot be directly commanded by ME.</p>
+        <p class="not">Not one anatomical pathway. Not synonymous with conscious emotion.</p>
+      </article>
+      <article class="system-card" style="--accent:var(--gold)">
+        <span class="system-name">CLS · Cognitive Logical System</span>
+        <h3>Reflective information</h3>
+        <p>CLS names the reflective and symbolic capacities through which available experience can be named, compared, contextualised, reasoned about and communicated.</p>
+        <p>Nonconscious prediction and evaluation are not automatically CLS simply because they process information.</p>
+        <p class="not">Can interpret an emotion. Cannot make the upstream biological processes disappear.</p>
+      </article>
+      <article class="system-card" style="--accent:var(--lime)">
+        <span class="system-name">ME · lived participant</span>
+        <h3>Conscious participation</h3>
+        <p>ME names the person who may experience, investigate and act using information from both systems when enough of it is available.</p>
+        <p>ME can turn towards or away from accessible information. Turning away can change participation without stopping internal processing.</p>
+        <p class="not">Not a controller positioned outside the organism.</p>
+      </article>
+    </div>
+    <div class="systems-rule"><strong>The conscious choice is not whether the underlying information initially appears.</strong> When organisation and learned access permit participation, ME can turn towards what becomes available, reflect on it, test it and decide how to respond.</div>
+  </section>
+
+  <section id="access" aria-labelledby="access-title">
+    <div class="section-head">
+      <div><p class="label">From process to participation</p><h2 id="access-title">A biological capacity can operate without being fully usable by ME.</h2></div>
+      <p>The Gradient rows describe underlying processes. The participation card for ME describes how much of each process the person can recognise, understand and use.</p>
+    </div>
+    <div class="capacities">
+      <article class="capacity">
+        <header><h3>Interoceptive processing</h3><p>Internal bodily change is detected, represented and integrated.</p></header>
+        <div class="mechanical"><span>Biological process</span><p>The body continues to register and organise around internal information whether or not ME can identify it.</p></div>
+        <div class="human"><span>ME access</span><p>Can I turn towards, feel, differentiate and investigate my own experience?</p></div>
+        <a href="../03-model-2-gradient/positions.html#me-interoceptive-access">Open Bodily information access and use in the main Gradient →</a>
+      </article>
+      <article class="capacity">
+        <header><h3>Affective sharing</h3><p>Something of another person's affective state can arise within one's own organism.</p></header>
+        <div class="mechanical"><span>Biological process</span><p>Affective resonance can occur before it is named and without guaranteeing clear self–other distinction.</p></div>
+        <div class="human"><span>ME access</span><p>Can I notice what is arising while preserving access to myself and recognising that the other person is separate?</p></div>
+        <a href="../03-model-2-gradient/positions.html#me-affective-sharing-access">Open Affective-sharing access in the main Gradient →</a>
+      </article>
+      <article class="capacity">
+        <header><h3>Mentalizing</h3><p>Another person's possible feelings, intentions and perspective are represented through inference.</p></header>
+        <div class="mechanical"><span>Biological process</span><p>Social information, memory, language and prediction contribute to reading another person.</p></div>
+        <div class="human"><span>ME access</span><p>Can I wonder, check and revise my understanding rather than treating an inference as certainty?</p></div>
+        <a href="../03-model-2-gradient/positions.html#me-mentalizing-access">Open Mentalizing access in the main Gradient →</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="organisation" aria-labelledby="organisation-title">
+    <div class="section-head">
+      <div><p class="label">Where the Gradient enters</p><h2 id="organisation-title">Organisation changes what receives priority.</h2></div>
+      <p>The same environment does not produce one fixed experience. Current organisation changes sensory weighting, attention, energy allocation, action readiness and what can become consciously usable.</p>
+    </div>
+    <div class="gradient-track" aria-label="Fluid Gradient working organisations">
+      <article style="--accent:var(--cyan)"><b>X</b><h3>Restoration</h3><p>Internal maintenance, recovery and viable bodily condition can receive priority.</p></article>
+      <article style="--accent:#66d9ed"><b>A</b><h3>Connection</h3><p>Social engagement, exploration and reciprocal information remain widely available.</p></article>
+      <article style="--accent:#7bf0a2"><b>A↔B</b><h3>Checking</h3><p>Possible change in safety increases orienting, comparison and provisional readiness.</p></article>
+      <article style="--accent:var(--lime)"><b>B</b><h3>Defence</h3><p>Established obstacle or threat gives mobilisation and protection greater priority.</p></article>
+      <article style="--accent:#e5f24d"><b>C</b><h3>Strategy</h3><p>Persistent or complex threat recruits monitoring, prediction and management.</p></article>
+      <article style="--accent:var(--gold)"><b>D</b><h3>Power</h3><p>Severe demand can narrow processing around force, outcome and immediate survival.</p></article>
+      <article style="--accent:#a5afc1"><b>Z</b><h3>Conservation</h3><p>When action is unavailable or too costly, reduced output and immobilisation can dominate.</p></article>
+    </div>
+    <p class="gradient-note">These are TEG-Blue working organisations, not established neuroscientific states. The Fluid Gradient asks how organisation can change with present conditions; the Chronic model asks how learned weighting and restricted access may persist.</p>
+  </section>
+
+  <section id="loop" aria-labelledby="loop-title">
+    <div class="section-head">
+      <div><p class="label">Updating</p><h2 id="loop-title">Action changes what the body will read next.</h2></div>
+      <p>The useful shape is a loop. Organisation changes perception; action changes the situation; new conditions produce new sensory information.</p>
+    </div>
+    <div class="loop-map" aria-label="Recursive processing loop">
+      <article style="--accent:var(--cyan)"><strong>World + body</strong><p>Current internal, external and represented conditions.</p></article>
+      <article style="--accent:#7dd9f5"><strong>Detection</strong><p>Sensory and physiological systems register change.</p></article>
+      <article style="--accent:var(--green)"><strong>Evaluation</strong><p>Information is integrated with context and learning.</p></article>
+      <article style="--accent:var(--lime)"><strong>Organisation</strong><p>Resources, attention and readiness are adjusted.</p></article>
+      <article style="--accent:var(--gold)"><strong>Participation + action</strong><p>Automatic and deliberate responses alter what happens.</p></article>
+      <article style="--accent:var(--orange)"><strong>New conditions</strong><p>Feedback updates processing, Return and future learning.</p></article>
+    </div>
+  </section>
+
+  <section id="connections" aria-labelledby="connections-title">
+    <div class="section-head">
+      <div><p class="label">Working connections</p><h2 id="connections-title">This layer connects several parts of the system.</h2></div>
+      <p>Each file asks a different question. The links preserve those differences instead of making one page carry the whole model.</p>
+    </div>
+    <div class="connections">
+      <a class="connection" href="access.html#functional-sequence"><span>Functional architecture</span><strong>How information continues into action, updating, Return and learning</strong><p>The canonical eleven-stage sequence remains the overview.</p><b>Open the functional sequence →</b></a>
+      <a class="connection" href="../01-signal-map/emotion/fluid.html#body-signals"><span>Present organisation</span><strong>How Body Signals and Situation Signals change across the Fluid Gradient</strong><p>The main table shows what each organisation prioritises and makes available.</p><b>Open the Gradient →</b></a>
+      <a class="connection" href="index.html#ess"><span>Working systems</span><strong>How ESS, CLS and ME differ without becoming separate anatomical modules</strong><p>The companion page develops the information-system translation.</p><b>Open ESS · CLS · ME →</b></a>
+      <a class="connection" href="../05-frameworks/index.html"><span>F1 · evolution</span><strong>How the component capacities became possible across evolutionary time</strong><p>F1 asks about origin and expansion, not the moment-to-moment pathway.</p><b>Open F1 →</b></a>
+      <a class="connection" href="../05-frameworks/F02/diagram.html#development"><span>F2 · development</span><strong>How access, expression and interpretation may change when emotion must be overridden</strong><p>F2 asks what repeated experience can teach the developing organism.</p><b>Open F2 →</b></a>
+      <a class="connection" href="me-access.html#capacity-key"><span>Capacity configurations</span><strong>How Bodily information access and use, Affective-sharing access and Mentalizing may combine</strong><p>The configuration file tests uneven access without turning combinations into personality types.</p><b>Open the configurations →</b></a>
+    </div>
+  </section>
+
+  <section id="boundaries" aria-labelledby="boundaries-title">
+    <div class="section-head">
+      <div><p class="label">Scientific boundaries</p><h2 id="boundaries-title">What this page does—and does not—claim.</h2></div>
+      <p>This is a TEG-Blue functional synthesis drawn from several research traditions. No single theory establishes the whole map.</p>
+    </div>
+    <div class="boundaries">
+      <p><strong>Functional layer, not serial anatomy.</strong> The blocks distinguish questions and functions. Biological processing overlaps, recurs and travels through distributed pathways.</p>
+      <p><strong>ESS, CLS and ME are working terms.</strong> They organise the model; they are not three scientifically established neural systems.</p>
+      <p><strong>Detection is not conscious feeling.</strong> Defensive and regulatory processing can occur before a person reports fear or another emotion.</p>
+      <p><strong>Evaluation is broader than threat.</strong> Need, relevance, opportunity, novelty, belonging, controllability and expected demand may all matter.</p>
+      <p><strong>Action readiness is not behaviour.</strong> A prepared tendency may be inhibited, revised, opposed or combined with another tendency.</p>
+      <p><strong>Emotion is information, not proof.</strong> A signal can be biologically meaningful while remaining incomplete, learned or mistaken about present conditions.</p>
+      <p><strong>Body Signals are not interoception.</strong> Interoceptive information contributes to both Body Signals and Situation Signals.</p>
+      <p><strong>The Position is not the signal.</strong> An emotion may occur across several organisations; organisation changes its weighting, expression and use.</p>
+    </div>
+    <details id="sources">
+      <summary>Research foundations carried from the working source document</summary>
+      <ol>
+        <li>Craig (2002), <a href="https://doi.org/10.1038/nrn894">interoception and physiological condition</a>.</li>
+        <li>LeDoux (2012), <a href="https://doi.org/10.1016/j.neuron.2012.02.004">distinguishing survival functions and conscious emotion</a>.</li>
+        <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5652650/">Emotion in Action (2017)</a>, predictive processing and action readiness.</li>
+        <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3246364/">The Feeling of Action Tendencies (2011)</a>.</li>
+        <li>Sterling (2018), <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6025954/">predictive regulation and allostasis</a>.</li>
+        <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10699409/">Stress and the extended autonomic system (2023)</a>.</li>
+        <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7058216/">Central control of autonomic function</a>.</li>
+        <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11117115/">Allostasis and hierarchical gradients in the human brain (2024)</a>.</li>
+        <li>Montag et al. (2019), <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6344464/">selected principles of Pankseppian affective neuroscience</a>.</li>
+        <li>Dunn, Dalgleish &amp; Lawrence (2006), <a href="https://doi.org/10.1016/j.neubiorev.2005.07.001">critical evaluation of the somatic-marker hypothesis</a>.</li>
+        <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8694467/">Where emotional feeling is felt in the body (2021)</a>.</li>
+      </ol>
+    </details>
+    <p class="source-note">The sources ground component processes and distinctions. They do not establish the complete sequence, the seven organisations, or ESS, CLS and ME as one canonical scientific model.</p>
+  </section>
+
+  <footer>Working companion · The functional sequence remains the overview; this page makes its sensory and biological processing layer visible.</footer>
+</main>
+</body>
+</html>

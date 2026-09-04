@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Working definition of the Nervous System Gradient as a three-dimensional field: organisation, processing layer and Fluid-to-Chronic depth.">
+<title>The Fluid–Chronic Depth Model · TEG-Blue</title>
+<link rel="stylesheet" href="../assets/page-responsibility.css">
+<style>
+  :root {
+    --ink: #0b1f42;
+    --ink-soft: #24365c;
+    --body: #3c4c6d;
+    --muted: #64748b;
+    --line: #dbe3ef;
+    --paper: #ffffff;
+    --ground: #f4f7fb;
+    --fluid: #6eeafb;
+    --middle: #f7d448;
+    --chronic: #ef823a;
+    --deep: #eb5151;
+    --mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; padding: 0 0 72px; background: var(--ground); color: var(--ink);
+    font: 15px/1.58 ui-sans-serif, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-underline-offset: 3px; }
+  .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+  header { padding: 62px 0 38px; }
+  .eyebrow { margin: 0 0 12px; color: #a94c18; font: 800 10px/1.4 var(--mono); letter-spacing: .13em; text-transform: uppercase; }
+  h1, h2 { font-family: ui-serif, Georgia, "Times New Roman", serif; font-weight: 600; letter-spacing: -.018em; }
+  h1 { max-width: 880px; margin: 0; font-size: clamp(2.6rem, 7vw, 5.1rem); line-height: .98; }
+  .standfirst { max-width: 780px; margin: 22px 0 0; color: var(--body); font-size: 1.08rem; }
+  .boundary-line { max-width: 840px; margin: 20px 0 0; padding-left: 16px; border-left: 4px solid var(--chronic); color: var(--ink-soft); }
+
+  .field-figure {
+    overflow: hidden; margin: 0 0 58px; padding: 30px;
+    border: 1px solid var(--line); border-radius: 16px; background: var(--ink);
+    box-shadow: 0 14px 34px rgba(11, 31, 66, .13);
+  }
+  .field-stage { position: relative; min-height: 420px; }
+  .plane {
+    position: absolute; width: 68%; min-width: 620px; height: 248px;
+    border: 1px solid var(--plane-line); border-radius: 9px;
+    background: var(--plane-fill); box-shadow: 0 15px 28px rgba(0, 0, 0, .18);
+  }
+  .plane::after {
+    content: ""; position: absolute; inset: 48px 18px 18px;
+    background-image: linear-gradient(to right, rgba(255,255,255,.13) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,.1) 1px, transparent 1px);
+    background-size: calc(100% / 7) calc(100% / 6);
+  }
+  .plane-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding: 14px 18px; }
+  .plane-head strong { color: #fff; font-size: 14px; }
+  .plane-head span { color: rgba(255,255,255,.68); font: 650 9px/1.3 var(--mono); letter-spacing: .06em; text-transform: uppercase; }
+  .plane-far { top: 18px; right: 3%; --plane-line: rgba(239,130,58,.88); --plane-fill: rgba(140,52,31,.88); transform: scale(.79); transform-origin: top right; }
+  .plane-middle { top: 95px; right: 14%; --plane-line: rgba(247,212,72,.88); --plane-fill: rgba(113,91,27,.9); transform: scale(.89); transform-origin: top right; }
+  .plane-front { top: 174px; left: 2%; --plane-line: rgba(110,234,251,.95); --plane-fill: rgba(20,84,118,.96); }
+  .axis-depth {
+    position: absolute; top: 42px; left: 3%; display: grid; gap: 7px;
+    color: #b9c9e4; font: 650 9px/1.35 var(--mono); letter-spacing: .06em; text-transform: uppercase;
+  }
+  .axis-depth::after { content: "↗"; color: var(--middle); font-size: 42px; line-height: 1; }
+  .axis-x { position: absolute; right: 2%; bottom: 0; color: #b9c9e4; font: 650 9px/1.35 var(--mono); letter-spacing: .06em; text-transform: uppercase; }
+  .axis-y { position: absolute; left: 0; bottom: 54px; color: #b9c9e4; font: 650 9px/1.35 var(--mono); letter-spacing: .06em; text-transform: uppercase; writing-mode: vertical-rl; transform: rotate(180deg); }
+  .field-caption { margin: 16px 0 0; color: #b9c9e4; font-size: 12px; }
+
+  section { margin: 0 0 58px; }
+  h2 { margin: 0 0 11px; font-size: clamp(1.85rem, 4vw, 2.7rem); line-height: 1.08; }
+  .lede { max-width: 800px; margin: 0 0 22px; color: var(--body); }
+  .axis-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  .axis-card { padding: 20px 21px; border: 1px solid var(--line); border-top: 5px solid var(--accent); border-radius: 10px; background: var(--paper); }
+  .axis-card .axis-name { color: var(--accent); font: 800 10px/1.3 var(--mono); letter-spacing: .09em; text-transform: uppercase; }
+  .axis-card h3 { margin: 7px 0 8px; font-size: 17px; }
+  .axis-card p { margin: 0; color: var(--body); font-size: 13px; }
+  .axis-card .axis-read { display: block; margin-top: 13px; padding-top: 11px; border-top: 1px solid var(--line); color: var(--ink-soft); font: 650 10px/1.45 var(--mono); }
+
+  .depth-scale { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1px; overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: var(--line); }
+  .depth-step { position: relative; min-height: 186px; padding: 18px 17px; background: var(--paper); }
+  .depth-step::before { content: ""; display: block; width: 34px; height: 6px; margin-bottom: 13px; border-radius: 999px; background: var(--accent); }
+  .depth-step h3 { margin: 0 0 7px; font-size: 14px; }
+  .depth-step p { margin: 0; color: var(--muted); font-size: 11.5px; }
+  .depth-step small { display: block; margin-top: 12px; color: var(--accent); font: 700 9px/1.35 var(--mono); text-transform: uppercase; }
+  .provisional { margin: 12px 0 0; color: var(--muted); font-size: 12px; }
+
+  .far-plane { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; overflow: hidden; border: 1px solid #f1c7ad; border-radius: 12px; background: #f1c7ad; }
+  .far-plane article { padding: 22px 23px; background: #fffaf6; }
+  .far-plane h3 { margin: 0 0 12px; color: #a94c18; font-size: 15px; }
+  .far-plane ul { margin: 0; padding-left: 18px; color: var(--body); font-size: 13px; }
+  .far-plane li + li { margin-top: 8px; }
+  .far-plane .not { background: #f8fafd; }
+  .far-plane .not h3 { color: var(--ink-soft); }
+
+  .location-rule { padding: 22px 24px; border-left: 5px solid var(--fluid); background: var(--paper); }
+  .location-rule strong { display: block; margin-bottom: 7px; font-size: 17px; }
+  .location-rule p { margin: 0; color: var(--body); }
+  .coordinate { margin-top: 16px; padding: 13px 15px; border: 1px solid var(--line); background: var(--ground); color: var(--ink-soft); font: 650 11px/1.5 var(--mono); }
+  .examples { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin-top: 12px; }
+  .example { padding: 14px 15px; border: 1px solid var(--line); background: var(--paper); color: var(--body); font-size: 12px; }
+
+  .variable-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  .variable {
+    position: relative; min-height: 178px; padding: 19px 20px 18px;
+    overflow: hidden; border: 1px solid var(--line); border-radius: 10px;
+    background: var(--paper);
+  }
+  .variable::before {
+    content: ""; position: absolute; inset: 0 auto 0 0; width: 4px;
+    background: linear-gradient(var(--fluid), var(--middle), var(--chronic));
+  }
+  .variable .system-route {
+    display: block; margin-bottom: 8px; color: var(--muted);
+    font: 750 9px/1.35 var(--mono); letter-spacing: .07em; text-transform: uppercase;
+  }
+  .variable h3 { margin: 0 0 7px; font-size: 15px; }
+  .variable p { margin: 0; color: var(--body); font-size: 12px; }
+  .reading-rule {
+    margin: 12px 0 0; padding: 14px 16px; color: var(--ink-soft);
+    font-size: 12.5px; background: #eefcff; border-left: 4px solid var(--fluid);
+  }
+
+  .mapping-scroll {
+    overflow-x: auto; border: 1px solid var(--line); border-radius: 12px;
+    background: var(--paper); box-shadow: 0 1px 2px rgba(11, 31, 66, .04);
+  }
+  .mapping-table { width: 100%; min-width: 940px; border-collapse: collapse; }
+  .mapping-table th, .mapping-table td {
+    padding: 15px 16px; text-align: left; vertical-align: top;
+    border-bottom: 1px solid var(--line);
+  }
+  .mapping-table tr:last-child > * { border-bottom: 0; }
+  .mapping-table thead th {
+    color: var(--muted); font: 750 9px/1.35 var(--mono);
+    letter-spacing: .07em; text-transform: uppercase; background: #f8fafd;
+  }
+  .mapping-table tbody th { width: 18%; color: var(--ink); font-size: 13px; }
+  .mapping-table td { width: 27%; color: var(--body); font-size: 11.5px; }
+  .mapping-table td:last-child { width: 28%; background: #fbfcfe; }
+  .row-map { display: block; }
+  .row-map + .row-map { margin-top: 7px; }
+  .coverage {
+    display: inline-block; min-width: 52px; margin-right: 5px; padding: 2px 5px;
+    color: var(--ink); font: 750 8px/1.35 var(--mono); text-align: center;
+    letter-spacing: .04em; text-transform: uppercase; border-radius: 4px;
+  }
+  .coverage.primary { background: #bff5fb; }
+  .coverage.shared { background: #dfffb5; }
+  .coverage.support { background: #fff1b7; }
+  .mapping-result strong { display: block; margin-bottom: 4px; color: var(--ink-soft); font-size: 11.5px; }
+  .mapping-boundary {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px;
+    margin-top: 12px; overflow: hidden; border: 1px solid var(--line);
+    border-radius: 9px; background: var(--line);
+  }
+  .mapping-boundary div { padding: 13px 15px; color: var(--body); font-size: 11.5px; background: var(--paper); }
+  .mapping-boundary strong { display: block; margin-bottom: 3px; color: var(--ink); }
+
+  .separate-scales {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px; overflow: hidden; border: 1px solid var(--line);
+    border-radius: 12px; background: var(--line);
+  }
+  .scale-question { padding: 23px 24px; background: var(--paper); }
+  .scale-question.internal { border-top: 5px solid var(--fluid); }
+  .scale-question.behaviour { border-top: 5px solid var(--chronic); }
+  .scale-question .question-label {
+    display: block; margin-bottom: 8px; color: var(--muted);
+    font: 750 9px/1.35 var(--mono); letter-spacing: .08em; text-transform: uppercase;
+  }
+  .scale-question h3 { margin: 0 0 8px; font-size: 17px; }
+  .scale-question p { margin: 0; color: var(--body); font-size: 12.5px; }
+  .scale-question ul { margin: 13px 0 0; padding-left: 18px; color: var(--body); font-size: 12px; }
+  .scale-question li + li { margin-top: 5px; }
+  .not-equation {
+    display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
+    gap: 10px 24px; margin-top: 12px; padding: 15px 17px;
+    color: #fff; background: var(--ink); border-radius: 9px;
+  }
+  .not-equation strong { font: 760 12px/1.45 var(--mono); letter-spacing: .035em; }
+  .not-equation span { color: #c7d5eb; font-size: 11.5px; }
+
+  .next-questions { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+  .question { padding: 15px 16px; border-left: 3px solid var(--middle); background: var(--paper); color: var(--body); font-size: 12.5px; }
+  .question strong { display: block; margin-bottom: 4px; color: var(--ink); }
+  .handoff { margin-top: 48px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+  .handoff a { color: var(--ink-soft); font-weight: 700; }
+
+  @media (max-width: 780px) {
+    .axis-grid, .far-plane, .examples, .variable-grid, .mapping-boundary, .separate-scales, .next-questions { grid-template-columns: 1fr; }
+    .depth-scale { grid-template-columns: 1fr; }
+    .depth-step { min-height: 0; }
+    .field-figure { padding: 20px 14px; }
+    .field-stage { min-height: 330px; }
+    .plane { width: 86%; min-width: 0; height: 184px; }
+    .plane::after { inset: 43px 13px 13px; }
+    .plane-far { top: 14px; right: 1%; transform: scale(.76); }
+    .plane-middle { top: 68px; right: 7%; transform: scale(.86); }
+    .plane-front { top: 124px; left: 1%; }
+    .plane-head { padding: 12px 13px; }
+    .plane-head strong { font-size: 12px; }
+    .plane-head span { display: none; }
+    .axis-depth { top: 26px; left: 1%; max-width: 80px; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<div class="carried-banner" role="note"><strong>Carried page · status working.</strong> The three-coordinate view (organisation, processing layer, depth) and the six depth variables. Carried on 2 September 2026. Depth is the visual orientation; the persistence and flexibility profile is the construct. To be merged with the intermediate-layers page. <a href="fluid-chronic.html">Back to the Fluid and Chronic canon page →</a></div>
+<header class="wrap">
+  <p class="eyebrow">Working architecture · Fluid and Chronic</p>
+  <h1>The Gradient as a three-dimensional field</h1>
+  <p class="standfirst">The Fluid and Chronic tables are not two kinds of people. They are two reference planes. The space between them allows the same organisation or capacity to remain fluid in one territory while becoming increasingly restricted in another.</p>
+  <p class="boundary-line">This model locates a repeated pattern in a defined context. It does not place a whole person at one permanent coordinate. <a href="premise.html">Read the governing model premise →</a></p>
+</header>
+
+<main class="wrap">
+  <aside class="page-responsibility" aria-label="Page responsibility">
+    <div class="page-responsibility__heading">
+      <p class="page-responsibility__label">Page responsibility · Model 2 coordinate view</p>
+      <p class="page-responsibility__scope">Scientific-facing scope · contextual organisation, processing layer and degree of updating or learned restriction as separable coordinates</p>
+    </div>
+    <p class="page-responsibility__question"><strong>Governing question</strong>How can one locate a pattern without collapsing organisation, processing layer and Fluid–Chronic depth into one label?</p>
+    <div class="page-responsibility__grid">
+      <div class="page-responsibility__item"><strong>This page owns</strong><p>The coordinate geometry: across for organisation, down for processing layer and through for context-specific depth between reference planes.</p></div>
+      <div class="page-responsibility__item"><strong>It receives</strong><p>The <a href="index.html">Gradient Positions and rows</a>; the <a href="intermediate-layers.html">intermediate field</a> explains what may vary between the planes.</p></div>
+      <div class="page-responsibility__item"><strong>It does not establish</strong><p>A severity scale, a whole-person location, one latent “depth” trait or a causal pathway from Fluid to Chronic.</p></div>
+    </div>
+  </aside>
+
+  <figure class="field-figure" aria-labelledby="field-caption">
+    <div class="field-stage" aria-hidden="true">
+      <div class="axis-depth">Depth · updating to restriction</div>
+      <div class="plane plane-far"><div class="plane-head"><strong>Far Chronic reference</strong><span>entrenched protection</span></div></div>
+      <div class="plane plane-middle"><div class="plane-head"><strong>Intermediate field</strong><span>degrees of learned restriction</span></div></div>
+      <div class="plane plane-front"><div class="plane-head"><strong>Fluid reference</strong><span>present-sensitive organisation</span></div></div>
+      <div class="axis-y">Processing layer · table rows</div>
+      <div class="axis-x">Organisation · X · A · A↔B · B · C · D · Z →</div>
+    </div>
+    <figcaption class="field-caption" id="field-caption">The planes use the same organisations and processing layers. What changes with depth is availability, weighting, updating and Return.</figcaption>
+  </figure>
+
+  <section id="axes" aria-labelledby="axes-title">
+    <h2 id="axes-title">Three questions locate the pattern</h2>
+    <p class="lede">Each axis answers something different. Keeping them separate prevents nervous-system organisation, emotional access, behaviour and diagnosis from being collapsed into one label.</p>
+    <div class="axis-grid">
+      <article class="axis-card" style="--accent:var(--fluid)"><span class="axis-name">Across · organisation</span><h3>What is being recruited?</h3><p>The seven Positions describe the whole-organism configuration currently available: baseline, connection, checking, protection, strategy, maximum mobilisation or conservation.</p><span class="axis-read">X · A · A↔B · B · C · D · Z</span></article>
+      <article class="axis-card" style="--accent:var(--middle)"><span class="axis-name">Down · processing layer</span><h3>What part of participation is changing?</h3><p>Conditions, ESS signals, bodily organisation, ME access, CLS interpretation, empathy, action, updating, Return and repair can each sit at a different depth.</p><span class="axis-read">one row or process at a time</span></article>
+      <article class="axis-card" style="--accent:var(--chronic)"><span class="axis-name">Depth · learned availability</span><h3>How fluid or restricted has it become?</h3><p>Depth describes whether the process updates with present information or has become recurrently biased, narrowed, compulsory, inaccessible or difficult to leave.</p><span class="axis-read">Fluid reference → far Chronic reference</span></article>
+    </div>
+  </section>
+
+  <section id="depth" aria-labelledby="depth-title">
+    <h2 id="depth-title">The intermediate field</h2>
+    <p class="lede">These are provisional depth descriptions, not new diagnoses or fixed stages. They give us language for the territory currently missing between the two tables.</p>
+    <div class="depth-scale">
+      <article class="depth-step" style="--accent:#42cfe4"><h3>Fluid reference</h3><p>Organisation matches present conditions closely enough to use available information, update and Return.</p><small>near plane</small></article>
+      <article class="depth-step" style="--accent:#86dca6"><h3>Recurrent bias</h3><p>One route is recruited more easily, but alternatives remain accessible and new information can still correct it.</p><small>early depth</small></article>
+      <article class="depth-step" style="--accent:#e0bd3f"><h3>Learned restriction</h3><p>Specific signals, feelings or actions become difficult in particular relationships, conditions or territories.</p><small>selective depth</small></article>
+      <article class="depth-step" style="--accent:#ef8b40"><h3>Entrenched protection</h3><p>Protective expectation increasingly organises perception, interpretation and action across changing conditions.</p><small>deep restriction</small></article>
+      <article class="depth-step" style="--accent:#e45151"><h3>Far Chronic reference</h3><p>Present information poorly corrects the organisation; competing capacities and reliable Return are severely constrained.</p><small>far plane</small></article>
+    </div>
+    <p class="provisional">A pattern may move in either direction. Depth can differ by signal family, relationship, context, processing layer and time.</p>
+  </section>
+
+  <section id="far-chronic" aria-labelledby="far-title">
+    <h2 id="far-title">What the far Chronic plane represents</h2>
+    <p class="lede">The far plane is a limit reference. It helps us describe the strongest form of a repeated protective pattern without treating that pattern as a complete account of the person.</p>
+    <div class="far-plane">
+      <article><h3>It represents</h3><ul><li>protection recruited beyond the conditions that originally required it;</li><li>signal access, weighting or interpretation that is difficult to correct;</li><li>action routes that become compulsory, instrumental or severely narrowed;</li><li>limited participation from competing needs, another person’s reality or later evidence;</li><li>updating, Return and repair that no longer occur reliably.</li></ul></article>
+      <article class="not"><h3>It does not establish</h3><ul><li>a diagnosis, personality type or moral identity;</li><li>that every capacity is absent in every context;</li><li>one childhood history, intention or biological mechanism;</li><li>that adversity inevitably produces harm;</li><li>that empathy is simply present or absent;</li><li>that understanding a protective function removes responsibility for behaviour and impact.</li></ul></article>
+    </div>
+  </section>
+
+  <section id="location" aria-labelledby="location-title">
+    <h2 id="location-title">Locate patterns, not people</h2>
+    <div class="location-rule"><strong>A person is not one point in the field.</strong><p>The useful unit is a repeated process in a defined context. Someone may use reflective thought fluidly at work while shame remains deeply restricted in intimate relationships. Mentalizing may remain detailed while affective sharing becomes unavailable during conflict.</p><div class="coordinate">context + organisation + processing layer + depth + time</div></div>
+    <div class="examples"><div class="example"><strong>Example of uneven depth.</strong><br>Threat strategy may update when a practical problem ends, while Belonging-at-Risk signals continue to organise checking long after reassurance arrives.</div><div class="example"><strong>Example of capacity separation.</strong><br>Another person’s intentions may be represented accurately while their feeling does not become affectively shared or does not constrain the chosen action.</div></div>
+  </section>
+
+  <section id="depth-variables" aria-labelledby="variables-title">
+    <h2 id="variables-title">What changes with depth</h2>
+    <p class="lede">Depth does not mean that ESS stops producing information. It describes how readily an organisation is recruited, what information receives priority, what becomes available to ME, how CLS interprets it, which actions remain possible, and whether the sequence can update when conditions change.</p>
+    <div class="variable-grid">
+      <article class="variable"><span class="system-route">ESS + organisation</span><h3>Recruitment threshold</h3><p>How much present evidence is needed before a protective organisation is recruited? With greater depth, a smaller or more ambiguous cue may be enough.</p></article>
+      <article class="variable"><span class="system-route">ESS · signal selection</span><h3>Information weighting</h3><p>Which Body and Situation Signals gain priority, and which recede? Depth may amplify one signal family while making competing information harder to use.</p></article>
+      <article class="variable"><span class="system-route">ESS → ME</span><h3>Differentiation and felt access</h3><p>Can bodily change, emotion, need, prediction and another person’s state be distinguished, or do they arrive fused, faint, delayed or inaccessible?</p></article>
+      <article class="variable"><span class="system-route">ME ↔ CLS</span><h3>Interpretive flexibility</h3><p>Can the first explanation remain provisional and be revised with context, or does it become the only explanation that feels possible?</p></article>
+      <article class="variable"><span class="system-route">ME · action</span><h3>Action flexibility</h3><p>Can the person pause, choose among several responses and include competing needs, or has one route become automatic, compulsory or instrumental?</p></article>
+      <article class="variable"><span class="system-route">Whole sequence</span><h3>Updating, persistence and Return</h3><p>When the situation changes, how long does the organisation continue? Can new information enter, pressure fall and the capacities needed for repair return?</p></article>
+    </div>
+    <p class="reading-rule"><strong>Depth does not reduce every capacity equally.</strong> It can make one protective route unusually available while another process remains fluid. Each variable therefore needs to be read separately and in context.</p>
+  </section>
+
+  <section id="row-mapping" aria-labelledby="mapping-title">
+    <h2 id="mapping-title">How the existing rows map onto the six variables</h2>
+    <p class="lede">The tables already contain much of the information needed to read depth, but it is distributed differently. A primary row carries most of the relevant information. A supporting row adds evidence or context without measuring that variable on its own.</p>
+    <div class="mapping-scroll">
+      <table class="mapping-table">
+        <thead><tr><th scope="col">Depth variable</th><th scope="col">Fluid table</th><th scope="col">Chronic table</th><th scope="col">What the comparison reveals</th></tr></thead>
+        <tbody>
+          <tr>
+            <th scope="row">Recruitment threshold</th>
+            <td><span class="row-map"><span class="coverage primary">Primary</span>Environmental conditions ↔ Nervous system organisation</span><span class="row-map"><span class="coverage support">Support</span>Perception · Time / tempo</span></td>
+            <td><span class="row-map"><span class="coverage primary">Primary</span>Environmental conditions · Nervous system organisation · Protective recruitment</span><span class="row-map"><span class="coverage support">Support</span>Autonomic participation</span></td>
+            <td class="mapping-result"><strong>Partially visible, not yet measured.</strong>The tables show which configuration is recruited. They do not yet show how little evidence, how much ambiguity or how much repetition is sufficient to recruit it.</td>
+          </tr>
+          <tr>
+            <th scope="row">Information weighting</th>
+            <td><span class="row-map"><span class="coverage primary">Primary</span>Perception · Interoceptive processing</span><span class="row-map"><span class="coverage support">Support</span>Emotions · Resource allocation emphasis</span></td>
+            <td><span class="row-map"><span class="coverage primary">Primary</span>Information weighting · ESS emotional signal formation</span><span class="row-map"><span class="coverage support">Support</span>Interoceptive processing · coordinated conscious access</span></td>
+            <td class="mapping-result"><strong>Strong qualitative coverage.</strong>The next refinement is to name what moves into the foreground and what recedes, without treating backgrounded information as biologically absent.</td>
+          </tr>
+          <tr>
+            <th scope="row">Differentiation and felt access</th>
+            <td><span class="row-map"><span class="coverage primary">Primary</span>Coordinated conscious access · Interoceptive processing</span><span class="row-map"><span class="coverage support">Support</span>Emotions · Affective sharing</span></td>
+            <td><span class="row-map"><span class="coverage primary">Primary</span>Interoceptive processing · ME felt access and differentiation · coordinated conscious access</span><span class="row-map"><span class="coverage support">Support</span>Affective sharing</span></td>
+            <td class="mapping-result"><strong>Chronic is more explicit.</strong>Its rows separate emotional information forming from ME being able to feel and differentiate it. The Fluid table expresses the distinction across several rows.</td>
+          </tr>
+          <tr>
+            <th scope="row">Interpretive flexibility</th>
+            <td><span class="row-map"><span class="coverage shared">Shared</span>Functional sequence · CLS investigation</span><span class="row-map"><span class="coverage support">Support</span>Coordinated conscious access · Mentalizing · Capacity for repair</span></td>
+            <td><span class="row-map"><span class="coverage primary">Primary</span>CLS interpretation</span><span class="row-map"><span class="coverage support">Support</span>Mentalizing · Information weighting</span></td>
+            <td class="mapping-result"><strong>Shared architecture, Chronic-specific row.</strong>CLS interpretation belongs in the functional sequence above both tables. Chronic retains a direct row because learned overriding can alter how ESS information is explained without stopping the signal.</td>
+          </tr>
+          <tr>
+            <th scope="row">Action flexibility</th>
+            <td><span class="row-map"><span class="coverage shared">Shared</span>Functional sequence · action readiness → action</span><span class="row-map"><span class="coverage support">Support</span>Survival function · Summary · Empathic concern · Capacity for repair</span></td>
+            <td><span class="row-map"><span class="coverage primary">Primary</span>Expression and action</span><span class="row-map"><span class="coverage support">Support</span>Protective recruitment · Empathic concern · Capacity for repair</span></td>
+            <td class="mapping-result"><strong>Shared architecture, Chronic-specific row.</strong>Fluid action availability is already distributed across organisation, survival function and the shared sequence. Chronic names expression and action directly because a learned route may become automatic, compulsory or instrumental.</td>
+          </tr>
+          <tr>
+            <th scope="row">Updating, persistence and Return</th>
+            <td><span class="row-map"><span class="coverage primary">Primary</span>Return availability · Capacity for repair</span><span class="row-map"><span class="coverage support">Support</span>Environmental conditions · Time / tempo</span></td>
+            <td><span class="row-map"><span class="coverage primary">Primary</span>Updating, persistence and Return · Capacity for repair</span><span class="row-map"><span class="coverage support">Support</span>Environmental conditions · Protective recruitment</span></td>
+            <td class="mapping-result"><strong>Strong coverage in both tables.</strong>Chronic adds the missing question of what remains unresolved when immediate pressure falls but the underlying organisation has not updated.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="mapping-boundary"><div><strong>Context rows are not depth measurements.</strong>Position, autonomic participation and Grounding locate or support a claim; they do not establish how restricted a pattern has become.</div><div><strong>No single cell establishes depth.</strong>A depth reading requires a pattern across relevant rows, a defined context and evidence across time.</div></div>
+  </section>
+
+  <section id="harm-boundary" aria-labelledby="harm-title">
+    <h2 id="harm-title">Internal restriction and harmful behaviour are not the same scale</h2>
+    <p class="lede">The depth axis describes flexibility and updating inside the organism. Harm requires a second assessment of what the person repeatedly does with the capacities, choices and power available to them.</p>
+    <div class="separate-scales">
+      <article class="scale-question internal"><span class="question-label">Depth question · internal organisation</span><h3>How restricted has this process become?</h3><p>This reading stays with recruitment, signal access, interpretation, action flexibility and Return.</p><ul><li>Does present evidence still update the pattern?</li><li>Are alternative capacities available?</li><li>Is the restriction specific or widespread?</li></ul></article>
+      <article class="scale-question behaviour"><span class="question-label">Harm question · behaviour in relationship</span><h3>What happens to other people?</h3><p>This reading examines behaviour over time rather than inferring character from nervous-system organisation.</p><ul><li>What action occurred, and was it repeated?</li><li>What power, pressure or coercion was used?</li><li>What was the impact?</li><li>What happened when limits or consequences appeared?</li><li>Did accountability, change and repair follow?</li></ul></article>
+    </div>
+    <div class="not-equation"><strong>Chronic depth ≠ harmfulness ≠ diagnosis</strong><span>A diagnosis requires its own evidence and clinical assessment. Understanding protection does not remove responsibility for behaviour.</span></div>
+  </section>
+
+  <section id="questions" aria-labelledby="questions-title">
+    <h2 id="questions-title">Questions still open</h2>
+    <div class="next-questions">
+      <div class="question"><strong>What remains territory-specific?</strong>Test whether restriction belongs to one emotion family, relationship, context or processing capacity.</div>
+      <div class="question"><strong>What can still correct the pattern?</strong>Identify which evidence, relationship, boundary, consequence or recovery route can update it.</div>
+      <div class="question"><strong>How should movement be observed?</strong>Decide what would show that a pattern has become more flexible, more restricted or differently organised over time.</div>
+      <div class="question"><strong>How should the controls reveal depth?</strong>Define how the three ME-access sliders expose intermediate layers without implying a clinical measurement or a fixed whole-person score.</div>
+    </div>
+  </section>
+
+  <p class="handoff"><a href="positions.html#panel-fluid">Open the Fluid reference plane</a> · <a href="positions.html#panel-chronic">Open the far Chronic reference plane</a></p>
+</main>
+</body>
+</html>

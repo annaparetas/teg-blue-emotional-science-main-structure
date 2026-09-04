@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Completion, Return and Recovery Across the Fluid Gradient</title>
+<link rel="stylesheet" href="../assets/page-responsibility.css">
+<style>
+  :root {
+    --ink: #0b1f42;
+    --ink-soft: #24365c;
+    --body: #3c4c6d;
+    --muted: #64748b;
+    --line: #dbe3ef;
+    --line-faint: #edf1f7;
+    --paper: #ffffff;
+    --head: #4b5666;
+    --working: #7c6fd0;
+    --working-tint: #f7f4ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 48px 32px 96px;
+    background: #f6f8fc;
+    color: var(--ink);
+    font: 15px/1.55 ui-sans-serif, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1600px; margin: 0 auto; }
+  h1 {
+    font-family: ui-serif, Georgia, "Times New Roman", serif;
+    font-size: 32px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 8px;
+  }
+  .source { color: var(--muted); font-size: 13px; margin: 0; max-width: 640px; }
+
+  .masthead {
+    display: flex; flex-wrap: wrap; align-items: flex-end;
+    justify-content: space-between; gap: 24px;
+    margin-bottom: 28px;
+  }
+  .mode { flex: none; text-align: right; }
+  .toggle {
+    display: inline-flex; gap: 4px;
+    padding: 4px; border-radius: 10px;
+    background: var(--ink);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  .toggle button {
+    font: inherit; font-size: 13px; font-weight: 600;
+    padding: 8px 16px; border: 0; border-radius: 7px;
+    background: transparent; cursor: pointer;
+  }
+  #t-fluid { background: #ffffff; color: var(--ink); cursor: default; }
+  #t-chronic { color: rgba(198, 213, 239, 0.5); cursor: not-allowed; }
+  .pending {
+    display: block; margin-top: 7px;
+    font-size: 11px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.07em; color: var(--muted);
+  }
+
+  .status {
+    margin: 0 0 40px; padding: 16px 18px;
+    border: 1px solid var(--line); border-left: 4px solid var(--working);
+    border-radius: 12px; background: var(--working-tint);
+    color: var(--ink-soft); font-size: 13.5px; line-height: 1.6;
+    max-width: 1000px;
+  }
+  .status strong { color: var(--ink); }
+
+  h2 {
+    font-family: ui-serif, Georgia, "Times New Roman", serif;
+    font-size: 23px; font-weight: 600; margin: 0 0 10px;
+  }
+  h3 {
+    font-family: ui-serif, Georgia, "Times New Roman", serif;
+    font-size: 19px; font-weight: 600; margin: 40px 0 8px;
+  }
+  .caption { max-width: 900px; color: var(--body); font-size: 14px; margin: 0 0 20px; }
+  .aside { max-width: 900px; color: var(--body); font-size: 13px; margin: 16px 0 0; line-height: 1.6; }
+  .aside a, .caption a { color: var(--ink-soft); text-underline-offset: 3px; }
+  section { margin-bottom: 64px; }
+
+  .cards {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 12px; margin: 18px 0 0; padding: 0;
+  }
+  .cards > div {
+    padding: 14px 16px; background: var(--paper);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--accent, var(--working));
+    border-radius: 10px;
+  }
+  .cards dt { margin: 0 0 4px; font-weight: 750; font-size: 14.5px; color: var(--ink); }
+  .cards dd { margin: 0; color: var(--body); font-size: 13px; }
+  .code {
+    display: block; margin-bottom: 5px; color: var(--ink);
+    font: 750 12px/1.35 ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+
+  .scroll {
+    overflow-x: auto;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: 0 1px 2px rgba(11, 31, 66, 0.05);
+  }
+  table { border-collapse: collapse; width: 100%; min-width: 1600px; }
+  th, td {
+    text-align: left; vertical-align: top;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--line-faint);
+    font-weight: 400;
+  }
+  thead th.pos {
+    background: var(--paper); color: var(--ink);
+    border-bottom: 1px solid var(--line);
+    padding: 12px 14px 11px;
+    width: 12.6%;
+    font-size: 17px; font-weight: 800;
+  }
+  th.axis {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--muted);
+    text-align: center; padding: 10px 14px 8px;
+    border-bottom: 1px solid var(--line-faint);
+  }
+  th.axis + th.axis { border-left: 1px solid var(--line-faint); }
+  .corner { background: var(--paper); border-bottom: 1px solid var(--line); }
+  tbody th[scope="row"], thead .corner {
+    position: sticky; left: 0; z-index: 1;
+    background: var(--paper);
+    width: 180px; min-width: 180px;
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.07em; color: var(--muted);
+    border-right: 1px solid var(--line);
+  }
+  td { font-size: 13.5px; line-height: 1.5; color: var(--ink-soft); }
+  td strong { font-weight: 700; color: var(--ink); }
+  .row-question {
+    display: block; margin-top: 4px; color: var(--muted);
+    font-size: 10.5px; font-weight: 500; line-height: 1.4;
+    text-transform: none; letter-spacing: 0;
+  }
+
+  tr.group th {
+    background: #f2f5fa; color: var(--ink);
+    font-size: 10.5px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 0.1em; padding: 9px 14px;
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  }
+  tr.group th span { font-weight: 500; letter-spacing: 0.02em; text-transform: none; color: var(--muted); }
+
+  tr.env > th[scope="row"], tr.env > td {
+    background: var(--head); color: #ffffff;
+    border-bottom-color: rgba(255, 255, 255, 0.16);
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  tr.env > th[scope="row"] { color: rgba(255, 255, 255, 0.78); border-right-color: var(--head); }
+  tr.env > td { font-weight: 600; }
+  tr.env .off { display: block; font-weight: 400; opacity: 0.72; font-size: 12.5px; }
+
+  td.org {
+    background: var(--fill); color: var(--on);
+    font-weight: 650; font-size: 14.5px;
+    box-shadow: inset 0 0 0 1px rgba(11, 31, 66, 0.09);
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  td.org .hex {
+    display: block; margin-top: 3px;
+    font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    opacity: 0.72;
+  }
+
+  /* Cells that answer a different question than the row asks. */
+  td.aside-cell { color: var(--muted); }
+  tr.open th[scope="row"], tr.open td { background: var(--working-tint); }
+  td.working-cell { color: var(--muted); font-style: italic; }
+
+  tbody tr:not(.env):not(.group):not(.open):hover td:not(.org) { background: #f8fafd; }
+
+  .claim {
+    max-width: 1000px; margin: 18px 0 0;
+    padding: 16px 18px;
+    border-left: 3px solid #ef823a;
+    background: #fff6ee;
+    color: #7a4413; font-size: 13.5px; line-height: 1.6;
+  }
+  .claim strong { color: #5c3210; }
+  .claim .forms { margin: 10px 0 0; padding-left: 18px; }
+  .claim .forms li { margin-bottom: 5px; }
+
+  .terms table { min-width: 1080px; table-layout: fixed; }
+  .terms table tr > :nth-child(1) { width: 24%; }
+  .terms table tr > :nth-child(2) { width: 22%; }
+  .terms table tr > :nth-child(3) { width: 22%; }
+  .terms table tr > :nth-child(4) { width: 32%; }
+  .terms thead th {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.07em; color: var(--muted);
+    border-bottom: 1px solid var(--line);
+    padding: 12px 14px 10px;
+  }
+  .terms tbody th[scope="row"] {
+    position: static; width: auto; min-width: 0;
+    font-size: 13.5px; font-weight: 650;
+    text-transform: none; letter-spacing: 0; color: var(--ink);
+  }
+  .terms td { font-size: 13px; }
+  .terms .keep { color: var(--ink); font-weight: 650; }
+
+  .back { display: inline-block; margin-top: 8px; font-size: 13px; color: var(--muted); }
+
+  @media (max-width: 760px) {
+    body { padding: 28px 16px 72px; }
+    .masthead { margin-bottom: 20px; }
+    .mode { text-align: left; }
+  }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .scroll { border: none; box-shadow: none; overflow: visible; }
+    .mode, .back { display: none; }
+    section { break-inside: avoid; }
+    table { min-width: 0; font-size: 9px; }
+    td { font-size: 8.5px; }
+    @page { size: A3 landscape; margin: 12mm; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="carried-banner" role="note"><strong>Carried workbench · status working.</strong> Completion, Return and recovery across the Fluid Gradient: nine words that are not interchangeable, the Fluid route matrix, and the research-term crosswalk. Chronic routes not yet written. Carried on 2 September 2026. <a href="index.html">Back to the Model 2 canon page →</a></div>
+<div class="masthead" id="top">
+      <div>
+        <h1>Completion, Return and Recovery Across the Fluid Gradient</h1>
+        <p class="source">
+          Completion, Return and recovery answer different questions. Baseline X
+          makes restoration most explicitly available. Connection A may lower
+          defensive cost while still requiring relational coordination. Defensive
+          organisations allocate resources to protection, and Shutdown conserves
+          what remains. This file asks what may allow each organisation to change
+          course, whether wider organisation becomes available and what cost may
+          still require recovery.
+          <br><a href="premise.html">Read the governing model premise →</a>
+        </p>
+      </div>
+      <div class="mode">
+        <div class="toggle" role="group" aria-label="Gradient mode">
+          <button id="t-fluid" type="button" aria-pressed="true">Fluid Gradient</button>
+          <button id="t-chronic" type="button" disabled aria-disabled="true">Chronic Survival</button>
+        </div>
+        <span class="pending">Chronic routes not written yet</span>
+      </div>
+    </div>
+
+    <aside class="page-responsibility" aria-label="Page responsibility">
+      <div class="page-responsibility__heading">
+        <p class="page-responsibility__label">Page responsibility · Model 2 Return workbench</p>
+        <p class="page-responsibility__scope">Scientific-facing scope · organisation-specific completion, renewed availability, resource reallocation and recovery after Fluid recruitment</p>
+      </div>
+      <p class="page-responsibility__question"><strong>Governing question</strong>What changes when an organisation is no longer required, and which terms describe the different parts of that change?</p>
+      <div class="page-responsibility__grid">
+        <div class="page-responsibility__item"><strong>This page owns</strong><p>The Gradient distinction between Return, baseline re-access, restoration and recovery, with Fluid route questions for each organisation.</p></div>
+        <div class="page-responsibility__item"><strong>It receives</strong><p>The <a href="index.html">Gradient organisations</a>, completion conditions from the <a href="../01-signal-map/emotion/fluid.html">Signal Map</a> and temporal outcomes from <a href="../04-model-3-esc/cycle.html">ESC</a>.</p></div>
+        <div class="page-responsibility__item"><strong>It does not establish</strong><p>That every route ends at one universal baseline, that Return means calm or that the unwritten Chronic routes are already settled.</p></div>
+      </div>
+    </aside>
+
+    <p class="status">
+      <strong>Working file · vocabulary reconciled 23 August 2026.</strong> The three header rows and the Body energy
+      strategy row are carried unchanged from the Gradient table. The Regulatory
+      task row is carried from
+      <a href="notes/sources/regulation-and-return-workbench.html">the regulation and Return workbench</a>.
+      Return now follows the shared three-model definition; Baseline X remains a
+      model-specific reference rather than a universal destination. Everything else
+      is either settled in this file’s own terms or fixed as an open question and
+      left unfilled. Nothing here is accepted into the main Gradient table.
+    </p>
+
+    <section aria-labelledby="terms-title">
+      <h2 id="terms-title">Nine words that are not interchangeable</h2>
+      <p class="caption">
+        These words describe different parts of an event. Separating them prevents
+        a signal changing, pressure falling or behaviour becoming quiet from being
+        treated as proof that the whole organism has Returned.
+      </p>
+      <dl class="cards">
+        <div style="--accent:#6eeafb">
+          <dt>Regulation</dt>
+          <dd>The ongoing organisation of energy, attention, perception, action and available capacity. Every Position is regulatory, so <em>regulated</em> never means calm, healthy or kind.</dd>
+        </div>
+        <div style="--accent:#8ef3a6">
+          <dt>Return</dt>
+          <dd>Renewed availability of more flexible, less defensively dominated and more restorative organisation. Baseline X may become accessible without defining every Return route.</dd>
+        </div>
+        <div style="--accent:#a9ed69">
+          <dt>Baseline re-access</dt>
+          <dd>Renewed access to Baseline X where this Gradient architecture supports that description. One possible feature of Return, not a universal physiological set point.</dd>
+        </div>
+        <div style="--accent:#c8ef63">
+          <dt>Completion</dt>
+          <dd>Sufficient change in a particular condition, demand or task for the present recruitment to change course. It is demand-specific, not a whole-person endpoint.</dd>
+        </div>
+        <div style="--accent:#e2e85b">
+          <dt>Updating</dt>
+          <dd>Changed weighting, expectation, interpretation, readiness or future recruitment following new conditions or evidence. It may be partial or absent.</dd>
+        </div>
+        <div style="--accent:#b6fc50">
+          <dt>Recovery</dt>
+          <dd>The physiological rebuilding and remaining cost, across different timescales. It can still be running for hours after Return has begun.</dd>
+        </div>
+        <div style="--accent:#f7d448">
+          <dt>Restoration</dt>
+          <dd>The energy strategy of Baseline X. The one organisation that rebuilds rather than spends.</dd>
+        </div>
+        <div style="--accent:#ef823a">
+          <dt>Repair</dt>
+          <dd>Impact, accountability, agency, and possible relational rebuilding after rupture. Adjacent to Return, not contained inside it.</dd>
+        </div>
+        <div style="--accent:#a1adbf">
+          <dt>Carryover</dt>
+          <dd>Residual demand, changed weighting, depleted capacity, learned route or accumulated cost entering later conditions. ESC records it when the current pass does not end cleanly.</dd>
+        </div>
+      </dl>
+      <p class="aside"><strong>Cross-model handoff.</strong> The <a href="../01-signal-map/emotion/fluid.html#completion">Signal Map</a> names a possible completing condition. <a href="../04-model-3-esc/cycle.html#vocabulary">ESC</a> records completion, updating or carryover through the event. The Gradient then asks whether Return becomes available and what recovery remains. These are linked observations, not a mandatory sequence. The <a href="../01-signal-map/notes/body-and-situation-signals-what-they-need.md">Body and Situation Signal audit</a> shows how the distinction applies row by row.</p>
+    </section>
+
+    <section aria-labelledby="matrix-title">
+      <h2 id="matrix-title">Fluid Gradient</h2>
+      <p class="caption">
+        Each column is one nervous system organisation. The first block names what
+        the organisation is doing and what it costs; the second asks what may allow
+        its recruitment to change course and what wider organisation may then become
+        available. X is the Gradient's clearest restorative reference and Z is a
+        conservation organisation; neither establishes one mandatory Return route.
+      </p>
+      <div class="scroll">
+      <table>
+        <thead>
+          <tr><td class="corner"></td><th class="axis" colspan="2" scope="colgroup">Non-defensive</th><th class="axis" colspan="5" scope="colgroup">Defensive organisation</th></tr>
+          <tr>
+            <th scope="row" class="corner">Position</th>
+            <th scope="col" class="pos">X</th>
+            <th scope="col" class="pos">A</th>
+            <th scope="col" class="pos">A↔B</th>
+            <th scope="col" class="pos">B</th>
+            <th scope="col" class="pos">C</th>
+            <th scope="col" class="pos">D</th>
+            <th scope="col" class="pos">Z</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr class="env">
+          <th scope="row">Environmental conditions</th>
+          <td>Safe to be alone <span class="off">(off the gradient)</span></td><td>Safe with others</td><td>Safety uncertain</td><td>Threat</td><td>Persistent threat</td><td>Life threat</td><td><span class="off">(off the gradient)</span></td>
+        </tr>
+        <tr>
+          <th scope="row">Nervous system organisation</th>
+          <td class="org" style="--fill:#ffffff;--on:#0b1f42">Baseline<span class="hex">#ffffff</span></td><td class="org" style="--fill:#6eeafb;--on:#0b1f42">Connection / Belonging<span class="hex">#6eeafb</span></td><td class="org" style="--fill:#8ef3a6;--on:#0b1f42">Safety Checking<span class="hex">#8ef3a6</span></td><td class="org" style="--fill:#b6fc50;--on:#0b1f42">Protection / Defence<span class="hex">#b6fc50</span></td><td class="org" style="--fill:#e3fd54;--on:#0b1f42">Strategic Management<span class="hex">#e3fd54</span></td><td class="org" style="--fill:#f7d448;--on:#0b1f42">Power Mobilisation<span class="hex">#f7d448</span></td><td class="org" style="--fill:#a1adbf;--on:#0b1f42">Shutdown<span class="hex">#a1adbf</span></td>
+        </tr>
+
+        <tr class="group">
+          <th colspan="8" scope="colgroup">What the organisation is doing <span>· and what it spends</span></th>
+        </tr>
+        <tr>
+          <th scope="row">Resource allocation emphasis</th>
+          <td>Restoration</td><td>Relational coordination</td><td>Preparation and checking</td><td>Protective mobilisation</td><td>Strategic mobilisation</td><td>Power mobilisation</td><td>Protective conservation</td>
+        </tr>
+        <tr>
+          <th scope="row">What it restores<span class="row-question">What does this organisation give back, and by which mechanism?</span></th>
+          <td><strong>By removing demand.</strong> Sleep, tissue maintenance, digestion and the processes that need low arousal and no coordination. This can happen alone or beside someone trusted whose presence asks nothing.</td>
+          <td><strong>By lowering cost.</strong> Social buffering reduces stress-axis output, and bonding-related opioid and oxytocinergic participation has its own beneficial effects. A is also where the organism gets the evidence that being alone will be safe.</td>
+          <td class="aside-cell">Nothing yet. Preparation is held open while the situation is read.</td>
+          <td class="aside-cell">Nothing. Mobilisation spends.</td>
+          <td class="aside-cell">Nothing. Sustained management spends across time.</td>
+          <td class="aside-cell">Nothing. Maximum output spends fastest.</td>
+          <td class="aside-cell">Nothing. Conservation reduces spending without rebuilding.</td>
+        </tr>
+        <tr>
+          <th scope="row">Survival problem<span class="row-question">What is at stake and could be lost?</span></th>
+          <td class="aside-cell">None — nothing is at risk</td>
+          <td class="aside-cell">None — connection is available, not at risk</td>
+          <td>connection-preservation ↔ organism-protection</td>
+          <td>organism-protection</td>
+          <td>organism-protection</td>
+          <td>organism-protection</td>
+          <td>organism-protection</td>
+        </tr>
+        <tr>
+          <th scope="row">Regulatory task<span class="row-question">What is this organisation allocating resources to accomplish?</span></th>
+          <td>Restore spent capacity and keep low-cost readiness available.</td>
+          <td>Organise through available connection while accumulating shared and individual capacity.</td>
+          <td>Prepare by checking what changed before committing to connection or defence.</td>
+          <td>Mobilise enough action to stop, escape, withstand, or establish an effective boundary.</td>
+          <td>Sustain protection through prediction, planning, and management of relevant variables.</td>
+          <td>Maximise immediate survival action while delaying information that cannot guide the next moment.</td>
+          <td>Conserve remaining capacity when active mobilisation is unavailable or too costly.</td>
+        </tr>
+
+        <tr class="group">
+          <th colspan="8" scope="colgroup">Completion and Return <span>· what may change, what becomes available and whether another person is involved</span></th>
+        </tr>
+        <tr>
+          <th scope="row">Completion and relational participation<span class="row-question">Where does the relevant condition exist, and who can change it?</span></th>
+          <td><strong>No other person is inherently required.</strong> Restoration can occur alone or with supportive company.</td>
+          <td><strong>Relationship is available.</strong> Actual or represented social availability may lower demand and widen participation; physical presence is not required in every event.</td>
+          <td><strong>The route depends on the uncertainty.</strong> Another person's response may be necessary for mutual clarification or repair; independent evidence, distance or a boundary may answer a different problem.</td>
+          <td><strong>Protection is not inherently relational.</strong> The organism may act, conditions may change or another person may provide practical help.</td>
+          <td><strong>Other people may be involved in several ways.</strong> Support, cooperation, obstruction or management can alter the demand without defining one completion route.</td>
+          <td><strong>No universal social rule.</strong> Maximum action may be solitary, coordinated or dependent on rescue; the present survival problem determines participation.</td>
+          <td><strong>Re-entry may need changed conditions or assistance.</strong> Social, medical or material help can matter without constituting one mandatory pathway.</td>
+        </tr>
+        <tr>
+          <th scope="row">Return route and renewed availability<span class="row-question">What may release the present recruitment, and what wider organisation can then become available?</span></th>
+          <td class="aside-cell">Restoration is already available. X is a reference condition, not evidence that every recovery channel is complete.</td>
+          <td>The coordination demand may end while the value or support of connection carries forward. X may become accessible, but Return is not defined by a mandatory <strong>A → X</strong> route.</td>
+          <td>Clarifying information may open connection, recruit active protection or permit grief and reorganisation. No one intermediate Position is mandatory.</td>
+          <td>Changed conditions, effective action, assistance or new evidence can release immediate protection and open Return. Reduced capacity may instead move toward Z.</td>
+          <td>The threat or need for management must change; exhaustion alone is not updating or Return. No passage through A is required in every event.</td>
+          <td>Return opens when maximum force is no longer required and sufficient capacity remains. Depletion may move organisation toward Z.</td>
+          <td class="aside-cell">Lower output is not yet Return. Orientation, responsiveness and sufficient usable capacity must re-enter; the route is not fixed through A.</td>
+        </tr>
+        <tr>
+          <th scope="row">What ends<span class="row-question">What specifically stops when this organisation releases?</span></th>
+          <td class="aside-cell">No defensive recruitment needs to end. Particular demands may still change, and recovery can remain incomplete.</td>
+          <td>The coordination demand: sustained attention to face, voice, timing and another person’s state. The demand ends; the company need not. What A gave carries into X — the lowered defensive load and the established belonging.</td>
+          <td>The checking. Orienting closes when the information becomes sufficient.</td>
+          <td>The mobilisation. Energy raised for a protective route is no longer being held ready.</td>
+          <td>The management. Variables stop being tracked, predicted and held open.</td>
+          <td>The force. Maximum output stops, well before its cost is recovered.</td>
+          <td class="aside-cell">Nothing ends. Conservation lifts only when capacity returns.</td>
+        </tr>
+
+        <tr class="group">
+          <th colspan="8" scope="colgroup">Open questions <span>· fixed here, not yet answered</span></th>
+        </tr>
+        <tr class="open">
+          <th scope="row">Regulation strategy<span class="row-question">Which of Gross’s five families characteristically operates here — and does a deliberate-strategy framework apply where nothing deliberate is happening?</span></th>
+          <td colspan="7" class="working-cell">Position descriptions will be developed after the question is settled.</td>
+        </tr>
+        <tr class="open">
+          <th scope="row">Recovery still required<span class="row-question">Which physiological, cognitive, experiential or other cost remains after Return begins, with or without Baseline re-access?</span></th>
+          <td colspan="7" class="working-cell">Position descriptions will be developed after the question is settled.</td>
+        </tr>
+        <tr class="open">
+          <th scope="row">Cost of not completing<span class="row-question">What accumulates when this organisation is recruited again before the last recruitment finished?</span></th>
+          <td colspan="7" class="working-cell">Position descriptions will be developed after the question is settled.</td>
+        </tr>
+        <tr class="open">
+          <th scope="row">Evidence status<span class="row-question">How firmly is each row above established, and which parts are Gradient integration?</span></th>
+          <td colspan="7" class="working-cell">Position descriptions will be developed after the question is settled.</td>
+        </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div class="claim">
+        <p style="margin:0">
+          <strong>Current distinction · TEG-Blue synthesis.</strong> Relational
+          restoration, organism-level Return and Return without relational
+          restoration answer different questions:
+        </p>
+        <ul class="forms">
+          <li><strong>Relational restoration.</strong> Mutual recognition, reciprocity, accountability, trust or repair may require another person's actual response because the unresolved condition exists between people.</li>
+          <li><strong>Organism-level Return.</strong> Organisation may release through effective action, environmental change, assistance, new evidence or physiological recovery. Another person can help without being mandatory to every route.</li>
+          <li><strong>Return without relational restoration.</strong> The relationship may remain unavailable or unrepaired while grief, an effective boundary, revised expectation or reorganisation permits updating to the changed reality.</li>
+        </ul>
+        <p style="margin:10px 0 0">
+          Early dependency is the strongest overlap case: access to a caregiver
+          may also provide warmth, nourishment, protection and conditions for
+          recovery. That developmental coupling does not establish that every
+          later Return must pass through Connection A.
+        </p>
+      </div>
+
+      <p class="aside">
+        <strong>Non-defensive is not the same as unactivated.</strong> A is an
+        activation: coordination raises arousal even though nothing defensive is
+        running. At A, resources support reciprocal attention, communication and
+        adjustment. Defensive demand may be lower, but coordination still carries
+        attentional and physiological demand. Supportive connection can aid
+        recovery without being treated as metabolic storage, and restoration is
+        represented most explicitly at X without being claimed to occur only there.
+        Company is not what has to end; what changes is the demand the interaction
+        places on the people involved.
+      </p>
+      <p class="aside">
+        Return availability is not repeated here. It is a row in
+        <a href="index.html">the Gradient table</a>,
+        and duplicating it would create two descriptions of one thing that can
+        drift apart. This file asks which route each organisation takes, not how
+        available that route currently is.
+      </p>
+      <p class="aside">
+        <strong>Reconciliation decision · 23 August 2026.</strong> This page now uses
+        the same multidimensional Return definition as the three-model architecture.
+        Baseline re-access is retained as a Gradient-specific description where it
+        fits; it no longer defines Return as one destination. PEND-025 remains open
+        until every active page and the older concepts note have been checked.
+      </p>
+      <p class="aside">
+        <strong>Scientific trajectory bridge.</strong> The
+        <a href="../01-signal-map/grounding/recruitment-persistence-and-recovery.html">Signal Recruitment, Persistence and Recovery map</a>
+        separates continuing demand, delayed or interrupted recovery, reconstruction,
+        changed later recruitment and cumulative multisystem cost. It provides the
+        research vocabulary behind this page without reducing Return to any one of
+        those processes.
+      </p>
+    </section>
+
+    <section class="terms" aria-labelledby="vocab-title">
+      <h2 id="vocab-title">Where a research term already exists</h2>
+      <p class="caption">
+        Several questions this file asks already have names in relevant research
+        literatures. Using those names keeps individual claims checkable. Return
+        remains the Gradient's synthesis term for a pattern that no one measure or
+        research construct establishes by itself.
+      </p>
+      <div class="scroll">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">What the row asks</th>
+            <th scope="col">Commonly used term</th>
+            <th scope="col">Literature</th>
+            <th scope="col">What the common term leaves out</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">What is this organisation working to accomplish?</th>
+            <td>“Regulatory goal”</td>
+            <td>Gross, process model</td>
+            <td><em>Goal</em> implies the organism chose. The Gradient’s <span class="keep">Regulatory task</span> is used instead.</td>
+          </tr>
+          <tr>
+            <th scope="row">Does another nervous system have to be present?</th>
+            <td>Self-regulation · co-regulation · interpersonal emotion regulation</td>
+            <td>Reeck et al., 2016</td>
+            <td>Nothing. Direct fit, and already cited in the Gradient table’s A column.</td>
+          </tr>
+          <tr>
+            <th scope="row">Why does another person’s presence change the response?</th>
+            <td>Social buffering of the stress response</td>
+            <td>Hostinar &amp; Gunnar</td>
+            <td>Well replicated for HPA and behavioural responses. Does not by itself establish that baseline is unreachable alone.</td>
+          </tr>
+          <tr>
+            <th scope="row">What separates X from A, if neither is defensive?</th>
+            <td>Arousal — the activation axis of the circumplex model of affect</td>
+            <td>Russell</td>
+            <td>Names the axis: contentment is low-arousal positive, love and gratitude are high-arousal positive. Does not by itself establish how far arousal must fall for repair to run.</td>
+          </tr>
+          <tr>
+            <th scope="row">What does connection itself give the body?</th>
+            <td>Brain opioid theory of social attachment; oxytocinergic and vagal participation in bonding</td>
+            <td>Panksepp; Dunbar</td>
+            <td>Establishes beneficial effects of bonding. Does not establish that A substitutes for the restorative processes that need no demand.</td>
+          </tr>
+          <tr>
+            <th scope="row">What has to update before checking closes?</th>
+            <td>Safety learning · extinction · habituation of the orienting response</td>
+            <td>Grupe &amp; Nitschke, 2013</td>
+            <td>Studies a learned cue, not a whole organisation.</td>
+          </tr>
+          <tr>
+            <th scope="row">What does the body still owe afterwards?</th>
+            <td>Stress recovery — cardiovascular recovery, vagal rebound, cortisol kinetics</td>
+            <td>Time kinetics of acute endocrine response</td>
+            <td>Measures one system at a time, against a pre-stressor value.</td>
+          </tr>
+          <tr>
+            <th scope="row">What accumulates when recovery does not complete?</th>
+            <td>Allostatic load · insufficient recovery · perseverative cognition</td>
+            <td>McEwen; Ottaviani et al., 2016</td>
+            <td>Composite construct with heterogeneous measures.</td>
+          </tr>
+          <tr>
+            <th scope="row">Does wider, less defensively dominated and more restorative organisation become available?</th>
+            <td><em>none</em></td>
+            <td>—</td>
+            <td>This is where <span class="keep">Return</span> acts as a TEG-Blue synthesis. Baseline re-access can be recorded separately where this Gradient architecture supports it.</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3>Four terms this file does not use</h3>
+      <dl class="cards">
+        <div style="--accent:#a1adbf">
+          <dt>Regulated</dt>
+          <dd>In popular use it means calm. Every Position is regulatory, so the adjective would undo the definition of regulation in a single word.</dd>
+        </div>
+        <div style="--accent:#a1adbf">
+          <dt>Deactivation</dt>
+          <dd>Sounds like settling. In attachment research it names an avoidant strategy, which would collide with the Chronic A column.</dd>
+        </div>
+        <div style="--accent:#a1adbf">
+          <dt>Discharge</dt>
+          <dd>Belongs to B, C and D, where energy was mobilised and may not have been used. In A nothing was mobilised for defence; what ends is spending on coordination.</dd>
+        </div>
+        <div style="--accent:#a1adbf">
+          <dt>Window of tolerance</dt>
+          <dd>Widely used and thinly evidenced. If it appears it carries an evidence-status marker rather than structural weight.</dd>
+        </div>
+      </dl>
+
+      <p class="aside">
+        Citations in this file are candidate anchors and have not yet been verified
+        against the literature. Polyvagal vocabulary stays where the Gradient table
+        already puts it — as an <em>also known as</em> alias, never as the mechanism —
+        because the science matrix holds that dorsal vagal cannot define Shutdown.
+      </p>
+      <p>
+        <a class="back" href="index.html">← How Humans Respond to Safety and Threat</a>
+        &nbsp;·&nbsp;
+        <a class="back" href="../evidence/protocol.html">Science Grounding Protocol</a>
+        &nbsp;·&nbsp;
+        <a class="back" href="notes/sources/regulation-and-return-workbench.html">Regulation and Return workbench</a>
+      </p>
+    </section>
+
+  </div>
+</body>
+</html>

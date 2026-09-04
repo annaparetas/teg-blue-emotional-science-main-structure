@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emotions and Feelings — Chronic Survival</title>
+<link rel="stylesheet" href="../../assets/page-responsibility.css">
+<style>
+  :root {
+    --ink: #0b1f42;
+    --ink-soft: #24365c;
+    --body: #3c4c6d;
+    --muted: #64748b;
+    --line: #dbe3ef;
+    --line-faint: #edf1f7;
+    --paper: #ffffff;
+    --head: #4b5666;
+    --chronic: #ef823a;
+    --chronic-deep: #a94c18;
+    --chronic-wash: #fff9f5;
+    --chronic-line: #f0c6a8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 48px 32px 96px;
+    background: #f6f8fc;
+    color: var(--ink);
+    font: 15px/1.55 ui-sans-serif, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1600px; margin: 0 auto; }
+  h1 {
+    font-family: ui-serif, Georgia, "Times New Roman", serif;
+    font-size: 32px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 8px;
+  }
+  .source { color: var(--muted); font-size: 13px; margin: 0; max-width: 680px; }
+  .masthead { margin-bottom: 44px; padding-top: 14px; border-top: 5px solid var(--chronic); }
+
+  h2 {
+    font-family: ui-serif, Georgia, "Times New Roman", serif;
+    font-size: 23px; font-weight: 600; margin: 0 0 10px;
+  }
+  h3 {
+    font-family: ui-serif, Georgia, "Times New Roman", serif;
+    font-size: 19px; font-weight: 600; margin: 44px 0 8px;
+  }
+  h4 {
+    font-family: ui-serif, Georgia, "Times New Roman", serif;
+    font-size: 16.5px; font-weight: 600; margin: 34px 0 6px;
+  }
+  .caption { max-width: 860px; color: var(--body); font-size: 14px; margin: 0 0 20px; }
+  section { margin-bottom: 64px; }
+  section + section { border-top: 1px solid var(--line); padding-top: 40px; }
+
+  .vocabulary {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px; max-width: 1180px; margin: 0 0 48px;
+  }
+  .vocabulary > div {
+    background: var(--paper); border: 1px solid var(--line);
+    border-top: 4px solid var(--chronic);
+    border-radius: 12px; padding: 16px 18px;
+  }
+  .vocabulary dt { font-weight: 750; font-size: 15px; margin-bottom: 4px; }
+  .vocabulary dd { margin: 0; color: var(--body); font-size: 13.5px; }
+  .definition-hook { display: inline-block; margin-top: 9px; font-size: 12px; font-weight: 700; }
+
+  .four-questions {
+    display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px; max-width: 1180px; margin: 16px 0 0; padding: 0;
+    counter-reset: q;
+  }
+  .four-questions > div {
+    position: relative; padding: 14px 15px 15px;
+    background: var(--paper); border: 1px solid var(--line); border-radius: 10px;
+  }
+  .four-questions dt {
+    margin: 0 0 4px; color: var(--chronic-deep); font-size: 10px;
+    font-weight: 800; letter-spacing: .09em; text-transform: uppercase;
+  }
+  .four-questions dt::before {
+    counter-increment: q; content: counter(q, decimal-leading-zero) " · ";
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  .four-questions dd { margin: 0; color: var(--body); font-size: 12.5px; line-height: 1.5; }
+  .four-questions dd strong { color: var(--ink); }
+
+  .route {
+    display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px; max-width: 1180px; margin: 20px 0 0; padding: 1px;
+    border: 1px solid var(--line); background: var(--line); list-style: none;
+  }
+  .route li { position: relative; padding: 13px 14px; background: var(--paper); }
+  .route li:not(:last-child)::after {
+    content: "→"; position: absolute; z-index: 1; top: 13px; right: -8px;
+    width: 16px; height: 16px; border-radius: 50%; background: var(--ink);
+    color: #fff; font-size: 10px; line-height: 15px; text-align: center;
+  }
+  .route strong { display: block; margin-bottom: 4px; color: var(--ink); font-size: 12px; }
+  .route span { display: block; color: var(--muted); font-size: 11px; line-height: 1.45; }
+
+  .scroll {
+    overflow-x: auto;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: 0 1px 2px rgba(11, 31, 66, 0.05);
+  }
+  table { border-collapse: collapse; width: 100%; }
+  th, td {
+    text-align: left; vertical-align: top;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--line-faint);
+    font-weight: 400;
+  }
+  td { font-size: 13px; line-height: 1.5; color: var(--ink-soft); }
+  th.q {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.07em; color: var(--muted);
+    border-bottom: 1px solid var(--line);
+    padding: 12px 14px 10px;
+  }
+  tbody tr:hover td:not(.org) { background: #f8fafd; }
+  tr.rule > * { border-top: 1px solid var(--line); }
+
+  /* Spine table */
+  .gradient-table table { min-width: 1500px; }
+  .gradient-table thead th.pos {
+    background: var(--paper); color: var(--ink);
+    border-bottom: 1px solid var(--line);
+    padding: 12px 14px 11px; width: 12.2%;
+    font-size: 17px; font-weight: 800;
+  }
+  .gradient-table tbody th[scope="row"], .gradient-table thead .corner {
+    position: sticky; left: 0; z-index: 1;
+    background: var(--paper);
+    width: 150px; min-width: 150px;
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.07em; color: var(--muted);
+    border-right: 1px solid var(--line);
+  }
+  .corner { background: var(--paper); border-bottom: 1px solid var(--line); }
+  tr.env > th[scope="row"], tr.env > td {
+    background: var(--head); color: #ffffff;
+    border-bottom-color: rgba(255, 255, 255, 0.16);
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  tr.env > th[scope="row"] { color: rgba(255, 255, 255, 0.78); border-right-color: var(--head); }
+  tr.env > td { font-weight: 600; }
+  tr.env .off { display: block; font-weight: 400; opacity: 0.72; font-size: 12.5px; }
+  td.org {
+    background: var(--fill); color: var(--on);
+    font-weight: 650; font-size: 14px;
+    box-shadow: inset 0 0 0 1px rgba(11, 31, 66, 0.09);
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  td.org .hex {
+    display: block; margin-top: 3px;
+    font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    opacity: 0.72;
+  }
+  .row-alias {
+    display: block; margin-top: 2px; font-size: 10px; font-weight: 600;
+    text-transform: none; letter-spacing: 0;
+  }
+  .alias-row td { color: var(--muted); font-size: 12px; }
+  .question-section-row th {
+    padding: 11px 14px; color: #8f3e16; background: #fff0e5;
+    border-top: 2px solid var(--chronic); border-bottom: 1px solid #efc4aa;
+    font-size: 11px; font-weight: 800; letter-spacing: .045em;
+    text-align: left; text-transform: uppercase;
+    position: static !important; width: auto !important; min-width: 0 !important;
+    border-right: 0 !important;
+  }
+  .question-section-row span {
+    display: inline-block; margin-left: 8px; color: var(--body);
+    font-size: 10px; font-weight: 650; letter-spacing: 0; text-transform: none;
+  }
+  .gradient-table tbody th[scope="row"] a {
+    color: inherit; text-underline-offset: 3px;
+    text-decoration-color: var(--line);
+  }
+  .gradient-table tbody th[scope="row"] a:hover { text-decoration-color: currentColor; }
+
+  /* Emotion-matrix tables */
+  .matrix-table table { min-width: 1750px; }
+  .matrix-table thead th.pos {
+    background: var(--paper); color: var(--ink);
+    border-bottom: 1px solid var(--line);
+    padding: 11px 12px; font-size: 12px; font-weight: 800;
+  }
+  .matrix-table thead th.pos .pos-sub {
+    display: block; margin-top: 2px; font-size: 10px; font-weight: 650; color: var(--muted);
+    text-transform: none; letter-spacing: 0;
+  }
+  .matrix-table th, .matrix-table td { padding: 10px 12px; }
+  .matrix-table td { font-size: 12px; }
+  .matrix-table tbody th[scope="row"] {
+    position: sticky; left: 0; z-index: 1; background: var(--paper);
+    width: 110px; min-width: 110px; font-size: 13px; font-weight: 750;
+    color: var(--ink); border-right: 1px solid var(--line);
+  }
+  .matrix-table thead .corner {
+    position: sticky; left: 0; z-index: 1; background: var(--paper);
+    width: 110px; min-width: 110px;
+  }
+  .working-cell { color: var(--muted); font-style: italic; }
+
+  .compact-table table { min-width: 1120px; table-layout: fixed; }
+  .compact-table table tr > :nth-child(1) { width: 14%; }
+  .compact-table td { font-size: 12.5px; }
+  .compact-table tbody th[scope="row"] {
+    min-width: 130px; font-size: 13.5px; font-weight: 650; color: var(--ink);
+  }
+
+  .note {
+    max-width: 900px; margin: 18px 0 0;
+    padding: 14px 16px;
+    border-left: 3px solid var(--chronic);
+    background: #fff6ee;
+    color: #7a4413; font-size: 13.5px; line-height: 1.6;
+  }
+  .aside { max-width: 900px; color: var(--body); font-size: 13px; margin: 16px 0 0; }
+  .aside a { color: var(--ink-soft); text-underline-offset: 3px; }
+
+  .tag {
+    display: inline-flex; align-items: center; gap: 7px;
+    margin: 0 0 14px; padding: 5px 12px 5px 9px;
+    border: 1px solid var(--line); border-radius: 999px;
+    background: var(--paper);
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.07em; color: var(--muted);
+  }
+  .tag::before {
+    content: ""; width: 9px; height: 9px; border-radius: 50%;
+    background: var(--dot);
+    box-shadow: inset 0 0 0 1px rgba(11, 31, 66, 0.18);
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+
+  .forms {
+    display: grid; gap: 14px; margin: 20px 0 0; padding: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 1180px;
+  }
+  .form-card {
+    position: relative; overflow: hidden; background: var(--paper);
+    border: 1px solid var(--line); border-radius: 14px; padding: 20px;
+  }
+  .form-card::before {
+    content: ""; position: absolute; inset: 0 auto 0 0; width: 4px;
+    background: var(--chronic);
+  }
+  .form-kicker {
+    margin: 0 0 7px; color: var(--chronic-deep); font-size: 10px;
+    font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+  }
+  .form-card h4 { margin: 0 0 8px; font-size: 20px; }
+  .form-card p { margin: 0; color: var(--body); font-size: 12.5px; line-height: 1.55; }
+  .form-card p + p { margin-top: 9px; }
+
+  .reality-pair {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px; max-width: 1180px; margin: 16px 0 0;
+  }
+  .reality-pair > article {
+    background: var(--paper); border: 1px solid var(--line);
+    border-top: 4px solid var(--head); border-radius: 12px; padding: 18px 20px;
+  }
+  .reality-pair h4 { margin: 0 0 4px; font-size: 17px; }
+  .reality-pair .pattern {
+    margin: 0 0 10px; color: var(--chronic-deep); font-size: 13px;
+    font-weight: 750; font-style: italic;
+  }
+  .reality-pair p { margin: 0 0 8px; color: var(--body); font-size: 12.5px; }
+
+  .guardrails { max-width: 1180px; margin: 16px 0 0; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .guardrails li {
+    list-style: none; padding: 13px 15px 13px 34px; position: relative;
+    background: var(--paper); border: 1px solid var(--line); border-radius: 10px;
+    color: var(--body); font-size: 12.5px; line-height: 1.55;
+  }
+  .guardrails li::before {
+    content: ""; position: absolute; left: 15px; top: 18px;
+    width: 8px; height: 8px; border-radius: 50%; background: var(--chronic);
+  }
+  .guardrails strong { color: var(--ink); }
+
+  .fluid-forward {
+    display: grid; grid-template-columns: minmax(260px, .8fr) minmax(0, 1.2fr);
+    gap: 22px; max-width: 1180px; margin-top: 30px; padding: 22px 24px;
+    border: 1px solid var(--line); border-left: 5px solid #6eeafb;
+    border-radius: 12px; background: #f5fdff;
+  }
+  .fluid-forward-kicker {
+    margin: 0 0 6px; color: #087f91; font-size: 10px; font-weight: 800;
+    letter-spacing: .1em; text-transform: uppercase;
+  }
+  .fluid-forward h3 {
+    margin: 0; font-family: ui-serif, Georgia, "Times New Roman", serif;
+    font-size: 20px; font-weight: 600; line-height: 1.25;
+  }
+  .fluid-forward p { margin: 0; color: var(--body); font-size: 12.5px; }
+  .fluid-forward p + p { margin-top: 11px; }
+  .fluid-forward a { color: var(--ink-soft); text-underline-offset: 3px; }
+
+  .back { display: inline-block; margin-top: 32px; font-size: 13px; color: var(--muted); }
+
+  @media (max-width: 760px) {
+    body { padding: 28px 16px 72px; }
+    .masthead { margin-bottom: 32px; }
+    .vocabulary, .forms, .reality-pair, .guardrails { grid-template-columns: 1fr; }
+    .four-questions { grid-template-columns: 1fr; }
+    .route { grid-template-columns: 1fr; }
+    .route li:not(:last-child)::after { content: "↓"; top: auto; right: 12px; bottom: -8px; }
+    .fluid-forward { grid-template-columns: 1fr; }
+  }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .scroll { border: none; box-shadow: none; overflow: visible; }
+    .back { display: none; }
+    section { break-inside: avoid; }
+    table { min-width: 0; font-size: 8.5px; }
+    td { font-size: 8px; }
+    @page { size: A3 landscape; margin: 12mm; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="carried-banner" role="note"><strong>Carried page · status working.</strong> The Chronic companion reading of the same signals. Carried on 2 September 2026 from the working repository (signal-map/chronic.html, ESM-S1 branch text). <a href="../index.html">Back to the Signal Map canon page →</a></div>
+<div class="masthead" id="top">
+      <h1>Emotions and Feelings — Chronic Survival</h1>
+      <p class="source">
+        This page explains how emotions are felt and understood under Chronic
+        Survival — the companion to
+        <a href="fluid.html">Emotions and Feelings — The Fluid Gradient</a>.
+        The same signalling architecture runs on both pages. The original
+        reason for signalling may remain relevant, while participation changes:
+        whether information becomes differentiated feeling, how it is
+        interpreted and used, and whether the organisation can update. Source
+        material is gathered in the
+        <a href="../notes/sources/chronic-emotional-signals-collection.html">chronic emotional-signals collection</a>.<br>
+        <a href="../../03-model-2-gradient/premise.html">Read the governing model premise →</a>
+      </p>
+    </div>
+
+    <aside class="page-responsibility" aria-label="Page responsibility">
+      <div class="page-responsibility__heading">
+        <p class="page-responsibility__label">Page responsibility · Emotional Signal Map · Chronic reference</p>
+        <p class="page-responsibility__scope">Scientific-facing scope · emotional signalling under recurrent, generalised or difficult-to-update organisation</p>
+      </div>
+      <p class="page-responsibility__question"><strong>Governing question</strong>How may the same signals be recruited, felt, interpreted, expressed and updated when participation has become chronically narrowed?</p>
+      <div class="page-responsibility__grid">
+        <div class="page-responsibility__item"><strong>This page owns</strong><p>The far Chronic companion reading: how emotion identity is preserved while access, salience, interpretation and use may vary across recurrent or difficult-to-update patterns.</p></div>
+        <div class="page-responsibility__item"><strong>It receives</strong><p>The <a href="fluid.html">Fluid signal taxonomy</a>; Model 1’s account of access and participation; Model 2’s <a href="../../03-model-2-gradient/index.html">present-organisation profiles</a>; Model 3 (ESC)’s account of feedback, carryover and updating through time; and the shared <a href="../../07-reference/sociality.html#chronic">Fluid–Chronic and human-sociality boundaries</a>.</p></div>
+        <div class="page-responsibility__item"><strong>It does not establish</strong><p>A diagnosis, one causal history, inevitable behaviour or a permanent condition. Chronic names a pattern, not a kind of person.</p></div>
+      </div>
+    </aside>
+
+    <dl class="vocabulary" aria-label="Chronic emotion vocabulary">
+      <div>
+        <dt>What “chronic” means here</dt>
+        <dd>Chronic Survival is the display term used here for far Chronic
+        reference patterns. These patterns can involve recurrent narrowing,
+        generalisation, easier recruitment, difficult revision, interrupted
+        recovery, repeated reactivation or continuing adverse conditions across
+        access, interpretation, action and recovery. Protection recruited before
+        present threat is established and restoration that does not fully occur
+        are important, and may be common, routes. They are not the only ones.
+        Chronic does not mean severe, chosen, fake or permanent.</dd>
+      </div>
+      <div>
+        <dt>Emotion remains information</dt>
+        <dd>The ESS continues to register bodily, relational and environmental
+        significance when relevant conditions arise. Chronic organisation
+        changes whether that information becomes differentiated feeling, how
+        CLS explains it, whether expression is permitted, which actions appear
+        available and whether the original requirement can update. No feeling
+        determines which action is taken.<br>
+        <a class="definition-hook" href="../../03-model-2-gradient/positions.html#chronic-emotions">Open the Chronic rows on the main Gradient page →</a></dd>
+      </div>
+      <div>
+        <dt>Reference profiles, not kinds of people</dt>
+        <dd>This page uses the Gradient’s chronic Position names — Chronic
+        Elevated Baseline through Chronic Collapse / Shutdown — as far Chronic
+        reference profiles. They help locate a repeated pattern in a defined
+        context; they do not place a whole person in one fixed Position. Depth
+        may differ by feeling, relationship, processing capacity and time. The
+        alias row keeps the Gradient and TEG-Blue engine vocabularies connected.</dd>
+      </div>
+    </dl>
+
+    <section>
+      <h2>Four questions for every feeling under Chronic Survival</h2>
+      <p class="caption">
+        The Fluid page reads every feeling through four questions — function,
+        body, conditions, completion. Those questions remain the comparison
+        point here. Chronic organisation adds another reading: how emotional
+        information is weighted, accessed, interpreted and used, and how
+        regulation continues when updating or Return becomes difficult.
+      </p>
+      <dl class="four-questions">
+        <div>
+          <dt>What becomes easier to recruit or sustain</dt>
+          <dd><strong>Which organisation repeatedly becomes available?</strong>
+          What persists, recurs or is reconstructed, in which contexts, and
+          what problem does it appear to be organising for?</dd>
+        </div>
+        <div>
+          <dt>How access to the feeling changes in experience</dt>
+          <dd><strong>How does participation change while identity remains?</strong>
+          Participation with the same emotion may involve clear felt access,
+          fusion with other information, performed expression, active
+          management, disowning, strong foregrounding or difficulty reaching
+          it. These differences concern access, interpretation, expression and
+          use; they do not turn it into another emotion.</dd>
+        </div>
+        <div>
+          <dt>What can still be felt</dt>
+          <dd><strong>What remains readable from inside?</strong> Which part of
+          the signal reaches ME as differentiated feeling, and what CLS makes
+          the rest mean.</dd>
+        </div>
+        <div>
+          <dt>How regulation is organising — and what could change</dt>
+          <dd><strong>What change could alter the present organisation?</strong>
+          This may involve conditions, interpretation, action, recovery,
+          support or repair. Lower pressure and Return are not always the same.</dd>
+        </div>
+      </dl>
+      <p class="aside">
+        The cells on this page are organised around these questions. They
+        describe characteristic possibilities — not required experiences,
+        diagnoses, person-types, or proof that an emotion is distorted. Real
+        danger, loss, injustice, pain, entrapment and absent accountability can
+        keep a clear emotion active; awareness cannot make an unsafe condition
+        safe.
+      </p>
+
+      <p class="note"><strong>Identity and trajectory boundary.</strong> A
+        Chronic profile does not create an emotion, and an emotion does not
+        prove a profile. Several signals may coexist, remain influential or
+        move in and out of felt access. The cells describe possible
+        intersections with present organisation, not stages in a sequence.
+        How response and outcome become feedback through time belongs to Model
+        3 (ESC); this page does not infer that one emotion transforms into the
+        next.</p>
+
+      <h3>One proposed route by which participation may narrow</h3>
+      <p class="caption">
+        The main Gradient page names one learned route in four steps. It remains
+        useful, but it is not the only Chronic route. Interrupted recovery,
+        repeated reactivation, later reconstruction and continuing adverse
+        conditions can also keep emotional information active or difficult to
+        use.
+      </p>
+      <p class="note"><strong>Owner-review boundary.</strong> This route is a
+        proposed interface, not a mechanism owned by the Emotional Signal Map.
+        Model 1 must settle what reaches ME and remains influential; Model 2 the
+        present organisation and Return support; Model 3 (ESC) the sequence,
+        carryover, feedback and updating; and the Fluid–Chronic foundation the
+        persistence profile.</p>
+      <ol class="route" aria-label="One proposed route by which emotional participation may narrow">
+        <li><strong>Signal forms</strong><span>The organism registers that something matters.</span></li>
+        <li><strong>A cost or constraint has been learned</strong><span>Attention, expression or action may previously have threatened safety or belonging, failed, or brought no repair.</span></li>
+        <li><strong>Participation narrows</strong><span>The feeling may be dismissed, mistrusted, fused, redirected or kept outside reflective use.</span></li>
+        <li><strong>The requirement remains open</strong><span>Behaviour can still be organised by information the person cannot yet use deliberately.</span></li>
+      </ol>
+      <p class="aside">
+        Not every override is a present conscious decision. A person may
+        deliberately push a feeling away, but the route can also become learned
+        and automatic. A real emotion establishes organism relevance; it does
+        not by itself prove the external interpretation or authorise an action.
+      </p>
+    </section>
+
+    <section>
+      <h2 id="chronic-emotions-table">Emotions across Chronic Survival</h2>
+      <p class="caption">
+        The Environmental conditions row preserves the Fluid reference point
+        for each Position; it does not claim those conditions are happening
+        now. Each column is a Model 2 reference profile, not an emotion type or
+        a step in a fixed progression. The table examines far Chronic patterns,
+        including mismatch with present conditions, continuing adversity,
+        persistent recruitment and difficult updating. Its rows combine
+        owner-dependent questions: Model 1 addresses access, Model 2 present
+        organisation, Model 3 (ESC) updating through time, and the
+        Fluid–Chronic foundation persistence and responsiveness to change.
+      </p>
+      <div class="scroll gradient-table">
+      <table>
+        <thead>
+          <tr>
+            <th scope="row" class="corner">Position</th>
+            <th scope="col" class="pos">X</th>
+            <th scope="col" class="pos">A</th>
+            <th scope="col" class="pos">A↔B</th>
+            <th scope="col" class="pos">B</th>
+            <th scope="col" class="pos">C</th>
+            <th scope="col" class="pos">D</th>
+            <th scope="col" class="pos">Z</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr class="question-section-row"><th colspan="8">01 · Regulation and recruitment <span>What becomes easier to enter or sustain, and what problem the organisation appears to be solving</span></th></tr>
+        <tr class="env">
+          <th scope="row">Environmental conditions</th>
+          <td>Safe to be alone <span class="off">(off the gradient)</span></td><td>Safe with others</td><td>Safety uncertain</td><td>Threat</td><td>Persistent threat</td><td>Life threat</td><td><span class="off">(off the gradient)</span></td>
+        </tr>
+        <tr>
+          <th scope="row">Nervous system organisation</th>
+          <td class="org" style="--fill:#fbe78e;--on:#0b1f42">Chronic Elevated Baseline<span class="hex">#fbe78e</span></td><td class="org" style="--fill:#f7d34d;--on:#0b1f42">Chronic Conditional Belonging<span class="hex">#f7d34d</span></td><td class="org" style="--fill:#f1a43c;--on:#0b1f42">Chronic Safety Checking<span class="hex">#f1a43c</span></td><td class="org" style="--fill:#ef823a;--on:#0b1f42">Chronic Protection / Defence<span class="hex">#ef823a</span></td><td class="org" style="--fill:#ec6430;--on:#0b1f42">Chronic Control &amp; Strategic Management<span class="hex">#ec6430</span></td><td class="org" style="--fill:#eb5151;--on:#0b1f42">Chronic Dominance &amp; Repression<span class="hex">#eb5151</span></td><td class="org" style="--fill:#5d6770;--on:#ffffff">Chronic Collapse / Shutdown<span class="hex">#5d6770</span></td>
+        </tr>
+        <tr class="alias-row">
+          <th scope="row">TEG-Blue engine name</th>
+          <td>Chronic Elevated Baseline</td><td>No Safety Access / Approximated Bonding-Belonging</td><td>Chronic Safety Checking</td><td>Chronic Protection / Defence</td><td>Chronic Strategy &amp; Management</td><td>Chronic Power &amp; Dominance <span class="row-alias">familiar name: coercive control</span></td><td>Persistent Shutdown / Collapse</td>
+        </tr>
+        <tr>
+          <th scope="row">Protective recruitment<span class="row-alias">what becomes easier to enter or sustain</span></th>
+          <td>Background monitoring or conservation may remain recruited when present conditions would permit fuller restoration.</td><td>Connection-preserving strategies may be recruited when approval, usefulness or another person’s regulation has become linked to safety.</td><td>Belonging and danger may remain unresolved, so new or ambiguous cues repeatedly restart checking.</td><td>Guarding, avoidance, appeasement or defence may begin before present threat has been established.</td><td>Prediction and management may become the preferred route for reducing uncertainty and protecting the required outcome.</td><td>Dominance, override or forced outcome may become repeated routes. Their protective function does not make them necessary or permissible.</td><td>Withdrawal and conservation may become easier to reach when demand is expected to exceed capacity.</td>
+        </tr>
+        <tr class="question-section-row"><th colspan="8">02 · How the feeling changes in experience <span>What forms, and how bodily information is weighted</span></th></tr>
+        <tr>
+          <th scope="row">ESS emotional signal formation<span class="row-alias">human translation · emotional information forms</span></th>
+          <td>Earlier unresolved signals remain among the conditions from which new feelings form, creating background pressure even without a clear event.</td><td>Relational signals continue to form, including feelings that might threaten approval, usefulness or access to connection.</td><td>Connection and Belonging-at-Risk information remain active together; each new cue can restart the unresolved read.</td><td>A wide range of cues is weighted towards protection. Connection signals do not disappear, but arrive inside a defensive field.</td><td>Emotional information still forms, while signals relevant to prediction, performance and control receive greater priority than signals that interrupt the plan.</td><td>Maximum-protection information can dominate while fear, shame, pain, care and impact also arise but are overridden, fused or disowned.</td><td>Condition information may remain active while signal formation, differentiation and felt access become compressed by depletion and conservation.</td>
+        </tr>
+        <tr>
+          <th scope="row">Interoceptive processing<span class="row-alias">biological process · internal-state representation</span></th>
+          <td>Internal state may remain represented as sustained tension, unease or depletion while restorative and self-directed information receives less weight.</td><td>Relationally linked bodily change may remain highly represented while hunger, fatigue, anger, sadness or personal limits are backgrounded.</td><td>Orienting-related changes in breath, skin, stomach and muscle tone may recur without settling into a clear, trusted reading.</td><td>Defensive bodily information can receive persistent priority while quieter maintenance and connection signals remain harder to use.</td><td>Signals supporting effort and output may remain foregrounded while fatigue, pain and recovery demand become normalised or delayed.</td><td>Force and urgent action signals may dominate while pain, injury and internal limits are suppressed or overridden; this does not establish their absence.</td><td>Internal state may be represented globally as heaviness, numbness, fog or exhaustion, with reduced localisation and differentiation.</td>
+        </tr>
+        <tr class="question-section-row"><th colspan="8">03 · What can still be felt <span>Felt access, interpretation, and what happens next</span></th></tr>
+        <tr>
+          <th scope="row">ME felt access and differentiation<span class="row-alias">human translation · what ME can feel</span></th>
+          <td>Unease, tension or restless flatness remains detectable, while contentment, curiosity, need and preference stay faint.</td><td>Another person’s mood and permitted affiliative feelings may be easier to feel than one’s own anger, sadness, limit or direction.</td><td>Feelings are available but fused and distrusted—shame with fear, guilt with anger, love with anticipated loss.</td><td>Fear, anger and alarm may be easiest to reach; vulnerability, grief and quieter needs may appear only later.</td><td>Analysis, judgement or strategic interpretation may reach ME more readily than differentiated feeling. Signals that obstruct control may receive less use.</td><td>Urgency, certainty or rage may dominate access while vulnerability, pain, limit and another person’s impact become difficult—not necessarily impossible—to feel.</td><td>Numbness, fog, heaviness or exhaustion leave little differentiated feeling; fragments may appear when capacity briefly returns.</td>
+        </tr>
+        <tr>
+          <th scope="row">CLS interpretation<span class="row-alias">human translation · what CLS makes it mean</span></th>
+          <td>Carried activation is normalised as personality, ordinary stress or “nothing in particular”, so its source is not investigated.</td><td>Feelings are evaluated by whether they preserve belonging: can this be felt or shown without losing connection?</td><td>Each feeling may be interpreted as possible evidence of rejection or danger, but no reading feels reliable enough to close the question.</td><td>Emotional urgency is treated as proof of present danger before the wider situation has been checked.</td><td>Explanation, prediction, blame or a management problem may take the place of differentiated use of the feeling. Source, target, scale or responsibility may become mismatched.</td><td>The required outcome can be interpreted as necessary for survival, and opposition as the cause of the internal state. No emotional signal establishes entitlement to harm.</td><td>Experience may be interpreted globally as hopeless, meaningless or overwhelming, or remain too indistinct to interpret.</td>
+        </tr>
+        <tr>
+          <th scope="row">Expression and action<span class="row-alias">human translation · what happens next</span></th>
+          <td>The person keeps functioning, monitoring or using substitute regulation while the original feeling does not guide an update.</td><td>Pleasing, mirroring, caretaking or permitted emotion display protects the bond; anger, sadness and limits may be concealed or redirected inward.</td><td>Reassurance-seeking, testing, rumination, approach–withdrawal and repeated repair attempts occur without closure.</td><td>Guarding, avoidance, appeasement, confrontation or defence can begin before present threat has been established.</td><td>Emotion is contained, delayed, curated or used instrumentally through planning, optimisation and control of variables.</td><td>Pressure, punishment, coercion or forced outcome may become learned behavioural routes. Rage does not cause or authorise them.</td><td>Withdrawal, immobility and reduced output dominate because usable action is unavailable; delayed flashes do not equal restored capacity.</td>
+        </tr>
+        <tr class="question-section-row"><th colspan="8">04 · Regulation, updating and Return <span>What the organisation is regulating for, what remains unresolved and what could allow change</span></th></tr>
+        <tr>
+          <th scope="row">Updating, persistence and Return<span class="row-alias">depth variable · what remains unresolved</span></th>
+          <td>Pressure may fall without rebuilding a restorative baseline; the signal requirement is carried forward.</td><td>Connection may reduce immediate pressure while the person’s own need, grief or boundary remains unmet.</td><td>New evidence does not settle the read because uncertainty is repeatedly reconstructed.</td><td>Protection remains organised after the event changes; positive, relational and repair information does not reliably update it.</td><td>Control creates temporary certainty without releasing the underlying demand. The original need or feeling remains outside the solution.</td><td>Force may stop while outcome, power or defensive identity still organises the situation and competing information does not re-enter participation.</td><td>Output ends without orientation, energy and usable feeling returning. Recovery requires capacity and conditions, not merely inactivity.</td>
+        </tr>
+        <tr>
+          <th scope="row">Regulatory question<span class="row-alias">what resources and capacities are being organised to accomplish</span></th>
+          <td>Regulation may continue to prioritise monitoring or conservation beneath apparent rest.</td><td>Regulation may prioritise preserving access to connection by tracking or accommodating another person before one’s own state.</td><td>Regulation may keep orienting and checking available while uncertainty remains difficult to resolve.</td><td>Regulation may keep protection ready when possible threat has become the default problem.</td><td>Regulation may prioritise prediction and management of variables, timing, people or information.</td><td>Regulation may organise around preserving an imposed outcome through override, pressure, restriction or force. This does not authorise the behaviour.</td><td>Regulation may reduce expenditure and contact when usable capacity cannot support engagement or active protection.</td>
+        </tr>
+        <tr>
+          <th scope="row">What may support updating or Return<span class="row-alias">possibilities, not one universal pathway</span></th>
+          <td>Reduced demand, recovery and renewed access to restorative information may allow monitoring to recede.</td><td>Connection that remains available alongside one’s own needs, limits and direction may broaden participation.</td><td>Reliable present information, repair or clearer discrimination between support and danger may allow checking to settle.</td><td>Changed conditions, effective protection, distance, a workable boundary or new evidence may allow mobilisation to reorganise.</td><td>Greater tolerance of uncertainty, less need to manage the outcome and renewed access to competing needs may widen the available response.</td><td>Harm must stop. Restored agency, effective limits, accountability and another person’s reality re-entering the frame may support change; none of these guarantees Return.</td><td>Reduced demand, physiological recovery and protected re-engagement may allow orientation, energy and usable feeling to return gradually.</td>
+        </tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="note"><strong>Reading scope.</strong> These rows describe how
+        participation may change within each far Chronic reference profile —
+        not an all-or-nothing switch, and not a description of every chronic
+        adaptation. A capacity may remain highly active while becoming
+        threat-biased, rigid, fused, compulsory or instrumental; reduced access
+        is only one possible form of chronic change. Relief is not repair:
+        management, narrative, control, closeness, or collapse can all lower
+        pressure while the unresolved load stays underneath.</p>
+    </section>
+
+    <section>
+      <h2>How participation can differ without changing signal identity</h2>
+      <p class="caption">
+        Emotional information may remain active while its weighting, felt
+        access, interpretation or use changes. Five recurring participation
+        patterns appear in the TEG-Blue material. They are working patterns for
+        organising what has been observed, not five emotion types, biological
+        stages, fixed trajectories or single mechanisms.
+      </p>
+      <div class="forms">
+        <article class="form-card">
+          <p class="form-kicker">Fusion · signals arrive together</p>
+          <h4>Connection and risk become difficult to separate</h4>
+          <p>Warmth towards another person may arrive with tightening,
+          self-consciousness or anticipation of rupture. The person may
+          experience these as one response, particularly when connection and
+          threat have repeatedly appeared within the same relationship.</p>
+          <p>The accompanying information can vary with context and depth.
+          Working examples include love with shame, guilt or fear; compassion
+          with shame; pride with threat; and belonging with vigilance.</p>
+        </article>
+        <article class="form-card">
+          <p class="form-kicker">Additional experience · a proposed relationship remains under review</p>
+          <h4>An established signal may be difficult to recognise or use</h4>
+          <p>Emotional information can influence attention, interpretation and
+          action without arriving as a clear, differentiated feeling. TEG-Blue
+          proposes several possible relationships between established signals
+          and additional experiences. Envy, Arrogance, Contempt, Vindication and
+          Resentment are gathered in <a href="#distorted-signals">a separate
+          hypothesis section below</a>; the proposed routes still require
+          claim-by-claim research.</p>
+        </article>
+        <article class="form-card">
+          <p class="form-kicker">Compensation · connection does not reliably reduce protective demand</p>
+          <h4>Closeness and continued monitoring can coexist</h4>
+          <p>A kind word, touch or moment of warmth can be real while the person
+          continues scanning, bracing or working to preserve the relationship.
+          Visible connection therefore does not by itself establish felt
+          safety, relational trust or physiological recovery.</p>
+          <p>Earlier learning, present conditions, limited trust and repeated
+          relational uncertainty may each contribute. The observed pattern does
+          not establish that one developmental capacity was permanently absent.</p>
+        </article>
+        <article class="form-card">
+          <p class="form-kicker">Intensification · mobilisation becomes easier to recruit or slower to settle</p>
+          <h4>Anger remains available after repeated or continuing obstruction</h4>
+          <p>When protection, an effective boundary, acknowledgement or repair
+          repeatedly remains unavailable, anger may become easier to recruit,
+          more intense or slower to settle. Continuing danger or injustice can
+          also keep it active.</p>
+          <p>Anger and rage retain distinct identities and family memberships.
+          TEG-Blue treats their possible relationship under repeated or
+          continuing obstruction as a research question, not as one emotion
+          transforming into the other or as one established circuit.</p>
+        </article>
+        <article class="form-card">
+          <p class="form-kicker">Reduced access · differentiated feeling may be faint, delayed or difficult to reach</p>
+          <h4>Numbness, fog or unreadable pressure</h4>
+          <p>During some persistent low-output, immobilisation or disconnection
+          patterns, a person may report numbness, fog, heaviness or
+          undifferentiated pressure. Emotional and bodily information may be
+          less differentiated or less accessible; reduced report does not
+          prove absent bodily representation.</p>
+          <p>Similar felt absence can arise through different routes. High
+          mobilisation may narrow attention away from bodily information;
+          depletion, dissociation, low arousal or other processes may reduce
+          access in different ways. The experience alone does not identify the
+          mechanism.</p>
+        </article>
+      </div>
+      <p class="aside">
+        Feelings often change as conditions, interpretation, action and bodily
+        organisation change. When a pattern repeats across time, it may become
+        harder to recognise as one response among several. It can begin to feel
+        like the situation itself, or like part of who the person is, even while
+        remaining context-dependent and open to later revision.
+      </p>
+    </section>
+
+    <section>
+      <h2>The four families under Chronic Survival</h2>
+      <p class="caption">
+        The same families as the Fluid page — Belonging Emotions,
+        Belonging-at-Risk, Threat-Protection, Survival-Rage — read across the
+        seven far Chronic reference profiles. The Fluid function remains the
+        comparison point; felt access, weighting, interpretation, expression
+        and use may change. The matrix is a working TEG-Blue synthesis, not a
+        settled scientific taxonomy or a way of placing a whole person in one
+        column.
+      </p>
+      <p class="aside">
+        <strong>How to read the tables:</strong> read horizontally to follow
+        one emotion across the far Chronic reference profiles; read vertically
+        to compare how different emotions may appear within one profile. For each emotion’s function,
+        bodily signature and completion condition, see its row on the
+        <a href="fluid.html">Fluid page</a>.
+        The cells below describe characteristic possibilities, not mandatory
+        experiences.
+      </p>
+      <p class="note">
+        <strong>One emotion across seven reference profiles.</strong> Moving
+        across a row does not show the emotion changing identity or progressing
+        through stages. It shows possible differences in access, salience,
+        interpretation, expression and use. Another feeling, strategy or action
+        may coexist or become foregrounded; it is not produced by the first
+        emotion. Mixed, context-dependent and unknown relationships remain
+        possible, and emotion never prescribes conduct.
+      </p>
+
+      <h3 id="belonging-emotions">Belonging Emotions</h3>
+      <p class="tag" style="--dot:#f7d34d">Fluid family · connection and favourable conditions</p>
+      <div class="scroll matrix-table">
+        <table>
+          <thead>
+            <tr>
+              <th scope="row" class="corner">Emotion</th>
+              <th scope="col" class="pos">X<span class="pos-sub">Elevated Baseline</span></th>
+              <th scope="col" class="pos">A<span class="pos-sub">Conditional Belonging</span></th>
+              <th scope="col" class="pos">A↔B<span class="pos-sub">Safety Checking</span></th>
+              <th scope="col" class="pos">B<span class="pos-sub">Protection / Defence</span></th>
+              <th scope="col" class="pos">C<span class="pos-sub">Control &amp; Strategic Mgmt</span></th>
+              <th scope="col" class="pos">D<span class="pos-sub">Dominance &amp; Repression</span></th>
+              <th scope="col" class="pos">Z<span class="pos-sub">Collapse / Shutdown</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Love</th><td>Warmth remains, but may carry restlessness or fear that it will not last.</td><td>Closeness may feel performed, conditional or safer than revealing the self underneath it.</td><td>Love may be felt alongside checking, longing and uncertainty about whether connection is secure.</td><td>Love and care may remain present while access to closeness feels exposing, risky or in need of protection.</td><td>Love may be less freely felt while participation is mediated through roles, timing, provision, prediction or control.</td><td>Love may be claimed or faintly present while possession, loyalty demands or opposition to another’s leaving organise conduct. Love does not cause or authorise them.</td><td>Love may feel distant, unreachable or flattened; grief for lost connection may be more accessible without replacing it.</td></tr>
+            <tr><th scope="row">Trust</th><td>Some openness is possible, but the body does not fully stop monitoring.</td><td>Trust may be displayed as compliance or optimism without settled inner safety.</td><td>Trust may feel provisional alongside repeated checking, reassurance or confirmation.</td><td>Trust may be difficult to use while caution and testing remain more available.</td><td>Trust may remain conditional and accessible mainly through predictability or managed variables.</td><td>Trust may be faint or unavailable while obedience, certainty or control of another person’s choices is used instead. Those actions do not establish trust.</td><td>Trust may feel unavailable; reliance can register as impossible, exhausting or unsafe.</td></tr>
+            <tr><th scope="row">Gratitude</th><td>Benefit is recognised, but receiving may not fully settle the system.</td><td>Gratitude may feel obligatory, performed or required to preserve belonging.</td><td>Appreciation may coexist with worry about debt, reciprocity or whether support will continue.</td><td>Receiving can feel exposing; gratitude may coexist with vigilance about hidden cost.</td><td>Gratitude may be strategically expressed or interpreted through exchange, accounting and obligation.</td><td>Gratitude may be demanded as submission, loyalty or confirmation of the giver’s power. The feeling itself does not require compliance.</td><td>Appreciation may be muted, remote or inaccessible even when benefit is cognitively known.</td></tr>
+            <tr><th scope="row">Compassion</th><td>Care is available, but carried activation can make it effortful or quickly depleting.</td><td>Care may be performed to keep connection while the person’s own state remains unread.</td><td>Compassion may alternate with checking whether care is safe, wanted or reciprocated.</td><td>Another’s pain may feel overwhelming, dangerous or secondary to immediate self-protection.</td><td>Compassion may be less directly accessible while care is offered selectively or through problem-solving.</td><td>Compassion may be difficult to access while power-centred interpretations frame vulnerability as weakness, leverage or obstacle.</td><td>Care may remain as quiet concern but feel too distant, heavy or inaccessible to act on.</td></tr>
+            <tr><th scope="row">Admiration</th><td>Interest and value remain available, with an undertone of self-pressure or comparison.</td><td>Admiration may coexist with imitation, approval-seeking or efforts to secure acceptable belonging.</td><td>Appreciation may coexist with comparison and checking one’s own place or adequacy.</td><td>Another’s strength may attract and threaten at once; admiration and guardedness can coexist.</td><td>Admiration may be interpreted through ranking, alliance, aspiration or strategic identification with status.</td><td>Admiration may remain selectively accessible for strength, victory and power while vulnerability receives less value.</td><td>The admired possibility may feel unreachable, remote or painful to contemplate.</td></tr>
+            <tr><th scope="row">Happiness</th><td>Pleasure is real but may feel restless, brief or unable to land fully.</td><td>Happiness may be displayed to signal that everything is fine or preserve the relationship.</td><td>Enjoyment may be interrupted by checking whether it is safe, permitted or about to disappear.</td><td>Pleasure may feel vulnerable; bracing or expectation of interruption can coexist with it.</td><td>Happiness may be treated as an outcome to produce, optimise, display or use as evidence of success.</td><td>Pleasure may be reported around winning, superiority, compliance or another’s loss of agency. Those conditions do not define happiness or justify the conduct.</td><td>Happiness may feel faint, distant, effortful or cognitively remembered rather than embodied.</td></tr>
+            <tr><th scope="row">Joy</th><td>Aliveness appears, but the body may stay activated and struggle to rest inside it.</td><td>Joy may be displayed through animated performance while inner unsafety remains less visible.</td><td>Joy may coexist with self-monitoring, inhibition and fear of becoming too visible.</td><td>Joy may feel risky or undefended; access to play can narrow when threat cues enter.</td><td>Joy may be scheduled, contained or displayed while productivity and achievement organise action.</td><td>Joy may be claimed while triumph, conquest or excitement at imposed power organises conduct. Those responses do not define joy.</td><td>Vitality is muted; joy may appear only in brief flashes that are hard to sustain or receive.</td></tr>
+            <tr><th scope="row">Pride</th><td>Satisfaction is present, but may not settle into stable self-value.</td><td>Pride may depend on being acceptable, useful or mirrored positively by others.</td><td>Achievement may bring pride alongside exposure, shame risk or fear of losing place.</td><td>Pride may be hidden or difficult to use while defensive self-protection is foregrounded.</td><td>Pride may be accessed through performance, comparison, image and controlled outcomes.</td><td>Pride may be claimed while superiority, entitlement or demands for rank organise conduct. Pride does not create or authorise them.</td><td>Achievement may feel empty, unreal or too effortful to register as embodied satisfaction.</td></tr>
+            <tr><th scope="row">Hope</th><td>Possibility remains reachable, though carried activation makes it hard to trust.</td><td>Hope may attach to keeping the bond, role or acceptable self intact rather than to felt safety.</td><td>Access to possibility may rise and fall with new cues, reassurance and anticipated loss.</td><td>Hope may remain present while protection, escape or prevention of harm receives priority.</td><td>Hope may be held mainly through plans and forecasts while future outcomes are tightly managed.</td><td>Hope may be claimed while victory, total certainty or removal of opposition organises action. Those aims do not define hope.</td><td>Possibility feels remote or impossible; hope may survive only as a thin idea without energy.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 id="belonging-at-risk">Belonging-at-Risk</h3>
+      <p class="tag" style="--dot:#f1a43c">Fluid family · uncertain safety or belonging</p>
+      <div class="scroll matrix-table">
+        <table>
+          <thead>
+            <tr>
+              <th scope="row" class="corner">Emotion</th>
+              <th scope="col" class="pos">X<span class="pos-sub">Elevated Baseline</span></th>
+              <th scope="col" class="pos">A<span class="pos-sub">Conditional Belonging</span></th>
+              <th scope="col" class="pos">A↔B<span class="pos-sub">Safety Checking</span></th>
+              <th scope="col" class="pos">B<span class="pos-sub">Protection / Defence</span></th>
+              <th scope="col" class="pos">C<span class="pos-sub">Control &amp; Strategic Mgmt</span></th>
+              <th scope="col" class="pos">D<span class="pos-sub">Dominance &amp; Repression</span></th>
+              <th scope="col" class="pos">Z<span class="pos-sub">Collapse / Shutdown</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Shame</th><td>A low background sense of wrongness or exposure can remain even during rest.</td><td>Shame may be hidden beneath pleasing, goodness, compliance or an acceptable social self.</td><td>Shame may coexist with repeated checking of exposure, belonging threat and how one is seen.</td><td>Shame may be foregrounded while hiding, counterattack, refusal or defence becomes action-ready; it does not prescribe any of them.</td><td>Shame may be less directly accessible while perfection, explanation, status, image or control of evaluation organises participation.</td><td>Shame may be disowned while humiliation, blame or degradation is directed at another person. Shame does not cause or authorise that conduct.</td><td>Shame may remain influential while worthlessness, numbness or inability to face contact dominates experience.</td></tr>
+            <tr><th scope="row">Guilt</th><td>Concern about impact persists as background unease even after reasonable repair.</td><td>Guilt may coexist with automatic compliance, over-responsibility or efforts to prove care.</td><td>Guilt and responsibility may be hard to distinguish from fear of rejection, prompting repeated checking.</td><td>Guilt may feel threatening while avoidance, defensiveness or urgent self-protection becomes more available; it does not require those responses.</td><td>Guilt may be managed through explanation, compensation, rules or tightly controlled repair performance.</td><td>Guilt may be inaccessible or rejected while responsibility is reversed or forced onto others. The feeling does not determine accountability or conduct.</td><td>Guilt may feel immobilising or globally condemning, or remain influential while felt access narrows.</td></tr>
+            <tr><th scope="row">Loneliness</th><td>Absence remains as a background ache that rest does not fully soften.</td><td>Contact is maintained, yet the self can feel unseen inside performed or conditional connection.</td><td>Loneliness may coexist with vigilance and alternating impulses to reach, check and withdraw.</td><td>Loneliness may remain present while guarded isolation feels safer than contact.</td><td>Loneliness may be less directly felt while connection is organised through usefulness, access, status, scheduling or relational management.</td><td>Loneliness may be denied while possession, forced proximity or control of another’s availability is used. It does not authorise those actions.</td><td>Isolation feels total, heavy or unreachable; loneliness may remain influential when the impulse to seek contact is unavailable.</td></tr>
+            <tr><th scope="row">Disappointment</th><td>The unmet expectation lingers and keeps the body from fully settling.</td><td>Disappointment may be hidden to protect harmony, gratitude or the acceptable relationship story.</td><td>Disappointment may coexist with repeated checking for whether the missing response might still arrive.</td><td>Disappointment may remain present while guarding, refusal or fear of dependence becomes more available.</td><td>Disappointment may be less directly felt while revised plans, lowered expectations or control of future outcomes organises response.</td><td>Disappointment may be claimed while accusation, punishment or demands organise conduct. It does not prescribe or justify them.</td><td>Disappointment may remain influential while futility, resignation or emotional blankness dominates access.</td></tr>
+            <tr><th scope="row">Sadness</th><td>Heaviness remains under functioning and makes restoration feel incomplete.</td><td>Sadness may be softened or hidden beneath pleasantness to keep connection available.</td><td>Sadness may coexist with checking, reaching and uncertainty about whether care will come.</td><td>Sadness may feel unsafe or weakening and sit behind vigilance, withdrawal or anger.</td><td>Sadness may be explained, contained or worked around so management can continue.</td><td>Sadness may be disowned while blame or weaponised vulnerability organises conduct. Sadness does not cause or authorise either.</td><td>Sadness may remain present as profound heaviness, slowing or emptiness while mobilisation towards care becomes difficult.</td></tr>
+            <tr><th scope="row">Grief</th><td>Loss remains bodily present and interrupts full return even when life continues.</td><td>Grief may be shaped into the form others can tolerate while private loss remains unwitnessed.</td><td>Grief may coexist with searching, disbelief and checking for what cannot fully return.</td><td>Grief can feel dangerous enough for guarding, numbing or defensive mobilisation to become more available.</td><td>Grief may be less directly accessible while loss is approached through tasks, meaning, legacy, planning or controlled exposure.</td><td>Grief may be denied while vengeance, possession or refusal of irreversible reality organises conduct. Grief does not require those responses.</td><td>Grief may remain present while loss feels engulfing, timeless and depleting and participation withdraws.</td></tr>
+            <tr><th scope="row">Confusion</th><td>Orientation never feels fully settled; uncertainty hums beneath ordinary functioning.</td><td>Confusion may be concealed by agreement, borrowed certainty or another person’s account.</td><td>Confusion may coexist with repeated checking, rumination and difficulty closing the safety question.</td><td>Confusion may coexist with caution, suspicion or defensive certainty when ambiguity feels threatening.</td><td>Confusion may be less tolerated while analysis, categorisation, prediction and tighter models organise response.</td><td>Confusion may be disowned while imposed certainty and elimination of contradiction are used to restore power. Confusion does not authorise them.</td><td>Confusion may remain influential while thinking feels foggy, blank or difficult to organise.</td></tr>
+            <tr><th scope="row">Frustration</th><td>Blocked movement remains as low pressure, irritability or restless incompletion.</td><td>Frustration may be hidden behind helpfulness or directed inward to preserve connection.</td><td>Frustration may coexist with renewed effort, checking, doubt and hesitation about the route.</td><td>Frustration may be foregrounded while urgency, refusal or forceful boundary energy becomes more available; it does not prescribe action.</td><td>Frustration may be approached through optimisation, leverage, persistence and control of variables.</td><td>Frustration may be claimed while overpowering, punishment or removal of an obstructing person organises conduct. It does not authorise harm.</td><td>Frustration may remain influential while effort, energy or access to another attempt becomes unavailable.</td></tr>
+            <tr><th scope="row">Anxiety</th><td>Unease is the background condition, including when no immediate threat is clear.</td><td>Anxiety may be masked by agreeableness, reassurance-seeking or performed calm and connection.</td><td>Anxiety may coexist with anticipation and repeated checking of whether safety or belonging will hold.</td><td>Anxiety may be foregrounded while vigilance, avoidance, freezing or defensive readiness becomes more available; it does not prescribe a response.</td><td>Anxiety may be channelled into prediction, preparation, productivity and management of uncertainty.</td><td>Anxiety may be denied beneath certainty and power while danger is projected onto opposition or loss of control.</td><td>Anxiety may remain influential while overwhelm, dread, fog or shutdown dominates access.</td></tr>
+            <tr><th scope="row">Stress</th><td>Demand remains in the body as the resting set-point, so recovery never fully arrives.</td><td>Strain is concealed to maintain role, availability, goodness or apparent ease with others.</td><td>Stress may coexist with repeated checking of capacity against demand, support and relational risk.</td><td>Stress may be foregrounded while held mobilisation or defensive narrowing becomes more available.</td><td>Stress may be carried through sustained output, prioritisation, control and delayed recovery.</td><td>Stress may be claimed or disowned while command, intimidation or reduced agency is imposed on others. Stress does not cause or authorise that conduct.</td><td>Stress may remain influential while depletion, numbness or offline functioning dominates experience.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 id="threat-protection">Threat-Protection</h3>
+      <p class="tag" style="--dot:#ef823a">Fluid family · direct threat or violation</p>
+      <div class="scroll matrix-table">
+        <table>
+          <thead>
+            <tr>
+              <th scope="row" class="corner">Emotion</th>
+              <th scope="col" class="pos">X<span class="pos-sub">Elevated Baseline</span></th>
+              <th scope="col" class="pos">A<span class="pos-sub">Conditional Belonging</span></th>
+              <th scope="col" class="pos">A↔B<span class="pos-sub">Safety Checking</span></th>
+              <th scope="col" class="pos">B<span class="pos-sub">Protection / Defence</span></th>
+              <th scope="col" class="pos">C<span class="pos-sub">Control &amp; Strategic Mgmt</span></th>
+              <th scope="col" class="pos">D<span class="pos-sub">Dominance &amp; Repression</span></th>
+              <th scope="col" class="pos">Z<span class="pos-sub">Collapse / Shutdown</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Fear</th><td>Alarm remains as a background readiness that does not completely resolve.</td><td>Fear may be hidden beneath friendliness, compliance or reassurance that the relationship is safe.</td><td>Fear may coexist with relational uncertainty, approach–avoidance and repeated checking.</td><td>Fear may be immediate, bodily and action-near, making bracing, freezing, fleeing, refusal or defence available without prescribing one response.</td><td>Fear may be less directly accessible while planning, vigilance, inhibition and control of future threat organises response.</td><td>Fear may be disowned beneath aggression or projected outwards as proof that opposition must be crushed. Fear does not establish that conclusion or authorise harm.</td><td>Fear may remain influential while dread, immobilisation or numbness dominates experience, or become felt only after mobilisation subsides.</td></tr>
+            <tr><th scope="row">Anger</th><td>Boundary pressure persists as irritation or tension even when no action is required.</td><td>Anger may be suppressed, smiled through or directed inward to protect belonging.</td><td>Anger may coexist with fear of rupture, indirect protest, checking and hesitant boundaries.</td><td>Anger may feel hot, clear and protective, with strong readiness to refuse or interrupt; it does not prescribe how.</td><td>Anger may be less directly felt while strategy, argument, leverage, timing and controlled pressure organises response.</td><td>Anger may be fused with certainty while punishment or destruction is framed as necessary. Anger does not cause or authorise those actions.</td><td>Anger may remain influential while helplessness, internal pressure or delayed flashes dominate access.</td></tr>
+            <tr><th scope="row">Disgust</th><td>Aversion lingers as bodily unease or a wish for distance that never fully clears.</td><td>Disgust may be concealed to maintain closeness, politeness or the required image of acceptance.</td><td>Disgust may coexist with doubt about whether distance is justified or connection can be repaired.</td><td>Disgust may feel immediate and protective, making rejection, withdrawal or firm separation available without prescribing conduct.</td><td>Disgust may be interpreted through categories used to manage proximity, standards or contamination risk.</td><td>Disgust may be invoked while another person is devalued or represented as contaminating or less human. The feeling does not establish or authorise that judgement.</td><td>Disgust may remain influential while nausea, withdrawal, deadening or inability to engage dominates experience.</td></tr>
+            <tr><th scope="row">Suspicion</th><td>Monitoring persists quietly, preventing complete ease even in ordinary conditions.</td><td>Suspicion may be hidden beneath apparent trust while inconsistency is privately tracked.</td><td>Suspicion may be foregrounded alongside scanning, testing, reassurance-seeking and renewed doubt.</td><td>Suspicion may coexist with guarded distance and defensive readiness when hidden threat feels probable.</td><td>Suspicion may be systematised through evidence control, forecasting, tests and strategic alliances.</td><td>Suspicion may be treated as certainty that opposition is malicious while surveillance, coercion or attack is justified. Suspicion proves neither and authorises none.</td><td>Suspicion may remain as diffuse dread while investigative energy and willingness to know become unavailable.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 id="survival-rage">Survival-Rage</h3>
+      <p class="tag" style="--dot:#eb5151">Fluid family · life threat and maximum survival action</p>
+      <div class="scroll matrix-table">
+        <table>
+          <thead>
+            <tr>
+              <th scope="row" class="corner">Emotion</th>
+              <th scope="col" class="pos">X<span class="pos-sub">Elevated Baseline</span></th>
+              <th scope="col" class="pos">A<span class="pos-sub">Conditional Belonging</span></th>
+              <th scope="col" class="pos">A↔B<span class="pos-sub">Safety Checking</span></th>
+              <th scope="col" class="pos">B<span class="pos-sub">Protection / Defence</span></th>
+              <th scope="col" class="pos">C<span class="pos-sub">Control &amp; Strategic Mgmt</span></th>
+              <th scope="col" class="pos">D<span class="pos-sub">Dominance &amp; Repression</span></th>
+              <th scope="col" class="pos">Z<span class="pos-sub">Collapse / Shutdown</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Rage</th><td>Maximum-force energy may remain as feared background potential rather than active expression.</td><td>Rage may be concealed beneath compliance or acceptable connection and become accessible when that participation route fails.</td><td>Rage may rise and recede alongside perceived rupture, entrapment and uncertainty about safety.</td><td>Rage may become strongly foregrounded when ordinary defence feels insufficient, bringing overwhelming resistance or escape readiness without prescribing action.</td><td>Rage may be inhibited or difficult to feel while strategic hostility, intimidation or retaliation organises conduct. Rage does not cause or authorise those actions.</td><td>Rage may remain foregrounded while overpowering, punishment, elimination of opposition or enforced submission is framed as necessary. Rage does not authorise any of them.</td><td>Rage may remain influential while maximum mobilisation gives way to numbness, exhaustion, immobility or despair; this is not rage turning into another state.</td></tr>
+            <tr><th scope="row">Fury</th><td colspan="7" class="working-cell">Chronic readings for Fury will be developed from the Fluid definition; the TEG-Blue matrix currently carries Rage as the family’s single chronic row.</td></tr>
+            <tr><th scope="row">Frenzy</th><td colspan="7" class="working-cell">Chronic readings for Frenzy will be developed from the Fluid definition; the TEG-Blue matrix currently carries Rage as the family’s single chronic row.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="aside">
+        Body Signals — breathlessness, pain, temperature, elimination, thirst,
+        hunger, tiredness — do not get chronic tables of their own. Their
+        participation can change through several routes. A signal may remain
+        clear, move into the background, be noticed late, become difficult to
+        differentiate, be interpreted differently or guide action without
+        becoming a distinct feeling. Low-output, immobilisation and
+        disconnection patterns can also affect access in different ways; the
+        same report does not establish one mechanism. The nine signals
+        themselves are defined on the
+        <a href="fluid.html#body-signals">Fluid page</a>.
+      </p>
+    </section>
+
+    <section>
+      <h2 id="distorted-signals">Proposed relationships among additional experiences</h2>
+      <p class="caption">
+        TEG-Blue currently places five experiences outside the main emotion
+        families and proposes that they may occur in relation to an established
+        feeling. This is a framework hypothesis under review. The pairings can
+        guide research questions; they do not establish that the established
+        feeling is a precursor, that one experience transforms into another or
+        that either belongs to a particular Chronic profile.
+      </p>
+      <div class="scroll compact-table">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" class="q">Additional experience</th>
+              <th scope="col" class="q">Proposed related signal</th>
+              <th scope="col" class="q">Processing hypothesis</th>
+              <th scope="col" class="q">Earlier working association · not identity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Envy</th><td>Admiration</td><td>Possible relationship in felt access, social comparison or interpretation; identity and mechanism unconfirmed</td><td>Previously mapped to Chronic Dominance &amp; Repression</td></tr>
+            <tr><th scope="row">Arrogance</th><td>Pride</td><td>Possible relationship in felt access, self-evaluation or interpretation; identity and mechanism unconfirmed</td><td>Previously mapped to Chronic Dominance &amp; Repression</td></tr>
+            <tr><th scope="row">Contempt</th><td>Envy and Admiration</td><td>Possible relationship among access, social comparison and devaluing interpretation; identity and mechanism unconfirmed</td><td>Previously mapped to Chronic Dominance &amp; Repression</td></tr>
+            <tr><th scope="row">Vindication</th><td>Anger</td><td>Possible persistence when updating, accountability or repair does not occur; mechanism unconfirmed</td><td>Previously mapped to Chronic Dominance &amp; Repression when the required outcome is challenged</td></tr>
+            <tr><th scope="row">Resentment</th><td>Anger or Fear</td><td>Possible persistence when updating, protection or repair does not occur; mechanism unconfirmed</td><td>Previously mapped to Chronic Control &amp; Strategic Management</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="aside">
+        The earlier TEG-Blue material distinguishes changes in felt access from
+        persistence when a recognised feeling cannot update through action,
+        changed conditions, accountability or repair. That distinction remains
+        useful as a question. It has not yet been demonstrated as two exclusive
+        mechanisms, and several developmental, affective, cognitive,
+        relational and social-comparison processes may contribute.
+      </p>
+      <p class="note"><strong>Hypothesis boundary.</strong> These pairings are
+        TEG-Blue hypotheses. A related signal does not become the additional
+        experience and is not necessarily its source. Their presence does not
+        establish a particular interoceptive deficit, developmental history, Chronic Position or
+        biological mechanism. The proposed relationships remain in the model
+        as questions to investigate across several research disciplines, not as
+        verdicts on a person.</p>
+    </section>
+
+    <section>
+      <h2>How chronic organisation reads its own feelings</h2>
+      <p class="caption">
+        The tables above describe changes in access, weighting and use. One
+        layer remains: how a feeling participates in interpretation. Two
+        interpretive risks can appear when access or flexibility narrows, and
+        they pull in opposite directions.
+      </p>
+      <div class="reality-pair">
+        <article>
+          <h4>Feeling-Fact Collapse</h4>
+          <p class="pattern">“I feel it, therefore it is true.”</p>
+          <p>In some chronic patterns, a feeling can become the main evidence
+          for an external conclusion. The feeling is real as experience and may
+          carry important information about present conditions, earlier
+          learning, needs or danger. Its intensity does not by itself establish
+          the external cause. Relational risk increases when another person is
+          required to accept, obey, mirror or organise around that conclusion.</p>
+        </article>
+        <article>
+          <h4>Emotional-State Disconnection</h4>
+          <p class="pattern">“I do not feel it, therefore it is not real.”</p>
+          <p>The opposite risk appears when emotional and bodily information
+          becomes faint, delayed or difficult to use. Interpretation can then
+          proceed without information that might otherwise change it.
+          Numbness, detachment, calmness and certainty can all be shaped by
+          present organisation. Reduced felt access does not establish that
+          nothing is happening, and it is not the same as objectivity.</p>
+        </article>
+      </div>
+      <p class="aside">
+        Both risks can appear in the same person across different signals and
+        contexts. Neither means the person is lying. Interpretation may be
+        working with information that is incomplete, differently weighted or
+        difficult to revise. The distinction also cuts both ways: chronic
+        threat can involve genuine danger that other people do not recognise.
+        The purpose is to improve resolution without dismissing the feeling.
+      </p>
+
+      <h3>Boundaries this page keeps</h3>
+      <ul class="guardrails">
+        <li><strong>Chronic Survival does not automatically mean
+        distorted.</strong> Real danger, loss, injustice, pain, entrapment and
+        absent accountability can keep a clear emotion active.</li>
+        <li><strong>Cells are possibilities, not verdicts.</strong> No cell is
+        a diagnosis, a person-type, or proof of distortion — and no particular
+        fusion is a signature of any Position.</li>
+        <li><strong>Numbness does not prove that signalling stopped.</strong>
+        It may describe an experience of reduced differentiated access; it is
+        not evidence of absent impact, absent care or objectivity. The report
+        alone does not identify the biological or psychological route.</li>
+        <li><strong>Emotion explains signal; it never authorises harm.</strong>
+        Reduced access to feeling does not erase responsibility for impact,
+        repair, and changed behaviour.</li>
+        <li><strong>Relief is not repair.</strong> Management, narrative,
+        control, closeness, or collapse can lower pressure while the unresolved
+        load stays underneath. Compliance is not consent; fear is not
+        safety.</li>
+        <li><strong>Do not force emotional access.</strong> Contact with
+        emotion may need to return slowly, with enough safety, support,
+        distance, or repair — and repair may need capacity before insight.</li>
+      </ul>
+
+      <aside class="fluid-forward" aria-labelledby="fluid-forward-title">
+        <div>
+          <p class="fluid-forward-kicker">The other half</p>
+          <h3 id="fluid-forward-title">The same signals under more responsive organisation</h3>
+        </div>
+        <div>
+          <p>This page describes how emotional participation may change through
+          persistent recruitment, interrupted recovery, repeated reactivation,
+          difficult revision or continuing adverse conditions. The Fluid page
+          provides the present-responsive comparison: how the same emotional
+          information may participate when organisation remains sufficiently
+          responsive to conditions, available action and updating. Reading the
+          two side by side makes the contrast clearer.</p>
+          <p><a href="fluid.html">Open Emotions and Feelings — The Fluid Gradient →</a><br>
+          <a href="../notes/sources/chronic-emotional-signals-collection.html">Open the source collection behind this page →</a><br>
+          <a href="../../03-model-2-gradient/positions.html#panel-chronic">Open the Chronic Survival table on the main Gradient page →</a></p>
+        </div>
+      </aside>
+
+      <p><a class="back" href="#top">↑ Back to the top</a></p>
+    </section>
+  </div>
+</body>
+</html>

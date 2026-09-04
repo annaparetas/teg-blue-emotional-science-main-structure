@@ -1,0 +1,752 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The governing premise for how the TEG-Blue Nervous System Gradient models organism-level organisation, resource allocation, updating and conscious participation.">
+  <title>How the Nervous System Organisation Gradient Models Organism Organisation</title>
+  <link rel="stylesheet" href="../assets/page-responsibility.css">
+  <style>
+    :root {
+      --ink: #0b1f42;
+      --body: #344563;
+      --muted: #687792;
+      --line: #d9e2ee;
+      --paper: #ffffff;
+      --ground: #f4f7fb;
+      --cyan: #12bdd0;
+      --cyan-deep: #087f91;
+      --cyan-soft: #e9fbfe;
+      --lime: #b6e45e;
+      --lime-soft: #f3f9e9;
+      --orange: #ef823a;
+      --orange-soft: #fff3e9;
+      --red: #d95151;
+      --slate: #4f5e74;
+      --radius: 18px;
+      --shadow: 0 18px 48px rgba(11, 31, 66, .08);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+    body {
+      margin: 0;
+      background:
+        linear-gradient(rgba(11, 31, 66, .025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(11, 31, 66, .025) 1px, transparent 1px),
+        var(--ground);
+      background-size: 28px 28px;
+      color: var(--ink);
+      font: 16px/1.68 ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--cyan-deep); text-underline-offset: 3px; }
+    a:hover { color: var(--ink); }
+    a:focus-visible, summary:focus-visible { outline: 3px solid var(--cyan); outline-offset: 4px; }
+
+    .shell { width: min(1220px, calc(100% - 40px)); margin: 0 auto; }
+
+    .utility {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px 24px;
+      padding: 22px 0;
+      color: var(--muted);
+      font: 750 11px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .utility div { display: flex; flex-wrap: wrap; gap: 18px; }
+    .utility a { color: inherit; text-decoration: none; }
+    .utility a:hover { color: var(--cyan-deep); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 610px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(340px, .8fr);
+      align-items: end;
+      gap: 72px;
+      padding: clamp(58px, 8vw, 100px) clamp(30px, 6vw, 80px) 68px;
+      background: var(--ink);
+      color: white;
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 82% 18%, rgba(18, 189, 208, .24), transparent 28%),
+        linear-gradient(115deg, transparent 0 56%, rgba(255,255,255,.035) 56% 56.2%, transparent 56.2% 100%);
+    }
+    .hero-copy, .hero-question { position: relative; z-index: 1; }
+    .eyebrow, .section-label {
+      margin: 0 0 14px;
+      color: var(--cyan);
+      font: 800 11px/1.3 ui-monospace, SFMono-Regular, Menlo, monospace;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    h1, h2, .thesis {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      letter-spacing: -.025em;
+    }
+    h1 { max-width: 760px; font-size: clamp(45px, 6vw, 78px); line-height: .98; }
+    .hero-copy > p:last-child { max-width: 690px; margin: 26px 0 0; color: #ccd7e9; font-size: clamp(17px, 2vw, 20px); }
+
+    .hero-question {
+      padding: 26px;
+      border: 1px solid rgba(255,255,255,.2);
+      border-top: 5px solid var(--lime);
+      background: rgba(255,255,255,.07);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+    }
+    .hero-question p { margin: 0; }
+    .hero-question .label { color: var(--lime); font: 800 10px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .1em; text-transform: uppercase; }
+    .hero-question .question { margin-top: 12px; font: 500 clamp(22px, 3vw, 31px)/1.18 Georgia, "Times New Roman", serif; }
+    .hero-question .answer { margin-top: 14px; color: #c7d3e4; font-size: 13px; }
+
+    .layout { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 70px; align-items: start; padding: 72px 0 100px; }
+    .toc { position: sticky; top: 22px; padding: 20px 18px; background: rgba(255,255,255,.9); border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 6px 24px rgba(11,31,66,.05); }
+    .toc p { margin: 0 0 12px; color: var(--muted); font: 800 10px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .1em; text-transform: uppercase; }
+    .toc ol { margin: 0; padding: 0; list-style: none; counter-reset: toc; }
+    .toc li { counter-increment: toc; border-top: 1px solid var(--line); }
+    .toc a { display: grid; grid-template-columns: 22px 1fr; gap: 8px; padding: 9px 0; color: var(--body); font-size: 12px; line-height: 1.35; text-decoration: none; }
+    .toc a::before { content: counter(toc, decimal-leading-zero); color: var(--cyan-deep); font: 700 9px/1.8 ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .toc a:hover { color: var(--ink); }
+
+    main section { margin-bottom: 84px; }
+    .section-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, .7fr); gap: 48px; align-items: end; margin-bottom: 30px; }
+    h2 { font-size: clamp(33px, 4vw, 52px); line-height: 1.05; }
+    h3 { margin: 0; font-size: 18px; line-height: 1.3; }
+    .section-head > p, .lead { margin: 0; color: var(--body); font-size: 17px; }
+    .prose { max-width: 790px; }
+    .prose p { margin: 0 0 20px; }
+    .prose ul { margin: 0 0 20px; padding-left: 21px; }
+    .prose li + li { margin-top: 5px; }
+    .prose strong { color: var(--ink); }
+
+    .definition {
+      margin: 30px 0;
+      padding: 26px 30px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-left: 6px solid var(--cyan);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      box-shadow: 0 8px 26px rgba(11,31,66,.05);
+    }
+    .definition .term { display: block; margin-bottom: 8px; color: var(--cyan-deep); font: 800 10px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .1em; text-transform: uppercase; }
+    .definition p { margin: 0; font: 500 22px/1.38 Georgia, "Times New Roman", serif; }
+
+    .not-this { display: grid; grid-template-columns: repeat(3, 1fr); overflow: hidden; margin: 26px 0; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; }
+    .not-this div { padding: 20px; text-align: center; color: var(--slate); font-size: 13px; font-weight: 750; }
+    .not-this div + div { border-left: 1px solid var(--line); }
+    .not-this s { text-decoration-color: var(--red); text-decoration-thickness: 2px; }
+
+    .resource-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+    .resource-list span { padding: 7px 11px; background: var(--paper); border: 1px solid var(--line); border-radius: 999px; color: var(--body); font-size: 12px; }
+
+    .loop {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 34px;
+      padding: 28px;
+      background: var(--ink);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+    .loop::after { content: "↶ conditions sampled again"; grid-column: 1 / -1; padding-top: 12px; color: var(--cyan); font: 800 10px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .08em; text-align: right; text-transform: uppercase; }
+    .loop-step { position: relative; min-height: 112px; padding: 16px 28px 16px 16px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.11); border-radius: 10px; color: white; }
+    .loop-step::after { content: "→"; position: absolute; top: 50%; right: -10px; z-index: 2; width: 20px; color: var(--lime); font-weight: 900; text-align: center; transform: translateY(-50%); }
+    .loop-step:nth-child(7)::after { display: none; }
+    .loop-step b { display: block; margin-bottom: 7px; color: var(--cyan); font: 800 10px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .loop-step span { display: block; font-size: 13px; line-height: 1.35; }
+    .loop-step.action { border-color: rgba(182,228,94,.45); }
+
+    .case-study { overflow: hidden; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .case-head { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 28px; padding: 32px; background: var(--lime-soft); border-bottom: 1px solid var(--line); }
+    .position-b { display: grid; place-items: center; width: 96px; aspect-ratio: 1; background: var(--ink); color: var(--lime); border-radius: 50%; font: 600 52px/1 Georgia, "Times New Roman", serif; }
+    .case-head p { margin: 7px 0 0; color: var(--body); }
+    .biological-task { margin: 22px 0 0; padding-left: 18px; border-left: 4px solid var(--lime); font: 500 19px/1.42 Georgia, "Times New Roman", serif; }
+
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; min-width: 760px; }
+    th, td { padding: 15px 18px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+    thead th { color: var(--muted); background: #f8fafc; font: 800 10px/1.35 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .08em; text-transform: uppercase; }
+    tbody th { width: 20%; color: var(--ink); font-size: 13px; }
+    tbody td { color: var(--body); font-size: 13px; }
+    tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
+    tbody tr:hover { background: var(--cyan-soft); }
+
+    .correction-grid { display: grid; grid-template-columns: minmax(250px, .65fr) minmax(0, 1.35fr); gap: 18px; }
+    .avoid, .better { padding: 28px; border-radius: var(--radius); }
+    .avoid { background: var(--orange-soft); border: 1px solid #f5c9a9; }
+    .better { background: var(--cyan-soft); border: 1px solid #bcecf2; }
+    .avoid h3 { color: #9f4c17; }
+    .better h3 { color: var(--cyan-deep); }
+    .avoid ul { margin: 17px 0 0; padding-left: 18px; color: var(--body); font-size: 13px; }
+    .better p { margin: 17px 0 0; color: var(--body); }
+    .better .formulation { color: var(--ink); font: 500 20px/1.42 Georgia, "Times New Roman", serif; }
+
+    .examples { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 18px; }
+    .examples div { padding: 16px; background: var(--paper); border: 1px solid var(--line); border-radius: 10px; color: var(--body); font-size: 13px; }
+
+    .distinctions { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .distinction { padding: 28px; background: var(--paper); border: 1px solid var(--line); border-top: 5px solid var(--cyan); border-radius: var(--radius); }
+    .distinction:nth-child(2) { border-top-color: var(--orange); }
+    .distinction p { margin: 12px 0 0; color: var(--body); }
+    .distinction ul { columns: 2; gap: 24px; margin: 18px 0 0; padding-left: 18px; color: var(--body); font-size: 13px; }
+
+    .lens-grid { display: grid; grid-template-columns: repeat(2, 1fr); overflow: hidden; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); }
+    .lens { display: grid; grid-template-columns: 44px 1fr; gap: 13px; padding: 20px; border-bottom: 1px solid var(--line); }
+    .lens:nth-child(odd) { border-right: 1px solid var(--line); }
+    .lens:nth-last-child(-n+2) { border-bottom: 0; }
+    .lens b { display: grid; place-items: center; width: 38px; height: 38px; background: var(--ink); color: var(--cyan); border-radius: 50%; font: 800 10px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .lens h3 { font-size: 14px; }
+    .lens p { margin: 5px 0 0; color: var(--body); font-size: 12px; }
+
+    .language-scale { display: grid; grid-template-columns: 1fr auto 1fr; align-items: stretch; overflow: hidden; margin-top: 28px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); }
+    .language-scale > div { padding: 25px; }
+    .language-scale .prefer { background: var(--lime-soft); }
+    .language-scale .avoid-words { background: var(--orange-soft); }
+    .language-scale .arrow { display: grid; place-items: center; padding: 10px; color: var(--cyan-deep); font-size: 24px; }
+    .language-scale h3 { margin-bottom: 12px; font-size: 13px; }
+    .word-cloud { display: flex; flex-wrap: wrap; gap: 7px; }
+    .word-cloud span { padding: 5px 8px; background: rgba(255,255,255,.7); border: 1px solid rgba(11,31,66,.12); border-radius: 6px; font: 700 11px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+    .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .path { position: relative; padding: 30px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); }
+    .path.adaptive { border-top: 6px solid var(--lime); }
+    .path.persistent { border-top: 6px solid var(--orange); }
+    .path p { margin: 13px 0 0; color: var(--body); }
+    .path-flow { margin-top: 20px; color: var(--ink); font: 750 13px/1.8 ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .questions { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-bottom: 20px; }
+    .questions div { padding: 15px 12px; background: var(--ink); color: #d5dfed; border-radius: 10px; font-size: 11px; line-height: 1.4; }
+    .questions b { display: block; margin-bottom: 7px; color: var(--cyan); font: 800 10px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+    .compass-flow { overflow: hidden; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); }
+    .compass-step { display: grid; grid-template-columns: 210px minmax(0, 1fr); border-bottom: 1px solid var(--line); }
+    .compass-step:last-child { border-bottom: 0; }
+    .compass-step dt, .compass-step dd { margin: 0; padding: 18px 22px; }
+    .compass-step dt { background: #f7f9fc; color: var(--ink); font-weight: 800; font-size: 13px; }
+    .compass-step dd { color: var(--body); font-size: 14px; }
+    .compass-thesis { margin-top: 28px; padding: 34px; background: var(--ink); color: white; border-radius: var(--radius); }
+    .compass-thesis p { margin: 0; font: 500 clamp(22px, 3vw, 30px)/1.4 Georgia, "Times New Roman", serif; }
+    .compass-thesis em { color: var(--lime); font-style: normal; }
+
+    .reality-thesis {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(30px, 5vw, 54px);
+      background: var(--ink);
+      color: white;
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+    .reality-thesis::after {
+      content: "FIELD ≠ ACT";
+      position: absolute;
+      right: -12px;
+      bottom: -16px;
+      color: rgba(255,255,255,.05);
+      font: 900 clamp(48px, 9vw, 112px)/.8 ui-monospace, SFMono-Regular, Menlo, monospace;
+      letter-spacing: -.08em;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+    .reality-thesis .status-label { position: relative; z-index: 1; margin: 0 0 16px; color: var(--lime); font: 800 10px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .1em; text-transform: uppercase; }
+    .reality-thesis .statement { position: relative; z-index: 1; max-width: 840px; margin: 0; font: 500 clamp(26px, 4vw, 42px)/1.22 Georgia, "Times New Roman", serif; }
+    .reality-thesis .status-note { position: relative; z-index: 1; max-width: 720px; margin: 20px 0 0; color: #b9c7db; font-size: 12px; }
+
+    .reality-copy { max-width: 820px; margin: 28px 0; color: var(--body); font-size: 16px; }
+    .reality-copy p { margin: 0 0 16px; }
+
+    .participation-chain {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      overflow: hidden;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+    .participation-chain div { position: relative; min-height: 142px; padding: 19px 25px 19px 17px; border-right: 1px solid var(--line); }
+    .participation-chain div:last-child { border-right: 0; background: var(--orange-soft); }
+    .participation-chain div:not(:last-child)::after { content: "→"; position: absolute; z-index: 2; top: 50%; right: -10px; width: 20px; color: var(--cyan-deep); font-weight: 900; text-align: center; transform: translateY(-50%); }
+    .participation-chain b { display: block; margin-bottom: 10px; color: var(--cyan-deep); font: 800 9px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .06em; text-transform: uppercase; }
+    .participation-chain strong { display: block; font-size: 13px; line-height: 1.3; }
+    .participation-chain span { display: block; margin-top: 7px; color: var(--body); font-size: 11px; line-height: 1.4; }
+
+    .access-title { margin: 32px 0 14px; }
+    .access-title h3 { font-size: 17px; }
+    .access-title p { margin: 7px 0 0; color: var(--body); font-size: 13px; }
+    .access-bridge { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+    .access-bridge article { padding: 20px; background: var(--paper); border: 1px solid var(--line); border-top: 5px solid var(--accent); border-radius: 12px; }
+    .access-bridge h3 { font-size: 14px; }
+    .access-bridge p { margin: 8px 0 0; color: var(--body); font-size: 12px; }
+    .access-bridge .capacity-boundary { padding-top: 10px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+
+    .responsibility-plane { display: grid; grid-template-columns: minmax(0, .75fr) minmax(0, 1.25fr); gap: 0; margin-top: 18px; overflow: hidden; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); }
+    .responsibility-plane .principle { padding: 28px; background: var(--cyan-soft); }
+    .responsibility-plane .principle p { margin: 12px 0 0; color: var(--body); font: 500 18px/1.45 Georgia, "Times New Roman", serif; }
+    .responsibility-plane .assessment { padding: 28px; }
+    .responsibility-plane .assessment p { margin: 0 0 14px; color: var(--body); font-size: 13px; }
+    .assessment-questions { display: flex; flex-wrap: wrap; gap: 7px; }
+    .assessment-questions span { padding: 7px 9px; background: var(--ground); border: 1px solid var(--line); border-radius: 7px; color: var(--ink); font-size: 11px; font-weight: 750; }
+    .reality-links { margin: 16px 0 0; color: var(--body); font-size: 12px; }
+    .reality-links a { font-weight: 800; }
+
+    .work-rule { padding: clamp(28px, 5vw, 54px); background: var(--paper); border: 2px solid var(--ink); border-radius: 22px; box-shadow: 12px 12px 0 var(--cyan); }
+    .work-rule .prompt { margin: 20px 0 0; font: 500 clamp(24px, 3.4vw, 36px)/1.3 Georgia, "Times New Roman", serif; }
+    .evidence { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 32px; }
+    .evidence div { padding: 17px 14px; background: var(--ground); border: 1px solid var(--line); border-radius: 9px; }
+    .evidence b { display: block; margin-bottom: 6px; color: var(--cyan-deep); font: 800 10px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .evidence span { color: var(--body); font-size: 12px; line-height: 1.4; }
+    .warning { margin: 26px 0 0; padding: 17px 20px; background: var(--orange-soft); border-left: 5px solid var(--orange); color: #683618; font-size: 13px; }
+
+    .related { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .related a { min-height: 130px; padding: 20px; background: var(--paper); border: 1px solid var(--line); border-radius: 12px; color: var(--ink); text-decoration: none; }
+    .related a:hover { border-color: var(--cyan); transform: translateY(-2px); }
+    .related strong { display: block; font-size: 14px; }
+    .related span { display: block; margin-top: 8px; color: var(--body); font-size: 12px; }
+
+    footer { padding: 30px 0 50px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+
+    @media (max-width: 960px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; gap: 42px; }
+      .layout { grid-template-columns: 1fr; gap: 44px; }
+      .toc { position: static; columns: 2; }
+      .toc p { column-span: all; }
+      .loop { grid-template-columns: 1fr; }
+      .loop-step::after { content: "↓"; top: auto; right: 50%; bottom: -17px; transform: translateX(50%); }
+      .loop-step:nth-child(7)::after { display: none; }
+      .questions { grid-template-columns: repeat(2, 1fr); }
+      .evidence, .related { grid-template-columns: repeat(2, 1fr); }
+      .participation-chain { grid-template-columns: 1fr; }
+      .participation-chain div { min-height: auto; border-right: 0; border-bottom: 1px solid var(--line); }
+      .participation-chain div:last-child { border-bottom: 0; }
+      .participation-chain div:not(:last-child)::after { content: "↓"; top: auto; right: 50%; bottom: -16px; transform: translateX(50%); }
+    }
+
+    @media (max-width: 680px) {
+      .shell { width: min(100% - 24px, 1220px); }
+      .hero { padding: 44px 24px 28px; border-radius: 18px; }
+      .hero-question { padding: 20px; }
+      .layout { padding-top: 42px; }
+      .toc { columns: 1; }
+      .section-head, .correction-grid, .distinctions, .comparison { grid-template-columns: 1fr; gap: 18px; }
+      .not-this, .lens-grid, .questions, .evidence, .related { grid-template-columns: 1fr; }
+      .not-this div + div { border-left: 0; border-top: 1px solid var(--line); }
+      .case-head { grid-template-columns: 1fr; }
+      .position-b { width: 76px; }
+      .examples { grid-template-columns: 1fr; }
+      .access-bridge, .responsibility-plane { grid-template-columns: 1fr; }
+      .lens:nth-child(odd) { border-right: 0; }
+      .lens:nth-last-child(2) { border-bottom: 1px solid var(--line); }
+      .language-scale { grid-template-columns: 1fr; }
+      .language-scale .arrow { transform: rotate(90deg); }
+      .compass-step { grid-template-columns: 1fr; }
+      .compass-step dt { padding-bottom: 5px; }
+      .compass-step dd { padding-top: 6px; }
+      .distinction ul { columns: 1; }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .loop-step { animation: enter .55s both; }
+      .loop-step:nth-child(2) { animation-delay: .07s; }
+      .loop-step:nth-child(3) { animation-delay: .14s; }
+      .loop-step:nth-child(4) { animation-delay: .21s; }
+      .loop-step:nth-child(5) { animation-delay: .28s; }
+      .loop-step:nth-child(6) { animation-delay: .35s; }
+      .loop-step:nth-child(7) { animation-delay: .42s; }
+      .related a { transition: transform .18s ease, border-color .18s ease; }
+      @keyframes enter { from { opacity: 0; transform: translateY(8px); } }
+    }
+
+    @media print {
+      body { background: white; font-size: 11pt; }
+      .shell { width: 100%; }
+      .utility, .toc { display: none; }
+      .hero { min-height: auto; color: var(--ink); background: white; border: 2px solid var(--ink); box-shadow: none; }
+      .hero-copy > p:last-child, .hero-question .answer { color: var(--body); }
+      .hero-question { border-color: var(--line); background: white; }
+      .hero-question .question { color: var(--ink); }
+      .layout { display: block; padding-top: 40px; }
+      main section { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body id="top">
+  <div class="carried-banner" role="note"><strong>Carried governing page · status approved.</strong> The interpretive rules for reading the Gradient: regulation is not calm, organisation is not behaviour or emotion, graded language, fit versus mismatch, and the sixteen lenses. Carried on 2 September 2026. The canon page summarises it; this is the full statement. <a href="index.html">Back to the Model 2 canon page →</a></div>
+<div class="shell">
+    <nav class="utility" aria-label="Project navigation">
+      <div>
+        <a href="../index.html">← Project map</a>
+        <a href="index.html">Main Gradient</a>
+      </div>
+      <span>Governing premise · Model 2 · Nervous System Gradient</span>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Organism-level model</p>
+        <h1>How the Nervous System Organisation Gradient Models Organism Organisation</h1>
+        <p>The Gradient models how the nervous system reorganises the organism’s available resources and capacities in response to what it detects, evaluates and anticipates—outside the body and within it.</p>
+      </div>
+      <aside class="hero-question" aria-label="The governing question">
+        <p class="label">At every position, ask</p>
+        <p class="question">What problem does the nervous system currently appear to be organising the organism to solve?</p>
+        <p class="answer">The answer frames which capacities are prioritised, maintained, constrained or temporarily deprioritised.</p>
+      </aside>
+    </header>
+
+    <aside class="page-responsibility" aria-label="Page responsibility">
+      <div class="page-responsibility__heading">
+        <p class="page-responsibility__label">Page responsibility · Model 2 governing premise</p>
+        <p class="page-responsibility__scope">Scientific-facing scope · interpretive rules for organism-level organisation, resource allocation, capacity access and evidence-bounded inference</p>
+      </div>
+      <p class="page-responsibility__question"><strong>Governing question</strong>What must remain true whenever the Nervous System Gradient is read, revised or connected to another layer?</p>
+      <div class="page-responsibility__grid">
+        <div class="page-responsibility__item"><strong>This page owns</strong><p>The model’s invariant distinctions, graded language, inference limits and tests for separating adaptive recruitment from persistent pattern.</p></div>
+        <div class="page-responsibility__item"><strong>It receives and governs</strong><p>It receives claim-level limits from the <a href="../evidence/protocol.html">evidence protocol</a> and the shared <a href="../07-reference/sociality.html">human-sociality premise</a>; it governs the <a href="index.html">main Gradient</a> and every Model 2 companion.</p></div>
+        <div class="page-responsibility__item"><strong>It does not establish</strong><p>An additional state table, an individual diagnosis or a completed scientific mechanism. TEG-Blue synthesis remains synthesis.</p></div>
+      </div>
+    </aside>
+
+    <div class="layout">
+      <aside class="toc" aria-label="On this page">
+        <p>On this page</p>
+        <ol>
+          <li><a href="#purpose">Purpose</a></li>
+          <li><a href="#regulation">Regulation ≠ calm</a></li>
+          <li><a href="#allocation">Resource allocation</a></li>
+          <li><a href="#mobilisation">Example: B</a></li>
+          <li><a href="#cognition">Cognition under demand</a></li>
+          <li><a href="#distinctions">Not behaviour or emotion</a></li>
+          <li><a href="#lenses">Sixteen lenses</a></li>
+          <li><a href="#gradient">Changing priorities</a></li>
+          <li><a href="#mismatch">Adaptive vs persistent</a></li>
+          <li><a href="#inner-compass">Coordinated conscious access</a></li>
+          <li><a href="#state-shaped-perception">Perception and responsibility</a></li>
+          <li><a href="#work-rule">Rule for future work</a></li>
+        </ol>
+      </aside>
+
+      <main>
+        <section id="purpose">
+          <div class="section-head">
+            <div><p class="section-label">01 · Purpose</p><h2>Not a scale from good to bad</h2></div>
+            <p>The Gradient is not intended to classify states as simply regulated versus dysregulated, good versus bad, or calm versus stressed.</p>
+          </div>
+          <div class="not-this" aria-label="What the Gradient is not">
+            <div><s>regulated / dysregulated</s></div>
+            <div><s>good / bad</s></div>
+            <div><s>calm / stressed</s></div>
+          </div>
+          <div class="prose">
+            <p>It models something more specific: changing organism-level organisation in relation to detected and predicted conditions. The position does not pronounce whether a person is healthy, rational, moral or safe. It describes an organisation of available capacities that must be interpreted in context.</p>
+          </div>
+        </section>
+
+        <section id="regulation">
+          <div class="section-head">
+            <div><p class="section-label">02 · Core principle</p><h2>Regulation does not mean calm</h2></div>
+            <p>Do not use regulation as a synonym for relaxation, low arousal or parasympathetic dominance.</p>
+          </div>
+          <div class="prose">
+            <p>A nervous system can be highly activated and still be carrying out an adaptive regulatory response. When a genuine threat requires escape, heart rate and respiration increase; metabolic fuel becomes more available; skeletal muscles prepare for movement; attention and perception prioritise relevant cues; cognition organises around the immediate problem; and restorative or other non-urgent processes may be temporarily deprioritised.</p>
+            <p>These changes are not inherently evidence that the organism has become “dysregulated.” They are part of the organism regulating itself for action.</p>
+          </div>
+          <div class="definition">
+            <span class="term">Working definition</span>
+            <p><strong>Regulation</strong> is the ongoing organisation and allocation of biological resources and capacities in relation to current demands.</p>
+          </div>
+          <p class="lead">Arousal alone cannot tell us whether an organisation is adaptive. Consider the situation, proportionality, flexibility, duration, updating and capacity to transition when conditions change.</p>
+        </section>
+
+        <section id="allocation">
+          <div class="section-head">
+            <div><p class="section-label">03 · Resource allocation</p><h2>Finite resources, changing priorities</h2></div>
+            <p>The nervous system does not support every biological function at maximum capacity at the same time. Organisation changes with demand.</p>
+          </div>
+          <div class="resource-list" aria-label="Processes competing for finite resources">
+            <span>movement</span><span>cardiovascular activity</span><span>respiration</span><span>metabolic energy</span><span>attention</span><span>sensory processing</span><span>interoception</span><span>cognition</span><span>memory</span><span>social engagement</span><span>communication</span><span>digestion</span><span>immune activity</span><span>reproductive functions</span><span>growth &amp; maintenance</span><span>repair</span><span>sleep &amp; restoration</span>
+          </div>
+          <div class="loop" aria-label="Recursive organisation sequence">
+            <div class="loop-step"><b>01</b><span>Conditions register</span></div>
+            <div class="loop-step"><b>02</b><span>The situation is evaluated</span></div>
+            <div class="loop-step"><b>03</b><span>Organisational demands change</span></div>
+            <div class="loop-step"><b>04</b><span>Resources and capacities are redistributed</span></div>
+            <div class="loop-step"><b>05</b><span>Physiology, perception, cognition and action readiness change</span></div>
+            <div class="loop-step action"><b>06</b><span>Behaviour or action becomes available</span></div>
+            <div class="loop-step"><b>07</b><span>Organisation updates</span></div>
+          </div>
+          <p class="lead" style="margin-top:18px">This is dynamic and recursive, not a one-way sequence.</p>
+        </section>
+
+        <section id="mobilisation">
+          <div class="section-head">
+            <div><p class="section-label">04 · Worked example</p><h2>B — Mobilisation / Fight–Flight</h2></div>
+            <p>B is an organisation for active protection: increased mobilisation may help change, escape, confront or otherwise manage a threatening situation.</p>
+          </div>
+          <article class="case-study">
+            <header class="case-head">
+              <div class="position-b" aria-hidden="true">B</div>
+              <div>
+                <h3>Biological task</h3>
+                <p>The nervous system has detected or predicted a problem for which increased mobilisation may be useful.</p>
+                <p class="biological-task">Prepare enough energy, attention and physical capacity to change, escape, confront or otherwise actively manage the threatening situation.</p>
+              </div>
+            </header>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Domain</th><th>Typical reorganisation</th><th>Functional purpose</th></tr></thead>
+                <tbody>
+                  <tr><th>Autonomic activity</th><td>Sympathetic mobilisation increases</td><td>Prepare the organism for action</td></tr>
+                  <tr><th>Cardiovascular</th><td>Heart rate, contractility and vascular regulation change</td><td>Support increased metabolic demand</td></tr>
+                  <tr><th>Respiration</th><td>Ventilation increases</td><td>Support mobilisation</td></tr>
+                  <tr><th>Metabolism</th><td>Rapidly usable energy becomes more available</td><td>Fuel action</td></tr>
+                  <tr><th>Skeletal muscle</th><td>Tone and readiness increase</td><td>Run, fight, evade, brace or act</td></tr>
+                  <tr><th>Attention</th><td>Threat-relevant information receives greater priority</td><td>Detect and track the problem</td></tr>
+                  <tr><th>Perception</th><td>Sensitivity and orienting toward relevant cues change</td><td>Locate danger and opportunities for action</td></tr>
+                  <tr><th>Cognition</th><td>Processing becomes increasingly organised around immediate demands</td><td>Solve the defensive problem</td></tr>
+                  <tr><th>Action readiness</th><td>Escape, confrontation, avoidance or protective action becomes more available</td><td>Alter the situation</td></tr>
+                  <tr><th>Digestion / restoration</th><td>May become temporarily less prioritised</td><td>Redirect resources toward immediate demand</td></tr>
+                  <tr><th>Social capacities</th><td>May change according to context and arousal</td><td>Prioritise protection where necessary</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </section>
+
+        <section id="cognition">
+          <div class="section-head">
+            <div><p class="section-label">05 · Important correction</p><h2>The “thinking brain” does not simply switch off</h2></div>
+            <p>Cognition remains part of the organism and can itself be recruited into solving the immediate survival problem.</p>
+          </div>
+          <div class="correction-grid">
+            <div class="avoid">
+              <h3>Avoid</h3>
+              <ul>
+                <li>“the rational brain shuts down”</li>
+                <li>“emotion takes over”</li>
+                <li>“the prefrontal cortex goes offline”</li>
+                <li>“the body stops thinking”</li>
+                <li>“fight-or-flight is dysregulation”</li>
+              </ul>
+            </div>
+            <div class="better">
+              <h3>Use this formulation</h3>
+              <p class="formulation">As defensive demand increases, cognition can become increasingly recruited into solving the immediate survival problem, while some broad, reflective, flexible or long-horizon processing may become harder to access.</p>
+              <p>The exact effect depends on threat intensity, controllability, experience, individual differences and context.</p>
+            </div>
+          </div>
+          <div class="examples" aria-label="Examples of cognition during escape">
+            <div>Track the threat and predict another person’s movement</div>
+            <div>Remember an exit and calculate distance</div>
+            <div>Protect somebody else and decide whether to hide or run</div>
+            <div>Inhibit one action, choose another and update strategy</div>
+          </div>
+        </section>
+
+        <section id="distinctions">
+          <div class="section-head">
+            <div><p class="section-label">06 · Explanatory boundaries</p><h2>Organisation is not behaviour or emotion</h2></div>
+            <p>The Gradient describes underlying organisational conditions and available capacities—not a deterministic behavioural script or one named feeling.</p>
+          </div>
+          <div class="distinctions">
+            <article class="distinction">
+              <h3>B does not mean “running” or “fighting”</h3>
+              <p>One mobilisation pattern can support many behaviours, including:</p>
+              <ul>
+                <li>run</li><li>confront</li><li>orient</li><li>search for an exit</li><li>speak quickly</li><li>become vigilant</li><li>call for help</li><li>protect another</li><li>remain still strategically</li><li>negotiate</li><li>prepare without acting</li>
+              </ul>
+            </article>
+            <article class="distinction">
+              <h3>B does not equal one emotion</h3>
+              <p>Fear, anger, urgency, determination and other experiences can occur within mobilisation. Emotions belong to the information and coordination architecture; the Gradient models the larger organism-level organisation within which emotional, perceptual, cognitive, physiological and behavioural processes operate.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="lenses">
+          <div class="section-head">
+            <div><p class="section-label">07 · Whole-Gradient method</p><h2>Apply the same sixteen lenses everywhere</h2></div>
+            <p>Do not document B physiologically while describing X, A, A↔B, C, D or Z only psychologically. Ask the same organism-level question at every position.</p>
+          </div>
+          <div class="lens-grid">
+            <article class="lens"><b>01</b><div><h3>Organisational problem</h3><p>What environmental or internal demand is the organism responding to?</p></div></article>
+            <article class="lens"><b>02</b><div><h3>Autonomic organisation</h3><p>How does autonomic regulation change?</p></div></article>
+            <article class="lens"><b>03</b><div><h3>Energy allocation</h3><p>Where are metabolic resources being directed?</p></div></article>
+            <article class="lens"><b>04</b><div><h3>Cardiovascular organisation</h3><p>How do circulation and cardiovascular demands change?</p></div></article>
+            <article class="lens"><b>05</b><div><h3>Respiratory organisation</h3><p>How does breathing support the current demand?</p></div></article>
+            <article class="lens"><b>06</b><div><h3>Motor organisation</h3><p>What happens to muscle tone, posture, movement preparation and action readiness?</p></div></article>
+            <article class="lens"><b>07</b><div><h3>Sensory organisation</h3><p>Which information becomes more or less salient?</p></div></article>
+            <article class="lens"><b>08</b><div><h3>Attention</h3><p>What receives priority?</p></div></article>
+            <article class="lens"><b>09</b><div><h3>Interoception</h3><p>How might access to and interpretation of bodily information change?</p></div></article>
+            <article class="lens"><b>10</b><div><h3>Emotional processing</h3><p>What emotional information and action tendencies become particularly relevant?</p></div></article>
+            <article class="lens"><b>11</b><div><h3>Cognition</h3><p>Which cognitive capacities are supported, recruited, narrowed or constrained?</p></div></article>
+            <article class="lens"><b>12</b><div><h3>Social engagement</h3><p>How does availability for connection, communication, cooperation or defensive social behaviour change?</p></div></article>
+            <article class="lens"><b>13</b><div><h3>Non-urgent functions</h3><p>Which maintenance, digestive, reproductive, restorative or other processes may change?</p></div></article>
+            <article class="lens"><b>14</b><div><h3>Action availability</h3><p>What responses does this organisation make easier or harder?</p></div></article>
+            <article class="lens"><b>15</b><div><h3>Updating</h3><p>What information would indicate that the situation has changed?</p></div></article>
+            <article class="lens"><b>16</b><div><h3>Transition / return</h3><p>What allows resources to reorganise when the previous demand is no longer present?</p></div></article>
+          </div>
+        </section>
+
+        <section id="gradient">
+          <div class="section-head">
+            <div><p class="section-label">08 · A gradient, not boxes</p><h2>Patterns have changing borders</h2></div>
+            <p>X, A, A↔B, B, C, D and Z are not seven isolated physiological programmes with exact boundaries.</p>
+          </div>
+          <div class="prose">
+            <p>Transitions can be gradual, rapid, partial, mixed, context-dependent and nonlinear. Multiple systems can change at different rates.</p>
+          </div>
+          <div class="language-scale" aria-label="Preferred and discouraged language">
+            <div class="prefer">
+              <h3>Prefer graded language</h3>
+              <div class="word-cloud"><span>increasingly</span><span>more available</span><span>less available</span><span>prioritised</span><span>constrained</span><span>recruited</span><span>deprioritised</span><span>redistributed</span><span>shifted toward</span></div>
+            </div>
+            <div class="arrow" aria-hidden="true">←</div>
+            <div class="avoid-words">
+              <h3>Avoid unsupported absolutes</h3>
+              <div class="word-cloud"><span>on / off</span><span>completely shuts down</span><span>cannot</span><span>always</span><span>only</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="mismatch">
+          <div class="section-head">
+            <div><p class="section-label">09 · Fit and persistence</p><h2>Distinguish mobilisation from mismatch</h2></div>
+            <p>A defensive organisation is not pathological merely because it is uncomfortable or energetically expensive.</p>
+          </div>
+          <div class="questions" aria-label="Questions for evaluating fit">
+            <div><b>FIT</b>Does the organisation fit the current demand?</div>
+            <div><b>INTENSITY</b>Is its intensity proportionate?</div>
+            <div><b>UPDATING</b>Can it incorporate new information?</div>
+            <div><b>FLEXIBILITY</b>Can organisation change when conditions change?</div>
+            <div><b>RETURN</b>Does mobilisation resolve when it is no longer required?</div>
+          </div>
+          <div class="comparison">
+            <article class="path adaptive">
+              <h3>Appropriate defensive organisation</h3>
+              <p class="path-flow">threat → mobilisation → effective response → updated situation read → transition / return</p>
+            </article>
+            <article class="path persistent">
+              <h3>Persistent or mismatched defensive organisation</h3>
+              <p class="path-flow">threat prediction → mobilisation → prediction remains dominant despite changed conditions → mobilisation persists or reactivates</p>
+              <p>This pattern matters for chronic stress and trauma, but it must not be projected backwards onto normal defensive physiology.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="inner-compass">
+          <div class="section-head">
+            <div><p class="section-label">10 · Model 1 relationship</p><h2>Where coordinated conscious access enters</h2></div>
+            <p>The Nervous System Gradient provides changing biological operating conditions within which coordinated conscious access and ME participation may become more or less available.</p>
+          </div>
+          <dl class="compass-flow">
+            <div class="compass-step"><dt>Information coming in</dt><dd>Sensory and interoceptive information</dd></div>
+            <div class="compass-step"><dt>Evaluation and organisation</dt><dd>Nervous-system assessment and resource allocation</dd></div>
+            <div class="compass-step"><dt>Information generated</dt><dd>Physiological changes, emotions, bodily sensations and action tendencies</dd></div>
+            <div class="compass-step"><dt>Conscious access</dt><dd>What the person can notice, differentiate and interpret</dd></div>
+            <div class="compass-step"><dt>Meaning-making</dt><dd>Cognition, memory, context, prediction and interpretation</dd></div>
+            <div class="compass-step"><dt>Participation</dt><dd>What the person decides to do with the information available</dd></div>
+          </dl>
+          <div class="compass-thesis">
+            <p>The purpose is not to suppress defensive responses and “return to calm.” It is to make visible that the body is continuously reorganising itself in relation to what it detects and predicts. Those changes alter what we <em>feel, notice, think and are prepared to do</em>. Learning to read them gives the conscious person more information with which to understand the situation and participate in what happens next.</p>
+          </div>
+        </section>
+
+        <section id="state-shaped-perception">
+          <div class="section-head">
+            <div><p class="section-label">11 · State-shaped perception and responsibility</p><h2>Organisation shapes the available world—not the acceptable act</h2></div>
+            <p>Protective organisation can change what appears salient, urgent, credible, faint or unavailable. It does not decide what a person must do with that information.</p>
+          </div>
+
+          <div class="reality-thesis">
+            <p class="status-label">TEG-Blue governing boundary</p>
+            <p class="statement">Nervous-system organisation shapes the field of information and action available to ME; it does not author, justify or excuse the behaviour that follows.</p>
+            <p class="status-note">This is an architectural and ethical boundary. Specific claims about attention, perception, memory, affect, action availability and conscious access still require their own evidence status.</p>
+          </div>
+
+          <div class="reality-copy">
+            <p>We do not encounter conditions independently of the organisation through which we meet them. When protection is prioritised, attention may narrow, ambiguity may carry more threat weight, particular memories or interpretations may become easier to access, and some alternatives may become harder to perceive or use.</p>
+            <p>This does not mean the protective reading is false. Danger may be real, and protective organisation may be proportionate. It means that felt certainty alone cannot establish that the person has the complete situation. A fuller read asks what present conditions support, what current organisation may be amplifying or constraining, and what new information could update the interpretation.</p>
+          </div>
+
+          <div class="participation-chain" aria-label="From conditions to behaviour and impact">
+            <div><b>Conditions</b><strong>Information registers</strong><span>Internal, environmental, relational and represented conditions.</span></div>
+            <div><b>Organisation</b><strong>Priorities change</strong><span>Resources, salience, action readiness and available processing reorganise.</span></div>
+            <div><b>Access configuration</b><strong>Information reaches ME unevenly</strong><span>Bodily information, affective sharing and mentalizing may each vary.</span></div>
+            <div><b>ME participation</b><strong>The person may notice, interpret and choose</strong><span>Participation occurs within biological constraints, not outside them.</span></div>
+            <div><b>Separate evidence plane</b><strong>Behaviour produces impact</strong><span>What happened must be assessed directly; it cannot be inferred from organisation.</span></div>
+          </div>
+
+          <div class="access-title">
+            <h3>The three capacities shape access—not character</h3>
+            <p>A configuration describes which information may be readable and usable by ME. It is not a verdict about innocence, guilt, safety, harmfulness, personality or diagnosis.</p>
+          </div>
+          <div class="access-bridge">
+            <article style="--accent:var(--cyan)"><h3>Bodily information access and use</h3><p>Can ME recognise activation, feeling, need, limit, preference and organising pull?</p><p class="capacity-boundary">Reduced access does not cause harm; strong access does not guarantee restraint.</p></article>
+            <article style="--accent:var(--orange)"><h3>Affective-sharing access</h3><p>Can something of another person’s affective experience register while self and other remain distinct?</p><p class="capacity-boundary">Resonance does not guarantee accuracy, concern or an ethical response.</p></article>
+            <article style="--accent:var(--lime)"><h3>Mentalizing access and use</h3><p>Can ME represent and revise another person’s perspective, feeling, intention and likely action?</p><p class="capacity-boundary">Detailed understanding may be reciprocal, defensive or instrumental.</p></article>
+          </div>
+
+          <div class="responsibility-plane">
+            <div class="principle"><h3>Explanation and responsibility belong together—but answer different questions.</h3><p>The Gradient can help explain the field within which a behaviour became available. It cannot determine whether the behaviour was acceptable, erase its impact or speak over the person affected.</p></div>
+            <div class="assessment"><p><strong>Behaviour, power and responsibility must be examined on their own evidence plane:</strong></p><div class="assessment-questions"><span>What was done?</span><span>What impact occurred?</span><span>What power was used?</span><span>What alternatives were available?</span><span>What happened when feedback arrived?</span><span>Did the person stop?</span><span>Did they revise and repair?</span><span>Did the pattern recur or escalate?</span></div></div>
+          </div>
+          <p class="reality-links">Continue to the <a href="../02-model-1-ess-cls-me/me-access.html#capacity-key">three-capacity configuration field</a> and <a href="../07-reference/behaviour.html">Behaviour Across the Gradient</a>.</p>
+        </section>
+
+        <section id="work-rule">
+          <div class="work-rule">
+            <p class="section-label">12 · Rule for future Codex work</p>
+            <h2>Carry this question into every extension</h2>
+            <p class="prompt">What problem is the organism organising for, what resources are being redistributed to meet that problem, what capacities become prioritised or constrained, what information is produced by that reorganisation, and what allows the system to update when conditions change?</p>
+            <div class="evidence" aria-label="Required claim distinctions">
+              <div><b>01</b><span>Well-established empirical evidence</span></div>
+              <div><b>02</b><span>Supported interpretation</span></div>
+              <div><b>03</b><span>Theoretical framework</span></div>
+              <div><b>04</b><span>TEG-Blue synthesis / hypothesis</span></div>
+            </div>
+            <p class="warning"><strong>Boundary:</strong> Do not present a TEG-Blue synthesis as an established neuroscientific mechanism merely because its components are individually supported by research.</p>
+          </div>
+        </section>
+
+        <section aria-labelledby="related-title">
+          <div class="section-head">
+            <div><p class="section-label">Continue through the system</p><h2 id="related-title">Related active pages</h2></div>
+            <p>These pages apply or develop parts of the governing premise.</p>
+          </div>
+          <nav class="related" aria-label="Related pages">
+            <a href="../05-frameworks/F01/timeline.html"><strong>F1 · Evolutionary Capacity Timeline</strong><span>Trace the provisional eight-expansion capacity field without turning Positions into stages.</span></a>
+            <a href="../05-frameworks/F01/crosswalk.html"><strong>F1 → Fluid Gradient Crosswalk</strong><span>See the many-to-many handoff from inherited capacity to present organisation.</span></a>
+            <a href="index.html"><strong>The Nervous System Organisation Gradient</strong><span>See the seven positions across Fluid and Chronic organisation.</span></a>
+            <a href="../02-model-1-ess-cls-me/access.html"><strong>Coordinated conscious access</strong><span>Follow what becomes consciously available to ME and distinguish access from possible participation.</span></a>
+            <a href="autonomic.html"><strong>Autonomic Organisation</strong><span>Examine pathway participation without one-pathway state claims.</span></a>
+            <a href="return.html"><strong>Return to Baseline</strong><span>Trace updating, completion and the reorganisation of resources.</span></a>
+            <a href="../evidence/protocol.html"><strong>Science Grounding Protocol</strong><span>Keep evidence, interpretation and TEG-Blue synthesis distinct.</span></a>
+            <a href="../index.html"><strong>Project Map</strong><span>See every active page, working note and dependency.</span></a>
+          </nav>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      TEG-Blue · Model 2 · Nervous System Gradient · Governing model premise. Use this page when extending, interpreting or linking any Gradient organisation.
+    </footer>
+  </div>
+</body>
+</html>

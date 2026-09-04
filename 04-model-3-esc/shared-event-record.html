@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The TEG-Blue shared event record: the coupling interface through which Model 1 and Model 2 remain visible inside every Emotional–Somatic Cycle moment.">
+  <title>The Shared Event Record · Connecting the Three TEG-Blue Models</title>
+  <link rel="stylesheet" href="../assets/page-responsibility.css">
+  <style>
+    :root {
+      --ink: #0b1f42;
+      --body: #3d4f70;
+      --muted: #71809a;
+      --line: #d8e2ef;
+      --paper: #ffffff;
+      --ground: #f3f6fb;
+      --signal: #9aa9bd;
+      --systems: #12bdd0;
+      --systems-soft: #e8fbfe;
+      --gradient: #a9d84e;
+      --gradient-soft: #f2f9e7;
+      --esc: #ef823a;
+      --esc-soft: #fff2e9;
+      --world: #6d7788;
+      --shadow: 0 18px 52px rgba(11,31,66,.09);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+    body {
+      margin: 0;
+      background:
+        linear-gradient(rgba(11,31,66,.028) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(11,31,66,.028) 1px, transparent 1px),
+        var(--ground);
+      background-size: 26px 26px;
+      color: var(--ink);
+      font: 15px/1.62 ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-underline-offset: 3px; }
+    a:hover { color: #087f91; }
+    a:focus-visible { outline: 3px solid var(--systems); outline-offset: 4px; }
+    h1, h2, h3, .thesis { font-family: ui-serif, Georgia, "Times New Roman", serif; font-weight: 560; letter-spacing: -.025em; }
+    .shell { width: min(1280px, calc(100% - 40px)); margin: 0 auto; padding-bottom: 72px; }
+
+    .utility {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px 22px;
+      padding: 22px 0;
+      color: var(--muted);
+      font: 800 10px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .utility div { display: flex; flex-wrap: wrap; gap: 18px; }
+    .utility a { text-decoration: none; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(300px, .75fr);
+      gap: 54px;
+      align-items: end;
+      min-height: 560px;
+      padding: clamp(48px, 7vw, 86px);
+      border-radius: 26px;
+      background: var(--ink);
+      color: white;
+      box-shadow: var(--shadow);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, transparent 0 9%, rgba(18,189,208,.32) 9% 11%, transparent 11% 17%, rgba(169,216,78,.30) 17% 19%, transparent 19% 25%, rgba(239,130,58,.30) 25% 27%, transparent 27%),
+        radial-gradient(circle at 84% 18%, rgba(18,189,208,.22), transparent 29%);
+      opacity: .85;
+      pointer-events: none;
+    }
+    .hero-copy, .hero-rule { position: relative; z-index: 1; }
+    .eyebrow, .section-label, .mini-label {
+      margin: 0 0 12px;
+      color: var(--systems);
+      font: 850 10px/1.35 ui-monospace, SFMono-Regular, Menlo, monospace;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+    h1 { max-width: 850px; margin: 0; font-size: clamp(48px, 7vw, 88px); line-height: .94; }
+    .hero-copy > p:last-child { max-width: 760px; margin: 27px 0 0; color: #ced8e7; font-size: clamp(17px, 2vw, 21px); }
+    .hero-rule { padding: 27px; border: 1px solid rgba(255,255,255,.20); border-top: 6px solid var(--esc); background: rgba(255,255,255,.07); border-radius: 15px; backdrop-filter: blur(8px); }
+    .hero-rule span { display: block; color: var(--esc); font: 850 10px/1.4 ui-monospace, monospace; letter-spacing: .1em; text-transform: uppercase; }
+    .hero-rule p { margin: 13px 0 0; font: 560 23px/1.34 ui-serif, Georgia, serif; }
+
+    .page-responsibility { --pr-accent: var(--esc); }
+    .page-nav { display: flex; flex-wrap: wrap; gap: 7px; margin: 22px 0 0; }
+    .page-nav a { padding: 8px 11px; border: 1px solid var(--line); background: rgba(255,255,255,.82); color: var(--body); font-size: 11px; font-weight: 760; text-decoration: none; }
+
+    section { margin-top: 78px; scroll-margin-top: 24px; }
+    .section-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, .65fr); gap: 52px; align-items: end; margin-bottom: 28px; }
+    h2 { margin: 0; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.03; }
+    h3 { margin: 0; font-size: 22px; line-height: 1.18; }
+    .section-head > p, .lead { margin: 0; color: var(--body); font-size: 17px; }
+
+    .diagnosis {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+    .diagnosis article { padding: clamp(25px, 4vw, 42px); }
+    .diagnosis article + article { border-left: 1px solid var(--line); background: #f8fafc; }
+    .diagnosis h3 { font-size: 28px; }
+    .diagnosis p { margin: 13px 0 0; color: var(--body); }
+    .diagnosis .avoid { color: #9b4c1d; }
+    .diagnosis .keep { color: #087f91; }
+
+    .coupling-rule {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      margin-top: 22px;
+      border: 2px solid var(--ink);
+      background: var(--paper);
+      box-shadow: 12px 12px 0 var(--systems);
+    }
+    .coupling-rule strong { display: grid; place-items: center; padding: 25px; background: var(--ink); color: white; font: 850 11px/1.4 ui-monospace, monospace; letter-spacing: .1em; text-transform: uppercase; text-align: center; }
+    .coupling-rule p { margin: 0; padding: 26px 30px; font: 560 clamp(21px, 3vw, 31px)/1.35 ui-serif, Georgia, serif; }
+
+    .loom-wrap { overflow-x: auto; border: 1px solid var(--line); background: var(--paper); box-shadow: var(--shadow); }
+    .loom { min-width: 1040px; }
+    .loom-head, .loom-row { display: grid; grid-template-columns: 190px repeat(5, minmax(165px, 1fr)); }
+    .loom-head { position: sticky; top: 0; z-index: 2; background: var(--ink); color: white; }
+    .loom-head div { padding: 15px; border-right: 1px solid rgba(255,255,255,.13); }
+    .loom-head div:first-child { color: var(--systems); font: 850 10px/1.4 ui-monospace, monospace; letter-spacing: .09em; text-transform: uppercase; }
+    .loom-head b { display: block; color: var(--esc); font: 850 9px/1.3 ui-monospace, monospace; letter-spacing: .08em; }
+    .loom-head span { display: block; margin-top: 4px; font-size: 12px; }
+    .loom-row { border-top: 1px solid var(--line); --thread: var(--signal); --thread-soft: #f5f7fa; }
+    .loom-row.systems { --thread: var(--systems); --thread-soft: var(--systems-soft); }
+    .loom-row.gradient { --thread: var(--gradient); --thread-soft: var(--gradient-soft); }
+    .loom-row.esc { --thread: var(--esc); --thread-soft: var(--esc-soft); }
+    .loom-row.world { --thread: var(--world); --thread-soft: #f0f2f5; }
+    .loom-owner { position: relative; padding: 20px 17px 20px 25px; background: var(--thread-soft); border-right: 1px solid var(--line); }
+    .loom-owner::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 8px; background: var(--thread); }
+    .loom-owner b { display: block; color: var(--ink); font-size: 13px; }
+    .loom-owner span { display: block; margin-top: 5px; color: var(--body); font-size: 11px; line-height: 1.4; }
+    .loom-cell { min-height: 158px; padding: 18px 15px; border-right: 1px solid var(--line); }
+    .loom-cell:last-child { border-right: 0; }
+    .loom-cell strong { display: block; color: var(--ink); font-size: 12px; line-height: 1.35; }
+    .loom-cell p { margin: 7px 0 0; color: var(--body); font-size: 11px; line-height: 1.46; }
+    .loom-caption { margin: 12px 0 0; color: var(--muted); font-size: 12px; }
+
+    .record {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .record article { display: grid; grid-template-columns: 56px 1fr; gap: 17px; padding: 23px; border: 1px solid var(--line); border-top: 6px solid var(--accent); background: var(--paper); }
+    .record b { display: grid; place-items: center; width: 48px; height: 48px; border: 2px solid var(--accent); color: var(--ink); border-radius: 50%; font: 850 11px/1 ui-monospace, monospace; }
+    .record h3 { font-size: 19px; }
+    .record p { margin: 7px 0 0; color: var(--body); font-size: 12px; }
+    .record .owner { display: block; margin-top: 11px; color: var(--muted); font: 800 9px/1.35 ui-monospace, monospace; letter-spacing: .07em; text-transform: uppercase; }
+
+    .update-map { display: grid; grid-template-columns: minmax(220px, .65fr) minmax(0, 1.35fr); overflow: hidden; border: 1px solid var(--line); background: var(--paper); }
+    .update-source { display: flex; flex-direction: column; justify-content: space-between; gap: 30px; padding: 34px; background: var(--ink); color: white; }
+    .update-source h3 { font-size: 34px; }
+    .update-source p { margin: 10px 0 0; color: #c9d4e3; }
+    .update-source .arrow { color: var(--esc); font: 850 11px/1.4 ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; }
+    .destinations { display: grid; grid-template-columns: repeat(2, 1fr); }
+    .destinations div { padding: 23px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .destinations div:nth-child(even) { border-right: 0; }
+    .destinations div:nth-last-child(-n+2) { border-bottom: 0; }
+    .destinations b { display: block; color: var(--ink); font-size: 12px; }
+    .destinations span { display: block; margin-top: 6px; color: var(--body); font-size: 11px; line-height: 1.45; }
+    .trajectory-bridge { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px; align-items: center; margin-top: 14px; padding: 18px 20px; border: 1px solid var(--line); border-left: 6px solid var(--esc); background: var(--esc-soft); text-decoration: none; }
+    .trajectory-bridge span { display: block; color: var(--esc); font: 850 9px/1.35 ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; }
+    .trajectory-bridge strong { display: block; margin-top: 6px; font: 560 21px/1.25 ui-serif, Georgia, serif; }
+    .trajectory-bridge p { margin: 6px 0 0; color: var(--body); font-size: 12px; }
+    .trajectory-bridge b { white-space: nowrap; font-size: 11px; }
+
+    .worked { border: 1px solid var(--line); background: var(--paper); box-shadow: var(--shadow); }
+    .worked-head { display: grid; grid-template-columns: 240px 1fr; border-bottom: 1px solid var(--line); }
+    .worked-head div { padding: 27px; background: var(--ink); color: white; }
+    .worked-head p { margin: 0; padding: 27px; color: var(--body); }
+    .worked-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .worked-grid article { padding: 22px; border-right: 1px solid var(--line); }
+    .worked-grid article:last-child { border-right: 0; }
+    .worked-grid .tag { display: inline-block; margin-bottom: 12px; padding: 4px 7px; background: var(--soft); color: var(--ink); font: 850 9px/1.3 ui-monospace, monospace; letter-spacing: .07em; text-transform: uppercase; }
+    .worked-grid h3 { font-size: 18px; }
+    .worked-grid p { margin: 8px 0 0; color: var(--body); font-size: 12px; }
+
+    .boundaries { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .boundaries article { padding: 23px; border: 1px solid var(--line); border-top: 6px solid var(--accent); background: var(--paper); }
+    .boundaries h3 { font-size: 18px; }
+    .boundaries p { margin: 9px 0 0; color: var(--body); font-size: 12px; }
+    .closing { margin: 70px 0 0; padding: 30px; border-left: 7px solid var(--systems); background: var(--paper); font: 560 23px/1.45 ui-serif, Georgia, serif; }
+
+    footer { margin-top: 70px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+
+    @media (max-width: 920px) {
+      .hero, .section-head, .diagnosis, .update-map { grid-template-columns: 1fr; }
+      .hero { min-height: auto; gap: 38px; }
+      .diagnosis article + article { border-top: 1px solid var(--line); border-left: 0; }
+      .worked-grid { grid-template-columns: repeat(2, 1fr); }
+      .worked-grid article:nth-child(2) { border-right: 0; }
+      .worked-grid article:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+    }
+
+    @media (max-width: 650px) {
+      .shell { width: min(100% - 22px, 1280px); }
+      .hero { padding: 42px 24px 28px; border-radius: 18px; }
+      .coupling-rule, .record, .worked-head, .worked-grid, .boundaries, .trajectory-bridge { grid-template-columns: 1fr; }
+      .coupling-rule strong { min-height: 88px; }
+      .worked-grid article, .worked-grid article:nth-child(2) { border-right: 0; border-bottom: 1px solid var(--line); }
+      .worked-grid article:last-child { border-bottom: 0; }
+      .destinations { grid-template-columns: 1fr; }
+      .destinations div, .destinations div:nth-child(even), .destinations div:nth-last-child(-n+2) { border-right: 0; border-bottom: 1px solid var(--line); }
+      .destinations div:last-child { border-bottom: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    @media print {
+      body { background: white; }
+      .shell { width: 100%; }
+      .utility, .page-nav { display: none; }
+      .hero { min-height: auto; color: var(--ink); background: white; border: 2px solid var(--ink); box-shadow: none; }
+      .hero-copy > p:last-child { color: var(--body); }
+      .hero-rule { border-color: var(--line); background: white; }
+      .loom-wrap { overflow: visible; }
+      section { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body id="top">
+  <div class="carried-banner" role="note"><strong>Carried coupling interface · status working.</strong> How the three models describe one changing event: the coupling rule, the moments, the six record fields and what feedback changed. Carried on 2 September 2026. Cross-model, held by Model 3 as the temporal owner. <a href="index.html">Back to the Model 3 canon page →</a></div>
+<div class="shell">
+    <nav class="utility" aria-label="Project navigation">
+      <div><a href="../index.html">← Public architecture</a><a href="../index.html">Project map</a><a href="../01-signal-map/grounding/recruitment-persistence-and-recovery.html">Persistence and recovery</a></div>
+      <div><a href="../02-model-1-ess-cls-me/access.html">Model 1</a><a href="../03-model-2-gradient/index.html">Model 2</a><a href="cycle.html">Model 3</a></div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Shared architecture · coupling interface</p>
+        <h1>How three models describe one changing event.</h1>
+        <p>Model 1 describes how ESS, CLS and ME process information. Model 2 describes how the organism is organised and which capacities are available. The Emotional–Somatic Cycle (ESC) records how both configurations change through time.</p>
+      </div>
+      <aside class="hero-rule" aria-label="The coupling rule">
+        <span>The coupling rule</span>
+        <p>At each recorded moment, ESC identifies the Model 1 processing configuration and Model 2 organisation configuration that are known—and preserves what remains unknown.</p>
+      </aside>
+    </header>
+
+    <aside class="page-responsibility" aria-label="Page responsibility">
+      <div class="page-responsibility__heading">
+        <p class="page-responsibility__label">Page responsibility · Shared event record</p>
+        <p class="page-responsibility__scope">Scientific-facing scope · time-indexed coupling of information processing, organism organisation, action, feedback and environmental change</p>
+      </div>
+      <p class="page-responsibility__question"><strong>Governing question</strong>Which Model 1 processing variables and Model 2 organisation variables must be recorded at each moment so ESC can compare how the same event changes through time?</p>
+      <div class="page-responsibility__grid">
+        <div class="page-responsibility__item"><strong>This page owns</strong><p>The interface between the three models: the common fields, time slices and update destinations used to read one event.</p></div>
+        <div class="page-responsibility__item"><strong>It receives</strong><p>Signal content from the <a href="../01-signal-map/emotion/fluid.html">Signal Map</a>, processing from <a href="../02-model-1-ess-cls-me/index.html">Model 1</a>, organisation from <a href="../03-model-2-gradient/index.html">Model 2</a> and temporal comparison from <a href="cycle.html">ESC</a>.</p></div>
+        <div class="page-responsibility__item"><strong>It does not establish</strong><p>A fourth model, a fixed causal pipeline, a clinical record or a complete mechanism. The fields separate questions; they do not prove answers.</p></div>
+      </div>
+    </aside>
+
+    <nav class="page-nav" aria-label="On this page">
+      <a href="#gap">Why a shared record</a><a href="#loom">Three readings through time</a><a href="#record">Six record fields</a><a href="#updating">What feedback changed</a><a href="#example">Coupled example</a><a href="#boundaries">Model boundaries</a>
+    </nav>
+
+    <main>
+      <section id="gap" aria-labelledby="gap-title">
+        <div class="section-head">
+          <div><p class="section-label">Why the models need a shared record</p><h2 id="gap-title">Links between model pages do not show how the models describe the same event.</h2></div>
+          <p>A model page can mention another model without recording any of its variables. The shared event record keeps the signal, Model 1 processing, Model 2 organisation and ESC timing visible together, so “signal”, “organisation” and “updating” do not become unspecified steps between pages.</p>
+        </div>
+        <div class="diagnosis">
+          <article><p class="mini-label avoid">Avoid</p><h3>Three parallel mini-cycles</h3><p>Model 1, Model 2 and ESC each repeat conditions, action, feedback and learning in their own language. A later framework then has to guess where its variables belong.</p></article>
+          <article><p class="mini-label keep">Keep</p><h3>Three distinct model responsibilities inside one event</h3><p>Model 1 describes processing and participation. Model 2 describes present organisation. ESC compares their changing configurations through time.</p></article>
+        </div>
+        <div class="coupling-rule"><strong>Canonical rule</strong><p>At each ESC moment, record the conditions and signal, the Model 1 processing configuration, the Model 2 organisation configuration and the observable event separately.</p></div>
+      </section>
+
+      <section id="loom" aria-labelledby="loom-title">
+        <div class="section-head">
+          <div><p class="section-label">How the three readings continue through time</p><h2 id="loom-title">As an event changes, processing and organisation remain part of the record.</h2></div>
+          <p>Each column represents another moment in the same event. Model 1 continues to describe processing and participation; Model 2 continues to describe organisation and available capacities; ESC compares both configurations across those moments.</p>
+        </div>
+        <div class="loom-wrap" role="region" aria-label="The shared event loom" tabindex="0">
+          <div class="loom">
+            <div class="loom-head"><div>Record layer</div><div><b>T0</b><span>Entry</span></div><div><b>T1</b><span>Conditions register</span></div><div><b>T2</b><span>Participation and action</span></div><div><b>T3</b><span>Response and feedback</span></div><div><b>T4+</b><span>Later outcome / next entry</span></div></div>
+
+            <div class="loom-row signal">
+              <div class="loom-owner"><b>Signal Map</b><span>Reference · what information may be present</span></div>
+              <div class="loom-cell"><strong>Priorities already carried</strong><p>Residual need, expectation or unfinished signal may enter.</p></div>
+              <div class="loom-cell"><strong>Condition and signal family</strong><p>What bodily or situational change has become relevant?</p></div>
+              <div class="loom-cell"><strong>Signal remains active or changes</strong><p>Action can expose new information without settling it.</p></div>
+              <div class="loom-cell"><strong>Evidence becomes available</strong><p>Did the recorded bodily, material or relational condition change, remain or become clearer?</p></div>
+              <div class="loom-cell"><strong>Completion, persistence or carryover</strong><p>Signal priority may update fully, partly or not yet.</p></div>
+            </div>
+
+            <div class="loom-row systems">
+              <div class="loom-owner"><b>Model 1</b><span>ESS · CLS · ME · processing and participation</span></div>
+              <div class="loom-cell"><strong>Starting processing configuration</strong><p>Learned weighting, prediction and current conscious availability to ME.</p></div>
+              <div class="loom-cell"><strong>Coordinated conscious access</strong><p>Which information registers through ESS, which possibilities are predicted or interpreted through CLS, and what becomes consciously available to ME?</p></div>
+              <div class="loom-cell"><strong>Possible ME participation</strong><p>Which available information can ME notice, hold or question, and which actions can ME choose, inhibit or express?</p></div>
+              <div class="loom-cell"><strong>Feedback representation and use</strong><p>Can ESS register that conditions changed, can CLS revise its interpretation, and can ME use the new information?</p></div>
+              <div class="loom-cell"><strong>Processing change</strong><p>Predictions, associations, meanings, skills or future access may change.</p></div>
+            </div>
+
+            <div class="loom-row gradient">
+              <div class="loom-owner"><b>Model 2</b><span>Position · depth · resources · capacity access</span></div>
+              <div class="loom-cell"><strong>Starting organisation</strong><p>Position, context-specific depth, resources and recovery carried in.</p></div>
+              <div class="loom-cell"><strong>Current reorganisation</strong><p>What problem is the organism organising for and what becomes prioritised?</p></div>
+              <div class="loom-cell"><strong>Available field</strong><p>Which actions and capacities become easier, harder or more costly?</p></div>
+              <div class="loom-cell"><strong>Organisational updating</strong><p>Does the Model 2 organisation configuration hold, intensify, shift or begin to release?</p></div>
+              <div class="loom-cell"><strong>Return, recovery or changed availability</strong><p>Which capacities reopen, which protective processes remain recruited, and which capacities become easier to recruit later?</p></div>
+            </div>
+
+            <div class="loom-row world">
+              <div class="loom-owner"><b>Observable event</b><span>Conditions · behaviour · response · power · impact</span></div>
+              <div class="loom-cell"><strong>Material and relational starting conditions</strong><p>What is happening around and between the people involved?</p></div>
+              <div class="loom-cell"><strong>Change or cue</strong><p>Describe the event without inferring its private meaning.</p></div>
+              <div class="loom-cell"><strong>Action or inhibition</strong><p>What was actually done, not done or imposed?</p></div>
+              <div class="loom-cell"><strong>Environmental and interpersonal response</strong><p>Which external or relational conditions changed, who carried the cost, and did viable refusal remain available?</p></div>
+              <div class="loom-cell"><strong>Impact, recurrence and repair evidence</strong><p>These remain observable questions, not deductions from physiology.</p></div>
+            </div>
+
+            <div class="loom-row esc">
+              <div class="loom-owner"><b>Model 3 · ESC</b><span>Temporal ownership · comparison across moments</span></div>
+              <div class="loom-cell"><strong>Indexes the entry</strong><p>Records what the event begins inside.</p></div>
+              <div class="loom-cell"><strong>Indexes the change</strong><p>Records when the coupled configuration begins to differ.</p></div>
+              <div class="loom-cell"><strong>Indexes route and sequence</strong><p>Follows action, response and interacting changes without assigning one cause.</p></div>
+              <div class="loom-cell"><strong>Compares immediate outcomes</strong><p>Distinguishes pressure reduction, condition change and imposed stability.</p></div>
+              <div class="loom-cell"><strong>Compares longer outcomes</strong><p>Tracks updating, completion, Return, recovery, learning and carryover separately.</p></div>
+            </div>
+          </div>
+        </div>
+        <p class="loom-caption">The loom is a recording discipline, not a biological claim that five discrete time points exist. Add or subdivide moments when the event requires it.</p>
+      </section>
+
+      <section id="record" aria-labelledby="record-title">
+        <div class="section-head">
+          <div><p class="section-label">The six fields recorded at each relevant moment</p><h2 id="record-title">Six fields keep the three model readings connected.</h2></div>
+          <p>The record separates event conditions, signal information, Model 1 processing, Model 2 organisation, observable action and impact, and ESC transitions and later outcomes. A Foundational Framework can contribute questions to the relevant fields without recreating the cycle or supplying a missing biological connection.</p>
+        </div>
+        <div class="record">
+          <article style="--accent:var(--world)"><b>01</b><div><h3>Event and conditions</h3><p>Internal, material, relational and represented conditions; relevant timescale; other people and constraints.</p><span class="owner">Direct description · environment / event</span></div></article>
+          <article style="--accent:var(--signal)"><b>02</b><div><h3>Signal and information</h3><p>Signal family, condition or need, possible function, felt differentiation and candidate completion conditions.</p><span class="owner">Signal Map · reference owner</span></div></article>
+          <article style="--accent:var(--systems)"><b>03</b><div><h3>Model 1 configuration</h3><p>ESS contribution, CLS contribution, their agreement or conflict, conscious availability to ME and possible ME participation.</p><span class="owner">The Two Biological Information Systems and ME</span></div></article>
+          <article style="--accent:var(--gradient)"><b>04</b><div><h3>Model 2 configuration</h3><p>Position, Fluid–Chronic depth by relevant process and context, resource allocation, available capacities, fit and flexibility.</p><span class="owner">The Nervous System Organisation Gradient</span></div></article>
+          <article style="--accent:var(--world)"><b>05</b><div><h3>Action, response and impact</h3><p>Action, inhibition, environmental change, other people’s responses, power, cost, viable refusal and observed impact.</p><span class="owner">Event record + separate behaviour evidence plane</span></div></article>
+          <article style="--accent:var(--esc)"><b>06</b><div><h3>Transition and later outcome</h3><p>Immediate and longer changes, their destination, completion, updating, Return, recovery, learning, recurrence and next-entry carryover.</p><span class="owner">Emotional–Somatic Cycle (ESC) · temporal owner</span></div></article>
+        </div>
+      </section>
+
+      <section id="updating" aria-labelledby="updating-title">
+        <div class="section-head">
+          <div><p class="section-label">How feedback can alter different parts of the event record</p><h2 id="updating-title">Record which part changed, when it changed and what remained unchanged.</h2></div>
+          <p>After an action or response produces feedback, the conditions, signal weighting, ESS or CLS processing, ME access, Gradient organisation and available action routes may not all change together. Naming the part that changed prevents “the system updated” from hiding what the feedback altered—and what it did not.</p>
+        </div>
+        <div class="update-map">
+          <div class="update-source"><div><p class="mini-label">Compare evidence from more than one moment</p><h3>Which part of the shared event record changed—and when?</h3><p>First distinguish what changed immediately from what remained different later. Reduced pressure in one moment does not by itself establish learning, Return or completion.</p></div><span class="arrow">Parts that may change →</span></div>
+          <div class="destinations">
+            <div><b>Conditions</b><span>The material, bodily or relational condition changed—or did not.</span></div>
+            <div><b>Signal weighting</b><span>Priority, differentiation, source, target or completion status changed.</span></div>
+            <div><b>ESS processing</b><span>Embodied associations, salience or readiness may become differently recruited.</span></div>
+            <div><b>CLS processing</b><span>Prediction, interpretation, confidence, concept or represented options may change.</span></div>
+            <div><b>Conscious availability to ME</b><span>More or less information may become readable or holdable; possible ME participation remains a separate question.</span></div>
+            <div><b>Gradient organisation</b><span>Position, depth, recruitment threshold, dwell, flexibility or Return availability may change.</span></div>
+            <div><b>Action route</b><span>A skill, inhibition, help-seeking route or other response may become more or less available.</span></div>
+            <div><b>Next-entry carryover</b><span>Residual activation, reduced capacity, expectation, cost or usable learning may enter later conditions.</span></div>
+          </div>
+        </div>
+        <a class="trajectory-bridge" href="../01-signal-map/grounding/recruitment-persistence-and-recovery.html"><span>Scientific trajectory bridge<strong>Carryover is wider than residual activation.</strong><p>Separate continuing conditions, uneven or interrupted recovery, reconstructed demand, changed later recruitment and possible cumulative cost before naming what entered the next event.</p></span><b>Open the trajectory map →</b></a>
+      </section>
+
+      <section id="example" aria-labelledby="example-title">
+        <div class="section-head">
+          <div><p class="section-label">One event recorded through all three models</p><h2 id="example-title">A sound interrupts sleep before its cause is known.</h2></div>
+          <p>This ordinary event shows how Model 1 processing, Model 2 organisation and ESC timing can be recorded together. It does not assign a fixed Position or use one response to explain the whole person.</p>
+        </div>
+        <article class="worked">
+          <header class="worked-head"><div><p class="mini-label">Event</p><h3>Something falls in another room.</h3></div><p>A loud sound becomes relevant before its source is known. The person listens, looks and finds a book on the floor.</p></header>
+          <div class="worked-grid">
+            <article style="--soft:var(--systems-soft)"><span class="tag">Model 1</span><h3>Processing and access</h3><p>ESS may recruit orienting and bodily readiness before a clear explanation. CLS compares possibilities. ME may notice activation, listen and choose to check.</p></article>
+            <article style="--soft:var(--gradient-soft)"><span class="tag">Model 2</span><h3>Present organisation</h3><p>A↔B checking or B protection may become more available. The exact organisation depends on the conditions and cannot be inferred from the action alone.</p></article>
+            <article style="--soft:var(--esc-soft)"><span class="tag">ESC</span><h3>Change through time</h3><p>The sound, checking action and new visual evidence form successive moments. ESC compares what changes immediately and what remains active later.</p></article>
+            <article style="--soft:#f0f2f5"><span class="tag">Coupled outcome</span><h3>Several destinations</h3><p>The external uncertainty changes. CLS may revise the prediction, ESS may reduce priority, organisation may Return and later learning may alter how similar sounds are weighted.</p></article>
+          </div>
+        </article>
+      </section>
+
+      <section id="boundaries" aria-labelledby="boundaries-title">
+        <div class="section-head">
+          <div><p class="section-label">What the shared event record does not combine</p><h2 id="boundaries-title">Connecting the models does not merge their responsibilities.</h2></div>
+          <p>The shared record places the model readings beside one another while keeping their different questions intact: Model 1 describes processing, Model 2 describes organisation and ESC compares change through time.</p>
+        </div>
+        <div class="boundaries">
+          <article style="--accent:var(--systems)"><h3>Model 1 does not own the event timeline.</h3><p>It can describe processing before, during and after action. ESC owns the comparison of those configurations through time.</p></article>
+          <article style="--accent:var(--gradient)"><h3>Model 2 does not prescribe behaviour.</h3><p>It describes the field of resources and capacities currently available. Action, power and impact require direct evidence.</p></article>
+          <article style="--accent:var(--esc)"><h3>ESC does not invent missing states.</h3><p>It indexes changes supplied by the other owners. If the Model 1 or Model 2 field is unknown, the record retains that uncertainty.</p></article>
+        </div>
+        <p class="closing">The three models become one architecture when the same event can change through time without losing sight of how information is being processed or how the organism is organised.</p>
+      </section>
+    </main>
+
+    <footer>TEG-Blue · Shared event record · architectural coupling interface. Working synthesis, not a validated assessment instrument.</footer>
+  </div>
+</body>
+</html>

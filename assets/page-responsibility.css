@@ -1,0 +1,129 @@
+.page-responsibility {
+  --pr-ink: var(--ink, #0b1f42);
+  --pr-body: var(--body, var(--text, #425476));
+  --pr-muted: var(--muted, #71809a);
+  --pr-line: var(--line, #d8e2f0);
+  --pr-paper: var(--paper, #fff);
+  --pr-accent: var(--cyan, #12bdd0);
+  margin: 24px 0 0;
+  border: 1px solid var(--pr-line);
+  border-top: 5px solid var(--pr-accent);
+  background: var(--pr-paper);
+  color: var(--pr-body);
+}
+
+.page-responsibility__heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--pr-line);
+}
+
+.page-responsibility__label,
+.page-responsibility__scope,
+.page-responsibility__question,
+.page-responsibility__item p {
+  margin: 0;
+}
+
+.page-responsibility__label {
+  color: var(--pr-ink);
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.page-responsibility__scope {
+  max-width: 690px;
+  color: var(--pr-muted);
+  font-size: 11px;
+  text-align: right;
+}
+
+.page-responsibility__question {
+  padding: 14px 16px;
+  color: var(--pr-ink);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.page-responsibility__question strong,
+.page-responsibility__item strong {
+  color: var(--pr-ink);
+}
+
+.page-responsibility__question strong {
+  margin-right: 7px;
+}
+
+.page-responsibility__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--pr-line);
+}
+
+.page-responsibility__item {
+  min-width: 0;
+  padding: 14px 16px 16px;
+}
+
+.page-responsibility__item + .page-responsibility__item {
+  border-left: 1px solid var(--pr-line);
+}
+
+.page-responsibility__item strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 11px;
+}
+
+.page-responsibility__item p {
+  font-size: 12px;
+  line-height: 1.48;
+}
+
+.page-responsibility a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+  .page-responsibility__heading {
+    display: block;
+  }
+
+  .page-responsibility__scope {
+    margin-top: 5px;
+    text-align: left;
+  }
+
+  .page-responsibility__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-responsibility__item + .page-responsibility__item {
+    border-top: 1px solid var(--pr-line);
+    border-left: 0;
+  }
+}
+
+@media print {
+  .page-responsibility {
+    break-inside: avoid;
+  }
+}
+
+/* Carried pages: where the page came from and what it is now. */
+.carried-banner {
+  margin: 0 0 20px;
+  padding: 12px 16px;
+  background: #fff6e8;
+  border: 1px solid #f2d09c;
+  border-left: 6px solid #f0a13a;
+  font: 13px/1.5 "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  color: #3a2f1a;
+}
+.carried-banner a { color: inherit; }

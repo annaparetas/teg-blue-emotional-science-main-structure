@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A bridge between F1 evolutionary capacities and the seven present whole-organism configurations of the TEG-Blue Fluid Gradient.">
+<title>F1 → Fluid Gradient · Evolutionary Capacity and Present Organisation Crosswalk</title>
+<!--
+  BRIDGE, NOT SOURCE OF TRUTH.
+
+  This compact table connects the F1 evolutionary-capacity account to the
+  canonical Fluid Gradient. It does not replace the full table in
+  models/02-nervous-system-gradient/index.html and it does not
+  assign one evolutionary origin to one Position. Row wording is intentionally
+  limited to the conceptual handoff between the two systems.
+-->
+<style>
+  :root {
+    --bg:#0c1324; --surface:#111a30; --raised:#17223d; --inset:#080d19;
+    --text:#f4f7fb; --soft:#cbd6e7; --muted:#93a2b9; --hint:#64728a;
+    --line:rgba(170,188,216,.14); --line-strong:rgba(170,188,216,.34);
+    --cyan:#76e2ff; --review:#ffce55; --danger:#ff8da7;
+    --x:#ffffff; --a:#6eeafb; --ab:#8ef3a6; --b:#b6fc50;
+    --c:#e3fd54; --d:#f7d448; --z:#a1adbf;
+    --mono:"JetBrains Mono","SFMono-Regular",Consolas,monospace;
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; padding:0 0 5rem; color:var(--text); background:
+    radial-gradient(circle at 80% -8%,rgba(118,226,255,.09),transparent 34rem),
+    linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px),var(--bg);
+    background-size:auto,32px 32px,32px 32px,auto;
+    font:15px/1.55 Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a { color:inherit; text-underline-offset:3px; }
+  a:focus-visible { outline:3px solid var(--cyan); outline-offset:3px; border-radius:3px; }
+  .wrap { width:min(1500px,calc(100% - 3rem)); margin:0 auto; }
+  .utility { display:flex; justify-content:space-between; flex-wrap:wrap; gap:.8rem 1.5rem; padding:1.3rem 0; color:var(--muted); font:700 10px/1.4 var(--mono); letter-spacing:.09em; text-transform:uppercase; }
+  .utility nav { display:flex; flex-wrap:wrap; gap:1rem; }
+  .utility a { text-decoration:none; }
+  .utility a:hover { color:var(--cyan); }
+  header { max-width:1080px; padding:clamp(3rem,7vw,5.5rem) 0 3.2rem; }
+  .status { display:inline-block; margin-bottom:1.2rem; padding:.38rem .72rem; color:var(--review); border:1px solid rgba(255,206,85,.36); border-radius:999px; background:rgba(255,206,85,.08); font:700 10px/1.2 var(--mono); letter-spacing:.11em; text-transform:uppercase; }
+  .eyebrow,.mini-label { color:var(--cyan); font:700 10px/1.4 var(--mono); letter-spacing:.14em; text-transform:uppercase; }
+  h1 { max-width:1000px; margin:.7rem 0 1.2rem; font-size:clamp(2.15rem,5vw,4.8rem); line-height:.98; letter-spacing:-.05em; }
+  .standfirst { max-width:850px; margin:0; color:var(--soft); font-size:clamp(1.03rem,2vw,1.23rem); }
+  .job { display:grid; grid-template-columns:1fr auto 1fr; gap:1rem; align-items:center; margin-top:2rem; padding:1.2rem 1.3rem; border:1px solid var(--line); border-radius:12px; background:var(--surface); }
+  .job strong { display:block; margin-top:.28rem; }
+  .job .arrow { color:var(--b); font-size:1.45rem; }
+  .table-intro { display:flex; justify-content:space-between; align-items:end; gap:2rem; margin:0 0 1rem; }
+  .table-intro p { max-width:760px; margin:0; color:var(--muted); }
+  .scroll-note { flex:0 0 auto; color:var(--hint); font:700 9px/1.4 var(--mono); letter-spacing:.1em; text-transform:uppercase; }
+  .scroller { overflow:auto; border:1px solid var(--line-strong); border-radius:14px; background:var(--surface); box-shadow:0 24px 70px rgba(0,0,0,.16); scrollbar-color:var(--line-strong) var(--inset); }
+  table { width:100%; min-width:1420px; border-collapse:separate; border-spacing:0; table-layout:fixed; font-size:.83rem; }
+  th,td { padding:.85rem .9rem; border-right:1px solid var(--line); border-bottom:1px solid var(--line); vertical-align:top; text-align:left; }
+  tr > :last-child { border-right:0; }
+  tbody tr:last-child > * { border-bottom:0; }
+  thead th { position:sticky; top:0; z-index:3; width:11.5%; padding:1rem .9rem; background:color-mix(in srgb,var(--accent) 9%,var(--raised)); border-top:4px solid var(--accent); color:var(--text); }
+  thead th.corner { left:0; z-index:5; width:15%; border-top-color:var(--line-strong); background:var(--raised); }
+  .pos-code { display:block; color:var(--accent); font:800 1.2rem/1 var(--mono); }
+  .pos-name { display:block; margin-top:.45rem; font-size:.79rem; line-height:1.25; }
+  tbody th { position:sticky; left:0; z-index:2; width:15%; color:var(--text); background:var(--raised); font-size:.78rem; }
+  tbody th small { display:block; margin-top:.3rem; color:var(--hint); font:600 9px/1.35 var(--mono); letter-spacing:.07em; text-transform:uppercase; }
+  tbody td { color:var(--soft); background:rgba(17,26,48,.78); }
+  tbody tr:nth-child(even) td { background:rgba(23,34,61,.72); }
+  .classification { font-weight:750; }
+  .nondef { color:var(--cyan); }
+  .def { color:var(--danger); }
+  .capacity-list { display:flex; flex-wrap:wrap; gap:.3rem; }
+  .capacity-list a { display:inline-block; padding:.2rem .38rem; border:1px solid var(--line-strong); border-radius:4px; color:var(--soft); background:var(--inset); font:650 9px/1.35 var(--mono); text-decoration:none; }
+  .capacity-list a:hover { border-color:var(--accent); color:var(--accent); }
+  .canonical-link { display:block; color:var(--accent); font-weight:700; text-decoration:none; }
+  .canonical-link:hover { text-decoration:underline; }
+  .canonical-link span { display:block; margin-top:.25rem; color:var(--muted); font-size:.76rem; font-weight:400; }
+  .boundary-row td { color:var(--muted); font-size:.79rem; }
+  .boundary-row th { color:var(--review); }
+  .survival-bridge { margin-top:2rem; padding:1.5rem; border:1px solid var(--line-strong); border-radius:14px; background:var(--inset); }
+  .survival-bridge h2 { margin:.35rem 0 .55rem; font-size:1.35rem; }
+  .survival-bridge > p { max-width:980px; margin:0; color:var(--muted); }
+  .survival-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1px; margin-top:1.2rem; border:1px solid var(--line); background:var(--line); }
+  .survival-card { padding:1.15rem; background:var(--surface); }
+  .survival-card h3 { margin:0 0 .5rem; color:var(--text); font-size:.92rem; }
+  .survival-card p { margin:0; color:var(--muted); font-size:.82rem; }
+  .survival-card .development-handoff { display:inline-block; margin-top:.8rem; color:var(--cyan); font:700 10px/1.4 var(--mono); letter-spacing:.07em; text-decoration:none; text-transform:uppercase; }
+  .survival-card .development-handoff:hover { text-decoration:underline; }
+  .survival-boundary { margin-top:1rem !important; padding-top:1rem; border-top:1px solid var(--line); color:var(--soft) !important; font-size:.86rem; }
+  .survival-boundary strong { color:var(--cyan); }
+  .explanation { display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; margin-top:2rem; }
+  .note { padding:1.25rem 1.35rem; border:1px solid var(--line); border-left:3px solid var(--accent); border-radius:0 10px 10px 0; background:var(--surface); }
+  .note h2 { margin:0 0 .5rem; color:var(--text); font-size:1rem; }
+  .note p { margin:0; color:var(--muted); font-size:.88rem; }
+  .source-rule { margin-top:1.2rem; padding:1.25rem 1.35rem; border:1px dashed var(--line-strong); border-radius:10px; color:var(--muted); background:var(--inset); }
+  .source-rule strong { color:var(--text); }
+  .source-rule a { color:var(--cyan); }
+  footer { margin-top:3.5rem; padding-top:2rem; border-top:1px solid var(--line); color:var(--hint); font-size:.82rem; }
+  @media (max-width:760px) {
+    .wrap { width:min(100% - 2rem,1500px); }
+    .job,.explanation,.survival-grid { grid-template-columns:1fr; }
+    .job .arrow { transform:rotate(90deg); }
+    .table-intro { align-items:start; flex-direction:column; gap:.7rem; }
+  }
+  @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="carried-banner" role="note"><strong>Carried bridge · status working.</strong> The many-to-many handoff from evolutionary capacity to present Fluid organisation. Carried on 2 September 2026. A bridge beside F1, not a second source of truth for the positions. <a href="index.html">Back to the F1 canon page →</a></div>
+<div class="utility">
+    <span>F1 · transition into present organisation</span>
+    <nav aria-label="Related pages">
+      <a href="timeline.html">Evolutionary timeline</a>
+      <a href="../index.html">F1 working account</a>
+      <a href="../../03-model-2-gradient/premise.html">Governing premise</a>
+      <a href="../../03-model-2-gradient/positions.html#panel-fluid">Canonical Fluid table</a>
+    </nav>
+  </div>
+  <header>
+    <div class="status">Bridge table · not a second source of truth</div>
+    <div class="eyebrow">Evolutionary capacity → present whole-organism organisation</div>
+    <h1>How the inherited repertoire participates in the Fluid Gradient.</h1>
+    <p class="standfirst">F1 explains how capacities became available across evolutionary time. The Fluid Gradient explains how those overlapping capacities organise together in a present event. This crosswalk holds the handoff without turning X, A, A↔B, B, C, D and Z into evolutionary stages, biological types or seven isolated systems.</p>
+    <div class="job" aria-label="The two different explanatory jobs connected by this table">
+      <div><span class="mini-label">F1 owns</span><strong>Availability and deep evolutionary foundations</strong></div>
+      <span class="arrow" aria-hidden="true">⇄</span>
+      <div><span class="mini-label">The Fluid Gradient owns</span><strong>Present organisation under changing conditions and capacity</strong></div>
+    </div>
+  </header>
+  <main>
+    <div class="table-intro">
+      <p>The Position order below is the present Fluid Gradient order. It is deliberately different from the timeline order. The evolutionary row lists several contributing capacity families rather than a single “origin.”</p>
+      <span class="scroll-note">Scroll horizontally to read all positions →</span>
+    </div>
+    <div class="scroller" role="region" aria-label="F1 evolutionary capacity to Fluid Gradient position crosswalk" tabindex="0">
+      <table>
+        <thead><tr>
+          <th class="corner" scope="col">Present Fluid Gradient</th>
+          <th scope="col" style="--accent:var(--x)"><span class="pos-code">X</span><span class="pos-name">Available capacity and restoration</span></th>
+          <th scope="col" style="--accent:var(--a)"><span class="pos-code">A</span><span class="pos-name">Available relationship and engagement</span></th>
+          <th scope="col" style="--accent:var(--ab)"><span class="pos-code">A↔B</span><span class="pos-name">Orientation under uncertainty</span></th>
+          <th scope="col" style="--accent:var(--b)"><span class="pos-code">B</span><span class="pos-name">Active immediate protection</span></th>
+          <th scope="col" style="--accent:var(--c)"><span class="pos-code">C</span><span class="pos-name">Sustained anticipatory management</span></th>
+          <th scope="col" style="--accent:var(--d)"><span class="pos-code">D</span><span class="pos-name">Maximum survival action</span></th>
+          <th scope="col" style="--accent:var(--z)"><span class="pos-code">Z</span><span class="pos-name">Conservation under constrained action</span></th>
+        </tr></thead>
+        <tbody>
+          <tr><th scope="row">Environmental conditions<small>Fluid reference territory</small></th><td>Safe to be alone <em>(off the Gradient)</em></td><td>Safe with others</td><td>Safety uncertain</td><td>Threat</td><td>Persistent threat</td><td>Life threat</td><td>Active response unavailable or capacity exceeded <em>(off the Gradient)</em></td></tr>
+          <tr><th scope="row">Nervous-system organisation<small>Canonical model name</small></th><td>Baseline</td><td>Connection / Belonging</td><td>Safety Checking</td><td>Protection / Defence</td><td>Strategic Management</td><td>Power Mobilisation</td><td>Shutdown</td></tr>
+          <tr><th scope="row">Defensive recruitment</th><td class="classification nondef">Non-defensive</td><td class="classification nondef">Non-defensive</td><td class="classification def">Defensive preparation</td><td class="classification def">Defensive mobilisation</td><td class="classification def">Defensive mobilisation</td><td class="classification def">Defensive mobilisation</td><td class="classification def">Defensive conservation</td></tr>
+          <tr>
+            <th scope="row">Present organisational problem<small>What is being made manageable now?</small></th>
+            <td>Maintenance, restoration and readiness when no present demand requires defence.</td>
+            <td>Engagement, play, care, exploration, cooperation and participation while relationship is available.</td>
+            <td>Clarifying whether safety, belonging, access or another valued condition may be changing or at risk.</td>
+            <td>Changing distance, contact, obstruction or exposure under immediate threat.</td>
+            <td>Sustaining protection across time through prediction, sequencing and management of relevant variables.</td>
+            <td>Recruiting extraordinary force or narrowed action when ordinary protection appears insufficient.</td>
+            <td>Holding remaining capacity when active mobilisation is unavailable, unsuccessful or too costly.</td>
+          </tr>
+          <tr><th scope="row">Resource-allocation emphasis<small>Not one measurable energy state</small></th><td>Restoration</td><td>Relational coordination</td><td>Preparation and checking</td><td>Protective mobilisation</td><td>Strategic mobilisation</td><td>Power mobilisation</td><td>Protective conservation</td></tr>
+          <tr>
+            <th scope="row">Evolutionary capacity participation<small>Several threads, never one origin</small></th>
+            <td><div class="capacity-list" style="--accent:var(--x)"><a href="timeline.html#viability">viability</a><a href="timeline.html#learning">learning</a><a href="timeline.html#updating">recovery</a></div></td>
+            <td><div class="capacity-list" style="--accent:var(--a)"><a href="timeline.html#care">care</a><a href="timeline.html#communication">communication</a><a href="timeline.html#learning">learning</a><a href="timeline.html#updating">flexibility</a></div></td>
+            <td><div class="capacity-list" style="--accent:var(--ab)"><a href="timeline.html#orientation">orientation</a><a href="timeline.html#care">relationship</a><a href="timeline.html#communication">communication</a><a href="timeline.html#learning">prediction</a><a href="timeline.html#updating">updating</a></div></td>
+            <td><div class="capacity-list" style="--accent:var(--b)"><a href="timeline.html#orientation">orientation</a><a href="timeline.html#coordination">mobilisation</a><a href="timeline.html#learning">action learning</a><a href="timeline.html#communication">social signals</a></div></td>
+            <td><div class="capacity-list" style="--accent:var(--c)"><a href="timeline.html#coordination">sustained coordination</a><a href="timeline.html#learning">prediction</a><a href="timeline.html#symbolic">symbolic modelling</a><a href="timeline.html#updating">revision</a></div></td>
+            <td><div class="capacity-list" style="--accent:var(--d)"><a href="timeline.html#orientation">action selection</a><a href="timeline.html#coordination">maximum mobilisation</a><a href="timeline.html#learning">learned routes</a><a href="timeline.html#symbolic">symbolic input</a></div></td>
+            <td><div class="capacity-list" style="--accent:var(--z)"><a href="timeline.html#viability">viability</a><a href="timeline.html#coordination">conservation</a><a href="timeline.html#learning">learned conditions</a><a href="timeline.html#updating">re-entry</a></div></td>
+          </tr>
+          <tr>
+            <th scope="row">What lets organisation change?<small>Fluidity / Return connection</small></th>
+            <td>New demand can recruit another organisation; continued safety permits restoration and low-cost readiness.</td>
+            <td>Connection may continue, shift toward X, or reorganise if conditions change.</td>
+            <td>Clarifying information can release checking toward A or recruit active protection.</td>
+            <td>Changed conditions, effective action or new evidence can end immediate protection and open Return.</td>
+            <td>Threat or the need to manage it must change; exhaustion alone is not updating or Return.</td>
+            <td>Return remains unavailable while maximum force is required; blocked action may move toward Z without Return.</td>
+            <td>Orientation, responsiveness and sufficient usable capacity must re-enter; lower output alone does not establish Return.</td>
+          </tr>
+          <tr class="boundary-row">
+            <th scope="row">Evolutionary boundary<small>What the correspondence cannot claim</small></th>
+            <td>X is not the oldest layer, the whole of homeostasis or a passive absence of response.</td>
+            <td>A is not a mammalian invention, attachment defence or proof that a relationship is safe.</td>
+            <td>A↔B is not a discrete evolutionary transition, only interpersonal, or one attachment mechanism.</td>
+            <td>B is not a reptilian or purely sympathetic stage and does not dictate fight, aggression or one behaviour.</td>
+            <td>Cognition participates throughout the Gradient; C is not the most evolved or the only thinking Position.</td>
+            <td>D is not “dominance,” moral strength or a product created by human reflective cognition.</td>
+            <td>Z is not a primitive remainder, one dorsal-vagal mechanism, one kind of immobility or one psychological meaning.</td>
+          </tr>
+          <tr>
+            <th scope="row">Continue to the canonical table<small>Detailed rows live there</small></th>
+            <td><a class="canonical-link" style="--accent:var(--x)" href="../../03-model-2-gradient/positions.html#panel-fluid">Open Fluid X<span>Signals, access, action, Return and grounding</span></a></td>
+            <td><a class="canonical-link" style="--accent:var(--a)" href="../../03-model-2-gradient/positions.html#panel-fluid">Open Fluid A<span>Signals, access, action, Return and grounding</span></a></td>
+            <td><a class="canonical-link" style="--accent:var(--ab)" href="../../03-model-2-gradient/positions.html#panel-fluid">Open Fluid A↔B<span>Signals, access, action, Return and grounding</span></a></td>
+            <td><a class="canonical-link" style="--accent:var(--b)" href="../../03-model-2-gradient/positions.html#panel-fluid">Open Fluid B<span>Signals, access, action, Return and grounding</span></a></td>
+            <td><a class="canonical-link" style="--accent:var(--c)" href="../../03-model-2-gradient/positions.html#panel-fluid">Open Fluid C<span>Signals, access, action, Return and grounding</span></a></td>
+            <td><a class="canonical-link" style="--accent:var(--d)" href="../../03-model-2-gradient/positions.html#panel-fluid">Open Fluid D<span>Signals, access, action, Return and grounding</span></a></td>
+            <td><a class="canonical-link" style="--accent:var(--z)" href="../../03-model-2-gradient/positions.html#panel-fluid">Open Fluid Z<span>Signals, access, action, Return and grounding</span></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <section class="survival-bridge" aria-labelledby="survival-bridge-title">
+      <span class="mini-label">F1 → completion and Return</span>
+      <h2 id="survival-bridge-title">The two survival problems can place the required change in different places.</h2>
+      <p>This is a TEG-Blue synthesis, not a division of emotions into two fixed kinds. The active problem depends on what is at stake, where change is possible and what information would let organisation update. <a href="../../07-reference/sociality.html#proposition">Read the canonical biological premise.</a></p>
+      <div class="survival-grid">
+        <article class="survival-card">
+          <h3>Organism-protection</h3>
+          <p>The relevant condition is not inherently interpersonal. One's own action, environmental change or practical help may alter exposure, resources, obstruction or bodily demand.</p>
+        </article>
+        <article class="survival-card">
+          <h3>Connection-preservation</h3>
+          <p>When the condition is mutual availability, recognition, reciprocity, accountability, trust or repair, one organism cannot produce relational restoration alone.</p>
+        </article>
+        <article class="survival-card">
+          <h3>Early dependency couples both</h3>
+          <p>For dependent young, caregiver connection may also provide warmth, nourishment, protection, orientation and conditions for recovery. Preserving connection can therefore participate directly in organism-protection.</p>
+          <a class="development-handoff" href="../F02/notes/developmental-entries.md#entry-002-borrowing-regulation">Developmental handoff · F2 Entry 002</a>
+        </article>
+      </div>
+      <p class="survival-boundary"><strong>Keep three outcomes separate:</strong> relational restoration; organism-level updating and Return; and Return without relational restoration through grief, an effective boundary, revised expectation or reorganisation. Another nervous system may be required for the first without being required for every form of regulation or Return.</p>
+    </section>
+    <div class="explanation">
+      <article class="note" style="--accent:var(--cyan)"><h2>Why this stays beside F1</h2><p>Its job is to close the evolutionary account: capacities accumulated across deep time, then participate together in present organisation. Keeping the bridge beside F1 makes that handoff visible without turning the governing premise into another seven-column content page.</p></article>
+      <article class="note" style="--accent:var(--b)"><h2>Why the detailed table stays in Model 2</h2><p>The main Gradient owns the changing present configuration: bodily information, emotion, perception, mentalizing, affective sharing, action, updating, Return and repair. Those rows should be revised once in their canonical home, not copied here.</p></article>
+    </div>
+    <div class="source-rule"><strong>Reading rule.</strong> The condition cells are Fluid reference territories; they do not prove what is happening externally. The Position describes organism-level organisation and available capacities—not a person, diagnosis, behaviour, moral category or excuse. Behaviour, power, impact, alternatives, recurrence and repair remain a separate evidence plane. See <a href="../../03-model-2-gradient/premise.html">How the Nervous System Gradient models organism organisation</a>.</div>
+  </main>
+  <footer>F1 · Evolutionary Capacity and Present Organisation Crosswalk · rebuilt 22 August 2026. Source logic: F1 evolutionary framework review, the governing organism-organisation premise and the canonical Fluid Gradient. This file is a bridge, not an independent model definition.</footer>
+</div>
+</body>
+</html>
