@@ -197,13 +197,13 @@
               return '<div class="family" style="--fam:' + col + '"><h3><a href="' + esc(f.canon) + '">' + esc(f.name) + '</a></h3><p class="fam-line">' + esc(line) + "</p>" + assoc +
                 '<ul class="signals">' + f.members.map(function (s) {
                   var sig = D.signals[s];
-                  return '<li><button type="button" class="signal" data-signal="' + s + '" aria-pressed="' + (state.signal === s) + '">' + esc(sig.name) + "</button></li>";
+                  return '<li><button type="button" class="signal" data-signal="' + s + '" aria-controls="record" aria-pressed="' + (state.signal === s) + '">' + esc(sig.name) + "</button></li>";
                 }).join("") + "</ul></div>";
             }).join("") + "</section>";
         }).join("");
         html += '<section class="group group--additional" aria-labelledby="g-additional"><header><h2 id="g-additional">Outside the families</h2><p>Proposed relationships among additional experiences · framework hypothesis under review</p></header>' +
           '<div class="family" style="--fam:var(--fam-additional)"><p class="fam-line">Five experiences TEG-Blue does not place in a family. Each is proposed to occur in relation to an established signal. A related signal does not become the additional experience and is not necessarily its source.</p><ul class="signals">' +
-          D.additional.map(function (a, i) { return '<li><button type="button" class="signal signal--additional" data-additional="' + i + '" aria-pressed="' + (state.signal === "additional:" + i) + '">' + esc(a.name) + "</button></li>"; }).join("") +
+          D.additional.map(function (a, i) { return '<li><button type="button" class="signal signal--additional" data-additional="' + i + '" aria-controls="record" aria-pressed="' + (state.signal === "additional:" + i) + '">' + esc(a.name) + "</button></li>"; }).join("") +
           "</ul></div></section>";
         document.getElementById("structure").innerHTML = html;
       }
@@ -260,6 +260,12 @@
       function render() {
         renderStructure(); renderRecord();
       }
+      function focusRecordTitle() {
+        var title = document.querySelector("#record h2");
+        if (!title) return;
+        title.setAttribute("tabindex", "-1");
+        title.focus();
+      }
       function open(id) {
         state.signal = id;
         if (id) {
@@ -267,6 +273,7 @@
           if (location.hash !== "#" + hash) history.replaceState(null, "", "#" + hash);
         }
         render();
+        focusRecordTitle();
         if (window.innerWidth <= 960) document.getElementById("record").scrollIntoView({ behavior: "smooth", block: "start" });
       }
 
@@ -275,8 +282,8 @@
         open(b.dataset.signal || "additional:" + b.dataset.additional);
       });
       document.getElementById("record").addEventListener("click", function (e) {
-        var t = e.target.closest("[data-tab]"); if (t) { state.plane = t.dataset.tab; save(); render(); return; }
-        var p = e.target.closest("[data-position]"); if (p) { state.position = p.dataset.position; save(); render(); return; }
+        var t = e.target.closest("[data-tab]"); if (t) { state.plane = t.dataset.tab; save(); render(); document.querySelector('[data-tab="' + state.plane + '"]').focus(); return; }
+        var p = e.target.closest("[data-position]"); if (p) { state.position = p.dataset.position; save(); render(); document.querySelector('[data-position="' + state.position + '"]').focus(); return; }
         var o = e.target.closest("[data-open]"); if (o) { e.preventDefault(); open(o.dataset.open); }
       });
       document.getElementById("record").addEventListener("keydown", function (e) {

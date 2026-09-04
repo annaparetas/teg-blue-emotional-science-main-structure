@@ -67,6 +67,25 @@ roster, developed from their existing Fluid definitions. These are working
 framework syntheses. They do not establish that a Gradient Position produces
 an emotion or that an emotion identifies a Position.
 
+## 2026-09-04 · Post-transfer Signal Map review
+
+The Thermal-balance, Visceral-capacity and Restorative-capacity syntheses were
+reviewed against their paper-level orientation and retained as grounded working
+syntheses. Their records keep the established physiology separate from the
+provisional TEG-Blue family groupings, and they do not treat conscious feeling
+as a direct measurement of the regulated condition.
+
+The Chronic roster now states the working Rage–Fury–Frenzy distinctions before
+the matrix: insufficient ordinary protection, sustained force towards a
+perceived danger source, and maximum mobilisation without a viable organised
+route. Individual paper-level evidence for these three labels remains
+unseparated, so the distinctions remain framework language.
+
+The interactive map retained the generated taxonomy and gained explicit
+control-to-record relationships and focus continuity. Selecting a signal now
+moves focus to the resulting record; changing the Fluid/Chronic reading or a
+Chronic reference profile returns focus to the selected control.
+
 ## 2026-09-02 · Transferred into this folder; one home for the emotion list
 
 The families and members now live only on [index.html](../index.html) and
