@@ -321,6 +321,134 @@ h4 { margin: 22px 0 8px; font-size: 14px; }
 .record-grid dd { margin: 7px 0 0; font-size: 14px; line-height: 1.65; }
 .record-links { margin: 0; padding: 14px 26px 18px; font-size: 12px; font-weight: 750; }
 
+/* The homepage map shows conceptual ownership before the detailed reading order. */
+.structure-overview {
+  width: min(1500px, calc(100% - 24px));
+  margin: 22px auto 0;
+  padding: clamp(26px, 3vw, 42px);
+  overflow: hidden;
+  background: #07172f;
+  color: #d3deed;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+.structure-overview__head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 480px);
+  gap: 28px;
+  align-items: end;
+  margin-bottom: 32px;
+}
+.structure-overview__head .section-label { color: #69d9e6; }
+.structure-overview__head h2 {
+  max-width: 700px;
+  margin-bottom: 0;
+  color: white;
+  font-size: clamp(30px, 3vw, 44px);
+}
+.structure-overview__head > p { max-width: 480px; margin: 0; font-size: 14px; }
+
+.architecture-map__viewport {
+  padding: 10px 0 4px;
+  overflow-x: auto;
+  scrollbar-color: rgba(255,255,255,.3) transparent;
+}
+.architecture-map__viewport:focus-visible { outline-color: #69d9e6; }
+.architecture-map { min-width: 1180px; padding: 0 4px 10px; }
+.map-root {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 34px;
+}
+.map-root::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  height: 34px;
+  background: rgba(211,222,237,.55);
+}
+.map-branches {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 28px 0 0;
+  list-style: none;
+}
+.map-branches::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 6.25%;
+  left: 6.25%;
+  height: 1px;
+  background: rgba(211,222,237,.55);
+}
+.map-branch { position: relative; min-width: 0; }
+.map-branch::before {
+  content: "";
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  width: 1px;
+  height: 28px;
+  background: rgba(211,222,237,.55);
+}
+.map-card {
+  position: relative;
+  display: block;
+  min-height: 124px;
+  padding: 16px 14px;
+  color: #d3deed;
+  background: rgba(255,255,255,.075);
+  border: 1px solid rgba(255,255,255,.16);
+  border-top: 4px solid var(--map-accent, var(--cyan));
+  border-radius: 10px;
+  text-decoration: none;
+}
+.map-card:hover {
+  color: white;
+  background: rgba(255,255,255,.12);
+  border-color: var(--map-accent, var(--cyan));
+  transform: translateY(-3px);
+}
+.map-card small {
+  display: block;
+  margin-bottom: 9px;
+  color: color-mix(in srgb, var(--map-accent, var(--cyan)) 76%, white);
+  font: 800 9px/1.3 var(--utility);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.map-card strong { display: block; color: white; font-size: 14px; line-height: 1.25; }
+.map-card span { display: block; margin-top: 8px; color: #aebcd1; font-size: 11px; line-height: 1.4; }
+.map-card--root {
+  width: 236px;
+  min-height: 0;
+  padding: 15px 18px;
+  text-align: center;
+  background: rgba(255,255,255,.13);
+  border-top-color: var(--cyan);
+}
+.map-card--root small { color: #69d9e6; }
+.map-card--root strong { font: 500 20px/1.1 var(--display); }
+.map-card--root span { margin-top: 5px; }
+.map-card--child { margin-top: 34px; background: rgba(24,169,191,.13); }
+.map-card--child::before {
+  content: "";
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  width: 1px;
+  height: 34px;
+  background: rgba(105,217,230,.62);
+}
+
 .architecture-spine {
   position: relative;
   display: grid;
@@ -355,6 +483,20 @@ h4 { margin: 22px 0 8px; font-size: 14px; }
 .spine-node strong { color: var(--ink); }
 .spine-node span { font-size: 13px; }
 .spine-node b { color: var(--node-accent); font: 800 11px/1 var(--utility); }
+.spine-cluster { display: grid; gap: 12px; }
+.spine-node--child {
+  margin-left: 28px;
+  background: linear-gradient(90deg, #edfafd, white 45%);
+}
+.spine-node--child::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -54px;
+  width: 27px;
+  height: 2px;
+  background: #bfeaf0;
+}
 
 .legend { display: flex; flex-wrap: wrap; gap: 10px; }
 .legend span { padding: 8px 11px; background: white; border: 1px solid var(--line); border-radius: 999px; font-size: 12px; }
@@ -390,6 +532,39 @@ body[data-page="inner-compass"] { --page-accent: #5bc9d6; }
   .signal-path li:last-child { border-radius: 14px; }
 }
 
+@media (max-width: 900px) {
+  .structure-overview__head { grid-template-columns: 1fr; align-items: start; }
+  .structure-overview__head > p { max-width: 700px; }
+  .architecture-map__viewport { overflow: visible; }
+  .architecture-map {
+    min-width: 0;
+    padding: 0 0 0 20px;
+    border-left: 2px solid rgba(211,222,237,.42);
+  }
+  .map-root { justify-content: stretch; padding-bottom: 12px; }
+  .map-root::after,
+  .map-branches::before { display: none; }
+  .map-card--root { width: 100%; text-align: left; }
+  .map-branches { grid-template-columns: 1fr; gap: 12px; padding: 0; }
+  .map-branch::before {
+    top: 30px;
+    left: -20px;
+    width: 20px;
+    height: 1px;
+  }
+  .map-card { min-height: 0; }
+  .map-card--child { margin: 12px 0 0 22px; }
+  .map-card--child::before {
+    top: -13px;
+    left: -12px;
+    width: 12px;
+    height: 42px;
+    background: transparent;
+    border-bottom: 1px solid rgba(105,217,230,.62);
+    border-left: 1px solid rgba(105,217,230,.62);
+  }
+}
+
 @media (max-width: 660px) {
   .shell { width: min(100% - 24px, 1240px); }
   .hero { margin-top: 12px; padding: 38px 24px 44px; border-radius: 18px; }
@@ -398,6 +573,10 @@ body[data-page="inner-compass"] { --page-accent: #5bc9d6; }
   .card-grid,
   .card-grid--three { grid-template-columns: 1fr; }
   .spine-node { grid-template-columns: 1fr; gap: 7px; }
+  .spine-node--child { margin-left: 18px; }
+  .spine-node--child::after { left: -44px; width: 17px; }
+  .structure-overview { width: calc(100% - 24px); padding: 24px 18px; border-radius: 18px; }
+  .structure-overview__head { gap: 14px; margin-bottom: 24px; }
   .site-footer__inner { flex-direction: column; }
   .status-table,
   .status-table tbody,
@@ -415,7 +594,8 @@ body[data-page="inner-compass"] { --page-accent: #5bc9d6; }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .spine-node { transition: transform 160ms ease, border-color 160ms ease; }
+  .spine-node,
+  .map-card { transition: transform 160ms ease, border-color 160ms ease, background-color 160ms ease; }
 }
 
 @media print {
@@ -423,6 +603,10 @@ body[data-page="inner-compass"] { --page-accent: #5bc9d6; }
   body { background: white; }
   .hero { margin: 0; box-shadow: none; }
   .content-layout { display: block; padding-top: 40px; }
+  .structure-overview { color: var(--body); background: white; box-shadow: none; }
+  .structure-overview__head h2,
+  .map-card strong { color: var(--ink); }
+  .map-card { color: var(--body); background: white; border-color: var(--line); }
 }
 
 /* ---- Emotional Science additions ------------------------------------ */

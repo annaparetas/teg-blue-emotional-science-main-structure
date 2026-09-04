@@ -1,7 +1,7 @@
 # TEG-Blue Emotional Science
 
-This is the canonical, navigable TEG-Blue site: emotions as information, the
-Emotional Signal Map, three connected models, the twelve frameworks, the
+This is the canonical, navigable TEG-Blue site: emotions as information and
+its Emotional Signal Map, three connected models, the twelve frameworks, the
 Inner Compass with its four modes, and the shared reference distinctions.
 
 The deep research and development work remains active in the sibling
@@ -29,8 +29,8 @@ GLOSSARY.md                    the only terminology authority
 assets/                        one stylesheet, one navigation script
 scripts/                       link checker; carry.py transfers reviewed material from the Development Engine
 foundations/                   what TEG-Blue is, premises, posture, ethics, origins · governs every folder below
-00-emotions-as-information/    canon · grounding · notes
-01-signal-map/                 canon · rosters · grounding · notes
+00-emotions-as-information/    umbrella concept · canon · grounding · notes
+01-signal-map/                 conceptual child of 00 · canon · rosters · grounding · notes
 02-model-1-ess-cls-me/         canon · companions · grounding · notes
 03-model-2-gradient/           canon · companions · grounding · notes
 04-model-3-esc/                canon · cycle page · shared event record · grounding · notes

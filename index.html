@@ -5,14 +5,100 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="TEG-Blue Emotional Science: one folder per concept, one canon page per folder.">
   <title>TEG-Blue Emotional Science</title>
-  <link rel="stylesheet" href="assets/teg-blue.css">
+  <link rel="stylesheet" href="assets/teg-blue.css?v=20260904-structure-map">
 </head>
 <body data-page="home" data-root="">
   <a class="skip-link" href="#main">Skip to content</a>
   <header data-site-header></header>
 
+  <section id="structure-map" class="structure-overview" aria-labelledby="structure-map-title">
+    <div class="structure-overview__head">
+      <div>
+        <p class="section-label">Architecture map</p>
+        <h2 id="structure-map-title">The concepts and where they belong.</h2>
+      </div>
+      <p>Choose any card to open its current site home. The Signal Map belongs inside Emotions as Information; the remaining concepts connect directly to the shared structure.</p>
+    </div>
+
+    <div class="architecture-map__viewport" tabindex="0" aria-label="Scrollable concept map">
+      <nav class="architecture-map" aria-label="TEG-Blue Emotional Science concept structure">
+        <div class="map-root">
+          <a class="map-card map-card--root" href="index.html">
+            <small>TEG-Blue</small>
+            <strong>Emotional Science</strong>
+            <span>Structure</span>
+          </a>
+        </div>
+
+        <ul class="map-branches">
+          <li class="map-branch" style="--map-accent:#087f91">
+            <a class="map-card" href="foundations/index.html">
+              <small>Shared ground</small>
+              <strong>Foundations</strong>
+              <span>Premises · ethics · origins</span>
+            </a>
+          </li>
+          <li class="map-branch map-branch--nested" style="--map-accent:#18a9bf">
+            <a class="map-card" href="00-emotions-as-information/index.html">
+              <small>00</small>
+              <strong>Emotions as Information</strong>
+              <span>The umbrella concept</span>
+            </a>
+            <a class="map-card map-card--child" href="01-signal-map/index.html">
+              <small>01 · belongs inside 00</small>
+              <strong>Emotional Signal Map</strong>
+              <span>Signal groups · families · records</span>
+            </a>
+          </li>
+          <li class="map-branch" style="--map-accent:#8bbf27">
+            <a class="map-card" href="02-model-1-ess-cls-me/index.html">
+              <small>02 · Model 1</small>
+              <strong>ESS · CLS · ME</strong>
+              <span>Information processing and access</span>
+            </a>
+          </li>
+          <li class="map-branch" style="--map-accent:#df8526">
+            <a class="map-card" href="03-model-2-gradient/index.html">
+              <small>03 · Model 2</small>
+              <strong>Gradient</strong>
+              <span>Present organisation</span>
+            </a>
+          </li>
+          <li class="map-branch" style="--map-accent:#c43d83">
+            <a class="map-card" href="04-model-3-esc/index.html">
+              <small>04 · Model 3</small>
+              <strong>ESC</strong>
+              <span>One event through time</span>
+            </a>
+          </li>
+          <li class="map-branch" style="--map-accent:#6857b8">
+            <a class="map-card" href="05-frameworks/index.html">
+              <small>05</small>
+              <strong>F1–F12 Frameworks</strong>
+              <span>Twelve explanatory lenses</span>
+            </a>
+          </li>
+          <li class="map-branch" style="--map-accent:#10a9bb">
+            <a class="map-card" href="06-inner-compass-four-modes/index.html">
+              <small>06</small>
+              <strong>Inner Compass</strong>
+              <span>Four modes · public experience</span>
+            </a>
+          </li>
+          <li class="map-branch" style="--map-accent:#087f91">
+            <a class="map-card" href="07-reference/index.html">
+              <small>07</small>
+              <strong>Reference</strong>
+              <span>Behaviour · responsibility · sociality</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
   <div class="shell">
-    <section class="hero" aria-labelledby="page-title">
+    <section class="hero hero--structure" aria-labelledby="page-title">
       <div class="hero__content">
         <p class="eyebrow">TEG-Blue · Emotional Science</p>
         <h1 id="page-title">A structure for following emotional information through a living person.</h1>
@@ -29,6 +115,7 @@
   <main id="main" class="shell content-layout">
     <aside class="page-toc" aria-label="On this page">
       <strong>On this page</strong>
+      <a href="#structure-map">Architecture map</a>
       <a href="#how-to-read">How to read</a>
       <a href="#architecture">Concepts</a>
       <a href="#status">Status words</a>
@@ -49,11 +136,13 @@
 
       <section id="architecture">
         <p class="section-label">Concepts</p>
-        <h2>The spine is a navigation order, not a sequence emotion follows.</h2>
+        <h2>The map shows where concepts belong, not a sequence an emotion follows.</h2>
         <div class="architecture-spine">
           <a class="spine-node" href="foundations/index.html" style="--node-accent:#087f91"><strong>Foundations</strong><span>What TEG-Blue is, why it exists, the three premises, research posture, ethics, and where it came from. Governs every folder below.</span><b>APPROVED · SYNTHESIS WORKING</b></a>
-          <a class="spine-node" href="00-emotions-as-information/index.html" style="--node-accent:#18a9bf"><strong>00 · Emotions as Information</strong><span>What emotional signals contribute and what they do not establish.</span><b>APPROVED</b></a>
-          <a class="spine-node" href="01-signal-map/index.html" style="--node-accent:#0f9fb3"><strong>01 · Emotional Signal Map</strong><span>Two signal groups, their families, and the one list of signals.</span><b>APPROVED · RECORDS WORKING</b></a>
+          <div class="spine-cluster">
+            <a class="spine-node" href="00-emotions-as-information/index.html" style="--node-accent:#18a9bf"><strong>00 · Emotions as Information</strong><span>The umbrella concept: what emotional signals contribute and what they do not establish.</span><b>APPROVED</b></a>
+            <a class="spine-node spine-node--child" href="01-signal-map/index.html" style="--node-accent:#0f9fb3"><strong>01 · Emotional Signal Map</strong><span>Belongs inside Emotions as Information. Holds the two signal groups, their families, and the one list of signals.</span><b>APPROVED · RECORDS WORKING</b></a>
+          </div>
           <a class="spine-node" href="02-model-1-ess-cls-me/index.html" style="--node-accent:#8bbf27"><strong>02 · Model 1 · ESS · CLS · ME</strong><span>Two forms of information processing, coordinated conscious access, the three capacities, and ME who participates.</span><b>APPROVED · DEFINITIONS WORKING</b></a>
           <a class="spine-node" href="03-model-2-gradient/index.html" style="--node-accent:#df8526"><strong>03 · Model 2 · Gradient</strong><span>How resources and capacities are organised in the present, across seven positions and two reference planes.</span><b>APPROVED · DEFINITIONS WORKING</b></a>
           <a class="spine-node" href="04-model-3-esc/index.html" style="--node-accent:#c43d83"><strong>04 · Model 3 · ESC</strong><span>One event through time: the shared spine, the Fluid and Chronic Cognitive-Override cycles, completion, carryover and the next entry.</span><b>APPROVED · GROUNDING WORKING</b></a>
