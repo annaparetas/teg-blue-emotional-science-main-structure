@@ -13,7 +13,9 @@ This numbered structure was assembled first in the sibling
 `teg-blue-emotional-science/` repository and adopted here on 4 September 2026.
 That repository is migration history after verification; it is not a second
 active site. The transfer register in [STATUS.md](STATUS.md) records what has
-moved and what remains open.
+moved and what remains open. [ENGINE-CONNECTIONS.md](ENGINE-CONNECTIONS.md)
+records the non-destructive relationship between every current Development
+Engine file and the relevant site concept or repository control.
 
 Start with [index.html](index.html).
 
@@ -26,8 +28,9 @@ index.html                     the spine and the reading rule
 README.md                      this file
 STATUS.md                      the only board: approved, open, next, per concept
 GLOSSARY.md                    the only terminology authority
+ENGINE-CONNECTIONS.md          every Engine file and its non-destructive site relationship
 assets/                        one stylesheet, one navigation script
-scripts/                       link checker; carry.py transfers reviewed material from the Development Engine
+scripts/                       link checker; carry tool; Engine-connection builder and validator
 foundations/                   what TEG-Blue is, premises, posture, ethics, origins · governs every folder below
 00-emotions-as-information/    umbrella concept · canon · grounding · notes
 01-signal-map/                 conceptual child of 00 · canon · rosters · grounding · notes

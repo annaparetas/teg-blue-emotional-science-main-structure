@@ -79,6 +79,12 @@ The sibling `teg-blue-emotional-science/` repository supplied the numbered
 site architecture adopted here on 4 September 2026. It remains preserved as
 migration history after this site passes verification.
 
+The complete file-by-file relationship is recorded in
+[ENGINE-CONNECTIONS.md](ENGINE-CONNECTIONS.md). That map does not move, delete,
+rename, replace, hide, archive or reclassify Development Engine files. It names
+the related site concept or repository control while the Engine retains each
+file's content, path, history, ownership and Engine-defined status.
+
 The former flat main structure is preserved at
 `archive/pre-numbered-main-structure-2026-09-04/`, in Git branch
 `codex/pre-numbered-site-migration-2026-09-04`, and in the verified repository
