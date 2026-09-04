@@ -3,6 +3,50 @@
 Dated entries, newest first. A decision recorded here changes the canon page
 only when the page is edited and its "last approved" date moves.
 
+## 2026-09-04 · Map of emotions as a generated view
+
+`map.html` shows the whole map as one navigable structure: two groups, nine
+families, thirty-five signals, the five proposed additional experiences drawn
+outside the families, and one record per signal with its Fluid reading and
+its Chronic reading. It is a view, not a second home. Every card is drawn
+from the rosters and the neurochemistry page by
+`scripts/build-signal-map-data.py` into `data/signals.js`, the same pattern
+the Inner Compass uses for Model 2's rows. Re-run the script after any roster
+edit.
+
+Rules the view keeps visible: a signal's place never changes with the reading
+or the selected Position; the Fluid Position strip shows illustrative
+foregrounding only; the Chronic strip selects a far Chronic reference profile
+to highlight, never a person; Body-condition signals show the roster's note
+instead of a Chronic table. Status: working view.
+
+## 2026-09-04 · Wording pass and site ownership of the four carried pages
+
+The Fluid roster no longer says "one condition, one direction", no longer
+describes the families as built from "the evolved function of each
+emotion-signal", and labels the two survival functions as an organising
+synthesis rather than an exhaustive taxonomy. These are the three phrasings
+the F1 and F2 connections note of 20 August flagged as sounding more settled
+than the evidence allows. The family table and family intros had already been
+decoupled from Positions on 2 September; the copies in the Development
+Engine's working tree still carry the older coupled wording and are not
+edited.
+
+The neurochemistry grounding page now says each Emotion entry transfers "the
+earlier synthesis written under Fluid reference A" (and A↔B, B, D) instead of
+"the earlier Organisation A synthesis", and that a peripheral concentration
+cannot identify "a Gradient Position" instead of "Organisation A". The family
+headers say the Fluid reference is characteristic and illustrative.
+
+The four carried Signal Map pages (Fluid roster, Chronic roster,
+neurochemistry, recruitment bridge) are now site-owned. `scripts/carry.py`
+keeps them in the manifest for provenance and link mapping but skips them on
+every run, so site-side edits are not regenerated away.
+
+Still open from the same note: an upstream F1 and F2 block on the Fluid page
+before the four guiding questions, and a matching bridge on the
+neurochemistry page after the research rule. Not added in this pass.
+
 ## 2026-09-04 · All five Body-condition families now have an initial synthesis
 
 Thermal-balance, Visceral-capacity and Restorative-capacity now have the same
