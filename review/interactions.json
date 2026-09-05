@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Dropdown keyboard, Escape and destination 1440",
+    "passed": true
+  },
+  {
+    "name": "Dials, bands, eight configurations and Compass state 1440",
+    "passed": true
+  },
+  {
+    "name": "Position deep link and reading toggle 1440",
+    "passed": true
+  },
+  {
+    "name": "Dropdown keyboard, Escape and destination 390",
+    "passed": true
+  },
+  {
+    "name": "Dials, bands, eight configurations and Compass state 390",
+    "passed": true
+  },
+  {
+    "name": "Position deep link and reading toggle 390",
+    "passed": true
+  },
+  {
+    "name": "Reduced motion",
+    "passed": true
+  }
+]

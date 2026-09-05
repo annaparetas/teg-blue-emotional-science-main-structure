@@ -1,0 +1,491 @@
+[
+  {
+    "path": "00-emotions-as-information/index.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../assets/teg-blue.css?v=20260904-model2-menu",
+      "../assets/signal-depth.css?v=20260904-navigation"
+    ]
+  },
+  {
+    "path": "01-signal-map/emotion/chronic.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../../assets/page-responsibility.css",
+      "../../assets/signal-map-switch.css",
+      "../../assets/signal-depth.css?v=20260904-navigation"
+    ]
+  },
+  {
+    "path": "01-signal-map/emotion/fluid.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../../assets/page-responsibility.css",
+      "../../assets/signal-map-switch.css",
+      "../../assets/signal-depth.css?v=20260904-navigation"
+    ]
+  },
+  {
+    "path": "01-signal-map/grounding/neurochemistry.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../../assets/page-responsibility.css",
+      "../../assets/signal-depth.css?v=20260904-navigation"
+    ]
+  },
+  {
+    "path": "01-signal-map/grounding/recruitment-persistence-and-recovery.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../../assets/page-responsibility.css",
+      "../../assets/signal-depth.css?v=20260904-navigation"
+    ]
+  },
+  {
+    "path": "01-signal-map/index.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../assets/teg-blue.css?v=20260904-model2-menu",
+      "../assets/signal-map-switch.css",
+      "../assets/signal-depth.css?v=20260904-navigation"
+    ]
+  },
+  {
+    "path": "01-signal-map/map.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../assets/teg-blue.css?v=20260904-model2-menu",
+      "../assets/signal-depth.css?v=20260904-navigation"
+    ]
+  },
+  {
+    "path": "01-signal-map/notes/sources/chronic-emotional-signals-collection.html",
+    "active": false,
+    "reason": "Historical archive / source snapshot",
+    "stylesheets": []
+  },
+  {
+    "path": "02-model-1-ess-cls-me/access.html",
+    "active": false,
+    "reason": "Compatibility bookmark route",
+    "stylesheets": [
+      "../assets/teg-blue.css?v=20260904-model2-menu"
+    ]
+  },
+  {
+    "path": "02-model-1-ess-cls-me/index.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../assets/teg-blue.css?v=20260904-model2-menu"
+    ]
+  },
+  {
+    "path": "02-model-1-ess-cls-me/me-access.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../assets/teg-blue.css?v=20260904-model2-menu"
+    ]
+  },
+  {
+    "path": "02-model-1-ess-cls-me/notes/sources/relational-capacities.html",
+    "active": false,
+    "reason": "Historical archive / source snapshot",
+    "stylesheets": [
+      "../../../assets/page-responsibility.css"
+    ]
+  },
+  {
+    "path": "02-model-1-ess-cls-me/processing.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../assets/page-responsibility.css"
+    ]
+  },
+  {
+    "path": "03-model-2-gradient/autonomic.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../assets/page-responsibility.css",
+      "../assets/gradient-navigation.css"
+    ]
+  },
+  {
+    "path": "03-model-2-gradient/depth.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../assets/page-responsibility.css",
+      "../assets/gradient-navigation.css"
+    ]
+  },
+  {
+    "path": "03-model-2-gradient/fluid-chronic.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../assets/teg-blue.css?v=20260904-model2-menu",
+      "../assets/gradient-navigation.css"
+    ]
+  },
+  {
+    "path": "03-model-2-gradient/index.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../assets/teg-blue.css?v=20260904-model2-menu",
+      "../assets/gradient-navigation.css"
+    ]
+  },
+  {
+    "path": "03-model-2-gradient/intermediate-layers.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../assets/page-responsibility.css",
+      "../assets/gradient-navigation.css"
+    ]
+  },
+  {
+    "path": "03-model-2-gradient/notes/sources/regulation-and-return-workbench.html",
+    "active": false,
+    "reason": "Historical archive / source snapshot",
+    "stylesheets": []
+  },
+  {
+    "path": "03-model-2-gradient/position.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../assets/teg-blue.css?v=20260904-model2-menu",
+      "../assets/gradient-navigation.css"
+    ]
+  },
+  {
+    "path": "03-model-2-gradient/positions.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../assets/page-responsibility.css",
+      "../assets/model-coupling.css",
+      "../assets/gradient-navigation.css"
+    ]
+  },
+  {
+    "path": "03-model-2-gradient/premise.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../assets/page-responsibility.css",
+      "../assets/gradient-navigation.css"
+    ]
+  },
+  {
+    "path": "03-model-2-gradient/return.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../assets/page-responsibility.css",
+      "../assets/gradient-navigation.css"
+    ]
+  },
+  {
+    "path": "04-model-3-esc/cycle.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../assets/page-responsibility.css"
+    ]
+  },
+  {
+    "path": "04-model-3-esc/index.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../assets/teg-blue.css?v=20260904-model2-menu"
+    ]
+  },
+  {
+    "path": "04-model-3-esc/notes/sources/esc-and-escalation-pathways-archive.html",
+    "active": false,
+    "reason": "Historical archive / source snapshot",
+    "stylesheets": [
+      "../../../assets/page-responsibility.css",
+      "../../../assets/model-coupling.css"
+    ]
+  },
+  {
+    "path": "04-model-3-esc/shared-event-record.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../assets/page-responsibility.css"
+    ]
+  },
+  {
+    "path": "05-frameworks/F01/crosswalk.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": []
+  },
+  {
+    "path": "05-frameworks/F01/index.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../../assets/teg-blue.css?v=20260904-model2-menu"
+    ]
+  },
+  {
+    "path": "05-frameworks/F01/timeline.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": []
+  },
+  {
+    "path": "05-frameworks/F02/diagram.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": []
+  },
+  {
+    "path": "05-frameworks/F02/index.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../../assets/teg-blue.css?v=20260904-model2-menu"
+    ]
+  },
+  {
+    "path": "05-frameworks/F03/index.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../../assets/teg-blue.css?v=20260904-model2-menu"
+    ]
+  },
+  {
+    "path": "05-frameworks/F04/index.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../../assets/teg-blue.css?v=20260904-model2-menu"
+    ]
+  },
+  {
+    "path": "05-frameworks/F05/index.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../../assets/teg-blue.css?v=20260904-model2-menu"
+    ]
+  },
+  {
+    "path": "05-frameworks/F06/index.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../../assets/teg-blue.css?v=20260904-model2-menu"
+    ]
+  },
+  {
+    "path": "05-frameworks/F07/index.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../../assets/teg-blue.css?v=20260904-model2-menu"
+    ]
+  },
+  {
+    "path": "05-frameworks/F08/index.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../../assets/teg-blue.css?v=20260904-model2-menu"
+    ]
+  },
+  {
+    "path": "05-frameworks/F09/index.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../../assets/teg-blue.css?v=20260904-model2-menu"
+    ]
+  },
+  {
+    "path": "05-frameworks/F10/index.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../../assets/teg-blue.css?v=20260904-model2-menu"
+    ]
+  },
+  {
+    "path": "05-frameworks/F11/index.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../../assets/teg-blue.css?v=20260904-model2-menu"
+    ]
+  },
+  {
+    "path": "05-frameworks/F12/index.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../../assets/teg-blue.css?v=20260904-model2-menu"
+    ]
+  },
+  {
+    "path": "05-frameworks/index.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../assets/teg-blue.css?v=20260904-model2-menu"
+    ]
+  },
+  {
+    "path": "06-inner-compass-four-modes/compass.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../assets/teg-blue.css?v=20260904-model2-menu"
+    ]
+  },
+  {
+    "path": "06-inner-compass-four-modes/index.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../assets/teg-blue.css?v=20260904-model2-menu"
+    ]
+  },
+  {
+    "path": "07-reference/behaviour.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../assets/page-responsibility.css"
+    ]
+  },
+  {
+    "path": "07-reference/index.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../assets/teg-blue.css?v=20260904-model2-menu"
+    ]
+  },
+  {
+    "path": "07-reference/sociality.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": []
+  },
+  {
+    "path": "archive/pre-numbered-main-structure-2026-09-04/emotional-signal-map.html",
+    "active": false,
+    "reason": "Historical archive / source snapshot",
+    "stylesheets": [
+      "assets/teg-blue.css"
+    ]
+  },
+  {
+    "path": "archive/pre-numbered-main-structure-2026-09-04/emotions-as-information.html",
+    "active": false,
+    "reason": "Historical archive / source snapshot",
+    "stylesheets": [
+      "assets/teg-blue.css"
+    ]
+  },
+  {
+    "path": "archive/pre-numbered-main-structure-2026-09-04/index.html",
+    "active": false,
+    "reason": "Historical archive / source snapshot",
+    "stylesheets": [
+      "assets/teg-blue.css"
+    ]
+  },
+  {
+    "path": "archive/pre-numbered-main-structure-2026-09-04/inner-compass-four-mode-gradient.html",
+    "active": false,
+    "reason": "Historical archive / source snapshot",
+    "stylesheets": [
+      "assets/teg-blue.css"
+    ]
+  },
+  {
+    "path": "archive/pre-numbered-main-structure-2026-09-04/model-1-two-biological-information-systems-and-me.html",
+    "active": false,
+    "reason": "Historical archive / source snapshot",
+    "stylesheets": [
+      "assets/teg-blue.css"
+    ]
+  },
+  {
+    "path": "archive/pre-numbered-main-structure-2026-09-04/model-2-nervous-system-organisation-gradient.html",
+    "active": false,
+    "reason": "Historical archive / source snapshot",
+    "stylesheets": [
+      "assets/teg-blue.css"
+    ]
+  },
+  {
+    "path": "archive/pre-numbered-main-structure-2026-09-04/model-3-emotional-somatic-cycle.html",
+    "active": false,
+    "reason": "Historical archive / source snapshot",
+    "stylesheets": [
+      "assets/teg-blue.css"
+    ]
+  },
+  {
+    "path": "archive/pre-numbered-main-structure-2026-09-04/twelve-frameworks-map.html",
+    "active": false,
+    "reason": "Historical archive / source snapshot",
+    "stylesheets": [
+      "assets/teg-blue.css"
+    ]
+  },
+  {
+    "path": "evidence/index.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../assets/teg-blue.css?v=20260904-model2-menu"
+    ]
+  },
+  {
+    "path": "evidence/protocol.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../assets/page-responsibility.css"
+    ]
+  },
+  {
+    "path": "foundations/index.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../assets/teg-blue.css?v=20260904-model2-menu"
+    ]
+  },
+  {
+    "path": "index.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "assets/teg-blue.css?v=20260904-model2-menu"
+    ]
+  }
+]

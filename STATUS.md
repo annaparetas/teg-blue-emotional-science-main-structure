@@ -177,3 +177,14 @@ Model 2 now opens a dropdown listing its nine main and supporting HTML pages.
 The first group follows overview → original table → position records. The
 second opens the detailed explanations. On Model 2 pages the menu preserves
 selected position and reading through the existing shared navigation.
+
+
+## 4 September 2026 · Dark presentation prepared for review
+
+Anna requested a site-wide presentation based on the dark Emotional–Somatic Cycle
+page. The isolated implementation uses shared navy surfaces and sans-serif
+headings across active pages, with separate overview, table, record, diagram and
+control layouts. Scientific wording, conceptual ownership, approval dates and
+historical snapshots are unchanged. The [review handoff](review/README.md) records
+coverage, screenshots, validation and remaining browser-verification limits.
+Presentation approval remains with Anna.

@@ -1,0 +1,813 @@
+[
+  {
+    "path": "00-emotions-as-information/index.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "01-signal-map/emotion/chronic.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "01-signal-map/emotion/fluid.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "01-signal-map/grounding/neurochemistry.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "01-signal-map/grounding/recruitment-persistence-and-recovery.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "01-signal-map/index.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "01-signal-map/map.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "02-model-1-ess-cls-me/index.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "02-model-1-ess-cls-me/me-access.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "02-model-1-ess-cls-me/processing.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "03-model-2-gradient/autonomic.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "03-model-2-gradient/depth.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "03-model-2-gradient/fluid-chronic.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "03-model-2-gradient/index.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "03-model-2-gradient/intermediate-layers.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "03-model-2-gradient/position.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "03-model-2-gradient/positions.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "03-model-2-gradient/premise.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "03-model-2-gradient/return.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "04-model-3-esc/cycle.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "04-model-3-esc/index.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "04-model-3-esc/shared-event-record.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F01/crosswalk.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F01/index.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F01/timeline.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [
+      "A.",
+      "B.",
+      "STRONG.",
+      "SPAN."
+    ],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F02/diagram.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F02/index.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F03/index.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F04/index.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F05/index.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F06/index.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F07/index.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F08/index.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F09/index.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F10/index.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F11/index.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F12/index.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/index.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "06-inner-compass-four-modes/compass.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "06-inner-compass-four-modes/index.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "07-reference/behaviour.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "07-reference/index.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "07-reference/sociality.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "evidence/index.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "evidence/protocol.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "foundations/index.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "index.html",
+    "width": 1440,
+    "errors": [],
+    "scrollWidth": 1440,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "00-emotions-as-information/index.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "01-signal-map/emotion/chronic.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "01-signal-map/emotion/fluid.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "01-signal-map/grounding/neurochemistry.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "01-signal-map/grounding/recruitment-persistence-and-recovery.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "01-signal-map/index.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "01-signal-map/map.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "02-model-1-ess-cls-me/index.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "02-model-1-ess-cls-me/me-access.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "02-model-1-ess-cls-me/processing.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "03-model-2-gradient/autonomic.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "03-model-2-gradient/depth.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "03-model-2-gradient/fluid-chronic.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "03-model-2-gradient/index.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "03-model-2-gradient/intermediate-layers.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "03-model-2-gradient/position.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "03-model-2-gradient/positions.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [
+      "DL.return-sequence",
+      "DIV.",
+      "DT.",
+      "SPAN.",
+      "DD.",
+      "DIV.",
+      "DT.",
+      "SPAN."
+    ],
+    "contrast": []
+  },
+  {
+    "path": "03-model-2-gradient/premise.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "03-model-2-gradient/return.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "04-model-3-esc/cycle.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [
+      "DIV.cycle-row header",
+      "DIV.cycle-cell fluid-head",
+      "DIV.cycle-cell chronic-head",
+      "DIV.cycle-row",
+      "DIV.cycle-cell",
+      "B.",
+      "P.",
+      "DIV.cycle-cell"
+    ],
+    "contrast": []
+  },
+  {
+    "path": "04-model-3-esc/index.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "04-model-3-esc/shared-event-record.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [
+      "DIV.loom",
+      "DIV.loom-head",
+      "DIV.",
+      "B.",
+      "SPAN.",
+      "DIV.",
+      "B.",
+      "SPAN."
+    ],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F01/crosswalk.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F01/index.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F01/timeline.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [
+      "A.",
+      "B.",
+      "STRONG.",
+      "SPAN.",
+      "A.",
+      "B.",
+      "STRONG.",
+      "SPAN."
+    ],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F02/diagram.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [
+      "DIV.rivers",
+      "DIV.river-age",
+      "DIV.river-age",
+      "DIV.river-age",
+      "DIV.river-age",
+      "DIV.river-age",
+      "DIV.river-segment",
+      "DIV.river-segment"
+    ],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F02/index.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F03/index.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F04/index.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F05/index.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F06/index.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F07/index.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F08/index.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F09/index.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F10/index.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F11/index.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/F12/index.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "05-frameworks/index.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "06-inner-compass-four-modes/compass.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "06-inner-compass-four-modes/index.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "07-reference/behaviour.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "07-reference/index.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "07-reference/sociality.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [
+      "LI.",
+      "A.",
+      "LI.",
+      "A.",
+      "LI.",
+      "A.",
+      "LI.",
+      "A."
+    ],
+    "contrast": []
+  },
+  {
+    "path": "evidence/index.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "evidence/protocol.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "foundations/index.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  },
+  {
+    "path": "index.html",
+    "width": 390,
+    "errors": [],
+    "scrollWidth": 390,
+    "overflow": [],
+    "contrast": []
+  }
+]

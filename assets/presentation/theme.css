@@ -1,0 +1,76 @@
+/* Cycle-derived site tokens. Loaded last; conceptual accents retain their hues. */
+:root {
+color-scheme: dark;
+ --bg:#080c13; --ground:#080c13; --paper:#0f1520;
+ --surface:#0f1520; --surface-2:#151d2a; --surface-3:#1b2535;
+ --ink:#eef3fb; --ink-2:#dce6f6; --ink-soft:#dce6f6;
+ --body:#bcc7d8; --muted:#a2afc3; --head:#bcc7d8;
+ --line:#2c384b; --line-faint:#222e40; --line-strong:#41516a;
+ --cyan:#56d7e5; --cyan-deep:#70dfec; --violet:#b7a0f0;
+ --magenta:#ef8aba; --red:#f58b95; --radius:12px;
+ --sans:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ --display:var(--sans); --body-font:var(--sans);
+ --shadow:0 18px 48px rgba(0,0,0,.2);
+ --pr-ink:var(--ink); --pr-body:var(--body); --pr-muted:var(--muted); --pr-line:var(--line); --pr-paper:var(--surface); --pr-accent:var(--cyan);
+ --awareness-tint:#142334; --awareness-tint-hover:#1b3046;
+ --empathy-tint:#162b25; --empathy-tint-hover:#203b30;
+--hint:var(--muted); --text-dim:var(--muted); --muted-2:var(--muted); --serif:var(--sans);
+--soft:var(--body); --pending:#30291c; --blue:#83a8ff; --social:#70cddb; --direct:#e8b48b; --evidence:#9bceb0; --theory:#e6c377; --integration:#d4a8cd; --bridge:#bdb0e7;
+--chronic-deep:#f1a36e;
+}
+
+body { background:var(--bg); color:var(--body); font-family:var(--sans); }
+h1,h2,h3,h4 { font-family:var(--sans); color:var(--ink); }
+h1,h2 { font-weight:620; letter-spacing:-.035em; }
+a { color:var(--cyan-deep); }
+a:hover { color:var(--ink); }
+:where(a,button,input,select,textarea,summary,[tabindex]):focus-visible { outline:3px solid #70dfec; outline-offset:4px; }
+.site-header { background:rgba(8,12,19,.96); border-color:var(--line); }
+.hero { background:linear-gradient(135deg,#111a2a,#090d14); border:1px solid var(--line); border-radius:18px; }
+.hero::after { opacity:.35; }
+.hero h1 { font-family:var(--sans); font-weight:620; }
+.page-toc,.primary-nav__submenu { background:var(--surface); }
+.primary-nav a:hover,.primary-nav a[aria-current],.primary-nav__trigger[aria-expanded="true"],.primary-nav__trigger[data-active="true"] { background:var(--surface-3); color:var(--ink); }
+.primary-nav a,.primary-nav__trigger { font-size:12px; letter-spacing:0; font-family:var(--sans); }
+.page-responsibility { --pr-ink:var(--ink); --pr-body:var(--body); --pr-muted:var(--muted); --pr-line:var(--line); --pr-paper:var(--surface); }
+.eyebrow,.section-label,.meta-label,.page-toc strong { letter-spacing:.025em; }
+.article :where(p,li) { max-width:80ch; }
+.signal[aria-pressed="true"] { background:var(--surface-3); color:var(--ink); box-shadow:inset 0 0 0 1px var(--fam); }
+.choice[aria-pressed="true"] { background:var(--surface-3); color:var(--ink); }
+.presentation-table-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; margin-block:16px; }
+.presentation-table-scroll > table { margin-block:0; }
+:where(.wrap,.shell,main,article,section,.card,.record,.content-layout > *) { min-width:0; }
+@media(max-width:660px) {
+ body { overflow-wrap:anywhere; }
+ body:not([data-page]) { padding-inline:12px; }
+ h1 { overflow-wrap:anywhere; }
+ .presentation-table-scroll table { min-width:var(--presentation-table-width,640px); overflow-wrap:normal; word-break:normal; }
+ .site-header { position:relative; }
+ .primary-nav { gap:4px; }
+}
+@media(prefers-reduced-motion:reduce) {
+ html { scroll-behavior:auto; }
+ *,*::before,*::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; }
+}
+
+.hero__cta { color:#0b1f42; }
+.hero__cta small { color:inherit; }
+.question-label,.hinge { color:#0b1f42; }
+.spine-node b { color:color-mix(in srgb,var(--node-accent) 65%,white); }
+.record .eyebrow { color:var(--muted); }
+.addon-strip,.addon-strip a,.addon-strip strong { color:#0b1f42; }
+.configuration .mark span { color:var(--muted); }
+.configuration .mark span[data-on="true"] { color:#0b1f42; }
+
+.route .route-tag { color:color-mix(in srgb,var(--route) 60%,white); }
+s { color:var(--muted); }
+.signal-reading-switch__question,.signal-reading-switch__question::after { background:var(--surface-3); }
+
+.depth-control small { color:color-mix(in srgb,var(--accent) 65%,white); }
+.plane-head span { color:#e2e9f3; }
+.outcome-step b { color:var(--muted); }
+.braid-mark { color:#0b1f42; }
+.map-card small { color:color-mix(in srgb,var(--map-accent,var(--cyan)) 62%,white); }
+.model-coupling__head { background:var(--surface-3); }
+/* Heading family is a site-wide invariant, including carried diagram selectors. */
+h1,h2,h3,h4 { font-family:var(--sans)!important; }

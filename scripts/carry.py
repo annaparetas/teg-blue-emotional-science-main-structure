@@ -456,6 +456,10 @@ def main() -> int:
         text, n = rewrite_links(text, Path(new_rel).suffix, old_rel, new_rel)
         if banner:
             text = add_banner(text, banner)
+        # Presentation is site-owned; source ownership and provenance are unchanged.
+        if Path(new_rel).suffix == ".html":
+            from presentation import attach
+            text = attach(text, new_rel)
         out = ROOT / new_rel
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(text, encoding="utf-8")

@@ -16,9 +16,9 @@ class Handler(SimpleHTTPRequestHandler):
         if parts[0] in {SITE.name, ENGINE.name}:
             root = SITE if parts.pop(0) == SITE.name else ENGINE
         target = root.joinpath(*parts).resolve()
-        if not target.is_relative_to(root) or ".git" in parts:
+        if not target.is_relative_to(root.resolve()) or ".git" in parts:
             return str(SITE / ".unavailable-preview-path")
-        return str(target)
+        return str(root.joinpath(*parts))
 
     def end_headers(self):
         self.send_header("Cache-Control", "no-cache")

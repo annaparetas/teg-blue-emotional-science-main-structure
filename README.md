@@ -165,3 +165,11 @@ biology and Return connect. Generate the position data and readable records with
 ## Connected site and Engine preview
 
 Run `python3 scripts/serve.py` from this repository. The site opens at the preview root; the Engine is mounted under `/inner-compass-nervous-system-organization-gradient/`. This shared server resolves sibling links to ME Access Dials and keeps both repositories on one browser origin. A plain server exposing only the Engine folder cannot follow the consolidated site routes.
+
+
+## Presentation review
+
+The cycle-derived dark presentation is documented in [the review handoff](review/README.md).
+Shared tokens live in `assets/presentation/theme.css`; regenerate the presentation
+adapters and active-page inventory with `python3 scripts/presentation.py`. The
+carry tool reapplies the site presentation without changing source ownership.

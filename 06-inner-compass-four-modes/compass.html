@@ -62,6 +62,13 @@
     @media (max-width: 980px) { .cards { grid-template-columns: 1fr 1fr; } .capacity-strip { grid-template-columns: 1fr; } }
     @media (max-width: 660px) { .cards, .unknown-grid { grid-template-columns: 1fr; } .mode-labels { font-size: 9px; } }
   </style>
+<!-- Site presentation -->
+<link rel="stylesheet" href="../assets/presentation/shared.css">
+<link rel="stylesheet" href="../assets/presentation/overview.css">
+<link rel="stylesheet" href="../assets/presentation/06-inner-compass-four-modes--compass.css">
+<link rel="stylesheet" href="../assets/presentation/theme.css">
+<script defer src="../assets/presentation/layout.js"></script>
+<!-- /Site presentation -->
 </head>
 <body data-page="inner-compass" data-root="../">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -286,7 +293,7 @@
             group[2].forEach(function (card) {
               var cells = rowFor(pl, card[0]); if (!cells) return;
               var text = cells[idx] || "", cap = card[2], attrs = "", badge = "", accessReading = "";
-              if (cap === "concern") { badge = '<span class="band" style="color:#5b6473;background:#f1f3f6;border:1px solid #d8dde5">Relational output · not inferred from the capacities</span>'; }
+              if (cap === "concern") { badge = '<span class="band" style="color:#bbc0c9;background:var(--surface-2);border:1px solid var(--line-strong)">Relational output · not inferred from the capacities</span>'; }
               else if (cap) {
                 attrs = ' data-band="' + caps[cap] + '"';
                 badge = '<span class="band">ME access · ' + esc(C.BANDS[caps[cap]]) + '</span>';
