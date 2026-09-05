@@ -3,6 +3,45 @@
 Dated entries, newest first. A decision recorded here changes the canon page
 only when the page is edited and its "last approved" date moves.
 
+## 2026-09-04 · Connected records for individual signals
+
+Anna approved one connecting record per signal, with consistent questions
+about condition, function, effects, felt access, regulation, updating,
+Fluid–Chronic differences and evidence. This is a reading interface to the
+existing analysis schema, not a replacement schema or new scientific approval.
+
+The generator now produces the interactive records and `signal-records.md`
+from the existing site source rows and biological entries. It includes exact
+source links and explicit unresolved fields. No emotion-specific mechanisms
+were invented to fill those fields. The site-owned source records retain their
+Development Engine provenance. No Engine content was overwritten or promoted.
+
+`SESSION-GUIDE.md` explains reading order, conceptual ownership, the distinction
+between what an emotion contributes to regulation and what regulates its own
+participation, and claim status. Site entry instructions link to the guide.
+
+## 2026-09-04 · Navigation from foundation to biological detail
+
+Anna approved this reading path: Emotions as Information → Emotion Map →
+Fluid or Chronic → Biology and Neurochemistry, with routes back to every
+broader level. Fluid and Chronic remain sibling readings of the same signals.
+
+The map retains its groups, families, brief definitions and signal routes.
+The nine detailed Body-condition records now sit within their existing
+neurochemistry entries; family dynamics and boundaries are preserved in that
+page's family context sections. All remain working grounding. This is a
+site organisation change, not new scientific approval or changed membership.
+
+Both readings now have stable signal anchors. Emotion names in Chronic link
+to the corresponding biology entry, as Fluid names already did. Links carry
+the reading in the URL; biology entries offer explicit Fluid and Chronic
+return links, and the depth navigation restores the selected signal. Body
+signals have no Chronic tables, so their Chronic link opens the overview.
+
+The site-owned source pages preserve their Development Engine provenance:
+`signal-map/fluid.html`, `signal-map/chronic.html` and
+`signal-map/neurochemistry.html`. The Engine files were not changed.
+
 ## 2026-09-04 · Interactive Signal Map as a generated view
 
 `map.html` shows the whole map as one navigable structure: two groups, nine

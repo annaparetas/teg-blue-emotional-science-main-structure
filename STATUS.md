@@ -117,3 +117,22 @@ the deferred decisions.
 - Run `python3 scripts/check-local-links.py` before committing.
 - Development Engine and site changes remain separate and cross through a
   reviewed transfer.
+
+
+## 2026-09-04 · Signal Map navigation and biological detail
+
+Implemented Anna's approved foundation → map → Fluid / Chronic → Biology
+and Neurochemistry navigation. Detailed Body-condition records and family
+dynamics moved from the map into working grounding. Stable signal anchors
+and reading-aware return links connect the rosters and biology records.
+Family membership and scientific approval status are unchanged.
+
+
+## 2026-09-04 · Individual signal records and session guide
+
+Connected records now expose eight consistent questions for all 35 mapped
+signals, exact source links, working biological fields and unresolved accounts.
+`01-signal-map/SESSION-GUIDE.md` is the entry guide for new sessions.
+Scientific gaps remain open; this completes the record interface, not the
+emotion-by-emotion evidence review. Regenerate the data and readable records
+with `python3 scripts/build-signal-map-data.py`.

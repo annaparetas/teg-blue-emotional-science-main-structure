@@ -3,6 +3,13 @@
 Dated entries, newest first. A decision recorded here changes the canon page
 only when the page is edited and its "last approved" date moves.
 
+## 2026-09-04 · Shared depth navigation
+
+Anna approved a connected path from this foundation to the Emotion Map,
+Fluid or Chronic readings, and Biology and Neurochemistry. Shared navigation
+now appears at the top and bottom. The foundation's scientific content and
+its approval status are unchanged.
+
 ## 2026-09-02 · Transferred into this folder
 
 The 2 September 2026 text of the former main-structure page becomes the canon

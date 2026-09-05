@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import re
+import json
 import sys
 from html.parser import HTMLParser
 from pathlib import Path
@@ -36,6 +37,12 @@ class PageParser(HTMLParser):
 def html_data(path: Path) -> tuple[list[str], set[str]]:
     parser = PageParser()
     parser.feed(path.read_text(encoding="utf-8"))
+    if path.resolve() == (ROOT / "01-signal-map/map.html").resolve():
+        # The map resolves hashes against its generated signal registry.
+        data_text = (ROOT / "01-signal-map/data/signals.js").read_text(encoding="utf-8")
+        data = json.loads(data_text.split("window.TEG_SIGNALS = ", 1)[1].rstrip().removesuffix(";"))
+        parser.anchors.update(data["signals"])
+        parser.anchors.update("additional-" + re.sub(r"[^a-z0-9]+", "-", a["name"].lower()).strip("-") for a in data["additional"])
     return parser.links, parser.anchors
 
 

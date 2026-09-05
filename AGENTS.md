@@ -36,3 +36,9 @@ Before editing:
 After editing, verify local links, HTML structure, keyboard access, responsive
 layout, generated Signal Map data, the ownership report and Git scope. Commit
 this repository independently from the active development engine.
+
+
+For work on an individual emotion or signal, begin with
+[the Signal Map session guide](01-signal-map/SESSION-GUIDE.md). It identifies
+source ownership, the generated connecting records and unresolved fields.
+Do not treat a complete record structure as completed scientific review.

@@ -96,7 +96,7 @@ window.TEG_SIGNALS = {
      "name": "Belonging",
      "relationship": "Something valued is sufficiently available and participation is viable.",
      "members_text": "Love, trust, gratitude, compassion, admiration, happiness, joy, pride and hope",
-     "status": "Fluid and Chronic roster readings complete · individual pages pending",
+     "status": "Fluid and Chronic readings complete · individual pages pending",
      "canon": "index.html#belonging",
      "members": [
       "love",
@@ -117,7 +117,7 @@ window.TEG_SIGNALS = {
      "name": "Belonging-at-Risk",
      "relationship": "Safety, belonging, support, standing or another valued condition is uncertain, disrupted, obstructed, lost or unavailable.",
      "members_text": "Shame, guilt, loneliness, disappointment, sadness, grief, confusion, frustration, anxiety and stress",
-     "status": "Fluid and Chronic roster readings complete · individual pages pending",
+     "status": "Fluid and Chronic readings complete · individual pages pending",
      "canon": "index.html#belonging-at-risk",
      "members": [
       "shame",
@@ -139,7 +139,7 @@ window.TEG_SIGNALS = {
      "name": "Threat-Protection",
      "relationship": "A specific danger, violation, contaminating condition or possible source of harm becomes relevant to protection.",
      "members_text": "Fear, anger, disgust and suspicion",
-     "status": "Fluid and Chronic roster readings complete · individual pages pending",
+     "status": "Fluid and Chronic readings complete · individual pages pending",
      "canon": "index.html#threat-protection",
      "members": [
       "fear",
@@ -155,7 +155,7 @@ window.TEG_SIGNALS = {
      "name": "Survival-Rage",
      "relationship": "Ordinary protection is registered as insufficient and maximum-force mobilisation becomes relevant.",
      "members_text": "Rage, fury and frenzy",
-     "status": "Fluid and Chronic roster readings complete · individual pages pending",
+     "status": "Fluid and Chronic readings complete · individual pages pending",
      "canon": "index.html#survival-rage",
      "members": [
       "rage",
@@ -183,7 +183,70 @@ window.TEG_SIGNALS = {
    "chronic": null,
    "grounding": "grounding/neurochemistry.html#breathlessness",
    "grounding_status": "Working synthesis · individual system · papers pending",
-   "family": "essential-supply"
+   "family": "essential-supply",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "Ventilation is not meeting the body’s current oxygen demand.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-breathlessness"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Interrupts other activity until breathing meets the body’s demand.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-breathlessness"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Interrupts other activity until breathing meets the body’s demand.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-breathlessness"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "Air hunger, chest pressure, and urgent need to breathe.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-breathlessness"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "Respiratory demand rises, breathing capacity is constrained, airway conditions change, gas regulation is disrupted or achieved ventilation does not match the drive to breathe.",
+     "status": "Partial account",
+     "source": "grounding/neurochemistry.html#breathlessness"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "Breathing sufficiently meets present demand or the condition interfering with breathing changes; recovery may continue after urgency falls.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-breathlessness"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Body Signals — breathlessness, pain, temperature, elimination, thirst, hunger, tiredness — do not get chronic tables of their own. Their participation can change through several routes. A signal may remain clear, move into the background, be noticed late, become difficult to differentiate, be interpreted differently or guide action without becoming a distinct feeling. Low-output, immobilisation and disconnection patterns can also affect access in different ways; the same report does not establish one mechanism. The nine signals themselves are defined on the Fluid page.",
+     "status": "No individual Chronic record",
+     "source": "emotion/chronic.html#top"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Initial orientation carried forward from the Body–Situation Signals working note. Individual pathways and wording still require paper-level review. Air hunger is not a direct chemical meter. Conscious breathlessness combines chemoreception, respiratory motor command, afferent feedback, context and attention.",
+     "status": "Working synthesis · individual system · papers pending",
+     "source": "grounding/neurochemistry.html#breathlessness"
+    }
+   ],
+   "biology_fields": {
+    "Regulated condition": "Blood and brain CO₂, O₂ and pH; ventilatory demand relative to respiratory capacity.",
+    "Detection": "Peripheral carotid and aortic-body chemoreceptors, central CO₂/H⁺-sensitive brainstem circuits, pulmonary and respiratory-muscle afferents.",
+    "Signalling and regulation": "Glutamatergic respiratory transmission with serotonergic, noradrenergic, orexinergic, cholinergic and other modulation; multiple transmitters may be released by carotid-body glomus cells.",
+    "Corrective condition": "Ventilation and gas exchange sufficient to restore workable CO₂, O₂ and pH, together with reduced respiratory effort.",
+    "Context and limits": "Air hunger is not a direct chemical meter. Conscious breathlessness combines chemoreception, respiratory motor command, afferent feedback, context and attention.",
+    "Evidence status": "Initial orientation carried forward from the Body–Situation Signals working note. Individual pathways and wording still require paper-level review.",
+    "Condition being integrated": "Respiratory drive and demand, ventilation and gas exchange, airway and chest mechanics, respiratory effort and incoming bodily feedback.",
+    "Possible conscious access": "Breathlessness. This can include air hunger or unsatisfied inspiration, increased work or effort, and chest tightness. These qualities need not occur together.",
+    "What may raise priority": "Respiratory demand rises, breathing capacity is constrained, airway conditions change, gas regulation is disrupted or achieved ventilation does not match the drive to breathe.",
+    "What may allow updating": "Ventilation and gas exchange sufficiently meet present demand, respiratory effort reduces or the condition interfering with breathing changes.",
+    "Interpretive boundary": "Breathlessness is a conscious experience, not an oxygen gauge. Underlying respiratory regulation can change without conscious breathlessness, and breathlessness can persist or become intense through several different physiological and contextual routes."
+   }
   },
   "pain": {
    "id": "pain",
@@ -199,7 +262,70 @@ window.TEG_SIGNALS = {
    "chronic": null,
    "grounding": "grounding/neurochemistry.html#pain",
    "grounding_status": "Working synthesis · individual system · papers pending",
-   "family": "bodily-integrity"
+   "family": "bodily-integrity",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "A body region may face injury, tissue damage, or persistent sensitisation.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-pain"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Stops movement, protects the affected region, and supports recovery.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-pain"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Stops movement, protects the affected region, and supports recovery.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-pain"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "Ache, burning, pressure, stabbing, or tenderness.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-pain"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "Possible or continuing harm, inflammation, altered sensitivity, movement, context and attention can increase protective priority.",
+     "status": "Partial account",
+     "source": "grounding/neurochemistry.html#pain"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "Possible harm checked and continuing danger reduced; protection or treatment supports recovery where needed. Pain may remain after the condition changes.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-pain"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Body Signals — breathlessness, pain, temperature, elimination, thirst, hunger, tiredness — do not get chronic tables of their own. Their participation can change through several routes. A signal may remain clear, move into the background, be noticed late, become difficult to differentiate, be interpreted differently or guide action without becoming a distinct feeling. Low-output, immobilisation and disconnection patterns can also affect access in different ways; the same report does not establish one mechanism. The nine signals themselves are defined on the Fluid page.",
+     "status": "No individual Chronic record",
+     "source": "emotion/chronic.html#top"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Initial orientation carried forward from the Body–Situation Signals working note. Individual pathways and wording still require paper-level review. Pain is not a damage meter. Nociception, modulation, conscious pain and behavioural priority are related but distinct.",
+     "status": "Working synthesis · individual system · papers pending",
+     "source": "grounding/neurochemistry.html#pain"
+    }
+   ],
+   "biology_fields": {
+    "Regulated condition": "Actual or possible tissue threat, mechanical, thermal or chemical stimulation, inflammation or sensitisation.",
+    "Detection": "Peripheral nociceptors and tissue- or organ-specific afferents; detection thresholds can change through inflammation and learning.",
+    "Signalling and regulation": "Glutamate and substance P in nociceptive transmission; bradykinin, prostaglandins, serotonin, NGF, cytokines and other inflammatory mediators; descending opioid, monoaminergic and endocannabinoid modulation.",
+    "Corrective condition": "The source checked, damaging conditions stopped where possible, the region protected and recovery supported.",
+    "Context and limits": "Pain is not a damage meter. Nociception, modulation, conscious pain and behavioural priority are related but distinct.",
+    "Evidence status": "Initial orientation carried forward from the Body–Situation Signals working note. Individual pathways and wording still require paper-level review.",
+    "Condition being integrated": "Actual or possible bodily harm, nociceptive and other bodily information, inflammation, the state of the affected region, prior learning and the current situation.",
+    "Possible conscious access": "Pain. It may be experienced in different ways, including aching, burning, pressure, stabbing or tenderness.",
+    "What may raise priority": "Possible or continuing harm, inflammation, altered sensitivity, movement, context and attention can increase protective priority.",
+    "What may allow updating": "The source is checked, continuing harm is reduced, the body is protected or treated where needed, and new bodily or contextual information becomes available.",
+    "Interpretive boundary": "Pain is not nociception or a direct damage meter. Damage can occur without pain, and pain can occur or persist without continuing tissue damage. The experience is real even when its cause or meaning remains uncertain."
+   }
   },
   "overheating": {
    "id": "overheating",
@@ -215,7 +341,70 @@ window.TEG_SIGNALS = {
    "chronic": null,
    "grounding": "grounding/neurochemistry.html#overheating",
    "grounding_status": "Working synthesis · initial paper-level orientation complete",
-   "family": "thermal-balance"
+   "family": "thermal-balance",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "Body temperature is rising beyond its working range.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-overheating"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Drives stopping, heat loss, and movement toward a cooler environment.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-overheating"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Drives stopping, heat loss, and movement toward a cooler environment.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-overheating"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "Heat, flushing, sweating, weakness, and growing discomfort.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-overheating"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "Heat gain or production exceeds effective heat loss, warm sensory information increases, or anticipated exposure makes cooling more relevant.",
+     "status": "Partial account",
+     "source": "grounding/neurochemistry.html#overheating"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "Heat loss restores a workable temperature range; fluid balance or fatigue may still require recovery.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-overheating"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Body Signals — breathlessness, pain, temperature, elimination, thirst, hunger, tiredness — do not get chronic tables of their own. Their participation can change through several routes. A signal may remain clear, move into the background, be noticed late, become difficult to differentiate, be interpreted differently or guide action without becoming a distinct feeling. Low-output, immobilisation and disconnection patterns can also affect access in different ways; the same report does not establish one mechanism. The nine signals themselves are defined on the Fluid page.",
+     "status": "No individual Chronic record",
+     "source": "emotion/chronic.html#top"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Initial paper-level orientation completed 4 September 2026 from thermoregulation reviews. The record is a bounded synthesis, not a systematic review or a complete pathway map. The chemistry supports sensing and correction; no single transmitter is the conscious feeling of overheating.",
+     "status": "Working synthesis · initial paper-level orientation complete",
+     "source": "grounding/neurochemistry.html#overheating"
+    }
+   ],
+   "biology_fields": {
+    "Regulated condition": "Core and skin temperature rising relative to a workable range.",
+    "Detection": "Peripheral thermal afferents and central temperature-sensitive neurons contribute information that reaches thermoregulatory circuits, including the preoptic hypothalamus. Specific channel roles differ by tissue and remain under study.",
+    "Signalling and regulation": "Glutamatergic and peptidergic signalling within thermoregulatory circuits; autonomic cholinergic control of sweating and vascular mechanisms supporting heat loss.",
+    "Corrective condition": "Heat loss through cooling, sweating, reduced activity, vasodilation and movement towards a cooler environment.",
+    "Context and limits": "The chemistry supports sensing and correction; no single transmitter is the conscious feeling of overheating.",
+    "Evidence status": "Initial paper-level orientation completed 4 September 2026 from thermoregulation reviews. The record is a bounded synthesis, not a systematic review or a complete pathway map.",
+    "Condition being integrated": "Skin and internal temperature, environmental heat, heat produced by activity or metabolism, and the body's present capacity to lose heat.",
+    "Possible conscious access": "Feeling too hot, thermal discomfort or an urge to cool. Sweating can accompany the experience but is a regulatory response, not the feeling itself.",
+    "What may raise priority": "Heat gain or production exceeds effective heat loss, warm sensory information increases, or anticipated exposure makes cooling more relevant.",
+    "What may allow updating": "A cooler environment, reduced heat production and effective heat loss make temperature defence less necessary; physiological recovery may continue after discomfort falls.",
+    "Interpretive boundary": "Feeling hot is not a thermometer. Skin temperature, internal temperature, humidity, activity, illness, medication, expectation and context can contribute differently. Reduced discomfort does not prove that internal temperature is safe."
+   }
   },
   "cold": {
    "id": "cold",
@@ -231,7 +420,70 @@ window.TEG_SIGNALS = {
    "chronic": null,
    "grounding": "grounding/neurochemistry.html#cold",
    "grounding_status": "Working synthesis · initial paper-level orientation complete",
-   "family": "thermal-balance"
+   "family": "thermal-balance",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "Body temperature is falling below its working range.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-cold"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Drives covering, movement, and the search for warmth.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-cold"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Drives covering, movement, and the search for warmth.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-cold"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "Chill, shivering, numbness, and contraction toward the centre.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-cold"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "Heat loss exceeds effective conservation or production, cold sensory information increases, or anticipated exposure makes warmth more relevant.",
+     "status": "Partial account",
+     "source": "grounding/neurochemistry.html#cold"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "Warmth restores a workable temperature range; energy expenditure or tissue effects may still require recovery.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-cold"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Body Signals — breathlessness, pain, temperature, elimination, thirst, hunger, tiredness — do not get chronic tables of their own. Their participation can change through several routes. A signal may remain clear, move into the background, be noticed late, become difficult to differentiate, be interpreted differently or guide action without becoming a distinct feeling. Low-output, immobilisation and disconnection patterns can also affect access in different ways; the same report does not establish one mechanism. The nine signals themselves are defined on the Fluid page.",
+     "status": "No individual Chronic record",
+     "source": "emotion/chronic.html#top"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Initial paper-level orientation completed 4 September 2026 from thermoregulation reviews. The record is a bounded synthesis, not a systematic review or a complete pathway map. Cold sensation, core-temperature defence and conscious discomfort can begin at different thresholds.",
+     "status": "Working synthesis · initial paper-level orientation complete",
+     "source": "grounding/neurochemistry.html#cold"
+    }
+   ],
+   "biology_fields": {
+    "Regulated condition": "Skin or core temperature falling relative to a workable range.",
+    "Detection": "Peripheral cold-sensitive afferents, including TRP-channel mechanisms, and central thermoregulatory circuits.",
+    "Signalling and regulation": "Glutamatergic and peptidergic transmission; sympathetic noradrenergic participation in vasoconstriction and thermogenesis; endocrine and metabolic support when demand persists.",
+    "Corrective condition": "Heat conservation and production through shelter, clothing, movement, shivering, vasoconstriction and metabolic thermogenesis.",
+    "Context and limits": "Cold sensation, core-temperature defence and conscious discomfort can begin at different thresholds.",
+    "Evidence status": "Initial paper-level orientation completed 4 September 2026 from thermoregulation reviews. The record is a bounded synthesis, not a systematic review or a complete pathway map.",
+    "Condition being integrated": "Skin and internal temperature, environmental cold, heat loss, available insulation and the body's present capacity to conserve or produce heat.",
+    "Possible conscious access": "Feeling cold, thermal discomfort or an urge for warmth. Shivering can accompany the experience but is a heat-producing response, not the feeling itself.",
+    "What may raise priority": "Heat loss exceeds effective conservation or production, cold sensory information increases, or anticipated exposure makes warmth more relevant.",
+    "What may allow updating": "Warmer conditions, insulation, movement or other effective heat conservation and production make cold defence less necessary.",
+    "Interpretive boundary": "Feeling cold is not a direct reading of core temperature. Skin and internal signals can diverge, and sensation, discomfort, vasoconstriction, shivering and behavioural responses can begin at different points."
+   }
   },
   "needing-to-urinate": {
    "id": "needing-to-urinate",
@@ -247,7 +499,70 @@ window.TEG_SIGNALS = {
    "chronic": null,
    "grounding": "grounding/neurochemistry.html#needing-to-urinate",
    "grounding_status": "Working synthesis · initial paper-level orientation complete",
-   "family": "visceral-capacity"
+   "family": "visceral-capacity",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "The bladder is filling toward the limit it can hold.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-needing-to-urinate"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Builds priority until activity is interrupted and the bladder is emptied.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-needing-to-urinate"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Builds priority until activity is interrupted and the bladder is emptied.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-needing-to-urinate"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "Pelvic pressure and an increasingly urgent need to release.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-needing-to-urinate"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "Continued filling, increasing or sensitised afferent activity, irritation, learned timing, attention or reduced confidence that a suitable opportunity will remain available.",
+     "status": "Partial account",
+     "source": "grounding/neurochemistry.html#needing-to-urinate"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "A safe opportunity allows the bladder to empty. Relief does not establish resolution if pain, obstruction or another condition remains.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-needing-to-urinate"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Body Signals — breathlessness, pain, temperature, elimination, thirst, hunger, tiredness — do not get chronic tables of their own. Their participation can change through several routes. A signal may remain clear, move into the background, be noticed late, become difficult to differentiate, be interpreted differently or guide action without becoming a distinct feeling. Low-output, immobilisation and disconnection patterns can also affect access in different ways; the same report does not establish one mechanism. The nine signals themselves are defined on the Fluid page.",
+     "status": "No individual Chronic record",
+     "source": "emotion/chronic.html#top"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Initial paper-level orientation completed 4 September 2026 from bladder sensory and micturition reviews. The record is not a clinical account of urinary urgency or a systematic review. Urgency is not determined by volume alone; inflammation, attention, learning and afferent sensitivity can change the conscious signal.",
+     "status": "Working synthesis · initial paper-level orientation complete",
+     "source": "grounding/neurochemistry.html#needing-to-urinate"
+    }
+   ],
+   "biology_fields": {
+    "Regulated condition": "Bladder filling, wall stretch and pressure as stored urine approaches current capacity.",
+    "Detection": "Urothelial and mechanosensitive signalling activates pelvic and hypogastric afferents communicating with spinal, brainstem and cortical circuits.",
+    "Signalling and regulation": "Stretch-related ATP/purinergic signalling; acetylcholine drives detrusor contraction during voiding, while noradrenergic and other autonomic signalling helps coordinate storage.",
+    "Corrective condition": "A safe opportunity to empty the bladder, followed by reduced stretch and afferent signalling.",
+    "Context and limits": "Urgency is not determined by volume alone; inflammation, attention, learning and afferent sensitivity can change the conscious signal.",
+    "Evidence status": "Initial paper-level orientation completed 4 September 2026 from bladder sensory and micturition reviews. The record is not a clinical account of urinary urgency or a systematic review.",
+    "Condition being integrated": "Bladder filling, wall stretch and pressure, local tissue conditions, afferent signalling, storage capacity and the coordination required for continence and voiding.",
+    "Possible conscious access": "Bladder sensation or an urge to urinate, which can range from an early awareness of filling to urgent need.",
+    "What may raise priority": "Continued filling, increasing or sensitised afferent activity, irritation, learned timing, attention or reduced confidence that a suitable opportunity will remain available.",
+    "What may allow updating": "A suitable opportunity to urinate and coordinated bladder contraction and outlet relaxation allow emptying and reduce filling-related signals.",
+    "Interpretive boundary": "Urinary urgency is not a volume gauge. Bladder mechanics, inflammation, neural signalling, pelvic-floor function, attention, learning and context can alter what is felt and when."
+   }
   },
   "thirst": {
    "id": "thirst",
@@ -263,7 +578,70 @@ window.TEG_SIGNALS = {
    "chronic": null,
    "grounding": "grounding/neurochemistry.html#thirst",
    "grounding_status": "Working synthesis · individual system · papers pending",
-   "family": "essential-supply"
+   "family": "essential-supply",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "Available body water has fallen below the range required for normal functioning.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-thirst"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Drives the search for water until body water is restored.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-thirst"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Drives the search for water until body water is restored.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-thirst"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "Dryness and an increasing pull toward water.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-thirst"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "Current or anticipated fluid imbalance makes water acquisition and conservation more relevant.",
+     "status": "Partial account",
+     "source": "grounding/neurochemistry.html#thirst"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "Water and electrolyte availability move the relevant conditions towards a workable range; rehydration continues after thirst changes.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-thirst"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Body Signals — breathlessness, pain, temperature, elimination, thirst, hunger, tiredness — do not get chronic tables of their own. Their participation can change through several routes. A signal may remain clear, move into the background, be noticed late, become difficult to differentiate, be interpreted differently or guide action without becoming a distinct feeling. Low-output, immobilisation and disconnection patterns can also affect access in different ways; the same report does not establish one mechanism. The nine signals themselves are defined on the Fluid page.",
+     "status": "No individual Chronic record",
+     "source": "emotion/chronic.html#top"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Initial orientation carried forward from the Body–Situation Signals working note. Individual pathways and wording still require paper-level review. Thirst can begin updating before absorbed water corrects the blood, showing that the sensation is predictive as well as reactive.",
+     "status": "Working synthesis · individual system · papers pending",
+     "source": "grounding/neurochemistry.html#thirst"
+    }
+   ],
+   "biology_fields": {
+    "Regulated condition": "Extracellular osmolality, sodium concentration, circulating volume and blood pressure, together with anticipatory oral and gastrointestinal information.",
+    "Detection": "Osmosensitive neurons in circumventricular organs and lamina terminalis circuits; baroreceptor and visceral inputs.",
+    "Signalling and regulation": "Angiotensin II and vasopressin-related regulation, glutamatergic and GABAergic circuit transmission, and rapid feed-forward signals produced by drinking.",
+    "Corrective condition": "Enough fluid and appropriate electrolyte balance to restore the body’s working range.",
+    "Context and limits": "Thirst can begin updating before absorbed water corrects the blood, showing that the sensation is predictive as well as reactive.",
+    "Evidence status": "Initial orientation carried forward from the Body–Situation Signals working note. Individual pathways and wording still require paper-level review.",
+    "Condition being integrated": "Extracellular osmolality, sodium concentration, circulating volume and pressure, together with anticipatory information from the mouth and gastrointestinal system.",
+    "Possible conscious access": "Thirst. Oral dryness can participate in the experience, but dryness and thirst are not interchangeable.",
+    "What may raise priority": "Current or anticipated fluid imbalance makes water acquisition and conservation more relevant.",
+    "What may allow updating": "Drinking provides rapid oral and gastrointestinal information; absorbed fluid and electrolyte regulation change the underlying condition over a longer period.",
+    "Interpretive boundary": "Thirst is not a direct dehydration meter. It can begin to decrease before absorbed water restores blood composition, so felt relief and physiological rehydration must remain separate observations."
+   }
   },
   "needing-to-empty-the-bowels": {
    "id": "needing-to-empty-the-bowels",
@@ -279,7 +657,70 @@ window.TEG_SIGNALS = {
    "chronic": null,
    "grounding": "grounding/neurochemistry.html#needing-to-empty-the-bowels",
    "grounding_status": "Working synthesis · initial paper-level orientation complete",
-   "family": "visceral-capacity"
+   "family": "visceral-capacity",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "Waste has collected and is ready to be passed.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-needing-to-empty-the-bowels"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Builds priority until activity is interrupted and waste is passed.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-needing-to-empty-the-bowels"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Builds priority until activity is interrupted and waste is passed.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-needing-to-empty-the-bowels"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "Abdominal or rectal pressure that builds in waves.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-needing-to-empty-the-bowels"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "Mass movement into the rectum, distension, local irritation, changes in motility or reduced confidence that a suitable opportunity will remain available.",
+     "status": "Partial account",
+     "source": "grounding/neurochemistry.html#needing-to-empty-the-bowels"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "A safe opportunity allows waste to pass. Relief does not establish resolution if pain, constipation or another condition remains.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-needing-to-empty-the-bowels"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Body Signals — breathlessness, pain, temperature, elimination, thirst, hunger, tiredness — do not get chronic tables of their own. Their participation can change through several routes. A signal may remain clear, move into the background, be noticed late, become difficult to differentiate, be interpreted differently or guide action without becoming a distinct feeling. Low-output, immobilisation and disconnection patterns can also affect access in different ways; the same report does not establish one mechanism. The nine signals themselves are defined on the Fluid page.",
+     "status": "No individual Chronic record",
+     "source": "emotion/chronic.html#top"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Initial paper-level orientation completed 4 September 2026 from bowel and defecation physiology sources. The record is not a clinical account of bowel urgency or a systematic review. Urgency reflects interacting enteric, autonomic, spinal and conscious processes rather than one chemical or stretch value.",
+     "status": "Working synthesis · initial paper-level orientation complete",
+     "source": "grounding/neurochemistry.html#needing-to-empty-the-bowels"
+    }
+   ],
+   "biology_fields": {
+    "Regulated condition": "Rectal and colonic distension, movement of contents and local chemical and mechanical conditions.",
+    "Detection": "Enteric sensory neurons, mechanoreceptors and visceral afferents communicating through pelvic and spinal pathways.",
+    "Signalling and regulation": "Serotonin, acetylcholine, ATP, nitric oxide and multiple gastrointestinal peptides coordinate motility, secretion, sensation and sphincter control.",
+    "Corrective condition": "A safe opportunity for defecation and sufficient motility and relaxation for contents to pass.",
+    "Context and limits": "Urgency reflects interacting enteric, autonomic, spinal and conscious processes rather than one chemical or stretch value.",
+    "Evidence status": "Initial paper-level orientation completed 4 September 2026 from bowel and defecation physiology sources. The record is not a clinical account of bowel urgency or a systematic review.",
+    "Condition being integrated": "Movement of bowel contents, rectal filling and distension, stool properties, local tissue conditions, visceral afferent signalling and sphincter and pelvic-floor coordination.",
+    "Possible conscious access": "Rectal sensation or an urge to defecate. The urge can change when defecation is delayed even though the underlying contents have not disappeared.",
+    "What may raise priority": "Mass movement into the rectum, distension, local irritation, changes in motility or reduced confidence that a suitable opportunity will remain available.",
+    "What may allow updating": "A suitable opportunity and coordinated rectal contraction, pelvic-floor and sphincter relaxation allow contents to pass and distension-related signalling to decrease.",
+    "Interpretive boundary": "The urge is not a direct measure of stool amount or one chemical signal. Motility, stool properties, sensation, autonomic and voluntary control, learned routines and local pathology can all change the experience."
+   }
   },
   "hunger": {
    "id": "hunger",
@@ -295,7 +736,70 @@ window.TEG_SIGNALS = {
    "chronic": null,
    "grounding": "grounding/neurochemistry.html#hunger",
    "grounding_status": "Working synthesis · individual system · papers pending",
-   "family": "essential-supply"
+   "family": "essential-supply",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "Readily available metabolic energy is running low.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-hunger"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Drives the search for food until available energy is restored.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-hunger"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Drives the search for food until available energy is restored.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-hunger"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "Emptiness, weakness, irritability, or increasing focus on food.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-hunger"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "Metabolic and gastrointestinal information, learned timing, sensory cues and the expected availability of food can all alter food-related priority.",
+     "status": "Partial account",
+     "source": "grounding/neurochemistry.html#hunger"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "Nourishment makes usable energy and nutrients sufficiently available; digestion and metabolic restoration continue after hunger changes.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-hunger"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Body Signals — breathlessness, pain, temperature, elimination, thirst, hunger, tiredness — do not get chronic tables of their own. Their participation can change through several routes. A signal may remain clear, move into the background, be noticed late, become difficult to differentiate, be interpreted differently or guide action without becoming a distinct feeling. Low-output, immobilisation and disconnection patterns can also affect access in different ways; the same report does not establish one mechanism. The nine signals themselves are defined on the Fluid page.",
+     "status": "No individual Chronic record",
+     "source": "emotion/chronic.html#top"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Initial orientation carried forward from the Body–Situation Signals working note. Individual pathways and wording still require paper-level review. Homeostatic hunger, appetite, wanting and food reward overlap but are not identical processes.",
+     "status": "Working synthesis · individual system · papers pending",
+     "source": "grounding/neurochemistry.html#hunger"
+    }
+   ],
+   "biology_fields": {
+    "Regulated condition": "Energy and nutrient availability, gastrointestinal contents, stored energy and anticipated access to food.",
+    "Detection": "Hypothalamic AgRP/NPY and POMC-related circuits integrate circulating, vagal, gastrointestinal and sensory information.",
+    "Signalling and regulation": "Ghrelin, leptin, insulin, CCK, PYY, GLP-1, serotonin, GABA, NPY/AgRP and melanocortin systems interact with dopaminergic reward and learning systems.",
+    "Corrective condition": "Enough appropriate nourishment for energy and nutrient availability to update, together with satiety signals.",
+    "Context and limits": "Homeostatic hunger, appetite, wanting and food reward overlap but are not identical processes.",
+    "Evidence status": "Initial orientation carried forward from the Body–Situation Signals working note. Individual pathways and wording still require paper-level review.",
+    "Condition being integrated": "Energy and nutrient availability, gastrointestinal contents, stored energy, sensory information, learning and anticipated access to food.",
+    "Possible conscious access": "Hunger. Hunger can overlap with appetite, wanting and food reward, but these are not the same process.",
+    "What may raise priority": "Metabolic and gastrointestinal information, learned timing, sensory cues and the expected availability of food can all alter food-related priority.",
+    "What may allow updating": "Food-related cues, ingestion and gastrointestinal information can begin updating the process before absorbed nutrients change metabolic availability.",
+    "Interpretive boundary": "Hunger is not a direct fuel gauge. Its presence, absence or intensity does not by itself establish immediate energy deficit, nutritional adequacy or the action a person should take."
+   }
   },
   "tiredness": {
    "id": "tiredness",
@@ -311,7 +815,70 @@ window.TEG_SIGNALS = {
    "chronic": null,
    "grounding": "grounding/neurochemistry.html#tiredness",
    "grounding_status": "Working synthesis · initial paper-level orientation complete",
-   "family": "restorative-capacity"
+   "family": "restorative-capacity",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "Energy expenditure is exceeding restoration through rest and sleep.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-tiredness"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Pulls the organism toward stopping, rest, and sleep.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-tiredness"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Pulls the organism toward stopping, rest, and sleep.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-tiredness"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "Heaviness, slowing, reduced focus, and a pull toward sleep.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-tiredness"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "Extended wakefulness, circadian timing, insufficient or disrupted sleep, sustained exertion, illness, inflammation or demand that continues to exceed available recovery.",
+     "status": "Partial account",
+     "source": "grounding/neurochemistry.html#tiredness"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "Rest and sleep rebuild enough spent capacity for demand and available resources to become workable again. Quietness or forced wakefulness is not completion.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-tiredness"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Body Signals — breathlessness, pain, temperature, elimination, thirst, hunger, tiredness — do not get chronic tables of their own. Their participation can change through several routes. A signal may remain clear, move into the background, be noticed late, become difficult to differentiate, be interpreted differently or guide action without becoming a distinct feeling. Low-output, immobilisation and disconnection patterns can also affect access in different ways; the same report does not establish one mechanism. The nine signals themselves are defined on the Fluid page.",
+     "status": "No individual Chronic record",
+     "source": "emotion/chronic.html#top"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Initial paper-level orientation completed 4 September 2026 from sleep-regulation and fatigue–sleepiness reviews. The record does not reduce tiredness to sleep pressure and is not a systematic review. Tiredness is not a direct adenosine reading; illness, inflammation, exertion, mood, sleep loss and circadian timing can produce different routes to a similar feeling.",
+     "status": "Working synthesis · initial paper-level orientation complete",
+     "source": "grounding/neurochemistry.html#tiredness"
+    }
+   ],
+   "biology_fields": {
+    "Regulated condition": "Accumulated wakefulness, sleep pressure, circadian phase, energy expenditure, immune activity and recovery state.",
+    "Detection": "Sleep–wake and circadian networks integrate metabolic, neural, hormonal, immune and environmental timing information.",
+    "Signalling and regulation": "Adenosine contributes to sleep pressure; melatonin conveys circadian timing; orexin/hypocretin, histamine, acetylcholine, dopamine, noradrenaline, serotonin and GABA participate in arousal and sleep transitions.",
+    "Corrective condition": "Enough rest and sleep, aligned where possible with circadian timing, for spent capacity and sleep pressure to update.",
+    "Context and limits": "Tiredness is not a direct adenosine reading; illness, inflammation, exertion, mood, sleep loss and circadian timing can produce different routes to a similar feeling.",
+    "Evidence status": "Initial paper-level orientation completed 4 September 2026 from sleep-regulation and fatigue–sleepiness reviews. The record does not reduce tiredness to sleep pressure and is not a systematic review.",
+    "Condition being integrated": "Time awake and sleep history, circadian timing, recent exertion, current energy demand, immune and inflammatory activity, illness, recovery state and expected opportunity to rest.",
+    "Possible conscious access": "Tiredness: reduced felt capacity or increased need for rest. Sleepiness—the tendency to fall asleep—and fatigue related to effort or illness can overlap with it but are not interchangeable.",
+    "What may raise priority": "Extended wakefulness, circadian timing, insufficient or disrupted sleep, sustained exertion, illness, inflammation or demand that continues to exceed available recovery.",
+    "What may allow updating": "Reduced demand, rest and sufficient sleep can contribute through different routes. Which condition matters depends on why tiredness became prominent.",
+    "Interpretive boundary": "Tiredness is not a direct adenosine, energy or sleep-debt meter. Similar feelings can arise through different processes; a brief increase in alertness does not establish recovery. Persistent, sudden or disabling tiredness can require medical assessment rather than framework interpretation."
+   }
   },
   "love": {
    "id": "love",
@@ -337,7 +904,63 @@ window.TEG_SIGNALS = {
     "Z": "Love may feel distant, unreachable or flattened; grief for lost connection may be more accessible without replacing it."
    },
    "grounding": "grounding/neurochemistry.html#love",
-   "grounding_status": "Working synthesis · family-level · papers pending"
+   "grounding_status": "Working synthesis · family-level · papers pending",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "A specific person and the bond with them carry emotional value.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-love"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Deepens closeness, care, protection, and emotional investment.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-love"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Deepens closeness, care, protection, and emotional investment.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-love"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "Warmth through the chest, softer face and breath, and a pull toward closeness.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-love"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "An emotion-specific account of recruitment, persistence, reduction and redirection has not yet been separated in this record. The linked biological material is working grounding, not a complete regulation mechanism.",
+     "status": "Separate account still needed",
+     "source": "grounding/neurochemistry.html#love"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "The bond’s value becomes expressible or mutually recognisable enough to guide care and participation. A relational moment can reach completion without love ending.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-love"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Compare the same signal in the two readings below. The Chronic profiles describe possible differences in access, interpretation and participation; they do not change its identity.",
+     "status": "Working comparison",
+     "source": "emotion/chronic.html#signal-love"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Current text transfers the earlier synthesis written under Fluid reference A. Individual-emotion measures and experimental paradigms have not yet been separated. Provisional family-level association. Oxytocin is not love or proof of safety; dopamine is not pleasure; no listed system is unique to this signal.",
+     "status": "Working synthesis · family-level · papers pending",
+     "source": "grounding/neurochemistry.html#love"
+    }
+   ],
+   "biology_fields": {
+    "Central signalling": "Oxytocinergic, dopaminergic, serotonergic and endogenous-opioid systems may participate in affiliation, social salience, learning, motivation, reward and regulation.",
+    "Peripheral hormones": "Oxytocin and wider autonomic and endocrine activity may participate, but a peripheral concentration cannot identify this emotion or a Gradient Position.",
+    "Evidence carried forward": "Current text transfers the earlier synthesis written under Fluid reference A. Individual-emotion measures and experimental paradigms have not yet been separated.",
+    "Context and limits": "Provisional family-level association. Oxytocin is not love or proof of safety; dopamine is not pleasure; no listed system is unique to this signal."
+   }
   },
   "trust": {
    "id": "trust",
@@ -363,7 +986,63 @@ window.TEG_SIGNALS = {
     "Z": "Trust may feel unavailable; reliance can register as impossible, exhausting or unsafe."
    },
    "grounding": "grounding/neurochemistry.html#trust",
-   "grounding_status": "Working synthesis · family-level · papers pending"
+   "grounding_status": "Working synthesis · family-level · papers pending",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "Reliance on a specific person appears safe enough for vulnerability or shared responsibility.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-trust"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Allows the organism to relax into another, reduce vigilance, and share more openly.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-trust"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Allows the organism to relax into another, reduce vigilance, and share more openly.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-trust"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "Shoulders and jaw release, breath deepens, and the chest and belly settle.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-trust"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "An emotion-specific account of recruitment, persistence, reduction and redirection has not yet been separated in this record. The linked biological material is working grounding, not a complete regulation mechanism.",
+     "status": "Separate account still needed",
+     "source": "grounding/neurochemistry.html#trust"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "Ongoing evidence supports, narrows, or revises how much reliance is safe in the present conditions.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-trust"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Compare the same signal in the two readings below. The Chronic profiles describe possible differences in access, interpretation and participation; they do not change its identity.",
+     "status": "Working comparison",
+     "source": "emotion/chronic.html#signal-trust"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Current text transfers the earlier synthesis written under Fluid reference A. Individual-emotion measures and experimental paradigms have not yet been separated. Provisional family-level association. Oxytocin is not love or proof of safety; dopamine is not pleasure; no listed system is unique to this signal.",
+     "status": "Working synthesis · family-level · papers pending",
+     "source": "grounding/neurochemistry.html#trust"
+    }
+   ],
+   "biology_fields": {
+    "Central signalling": "Oxytocinergic, dopaminergic, serotonergic and endogenous-opioid systems may participate in affiliation, social salience, learning, motivation, reward and regulation.",
+    "Peripheral hormones": "Oxytocin and wider autonomic and endocrine activity may participate, but a peripheral concentration cannot identify this emotion or a Gradient Position.",
+    "Evidence carried forward": "Current text transfers the earlier synthesis written under Fluid reference A. Individual-emotion measures and experimental paradigms have not yet been separated.",
+    "Context and limits": "Provisional family-level association. Oxytocin is not love or proof of safety; dopamine is not pleasure; no listed system is unique to this signal."
+   }
   },
   "gratitude": {
    "id": "gratitude",
@@ -389,7 +1068,63 @@ window.TEG_SIGNALS = {
     "Z": "Appreciation may be muted, remote or inaccessible even when benefit is cognitively known."
    },
    "grounding": "grounding/neurochemistry.html#gratitude",
-   "grounding_status": "Working synthesis · family-level · papers pending"
+   "grounding_status": "Working synthesis · family-level · papers pending",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "Care, support, or benefit was freely received from another person.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-gratitude"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Registers received care, support, or goodness, and strengthens reciprocal bonds.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-gratitude"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Registers received care, support, or goodness, and strengthens reciprocal bonds.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-gratitude"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "Warmth in the chest or throat and an impulse to acknowledge what was received.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-gratitude"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "An emotion-specific account of recruitment, persistence, reduction and redirection has not yet been separated in this record. The linked biological material is working grounding, not a complete regulation mechanism.",
+     "status": "Separate account still needed",
+     "source": "grounding/neurochemistry.html#gratitude"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "What was received becomes consciously registered; expression may support reciprocity where it is appropriate.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-gratitude"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Compare the same signal in the two readings below. The Chronic profiles describe possible differences in access, interpretation and participation; they do not change its identity.",
+     "status": "Working comparison",
+     "source": "emotion/chronic.html#signal-gratitude"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Current text transfers the earlier synthesis written under Fluid reference A. Individual-emotion measures and experimental paradigms have not yet been separated. Provisional family-level association. Oxytocin is not love or proof of safety; dopamine is not pleasure; no listed system is unique to this signal.",
+     "status": "Working synthesis · family-level · papers pending",
+     "source": "grounding/neurochemistry.html#gratitude"
+    }
+   ],
+   "biology_fields": {
+    "Central signalling": "Oxytocinergic, dopaminergic, serotonergic and endogenous-opioid systems may participate in affiliation, social salience, learning, motivation, reward and regulation.",
+    "Peripheral hormones": "Oxytocin and wider autonomic and endocrine activity may participate, but a peripheral concentration cannot identify this emotion or a Gradient Position.",
+    "Evidence carried forward": "Current text transfers the earlier synthesis written under Fluid reference A. Individual-emotion measures and experimental paradigms have not yet been separated.",
+    "Context and limits": "Provisional family-level association. Oxytocin is not love or proof of safety; dopamine is not pleasure; no listed system is unique to this signal."
+   }
   },
   "compassion": {
    "id": "compassion",
@@ -415,7 +1150,63 @@ window.TEG_SIGNALS = {
     "Z": "Care may remain as quiet concern but feel too distant, heavy or inaccessible to act on."
    },
    "grounding": "grounding/neurochemistry.html#compassion",
-   "grounding_status": "Working synthesis · family-level · papers pending"
+   "grounding_status": "Working synthesis · family-level · papers pending",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "Another person is suffering and their wellbeing matters.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-compassion"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Orients the organism toward another’s suffering with care, concern, and support.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-compassion"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Orients the organism toward another’s suffering with care, concern, and support.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-compassion"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "Warmth or ache in the chest, softened face, and a pull toward the person.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-compassion"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "An emotion-specific account of recruitment, persistence, reduction and redirection has not yet been separated in this record. The linked biological material is working grounding, not a complete regulation mechanism.",
+     "status": "Separate account still needed",
+     "source": "grounding/neurochemistry.html#compassion"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "Suffering is accurately recognised and any care offered is useful, receivable, and preserves separateness. Action remains a choice.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-compassion"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Compare the same signal in the two readings below. The Chronic profiles describe possible differences in access, interpretation and participation; they do not change its identity.",
+     "status": "Working comparison",
+     "source": "emotion/chronic.html#signal-compassion"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Current text transfers the earlier synthesis written under Fluid reference A. Individual-emotion measures and experimental paradigms have not yet been separated. Provisional family-level association. Oxytocin is not love or proof of safety; dopamine is not pleasure; no listed system is unique to this signal.",
+     "status": "Working synthesis · family-level · papers pending",
+     "source": "grounding/neurochemistry.html#compassion"
+    }
+   ],
+   "biology_fields": {
+    "Central signalling": "Oxytocinergic, dopaminergic, serotonergic and endogenous-opioid systems may participate in affiliation, social salience, learning, motivation, reward and regulation.",
+    "Peripheral hormones": "Oxytocin and wider autonomic and endocrine activity may participate, but a peripheral concentration cannot identify this emotion or a Gradient Position.",
+    "Evidence carried forward": "Current text transfers the earlier synthesis written under Fluid reference A. Individual-emotion measures and experimental paradigms have not yet been separated.",
+    "Context and limits": "Provisional family-level association. Oxytocin is not love or proof of safety; dopamine is not pleasure; no listed system is unique to this signal."
+   }
   },
   "admiration": {
    "id": "admiration",
@@ -441,7 +1232,63 @@ window.TEG_SIGNALS = {
     "Z": "The admired possibility may feel unreachable, remote or painful to contemplate."
    },
    "grounding": "grounding/neurochemistry.html#admiration",
-   "grounding_status": "Working synthesis · family-level · papers pending"
+   "grounding_status": "Working synthesis · family-level · papers pending",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "Another person embodies a valued quality, skill, or way of being.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-admiration"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Draws attention toward qualities we value, want to learn from, or feel inspired by.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-admiration"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Draws attention toward qualities we value, want to learn from, or feel inspired by.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-admiration"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "Eyes and face become alert, the chest lifts, and attention moves toward the person.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-admiration"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "An emotion-specific account of recruitment, persistence, reduction and redirection has not yet been separated in this record. The linked biological material is working grounding, not a complete regulation mechanism.",
+     "status": "Separate account still needed",
+     "source": "grounding/neurochemistry.html#admiration"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "The valued quality is recognised and can inform appreciation or learning without requiring imitation.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-admiration"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Compare the same signal in the two readings below. The Chronic profiles describe possible differences in access, interpretation and participation; they do not change its identity.",
+     "status": "Working comparison",
+     "source": "emotion/chronic.html#signal-admiration"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Current text transfers the earlier synthesis written under Fluid reference A. Individual-emotion measures and experimental paradigms have not yet been separated. Provisional family-level association. Oxytocin is not love or proof of safety; dopamine is not pleasure; no listed system is unique to this signal.",
+     "status": "Working synthesis · family-level · papers pending",
+     "source": "grounding/neurochemistry.html#admiration"
+    }
+   ],
+   "biology_fields": {
+    "Central signalling": "Oxytocinergic, dopaminergic, serotonergic and endogenous-opioid systems may participate in affiliation, social salience, learning, motivation, reward and regulation.",
+    "Peripheral hormones": "Oxytocin and wider autonomic and endocrine activity may participate, but a peripheral concentration cannot identify this emotion or a Gradient Position.",
+    "Evidence carried forward": "Current text transfers the earlier synthesis written under Fluid reference A. Individual-emotion measures and experimental paradigms have not yet been separated.",
+    "Context and limits": "Provisional family-level association. Oxytocin is not love or proof of safety; dopamine is not pleasure; no listed system is unique to this signal."
+   }
   },
   "happiness": {
    "id": "happiness",
@@ -467,7 +1314,63 @@ window.TEG_SIGNALS = {
     "Z": "Happiness may feel faint, distant, effortful or cognitively remembered rather than embodied."
    },
    "grounding": "grounding/neurochemistry.html#happiness",
-   "grounding_status": "Working synthesis · family-level · papers pending"
+   "grounding_status": "Working synthesis · family-level · papers pending",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "The present experience supports pleasure, nourishment, fit, or wellbeing.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-happiness"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Signals that something feels good, nourishing, fitting, or life-supporting.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-happiness"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Signals that something feels good, nourishing, fitting, or life-supporting.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-happiness"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "The face relaxes, breath comes easily, and warmth or lightness spreads through the chest.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-happiness"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "An emotion-specific account of recruitment, persistence, reduction and redirection has not yet been separated in this record. The linked biological material is working grounding, not a complete regulation mechanism.",
+     "status": "Separate account still needed",
+     "source": "grounding/neurochemistry.html#happiness"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "Enough safety and attention allow the favourable condition to register; the signal may settle without the good condition ending. Where the condition includes a valued relationship or shared life, another person's freely offered participation may help complete that event.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-happiness"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Compare the same signal in the two readings below. The Chronic profiles describe possible differences in access, interpretation and participation; they do not change its identity.",
+     "status": "Working comparison",
+     "source": "emotion/chronic.html#signal-happiness"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Current text transfers the earlier synthesis written under Fluid reference A. Individual-emotion measures and experimental paradigms have not yet been separated. Provisional family-level association. Oxytocin is not love or proof of safety; dopamine is not pleasure; no listed system is unique to this signal.",
+     "status": "Working synthesis · family-level · papers pending",
+     "source": "grounding/neurochemistry.html#happiness"
+    }
+   ],
+   "biology_fields": {
+    "Central signalling": "Oxytocinergic, dopaminergic, serotonergic and endogenous-opioid systems may participate in affiliation, social salience, learning, motivation, reward and regulation.",
+    "Peripheral hormones": "Oxytocin and wider autonomic and endocrine activity may participate, but a peripheral concentration cannot identify this emotion or a Gradient Position.",
+    "Evidence carried forward": "Current text transfers the earlier synthesis written under Fluid reference A. Individual-emotion measures and experimental paradigms have not yet been separated.",
+    "Context and limits": "Provisional family-level association. Oxytocin is not love or proof of safety; dopamine is not pleasure; no listed system is unique to this signal."
+   }
   },
   "joy": {
    "id": "joy",
@@ -493,7 +1396,63 @@ window.TEG_SIGNALS = {
     "Z": "Vitality is muted; joy may appear only in brief flashes that are hard to sustain or receive."
    },
    "grounding": "grounding/neurochemistry.html#joy",
-   "grounding_status": "Working synthesis · family-level · papers pending"
+   "grounding_status": "Working synthesis · family-level · papers pending",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "Safety and surplus capacity make play, celebration, movement, or shared vitality available.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-joy"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Opens the organism toward play, celebration, movement, vitality, and shared aliveness.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-joy"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Opens the organism toward play, celebration, movement, vitality, and shared aliveness.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-joy"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "The chest expands, energy rises through the body, and movement or expression wants to emerge.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-joy"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "An emotion-specific account of recruitment, persistence, reduction and redirection has not yet been separated in this record. The linked biological material is working grounding, not a complete regulation mechanism.",
+     "status": "Separate account still needed",
+     "source": "grounding/neurochemistry.html#joy"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "Enough capacity and permission allow aliveness to be experienced or expressed. When the event is shared, mutual participation can help complete the celebration; expression remains one possible route.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-joy"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Compare the same signal in the two readings below. The Chronic profiles describe possible differences in access, interpretation and participation; they do not change its identity.",
+     "status": "Working comparison",
+     "source": "emotion/chronic.html#signal-joy"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Current text transfers the earlier synthesis written under Fluid reference A. Individual-emotion measures and experimental paradigms have not yet been separated. Provisional family-level association. Oxytocin is not love or proof of safety; dopamine is not pleasure; no listed system is unique to this signal.",
+     "status": "Working synthesis · family-level · papers pending",
+     "source": "grounding/neurochemistry.html#joy"
+    }
+   ],
+   "biology_fields": {
+    "Central signalling": "Oxytocinergic, dopaminergic, serotonergic and endogenous-opioid systems may participate in affiliation, social salience, learning, motivation, reward and regulation.",
+    "Peripheral hormones": "Oxytocin and wider autonomic and endocrine activity may participate, but a peripheral concentration cannot identify this emotion or a Gradient Position.",
+    "Evidence carried forward": "Current text transfers the earlier synthesis written under Fluid reference A. Individual-emotion measures and experimental paradigms have not yet been separated.",
+    "Context and limits": "Provisional family-level association. Oxytocin is not love or proof of safety; dopamine is not pleasure; no listed system is unique to this signal."
+   }
   },
   "pride": {
    "id": "pride",
@@ -519,7 +1478,63 @@ window.TEG_SIGNALS = {
     "Z": "Achievement may feel empty, unreal or too effortful to register as embodied satisfaction."
    },
    "grounding": "grounding/neurochemistry.html#pride",
-   "grounding_status": "Working synthesis · family-level · papers pending"
+   "grounding_status": "Working synthesis · family-level · papers pending",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "An effort, achievement, contribution, expression of integrity, or shared identity has value.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-pride"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Registers meaningful effort, growth, contribution, integrity, or membership in something valued, and supports stable self-value.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-pride"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Registers meaningful effort, growth, contribution, integrity, or membership in something valued, and supports stable self-value.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-pride"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "The chest lifts, posture becomes upright, and warmth settles through the face and body.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-pride"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "An emotion-specific account of recruitment, persistence, reduction and redirection has not yet been separated in this record. The linked biological material is working grounding, not a complete regulation mechanism.",
+     "status": "Separate account still needed",
+     "source": "grounding/neurochemistry.html#pride"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "The achievement, contribution, or shared value becomes consciously registered. Event-specific completion includes recognition or belonging only where either genuinely formed part of the condition.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-pride"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Compare the same signal in the two readings below. The Chronic profiles describe possible differences in access, interpretation and participation; they do not change its identity.",
+     "status": "Working comparison",
+     "source": "emotion/chronic.html#signal-pride"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Current text transfers the earlier synthesis written under Fluid reference A. Individual-emotion measures and experimental paradigms have not yet been separated. Provisional family-level association. Oxytocin is not love or proof of safety; dopamine is not pleasure; no listed system is unique to this signal.",
+     "status": "Working synthesis · family-level · papers pending",
+     "source": "grounding/neurochemistry.html#pride"
+    }
+   ],
+   "biology_fields": {
+    "Central signalling": "Oxytocinergic, dopaminergic, serotonergic and endogenous-opioid systems may participate in affiliation, social salience, learning, motivation, reward and regulation.",
+    "Peripheral hormones": "Oxytocin and wider autonomic and endocrine activity may participate, but a peripheral concentration cannot identify this emotion or a Gradient Position.",
+    "Evidence carried forward": "Current text transfers the earlier synthesis written under Fluid reference A. Individual-emotion measures and experimental paradigms have not yet been separated.",
+    "Context and limits": "Provisional family-level association. Oxytocin is not love or proof of safety; dopamine is not pleasure; no listed system is unique to this signal."
+   }
   },
   "hope": {
    "id": "hope",
@@ -545,7 +1560,63 @@ window.TEG_SIGNALS = {
     "Z": "Possibility feels remote or impossible; hope may survive only as a thin idea without energy."
    },
    "grounding": "grounding/neurochemistry.html#hope",
-   "grounding_status": "Working synthesis · family-level · papers pending"
+   "grounding_status": "Working synthesis · family-level · papers pending",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "A valued future outcome remains possible.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-hope"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Keeps the organism oriented toward possibility when something meaningful still feels reachable.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-hope"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Keeps the organism oriented toward possibility when something meaningful still feels reachable.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-hope"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "The chest lifts, breath opens, and energy leans forward toward the future.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-hope"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "An emotion-specific account of recruitment, persistence, reduction and redirection has not yet been separated in this record. The linked biological material is working grounding, not a complete regulation mechanism.",
+     "status": "Separate account still needed",
+     "source": "grounding/neurochemistry.html#hope"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "Possibility remains credible enough to guide participation, or expectation updates if the route changes or closes. When the outcome depends on other people, shared commitment or coordinated participation may be part of keeping the route viable.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-hope"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Compare the same signal in the two readings below. The Chronic profiles describe possible differences in access, interpretation and participation; they do not change its identity.",
+     "status": "Working comparison",
+     "source": "emotion/chronic.html#signal-hope"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Current text transfers the earlier synthesis written under Fluid reference A. Individual-emotion measures and experimental paradigms have not yet been separated. Provisional family-level association. Oxytocin is not love or proof of safety; dopamine is not pleasure; no listed system is unique to this signal.",
+     "status": "Working synthesis · family-level · papers pending",
+     "source": "grounding/neurochemistry.html#hope"
+    }
+   ],
+   "biology_fields": {
+    "Central signalling": "Oxytocinergic, dopaminergic, serotonergic and endogenous-opioid systems may participate in affiliation, social salience, learning, motivation, reward and regulation.",
+    "Peripheral hormones": "Oxytocin and wider autonomic and endocrine activity may participate, but a peripheral concentration cannot identify this emotion or a Gradient Position.",
+    "Evidence carried forward": "Current text transfers the earlier synthesis written under Fluid reference A. Individual-emotion measures and experimental paradigms have not yet been separated.",
+    "Context and limits": "Provisional family-level association. Oxytocin is not love or proof of safety; dopamine is not pleasure; no listed system is unique to this signal."
+   }
   },
   "shame": {
    "id": "shame",
@@ -571,7 +1642,63 @@ window.TEG_SIGNALS = {
     "Z": "Shame may remain influential while worthlessness, numbness or inability to face contact dominates experience."
    },
    "grounding": "grounding/neurochemistry.html#shame",
-   "grounding_status": "Working synthesis · family-level · papers pending"
+   "grounding_status": "Working synthesis · family-level · papers pending",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "Belonging, standing, or the acceptable self may be at risk.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-shame"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Signals exposure, disconnection, or loss of valued place, and can invite repair through vulnerability.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-shame"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Signals exposure, disconnection, or loss of valued place, and can invite repair through vulnerability.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-shame"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "Heat rises through the face and neck as the chest drops, the belly contracts, and the gaze turns down.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-shame"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "An emotion-specific account of recruitment, persistence, reduction and redirection has not yet been separated in this record. The linked biological material is working grounding, not a complete regulation mechanism.",
+     "status": "Separate account still needed",
+     "source": "grounding/neurochemistry.html#shame"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "Evidence clarifies whether belonging or impact changed; repair occurs where responsibility exists, or the self and relationship read revises where it does not.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-shame"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Compare the same signal in the two readings below. The Chronic profiles describe possible differences in access, interpretation and participation; they do not change its identity.",
+     "status": "Working comparison",
+     "source": "emotion/chronic.html#signal-shame"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Current text transfers the earlier synthesis written under Fluid reference A↔B. Individual-emotion measures and eliciting conditions have not yet been separated. Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion.",
+     "status": "Working synthesis · family-level · papers pending",
+     "source": "grounding/neurochemistry.html#shame"
+    }
+   ],
+   "biology_fields": {
+    "Central signalling": "Noradrenergic, cholinergic, dopaminergic, HPA-related and other signalling may support orienting, vigilance, learning and updating under uncertain conditions.",
+    "Peripheral hormones": "Catecholamine and cortisol responses may participate, with direction and magnitude varying by anticipation, social evaluation, controllability, timing and prior learning.",
+    "Evidence carried forward": "Current text transfers the earlier synthesis written under Fluid reference A↔B. Individual-emotion measures and eliciting conditions have not yet been separated.",
+    "Context and limits": "Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion."
+   }
   },
   "guilt": {
    "id": "guilt",
@@ -597,7 +1724,63 @@ window.TEG_SIGNALS = {
     "Z": "Guilt may feel immobilising or globally condemning, or remain influential while felt access narrows."
    },
    "grounding": "grounding/neurochemistry.html#guilt",
-   "grounding_status": "Working synthesis · family-level · papers pending"
+   "grounding_status": "Working synthesis · family-level · papers pending",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "One’s action may have caused harm or carried a cost for someone else.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-guilt"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Signals that one’s action may have caused harm, and supports accountability, learning, and repair.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-guilt"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Signals that one’s action may have caused harm, and supports accountability, learning, and repair.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-guilt"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "Heaviness or tension sits in the chest and stomach, with a pull back toward the impact.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-guilt"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "An emotion-specific account of recruitment, persistence, reduction and redirection has not yet been separated in this record. The linked biological material is working grounding, not a complete regulation mechanism.",
+     "status": "Separate account still needed",
+     "source": "grounding/neurochemistry.html#guilt"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "Impact is established, responsibility is proportionate, and protective change or repair is attempted where possible. Felt guilt is not proof of harm.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-guilt"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Compare the same signal in the two readings below. The Chronic profiles describe possible differences in access, interpretation and participation; they do not change its identity.",
+     "status": "Working comparison",
+     "source": "emotion/chronic.html#signal-guilt"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Current text transfers the earlier synthesis written under Fluid reference A↔B. Individual-emotion measures and eliciting conditions have not yet been separated. Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion.",
+     "status": "Working synthesis · family-level · papers pending",
+     "source": "grounding/neurochemistry.html#guilt"
+    }
+   ],
+   "biology_fields": {
+    "Central signalling": "Noradrenergic, cholinergic, dopaminergic, HPA-related and other signalling may support orienting, vigilance, learning and updating under uncertain conditions.",
+    "Peripheral hormones": "Catecholamine and cortisol responses may participate, with direction and magnitude varying by anticipation, social evaluation, controllability, timing and prior learning.",
+    "Evidence carried forward": "Current text transfers the earlier synthesis written under Fluid reference A↔B. Individual-emotion measures and eliciting conditions have not yet been separated.",
+    "Context and limits": "Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion."
+   }
   },
   "loneliness": {
    "id": "loneliness",
@@ -623,7 +1806,63 @@ window.TEG_SIGNALS = {
     "Z": "Isolation feels total, heavy or unreachable; loneliness may remain influential when the impulse to seek contact is unavailable."
    },
    "grounding": "grounding/neurochemistry.html#loneliness",
-   "grounding_status": "Working synthesis · family-level · papers pending"
+   "grounding_status": "Working synthesis · family-level · papers pending",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "Needed connection, witness, or belonging is missing.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-loneliness"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Signals lack of meaningful connection, contact, witness, or belonging.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-loneliness"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Signals lack of meaningful connection, contact, witness, or belonging.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-loneliness"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "A hollow ache sits in the chest or throat, with heaviness through the body.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-loneliness"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "An emotion-specific account of recruitment, persistence, reduction and redirection has not yet been separated in this record. The linked biological material is working grounding, not a complete regulation mechanism.",
+     "status": "Separate account still needed",
+     "source": "grounding/neurochemistry.html#loneliness"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "Meaningful connection becomes available and receivable, or expectation and participation reorganise around what is currently unavailable.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-loneliness"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Compare the same signal in the two readings below. The Chronic profiles describe possible differences in access, interpretation and participation; they do not change its identity.",
+     "status": "Working comparison",
+     "source": "emotion/chronic.html#signal-loneliness"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Current text transfers the earlier synthesis written under Fluid reference A↔B. Individual-emotion measures and eliciting conditions have not yet been separated. Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion.",
+     "status": "Working synthesis · family-level · papers pending",
+     "source": "grounding/neurochemistry.html#loneliness"
+    }
+   ],
+   "biology_fields": {
+    "Central signalling": "Noradrenergic, cholinergic, dopaminergic, HPA-related and other signalling may support orienting, vigilance, learning and updating under uncertain conditions.",
+    "Peripheral hormones": "Catecholamine and cortisol responses may participate, with direction and magnitude varying by anticipation, social evaluation, controllability, timing and prior learning.",
+    "Evidence carried forward": "Current text transfers the earlier synthesis written under Fluid reference A↔B. Individual-emotion measures and eliciting conditions have not yet been separated.",
+    "Context and limits": "Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion."
+   }
   },
   "disappointment": {
    "id": "disappointment",
@@ -649,7 +1888,63 @@ window.TEG_SIGNALS = {
     "Z": "Disappointment may remain influential while futility, resignation or emotional blankness dominates access."
    },
    "grounding": "grounding/neurochemistry.html#disappointment",
-   "grounding_status": "Working synthesis · family-level · papers pending"
+   "grounding_status": "Working synthesis · family-level · papers pending",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "An expected bond, outcome, support, or possibility did not arrive.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-disappointment"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Registers that an expected bond, outcome, support, or possibility did not arrive.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-disappointment"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Registers that an expected bond, outcome, support, or possibility did not arrive.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-disappointment"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "The chest or stomach drops, breath releases, and energy falls away from expectation.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-disappointment"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "An emotion-specific account of recruitment, persistence, reduction and redirection has not yet been separated in this record. The linked biological material is working grounding, not a complete regulation mechanism.",
+     "status": "Separate account still needed",
+     "source": "grounding/neurochemistry.html#disappointment"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "The mismatch is registered and the expectation, goal, or relationship read revises.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-disappointment"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Compare the same signal in the two readings below. The Chronic profiles describe possible differences in access, interpretation and participation; they do not change its identity.",
+     "status": "Working comparison",
+     "source": "emotion/chronic.html#signal-disappointment"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Current text transfers the earlier synthesis written under Fluid reference A↔B. Individual-emotion measures and eliciting conditions have not yet been separated. Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion.",
+     "status": "Working synthesis · family-level · papers pending",
+     "source": "grounding/neurochemistry.html#disappointment"
+    }
+   ],
+   "biology_fields": {
+    "Central signalling": "Noradrenergic, cholinergic, dopaminergic, HPA-related and other signalling may support orienting, vigilance, learning and updating under uncertain conditions.",
+    "Peripheral hormones": "Catecholamine and cortisol responses may participate, with direction and magnitude varying by anticipation, social evaluation, controllability, timing and prior learning.",
+    "Evidence carried forward": "Current text transfers the earlier synthesis written under Fluid reference A↔B. Individual-emotion measures and eliciting conditions have not yet been separated.",
+    "Context and limits": "Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion."
+   }
   },
   "sadness": {
    "id": "sadness",
@@ -675,7 +1970,63 @@ window.TEG_SIGNALS = {
     "Z": "Sadness may remain present as profound heaviness, slowing or emptiness while mobilisation towards care becomes difficult."
    },
    "grounding": "grounding/neurochemistry.html#sadness",
-   "grounding_status": "Working synthesis · family-level · papers pending"
+   "grounding_status": "Working synthesis · family-level · papers pending",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "A needed person, bond, support, or possibility is absent, lost, or was never available.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-sadness"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Slows the organism around loss, absence, hurt, or unmet need, and invites care or shared grief.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-sadness"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Slows the organism around loss, absence, hurt, or unmet need, and invites care or shared grief.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-sadness"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "Heaviness gathers in the chest, throat, and eyes as movement and breath slow.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-sadness"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "An emotion-specific account of recruitment, persistence, reduction and redirection has not yet been separated in this record. The linked biological material is working grounding, not a complete regulation mechanism.",
+     "status": "Separate account still needed",
+     "source": "grounding/neurochemistry.html#sadness"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "The absence or loss is acknowledged, with enough time or support for response and expectation to reorganise.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-sadness"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Compare the same signal in the two readings below. The Chronic profiles describe possible differences in access, interpretation and participation; they do not change its identity.",
+     "status": "Working comparison",
+     "source": "emotion/chronic.html#signal-sadness"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Current text transfers the earlier synthesis written under Fluid reference A↔B. Individual-emotion measures and eliciting conditions have not yet been separated. Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion.",
+     "status": "Working synthesis · family-level · papers pending",
+     "source": "grounding/neurochemistry.html#sadness"
+    }
+   ],
+   "biology_fields": {
+    "Central signalling": "Noradrenergic, cholinergic, dopaminergic, HPA-related and other signalling may support orienting, vigilance, learning and updating under uncertain conditions.",
+    "Peripheral hormones": "Catecholamine and cortisol responses may participate, with direction and magnitude varying by anticipation, social evaluation, controllability, timing and prior learning.",
+    "Evidence carried forward": "Current text transfers the earlier synthesis written under Fluid reference A↔B. Individual-emotion measures and eliciting conditions have not yet been separated.",
+    "Context and limits": "Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion."
+   }
   },
   "grief": {
    "id": "grief",
@@ -701,7 +2052,63 @@ window.TEG_SIGNALS = {
     "Z": "Grief may remain present while loss feels engulfing, timeless and depleting and participation withdraws."
    },
    "grounding": "grounding/neurochemistry.html#grief",
-   "grounding_status": "Working synthesis · family-level · papers pending"
+   "grounding_status": "Working synthesis · family-level · papers pending",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "A significant person, bond, role, or part of life has been irreversibly lost.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-grief"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Helps the organism register deep loss and reorganise around what can no longer be restored.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-grief"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Helps the organism register deep loss and reorganise around what can no longer be restored.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-grief"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "Pain and pressure fill the chest and throat, breath breaks or constricts, and the whole body becomes heavy.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-grief"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "An emotion-specific account of recruitment, persistence, reduction and redirection has not yet been separated in this record. The linked biological material is working grounding, not a complete regulation mechanism.",
+     "status": "Separate account still needed",
+     "source": "grounding/neurochemistry.html#grief"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "Irreversibility becomes increasingly registerable, with enough time and support for life to reorganise around what cannot be restored.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-grief"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Compare the same signal in the two readings below. The Chronic profiles describe possible differences in access, interpretation and participation; they do not change its identity.",
+     "status": "Working comparison",
+     "source": "emotion/chronic.html#signal-grief"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Current text transfers the earlier synthesis written under Fluid reference A↔B. Individual-emotion measures and eliciting conditions have not yet been separated. Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion.",
+     "status": "Working synthesis · family-level · papers pending",
+     "source": "grounding/neurochemistry.html#grief"
+    }
+   ],
+   "biology_fields": {
+    "Central signalling": "Noradrenergic, cholinergic, dopaminergic, HPA-related and other signalling may support orienting, vigilance, learning and updating under uncertain conditions.",
+    "Peripheral hormones": "Catecholamine and cortisol responses may participate, with direction and magnitude varying by anticipation, social evaluation, controllability, timing and prior learning.",
+    "Evidence carried forward": "Current text transfers the earlier synthesis written under Fluid reference A↔B. Individual-emotion measures and eliciting conditions have not yet been separated.",
+    "Context and limits": "Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion."
+   }
   },
   "confusion": {
    "id": "confusion",
@@ -727,7 +2134,63 @@ window.TEG_SIGNALS = {
     "Z": "Confusion may remain influential while thinking feels foggy, blank or difficult to organise."
    },
    "grounding": "grounding/neurochemistry.html#confusion",
-   "grounding_status": "Working synthesis · family-level · papers pending"
+   "grounding_status": "Working synthesis · family-level · papers pending",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "Available information conflicts with the current understanding of the situation.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-confusion"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Signals that meaning, expectation, or coherence has broken down and needs reorientation.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-confusion"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Signals that meaning, expectation, or coherence has broken down and needs reorientation.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-confusion"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "Tension gathers around the forehead and eyes while the body pauses and the stomach may unsettle.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-confusion"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "An emotion-specific account of recruitment, persistence, reduction and redirection has not yet been separated in this record. The linked biological material is working grounding, not a complete regulation mechanism.",
+     "status": "Separate account still needed",
+     "source": "grounding/neurochemistry.html#confusion"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "Enough reliable information or orientation distinguishes what is known, unknown, and still ambiguous. False certainty is not required.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-confusion"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Compare the same signal in the two readings below. The Chronic profiles describe possible differences in access, interpretation and participation; they do not change its identity.",
+     "status": "Working comparison",
+     "source": "emotion/chronic.html#signal-confusion"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Current text transfers the earlier synthesis written under Fluid reference A↔B. Individual-emotion measures and eliciting conditions have not yet been separated. Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion.",
+     "status": "Working synthesis · family-level · papers pending",
+     "source": "grounding/neurochemistry.html#confusion"
+    }
+   ],
+   "biology_fields": {
+    "Central signalling": "Noradrenergic, cholinergic, dopaminergic, HPA-related and other signalling may support orienting, vigilance, learning and updating under uncertain conditions.",
+    "Peripheral hormones": "Catecholamine and cortisol responses may participate, with direction and magnitude varying by anticipation, social evaluation, controllability, timing and prior learning.",
+    "Evidence carried forward": "Current text transfers the earlier synthesis written under Fluid reference A↔B. Individual-emotion measures and eliciting conditions have not yet been separated.",
+    "Context and limits": "Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion."
+   }
   },
   "frustration": {
    "id": "frustration",
@@ -753,7 +2216,63 @@ window.TEG_SIGNALS = {
     "Z": "Frustration may remain influential while effort, energy or access to another attempt becomes unavailable."
    },
    "grounding": "grounding/neurochemistry.html#frustration",
-   "grounding_status": "Working synthesis · family-level · papers pending"
+   "grounding_status": "Working synthesis · family-level · papers pending",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "An obstacle is blocking progress toward a valued outcome.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-frustration"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Signals blocked movement toward something that matters and mobilises renewed effort.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-frustration"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Signals blocked movement toward something that matters and mobilises renewed effort.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-frustration"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "Pressure and heat build through the jaw, shoulders, hands, or chest against the obstacle.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-frustration"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "An emotion-specific account of recruitment, persistence, reduction and redirection has not yet been separated in this record. The linked biological material is working grounding, not a complete regulation mechanism.",
+     "status": "Separate account still needed",
+     "source": "grounding/neurochemistry.html#frustration"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "The obstacle changes, another route becomes usable, the goal revises, or impossibility becomes sufficiently clear.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-frustration"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Compare the same signal in the two readings below. The Chronic profiles describe possible differences in access, interpretation and participation; they do not change its identity.",
+     "status": "Working comparison",
+     "source": "emotion/chronic.html#signal-frustration"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Current text transfers the earlier synthesis written under Fluid reference A↔B. Individual-emotion measures and eliciting conditions have not yet been separated. Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion.",
+     "status": "Working synthesis · family-level · papers pending",
+     "source": "grounding/neurochemistry.html#frustration"
+    }
+   ],
+   "biology_fields": {
+    "Central signalling": "Noradrenergic, cholinergic, dopaminergic, HPA-related and other signalling may support orienting, vigilance, learning and updating under uncertain conditions.",
+    "Peripheral hormones": "Catecholamine and cortisol responses may participate, with direction and magnitude varying by anticipation, social evaluation, controllability, timing and prior learning.",
+    "Evidence carried forward": "Current text transfers the earlier synthesis written under Fluid reference A↔B. Individual-emotion measures and eliciting conditions have not yet been separated.",
+    "Context and limits": "Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion."
+   }
   },
   "anxiety": {
    "id": "anxiety",
@@ -779,7 +2298,63 @@ window.TEG_SIGNALS = {
     "Z": "Anxiety may remain influential while overwhelm, dread, fog or shutdown dominates access."
    },
    "grounding": "grounding/neurochemistry.html#anxiety",
-   "grounding_status": "Working synthesis · family-level · papers pending"
+   "grounding_status": "Working synthesis · family-level · papers pending",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "Rupture, loss, exposure, or instability may be approaching.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-anxiety"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Anticipates possible rupture, loss, exposure, or instability before it is fully clear.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-anxiety"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Anticipates possible rupture, loss, exposure, or instability before it is fully clear.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-anxiety"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "The chest tightens, breath rises, the stomach unsettles, and tingling or restlessness spreads.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-anxiety"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "An emotion-specific account of recruitment, persistence, reduction and redirection has not yet been separated in this record. The linked biological material is working grounding, not a complete regulation mechanism.",
+     "status": "Separate account still needed",
+     "source": "grounding/neurochemistry.html#anxiety"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "Evidence, protection, or increased capacity makes uncertainty more discriminable and allows prediction to update; reassurance alone may only reduce pressure.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-anxiety"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Compare the same signal in the two readings below. The Chronic profiles describe possible differences in access, interpretation and participation; they do not change its identity.",
+     "status": "Working comparison",
+     "source": "emotion/chronic.html#signal-anxiety"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Current text transfers the earlier synthesis written under Fluid reference A↔B. Individual-emotion measures and eliciting conditions have not yet been separated. Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion.",
+     "status": "Working synthesis · family-level · papers pending",
+     "source": "grounding/neurochemistry.html#anxiety"
+    }
+   ],
+   "biology_fields": {
+    "Central signalling": "Noradrenergic, cholinergic, dopaminergic, HPA-related and other signalling may support orienting, vigilance, learning and updating under uncertain conditions.",
+    "Peripheral hormones": "Catecholamine and cortisol responses may participate, with direction and magnitude varying by anticipation, social evaluation, controllability, timing and prior learning.",
+    "Evidence carried forward": "Current text transfers the earlier synthesis written under Fluid reference A↔B. Individual-emotion measures and eliciting conditions have not yet been separated.",
+    "Context and limits": "Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion."
+   }
   },
   "stress": {
    "id": "stress",
@@ -805,7 +2380,63 @@ window.TEG_SIGNALS = {
     "Z": "Stress may remain influential while depletion, numbness or offline functioning dominates experience."
    },
    "grounding": "grounding/neurochemistry.html#stress",
-   "grounding_status": "Working synthesis · family-level · papers pending"
+   "grounding_status": "Working synthesis · family-level · papers pending",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "Current demands are pressing against the organism’s available capacity.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-stress"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Signals that demand is exceeding available capacity and the system needs support, reduction, or reorganisation.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-stress"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Signals that demand is exceeding available capacity and the system needs support, reduction, or reorganisation.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-stress"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "The jaw, neck, and shoulders brace as breath quickens and pressure spreads through the body.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-stress"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "An emotion-specific account of recruitment, persistence, reduction and redirection has not yet been separated in this record. The linked biological material is working grounding, not a complete regulation mechanism.",
+     "status": "Separate account still needed",
+     "source": "grounding/neurochemistry.html#stress"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "Demand reduces, capacity or support increases, priorities reorganise, or the continuing mismatch becomes accurately known.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-stress"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Compare the same signal in the two readings below. The Chronic profiles describe possible differences in access, interpretation and participation; they do not change its identity.",
+     "status": "Working comparison",
+     "source": "emotion/chronic.html#signal-stress"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Current text transfers the earlier synthesis written under Fluid reference A↔B. Individual-emotion measures and eliciting conditions have not yet been separated. Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion.",
+     "status": "Working synthesis · family-level · papers pending",
+     "source": "grounding/neurochemistry.html#stress"
+    }
+   ],
+   "biology_fields": {
+    "Central signalling": "Noradrenergic, cholinergic, dopaminergic, HPA-related and other signalling may support orienting, vigilance, learning and updating under uncertain conditions.",
+    "Peripheral hormones": "Catecholamine and cortisol responses may participate, with direction and magnitude varying by anticipation, social evaluation, controllability, timing and prior learning.",
+    "Evidence carried forward": "Current text transfers the earlier synthesis written under Fluid reference A↔B. Individual-emotion measures and eliciting conditions have not yet been separated.",
+    "Context and limits": "Provisional family-level association. Uncertainty does not guarantee increased cortisol or catecholamines, and peripheral values do not reveal a specific emotion."
+   }
   },
   "fear": {
    "id": "fear",
@@ -831,7 +2462,63 @@ window.TEG_SIGNALS = {
     "Z": "Fear may remain influential while dread, immobilisation or numbness dominates experience, or become felt only after mobilisation subsides."
    },
    "grounding": "grounding/neurochemistry.html#fear",
-   "grounding_status": "Working synthesis · family-level · papers pending"
+   "grounding_status": "Working synthesis · family-level · papers pending",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "The organism detects a possible source of harm in the present environment.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-fear"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Alerts the organism to danger, increases caution, and prepares protection, escape, or freezing.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-fear"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Alerts the organism to danger, increases caution, and prepares protection, escape, or freezing.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-fear"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "The heart and breath accelerate, the stomach drops, and cold, tingling, or trembling may spread.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-fear"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "An emotion-specific account of recruitment, persistence, reduction and redirection has not yet been separated in this record. The linked biological material is working grounding, not a complete regulation mechanism.",
+     "status": "Separate account still needed",
+     "source": "grounding/neurochemistry.html#fear"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "Danger is sufficiently located; threat ends, protection succeeds, credible safety evidence arrives, or unresolved uncertainty remains accurately represented.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-fear"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Compare the same signal in the two readings below. The Chronic profiles describe possible differences in access, interpretation and participation; they do not change its identity.",
+     "status": "Working comparison",
+     "source": "emotion/chronic.html#signal-fear"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Current text transfers the earlier synthesis written under Fluid reference B. Individual-emotion measures, threat paradigms and response timing have not yet been separated. Provisional family-level association. Adrenaline is not fear or anger, and no chemical pattern establishes which protective emotion is present.",
+     "status": "Working synthesis · family-level · papers pending",
+     "source": "grounding/neurochemistry.html#fear"
+    }
+   ],
+   "biology_fields": {
+    "Central signalling": "Noradrenergic, endogenous-opioid and other rapid protective signalling may participate alongside autonomic, attentional, pain-modulatory and metabolic systems.",
+    "Peripheral hormones": "Adrenaline and noradrenaline may support rapid mobilisation; HPA-axis and cortisol effects unfold on a different timescale. Immune and metabolic changes may also participate.",
+    "Evidence carried forward": "Current text transfers the earlier synthesis written under Fluid reference B. Individual-emotion measures, threat paradigms and response timing have not yet been separated.",
+    "Context and limits": "Provisional family-level association. Adrenaline is not fear or anger, and no chemical pattern establishes which protective emotion is present."
+   }
   },
   "anger": {
    "id": "anger",
@@ -857,7 +2544,63 @@ window.TEG_SIGNALS = {
     "Z": "Anger may remain influential while helplessness, internal pressure or delayed flashes dominate access."
    },
    "grounding": "grounding/neurochemistry.html#anger",
-   "grounding_status": "Working synthesis · family-level · papers pending"
+   "grounding_status": "Working synthesis · family-level · papers pending",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "A boundary, value, need, or route is being crossed or blocked.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-anger"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Brings boundary energy when something feels invasive, unfair, harmful, blocked, or violated.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-anger"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Brings boundary energy when something feels invasive, unfair, harmful, blocked, or violated.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-anger"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "Heat and pressure build through the chest, face, jaw, arms, or hands as muscles brace.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-anger"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "An emotion-specific account of recruitment, persistence, reduction and redirection has not yet been separated in this record. The linked biological material is working grounding, not a complete regulation mechanism.",
+     "status": "Separate account still needed",
+     "source": "grounding/neurochemistry.html#anger"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "The crossing stops, a boundary becomes effective, agency or route is restored, or impossibility is recognised and participation changes. Discharge is not required.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-anger"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Compare the same signal in the two readings below. The Chronic profiles describe possible differences in access, interpretation and participation; they do not change its identity.",
+     "status": "Working comparison",
+     "source": "emotion/chronic.html#signal-anger"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Current text transfers the earlier synthesis written under Fluid reference B. Individual-emotion measures, threat paradigms and response timing have not yet been separated. Provisional family-level association. Adrenaline is not fear or anger, and no chemical pattern establishes which protective emotion is present.",
+     "status": "Working synthesis · family-level · papers pending",
+     "source": "grounding/neurochemistry.html#anger"
+    }
+   ],
+   "biology_fields": {
+    "Central signalling": "Noradrenergic, endogenous-opioid and other rapid protective signalling may participate alongside autonomic, attentional, pain-modulatory and metabolic systems.",
+    "Peripheral hormones": "Adrenaline and noradrenaline may support rapid mobilisation; HPA-axis and cortisol effects unfold on a different timescale. Immune and metabolic changes may also participate.",
+    "Evidence carried forward": "Current text transfers the earlier synthesis written under Fluid reference B. Individual-emotion measures, threat paradigms and response timing have not yet been separated.",
+    "Context and limits": "Provisional family-level association. Adrenaline is not fear or anger, and no chemical pattern establishes which protective emotion is present."
+   }
   },
   "disgust": {
    "id": "disgust",
@@ -883,7 +2626,63 @@ window.TEG_SIGNALS = {
     "Z": "Disgust may remain influential while nausea, withdrawal, deadening or inability to engage dominates experience."
    },
    "grounding": "grounding/neurochemistry.html#disgust",
-   "grounding_status": "Working synthesis · family-level · papers pending"
+   "grounding_status": "Working synthesis · family-level · papers pending",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "A substance, person, act, or proximity may be contaminating, degrading, or unsafe.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-disgust"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Protects the organism from what feels contaminating, unsafe, degrading, or too close.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-disgust"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Protects the organism from what feels contaminating, unsafe, degrading, or too close.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-disgust"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "The stomach and throat contract, the face recoils, and the body pulls away.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-disgust"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "An emotion-specific account of recruitment, persistence, reduction and redirection has not yet been separated in this record. The linked biological material is working grounding, not a complete regulation mechanism.",
+     "status": "Separate account still needed",
+     "source": "grounding/neurochemistry.html#disgust"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "Separation becomes possible, or credible evidence revises the contamination or violation read.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-disgust"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Compare the same signal in the two readings below. The Chronic profiles describe possible differences in access, interpretation and participation; they do not change its identity.",
+     "status": "Working comparison",
+     "source": "emotion/chronic.html#signal-disgust"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Current text transfers the earlier synthesis written under Fluid reference B. Individual-emotion measures, threat paradigms and response timing have not yet been separated. Provisional family-level association. Adrenaline is not fear or anger, and no chemical pattern establishes which protective emotion is present.",
+     "status": "Working synthesis · family-level · papers pending",
+     "source": "grounding/neurochemistry.html#disgust"
+    }
+   ],
+   "biology_fields": {
+    "Central signalling": "Noradrenergic, endogenous-opioid and other rapid protective signalling may participate alongside autonomic, attentional, pain-modulatory and metabolic systems.",
+    "Peripheral hormones": "Adrenaline and noradrenaline may support rapid mobilisation; HPA-axis and cortisol effects unfold on a different timescale. Immune and metabolic changes may also participate.",
+    "Evidence carried forward": "Current text transfers the earlier synthesis written under Fluid reference B. Individual-emotion measures, threat paradigms and response timing have not yet been separated.",
+    "Context and limits": "Provisional family-level association. Adrenaline is not fear or anger, and no chemical pattern establishes which protective emotion is present."
+   }
   },
   "suspicion": {
    "id": "suspicion",
@@ -909,7 +2708,63 @@ window.TEG_SIGNALS = {
     "Z": "Suspicion may remain as diffuse dread while investigative energy and willingness to know become unavailable."
    },
    "grounding": "grounding/neurochemistry.html#suspicion",
-   "grounding_status": "Working synthesis · family-level · papers pending"
+   "grounding_status": "Working synthesis · family-level · papers pending",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "An appearance, account, or stated intention may not match the underlying reality.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-suspicion"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Increases scanning when trust feels uncertain or hidden threat may be present.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-suspicion"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Increases scanning when trust feels uncertain or hidden threat may be present.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-suspicion"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "The eyes and face sharpen, breath holds, and tension gathers in the stomach or chest.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-suspicion"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "An emotion-specific account of recruitment, persistence, reduction and redirection has not yet been separated in this record. The linked biological material is working grounding, not a complete regulation mechanism.",
+     "status": "Separate account still needed",
+     "source": "grounding/neurochemistry.html#suspicion"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "Evidence becomes sufficient to confirm, revise, or maintain concern proportionately. Suspicion is not evidence by itself.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-suspicion"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Compare the same signal in the two readings below. The Chronic profiles describe possible differences in access, interpretation and participation; they do not change its identity.",
+     "status": "Working comparison",
+     "source": "emotion/chronic.html#signal-suspicion"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Current text transfers the earlier synthesis written under Fluid reference B. Individual-emotion measures, threat paradigms and response timing have not yet been separated. Provisional family-level association. Adrenaline is not fear or anger, and no chemical pattern establishes which protective emotion is present.",
+     "status": "Working synthesis · family-level · papers pending",
+     "source": "grounding/neurochemistry.html#suspicion"
+    }
+   ],
+   "biology_fields": {
+    "Central signalling": "Noradrenergic, endogenous-opioid and other rapid protective signalling may participate alongside autonomic, attentional, pain-modulatory and metabolic systems.",
+    "Peripheral hormones": "Adrenaline and noradrenaline may support rapid mobilisation; HPA-axis and cortisol effects unfold on a different timescale. Immune and metabolic changes may also participate.",
+    "Evidence carried forward": "Current text transfers the earlier synthesis written under Fluid reference B. Individual-emotion measures, threat paradigms and response timing have not yet been separated.",
+    "Context and limits": "Provisional family-level association. Adrenaline is not fear or anger, and no chemical pattern establishes which protective emotion is present."
+   }
   },
   "rage": {
    "id": "rage",
@@ -935,7 +2790,63 @@ window.TEG_SIGNALS = {
     "Z": "Rage may remain influential while maximum mobilisation gives way to numbness, exhaustion, immobility or despair; this is not rage turning into another state."
    },
    "grounding": "grounding/neurochemistry.html#rage",
-   "grounding_status": "Working synthesis · family-level · papers pending"
+   "grounding_status": "Working synthesis · family-level · papers pending",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "Survival is at stake and ordinary defence is not enough.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-rage"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Recruits everything available when survival is at stake and ordinary protection is not enough.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-rage"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Recruits everything available when survival is at stake and ordinary protection is not enough.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-rage"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "Heat and force surge through the chest, arms, and hands as breath, muscles, and attention intensify.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-rage"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "An emotion-specific account of recruitment, persistence, reduction and redirection has not yet been separated in this record. The linked biological material is working grounding, not a complete regulation mechanism.",
+     "status": "Separate account still needed",
+     "source": "grounding/neurochemistry.html#rage"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "Danger stops, escape or effective protection becomes available, and maximum force is no longer required. Substantial recovery may remain.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-rage"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Compare the same signal in the two readings below. The Chronic profiles describe possible differences in access, interpretation and participation; they do not change its identity.",
+     "status": "Working comparison",
+     "source": "emotion/chronic.html#signal-rage"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Current text transfers the earlier synthesis written under Fluid reference D. Evidence for the individual labels rage, fury and frenzy has not yet been separated. Provisional family-level association. No chemical establishes rage, violence, dominance or life threat, and the same systems participate in other forms of intense action.",
+     "status": "Working synthesis · family-level · papers pending",
+     "source": "grounding/neurochemistry.html#rage"
+    }
+   ],
+   "biology_fields": {
+    "Central signalling": "Catecholaminergic, endogenous-opioid and multiple neuromodulatory systems may support extreme attention, pain modulation, force and survival action.",
+    "Peripheral hormones": "Adrenaline, noradrenaline, HPA mediators, cortisol and glucose regulation may help mobilise energy across different timescales.",
+    "Evidence carried forward": "Current text transfers the earlier synthesis written under Fluid reference D. Evidence for the individual labels rage, fury and frenzy has not yet been separated.",
+    "Context and limits": "Provisional family-level association. No chemical establishes rage, violence, dominance or life threat, and the same systems participate in other forms of intense action."
+   }
   },
   "fury": {
    "id": "fury",
@@ -961,7 +2872,63 @@ window.TEG_SIGNALS = {
     "Z": "Fury may remain influential while exhaustion, numbness or immobility replaces sustained mobilisation. Reduced force does not establish that danger ended."
    },
    "grounding": "grounding/neurochemistry.html#fury",
-   "grounding_status": "Working synthesis · family-level · papers pending"
+   "grounding_status": "Working synthesis · family-level · papers pending",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "The danger continues and has a perceived source.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-fury"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Holds maximum force on a perceived source of danger until the danger stops.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-fury"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Holds maximum force on a perceived source of danger until the danger stops.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-fury"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "The gaze narrows while the jaw, neck, chest, and limbs hold sustained force.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-fury"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "An emotion-specific account of recruitment, persistence, reduction and redirection has not yet been separated in this record. The linked biological material is working grounding, not a complete regulation mechanism.",
+     "status": "Separate account still needed",
+     "source": "grounding/neurochemistry.html#fury"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "The danger ends or another viable route makes sustained maximum force unnecessary; recovery can then begin.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-fury"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Compare the same signal in the two readings below. The Chronic profiles describe possible differences in access, interpretation and participation; they do not change its identity.",
+     "status": "Working comparison",
+     "source": "emotion/chronic.html#signal-fury"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Current text transfers the earlier synthesis written under Fluid reference D. Evidence for the individual labels rage, fury and frenzy has not yet been separated. Provisional family-level association. No chemical establishes rage, violence, dominance or life threat, and the same systems participate in other forms of intense action.",
+     "status": "Working synthesis · family-level · papers pending",
+     "source": "grounding/neurochemistry.html#fury"
+    }
+   ],
+   "biology_fields": {
+    "Central signalling": "Catecholaminergic, endogenous-opioid and multiple neuromodulatory systems may support extreme attention, pain modulation, force and survival action.",
+    "Peripheral hormones": "Adrenaline, noradrenaline, HPA mediators, cortisol and glucose regulation may help mobilise energy across different timescales.",
+    "Evidence carried forward": "Current text transfers the earlier synthesis written under Fluid reference D. Evidence for the individual labels rage, fury and frenzy has not yet been separated.",
+    "Context and limits": "Provisional family-level association. No chemical establishes rage, violence, dominance or life threat, and the same systems participate in other forms of intense action."
+   }
   },
   "frenzy": {
    "id": "frenzy",
@@ -987,7 +2954,63 @@ window.TEG_SIGNALS = {
     "Z": "Frenzy may remain influential while depletion, numbness or immobility follows overwhelming mobilisation. Stopped movement does not establish safety or completion."
    },
    "grounding": "grounding/neurochemistry.html#frenzy",
-   "grounding_status": "Working synthesis · family-level · papers pending"
+   "grounding_status": "Working synthesis · family-level · papers pending",
+   "questions": [
+    {
+     "question": "What does it register?",
+     "answer": "Survival demand exceeds ordinary response capacity, with no viable action route available.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-frenzy"
+    },
+    {
+     "question": "What is its function?",
+     "answer": "Drives unplanned movement when maximum survival force has no viable route.",
+     "status": "Working functional reading",
+     "source": "emotion/fluid.html#signal-frenzy"
+    },
+    {
+     "question": "What does it change?",
+     "answer": "Drives unplanned movement when maximum survival force has no viable route.",
+     "status": "Current functional description; separate accounts of attention, bodily activity and action-readiness still need review",
+     "source": "emotion/fluid.html#signal-frenzy"
+    },
+    {
+     "question": "How might it become felt?",
+     "answer": "Activation floods the whole body as breath and movement become rapid, forceful, and uncoordinated.",
+     "status": "Possible experience, not a required sign",
+     "source": "emotion/fluid.html#signal-frenzy"
+    },
+    {
+     "question": "What regulates its participation?",
+     "answer": "An emotion-specific account of recruitment, persistence, reduction and redirection has not yet been separated in this record. The linked biological material is working grounding, not a complete regulation mechanism.",
+     "status": "Separate account still needed",
+     "source": "grounding/neurochemistry.html#frenzy"
+    },
+    {
+     "question": "What allows updating?",
+     "answer": "A viable route, assistance, or changed conditions allow coordination to re-enter and danger to end. Reduced movement from depletion is not completion.",
+     "status": "Possible completing condition; relief, recovery and repair remain separate",
+     "source": "emotion/fluid.html#signal-frenzy"
+    },
+    {
+     "question": "What differs under Fluid and Chronic organisation?",
+     "answer": "Compare the same signal in the two readings below. The Chronic profiles describe possible differences in access, interpretation and participation; they do not change its identity.",
+     "status": "Working comparison",
+     "source": "emotion/chronic.html#signal-frenzy"
+    },
+    {
+     "question": "What supports the explanation?",
+     "answer": "Current text transfers the earlier synthesis written under Fluid reference D. Evidence for the individual labels rage, fury and frenzy has not yet been separated. Provisional family-level association. No chemical establishes rage, violence, dominance or life threat, and the same systems participate in other forms of intense action.",
+     "status": "Working synthesis · family-level · papers pending",
+     "source": "grounding/neurochemistry.html#frenzy"
+    }
+   ],
+   "biology_fields": {
+    "Central signalling": "Catecholaminergic, endogenous-opioid and multiple neuromodulatory systems may support extreme attention, pain modulation, force and survival action.",
+    "Peripheral hormones": "Adrenaline, noradrenaline, HPA mediators, cortisol and glucose regulation may help mobilise energy across different timescales.",
+    "Evidence carried forward": "Current text transfers the earlier synthesis written under Fluid reference D. Evidence for the individual labels rage, fury and frenzy has not yet been separated.",
+    "Context and limits": "Provisional family-level association. No chemical establishes rage, violence, dominance or life threat, and the same systems participate in other forms of intense action."
+   }
   }
  },
  "additional": [

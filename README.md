@@ -4,6 +4,8 @@ This is the canonical, navigable TEG-Blue site: emotions as information and
 its Emotional Signal Map, three connected models, the twelve frameworks, the
 Inner Compass with its four modes, and the shared reference distinctions.
 
+For individual emotion work, start with the [Signal Map session guide](01-signal-map/SESSION-GUIDE.md) and [connected signal records](01-signal-map/signal-records.md).
+
 The deep research and development work remains active in the sibling
 `inner-compass-nervous-system-organization-gradient/` repository. Approved
 canon and explicitly labelled working or grounding material can be carried

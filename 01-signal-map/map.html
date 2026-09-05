@@ -41,7 +41,7 @@
     .signal:hover { border-color: var(--fam, var(--ink)); }
     .signal[aria-pressed="true"] { background: var(--fam, var(--ink)); border-color: var(--fam, var(--ink)); color: white; }
     .signal--additional { border-style: dashed; color: var(--body); }
-    .record { position: sticky; top: 92px; min-width: 0; padding: 24px 26px 26px; background: white; border: 1px solid var(--line); border-top: 6px solid var(--fam, var(--line)); border-radius: 16px; box-shadow: var(--shadow); }
+    .record { scroll-margin-top: 110px; position: sticky; top: 92px; min-width: 0; padding: 24px 26px 26px; background: white; border: 1px solid var(--line); border-top: 6px solid var(--fam, var(--line)); border-radius: 16px; box-shadow: var(--shadow); }
     .record .eyebrow { margin-bottom: 8px; color: var(--fam, var(--muted)); }
     .record h2 { margin: 0; font: 500 clamp(28px, 3vw, 38px)/1.05 var(--display); color: var(--ink); }
     .record .where { margin: 8px 0 0; font-size: 13px; color: var(--muted); }
@@ -81,6 +81,8 @@
       .status-block, .guardrails { grid-template-columns: 1fr; }
       .position-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
+    .question-source{display:block;margin-top:8px;font-size:12px;color:var(--muted)}
+    .record-questions h3{margin-top:24px}
   </style>
 </head>
 <body data-page="signal-map" data-root="../">
@@ -110,6 +112,7 @@
       <div><strong>Does not establish</strong>That a feeling's interpretation is complete, that one signal maps to one Gradient Position, or that any signal prescribes behaviour.</div>
     </div>
 
+    <p><a href="SESSION-GUIDE.md">How to read and maintain these records</a> · <a href="signal-records.md">All signal records with sources and open questions</a></p>
     <div class="counts" id="counts" aria-live="polite"></div>
 
     <div class="map-layout">
@@ -230,6 +233,9 @@
         var html = '<p class="eyebrow">' + esc(groupName) + " · " + esc(fam ? fam.name : "") + "</p><h2>" + esc(s.name) + "</h2>";
         html += '<p class="where">Family: <a href="' + esc(fam.canon) + '">' + esc(fam.name) + "</a> · " + esc(s.group === "body" ? fam.problem : fam.relationship) + "</p>";
         html += '<p class="invariant">' + (s.group === "body" ? "Core condition information: " : "Identity holds across both readings: ") + esc(s.fluid.condition) + "</p>";
+        html += '<section class="record-questions" aria-label="Function and regulation"><h3>Function and regulation</h3><p class="note">This connecting record brings the current explanations together and identifies what still needs a separate account. Working descriptions are not validated mechanisms.</p><dl class="fields">' + s.questions.map(function (q) {
+          return '<div><dt>' + esc(q.question) + '</dt><dd>' + esc(q.answer) + '<small class="question-source">' + esc(q.status) + ' · <a href="' + esc(q.source) + '">Read the source</a></small></dd></div>';
+        }).join('') + '</dl><p class="note"><strong>Two regulation questions.</strong> The function describes what information this signal contributes to regulation. Its own recruitment, persistence and updating require a separate explanation.</p></section>';
         if (s.group === "body") {
           html += '<section class="reading-panel" aria-label="Fluid record"><dl class="fields">' + FLUID_FIELDS.filter(function (f) { return s.fluid[f[0]]; }).map(function (f) {
             return "<div><dt>" + esc(f[1]) + (f[2] ? "<small>" + esc(f[2]) + "</small>" : "") + "</dt><dd>" + esc(s.fluid[f[0]]) + "</dd></div>";
@@ -251,9 +257,8 @@
           }
           html += "</section>";
         }
-        html += '<p class="grounding">Grounding: <a href="' + esc(s.grounding) + '">neurochemistry entry</a>' + (s.grounding_status ? '<span class="status-word status-word--working">' + esc(s.grounding_status) + "</span>" : "") +
-          ' · <a href="' + (s.group === "body" ? "emotion/fluid.html#body-signals" : "emotion/fluid.html#" + esc(fam.id === "belonging" ? "belonging-emotions" : fam.id)) + '">roster row</a>' +
-          (s.chronic ? ' · <a href="emotion/chronic.html#' + esc(fam.id === "belonging" ? "belonging-emotions" : fam.id) + '">Chronic row</a>' : "") + "</p>";
+        html += '<p class="grounding"><a href="emotion/fluid.html#signal-' + esc(s.id) + '">Fluid record</a>' + (s.chronic ? ' · <a href="emotion/chronic.html#signal-' + esc(s.id) + '">Chronic record</a>' : '') + ' · <a href="grounding/neurochemistry.html?reading=' + (s.chronic ? state.plane : 'fluid') + '#' + esc(s.id) + '">Biology and Neurochemistry</a> · <a href="signal-records.md#' + esc(s.id) + '">Readable source record</a></p>';
+        if (s.id === 'love') html += '<p class="note"><strong>Deeper working analysis for Love.</strong> <a href="notes/fluid-love-nine-layer-signal-structure.md">Fluid nine-layer analysis</a> · <a href="notes/chronic-love-nine-layer-signal-structure.md">Chronic nine-layer analysis</a> · <a href="notes/fluid-chronic-love-nine-layer-comparison-and-owner-handoff.md">Comparison and owner handoff</a>. <a href="notes/love-reference-case-completion-and-public-boundary.md">Structurally complete, evidence review open</a>.</p>';
         el.innerHTML = html;
       }
 
@@ -301,6 +306,7 @@
       });
 
       renderCounts(); render();
+      if (state.signal) { focusRecordTitle(); document.getElementById("record").scrollIntoView({ behavior: "instant", block: "start" }); }
     })();
   </script>
 </body>
