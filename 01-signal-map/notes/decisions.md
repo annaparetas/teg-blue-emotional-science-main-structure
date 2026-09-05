@@ -86,6 +86,20 @@ control-to-record relationships and focus continuity. Selecting a signal now
 moves focus to the resulting record; changing the Fluid/Chronic reading or a
 Chronic reference profile returns focus to the selected control.
 
+## 2026-09-04 · Fluid and Chronic become the two primary Signal Map readings
+
+The Signal Map canon page now opens directly into a two-way reading choice:
+Fluid for present-responsive organisation and Chronic for recurrent or
+difficult-to-update organisation. The same switch appears on both full rosters,
+so a reader can compare the two organisations without returning through the
+site hierarchy.
+
+This is a structural merge, not a content copy. The two roster files remain
+separate because together they contain more than two thousand lines of working
+records and tables. Their signal identities and families remain shared; the
+organisation changes the reading, not the signal. The interactive hierarchy is
+kept as a supporting view rather than a third definition of the map.
+
 ## 2026-09-02 · Transferred into this folder; one home for the emotion list
 
 The families and members now live only on [index.html](../index.html) and
