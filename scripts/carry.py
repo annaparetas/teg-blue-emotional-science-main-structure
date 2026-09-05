@@ -42,6 +42,12 @@ ESM_S1 = "codex/esm-s1-emotional-signal-map"   # newer signal-map text
 # provenance; the site owns the current curated presentation. The date records
 # the owner decision that changed the transfer mode.
 GRADUATED_SITE_FILES = {
+    "03-model-2-gradient/positions.html": "4 September 2026",
+    "03-model-2-gradient/premise.html": "4 September 2026",
+    "03-model-2-gradient/depth.html": "4 September 2026",
+    "03-model-2-gradient/intermediate-layers.html": "4 September 2026",
+    "03-model-2-gradient/return.html": "4 September 2026",
+    "03-model-2-gradient/autonomic.html": "4 September 2026",
     "01-signal-map/emotion/fluid.html": "4 September 2026",
     "01-signal-map/emotion/chronic.html": "4 September 2026",
     "01-signal-map/grounding/neurochemistry.html": "4 September 2026",

@@ -3,6 +3,33 @@
 Dated entries, newest first. A decision recorded here changes a canon page
 only when the page is edited and its "last approved" date moves.
 
+## 2026-09-04 · Connected Model 2 hierarchy and position records
+
+Anna approved applying the Signal Map reading structure to Model 2: overview,
+original Gradient table, individual position, Fluid or Chronic reading, then
+depth, biological participation and Return, with routes back to the same position.
+
+Seven connected position records now use the governing premise's sixteen
+questions. `scripts/build-gradient-data.py` reads the current site table and
+autonomic entries to generate `data/positions.js` and `position-records.md`.
+Every excerpt links to its exact source; partial and missing accounts remain
+visible. The records do not introduce position definitions, physiology or
+conscious-access assignments. The table's individual cell wording is unchanged.
+
+The Engine's `models/02-nervous-system-gradient/index.html` is the original
+source of the site's `positions.html`. The source comparison records later
+site changes, including the approved Model 1 / Model 2 boundary revision.
+The Engine original was not overwritten. All six carried Model 2 HTML sources
+now graduate to site ownership for this connected presentation; their existing
+manifest mapping preserves provenance, and later Engine research enters through
+explicit review rather than an automatic recopy.
+
+Depth is the overview; intermediate-layers expands the reference patterns and
+matrix. This clarifies their reading relationship without changing the proposed
+depth construct or its visuals. Full editorial consolidation remains open.
+Return keeps its existing vocabulary, partial Fluid workbench and open Chronic
+routes. This work does not complete their evidence or mechanism review.
+
 ## 2026-09-04 · Model 2 process conditions separated from Model 1 access
 
 The first Chronic-row owner-review pass separates two readings that had been

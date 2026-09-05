@@ -144,3 +144,15 @@ The Signal Map now owns nine explicit family rationales. Source readings,
 biology, generated records, F1, the foundation and the session guide link to
 that shared explanation. All 35 members retain their existing family.
 Survival-Rage's boundary with present protective organisation remains open.
+
+
+## 2026-09-04 · Model 2 hierarchy and connected position records
+
+The Model 2 overview now links the carried original Gradient table to seven
+position records, each with Fluid and Chronic readings and the same sixteen
+questions. Exact source links connect biology and Return back to the selected
+position. Depth is the overview and intermediate-layers is its detailed expansion.
+The six carried Model 2 HTML sources graduate to site ownership with Engine
+provenance retained. `03-model-2-gradient/SESSION-GUIDE.md` explains the reading
+order and source boundaries. Table wording is preserved; missing mechanisms,
+Return routes and evidence review remain open.

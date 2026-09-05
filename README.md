@@ -152,3 +152,11 @@ cross only through an explicit, reviewed transfer.
 
 The umbrella name "Emotional Science" is a working name. It does not claim
 that TEG-Blue is an established scientific discipline.
+
+
+## Model 2 position records
+
+[The Gradient session guide](03-model-2-gradient/SESSION-GUIDE.md) explains how
+the original table, seven position records, Fluid and Chronic readings, depth,
+biology and Return connect. Generate the position data and readable records with
+`python3 scripts/build-gradient-data.py`; use `--check` to detect stale outputs.

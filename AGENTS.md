@@ -42,3 +42,9 @@ For work on an individual emotion or signal, begin with
 [the Signal Map session guide](01-signal-map/SESSION-GUIDE.md). It identifies
 source ownership, the generated connecting records and unresolved fields.
 Do not treat a complete record structure as completed scientific review.
+
+
+For Model 2 work, begin with [the Gradient session guide](03-model-2-gradient/SESSION-GUIDE.md).
+Use `positions.html` as the current table source and the governing premise's
+sixteen lenses for each position. Regenerate connected records after source
+edits. Preserve the Engine provenance and the later site access-boundary revisions.
