@@ -103,9 +103,9 @@
 
     <article class="article">
       <dl class="page-status" aria-label="Page status">
-        <div><dt>Status</dt><dd><span class="status-word status-word--approved">Approved</span> structure, boundaries and twelve band readings · <span class="status-word status-word--working">Working</span> configuration names and descriptions</dd></div>
+        <div><dt>Status</dt><dd><span class="status-word status-word--approved">Approved</span> structure, boundaries, twelve band readings and eight public configuration descriptions</dd></div>
         <div><dt>Owner</dt><dd><strong>02 · Model 1</strong>; the Inner Compass reads this setting, never sets it</dd></div>
-        <div><dt>Last approved</dt><dd>Built 3 September 2026 as the Model 1 add-on. On 4 September 2026 Anna approved ME access capacities as the collective name, four graded conceptual bands with eight binary landmarks, primary rather than exclusive processing relationships, the twelve band readings, and the boundary that an access configuration cannot assign, predict or tend toward a mode.</dd></div>
+        <div><dt>Last approved</dt><dd>Built 3 September 2026 as the Model 1 add-on. On 4 September 2026 Anna approved ME access capacities as the collective name, four graded conceptual bands with eight binary landmarks, primary rather than exclusive processing relationships, the twelve band readings, the eight literal public configuration descriptions, and the boundary that an access configuration cannot assign, predict or tend toward a mode.</dd></div>
         <div><dt>Does not establish</dt><dd>A score, a diagnosis, a personality, a Gradient Position or plane, empathic concern, or anything about a person other than the one setting the controls for their own reflection.</dd></div>
       </dl>
 
@@ -181,8 +181,8 @@
 
       <section id="configuration">
         <p class="section-label">This configuration</p>
-        <h2>What this combination may look like.</h2>
-        <p class="lead">A configuration is the binary first pass: a capacity counts as available at the two upper bands. It is a pattern of ME access, not a person, and not the presence or absence of the processes underneath.</p>
+        <h2>Which capacities are in the lower and upper bands.</h2>
+        <p class="lead">A configuration is a binary landmark: a capacity enters the upper group at the two upper bands. The title names only that pattern. It does not name a person or establish that any process underneath is present or absent.</p>
         <div class="configuration" aria-live="polite">
           <div class="mark">
             <span data-mark="bodily">Bodily</span>
@@ -219,8 +219,8 @@
 
       <section id="field">
         <p class="section-label">The eight configurations</p>
-        <h2>The whole field, with this one marked.</h2>
-        <p class="lead">Each card is a pattern of ME access. The same configuration can be adaptive for a moment, protective under pressure, or personality-like when it becomes the default. Anna's three worked examples are marked.</p>
+        <h2>Eight binary landmarks, with this one marked.</h2>
+        <p class="lead">Each title states which capacities fall in the lower or upper group. The examples beneath it describe possibilities, not causes or person-types. The same pattern may appear briefly, recur in one context or change when conditions change. Anna's three worked examples are marked.</p>
         <div class="field" id="field-cards"></div>
       </section>
 
@@ -276,46 +276,46 @@
       var controls = Array.prototype.slice.call(document.querySelectorAll(".control"));
 
       var CARDS = {
-        "000": { title: "Relational unavailability", kicker: "No reliable bodily access · no affective sharing · no mentalizing", systems: "No ME access capacity reliably available",
-          description: "Neither one's own felt state nor the other person's felt or represented state is sufficiently available for relational participation.",
-          looks: ["Shutdown, numbness, exhaustion, dissociation, or relational withdrawal.", "Minimal response because all available capacity is assigned to conservation or immediate survival.", "A temporary pause in relational processing during overwhelm."],
-          concern: "Empathic concern: the idea of care may remain, while motivation or capacity to act on it is unavailable.",
-          caution: "Do not infer indifference, lack of attachment, or a fixed absence of empathy." },
-        "001": { title: "The mentalizing-only configuration", kicker: "Anna's example 1 · mentalizing only", systems: "Mentalizing access only",
-          description: "The other person can be read, predicted, or explained, while neither one's own felt experience nor affective resonance with the other is available to ME.",
-          looks: ["Detached analysis, strategic interpersonal reading, or technically accurate perspective-taking.", "Knowing what another feels without feeling moved by it.", "Professional composure in a role that temporarily requires affective distance."],
-          concern: "Empathic concern: cannot be inferred. Understanding may support care, restraint, management, persuasion, or exploitation.",
-          caution: "Do not infer manipulation, psychopathy, or narcissism from this configuration alone." },
-        "010": { title: "The absorbed-other configuration", kicker: "Anna's example 2 · affective-sharing access dominant", systems: "Affective-sharing access only",
-          description: "Another person's affect enters strongly, but one's own experience is difficult to locate and mentalizing cannot reliably interpret whose feeling it is or what it means.",
-          looks: ["Emotional contagion, overwhelm, fusion, or rapidly taking on another person's state.", "Compulsive soothing without checking what the other actually needs.", "Mistaking resonance for accurate knowledge of the other."],
-          concern: "Empathic concern: may become compulsory action or self-erasure rather than freely chosen, proportionate care.",
-          caution: "“Too much empathy” may be better described as affect sharing without sufficient self–other distinction, mentalizing, or regulation." },
-        "011": { title: "The other-centred configuration", kicker: "Affective sharing and mentalizing accessible · own bodily information not reliably usable", systems: "Other-focused access; bodily access low",
-          description: "The other person can be felt and understood in detail, while one's own feeling, need, limit, and preference remain outside usable reach.",
-          looks: ["Highly attuned caregiving combined with self-silencing or absent boundaries.", "Organising choices around the other person's state and anticipated reaction.", "Relational expertise that does not include one's own position in the relationship."],
-          concern: "Empathic concern: may be strong but difficult to distinguish from obligation, appeasement, or connection-preservation.",
-          caution: "Do not assume generosity is false; the question is whether the self can also participate." },
-        "100": { title: "The self-contained configuration", kicker: "Bodily information accessible · other neither shared nor represented", systems: "Bodily access only",
-          description: "One's own feeling and need are available, while the other person's state is not affectively shared or cognitively represented.",
-          looks: ["Healthy solitude when no other person requires representation.", "Protective self-focus under pain, acute demand, or boundary defence.", "A relational blind spot if the configuration persists while another person is affected."],
-          concern: "Empathic concern: may be irrelevant in solitude or reduced when the other's condition cannot enter the field.",
-          caution: "Do not infer selfishness when the social capacities are simply not recruited or needed." },
-        "101": { title: "The interoceptive–mentalizing configuration", kicker: "Bodily and mentalizing access · affective sharing unavailable", systems: "Bodily and mentalizing access",
-          description: "One's own experience remains available and the other can be understood, but the other person's affect does not resonate within oneself.",
-          looks: ["Clear negotiation, boundary-setting, or calm decision-making without emotional merging.", "Compassionate understanding with low affective resonance.", "Instrumental social reasoning when concern and accountability are also reduced."],
-          concern: "Empathic concern: is the differentiator between respectful distance and cognition used only for personal outcome.",
-          caution: "Low affect sharing does not by itself mean low care or poor moral action." },
-        "110": { title: "The shared-affect configuration", kicker: "Self and other felt · other not mentally represented", systems: "Bodily and affective-sharing access",
-          description: "Both one's own feeling and resonance with the other are present, but the other person's perspective, cause, or intention cannot yet be represented reliably.",
-          looks: ["Deep emotional participation with limited perspective-taking.", "Knowing that both people are affected without understanding why or what each needs.", "Projection, misattribution, or action based on shared intensity rather than checked meaning."],
-          concern: "Empathic concern: may be sincere and strong while the chosen response remains inaccurate or unhelpful.",
+        "000": { title: "All three in the lower bands", kicker: "Binary landmark", systems: "Bodily lower · affective lower · mentalizing lower",
+          description: "All three capacities fall within the two lower bands. Fragments may still become readable, but none is currently at least partly available and usable.",
+          looks: ["Little of the present experience is clear enough to guide reflection.", "Different signals may surface briefly without forming a stable reading.", "The pattern may occur during fatigue, illness, overload, recovery or for reasons this tool cannot identify."],
+          concern: "Empathic concern cannot be inferred. Care may remain present even when available information cannot guide action.",
+          caution: "Do not infer indifference, lack of attachment, shutdown or a fixed absence of empathy." },
+        "001": { title: "Mentalizing in an upper band", kicker: "Anna's example 1 · binary landmark", systems: "Bodily lower · affective lower · mentalizing upper",
+          description: "Mentalizing is at least partly available and usable while bodily information and affective sharing remain in the lower bands.",
+          looks: ["Thinking about another person's perspective without a clear reading of one's own felt response.", "Professional or practical reasoning that temporarily keeps affective resonance in the background.", "A detailed interpretation that still needs checking against present evidence."],
+          concern: "Empathic concern cannot be inferred. Understanding may or may not change what happens next.",
+          caution: "Do not infer manipulation, diagnosis, superior accuracy or dangerousness from this pattern." },
+        "010": { title: "Affective sharing in an upper band", kicker: "Anna's example 2 · binary landmark", systems: "Bodily lower · affective upper · mentalizing lower",
+          description: "Affective sharing is at least partly available while bodily information and mentalizing remain in the lower bands.",
+          looks: ["Another person's feeling resonates while one's own response remains difficult to locate.", "Shared feeling is present before its source or meaning can be checked clearly.", "The intensity of resonance may guide a response before the other person's perspective is represented."],
+          concern: "Empathic concern cannot be inferred. Resonance may support care, personal distress, obligation or no action.",
+          caution: "Feeling another person's emotion is not the same as knowing what they feel, why they feel it or what they need." },
+        "011": { title: "Affective sharing and mentalizing in the upper bands", kicker: "Binary landmark", systems: "Bodily lower · affective upper · mentalizing upper",
+          description: "Another person's feeling and perspective are at least partly available while one's own bodily information remains in the lower bands.",
+          looks: ["Close attention to another person with less access to one's own need, limit or preference.", "Careful anticipation of another person's response while one's own position remains faint.", "Relational understanding that still needs space for the self to participate."],
+          concern: "Empathic concern cannot be inferred. Care may be freely chosen, expected, protective or mixed with fear of rupture.",
+          caution: "Do not infer selflessness, dependency or absent boundaries from the access pattern alone." },
+        "100": { title: "Bodily information in an upper band", kicker: "Binary landmark", systems: "Bodily upper · affective lower · mentalizing lower",
+          description: "Bodily information is at least partly available and usable while affective sharing and mentalizing remain in the lower bands.",
+          looks: ["Clear awareness of one's own need, limit or preference when no other person requires attention.", "A period of pain, effort or focused action in which social information stays in the background.", "A relational situation in which one's own state is clearer than the other person's experience."],
+          concern: "Empathic concern cannot be inferred. It may be irrelevant in solitude or require information that is not currently available.",
+          caution: "Do not infer selfishness, withdrawal or poor moral action from this pattern." },
+        "101": { title: "Bodily information and mentalizing in the upper bands", kicker: "Binary landmark", systems: "Bodily upper · affective lower · mentalizing upper",
+          description: "One's own bodily information and a representation of the other person are at least partly available while affective sharing remains in the lower bands.",
+          looks: ["Clear negotiation or boundary-setting without strong emotional resonance.", "Understanding another person's perspective while remaining affectively separate.", "Social reasoning whose use still depends on concern, principle, context and accountability."],
+          concern: "Empathic concern cannot be inferred. The same information can support care, restraint, neutral action or personal outcome.",
+          caution: "Lower affective sharing does not by itself mean lower care, manipulation or harm." },
+        "110": { title: "Bodily information and affective sharing in the upper bands", kicker: "Binary landmark", systems: "Bodily upper · affective upper · mentalizing lower",
+          description: "One's own bodily information and affective resonance with the other person are at least partly available while mentalizing remains in the lower bands.",
+          looks: ["Both people feel present in the interaction before their different perspectives are clear.", "Strong emotional participation with limited understanding of cause or intention.", "A response guided by shared intensity while meaning still needs to be checked."],
+          concern: "Empathic concern cannot be inferred. It may be sincere while the chosen response remains inaccurate or unhelpful.",
           caution: "Feeling with someone is not the same as knowing their experience." },
-        "111": { title: "The integrated configuration", kicker: "Anna's example 3 · all three forms of ME access available", systems: "All three ME access capacities available",
-          description: "One's own experience, affective resonance with the other, and a revisable understanding of the other can all participate without collapsing into one another.",
-          looks: ["Reciprocal connection with self–other distinction and room for correction.", "Feeling moved by another while retaining one's own limit, perspective, and agency.", "Repair that integrates impact, intention, context, restraint, and action."],
-          concern: "Empathic concern: can become proportionate, freely chosen action that respects both welfare and agency.",
-          caution: "All three being present is not always optimal; flexible recruitment remains more important than permanent maximum openness." }
+        "111": { title: "All three in the upper bands", kicker: "Anna's example 3 · binary landmark", systems: "Bodily upper · affective upper · mentalizing upper",
+          description: "All three capacities are at least partly available and usable. Their presence does not establish accuracy, integration or flexible use.",
+          looks: ["One's own experience, resonance with the other and a revisable account of their perspective can all enter reflection.", "Self and other can both remain present while new information is checked.", "The capacities may support connection, disagreement, restraint, repair or other responses depending on how they are used."],
+          concern: "Empathic concern cannot be inferred. Availability creates the possibility of informed care but does not determine action.",
+          caution: "Upper-band access is not a score or ideal. Flexible recruitment matters more than permanent maximum openness." }
       };
 
       function bandWord(n) { return ["not reliably", "in fragments", "partly", "broadly"][n]; }

@@ -3,6 +3,19 @@
 Dated entries, newest first. A decision recorded here changes a canon page
 only when the page is edited and its "last approved" date moves.
 
+## 2026-09-04 · Literal configuration labels and descriptions approved
+
+The first public-language review replaces names that could sound like
+person-types—such as “relational unavailability”, “absorbed-other” and
+“integrated configuration”—with literal descriptions of which capacities sit
+in the lower or upper band group. The descriptions and examples now begin from
+the access pattern and use conditional language. They do not assign a cause,
+mode, diagnosis, concern, conduct or character.
+
+Anna approved the public wording on 4 September 2026. The earlier names remain
+visible in the reviewed Engine snapshot for provenance, and the active Engine
+page remains unchanged.
+
 ## 2026-09-04 · Twelve band readings approved and connected to the Compass
 
 The three ME access capacities now each have four working readings: not

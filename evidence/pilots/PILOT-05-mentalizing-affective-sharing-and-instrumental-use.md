@@ -1,7 +1,7 @@
 # Pilot 05 · Mentalizing, Affective Sharing and Instrumental Use
 
 Status: first claim-level evidence pass · PEND-044 cluster 1
-Scope: mentalizing-only and self-plus-mentalizing configurations · empathy asymmetry · psychopathy · Machiavellianism · narcissistic functioning · manipulation
+Scope: configurations where mentalizing is in an upper band and affective sharing is in a lower band · empathy asymmetry · psychopathy · Machiavellianism · narcissistic functioning · manipulation
 Purpose: test when another person can become cognitively readable without becoming affectively shared, and what further conditions are needed before that asymmetry can support manipulation or harm
 
 Companions: [Relational Configuration → Clinical and Personality-Pattern Research Bridge](../../02-model-1-ess-cls-me/grounding/relational-configuration-clinical-pattern-bridge.md) · [F2 Trauma, Stress and Adversity Crosswalk](../../05-frameworks/F02/grounding/trauma-stress-and-adversity-crosswalk.md) · [Harm, Power and Repair Grounding](../../07-reference/grounding/harm-power-and-repair.md) · [Shared Source Record Index](../sources/shared-source-record-index.md)
@@ -52,7 +52,7 @@ The separation between affective sharing and empathic concern is especially impo
 | **MAI-12** | Effective manipulation requires usable information about another person's likely response or available options, but not necessarily sophisticated, accurate or consciously reflective mentalizing across domains. | Definition / boundary | **Retained as a TEG-Blue synthesis.** Manipulation may use learned scripts, reinforcement, role knowledge, vulnerability cues, deception or control of material options. |
 | **MAI-13** | Mentalizing without affective sharing can increase capacity for calculated interpersonal harm when combined with instrumental goals and weak constraints. | Application | **Plausible and partially supported.** No source permits a direct dangerousness inference from capacity asymmetry alone. |
 | **MAI-14** | Developmental adversity, protection, control or reduced affiliative learning can be candidate routes into some asymmetries. | Development | **Researchable, not yet established here.** Heterogeneous developmental routes must be reviewed separately and owned by F2. |
-| **MAI-15** | A mentalizing-only or self-plus-mentalizing configuration is not a personality disorder, manipulation score or dangerousness score. | Boundary | **Non-negotiable.** Diagnosis and risk require wider, longitudinal and behavioural evidence. |
+| **MAI-15** | A configuration where mentalizing is in an upper band and affective sharing is in a lower band is not a personality disorder, manipulation score or dangerousness score. | Boundary | **Non-negotiable.** Diagnosis and risk require wider, longitudinal and behavioural evidence. |
 
 ## The correction to “all manipulative people”
 

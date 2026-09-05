@@ -138,7 +138,7 @@ and affective sharing draw primarily on emotional–somatic processing;
 mentalizing draws primarily on reflective–symbolic processing. These are
 primary contributions, not exclusive system ownership.
 
-**ME Access Dials** · Approved structure and boundaries; working readings · 02. The Model 1 add-on,
+**ME Access Dials** · Approved structure, boundaries, band readings and public configuration descriptions · 02. The Model 1 add-on,
 `02-model-1-ess-cls-me/me-access.html`: the ME access capacities as sliders with four conceptual bands each, the
 configuration they combine into, the eight-configuration field, the five
 quality dimensions and the boundary that access does not determine a mode.
@@ -150,14 +150,16 @@ a reviewed Engine snapshot on 3 September 2026.
 person's welfare can motivate, restrain or redirect action. Not a fourth
 capacity; cannot be inferred from the three.
 
-**Configuration** · Working · 02. The current relationship between the ME
+**Configuration** · Approved public labels and boundaries; working research interpretation · 02. The current relationship between the ME
 access capacities. Eight binary configurations (000 to 111) are entry points, read
 through five quality dimensions: availability, differentiation, self–other
 distinction, accuracy and updating, flexible recruitment. A configuration is
-access information, never a verdict, personality or diagnosis. Anna's three
-worked examples: 001 mentalizing only, 010 affective sharing dominant, 111
-all three available. A configuration does not assign, predict or tend toward
-a mode; mode requires organisation, position and plane.
+access information, never a verdict, personality or diagnosis. The public
+labels state only which capacities are in the lower or upper band group.
+Anna's three worked examples are 001 mentalizing in an upper band, 010
+affective sharing in an upper band, and 111 all three in the upper bands. A
+configuration does not assign, predict or tend toward a mode; mode requires
+organisation, position and plane.
 
 **Presence, access, differentiation, interpretation, use** · Approved
 distinction · 02. Information present in the organism is not information

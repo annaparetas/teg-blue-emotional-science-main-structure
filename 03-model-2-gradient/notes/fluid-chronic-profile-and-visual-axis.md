@@ -24,7 +24,7 @@ Each configuration can have its own persistence-and-flexibility profile:
 capacity configuration × capacity quality × context × recurrence × use
 ```
 
-For example, mentalizing-only access may be a temporary professional configuration, a context-specific protective solution or a recurrent and instrumentally used pattern. The capacity combination remains similar; its flexibility, development, adult maintenance and behavioural consequences differ.
+For example, mentalizing may sit in an upper band while bodily information and affective sharing sit in lower bands. That pattern may be temporary and professional, context-specific and protective, or recurrent and used instrumentally. The capacity combination remains similar; its flexibility, development, adult maintenance and behavioural consequences differ.
 
 The decision below therefore remains useful for defining profile dimensions, but its visual implementation must be revised alongside the [Relational Configuration → Clinical and Personality-Pattern Research Bridge](../../02-model-1-ess-cls-me/grounding/relational-configuration-clinical-pattern-bridge.md). No implementation should begin from the earlier profile-axis proposal alone.
 

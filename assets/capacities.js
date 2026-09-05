@@ -42,14 +42,14 @@
     ]
   };
   var CONFIGS = {
-    "000": "Relational unavailability",
-    "001": "The mentalizing-only configuration",
-    "010": "The absorbed-other configuration",
-    "011": "The other-centred configuration",
-    "100": "The self-contained configuration",
-    "101": "The interoceptive–mentalizing configuration",
-    "110": "The shared-affect configuration",
-    "111": "The integrated configuration"
+    "000": "All three in the lower bands",
+    "001": "Mentalizing in an upper band",
+    "010": "Affective sharing in an upper band",
+    "011": "Affective sharing and mentalizing in the upper bands",
+    "100": "Bodily information in an upper band",
+    "101": "Bodily information and mentalizing in the upper bands",
+    "110": "Bodily information and affective sharing in the upper bands",
+    "111": "All three in the upper bands"
   };
   var DEFAULT = { bodily: 3, affective: 3, mentalizing: 3 };
   var listeners = [];
