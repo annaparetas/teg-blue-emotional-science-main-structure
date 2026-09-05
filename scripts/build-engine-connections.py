@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import importlib.util
 import sys
+import subprocess
 from collections import Counter
 from pathlib import Path
 from urllib.parse import quote
@@ -33,24 +34,28 @@ def load_carry_module():
 # Each value is: (site targets, relationship statement).
 # An empty target tuple means repository inventory rather than a content home.
 EXTRA_RELATIONSHIPS: dict[str, tuple[tuple[str, ...], str]] = {
-    ".DS_Store": ((), "Repository inventory only; macOS folder metadata with no scientific or site-content role."),
+    'development/decisions/me-access-dials-consolidation.md': (("02-model-1-ess-cls-me/notes/access-consolidation.md", "02-model-1-ess-cls-me/me-access.html"), 'Approved cross-repository access consolidation; records current ownership and the bounded implementation.'),
+    'development/audits/me-access-dials/README.md': (("02-model-1-ess-cls-me/notes/access-consolidation.md", "02-model-1-ess-cls-me/me-access.html"), 'Historical pre-implementation audit approved for consolidation; current ownership is in the dated decision.'),
+    'development/audits/me-access-dials/file-inventory.csv': (("02-model-1-ess-cls-me/notes/access-consolidation.md", "02-model-1-ess-cls-me/me-access.html"), 'Historical full-file disposition inventory supporting the approved consolidation.'),
+    'development/audits/me-access-dials/link-rewiring.csv': (("02-model-1-ess-cls-me/notes/access-consolidation.md", "02-model-1-ess-cls-me/me-access.html"), 'Historical link review plan; current links and compatibility routes implement the decision.'),
+    'development/audits/me-access-dials/path-references.csv': (("02-model-1-ess-cls-me/notes/access-consolidation.md", "02-model-1-ess-cls-me/me-access.html"), 'Historical raw path reference audit including ownership prose and migration code.'),
+    'development/audits/me-access-dials/audit-metrics.json': (("02-model-1-ess-cls-me/notes/access-consolidation.md", "02-model-1-ess-cls-me/me-access.html"), 'Counts for the historical pre-implementation access audit.'),
+    'models/01-information-systems/coordinated-conscious-access.html': (("02-model-1-ess-cls-me/notes/access-consolidation.md", "02-model-1-ess-cls-me/me-access.html"), 'Retired page body; compatibility route to the dials or Model 3 according to the requested section.'),
+    'models/01-information-systems/relational-capacities.html': (("02-model-1-ess-cls-me/notes/access-consolidation.md", "02-model-1-ess-cls-me/me-access.html"), 'Retired configuration controller; compatibility route to the current ME Access Dials. Historical source is fixed in the carry manifest.'),
+    'models/01-information-systems/inner-compass-sequence.html': (("02-model-1-ess-cls-me/notes/access-consolidation.md", "02-model-1-ess-cls-me/me-access.html"), 'Compatibility route to the complete Model 3 event sequence.'),
+
     ".gitignore": (("README.md",), "Repository-support connection; each repository keeps its own ignore rules."),
     "AGENTS.md": (("README.md", "STATUS.md"), "Repository-governance connection; the Engine keeps its own working rules."),
     "CONTENT-MANIFEST.md": (("README.md", "STATUS.md"), "Repository-navigation connection; the Engine manifest continues to govern Engine ownership and reading routes."),
-    "archive/.DS_Store": ((), "Repository inventory only; macOS folder metadata inside the Engine archive."),
     "archive/outdated-references/EMOTIONS-TABLES-AND-EXPLANATIONS.md": (("01-signal-map/index.html",), "Existing Engine archive connection to the Emotional Signal Map; its Engine location and status do not change."),
     "archive/session-handovers/UPDATE-NOTE-RETURN-AND-SURVIVAL-PROBLEM.md": (("03-model-2-gradient/return.html", "07-reference/index.html"), "Existing Engine archive connection to Return and survival interpretation; its Engine location and status do not change."),
     "assets/emotions-across-the-gradient@4x.png": (("01-signal-map/index.html", "03-model-2-gradient/fluid-chronic.html"), "Engine visual-asset connection to emotional signals across Fluid and Chronic organisation."),
-    "development/.DS_Store": ((), "Repository inventory only; macOS folder metadata inside Engine development work."),
     "development/README.md": (("README.md", "STATUS.md"), "Repository-governance connection between the Engine development workspace and the site's ownership boundary."),
     "development/architecture-naming-propagation-ledger.md": (("GLOSSARY.md", "README.md"), "Architecture and naming connection; the Engine ledger remains the detailed propagation record."),
     "development/interim-session-git-protocol.md": (("STATUS.md",), "Repository-governance connection; the protocol governs Engine work, not site Git practice."),
-    "development/model-notes/interaction-ideas.md": (("02-model-1-ess-cls-me/me-access.html", "03-model-2-gradient/index.html", "06-inner-compass-four-modes/compass.html"), "Working interaction-design connection across capacity access, Gradient organisation and the Inner Compass view."),
+    "development/model-notes/interaction-ideas.md": (("02-model-1-ess-cls-me/me-access.html", "03-model-2-gradient/index.html", "06-inner-compass-four-modes/compass.html"), "Historical interaction-design proposal, implemented in ME Access Dials; retained for provenance rather than as a request for another controller."),
     "development/model-notes/what-a-behaviour-costs.md": (("03-model-2-gradient/index.html", "07-reference/behaviour.html"), "Working conceptual connection between Gradient organisation and observable behaviour, impact and responsibility."),
     "emotions-as-information.html": (("00-emotions-as-information/index.html",), "Concept connection to the site's Emotions as Information page; the Engine file remains intact."),
-    "evidence/.DS_Store": ((), "Repository inventory only; macOS folder metadata inside Engine evidence work."),
-    "frameworks/.DS_Store": ((), "Repository inventory only; macOS folder metadata inside Engine framework work."),
-    "frameworks/diagrams/.DS_Store": ((), "Repository inventory only; macOS folder metadata inside Engine diagram work."),
     "frameworks/diagrams/.gitignore": (("05-frameworks/index.html",), "Engine diagram-workspace support connected to the Frameworks area; the ignore rule remains Engine-local."),
     "frameworks/diagrams/F1-Evolution/F1-evolution.html": (("05-frameworks/F01/index.html",), "Working F01 diagram connection; the full visual development file remains in the Engine."),
     "frameworks/diagrams/F1-Evolution/F1-evolution.md": (("05-frameworks/F01/index.html",), "Working F01 diagram-source connection; the source remains in the Engine."),
@@ -80,7 +85,6 @@ EXTRA_RELATIONSHIPS: dict[str, tuple[tuple[str, ...], str]] = {
     "frameworks/diagrams/originals/08 - The Emotional Circuit Board R.png": (("index.html", "05-frameworks/index.html"), "Original architecture-wiring artwork connected to the site spine and Frameworks map."),
     "frameworks/diagrams/originals/README.md": (("05-frameworks/index.html",), "Original-artwork register connected to the Frameworks map; provenance remains in the Engine."),
     "inner-compass-project-map.html": (("README.md", "STATUS.md"), "Compatibility redirect within the Engine, connected to the site's repository relationship controls."),
-    "models/.DS_Store": ((), "Repository inventory only; macOS folder metadata inside Engine model work."),
     "models/01-information-systems/ess-cls-me.html": (("02-model-1-ess-cls-me/index.html",), "Model 1 concept connection; the Engine owner page remains intact."),
     "models/01-information-systems/source-documents/sensory-processing.docx": (("02-model-1-ess-cls-me/processing.html",), "Model 1 source-document connection to sensory processing; the source document remains in the Engine."),
     "models/README.md": (("02-model-1-ess-cls-me/index.html", "03-model-2-gradient/index.html", "04-model-3-esc/index.html"), "Model-boundary connection to the site's three separate model areas."),
@@ -93,11 +97,13 @@ EXTRA_RELATIONSHIPS: dict[str, tuple[tuple[str, ...], str]] = {
 def engine_files() -> list[str]:
     if not ENGINE.is_dir():
         raise RuntimeError(f"Development Engine not found: {ENGINE}")
-    return sorted(
-        path.relative_to(ENGINE).as_posix()
-        for path in ENGINE.rglob("*")
-        if path.is_file() and ".git" not in path.relative_to(ENGINE).parts
+    # Git's content inventory is stable across worktrees and ignores OS metadata.
+    result = subprocess.run(
+        ["git", "-C", str(ENGINE), "ls-files", "--cached", "--others", "--exclude-standard", "-z"],
+        check=True, capture_output=True, text=True,
     )
+    return sorted({path for path in result.stdout.split("\0") if path})
+
 
 
 def site_link(target: str) -> str:
@@ -170,7 +176,7 @@ def render(files: list[str], rows) -> str:
         "",
         "## Preservation rule",
         "",
-        "- Every listed file remains in the Development Engine with its content, path, history, ownership and Engine-defined status intact.",
+        "- Each row records a current Engine file and its declared relationship. The approved access consolidation is recorded explicitly for retired interfaces; this map does not itself change content or status.",
         "- A site connection identifies the related concept or repository control. It does not authorise moving, deleting, renaming, replacing, hiding, archiving or reclassifying the Engine file.",
         "- The Engine's `CONTENT-MANIFEST.md` and `project-map.html` continue to govern Engine ownership and reading routes. This document assigns no new content status.",
         "- A reviewed carry is a specific existing transfer relationship. Other rows are conceptual or repository-support connections only; no file transfer is implied.",
@@ -183,7 +189,7 @@ def render(files: list[str], rows) -> str:
         f"- {counts['Documented concept connection']} documented concept connections already present in the site transfer logic.",
         f"- {counts['Additional explicit connection']} additional explicit concept, visual, archive or repository-support connections.",
         "",
-        "The count includes hidden repository files such as `.DS_Store` and `.gitignore`. They are listed so the inventory is exact, not because they carry conceptual content.",
+        "The count includes tracked content and untracked non-ignored content, including repository guidance such as `.gitignore`. Ignored macOS metadata and Git internals are excluded, making the inventory stable across worktrees.",
         "",
         "Run `python3 scripts/build-engine-connections.py --check` after either repository changes. A new, removed or renamed Engine file, a missing site target, or an out-of-date generated map makes the check fail.",
         "",

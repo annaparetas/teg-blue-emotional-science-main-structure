@@ -20,6 +20,9 @@
     .system .reads { margin: 12px 0 0; padding: 9px 12px; border-radius: 10px; background: #f4fbfd; border: 1px solid #bfeaf0; font-size: 13px; font-weight: 700; color: #076170; }
     .controls { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 24px 0; }
     .control { padding: 22px 22px 18px; background: white; border: 1px solid var(--line); border-top: 6px solid var(--control-accent, var(--lime)); border-radius: 15px; }
+    .control { scroll-margin-top: 110px; }
+    #usable-information details { padding: 18px 22px; border: 1px solid var(--line); border-radius: 12px; background: white; }
+    #usable-information summary { cursor: pointer; font-weight: 700; }
     .control h3 { margin: 6px 0 4px; font-size: 18px; }
     .control .question { margin: 0 0 14px; color: var(--muted); font-size: 13px; line-height: 1.5; }
     .control input[type="range"] { width: 100%; accent-color: var(--control-accent, var(--lime)); }
@@ -93,6 +96,7 @@
       <strong>On this page</strong>
       <a href="#systems">Two systems, three dials</a>
       <a href="#capacity-key">The controls</a>
+      <a href="#usable-information">From information to use</a>
       <a href="#configuration">This configuration</a>
       <a href="#mode-boundary">Why access is not a mode</a>
       <a href="#field">The eight configurations</a>
@@ -105,7 +109,7 @@
       <dl class="page-status" aria-label="Page status">
         <div><dt>Status</dt><dd><span class="status-word status-word--approved">Approved</span> structure, boundaries, twelve band readings and eight public configuration descriptions</dd></div>
         <div><dt>Owner</dt><dd><strong>02 · Model 1</strong>; the Inner Compass reads this setting, never sets it</dd></div>
-        <div><dt>Last approved</dt><dd>Built 3 September 2026 as the Model 1 add-on. On 4 September 2026 Anna approved ME access capacities as the collective name, four graded conceptual bands with eight binary landmarks, primary rather than exclusive processing relationships, the twelve band readings, the eight literal public configuration descriptions, and the boundary that an access configuration cannot assign, predict or tend toward a mode.</dd></div>
+        <div><dt>Last approved</dt><dd>Built 3 September 2026 as the Model 1 add-on. On 4 September 2026 Anna approved ME access capacities as the collective name, four graded conceptual bands with eight binary landmarks, primary rather than exclusive processing relationships, the twelve band readings, the eight literal public configuration descriptions, and the boundary that an access configuration cannot assign, predict or tend toward a mode. Anna also approved the <a href="notes/access-consolidation.md">consolidation of access explanations and interfaces</a>.</dd></div>
         <div><dt>Does not establish</dt><dd>A score, a diagnosis, a personality, a Gradient Position or plane, empathic concern, or anything about a person other than the one setting the controls for their own reflection.</dd></div>
       </dl>
 
@@ -113,6 +117,11 @@
         <p class="section-label">Two systems, three dials</p>
         <h2>What ME can read of each information system.</h2>
         <p class="lead">ESS and CLS keep working whether or not their information becomes readable to ME. The three ME access capacities draw on overlapping processing across the organism. Bodily access and affective sharing draw primarily on emotional–somatic processing. Mentalizing draws primarily on reflective–symbolic processing. These are primary contributions, not exclusive system ownership.</p>
+        <div class="boundary" id="coordinated-access">
+          <h3>When information becomes available together</h3>
+          <p>Bodily information, differentiated feeling and a reading of the situation can become available together. TEG-Blue calls this relationship <strong>coordinated conscious access</strong>. It can be partial, delayed or conflicted. ME participates with what becomes usable; access alone does not establish accurate interpretation or decide what happens next.</p>
+          <p>These three dials explore selected access capacities within that wider relationship. <a href="processing.html#field">Follow the processing that contributes to access</a> · <a href="../04-model-3-esc/cycle.html#operating-sequence">Follow the whole event through action and feedback</a>.</p>
+        </div>
         <div class="systems">
           <div class="system">
             <span class="meta-label">Draws primarily on ESS · emotional–somatic processing</span>
@@ -145,7 +154,7 @@
         <h2>Move each dial separately.</h2>
         <p class="lead">Uneven settings are the point: one capacity can stay usable while another continues biologically without becoming available. Beneath each dial the reading says what ME can and cannot use at that band.</p>
         <div class="controls">
-          <div class="control" data-capacity="bodily" style="--control-accent:var(--cap-bodily)">
+          <div class="control" id="bodily-access" tabindex="-1" data-capacity="bodily" style="--control-accent:var(--cap-bodily)">
             <span class="meta-label">Feel myself · primarily ESS · interoceptive processing</span>
             <h3>Bodily information access and use</h3>
             <p class="question">What bodily and emotional information can I notice, differentiate, interpret and use here?</p>
@@ -154,7 +163,7 @@
             <p class="readout" aria-live="polite"></p>
             <p class="reading"></p>
           </div>
-          <div class="control" data-capacity="affective" style="--control-accent:var(--cap-affective)">
+          <div class="control" id="affective-sharing-access" tabindex="-1" data-capacity="affective" style="--control-accent:var(--cap-affective)">
             <span class="meta-label">Feel another · primarily ESS · affective sharing</span>
             <h3>Affective-sharing access</h3>
             <p class="question">How much of another person's feeling arising within me can I notice while self and other stay distinct?</p>
@@ -163,7 +172,7 @@
             <p class="readout" aria-live="polite"></p>
             <p class="reading"></p>
           </div>
-          <div class="control" data-capacity="mentalizing" style="--control-accent:var(--cap-mentalizing)">
+          <div class="control" id="mentalizing-access" tabindex="-1" data-capacity="mentalizing" style="--control-accent:var(--cap-mentalizing)">
             <span class="meta-label">Read and revise another · primarily CLS · mentalizing</span>
             <h3>Mentalizing access and use</h3>
             <p class="question">How much can I represent, check and revise my understanding of another person?</p>
@@ -177,6 +186,23 @@
           <h3>Four bands, not a measurement</h3>
           <p>Not reliably available to ME · fragments may become readable · partly available and usable · broadly available to ME. Conceptual bands, not a clinical score. Availability is not accuracy, concern or ethical use. Low access is not absent processing: the system may be intact but inhibited, unreadable or too costly for ME to use in the current organisation.</p>
         </div>
+      </section>
+
+      <section id="usable-information">
+        <p class="section-label">From information to use</p>
+        <h2>Information can be present before it is usable.</h2>
+        <p class="lead">The dials concern what becomes readable and usable by ME. A bodily response can already be influencing the event while its meaning remains unclear. Noticing it, distinguishing it from other information, interpreting it and using it each require a separate question.</p>
+        <details>
+          <summary>Five questions to separate</summary>
+          <ul>
+            <li><strong>Present:</strong> What response or information is operating?</li>
+            <li><strong>Accessible:</strong> What can I notice or bring into reflection?</li>
+            <li><strong>Differentiated:</strong> Can I distinguish a sensation, feeling, thought or inference?</li>
+            <li><strong>Interpreted:</strong> What does it concern, and what supports that reading?</li>
+            <li><strong>Usable:</strong> Can it help me compare options, respond and revise?</li>
+          </ul>
+          <p>These questions can overlap, recur or receive different answers. They do not describe five fixed biological stages, and a dial setting does not measure them separately.</p>
+        </details>
       </section>
 
       <section id="configuration">
@@ -206,6 +232,16 @@
         </div>
       </section>
 
+      <section id="uneven-access">
+        <p class="section-label">Uneven access</p>
+        <h2>Feeling and explanation can become clear at different times.</h2>
+        <div class="card-grid card-grid--two">
+          <article class="card"><h3>An explanation with little felt detail</h3><p>I can describe why an interaction was difficult, yet struggle to notice my own bodily response or limit. A detailed account does not establish that the relevant feeling is available to me.</p></article>
+          <article class="card"><h3>A bodily response without a clear explanation</h3><p>I notice tension or a strong urge to move before I understand what it concerns. I can examine the situation and revise my first interpretation as more information becomes available.</p></article>
+        </div>
+        <p>These are illustrative possibilities. Neither example establishes a cause or a fixed configuration. ESS and CLS can agree, conflict or change on different timescales; neither is invariably first or infallible.</p>
+      </section>
+
       <section id="mode-boundary">
         <p class="section-label">Cross-model boundary</p>
         <h2>Access does not determine a mode.</h2>
@@ -227,12 +263,12 @@
       <section id="quality">
         <p class="section-label">Quality dimensions</p>
         <h2>Binary access is only the first pass.</h2>
-        <p class="lead">To connect the eight configurations to the Fluid and Chronic planes, each form of access must also be read through five quality dimensions. A capacity may be faint, selective, distorted, fused, over-recruited, or intact but not currently needed.</p>
+        <p class="lead">Read each form of access through these five quality dimensions in the current situation. Record Fluid or Chronic organisation separately with Model 2. A capacity may be faint, selective, distorted, fused, over-recruited, or intact but not currently needed.</p>
         <div class="quality">
           <article><h3>Availability</h3><p>Can the capacity participate at all, and at what cost?</p></article>
           <article><h3>Differentiation</h3><p>Is the information specific, or fused into undifferentiated pressure?</p></article>
-          <article><h3>Self–other distinction</h3><p>Can my experience and your experience remain related but separate?</p></article>
-          <article><h3>Accuracy and updating</h3><p>Can the representation be corrected by present evidence?</p></article>
+          <article><h3>Self–other distinction</h3><p>What am I noticing in myself, and what am I inferring about you? Can those remain related but separate?</p></article>
+          <article><h3>Accuracy and updating</h3><p>What supports my interpretation? What present evidence could change it? A compelling feeling does not settle what happened or what another person means.</p></article>
           <article><h3>Flexible recruitment</h3><p>Can the capacity enter and leave according to actual conditions?</p></article>
         </div>
         <div class="boundary">
@@ -257,9 +293,11 @@
         <div class="source-panel">
           <ul>
             <li>The earlier site controller of 2 September 2026 supplied the three dials, four bands and shared state in <code>assets/capacities.js</code>. Its functions continue here; its file remains in Git history.</li>
-            <li>The active Development Engine's relational-capacities page supplies the eight configurations, worked examples and five quality dimensions. A reviewed snapshot remains at <a href="notes/sources/relational-capacities.html">notes/sources/relational-capacities.html</a> for provenance.</li>
+            <li>The earlier Development Engine relational-capacities page supplied the eight configurations, worked examples and five quality dimensions. Its active interface was retired in the approved consolidation. A static historical snapshot remains at <a href="notes/sources/relational-capacities.html">notes/sources/relational-capacities.html</a> for provenance.</li>
             <li>Model 2's <a href="../03-model-2-gradient/positions.html">capacity rows</a> for interoceptive processing, affective sharing, mentalizing and Return availability remain cross-owner material to review. They do not let this page infer a mode.</li>
             <li>The <a href="grounding/relational-configuration-clinical-pattern-bridge.md">configuration-to-clinical-pattern bridge</a>, which governs what may and may not be inferred from a configuration.</li>
+            <li>The <a href="notes/model-sketch.md">Model 1 sketch</a> and <a href="notes/sources/description-collection.md">description collection</a> inform the distinctions between information, access and use. The <a href="../evidence/pilots/PILOT-10-self-other-distinction-identity-and-attachment-stress.md">self–other evidence pilot</a> supports the separate questions about experience, inference and revision.</li>
+            <li>The approved <a href="notes/access-consolidation.md">access consolidation</a> places these explanations here and the full event examples with Model 3.</li>
             <li>Anna's decisions of 3 September 2026, recorded in <a href="notes/decisions.md">notes/decisions.md</a>.</li>
           </ul>
         </div>
@@ -269,7 +307,7 @@
 
   <footer data-site-footer></footer>
   <script src="../assets/navigation.js?v=20260904-model2-menu"></script>
-  <script src="../assets/capacities.js"></script>
+  <script src="../assets/capacities.js?v=20260904-access"></script>
   <script>
     (function () {
       var C = window.TEG.capacities;
@@ -373,6 +411,20 @@
       });
       document.getElementById("reset").addEventListener("click", function () { render(C.reset()); });
       render(C.get());
+      function followAccessAnchor() {
+        var id = location.hash.slice(1);
+        try { id = decodeURIComponent(id); } catch (_) { return; }
+        var target = document.getElementById(id);
+        if (!target) return;
+        var header = document.querySelector("header[data-site-header]");
+        var offset = header ? header.getBoundingClientRect().height : 0;
+        window.scrollTo({ top: Math.max(0, window.scrollY + target.getBoundingClientRect().top - offset - 24), behavior: "instant" });
+      }
+      window.addEventListener("load", function () {
+        if (document.fonts) document.fonts.ready.then(followAccessAnchor);
+        else followAccessAnchor();
+      }, { once: true });
+      window.addEventListener("hashchange", followAccessAnchor);
     })();
   </script>
 </body>

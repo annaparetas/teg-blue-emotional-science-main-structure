@@ -53,6 +53,7 @@
   };
   var DEFAULT = { bodily: 3, affective: 3, mentalizing: 3 };
   var listeners = [];
+  var urlApplied = false;
 
   function clamp(n) { n = Number(n); return isFinite(n) ? Math.max(0, Math.min(3, Math.round(n))) : null; }
 
@@ -76,8 +77,12 @@
 
   function get() {
     var state = fromStorage() || Object.assign({}, DEFAULT);
-    var url = fromUrl();
-    if (url) { Object.assign(state, url); persist(state); }
+    // An incoming link supplies the initial setting, not a permanent override.
+    if (!urlApplied) {
+      var url = fromUrl();
+      if (url) { Object.assign(state, url); persist(state); }
+      urlApplied = true;
+    }
     return state;
   }
 
@@ -87,6 +92,11 @@
     var state = get();
     Object.keys(partial || {}).forEach(function (k) { if (KEYS.indexOf(k) > -1) { var v = clamp(partial[k]); if (v !== null) state[k] = v; } });
     persist(state);
+    try {
+      var address = new URL(location.href);
+      KEYS.forEach(function (k) { address.searchParams.set(PARAMS[k], state[k]); });
+      history.replaceState(null, "", address.href);
+    } catch (e) { /* The local setting still works if URL updates are unavailable. */ }
     listeners.forEach(function (fn) { fn(state); });
     return state;
   }

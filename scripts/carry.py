@@ -31,6 +31,7 @@ import re
 import subprocess
 import sys
 from pathlib import Path
+from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 ENGINE = ROOT.parent / "inner-compass-nervous-system-organization-gradient"
@@ -42,6 +43,12 @@ ESM_S1 = "codex/esm-s1-emotional-signal-map"   # newer signal-map text
 # provenance; the site owns the current curated presentation. The date records
 # the owner decision that changed the transfer mode.
 GRADUATED_SITE_FILES = {
+    "02-model-1-ess-cls-me/me-access.html": "4 September 2026",
+    "02-model-1-ess-cls-me/access.html": "4 September 2026",
+    "02-model-1-ess-cls-me/processing.html": "4 September 2026",
+    "02-model-1-ess-cls-me/notes/sources/relational-capacities.html": "4 September 2026",
+    "04-model-3-esc/cycle.html": "4 September 2026",
+    "04-model-3-esc/shared-event-record.html": "4 September 2026",
     "03-model-2-gradient/positions.html": "4 September 2026",
     "03-model-2-gradient/premise.html": "4 September 2026",
     "03-model-2-gradient/depth.html": "4 September 2026",
@@ -106,10 +113,12 @@ MANIFEST = [
     ("01-signal-map/notes/love-reference-case-completion-and-public-boundary.md", "development/decisions/love-reference-case-completion-and-public-boundary.md", None, None, None),
 
     # 02 · Model 1 · ESS · CLS · ME
-    ("02-model-1-ess-cls-me/access.html", "models/01-information-systems/coordinated-conscious-access.html", None, None,
+    # Fixed historical provenance: these sources are now compatibility routes in the Engine.
+    ("02-model-1-ess-cls-me/me-access.html", "models/01-information-systems/relational-capacities.html", "005f0a3d713e1b049cf51a5e0232c73292d04592", None, None),
+    ("02-model-1-ess-cls-me/access.html", "models/01-information-systems/coordinated-conscious-access.html", "005f0a3d713e1b049cf51a5e0232c73292d04592", None,
      ("Carried page · status approved", "Coordinated conscious access: the eleven-stage functional sequence, the hunger worked example and three Situation Signal paths. Approved on 26 August 2026 as Model 1's canonical access page; carried on 2 September 2026. The canon page holds the definitions; this page shows the sequence.", "index.html", "Model 1")),
-    ("02-model-1-ess-cls-me/notes/sources/relational-capacities.html", "models/01-information-systems/relational-capacities.html", None, "capacities_sync",
-     ("Carried snapshot · status working", "A reviewed 2 September 2026 snapshot of the active Development Engine's relational-capacities page: eight configurations and five quality dimensions. The Engine page remains a current extension in its own repository. The site's <a href=\"../../me-access.html\">ME Access Dials</a> uses this material without replacing or reclassifying its source.", "../../index.html", "Model 1")),
+    ("02-model-1-ess-cls-me/notes/sources/relational-capacities.html", "models/01-information-systems/relational-capacities.html", "005f0a3d713e1b049cf51a5e0232c73292d04592", None,
+     ("Carried snapshot · status working", "A reviewed 2 September 2026 snapshot of the active Development Engine's relational-capacities page: eight configurations and five quality dimensions. The Engine interface was retired in the approved access consolidation; this snapshot is static historical comparison. The site's <a href=\"../../me-access.html\">ME Access Dials</a> owns the current access explanation and controls.", "../../index.html", "Model 1")),
     ("02-model-1-ess-cls-me/processing.html", "models/01-information-systems/sensory-processing.html", None, None,
      ("Carried grounding page · status working", "How the body reads conditions before conscious access: the processing field, detection versus emotion, and the research foundations. Carried on 2 September 2026. Grounding, not canon.", "index.html", "Model 1")),
     ("02-model-1-ess-cls-me/grounding/ESS-CLS-component-decomposition.md", "evidence/claims/ESS-CLS-component-decomposition.md", None, None, None),
@@ -222,7 +231,8 @@ MOVES.update({
     "foundation/22-nervous-system-gradient.md": "03-model-2-gradient/index.html",
     "foundation/23-fluid-and-chronic-organisation.md": "03-model-2-gradient/fluid-chronic.html",
     "foundation/21-information-systems-inner-compass-and-me.md": "02-model-1-ess-cls-me/index.html",
-    "models/01-information-systems/inner-compass-sequence.html": "02-model-1-ess-cls-me/access.html",
+    "models/01-information-systems/coordinated-conscious-access.html": "02-model-1-ess-cls-me/me-access.html",
+    "models/01-information-systems/inner-compass-sequence.html": "04-model-3-esc/cycle.html",
     "foundation/24-emotional-somatic-cycle.md": "04-model-3-esc/index.html",
     "models/03-emotional-systems-cycle/esc-two-cycle-rebuild.html": "04-model-3-esc/cycle.html",
     "evidence/crosswalks/F01-fluid-chronic-grounding.md": "05-frameworks/F01/index.html",
@@ -277,7 +287,7 @@ def gradient_tables(text: str) -> str:
     text = text.replace('href="#emotions"', 'href="../../signal-map/README.md#emotion-families"')
     # The situation-signals toggle refers to an element that no longer exists.
     text = text.replace("    document.getElementById('fluid-situation-signals').hidden = mode !== 'fluid'\n", "")
-    return capacity_echo(text)
+    return text
 
 
 CAPACITY_ROWS = {
@@ -285,92 +295,44 @@ CAPACITY_ROWS = {
     "affective": ["fluid-affective-sharing", "chronic-affective-sharing"],
     "mentalizing": ["fluid-mentalizing", "chronic-mentalizing"],
 }
-SLIDER_IDS = {"bodily": "access-interoceptive", "affective": "access-affective", "mentalizing": "access-mentalizing"}
-
-
-def capacity_echo(text: str) -> str:
-    """Model 2 stays the territory. Its ME sliders only echo the Model 1 setting;
-    the changing reading lives on the Inner Compass view."""
-    import json
-    style = """
-<style>
-  /* Capacity controls are set on Model 1; the reading that changes is the Inner Compass. */
-  .me-access-slider[disabled] { opacity: .85; cursor: not-allowed; }
-  .capacity-echo { margin: 14px 0 0; padding: 12px 16px; background: #edfafd; border: 1px solid #bfeaf0; border-left: 6px solid #10b8cc; border-radius: 10px; font-size: 13px; line-height: 1.5; }
-  .capacity-echo strong { color: #0b1f42; }
-  .capacity-echo a { color: #076170; font-weight: 700; }
-</style>
-"""
-    script = """
-<script src="../../assets/capacities.js"></script>
-<script>
-  (function () {
-    var C = window.TEG && window.TEG.capacities; if (!C) return;
-    var SLIDERS = %s, VALUES = [10, 35, 60, 85];
-    var CONTROLLER = "../02-model-1-ess-cls-me/me-access.html";
-    var COMPASS = "../06-inner-compass-four-modes/compass.html";
-    function apply(state) {
-      Object.keys(SLIDERS).forEach(function (k) {
-        var s = document.getElementById(SLIDERS[k]); if (!s) return;
-        s.value = VALUES[state[k]]; s.disabled = true; s.setAttribute("aria-readonly", "true");
-      });
-      if (typeof updateAccessModel === "function") updateAccessModel();
-      var echo = document.getElementById("capacity-echo");
-      if (echo) {
-        var code = C.code(state);
-        echo.innerHTML = "<strong>Set on Model 1.</strong> Current configuration " + code + " · " + C.CONFIGS[code] +
-          ". These tables do not change with the setting: they describe the organism's organisation, which is the same whatever ME can read of it. " +
-          "The reading that changes is the Inner Compass. " +
-          '<a href="' + C.link(COMPASS, state) + '">Open the Compass view →</a> · ' +
-          '<a href="' + C.link(CONTROLLER, state) + '">Adjust the capacities on Model 1 →</a>';
-      }
-    }
-    var reveal = document.getElementById("me-access-reveal");
-    if (reveal) {
-      var echo = document.createElement("div"); echo.id = "capacity-echo"; echo.className = "capacity-echo"; echo.setAttribute("role", "note");
-      reveal.parentNode.insertBefore(echo, reveal);
-    }
-    apply(C.get());
-    window.addEventListener("storage", function (e) { if (e.key === "teg.capacities.v1") apply(C.get()); });
-  })();
-</script>
-""" % json.dumps(SLIDER_IDS)
-    text = text.replace("</head>", style + "</head>", 1)
-    return text.replace("</body>", script + "</body>", 1)
-
-
-def capacities_sync(text: str) -> str:
-    """The carried capacities page reads and writes the shared capacity state."""
-    script = """
-<script src="../../assets/capacities.js"></script>
-<script>
-  (function () {
-    var C = window.TEG && window.TEG.capacities; if (!C) return;
-    var MAP = { interoceptive: "bodily", affective: "affective", mentalizing: "mentalizing" };
-    var buttons = Array.prototype.slice.call(document.querySelectorAll(".switch"));
-    function fromState(state) {
-      buttons.forEach(function (b) { b.setAttribute("aria-pressed", String(state[MAP[b.dataset.capacity]] >= 2)); });
-      if (typeof updateField === "function") updateField();
-    }
-    buttons.forEach(function (b) {
-      b.addEventListener("click", function () {
-        var partial = {}, on = b.getAttribute("aria-pressed") === "true", current = C.get()[MAP[b.dataset.capacity]];
-        partial[MAP[b.dataset.capacity]] = on ? (current >= 2 ? current : 3) : (current < 2 ? current : 0);
-        C.set(partial);
-      });
-    });
-    fromState(C.get());
-  })();
-</script>
-"""
-    return text.replace("</body>", script + "</body>", 1)
-
-
-TRANSFORMS = {"gradient_tables": gradient_tables, "capacities_sync": capacities_sync}
+TRANSFORMS = {"gradient_tables": gradient_tables}
 
 
 # ------------------------------------------------------------ link rewrite
+ACCESS_ANCHORS = {
+    "me-participation-title": "capacity-key",
+    "me-interoceptive-access": "bodily-access",
+    "me-affective-sharing-access": "affective-sharing-access",
+    "me-mentalizing-access": "mentalizing-access",
+    "access-interoceptive": "bodily-access",
+    "access-affective": "affective-sharing-access",
+    "access-mentalizing": "mentalizing-access",
+    "me-access-summary": "configuration",
+    "me-access-reveal": "configuration",
+}
+CONFIGURATION_ANCHORS = {
+    "capacity-interoceptive": "bodily-access",
+    "capacity-affective-sharing": "affective-sharing-access",
+    "capacity-mentalizing": "mentalizing-access",
+    "configuration-field": "field",
+    "field-title": "field",
+    "quality-title": "quality",
+    "capacity-key-title": "capacity-key",
+}
+
+
 def new_target(old_path: str, anchor: str) -> tuple[str, str]:
+    if old_path in {"models/01-information-systems/coordinated-conscious-access.html", "models/01-information-systems/inner-compass-sequence.html"}:
+        if anchor == "functional-sequence" or old_path.endswith("inner-compass-sequence.html"):
+            return "04-model-3-esc/cycle.html", "operating-sequence"
+        if anchor == "signal-organisation-completion":
+            return "04-model-3-esc/shared-event-record.html", anchor
+        return "02-model-1-ess-cls-me/me-access.html", "coordinated-access"
+    if old_path == "models/01-information-systems/relational-capacities.html":
+        keep = anchor if anchor in {"capacity-key", "quality", "field", "configuration"} or re.fullmatch(r"config-[01]{3}", anchor) else "field"
+        return "02-model-1-ess-cls-me/me-access.html", CONFIGURATION_ANCHORS.get(anchor, keep)
+    if old_path == "models/02-nervous-system-gradient/index.html" and anchor in ACCESS_ANCHORS:
+        return "02-model-1-ess-cls-me/me-access.html", ACCESS_ANCHORS[anchor]
     if old_path == "signal-map/README.md":          # the old folder guide → the canon page
         return "01-signal-map/index.html", anchor
     if old_path == "models/01-information-systems/ess-cls-me.html":
@@ -398,18 +360,23 @@ def new_target(old_path: str, anchor: str) -> tuple[str, str]:
 
 
 def rewrite(link: str, old_dir: str, new_dir: str) -> str:
-    if re.match(r"^[a-z]+:", link) or link.startswith("#") or not link:
+    parsed = urlsplit(link)
+    if parsed.scheme or parsed.netloc or link.startswith("#") or not link:
         return link
-    path, _, anchor = link.partition("#")
-    old_path = posixpath.normpath(posixpath.join(old_dir, path))
-    if old_path.startswith("../"):
+    old_path = posixpath.normpath(posixpath.join(old_dir, parsed.path))
+    site_prefix = "../teg-blue-emotional-science-main-structure/"
+    if old_path.startswith(site_prefix):
+        # Engine links can now point directly to their graduated site owner.
+        target, keep = old_path[len(site_prefix):], parsed.fragment
+    elif old_path.startswith("../"):
         return link
-    target, keep = new_target(old_path, anchor)
+    else:
+        target, keep = new_target(old_path, parsed.fragment)
     if target.startswith("../"):
         rel = posixpath.join(posixpath.relpath(".", new_dir), target) if new_dir else target
     else:
         rel = posixpath.relpath(target, new_dir) if new_dir else target
-    return rel + (f"#{keep}" if keep else "")
+    return rel + (f"?{parsed.query}" if parsed.query else "") + (f"#{keep}" if keep else "")
 
 
 def rewrite_links(text: str, suffix: str, old_rel: str, new_rel: str) -> tuple[str, int]:

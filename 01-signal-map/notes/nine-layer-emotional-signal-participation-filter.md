@@ -10,7 +10,7 @@ Scope: Emotional Signal Framework · all Body and Situation Signals · Fluid and
 
 Purpose: provide one reusable filter for examining each signal without conflating biological processing, conscious access, emotion identity, interpretation, behaviour or change through time
 
-Companions: [Reusable Fluid–Chronic Emotion Analysis Schema](fluid-chronic-emotion-analysis-reference-schema.md) · [Love Reference-Case Completion and Public Boundary](love-reference-case-completion-and-public-boundary.md) · [Love in Fluid Organisation](fluid-love-nine-layer-signal-structure.md) · [Love in Chronic Organisation](chronic-love-nine-layer-signal-structure.md) · [Coordinated Conscious Access](../../02-model-1-ess-cls-me/access.html) · [Nervous System Gradient Governing Premise](../../03-model-2-gradient/premise.html) · [The Emotional-Somatic Cycle](../../04-model-3-esc/index.html)
+Companions: [Reusable Fluid–Chronic Emotion Analysis Schema](fluid-chronic-emotion-analysis-reference-schema.md) · [Love Reference-Case Completion and Public Boundary](love-reference-case-completion-and-public-boundary.md) · [Love in Fluid Organisation](fluid-love-nine-layer-signal-structure.md) · [Love in Chronic Organisation](chronic-love-nine-layer-signal-structure.md) · [Coordinated Conscious Access](../../02-model-1-ess-cls-me/me-access.html#coordinated-access) · [Nervous System Gradient Governing Premise](../../03-model-2-gradient/premise.html) · [The Emotional-Somatic Cycle](../../04-model-3-esc/index.html)
 
 ## Governing observation
 

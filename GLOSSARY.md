@@ -128,7 +128,7 @@ not a homunculus, not an executive outside the organism. Write "ME", never
 
 **Coordinated conscious access** · Approved · 02. The relationship through
 which some participating information may become experienceable or
-inspectable by ME. Not another biological system.
+inspectable by ME. Not another biological system. The current explanation is on [ME Access Dials](02-model-1-ess-cls-me/me-access.html#coordinated-access).
 
 **ME access capacities** · Approved name and dimensions · 02. Bodily
 information access and use (feel myself; process: interoceptive
@@ -147,7 +147,7 @@ configuration they combine into, the eight-configuration field, the five
 quality dimensions and the boundary that access does not determine a mode.
 Model 1 owns it; the Inner Compass reads its setting alongside Model 2
 organisation. It integrated the functions of the earlier site controller and
-a reviewed Engine snapshot on 3 September 2026.
+a reviewed Engine snapshot on 3 September 2026. The 4 September consolidation makes it the single current access interface; older routes redirect here, and the historical snapshot is static.
 
 **Empathic concern** · Approved · 02. A relational output: whether another
 person's welfare can motivate, restrain or redirect action. Not a fourth

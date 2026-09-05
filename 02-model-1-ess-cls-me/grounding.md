@@ -55,9 +55,8 @@ natural kinds.
 - [processing.html](processing.html) · the sensory and biological processing
   before access, with its research foundations (Craig, LeDoux, Sterling,
   predictive regulation and allostasis, Pankseppian affective neuroscience).
-- [access.html](access.html) · research foundations for the functional
-  sequence (Craig, Porges, LeDoux, Damasio and its critics, Frijda, Panksepp,
-  feeding regulation).
+- [ME Access Dials](me-access.html#sources) · current access explanation, with its source and decision links.
+- [Model 3 event examples](../04-model-3-esc/cycle.html#event-examples) · the hunger, fear and shame examples and the research list carried with them. These remain illustrative TEG-Blue integration.
 
 ## Relevant evidence and active Engine provenance
 

@@ -109,114 +109,44 @@
   .depth-model-plane.middle { top: 10px; left: 14px; --plane: #b6fc50; }
   .depth-model-plane.near { top: 20px; left: 0; --plane: #12bdd0; }
 
-  .me-participation {
-    max-width: 1120px; margin: -22px 0 52px; overflow: hidden;
-    background: var(--ink); color: #fff;
-    border: 1px solid var(--ink); border-radius: 14px;
-    box-shadow: 0 8px 24px rgba(11, 31, 66, 0.12);
-  }
-  .me-participation-head {
-    display: flex; align-items: baseline; justify-content: space-between; gap: 24px;
-    padding: 18px 20px 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.16);
-  }
-  .me-participation-kicker {
-    margin: 0; color: #6eeafb; font-size: 10.5px; font-weight: 800;
-    letter-spacing: .1em; text-transform: uppercase;
-  }
-  .me-participation-head h2 {
-    margin: 2px 0 0; color: #fff; font-size: 21px;
-  }
-  .me-participation-head > p:last-child {
-    max-width: 570px; margin: 0; color: #c6d5ef; font-size: 12.5px;
-  }
-  .me-config-link {
-    display: inline-block; margin-top: 9px; color: #b6fc50; font-size: 10.5px;
-    font-weight: 800; text-decoration: none;
-  }
-  .me-config-link:hover { color: #fff; text-decoration: underline; }
-  .me-config-link:focus-visible { outline: 3px solid #6eeafb; outline-offset: 3px; }
-  .me-processes {
-    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  .me-process {
-    min-width: 0; padding: 17px 20px 19px;
-    border-right: 1px solid rgba(255, 255, 255, 0.16);
-  }
-  .me-process:last-child { border-right: 0; }
-  .me-process h3 {
-    margin: 0 0 4px; color: #b6fc50; font-size: 13px; font-weight: 800;
-    letter-spacing: .025em;
-  }
-  .me-process p { margin: 0; color: #fff; font-size: 12.5px; line-height: 1.45; }
-  .me-process-route {
-    display: block; margin-bottom: 10px; color: #9fb2d0;
-    font: 750 9px/1.35 ui-monospace, SFMono-Regular, Menlo, monospace;
-    letter-spacing: .06em; text-transform: uppercase;
-  }
-  .me-access-question { min-height: 55px; }
-  .me-access-control { margin-top: 16px; }
-  .me-access-control input[type="range"] {
-    display: block; width: 100%; height: 22px; margin: 0;
-    appearance: none; -webkit-appearance: none; background: transparent; cursor: pointer;
-  }
-  .me-access-control input[type="range"]:focus-visible { outline: 3px solid #6eeafb; outline-offset: 4px; border-radius: 999px; }
-  .me-access-control input[type="range"]::-webkit-slider-runnable-track {
-    height: 8px; border-radius: 999px;
-    background: linear-gradient(90deg, #ef823a 0%, #f7d448 48%, #6eeafb 76%, #b6fc50 100%);
-  }
-  .me-access-control input[type="range"]::-moz-range-track {
-    height: 8px; border: 0; border-radius: 999px;
-    background: linear-gradient(90deg, #ef823a 0%, #f7d448 48%, #6eeafb 76%, #b6fc50 100%);
-  }
-  .me-access-control input[type="range"]::-webkit-slider-thumb {
-    width: 20px; height: 20px; margin-top: -6px; appearance: none; -webkit-appearance: none;
-    border: 3px solid #fff; border-radius: 50%; background: var(--ink); box-shadow: 0 0 0 2px rgba(182, 252, 80, .92);
-  }
-  .me-access-control input[type="range"]::-moz-range-thumb {
-    width: 15px; height: 15px; border: 3px solid #fff; border-radius: 50%;
-    background: var(--ink); box-shadow: 0 0 0 2px rgba(182, 252, 80, .92);
-  }
-  .me-access-ends {
-    display: flex; justify-content: space-between; gap: 12px; margin-top: 2px;
-    color: #9fb2d0; font-size: 8.5px; font-weight: 700; line-height: 1.25;
-  }
-  .me-access-ends span:last-child { text-align: right; }
-  .me-access-readout {
-    min-height: 34px; margin-top: 9px; color: #fff; font-size: 11px; font-weight: 750;
-  }
-  .me-row-link {
-    display: inline-flex; margin-top: 12px; padding: 5px 8px; border: 1px solid rgba(182, 252, 80, .4);
-    border-radius: 999px; color: #dfffb5; font-size: 9.5px; font-weight: 800; text-decoration: none;
-  }
-  .me-row-link:hover { border-color: #b6fc50; background: rgba(182, 252, 80, .1); color: #fff; }
-  .me-row-link:focus-visible { outline: 3px solid #6eeafb; outline-offset: 2px; }
-  .me-combination {
-    display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; align-items: center;
-    margin: 0; padding: 12px 20px; border-top: 1px solid rgba(255, 255, 255, .16);
-    background: #102a56; color: #dce8fa; font-size: 11.5px;
-  }
-  .me-combination strong { color: #6eeafb; font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
-  .me-reveal {
-    display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0; padding: 10px 20px;
-    border-top: 1px solid rgba(255, 255, 255, .16); background: #173866;
-  }
-  .me-reveal[hidden] { display: none; }
-  .me-reveal span { margin-right: 3px; color: #9fb2d0; font-size: 9px; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
-  .me-reveal a {
-    padding: 5px 8px; border: 1px solid rgba(110, 234, 251, .36); border-radius: 999px;
-    color: #d7faff; font-size: 9.5px; font-weight: 800; text-decoration: none;
-  }
-  .me-reveal a:hover { border-color: #6eeafb; color: #fff; }
-  .me-process .cell-hooks { margin-top: 11px; }
-  .me-process .cell-hooks a {
-    border-color: rgba(255, 255, 255, 0.28); background: rgba(255, 255, 255, 0.08);
-    color: #dce8fa;
-  }
-  .me-process .cell-hooks a:hover { border-color: #6eeafb; color: #fff; }
-  .me-boundary {
-    margin: 0; padding: 13px 20px 15px;
-    background: #6eeafb; color: var(--ink); font-size: 12.5px; line-height: 1.5;
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   .row-pair { display: block; margin-top: 7px; text-transform: none; letter-spacing: 0; }
   .row-pair a {
     display: inline-block; padding: 3px 6px; border: 1px solid #bcd1ef; border-radius: 999px;
@@ -646,14 +576,14 @@
     .vocabulary > .systems-key { grid-column: auto; }
     .systems-mini { grid-template-columns: 1fr; }
     .systems-mini .me-mini { grid-column: auto; width: 100%; margin-bottom: 0; }
-    .me-participation { margin-top: -20px; }
-    .me-participation-head { display: block; }
-    .me-participation-head > p:last-child { margin-top: 9px; }
-    .me-processes { grid-template-columns: 1fr; }
-    .me-process { border-right: 0; border-bottom: 1px solid rgba(255, 255, 255, 0.16); }
-    .me-process:last-child { border-bottom: 0; }
-    .me-access-question { min-height: 0; }
-    .me-combination { grid-template-columns: 1fr; gap: 4px; }
+
+
+
+
+
+
+
+
     .taxonomy-axes { grid-template-columns: 1fr; }
     .groups, .group-distinction { grid-template-columns: 1fr; }
     .chronic-origin { grid-template-columns: 1fr; }
@@ -723,6 +653,9 @@
     td { font-size: 8.5px; }
     @page { size: A3 landscape; margin: 12mm; }
   }
+  .access-owner { margin: 24px 0; padding: 22px; border: 1px solid var(--line); border-left: 6px solid #6eeafb; border-radius: 12px; background: #edfafd; }
+  .access-owner h2 { margin: 0 0 8px; font-size: 24px; }
+  .access-owner p { font-size: 14px; line-height: 1.6; }
 </style>
 <noscript><style>
   /* Without JS nothing can switch the panels, so show both and drop the control. */
@@ -732,7 +665,7 @@
 
 <style>
   /* Capacity controls are set on Model 1; the reading that changes is the Inner Compass. */
-  .me-access-slider[disabled] { opacity: .85; cursor: not-allowed; }
+
   .capacity-echo { margin: 14px 0 0; padding: 12px 16px; background: #edfafd; border: 1px solid #bfeaf0; border-left: 6px solid #10b8cc; border-radius: 10px; font-size: 13px; line-height: 1.5; }
   .capacity-echo strong { color: #0b1f42; }
   .capacity-echo a { color: #076170; font-weight: 700; }
@@ -769,7 +702,7 @@
       <p class="page-responsibility__question"><strong>Governing question</strong>What problem does the nervous system currently appear to be organising the organism to solve, and what remains available while it does so?</p>
       <div class="page-responsibility__grid">
         <div class="page-responsibility__item"><strong>This page owns</strong><p>The seven Positions, the Fluid and far Chronic reference profiles and the row-by-row account of organisation, resource allocation and process recruitment. Model 1 owns what becomes consciously available to ME.</p></div>
-        <div class="page-responsibility__item"><strong>It receives</strong><p>Information from the <a href="../01-signal-map/emotion/fluid.html">Signal Map</a> and <a href="../02-model-1-ess-cls-me/access.html">Model 1</a>; <a href="../04-model-3-esc/cycle.html">ESC</a> indexes how successive organisation configurations change through time.</p></div>
+        <div class="page-responsibility__item"><strong>It receives</strong><p>Information from the <a href="../01-signal-map/emotion/fluid.html">Signal Map</a> and <a href="../02-model-1-ess-cls-me/me-access.html#coordinated-access">Model 1</a>; <a href="../04-model-3-esc/cycle.html">ESC</a> indexes how successive organisation configurations change through time.</p></div>
         <div class="page-responsibility__item"><strong>It does not establish</strong><p>A whole-person classification, emotion, behaviour, diagnosis, moral scale or complete causal mechanism. Regulation does not mean calm.</p></div>
       </div>
     </aside>
@@ -794,14 +727,14 @@
           <span class="systems-key-intro">ME can gradually recognise and use information arising through ESS and CLS. The three are related, but they are not three equivalent systems.</span>
           <span class="systems-mini">
             <a class="me-mini" style="--accent:#f7d448" href="../02-model-1-ess-cls-me/index.html#me"><strong>ME · conscious participant</strong><span>The lived person who can notice, reflect, choose, learn and take responsibility.</span></a>
-            <a style="--accent:#6eeafb" href="../02-model-1-ess-cls-me/index.html#ess"><strong>ESS · Emotional Somatic System</strong><span>Fast, embodied information processing that works largely outside conscious awareness.</span></a>
+            <a style="--accent:#6eeafb" href="../02-model-1-ess-cls-me/index.html#ess"><strong>ESS · Emotional Somatic System</strong><span>Emotional–somatic processing of bodily information, significance and action readiness.</span></a>
             <a style="--accent:#b6fc50" href="../02-model-1-ess-cls-me/index.html#cls"><strong>CLS · Cognitive Logical System</strong><span>Reflective, symbolic information processing that can compare, explain and plan across time.</span></a>
           </span>
         </dd>
       </div>
       <div class="inner-compass-key">
         <dt>Coordinated conscious access</dt>
-        <dd>Coordinated conscious access is the relationship through which bodily information, differentiated feeling, situational meaning and direction may become consciously readable. It does not perform the underlying detection or evaluation, and it is not a separate biological system. In Porges’s theoretical framework, <strong>neuroception</strong> names a proposed form of below-awareness safety, danger and life-threat evaluation; it is not another name for coordinated conscious access. Nervous system organisation may shape the conditions under which information becomes available and usable by ME, but a Position does not set an access band. Model 1 records access separately.<br><a class="definition-hook" href="../02-model-1-ess-cls-me/access.html#functional-sequence">Open the functional sequence →</a></dd>
+        <dd>Model 1 records what becomes readable and usable by ME separately from the organism's current organisation. <a class="definition-hook" href="../02-model-1-ess-cls-me/me-access.html#coordinated-access">Read the access relationship in ME Access Dials →</a></dd>
       </div>
       <div class="organisation-key">
         <dt>Nervous System Organisation</dt>
@@ -838,52 +771,10 @@
       </div>
     </dl>
 
-    <aside class="me-participation" aria-labelledby="me-participation-title">
-      <div class="me-participation-head">
-        <div>
-          <p class="me-participation-kicker">ME participation · human translation</p>
-          <h2 id="me-participation-title">What ME can read, understand and use</h2>
-        </div>
-        <p>The three linked rows describe biological processes that may continue without ME participation. Each control represents how much of that process can become readable, understandable and usable by ME. Set them independently on Model 1: this is a conceptual model, not a clinical score. The Gradient echoes the setting but does not derive it from a Position.<br><a class="me-config-link" href="../02-model-1-ess-cls-me/me-access.html#capacity-key">Open the eight ME access configurations →</a></p>
-      </div>
-      <div class="me-processes">
-        <article class="me-process" id="me-interoceptive-access">
-          <h3 id="me-interoceptive-title">Bodily information access and use</h3>
-          <span class="me-process-route">Biological process · Interoceptive processing</span>
-          <p class="me-access-question" id="access-interoceptive-question">What bodily information can I notice, differentiate, interpret and use here?</p>
-          <div class="me-access-control">
-            <input id="access-interoceptive" class="me-access-slider" type="range" min="0" max="100" value="82" aria-labelledby="me-interoceptive-title access-interoceptive-question" aria-describedby="access-interoceptive-readout">
-            <div class="me-access-ends" aria-hidden="true"><span>Not reliably readable</span><span>Broadly readable and usable</span></div>
-            <p class="me-access-readout" id="access-interoceptive-readout" aria-live="polite">Broadly available to ME</p>
-          </div>
-          <a class="me-row-link" href="#fluid-interoceptive-processing">Open biological row →</a>
-        </article>
-        <article class="me-process" id="me-affective-sharing-access">
-          <h3 id="me-affective-title">Affective-sharing access</h3>
-          <span class="me-process-route">Biological process · Affective sharing</span>
-          <p class="me-access-question" id="access-affective-question">How much of another person’s feeling arising within me can I notice while preserving self–other distinction?</p>
-          <div class="me-access-control">
-            <input id="access-affective" class="me-access-slider" type="range" min="0" max="100" value="82" aria-labelledby="me-affective-title access-affective-question" aria-describedby="access-affective-readout">
-            <div class="me-access-ends" aria-hidden="true"><span>Not reliably readable</span><span>Broadly readable and usable</span></div>
-            <p class="me-access-readout" id="access-affective-readout" aria-live="polite">Broadly available to ME</p>
-          </div>
-          <a class="me-row-link" href="#fluid-affective-sharing">Open biological row →</a>
-        </article>
-        <article class="me-process" id="me-mentalizing-access">
-          <h3 id="me-mentalizing-title">Mentalizing access and use</h3>
-          <span class="me-process-route">Biological process · Mentalizing</span>
-          <p class="me-access-question" id="access-mentalizing-question">How much can I represent, check and revise my understanding of another person?</p>
-          <div class="me-access-control">
-            <input id="access-mentalizing" class="me-access-slider" type="range" min="0" max="100" value="82" aria-labelledby="me-mentalizing-title access-mentalizing-question" aria-describedby="access-mentalizing-readout">
-            <div class="me-access-ends" aria-hidden="true"><span>Not reliably usable</span><span>Broadly usable and revisable</span></div>
-            <p class="me-access-readout" id="access-mentalizing-readout" aria-live="polite">Broadly available to ME</p>
-          </div>
-          <a class="me-row-link" href="#fluid-mentalizing">Open biological row →</a>
-        </article>
-      </div>
-      <p class="me-combination"><strong>Current conceptual combination</strong><span id="me-access-summary" aria-live="polite">All three processes are broadly available to ME. Move each control separately to reveal uneven access.</span></p>
-      <div class="me-reveal" id="me-access-reveal" hidden><span>This combination opens</span><a href="../02-model-1-ess-cls-me/access.html#functional-sequence">ESS → CLS → ME functional sequence</a><a href="depth.html#depth">Intermediate Fluid–Chronic layers</a></div>
-      <p class="me-boundary"><strong>The conscious choice is not whether the underlying information initially appears.</strong> ME may use CLS to turn towards, test and act on what becomes available—or to dismiss or rationalise it. Neither route makes the underlying biological processing disappear; using CLS to dismiss an ESS signal does not stop that signal from forming. Participation makes reflection and choice possible, not guaranteed; mentalizing can remain usable when affective sharing or concern is low.</p>
+    <aside class="access-owner" aria-labelledby="access-owner-title">
+      <h2 id="access-owner-title">ME access is set on Model 1.</h2>
+      <p>These tables describe biological organisation and process recruitment. Use <a href="../02-model-1-ess-cls-me/me-access.html#capacity-key">ME Access Dials</a> to explore what becomes readable and usable. A Position does not assign an access band.</p>
+      <p id="capacity-echo" aria-live="polite"></p>
     </aside>
 
     <section class="panel" id="panel-fluid">
@@ -950,7 +841,7 @@
           <td id="fluid-coordinated-conscious-access-x">Quiet and readable — internal signals, feeling, context, and self-directed preference can guide action without urgency.</td><td id="fluid-coordinated-conscious-access-a">Open and integrated — one’s own signals and another person’s reality can both inform connection without losing self–other distinction.</td><td id="fluid-coordinated-conscious-access-ab">Actively orienting — a change becomes consciously readable, but the reading remains provisional while more information arrives.</td><td id="fluid-coordinated-conscious-access-b">Narrowed toward protection — danger and immediate need become clearest while nuance, competing needs, and longer-term direction recede.</td><td id="fluid-coordinated-conscious-access-c">Recruited into management — selected signals guide prediction and control while needs that do not serve the plan are backgrounded.</td><td id="fluid-coordinated-conscious-access-d">Overridden by maximum survival demand — immediate force and outcome organise action before reflective guidance can enter.</td><td id="fluid-coordinated-conscious-access-z">Difficult or impossible to read — depletion and disengagement interrupt access to signals, meaning, preference, and usable direction.</td>
         </tr>
         <tr class="capacity-awareness">
-          <th scope="row" id="fluid-interoceptive-processing"><a href="#signal-access">Interoceptive processing</a><span class="row-alias">biological process · internal-state representation</span><span class="row-pair"><a href="#me-interoceptive-access">ME slider · Bodily information access and use ↑</a></span></th>
+          <th scope="row" id="fluid-interoceptive-processing"><a href="#signal-access">Interoceptive processing</a><span class="row-alias">biological process · internal-state representation</span><span class="row-pair"><a href="../02-model-1-ess-cls-me/me-access.html#bodily-access">ME Access Dials · Bodily information access and use ↑</a></span></th>
           <td id="fluid-interoceptive-processing-x">Internal maintenance state is broadly represented without defensive urgency: breathing, digestion, temperature, pain, hunger, thirst, fatigue and recovery demand. Embodied components of Situation Signals can also remain available.<span class="cell-hooks" aria-label="Signal connections"><a href="../01-signal-map/emotion/fluid.html#body-signals">Body Signals</a><a href="../01-signal-map/emotion/fluid.html#situation-signals">Situation Signals</a></span></td>
           <td id="fluid-interoceptive-processing-a">Internal state remains represented while social information receives greater priority; connection-related bodily change can participate without displacing maintenance needs.<span class="cell-hooks" aria-label="Signal connections"><a href="../01-signal-map/emotion/fluid.html#body-signals">Body Signals</a><a href="../01-signal-map/emotion/fluid.html#belonging-emotions">Belonging family</a></span></td>
           <td id="fluid-interoceptive-processing-ab">Orienting-related changes in breath, skin, stomach and muscle tone gain priority while homeostatic and restorative information recedes.<span class="cell-hooks" aria-label="Signal connections"><a href="../01-signal-map/emotion/fluid.html#body-signals">Body Signals</a><a href="../01-signal-map/emotion/fluid.html#belonging-at-risk">Belonging-at-Risk</a></span></td>
@@ -960,7 +851,7 @@
           <td id="fluid-interoceptive-processing-z">Internal information may be compressed into heaviness, cold, depletion, numbness or undifferentiated discomfort, with reduced localisation and usability.<span class="cell-hooks" aria-label="Signal connections"><a href="../01-signal-map/emotion/fluid.html#body-signals">Body Signals</a><a href="../01-signal-map/emotion/fluid.html#situation-signals">Situation Signals</a></span></td>
         </tr>
         <tr class="capacity-empathy">
-          <th scope="row" id="fluid-affective-sharing"><a href="#signal-access">Affective sharing</a><span class="row-alias">biological process · experience sharing</span><span class="row-pair"><a href="#me-affective-sharing-access">ME slider · Affective-sharing access ↑</a></span></th>
+          <th scope="row" id="fluid-affective-sharing"><a href="#signal-access">Affective sharing</a><span class="row-alias">biological process · experience sharing</span><span class="row-pair"><a href="../02-model-1-ess-cls-me/me-access.html#affective-sharing-access">ME Access Dials · Affective-sharing access ↑</a></span></th>
           <td id="fluid-affective-sharing-x">The process remains available but is not recruited when no other person’s present state is being encountered.<span class="cell-hooks" aria-label="Signal connection"><a href="../01-signal-map/emotion/fluid.html#situation-signals">Situation Signals</a></span></td>
           <td id="fluid-affective-sharing-a">Another person’s affective state can resonate broadly while self and other remain distinct.<span class="cell-hooks" aria-label="Signal connections"><a href="../01-signal-map/emotion/fluid.html#situation-signals">Situation Signals</a><a href="../01-signal-map/emotion/fluid.html#belonging-emotions">Belonging family</a></span></td>
           <td id="fluid-affective-sharing-ab">Sharing is partially gated while the safety of receiving the other person’s state is checked.<span class="cell-hooks" aria-label="Signal connections"><a href="../01-signal-map/emotion/fluid.html#situation-signals">Situation Signals</a><a href="../01-signal-map/emotion/fluid.html#belonging-at-risk">Belonging-at-Risk</a></span></td>
@@ -970,7 +861,7 @@
           <td id="fluid-affective-sharing-z">There is insufficient capacity for the other person’s state to become affectively represented.<span class="cell-hooks" aria-label="Signal connection"><a href="../01-signal-map/emotion/fluid.html#situation-signals">Situation Signals</a></span></td>
         </tr>
         <tr class="capacity-empathy">
-          <th scope="row" id="fluid-mentalizing"><a href="#signal-access">Mentalizing</a><span class="row-alias">biological process · cognitive representation of another</span><span class="row-pair"><a href="#me-mentalizing-access">ME slider · Mentalizing access and use ↑</a></span></th>
+          <th scope="row" id="fluid-mentalizing"><a href="#signal-access">Mentalizing</a><span class="row-alias">biological process · cognitive representation of another</span><span class="row-pair"><a href="../02-model-1-ess-cls-me/me-access.html#mentalizing-access">ME Access Dials · Mentalizing access and use ↑</a></span></th>
           <td id="fluid-mentalizing-x">The process remains available but is not recruited when no other mind is relevant to the present situation.<span class="cell-hooks" aria-label="Signal connection"><a href="../01-signal-map/emotion/fluid.html#situation-signals">Situation Signals</a></span></td>
           <td id="fluid-mentalizing-a">Another person’s perspective, intention and feeling can be represented broadly and revised through new information.<span class="cell-hooks" aria-label="Signal connections"><a href="../01-signal-map/emotion/fluid.html#situation-signals">Situation Signals</a><a href="../01-signal-map/emotion/fluid.html#belonging-emotions">Belonging family</a></span></td>
           <td id="fluid-mentalizing-ab">The existing model of the other person is revised as cues change; uncertainty can remain open while more information arrives.<span class="cell-hooks" aria-label="Signal connections"><a href="../01-signal-map/emotion/fluid.html#situation-signals">Situation Signals</a><a href="../01-signal-map/emotion/fluid.html#belonging-at-risk">Belonging-at-Risk</a></span></td>
@@ -1077,12 +968,12 @@
           <td id="chronic-ess-emotional-signal-formation-x">Earlier unresolved signals remain among the conditions from which new feelings form, creating background pressure even without a clear event.</td><td id="chronic-ess-emotional-signal-formation-a">Relational signals continue to form, including feelings that might threaten approval, usefulness or access to connection.</td><td id="chronic-ess-emotional-signal-formation-ab">Connection and Belonging-at-Risk information remain active together; each new cue can restart the unresolved read.</td><td id="chronic-ess-emotional-signal-formation-b">A wide range of cues is weighted towards protection. Connection signals do not disappear, but arrive inside a defensive field.</td><td id="chronic-ess-emotional-signal-formation-c">Emotional information still forms, while signals relevant to prediction, performance and control receive greater priority than signals that interrupt the plan.</td><td id="chronic-ess-emotional-signal-formation-d">Maximum-protection information may receive priority while fear, shame, pain, care and impact also continue to form. Their conscious differentiation and use are recorded separately.</td><td id="chronic-ess-emotional-signal-formation-z">Condition information may remain active under depletion and conservation. Whether it becomes differentiated or consciously available is recorded separately.</td>
         </tr>
         <tr class="capacity-awareness">
-          <th scope="row" id="chronic-interoceptive-processing"><a href="#signal-access">Interoceptive processing</a><span class="row-alias">biological process · internal-state representation</span><span class="row-pair"><a href="#me-interoceptive-access">ME slider · Bodily information access and use ↑</a></span></th>
+          <th scope="row" id="chronic-interoceptive-processing"><a href="#signal-access">Interoceptive processing</a><span class="row-alias">biological process · internal-state representation</span><span class="row-pair"><a href="../02-model-1-ess-cls-me/me-access.html#bodily-access">ME Access Dials · Bodily information access and use ↑</a></span></th>
           <td id="chronic-interoceptive-processing-x">Internal state may remain represented as sustained tension, unease or depletion while restorative and self-directed information receives less weight.</td><td id="chronic-interoceptive-processing-a">Relationally linked bodily change may remain highly represented while hunger, fatigue, anger, sadness or personal limits are backgrounded.</td><td id="chronic-interoceptive-processing-ab">Orienting-related changes in breath, skin, stomach and muscle tone may recur without settling into a clear, trusted reading.</td><td id="chronic-interoceptive-processing-b">Defensive bodily information can receive persistent priority while quieter maintenance and connection signals remain harder to use.</td><td id="chronic-interoceptive-processing-c">Signals supporting effort and output may remain foregrounded while fatigue, pain and recovery demand become normalised or delayed.</td><td id="chronic-interoceptive-processing-d">Force and urgent action signals may dominate while pain, injury and internal limits receive less weight or remain less usable; this does not establish their absence.</td><td id="chronic-interoceptive-processing-z">Internal state may be represented globally as heaviness, numbness, fog or exhaustion, with reduced localisation and differentiation.</td>
         </tr>
         <tr class="chronic-section-row"><th colspan="8">Model 1 interface <span>Possible access patterns to compare with the ME Access Dials; no Position assigns a band or configuration</span></th></tr>
         <tr class="emotion-process-row capacity-awareness">
-          <th scope="row" id="chronic-me-felt-access"><a href="#signal-access">Conscious availability to ME</a><span class="row-alias">ESM-facing record variable · what becomes consciously available to ME</span><span class="row-pair"><a href="#me-interoceptive-access">ME slider · Bodily information access and use ↑</a></span></th>
+          <th scope="row" id="chronic-me-felt-access"><a href="#signal-access">Conscious availability to ME</a><span class="row-alias">ESM-facing record variable · what becomes consciously available to ME</span><span class="row-pair"><a href="../02-model-1-ess-cls-me/me-access.html#bodily-access">ME Access Dials · Bodily information access and use ↑</a></span></th>
           <td id="chronic-conscious-availability-to-me-x">One possible pattern is that unease, tension or restless flatness remains detectable while contentment, curiosity, need and preference stay faint.</td><td id="chronic-conscious-availability-to-me-a">Another person’s mood and permitted affiliative feelings may be easier to feel than one’s own anger, sadness, limit or direction.</td><td id="chronic-conscious-availability-to-me-ab">Feelings may be available but fused and distrusted—shame with fear, guilt with anger, love with anticipated loss.</td><td id="chronic-conscious-availability-to-me-b">Fear, anger and alarm may become easiest to reach; vulnerability, grief and quieter needs may appear only later.</td><td id="chronic-conscious-availability-to-me-c">Feeling may be converted quickly into analysis, judgement or strategic information, while signals that obstruct control are discounted.</td><td id="chronic-conscious-availability-to-me-d">Urgency, certainty or rage may dominate access while vulnerability, pain, limit and another person’s impact become difficult—not necessarily impossible—to feel.</td><td id="chronic-conscious-availability-to-me-z">Numbness, fog, heaviness or exhaustion may leave little differentiated feeling; fragments may appear when capacity briefly returns.</td>
         </tr>
         <tr class="capacity-awareness">
@@ -1119,11 +1010,11 @@
         </tr>
         <tr class="chronic-section-row"><th colspan="8">Relational processes and output <span>How another person becomes represented and whether their welfare can influence action</span></th></tr>
         <tr class="capacity-empathy">
-          <th scope="row" id="chronic-affective-sharing"><a href="#signal-access">Affective sharing</a><span class="row-alias">biological process · feeling another</span><span class="row-pair"><a href="#me-affective-sharing-access">ME slider · Affective-sharing access ↑</a></span></th>
+          <th scope="row" id="chronic-affective-sharing"><a href="#signal-access">Affective sharing</a><span class="row-alias">biological process · feeling another</span><span class="row-pair"><a href="../02-model-1-ess-cls-me/me-access.html#affective-sharing-access">ME Access Dials · Affective-sharing access ↑</a></span></th>
           <td id="chronic-affective-sharing-x">Affective sharing may remain available in some contexts while continuous self-monitoring reduces its use in immediate relationship.</td><td id="chronic-affective-sharing-a">Another person’s state may become highly available while self–other distinction and access to one’s own position narrow.</td><td id="chronic-affective-sharing-ab">Another person’s feeling may be registered and quickly folded into a read of possible danger or rejection.</td><td id="chronic-affective-sharing-b">Sharing may narrow during chronic guarding while remaining more available with selected people or when protection eases.</td><td id="chronic-affective-sharing-c">Sharing may be selectively narrowed or compartmentalised, or may remain active while being kept separate from action.</td><td id="chronic-affective-sharing-d">Sharing may narrow; it may also remain active while another person’s feeling is kept separate from action. Cognitive detection can remain available in either case.</td><td id="chronic-affective-sharing-z">Another person’s state may become faint, delayed or difficult to use when low capacity and withdrawal dominate.</td>
         </tr>
         <tr class="capacity-empathy">
-          <th scope="row" id="chronic-mentalizing"><a href="#signal-access">Mentalizing</a><span class="row-alias">biological process · reading another</span><span class="row-pair"><a href="#me-mentalizing-access">ME slider · Mentalizing access and use ↑</a></span></th>
+          <th scope="row" id="chronic-mentalizing"><a href="#signal-access">Mentalizing</a><span class="row-alias">biological process · reading another</span><span class="row-pair"><a href="../02-model-1-ess-cls-me/me-access.html#mentalizing-access">ME Access Dials · Mentalizing access and use ↑</a></span></th>
           <td id="chronic-mentalizing-x">Representation of another may continue through rehearsal, replay and anticipated evaluation even when no person is present.</td><td id="chronic-mentalizing-a">Another person’s mood and displeasure may be predicted continuously, while direct information receives less corrective weight.</td><td id="chronic-mentalizing-ab">The model of the other person may be revised repeatedly without becoming stable or trusted.</td><td id="chronic-mentalizing-b">Representation may narrow towards possible threat, rejection or harmful intention.</td><td id="chronic-mentalizing-c">Understanding may become detailed and predictive while being used mainly to manage behaviour and outcomes.</td><td id="chronic-mentalizing-d">Representation may become narrow or instrumental around leverage, compliance and resistance while the other person’s wider perspective receives less weight.</td><td id="chronic-mentalizing-z">Representing another mind may become slower, intermittent or unavailable while shutdown and low capacity dominate.</td>
         </tr>
         <tr class="capacity-empathy">
@@ -1167,48 +1058,9 @@
     <section class="notes">
       <h2 id="processes">Three processes</h2>
       <p class="caption">The emotion tables that used to sit here now live only on the <a href="../01-signal-map/index.html">Emotional Signal Map</a>: the <a href="../01-signal-map/emotion/fluid.html">Fluid roster</a> and the <a href="../01-signal-map/emotion/chronic.html">Chronic roster</a>. The three-process block below stays because the table rows point to it.</p>
-      <h3 id="signal-access">Three processes and their human translation</h3>
-      <p class="caption">
-        The scientific rows describe how each nervous system organisation allocates
-        three underlying processes. The participation card for ME translates what those
-        processes may make consciously possible. The optimal Fluid design is not
-        maximum recruitment at all times, but flexible access, self–other distinction
-        and updating in response to what the situation actually requires.
-      </p>
-      <div class="scroll access-table">
-        <table>
-          <thead>
-            <tr>
-              <th scope="col" class="q">Underlying process</th>
-              <th scope="col" class="q">What the process does</th>
-              <th scope="col" class="q">Important boundary</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Interoceptive processing <span class="row-alias">(internal-state representation)</span></th>
-              <td>The nervous system senses, represents and integrates internal bodily information arising from Body Signals and from the embodied components of Situation Signals.</td>
-              <td>Interoception does not by itself identify an experience as love, shame, fear or anger, and internal information can influence action without becoming consciously felt or named.</td>
-            </tr>
-            <tr>
-              <th scope="row">Affective sharing <span class="row-alias">(experience sharing)</span></th>
-              <td>Another person’s affective state becomes represented within one’s own organism while remaining identifiable as the other person’s experience.</td>
-              <td>Affective resonance is not accuracy, agreement or obligation. Without self–other distinction it may become emotional contagion rather than empathy.</td>
-            </tr>
-            <tr>
-              <th scope="row">Mentalizing <span class="row-alias">(cognitive representation of another)</span></th>
-              <td>Another person’s perspective, intention, feeling and likely action are represented and can be revised through new information.</td>
-              <td>Understanding can remain cognitively detailed while affective sharing or concern is reduced; it can therefore be used reciprocally, defensively or instrumentally.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="aside">
-        <strong>Empathic concern is shown separately as relational output.</strong>
-        It asks whether another person’s welfare can motivate, restrain or redirect
-        action. Concern can draw on affective sharing and mentalizing, but it is
-        not identical to either process.
-      </p>
+      <h3 id="signal-access">Processes and conscious access</h3>
+      <p class="caption">The interoception, affective-sharing and mentalizing rows describe recruitment in the current organisation. Their <a href="../02-model-1-ess-cls-me/processing.html#access">process definitions remain with Model 1</a>. The <a href="../02-model-1-ess-cls-me/me-access.html#capacity-key">ME Access Dials</a> separately describe what becomes readable and usable.</p>
+      <p class="aside"><strong>Empathic concern remains a separate relational output.</strong> Examine whether another person's welfare motivates, restrains or redirects action; no access configuration establishes it.</p>
 
       <h4>Three layers that must not collapse into one another</h4>
       <dl class="taxonomy-axes">
@@ -1225,9 +1077,7 @@
           <dd><span class="axis-question">How are interoceptive processing, affective sharing and mentalizing currently allocated?</span>In the Fluid Gradient their allocation changes with present conditions and can update. How development may shape their recurrent allocation in Chronic Survival requires a separate analysis rather than a direct transfer of the Fluid cells.<span class="axis-connection">Connects the three process rows to their human translation and to empathic concern as a separate relational output.</span></dd>
         </div>
       </dl>
-      <p class="aside">
-        <a href="../02-model-1-ess-cls-me/me-access.html">Explore all eight ME access configurations →</a>
-      </p>
+      <p class="aside"><a href="../02-model-1-ess-cls-me/me-access.html#field">Explore the eight configurations and five quality dimensions in ME Access Dials →</a></p>
     </section>
 
     <section class="return-section" id="return">
@@ -1482,53 +1332,6 @@
     })
   })
 
-  // The controls show conceptual depth, not a psychometric or clinical score.
-  // Their independence is the point: biological processing can continue while
-  // conscious access and use differ across the three ME access capacities.
-  var ACCESS_LABELS = [
-    { max: 19, text: 'Not reliably available to ME' },
-    { max: 44, text: 'Fragments may become readable' },
-    { max: 69, text: 'Partly available and usable' },
-    { max: 100, text: 'Broadly available to ME' }
-  ]
-  var accessSliders = Array.prototype.slice.call(document.querySelectorAll('.me-access-slider'))
-  function accessBand(value) {
-    for (var i = 0; i < ACCESS_LABELS.length; i += 1) {
-      if (value <= ACCESS_LABELS[i].max) return i
-    }
-    return ACCESS_LABELS.length - 1
-  }
-  function updateAccessModel() {
-    var bands = accessSliders.map(function (slider) {
-      var band = accessBand(Number(slider.value))
-      var readout = document.getElementById(slider.id + '-readout')
-      readout.textContent = ACCESS_LABELS[band].text
-      slider.setAttribute('aria-valuetext', ACCESS_LABELS[band].text)
-      return band
-    })
-    var summary = document.getElementById('me-access-summary')
-    var highest = Math.max.apply(null, bands)
-    var lowest = Math.min.apply(null, bands)
-    if (lowest === 3) {
-      summary.textContent = 'All three processes are broadly available to ME. Move each control separately to reveal uneven access.'
-    } else if (highest - lowest >= 2) {
-      summary.textContent = 'Access is strongly uneven. One process may remain usable while another continues biologically without becoming equally available to ME.'
-    } else if (highest !== lowest) {
-      summary.textContent = 'Access is uneven. The three processes can occupy different depths between the Fluid and far Chronic reference planes.'
-    } else if (highest <= 1) {
-      summary.textContent = 'Biological processing may continue while little of it becomes consciously readable or usable by ME.'
-    } else {
-      summary.textContent = 'All three processes are partly available. Availability can still change by context, relationship and nervous-system organisation.'
-    }
-  }
-  accessSliders.forEach(function (slider) {
-    slider.addEventListener('input', function () {
-      document.getElementById('me-access-reveal').hidden = false
-      updateAccessModel()
-    })
-  })
-  updateAccessModel()
-
   function fromHash() {
     var m = location.hash.slice(1)
     if (MODES.indexOf(m) > -1) {
@@ -1543,39 +1346,25 @@
   window.addEventListener('hashchange', fromHash)
 </script>
 
-<script src="../assets/capacities.js"></script>
+<script src="../assets/capacities.js?v=20260904-access"></script>
 <script>
   (function () {
-    var C = window.TEG && window.TEG.capacities; if (!C) return;
-    var SLIDERS = {"bodily": "access-interoceptive", "affective": "access-affective", "mentalizing": "access-mentalizing"}, VALUES = [10, 35, 60, 85];
-    var CONTROLLER = "../02-model-1-ess-cls-me/me-access.html";
-    var COMPASS = "../06-inner-compass-four-modes/compass.html";
-    function apply(state) {
-      Object.keys(SLIDERS).forEach(function (k) {
-        var s = document.getElementById(SLIDERS[k]); if (!s) return;
-        s.value = VALUES[state[k]]; s.disabled = true; s.setAttribute("aria-readonly", "true");
-      });
-      if (typeof updateAccessModel === "function") updateAccessModel();
+    var C = window.TEG.capacities;
+    function renderAccess() {
+      var state = C.get();
       var echo = document.getElementById("capacity-echo");
-      if (echo) {
-        var code = C.code(state);
-        echo.innerHTML = "<strong>Set on Model 1.</strong> Current configuration " + code + " · " + C.CONFIGS[code] +
-          ". These tables do not change with the setting: they describe the organism's organisation, which is the same whatever ME can read of it. " +
-          "The reading that changes is the Inner Compass. " +
-          '<a href="' + C.link(COMPASS, state) + '">Open the Compass view →</a> · ' +
-          '<a href="' + C.link(CONTROLLER, state) + '">Adjust the capacities on Model 1 →</a>';
-      }
+      echo.textContent = "Bodily information: " + C.BANDS[state.bodily] + ". Affective sharing: " + C.BANDS[state.affective] + ". Mentalizing: " + C.BANDS[state.mentalizing] + ". ";
+      var link = document.createElement("a");
+      link.href = C.link("../06-inner-compass-four-modes/compass.html", state);
+      link.textContent = "Open this setting in the Inner Compass →";
+      echo.appendChild(link);
     }
-    var reveal = document.getElementById("me-access-reveal");
-    if (reveal) {
-      var echo = document.createElement("div"); echo.id = "capacity-echo"; echo.className = "capacity-echo"; echo.setAttribute("role", "note");
-      reveal.parentNode.insertBefore(echo, reveal);
-    }
-    apply(C.get());
-    window.addEventListener("storage", function (e) { if (e.key === "teg.capacities.v1") apply(C.get()); });
+    renderAccess();
+    window.addEventListener("storage", function (event) { if (event.key === "teg.capacities.v1") renderAccess(); });
   })();
 </script>
 <nav class="gradient-navigation" aria-label="Explore the Nervous System Gradient"><p>Nervous System Gradient</p><div class="gradient-navigation__levels"><a data-gradient-page="index.html" href="index.html">Model overview</a><span aria-hidden="true">→</span><a data-gradient-page="positions.html" href="positions.html" aria-current="page">Original Gradient table</a><span aria-hidden="true">→</span><a data-gradient-page="position.html" href="position.html">Position records</a></div><div class="gradient-navigation__detail"><span>Examine:</span><a data-gradient-page="premise.html" href="premise.html">Governing premise</a><a data-gradient-page="fluid-chronic.html" href="fluid-chronic.html">Fluid / Chronic</a><a data-gradient-page="depth.html" href="depth.html">Depth</a><a data-gradient-page="autonomic.html" href="autonomic.html">Biological participation</a><a data-gradient-page="return.html" href="return.html">Return and recovery</a></div><a class="gradient-navigation__return" data-gradient-return href="position.html" hidden>Return to the position record</a></nav>
 <script src="../assets/gradient-navigation.js"></script>
+<script src="../assets/access-redirect.js" data-access-page="gradient" data-site-root="../"></script>
 </body>
 </html>

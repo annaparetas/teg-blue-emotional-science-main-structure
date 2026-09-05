@@ -184,6 +184,7 @@
     .ownership-foot a { color: var(--ess); font-weight: 750; }
 
     .layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: clamp(38px, 6vw, 80px); padding: 72px 0 110px; }
+    .layout > main { min-width: 0; }
     .toc { position: sticky; top: 22px; align-self: start; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(15,21,32,.9); backdrop-filter: blur(14px); }
     .toc-head { padding: 18px; border-bottom: 1px solid var(--line); }
     .toc-head .status { color: var(--fluid); }
@@ -556,7 +557,15 @@
       .layout { display: block; }
       main section { break-inside: avoid; }
     }
-  </style>
+    .access-example { min-width: 0; margin: 18px 0; padding: 20px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+    .access-example summary { cursor: pointer; font-weight: 750; }
+    .access-example p, .access-example li { color: var(--body); }
+    .access-example li { margin: 8px 0; }
+    .access-example strong { color: var(--ink); }
+    .access-example-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .access-example-grid h3 { font-size: 22px; }
+    @media (max-width: 900px) { .access-example-grid { grid-template-columns: 1fr; } }
+</style>
 </head>
 <body id="top">
   <div class="carried-banner" role="note"><strong>Carried page · status approved architecture.</strong> The canonical two-cycle page: the shared event spine, the whole operating sequence, the Fluid and Chronic Cognitive-Override comparison, the seven override distinctions, the Chronic cascade and the bridge to Model 2. Canonical since 23 August 2026; carried on 2 September 2026. The canon page summarises it; this is the full statement. <a href="index.html">Back to the Model 3 canon page →</a></div>
@@ -611,6 +620,7 @@
           <li><a href="#interfaces">How the models connect</a></li>
           <li><a href="#spine">The shared event spine</a></li>
           <li><a href="#operating-sequence">The whole sequence</a></li>
+          <li><a href="#event-examples">Worked event examples</a></li>
           <li><a href="#cycles">Fluid and Chronic</a></li>
           <li><a href="#override-layers">Seven override distinctions</a></li>
           <li><a href="#cascade">The Chronic Cascade</a></li>
@@ -739,6 +749,34 @@
             </div>
           </div>
           <p class="lead" style="margin-top:18px">Updating, learning and integration are not required to wait until recovery is complete. They may begin during feedback, remain partial, unfold later or fail to generalise across contexts.</p>
+        </section>
+
+
+        <section id="event-examples">
+          <div class="section-head"><div><p class="section-kicker">Worked examples · TEG-Blue integration</p><h2>The event continues as access, action and feedback change.</h2></div><p>These examples were brought from the earlier coordinated-access page. They illustrate different routes through one event; the functions overlap and recur, and no signal assigns a Gradient Position.</p></div>
+          <p><a href="../02-model-1-ess-cls-me/me-access.html#coordinated-access">Examine conscious access with Model 1</a> · <a href="../02-model-1-ess-cls-me/processing.html#field">Explore underlying processing</a> · <a href="shared-event-record.html#record">Record each model's contribution</a>.</p>
+          <details id="hunger-example" class="access-example">
+            <summary>Hunger: a body-condition signal through an event</summary>
+            <p>Information about energy stores, gastrointestinal conditions, nutrients and meal state is integrated with sensory, reward and motivational processes. No single chemical equals hunger.</p>
+            <ol>                <li><strong>Condition:</strong> feeding-related physiological conditions change.</li>
+                <li><strong>Detection:</strong> peripheral and central systems carry information about energy, GI conditions, nutrients and meal state.</li>
+                <li><strong>Evaluation:</strong> brainstem, hypothalamic, metabolic, reward, sensory and motivational networks integrate it.</li>
+                <li><strong>Signal:</strong> a hunger-related physiological and motivational pattern develops.</li>
+                <li><strong>Organisation:</strong> attention, motivation and resources increasingly prioritise nourishment.</li>
+                <li><strong>Readiness:</strong> seeking, approaching, obtaining and eating become prepared.</li>
+                <li><strong>Conscious access:</strong> bodily information and food salience may become readable as “I am hungry”.</li>
+                <li><strong>Action:</strong> search → obtain → eat.</li>
+                <li><strong>Updating:</strong> eating produces GI, nutrient, neural and endocrine feedback.</li>
+                <li><strong>Completion + Return:</strong> food-seeking priority diminishes while processing continues.</li>
+                <li><strong>Learning:</strong> update where, when, what and how nourishment can be obtained.</li></ol>
+            <p><a href="../01-signal-map/emotion/fluid.html#signal-hunger">Read the hunger signal record →</a></p>
+          </details>
+          <div class="access-example-grid">
+            <article class="access-example"><h3>Fear on unstable ground</h3><p>Sensory, vestibular and proprioceptive information can make a physical condition relevant. Protective organisation and readiness to stabilise, stop, move or escape can develop before the person can explain the fear. Action and new evidence may change the demand and permit Return.</p><a href="../01-signal-map/emotion/fluid.html#signal-fear">Read the fear signal record →</a></article>
+            <article class="access-example"><h3>Fear about an anticipated attack</h3><p>A represented condition recruits memory, prediction and threat evaluation. Preparation, avoidance or protection may become available. Action or inhibition and further information can support continued protection or a revised reading and Return.</p><a href="../01-signal-map/emotion/fluid.html#signal-fear">Compare the same signal →</a></article>
+            <article class="access-example"><h3>Shame about possible rejection</h3><p>Social information and learned expectations can make belonging feel at risk. Readiness to repair, hide, check or reconnect may develop. Relational evidence can change that reading or leave it unresolved. Examine organisation separately; shame does not establish a Position.</p><a href="../01-signal-map/emotion/fluid.html#signal-shame">Read the shame signal record →</a></article>
+          </div>
+          <details class="access-example"><summary>Sources carried with these examples</summary><ol><li>Craig (2002), <a href="https://doi.org/10.1038/nrn894">interoception</a>.</li><li>Craig (2003), <a href="https://pubmed.ncbi.nlm.nih.gov/12965300/">physiological condition of the body</a>.</li><li>Porges (2004), Neuroception [theoretical framework].</li><li>Porges (2007), <a href="https://doi.org/10.1016/j.biopsycho.2006.06.009">polyvagal perspective</a>.</li><li>LeDoux (2014), <a href="https://pubmed.ncbi.nlm.nih.gov/24501122/">coming to terms with fear</a>.</li><li>Silva, Gross &amp; Gräff (2016), <a href="https://pubmed.ncbi.nlm.nih.gov/27634145/">neural circuits of innate fear</a>.</li><li>Damasio (1996), <a href="https://doi.org/10.1098/rstb.1996.0125">somatic-marker hypothesis</a>.</li><li>Dunn, Dalgleish &amp; Lawrence (2006), <a href="https://doi.org/10.1016/j.neubiorev.2005.07.001">critical evaluation</a>.</li><li>Frijda, Ridderinkhof &amp; Rietveld (2014), <a href="https://doi.org/10.3389/fpsyg.2014.00518">impulsive action</a>.</li><li>Frijda (2016), <a href="https://doi.org/10.1080/02699931.2016.1145106">evolutionary emergence of emotions</a>.</li><li>Panksepp (2011), <a href="https://doi.org/10.1016/j.neubiorev.2011.08.003">basic emotional circuits</a>.</li><li>Saper, Chou &amp; Elmquist (2002), <a href="https://doi.org/10.1016/S0896-6273(02)00969-8">the need to feed</a>.</li><li>Acosta et al. (2021), <a href="https://pubmed.ncbi.nlm.nih.gov/34481092/">food-intake regulation</a>.</li><li>Davis (2018), <a href="https://doi.org/10.1016/j.brainres.2018.01.024">hunger, ghrelin and the gut</a>.</li><li>Morales (2022), <a href="https://pubmed.ncbi.nlm.nih.gov/35753443/">hunger and motivation</a>.</li><li>Systematic review/meta-analysis (2023), <a href="https://pubmed.ncbi.nlm.nih.gov/37536563/">ghrelin and perceived hunger</a>.</li></ol><p>These sources informed the earlier functional integration. None establishes the complete sequence as one biological model. The examples retain their illustrative status.</p></details>
         </section>
 
         <section id="cycles">

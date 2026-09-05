@@ -160,3 +160,8 @@ that TEG-Blue is an established scientific discipline.
 the original table, seven position records, Fluid and Chronic readings, depth,
 biology and Return connect. Generate the position data and readable records with
 `python3 scripts/build-gradient-data.py`; use `--check` to detect stale outputs.
+
+
+## Connected site and Engine preview
+
+Run `python3 scripts/serve.py` from this repository. The site opens at the preview root; the Engine is mounted under `/inner-compass-nervous-system-organization-gradient/`. This shared server resolves sibling links to ME Access Dials and keeps both repositories on one browser origin. A plain server exposing only the Engine folder cannot follow the consolidated site routes.

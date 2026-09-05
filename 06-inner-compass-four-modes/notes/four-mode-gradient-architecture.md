@@ -1,5 +1,7 @@
 # Inner Compass and the 4-Mode Gradient
 
+> **4 September 2026 · Access ownership updated.** The [approved consolidation](../../02-model-1-ess-cls-me/notes/access-consolidation.md) supersedes older current-page and active-controller references below. ME Access Dials owns the access interface; Model 3 owns the full event sequence. Other scientific and working statuses remain unchanged.
+
 Accessible orientation: **Inner Compass · The 4-Mode Gradient**
 
 Scientific-facing orientation: **A public synthesis of information access, regulation, Fluid–Chronic organisation, participation, conduct, power and repair**

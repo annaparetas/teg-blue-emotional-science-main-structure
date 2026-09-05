@@ -1,5 +1,7 @@
 # Decisions · Model 1 · The Two Biological Information Systems and ME
 
+> **4 September 2026 · Access ownership updated.** The [approved consolidation](access-consolidation.md) supersedes older current-page and active-controller references below. ME Access Dials owns the access interface; Model 3 owns the full event sequence. Other scientific and working statuses remain unchanged.
+
 Dated entries, newest first. A decision recorded here changes a canon page
 only when the page is edited and its "last approved" date moves.
 
@@ -109,7 +111,7 @@ Anna's confirmation.
   before CLS begins. Foundation 21's request to remove the shorthand is
   therefore not applied; its boundary is applied instead. Model 1 remains
   working until Anna confirms the rest of the wording.
-- The coordinated conscious access page is carried as [access.html](../access.html)
+- The coordinated conscious access page is carried as [access.html](../me-access.html#coordinated-access)
   with approved status. The capacities page is carried as
   `capacities.html` (since 3 September 2026 at
   [notes/sources/relational-capacities.html](sources/relational-capacities.html)),
