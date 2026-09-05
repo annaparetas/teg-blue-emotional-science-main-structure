@@ -3,6 +3,20 @@
 Dated entries, newest first. A decision recorded here changes the canon page
 only when the page is edited and its "last approved" date moves.
 
+## 2026-09-04 · Match the Model 2 reading hierarchy
+
+Anna approved the Model 2 navigation pattern for the Emotions foundation and
+Signal Map. Shared navigation at the top and bottom of seven reading pages
+connects the foundation, map and individual records. Families, Fluid, Chronic,
+biology and recruitment and recovery form the detail row. Return links retain
+the selected signal and reading. Body-condition signals lead to the Chronic
+overview because they have no individual Chronic roster records.
+
+Signal Map now sits inside the Emotions dropdown in the shared header. The
+menu supports keyboard and pointer access; shared asset versions prevent old
+cached header markup and styles from being combined with this update.
+Family membership, source records and evidence status are unchanged.
+
 ## 2026-09-04 · Make group, family and signal relationships explicit
 
 Anna approved the grouping explanation across both signal groups: five

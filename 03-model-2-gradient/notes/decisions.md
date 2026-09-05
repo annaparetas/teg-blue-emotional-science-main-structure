@@ -3,6 +3,15 @@
 Dated entries, newest first. A decision recorded here changes a canon page
 only when the page is edited and its "last approved" date moves.
 
+## 2026-09-04 · Model 2 dropdown in the shared header
+
+Anna approved a Model 2 dropdown like the Emotions menu. It lists the overview,
+original Gradient table and position records first, followed by the governing
+premise, Fluid / Chronic, depth, intermediate patterns, biological participation
+and Return and recovery. On Model 2 pages, the existing navigation carries the
+selected position and reading into these menu links. The longer menu scrolls
+when needed, supports keyboard access and closes when another menu opens.
+
 ## 2026-09-04 · Connected Model 2 hierarchy and position records
 
 Anna approved applying the Signal Map reading structure to Model 2: overview,

@@ -3,6 +3,15 @@
 Dated entries, newest first. A decision recorded here changes the canon page
 only when the page is edited and its "last approved" date moves.
 
+## 2026-09-04 · Emotions menu and two-level reading navigation
+
+Anna approved the Model 2 navigation pattern for Emotions and the Signal Map.
+The shared header now groups Emotions as Information and Signal Map under an
+Emotions dropdown. The local path is Emotions as Information → Signal Map →
+Signal records, with a second row for families, Fluid, Chronic, biology and
+recruitment and recovery. Selected signals and readings remain in the links
+when readers move into detail or back to the overview.
+
 ## 2026-09-04 · Link the group–family–signal explanation
 
 Anna approved explicit links to the Signal Map's nine family rationales.

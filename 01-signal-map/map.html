@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="A navigable map of nine Body-condition signals and twenty-six Emotion signals. Emotion records can be compared under Fluid and Chronic organisation; Body-condition records retain a separate Chronic-access boundary.">
   <title>Body-condition and Emotion Signals · Emotional Signal Map · TEG-Blue</title>
-  <link rel="stylesheet" href="../assets/teg-blue.css">
+  <link rel="stylesheet" href="../assets/teg-blue.css?v=20260904-model2-menu">
   <style>
     :root {
       --fam-body: #087f91; --fam-belonging: #10b8cc; --fam-belonging-at-risk: #6857b8;
@@ -84,10 +84,17 @@
     .question-source{display:block;margin-top:8px;font-size:12px;color:var(--muted)}
     .record-questions h3{margin-top:24px}
   </style>
+<link rel="stylesheet" href="../assets/signal-depth.css?v=20260904-navigation">
 </head>
 <body data-page="signal-map" data-root="../">
   <a class="skip-link" href="#main">Skip to content</a>
   <header data-site-header></header>
+<div class="shell"><nav class="signal-depth" aria-label="Explore emotional information">
+  <p class="signal-depth__label">Emotions and Signal Map</p>
+  <div class="signal-depth__levels"><a data-signal-target="overview" href="../00-emotions-as-information/index.html">Emotions as Information</a><span aria-hidden="true">→</span><a data-signal-target="map" href="../01-signal-map/index.html">Signal Map</a><span aria-hidden="true">→</span><a data-signal-target="records" href="../01-signal-map/map.html" aria-current="page">Signal records</a></div>
+  <div class="signal-depth__detail"><span>Examine:</span><a data-signal-target="families" href="../01-signal-map/index.html#family-relationships">Groups and families</a><a data-signal-target="fluid" href="../01-signal-map/emotion/fluid.html">Fluid</a><a data-signal-target="chronic" href="../01-signal-map/emotion/chronic.html">Chronic</a><a data-signal-target="biology" href="../01-signal-map/grounding/neurochemistry.html">Biology and Neurochemistry</a><a data-signal-target="recovery" href="../01-signal-map/grounding/recruitment-persistence-and-recovery.html">Recruitment and recovery</a></div>
+  <a class="signal-depth__return" data-signal-return href="../01-signal-map/map.html" hidden>← Return to signal record</a>
+</nav></div>
 
   <div class="shell">
     <section class="hero" aria-labelledby="page-title">
@@ -128,8 +135,14 @@
     </div>
   </main>
 
+  <nav class="signal-depth" aria-label="Explore emotional information">
+  <p class="signal-depth__label">Emotions and Signal Map</p>
+  <div class="signal-depth__levels"><a data-signal-target="overview" href="../00-emotions-as-information/index.html">Emotions as Information</a><span aria-hidden="true">→</span><a data-signal-target="map" href="../01-signal-map/index.html">Signal Map</a><span aria-hidden="true">→</span><a data-signal-target="records" href="../01-signal-map/map.html" aria-current="page">Signal records</a></div>
+  <div class="signal-depth__detail"><span>Examine:</span><a data-signal-target="families" href="../01-signal-map/index.html#family-relationships">Groups and families</a><a data-signal-target="fluid" href="../01-signal-map/emotion/fluid.html">Fluid</a><a data-signal-target="chronic" href="../01-signal-map/emotion/chronic.html">Chronic</a><a data-signal-target="biology" href="../01-signal-map/grounding/neurochemistry.html">Biology and Neurochemistry</a><a data-signal-target="recovery" href="../01-signal-map/grounding/recruitment-persistence-and-recovery.html">Recruitment and recovery</a></div>
+  <a class="signal-depth__return" data-signal-return href="../01-signal-map/map.html" hidden>← Return to signal record</a>
+</nav>
   <footer data-site-footer></footer>
-  <script src="../assets/navigation.js"></script>
+  <script src="../assets/navigation.js?v=20260904-model2-menu"></script>
   <script src="data/signals.js"></script>
   <script>
     (function () {
@@ -148,6 +161,8 @@
       function load() {
         var s = { plane: "fluid", position: "A", signal: null };
         try { var raw = JSON.parse(localStorage.getItem(KEY)); if (raw) { if (raw.plane === "chronic") s.plane = "chronic"; if (POS.indexOf(raw.position) > -1) s.position = raw.position; } } catch (e) {}
+        var reading = new URLSearchParams(location.search).get('reading');
+        if (reading === 'fluid' || reading === 'chronic') s.plane = reading;
         var h = decodeURIComponent(location.hash.replace(/^#/, ""));
         if (h && D.signals[h]) s.signal = h;
         else if (h.indexOf("additional-") === 0) {
@@ -156,7 +171,12 @@
         }
         return s;
       }
-      function save() { try { localStorage.setItem(KEY, JSON.stringify({ plane: state.plane, position: state.position })); } catch (e) {} }
+      function save() {
+        try { localStorage.setItem(KEY, JSON.stringify({ plane: state.plane, position: state.position })); } catch (e) {}
+        var url = new URL(location.href);
+        url.searchParams.set('reading', state.plane);
+        history.replaceState(null, '', url.href);
+      }
       function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
       function famColour(id, group) { return group === "body" ? "var(--fam-body)" : (FAMCOL[id] || "var(--fam-additional)"); }
       function familyOf(id) {
@@ -265,6 +285,9 @@
 
       function render() {
         renderStructure(); renderRecord();
+        document.body.dataset.signalId = D.signals[state.signal] ? state.signal : '';
+        document.body.dataset.signalReading = D.signals[state.signal] && !D.signals[state.signal].chronic ? 'fluid' : state.plane;
+        window.dispatchEvent(new Event('signalcontextchange'));
       }
       function focusRecordTitle() {
         var title = document.querySelector("#record h2");
@@ -310,5 +333,6 @@
       if (state.signal) { focusRecordTitle(); document.getElementById("record").scrollIntoView({ behavior: "instant", block: "start" }); }
     })();
   </script>
+<script src="../assets/signal-depth.js?v=20260904-navigation"></script>
 </body>
 </html>

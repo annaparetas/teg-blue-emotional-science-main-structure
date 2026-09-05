@@ -25,7 +25,7 @@ Last updated: 4 September 2026.
 | 03 · Model 2 · Gradient | Approved name, positions, rules, Model 1 access boundary and revised Chronic access rows · working definitions | 26 Aug 2026 (name, positions, premise) · 4 Sept 2026 (Model 2 process recruitment separated from Model 1 access; Chronic access rows) | Other position-by-position definitions remain under owner review. Display names (Baseline, Strategic Management, Power Mobilisation, Shutdown; "Gradient Position"). Fluid–Chronic profile proposed, revision required. Regulation definition gate not passed. Return matrices unwritten. Depth and intermediate-layers pages to merge. **Correction flagged:** the 27 Aug summary labelled X and A↔B differently from every table; canon follows the tables. | Anna confirms the X / A↔B labels, then the Regulation Pass definition gate. |
 | 04 · Model 3 · ESC | Approved name, ownership, two-cycle architecture · working grounding | 23 Aug 2026 (canonical page, name) · 27 Aug 2026 (ESC is Model 3) | Anna to confirm the canon page. Expanded name (Emotional–Somatic–Cognitive–Logical Cycle) proposed, not adopted. Claim-level grounding of completion, carryover, Return and learning. Cycle page's boundary labels to move to the three levels. Core source pack unreconciled (archived). | Anna reads the canon page; then F4–F12. |
 | 05 · F1–F12 Frameworks | Approved as lenses · all twelve transferred (working) | 27 Aug 2026 (map) · 22 Aug 2026 (F1, F2 fifth pass; F3 second pass) · 21 Aug 2026 (F4–F12 first pass) · 3 Sept 2026 (F4–F12 transferred) | Anna to confirm the twelve canon pages. Source-level review of F1's timeline. Claim decomposition of F3's six families. Regulation thread across all twelve. F4–F12 remain at first pass in the Development Engine. | Anna reads F1–F3; then Model 3. |
-| 06 · Inner Compass · 4 Modes | Approved mapping, boundary, separation of mode from access and twelve band readings · working view | 24–25 Aug 2026 (mapping, boundary) · 3 Sept 2026 (mode as home position) · 4 Sept 2026 (access cannot infer mode; band readings) | Deferred by the decision: mixed-result presentation, visual grammar and palette, subtitle pair, release gate for public power findings, the three candidate names. The controls live on the Model 1 add-on; the Compass places their setting beside the mode read from Model 2 organisation. Open: the view's provisional colours and its both-planes treatment of "mixed or unknown". | Refine and test the mixed-or-unknown reading. |
+| 06 · Inner Compass · 4 Modes | Approved mapping, boundary, separation of mode from access and twelve band readings · working view | 24–25 Aug 2026 (mapping, boundary) · 3 Sept 2026 (mode as home position) · 4 Sept 2026 (access cannot infer mode; band readings) | Deferred by the decision: visual grammar and palette, subtitle pair, release gate for public power findings, the three candidate names. The controls live on the Model 1 add-on; the Compass places their setting beside the mode read from Model 2 organisation. The revised mixed-or-unknown presentation remains under Anna's review. | Anna reviews the explicit mixed-or-unknown result across several Positions. |
 | 07 · Reference | Approved references · working canon page | 23 Aug 2026 (behaviour page, sociality page) · 3 Sept 2026 (transferred) | Anna to confirm the canon page. Public Harm, Power and Repair page pending. Claim families in the HPR grounding not yet source-checked. |
 | Evidence · cross-cutting | Approved protocol · working canon page · pilots at first pass | 22 Aug 2026 (protocol) · 19 Aug 2026 (source record) · 3 Sept 2026 (transferred) | Anna to confirm the canon page. ESC core source pack unreconciled (with Model 3). Old claim IDs need a mapping to the concept folders. |
 
@@ -156,3 +156,20 @@ The six carried Model 2 HTML sources graduate to site ownership with Engine
 provenance retained. `03-model-2-gradient/SESSION-GUIDE.md` explains the reading
 order and source boundaries. Table wording is preserved; missing mechanisms,
 Return routes and evidence review remain open.
+
+
+## 2026-09-04 · Emotions menu and reading hierarchy
+
+The shared header groups Signal Map under Emotions. Seven pages now use the
+Model 2 navigation pattern: foundation → map → signal records, with a separate
+row for families, Fluid, Chronic, biology and recruitment and recovery. Links
+retain the selected signal and reading through deeper pages and back to the
+surface. Body-condition signals keep their Chronic-overview boundary.
+
+
+## 2026-09-04 · Model 2 header menu
+
+Model 2 now opens a dropdown listing its nine main and supporting HTML pages.
+The first group follows overview → original table → position records. The
+second opens the detailed explanations. On Model 2 pages the menu preserves
+selected position and reading through the existing shared navigation.

@@ -2,6 +2,18 @@
 
 Dated entries, newest first.
 
+## 2026-09-04 · Mixed or unknown becomes an explicit open reading
+
+The working Compass view now preserves what is known when the plane cannot be
+selected: the Position, its organisation label and the three ME access bands.
+It names what remains open, shows the Fluid and Chronic mode possibilities,
+and assigns neither. The two sets of Model 2 rows remain visible as a
+comparison, not as simultaneous answers.
+
+“Mixed or unknown” may mean the evidence points in both directions, the chosen
+time window contains a shift, or the information is incomplete. It is not a
+fifth plane or mode. This presentation remains under Anna's review.
+
 ## 2026-09-04 · Model 1 band readings shown beside Model 2 rows
 
 The Compass now keeps the two sources visible inside each relevant card. The

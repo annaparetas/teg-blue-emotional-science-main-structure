@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="The Inner Compass view: locate present organisation on the Gradient, read its mode, and place the ME access capacities beside it without inferring one from the other.">
   <title>Inner Compass · view · TEG-Blue</title>
-  <link rel="stylesheet" href="../assets/teg-blue.css">
+  <link rel="stylesheet" href="../assets/teg-blue.css?v=20260904-model2-menu">
   <style>
     .visit { margin: 0 0 8px; font: 750 12px/1.4 var(--utility); letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
     :root { --mode-connection: #10b8cc; --mode-protection: #e0b83a; --mode-control: #ef6a3a; --mode-dominance: #c43d83; --mode-none: #7e8aa0; }
@@ -53,9 +53,14 @@
     .group-label { margin: 26px 0 0; color: var(--ink); font: 800 11px/1.3 var(--utility); letter-spacing: .09em; text-transform: uppercase; }
     .group-note { margin: 4px 0 0; color: var(--muted); font-size: 12.5px; }
     .unknown-box { margin-top: 18px; padding: 22px 24px; background: #fff6e8; border: 1px solid #f2d09c; border-radius: 14px; }
-    .unknown-box ul { margin: 8px 0 0; padding-left: 20px; font-size: 14px; }
+    .unknown-box h3 { margin: 4px 0 14px; color: var(--ink); font-size: 19px; }
+    .unknown-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .unknown-grid > div { padding: 15px 16px; background: rgba(255,255,255,.72); border: 1px solid rgba(242,208,156,.8); border-radius: 10px; }
+    .unknown-grid strong { color: var(--ink); font-size: 13px; }
+    .unknown-box ul { margin: 8px 0 0; padding-left: 20px; font-size: 13.5px; line-height: 1.55; }
+    .unknown-why { margin: 14px 0 0; color: var(--body); font-size: 13.5px; line-height: 1.6; }
     @media (max-width: 980px) { .cards { grid-template-columns: 1fr 1fr; } .capacity-strip { grid-template-columns: 1fr; } }
-    @media (max-width: 660px) { .cards { grid-template-columns: 1fr; } .mode-labels { font-size: 9px; } }
+    @media (max-width: 660px) { .cards, .unknown-grid { grid-template-columns: 1fr; } .mode-labels { font-size: 9px; } }
   </style>
 </head>
 <body data-page="inner-compass" data-root="../">
@@ -130,6 +135,15 @@
           <p id="mode-visit" class="visit"></p>
           <p id="mode-meaning"></p>
         </div>
+        <div class="unknown-box" id="unknown-explanation" aria-live="polite" hidden>
+          <p class="section-label">Mixed or unknown reading</p>
+          <h3 id="unknown-title"></h3>
+          <div class="unknown-grid">
+            <div><strong>What remains known</strong><ul id="unknown-known"></ul></div>
+            <div><strong>What stays open</strong><ul id="unknown-open"></ul></div>
+          </div>
+          <p class="unknown-why" id="unknown-why"></p>
+        </div>
       </section>
 
       <section id="capacities" class="step">
@@ -162,7 +176,7 @@
   </main>
 
   <footer data-site-footer></footer>
-  <script src="../assets/navigation.js"></script>
+  <script src="../assets/navigation.js?v=20260904-model2-menu"></script>
   <script src="../assets/capacities.js"></script>
   <script src="data/readings.js"></script>
   <script>
@@ -179,7 +193,7 @@
         protection: { name: "Protection", colour: "var(--mode-protection)", meaning: "Organised around Position B, or protecting by one of its Chronic neighbours: elevated readiness, conditional belonging, repeated safety checking, collapse or conservation. Regulation has come to depend on protecting the self or preserving belonging. The pattern may still correspond to continuing adversity." },
         control: { name: "Control", colour: "var(--mode-control)", meaning: "Organised around Position C. Regulation has come to depend on sustained monitoring, certainty, strategy or management of conditions and outcomes. Chronic C alone does not establish manipulation, coercion, concealed intent or harm; whether another person's agency is constrained is a separate question." },
         dominance: { name: "Dominance", colour: "var(--mode-dominance)", meaning: "Organised around Position D. Regulation is organised as though maintaining asymmetric control over relevant others is the only functionally available route to stability, certainty or continuation. An internal orientation: not confidence, leadership, authority or personality, and it does not establish Domination." },
-        none: { name: "Mode not established", colour: "var(--mode-none)", meaning: "Mixed, partial and unknown readings are valid. Keep the four condition questions open: is the demand present, uncertain or mixed, changed, or not enough information? The Gradient rows can still be read below without assigning a mode." }
+        none: { name: "Mode not established", colour: "var(--mode-none)", meaning: "The Position remains selected, but the relationship between this organisation and present conditions is not yet clear enough to choose the Fluid or Chronic plane. The access reading remains separate and available." }
       };
       var CARDS = {
         fluid: [
@@ -243,7 +257,19 @@
         var visit = document.getElementById("mode-visit");
         if (state.plane === "fluid") visit.textContent = state.position === "A" ? "Organised around A and at home there." : "Organised around A · visiting " + VISIT[state.position] + " · returning.";
         else if (state.plane === "chronic") visit.textContent = "Stabilised at " + state.position + " · " + VISIT[state.position] + " · not returning.";
-        else visit.textContent = "Position " + state.position + " · " + VISIT[state.position] + " · visited or stabilised unknown.";
+        else visit.textContent = "Position " + state.position + " selected · whether it is visited or stabilised remains open.";
+
+        var unknown = document.getElementById("unknown-explanation");
+        if (state.plane === "unknown") {
+          var chronicMode = modeFor(state.position, "chronic");
+          unknown.hidden = false;
+          document.getElementById("unknown-title").textContent = "Position " + state.position + " is known. The plane is not.";
+          document.getElementById("unknown-known").innerHTML = "<li>The selected organisation coordinate is " + esc(state.position) + " · " + esc(meta[0]) + ".</li><li>The three ME access bands remain readable in Step 4.</li><li>The Fluid and Chronic rows can be compared below without treating either as the answer.</li>";
+          document.getElementById("unknown-open").innerHTML = "<li>Whether the organisation is still updating with present conditions.</li><li>Whether it is a position visited from Connection or a recurrent, stabilised home.</li><li>Whether the evidence is genuinely mixed, changes across the chosen time window, or is still incomplete.</li>";
+          document.getElementById("unknown-why").textContent = "If the plane is Fluid, the mode reading is Connection. If the plane is Chronic, the mode reading is " + MODES[chronicMode].name + ". Because the plane changes the mode, the Compass keeps both possibilities visible and assigns neither. Mixed or unknown is not a fifth mode.";
+        } else {
+          unknown.hidden = true;
+        }
 
         var strip = document.getElementById("capacity-strip");
         strip.innerHTML = C.KEYS.map(function (k) {
@@ -254,7 +280,7 @@
         var body = document.getElementById("reading-body"), plane = state.plane === "unknown" ? null : state.plane, idx = POS.indexOf(state.position), html = "";
         var planes = plane ? [plane] : ["fluid", "chronic"];
         planes.forEach(function (pl) {
-          if (!plane) html += '<p class="group-label" style="margin-top:32px">' + (pl === "fluid" ? "If Fluid" : "If Chronic") + '</p><p class="group-note">Both readings are shown because the plane is open.</p>';
+          if (!plane) html += '<p class="group-label" style="margin-top:32px">' + (pl === "fluid" ? "If present-responsive · Fluid" : "If recurrent or stabilised · Chronic") + '</p><p class="group-note">Comparison only. The open plane means this is not yet the selected reading.</p>';
           CARDS[pl].forEach(function (group) {
             html += '<p class="group-label">' + esc(group[0]) + '</p>' + (group[1] ? '<p class="group-note">' + esc(group[1]) + '</p>' : "") + '<div class="cards">';
             group[2].forEach(function (card) {
