@@ -2,6 +2,17 @@
 
 Dated entries, newest first.
 
+## 2026-09-04 · Model 1 band readings shown beside Model 2 rows
+
+The Compass now keeps the two sources visible inside each relevant card. The
+unchanged Model 2 row describes the process at the selected Position. Beneath
+it, a separate Model 1 reading describes what ME can currently read and use at
+the selected access band. Changing a dial changes only the Model 1 reading.
+
+The former opacity treatment is removed because it made the biological row
+look diminished when access was low. Anna approved the twelve Model 1
+readings on 4 September 2026.
+
 ## 2026-09-04 · Access is placed beside mode, never used to infer it
 
 Anna approved **ME access capacities** as Model 1's collective name and

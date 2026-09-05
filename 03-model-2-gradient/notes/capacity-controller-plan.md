@@ -2,7 +2,7 @@
 
 | Status | Owner | Date | Does not establish |
 | --- | --- | --- | --- |
-| Working plan · stage 1 built · Chronic-row boundary revised | 02 · Model 1 (controls) · 06 · Inner Compass (display) · 03 · Model 2 (territory) | 4 September 2026 | Any new cell text as approved content; every reading is owner content until Anna approves it. |
+| Stage 1 built · Chronic-row boundary and Stage 2 readings approved | 02 · Model 1 (controls) · 06 · Inner Compass (display) · 03 · Model 2 (territory) | 4 September 2026 | A mode, behaviour, diagnosis, concern or whole-person type. |
 
 Anna's plan, 2 September 2026, in two steps. First: Model 1 becomes the
 controller for the ME access capacities that used to sit as sliders on the
@@ -48,16 +48,13 @@ availability to ME and coordinated conscious access (bodily), affective
 sharing, mentalizing. Empathic concern is shown as a relational output, not
 inferred. Everything else is shown without a band.
 
-## Stage 2 · per-band readings (owner content)
+## Stage 2 · per-band readings (owner content) · approved
 
-The Fluid cell of an access row reads close to "broadly available" and the
-Chronic cell close to "narrowed". The next step is four readings per access
-card, one per band, so that moving a control changes what the card says,
-not only how bright it is. These readings belong to Model 1 as owner
-content and are displayed by the Compass; they do not enter Model 2's
-tables. Proposed order: write band 0 and band 3 from the existing Chronic
-and Fluid text; write bands 1 and 2 with the five reference layers of the
-intermediate-layers page as vocabulary; review with the nine-layer filter.
+Model 1 now supplies four readings for each of the three capacities, one per
+band. The same twelve readings appear beneath the controls and beside relevant
+Compass cards. They do not enter Model 2's tables or alter Model 2's words.
+The Gradient row remains fully visible at every band; the separate Model 1
+reading changes. Anna approved the twelve readings on 4 September 2026.
 
 ## Stage 3 · depth per capacity
 
@@ -75,7 +72,6 @@ evidence, none of which changes with access.
 
 ## Decisions still needed
 
-- Stage 2 readings.
 - Depth per capacity after the profile decision.
 
 ## Decisions settled 4 September 2026
@@ -98,5 +94,5 @@ assign an ME access band or configuration. The page now names this boundary
 before the Model 1 interface rows and in the grounding note. It also identifies
 process recruitment, rather than capacity access, as Model 2's territory.
 
-The row language remains working owner content. Anna still needs to confirm
-the seven position-by-position readings before they become approved text.
+Anna confirmed this specific Chronic-row revision on 4 September 2026. Other
+position-by-position definitions remain working Model 2 content.

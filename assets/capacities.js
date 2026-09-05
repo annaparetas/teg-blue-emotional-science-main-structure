@@ -21,6 +21,26 @@
     "Partly available and usable",
     "Broadly available to ME"
   ];
+  var READINGS = {
+    bodily: [
+      "Own feeling, need, limit and preference are not reliably readable. The body keeps regulating even when ME cannot use much of its information.",
+      "Fragments reach ME, such as tension, unease or urgency, without a clear reading of what they are about.",
+      "Much of one's own state is readable and partly usable, though quieter needs and limits may still be missed.",
+      "Own bodily and emotional information is broadly readable, differentiated and usable, including limits and needs."
+    ],
+    affective: [
+      "Another person's feeling is not reliably readable as affective resonance. ME may still detect or understand it in other ways.",
+      "Brief or unclear fragments of another person's feeling reach ME, but the resonance is difficult to recognise or use while self and other stay distinct.",
+      "Another person's feeling resonates and is partly usable while self and other mostly stay distinct.",
+      "Another person's feeling can resonate broadly while self and other remain distinct."
+    ],
+    mentalizing: [
+      "Another mind is not reliably represented. Their behaviour, movement or demand may be present without a usable understanding of their perspective.",
+      "Another person's perspective is guessed in fragments, or fixed in advance, without being checked reliably.",
+      "Another person's perspective can be represented and partly revised as new information arrives.",
+      "Another person's perspective, intention and feeling can be represented broadly and revised through new information."
+    ]
+  };
   var CONFIGS = {
     "000": "Relational unavailability",
     "001": "The mentalizing-only configuration",
@@ -85,7 +105,7 @@
 
   window.TEG = window.TEG || {};
   window.TEG.capacities = {
-    KEYS: KEYS, PARAMS: PARAMS, NAMES: NAMES, SHORT: SHORT, BANDS: BANDS, CONFIGS: CONFIGS, DEFAULT: DEFAULT,
+    KEYS: KEYS, PARAMS: PARAMS, NAMES: NAMES, SHORT: SHORT, BANDS: BANDS, READINGS: READINGS, CONFIGS: CONFIGS, DEFAULT: DEFAULT,
     get: get, set: set, reset: reset, code: code, link: link, subscribe: subscribe
   };
 })();

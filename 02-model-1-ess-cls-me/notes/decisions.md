@@ -3,6 +3,18 @@
 Dated entries, newest first. A decision recorded here changes a canon page
 only when the page is edited and its "last approved" date moves.
 
+## 2026-09-04 · Twelve band readings approved and connected to the Compass
+
+The three ME access capacities now each have four working readings: not
+reliably available, fragments readable, partly available and usable, and
+broadly available. Model 1 owns this set of twelve readings. The shared
+capacity file supplies the same words to the ME Access Dials and the Inner
+Compass, so the two pages cannot drift apart.
+
+Each reading describes what ME may currently notice and use. None assigns an
+organisation, plane, mode, conduct, concern or character. Anna approved the
+twelve readings on 4 September 2026.
+
 ## 2026-09-04 · Model 1 names and access boundaries settled
 
 Anna approved the following corrections after the Model 1 comparison with the

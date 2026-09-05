@@ -103,9 +103,9 @@
 
     <article class="article">
       <dl class="page-status" aria-label="Page status">
-        <div><dt>Status</dt><dd><span class="status-word status-word--approved">Approved</span> structure and boundaries · <span class="status-word status-word--working">Working</span> band and configuration readings</dd></div>
+        <div><dt>Status</dt><dd><span class="status-word status-word--approved">Approved</span> structure, boundaries and twelve band readings · <span class="status-word status-word--working">Working</span> configuration names and descriptions</dd></div>
         <div><dt>Owner</dt><dd><strong>02 · Model 1</strong>; the Inner Compass reads this setting, never sets it</dd></div>
-        <div><dt>Last approved</dt><dd>Built 3 September 2026 as the Model 1 add-on. On 4 September 2026 Anna approved ME access capacities as the collective name, four graded conceptual bands with eight binary landmarks, primary rather than exclusive processing relationships, and the boundary that an access configuration cannot assign, predict or tend toward a mode.</dd></div>
+        <div><dt>Last approved</dt><dd>Built 3 September 2026 as the Model 1 add-on. On 4 September 2026 Anna approved ME access capacities as the collective name, four graded conceptual bands with eight binary landmarks, primary rather than exclusive processing relationships, the twelve band readings, and the boundary that an access configuration cannot assign, predict or tend toward a mode.</dd></div>
         <div><dt>Does not establish</dt><dd>A score, a diagnosis, a personality, a Gradient Position or plane, empathic concern, or anything about a person other than the one setting the controls for their own reflection.</dd></div>
       </dl>
 
@@ -275,27 +275,6 @@
       var C = window.TEG.capacities;
       var controls = Array.prototype.slice.call(document.querySelectorAll(".control"));
 
-      var READINGS = {
-        bodily: [
-          "Own feeling, need, limit and preference are not reliably readable. The body keeps regulating without ME being able to use its information.",
-          "Fragments reach ME: tension, unease or urgency without a differentiated reading of what they are about.",
-          "Much of one's own state is readable and partly usable, though quieter needs and limits may still be missed.",
-          "Own bodily and emotional information is broadly readable, differentiated and usable, including limits and needs."
-        ],
-        affective: [
-          "Another person's feeling does not become readable within ME. It may be detected cognitively without resonating.",
-          "Another's feeling registers in fragments, or floods in without a clear sense of whose it is.",
-          "Another's feeling resonates and is partly usable while self and other mostly stay distinct.",
-          "Another's feeling can resonate broadly while self and other remain distinct."
-        ],
-        mentalizing: [
-          "Another mind is not represented. Only their behaviour, movement or demand is present.",
-          "Another's perspective is guessed in fragments, or fixed in advance, without being checked.",
-          "Another's perspective can be represented and partly revised as new information arrives.",
-          "Another's perspective, intention and feeling can be represented broadly and revised through new information."
-        ]
-      };
-
       var CARDS = {
         "000": { title: "Relational unavailability", kicker: "No reliable bodily access · no affective sharing · no mentalizing", systems: "No ME access capacity reliably available",
           description: "Neither one's own felt state nor the other person's felt or represented state is sufficiently available for relational participation.",
@@ -360,7 +339,7 @@
           el.dataset.band = band;
           el.querySelector("input").value = band;
           el.querySelector(".readout").textContent = C.BANDS[band];
-          el.querySelector(".reading").textContent = READINGS[k][band];
+          el.querySelector(".reading").textContent = C.READINGS[k][band];
         });
         document.getElementById("ess-reads").textContent = "Own state " + bandWord(state.bodily) + " · another's feeling " + bandWord(state.affective);
         document.getElementById("cls-reads").textContent = "Another's perspective " + bandWord(state.mentalizing);

@@ -13,9 +13,9 @@ shape the conditions in which access changes, but it does not assign an access
 band or configuration.
 
 The Chronic access cells now identify possible patterns rather than automatic
-results. The revision remains working content until Anna confirms the seven
-position-by-position readings. The detailed boundary is recorded in
-[capacity-controller-plan.md](capacity-controller-plan.md).
+results. Anna confirmed this specific row revision on 4 September 2026; the
+other position-by-position definitions remain working. The detailed boundary
+is recorded in [capacity-controller-plan.md](capacity-controller-plan.md).
 
 ## 2026-09-02 · The Gradient reads the Model 1 capacity controls
 

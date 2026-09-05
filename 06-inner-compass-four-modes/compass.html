@@ -42,9 +42,13 @@
     .rcard[data-band="2"] .band { color: #076170; background: #f4fbfd; border: 1px solid #bfeaf0; }
     .rcard[data-band="1"] .band { color: #79531a; background: #fff6e8; border: 1px solid #f2d09c; }
     .rcard[data-band="0"] .band { color: #5b6473; background: #f1f3f6; border: 1px solid #d8dde5; }
-    .rcard[data-band="2"] p { opacity: .85; }
-    .rcard[data-band="1"] p { opacity: .6; }
-    .rcard[data-band="0"] p { opacity: .38; }
+    .rcard .source-reading { color: var(--body); }
+    .access-reading { margin-top: 13px; padding: 11px 12px; border-left: 3px solid #bfeaf0; border-radius: 0 9px 9px 0; background: #f4fbfd; }
+    .access-reading strong { display: block; margin-bottom: 4px; color: var(--ink); font: 800 10px/1.3 var(--utility); letter-spacing: .06em; text-transform: uppercase; }
+    .access-reading p { color: var(--body); font-size: 12.5px; line-height: 1.5; }
+    .rcard[data-band="0"] .access-reading { border-color: #d8dde5; background: #f1f3f6; }
+    .rcard[data-band="1"] .access-reading { border-color: #f2d09c; background: #fff6e8; }
+    .rcard[data-band="3"] .access-reading { border-color: #10b8cc; background: #edfafd; }
     .rcard.wide { grid-column: 1 / -1; }
     .group-label { margin: 26px 0 0; color: var(--ink); font: 800 11px/1.3 var(--utility); letter-spacing: .09em; text-transform: uppercase; }
     .group-note { margin: 4px 0 0; color: var(--muted); font-size: 12.5px; }
@@ -86,9 +90,9 @@
 
     <article class="article">
       <dl class="page-status" aria-label="Page status">
-        <div><dt>Status</dt><dd><span class="status-word status-word--working">Working</span> · first Compass view</dd></div>
+        <div><dt>Status</dt><dd><span class="status-word status-word--working">Working</span> · first Compass view with twelve Model 1 band readings</dd></div>
         <div><dt>Owner</dt><dd><strong>06 · Inner Compass</strong>; reads Model 1's ME access capacities and Model 2's rows, owns neither</dd></div>
-        <div><dt>Last approved</dt><dd>The four-mode mapping and the two-plane rule, 24–25 August 2026. This view was built on 2 September 2026. On 4 September 2026 Anna confirmed that Model 1's ME access capacities are placed beside the mode and cannot assign, predict or tend toward it. Card text remains Model 2's canon rows, unchanged.</dd></div>
+        <div><dt>Last approved</dt><dd>The four-mode mapping and the two-plane rule, 24–25 August 2026. This view was built on 2 September 2026. On 4 September 2026 Anna confirmed that Model 1's ME access capacities are placed beside the mode and cannot assign, predict or tend toward it, and approved the twelve band readings. Card text remains Model 2's canon rows, unchanged.</dd></div>
         <div><dt>Does not establish</dt><dd>A person's type, diagnosis, morality, history, intent, or conduct. Domination is never read from a mode. Mixed and unknown readings are valid outputs.</dd></div>
       </dl>
 
@@ -137,8 +141,8 @@
 
       <section id="reading" class="step">
         <p class="section-label">Step 5 · the reading</p>
-        <h2>Model 2's rows for this position, read through your access.</h2>
-        <p class="lead">Each card is a row from the Gradient tables, in its own words. Cards about a process ME reads carry a band from Step 4 and fade when less of that process reaches ME. The biology in every card is unchanged by the band; what changes is how much of it is readable.</p>
+        <h2>Model 2's row beside what ME can read of it.</h2>
+        <p class="lead">Each card first shows the unchanged Model 2 row for this Position. Where a card connects to an ME access capacity, a separate Model 1 reading explains what is currently readable and usable. Changing an access band changes that reading, not the biological process or the Gradient Position.</p>
         <div id="reading-body"></div>
         <div class="boundary" style="margin-top:22px">
           <h3>Not on the Compass</h3>
@@ -180,12 +184,12 @@
       var CARDS = {
         fluid: [
           ["Conditions and organisation", null, [["Environmental conditions", "Conditions", null], ["Nervous system organisation", "Organisation", null], ["Summary", "Summary", null], ["Perception", "Perception", null], ["Time / tempo", "Time and tempo", null], ["Emotions", "Emotional foregrounding", null]]],
-          ["What ME can read", "Bands from Step 4. The process runs regardless; the band is how much of it reaches ME.", [["Coordinated conscious access", "Coordinated conscious access", "bodily"], ["Interoceptive processing", "Bodily information", "bodily"], ["Affective sharing", "Feeling another", "affective"], ["Mentalizing", "Reading another", "mentalizing"], ["Empathic concern", "Empathic concern", "concern"]]],
+          ["What ME can read", "Model 2 describes the process. Model 1 separately describes how much of it is readable and usable by ME.", [["Coordinated conscious access", "Coordinated conscious access", "bodily"], ["Interoceptive processing", "Bodily information", "bodily"], ["Affective sharing", "Feeling another", "affective"], ["Mentalizing", "Reading another", "mentalizing"], ["Empathic concern", "Empathic concern", "concern"]]],
           ["Movement", "Present availability only; completion and repair are separate questions.", [["Current availability for transition and Return", "Return availability", null], ["Availability for repair participation", "Repair participation", null]]]
         ],
         chronic: [
           ["Conditions and organisation", "The conditions row keeps the Fluid reference; under Chronic organisation the organisation and the present conditions may no longer match.", [["Environmental conditions", "Reference conditions", null], ["Nervous system organisation", "Organisation", null], ["Protective recruitment", "Protective recruitment", null], ["Information weighting", "Information weighting", null], ["ESS emotional signal formation", "Emotional signal formation", null]]],
-          ["What ME can read", "Bands from Step 4. The process runs regardless; the band is how much of it reaches ME.", [["Interoceptive processing", "Bodily information", "bodily"], ["Conscious availability to ME", "Conscious availability", "bodily"], ["Coordinated conscious access", "Coordinated conscious access", "bodily"], ["CLS contribution to interpretation", "Interpretation", null], ["Affective sharing", "Feeling another", "affective"], ["Mentalizing", "Reading another", "mentalizing"], ["Empathic concern", "Empathic concern", "concern"]]],
+          ["What ME can read", "Model 2 describes the process. Model 1 separately describes how much of it is readable and usable by ME.", [["Interoceptive processing", "Bodily information", "bodily"], ["Conscious availability to ME", "Conscious availability", "bodily"], ["Coordinated conscious access", "Coordinated conscious access", "bodily"], ["CLS contribution to interpretation", "Interpretation", null], ["Affective sharing", "Feeling another", "affective"], ["Mentalizing", "Reading another", "mentalizing"], ["Empathic concern", "Empathic concern", "concern"]]],
           ["Field and movement", "What present organisation makes available; it neither causes nor authorises conduct.", [["Action-readiness", "Action field", null], ["Possible ME participation", "Possible ME participation", null], ["Current organisation persistence", "Persistence and Return availability", null], ["Availability for repair participation", "Repair participation", null]]]
         ]
       };
@@ -255,10 +259,14 @@
             html += '<p class="group-label">' + esc(group[0]) + '</p>' + (group[1] ? '<p class="group-note">' + esc(group[1]) + '</p>' : "") + '<div class="cards">';
             group[2].forEach(function (card) {
               var cells = rowFor(pl, card[0]); if (!cells) return;
-              var text = cells[idx] || "", cap = card[2], attrs = "", badge = "";
+              var text = cells[idx] || "", cap = card[2], attrs = "", badge = "", accessReading = "";
               if (cap === "concern") { badge = '<span class="band" style="color:#5b6473;background:#f1f3f6;border:1px solid #d8dde5">Relational output · not inferred from the capacities</span>'; }
-              else if (cap) { attrs = ' data-band="' + caps[cap] + '"'; badge = '<span class="band">ME access · ' + esc(C.BANDS[caps[cap]]) + '</span>'; }
-              html += '<article class="rcard"' + attrs + '><span class="meta-label">' + esc(card[0]) + '</span><h4>' + esc(card[1]) + '</h4><p>' + esc(text) + '</p>' + badge + '</article>';
+              else if (cap) {
+                attrs = ' data-band="' + caps[cap] + '"';
+                badge = '<span class="band">ME access · ' + esc(C.BANDS[caps[cap]]) + '</span>';
+                accessReading = '<div class="access-reading"><strong>Model 1 · what ME can read</strong><p>' + esc(C.READINGS[cap][caps[cap]]) + '</p></div>';
+              }
+              html += '<article class="rcard"' + attrs + '><span class="meta-label">' + esc(card[0]) + '</span><h4>' + esc(card[1]) + '</h4><p class="source-reading">' + esc(text) + '</p>' + accessReading + badge + '</article>';
             });
             html += "</div>";
           });
