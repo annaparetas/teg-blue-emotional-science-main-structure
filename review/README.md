@@ -1,6 +1,6 @@
 # Dark cycle presentation review
 
-Status: local implementation for Anna’s review. Scientific content and approval dates are unchanged.
+Status: integrated locally after parent review on 5 September 2026. Scientific content and approval dates are unchanged.
 
 ## Review location
 
@@ -10,7 +10,7 @@ Status: local implementation for Anna’s review. Scientific content and approva
 - Preview: http://127.0.0.1:8876/ . The parent preview on port 8765 is untouched.
 - The app-assigned umbrella worktree did not exist. This is a worktree of the canonical **site** repository, not of the umbrella or the Engine.
 - The sibling Engine path is a symlink to the canonical Engine. The site preview resolves that mount without writing to it. No Engine files have been edited.
-- Nothing is merged, pushed or published. This worktree is under the temporary directory; retain it until review or create another worktree from the committed branch.
+- The design task completed without merging, pushing or publishing. Its worktree is under the temporary directory; the committed branch preserves the handoff. The parent integration is recorded below.
 
 ## Design decisions
 
@@ -151,3 +151,26 @@ separate review port 8876. These commands open isolated temporary browser profil
 | `evidence/protocol.html` | Shared dark presentation; desktop/mobile audited |
 | `foundations/index.html` | Shared dark presentation; desktop/mobile audited |
 | `index.html` | Shared dark presentation; desktop/mobile audited |
+
+
+## Parent review and local integration
+
+On 5 September 2026, the parent task reviewed design commit `e6a5ac8` against
+its base `c7a6700` and fast-forwarded the clean local site `main` to that commit.
+There were no conflicts or unrelated working changes. The canonical preview
+at `http://localhost:8765/` now serves the same presentation as the review preview.
+The Development Engine was not changed. No push or publication occurred.
+
+Independent checks passed: local links (164 HTML/Markdown files), generated
+Signal Map and Gradient records, 173 Engine connections, all 16 ownership
+entries, 11 Python regression tests, both JavaScript access/state suites and
+Git whitespace checks. A separate HTML comparison found no changes in visible
+source text, section IDs or link destinations across all 60 pre-existing pages.
+
+The parent inspected the Model 1 overview on desktop and the Gradient table and
+ME Access Dials at 390 pixels. The page width remained 390 pixels while the
+Gradient table retained readable columns in its scroll region. Keyboard operation
+opened the Model 2 menu and followed the table link. Independent dial edits from
+incoming values 1/2/3 remained 0/0/3 and arrived correctly in the Inner Compass.
+No browser console errors were recorded in these checks. The full design-task
+browser audit and its stated limits above remain part of the review record.

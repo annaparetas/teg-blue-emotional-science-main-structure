@@ -188,3 +188,18 @@ control layouts. Scientific wording, conceptual ownership, approval dates and
 historical snapshots are unchanged. The [review handoff](review/README.md) records
 coverage, screenshots, validation and remaining browser-verification limits.
 Presentation approval remains with Anna.
+
+
+## 5 September 2026 · Shared dark presentation integrated locally
+
+The parent task reviewed and integrated the requested ESC-based presentation.
+All 47 active pages use the shared dark design; 13 historical or compatibility
+pages retain their earlier presentation. A comparison against the previous site
+found no changes to visible source wording, section IDs or link destinations
+across its 60 HTML pages. The independent review passed local links, generated
+Signal Map and Gradient records, ownership, Engine connections, all 11 Python
+regressions and both JavaScript access/state suites. Browser checks confirmed
+the overview, keyboard dropdown, mobile Gradient table, editable dials and
+Compass settings. The [review record](review/README.md#parent-review-and-local-integration)
+records the scope and remaining browser limits. The usual local preview serves
+the new presentation. Nothing has been pushed or published.
