@@ -3,6 +3,21 @@
 Dated entries, newest first. A decision recorded here changes the canon page
 only when the page is edited and its "last approved" date moves.
 
+## 2026-09-04 · Make group, family and signal relationships explicit
+
+Anna approved the grouping explanation across both signal groups: five
+Body-condition families share internal regulatory problems; four Emotion
+families share relationships to significant conditions. The map now owns one
+rationale per family. Fluid, Chronic, biology, the interactive map and generated
+records connect each signal back to that rationale. Foundation, F1, glossary
+and session guide point to the same relationship.
+
+The four short Emotion-family descriptions now reflect the approved account
+of value and engagement, disruption, protective relevance and ordinary
+protection registered as insufficient. Membership is unchanged. Survival-Rage's
+boundary with protective organisation remains explicitly under review.
+The F1 family review remains a record of the proposal and its open questions.
+
 ## 2026-09-04 · Connected records for individual signals
 
 Anna approved one connecting record per signal, with consistent questions

@@ -3,6 +3,12 @@
 Dated entries, newest first. A decision recorded here changes the canon page
 only when the page is edited and its "last approved" date moves.
 
+## 2026-09-04 · Link the group–family–signal explanation
+
+Anna approved explicit links to the Signal Map's nine family rationales.
+This clarifies the reading relationship without assigning a family one survival
+function, chemistry or Gradient Position. Family membership is unchanged.
+
 ## 2026-09-04 · Shared depth navigation
 
 Anna approved a connected path from this foundation to the Emotion Map,

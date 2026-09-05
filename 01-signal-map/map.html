@@ -197,7 +197,7 @@
               var col = famColour(f.id, g.id);
               var line = g.id === "body" ? f.problem : f.relationship;
               var assoc = g.id === "emotion" ? '<p class="fam-assoc">Characteristic Fluid association · ' + esc(f.association) + "</p>" : "";
-              return '<div class="family" style="--fam:' + col + '"><h3><a href="' + esc(f.canon) + '">' + esc(f.name) + '</a></h3><p class="fam-line">' + esc(line) + "</p>" + assoc +
+              return '<div class="family" style="--fam:' + col + '"><h3><a href="' + esc(f.explanation) + '">' + esc(f.name) + '</a></h3><p class="fam-line">' + esc(line) + "</p>" + assoc +
                 '<ul class="signals">' + f.members.map(function (s) {
                   var sig = D.signals[s];
                   return '<li><button type="button" class="signal" data-signal="' + s + '" aria-controls="record" aria-pressed="' + (state.signal === s) + '">' + esc(sig.name) + "</button></li>";
@@ -231,7 +231,8 @@
         el.style.setProperty("--fam", col);
         var groupName = s.group === "body" ? "Body-condition signal" : "Emotion signal";
         var html = '<p class="eyebrow">' + esc(groupName) + " · " + esc(fam ? fam.name : "") + "</p><h2>" + esc(s.name) + "</h2>";
-        html += '<p class="where">Family: <a href="' + esc(fam.canon) + '">' + esc(fam.name) + "</a> · " + esc(s.group === "body" ? fam.problem : fam.relationship) + "</p>";
+        html += '<p class="where">Family: <a href="' + esc(fam.explanation) + '">' + esc(fam.name) + "</a> · " + esc(s.group === "body" ? fam.problem : fam.relationship) + "</p>";
+        html += '<p class="note"><strong>Why this family?</strong> ' + esc(s.family_rationale) + ' <a href="' + esc(s.family_explanation) + '">Follow the group–family–signal relationship</a></p>';
         html += '<p class="invariant">' + (s.group === "body" ? "Core condition information: " : "Identity holds across both readings: ") + esc(s.fluid.condition) + "</p>";
         html += '<section class="record-questions" aria-label="Function and regulation"><h3>Function and regulation</h3><p class="note">This connecting record brings the current explanations together and identifies what still needs a separate account. Working descriptions are not validated mechanisms.</p><dl class="fields">' + s.questions.map(function (q) {
           return '<div><dt>' + esc(q.question) + '</dt><dd>' + esc(q.answer) + '<small class="question-source">' + esc(q.status) + ' · <a href="' + esc(q.source) + '">Read the source</a></small></dd></div>';

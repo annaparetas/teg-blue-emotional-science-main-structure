@@ -13,6 +13,15 @@ that the process is absent.
 4. Read its Biology and Neurochemistry entry, including evidence status and limits. Family-level associations do not establish an individual emotion's mechanism.
 5. Consult the model owner only for the question that needs it. Record what is still unresolved before drafting a synthesis.
 
+## Follow group → family → signal
+
+Body-condition signals have five families, grouped by internal regulatory
+problem. Emotion signals have four families, grouped by the relationship to a
+significant condition. Read [why each family holds its members](index.html#family-relationships)
+before interpreting an individual signal. Each source row and biology entry
+links back to its family. The generated records carry that same rationale.
+Neither shared chemistry nor shared felt quality defines membership.
+
 ## Which page answers which question?
 
 | Question | Source and owner |

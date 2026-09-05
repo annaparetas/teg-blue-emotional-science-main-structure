@@ -77,7 +77,10 @@ condition. Starting question: what does this condition mean for the
 organism? Earlier name: Situation Signal (still used in the rosters).
 
 **Family** · Approved · 01. An organising layer between a signal group and an
-individual signal. Not a single neural or chemical system, not a sequence,
+individual signal. Body-condition families share an internal regulatory problem;
+emotion families share a relationship to a significant condition.
+[Follow the family explanations and members](01-signal-map/index.html#family-relationships).
+Not a single neural or chemical system, not a sequence,
 not a behavioural instruction.
 
 **Body-condition families** · Approved, provisional membership · 01.

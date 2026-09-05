@@ -136,3 +136,11 @@ signals, exact source links, working biological fields and unresolved accounts.
 Scientific gaps remain open; this completes the record interface, not the
 emotion-by-emotion evidence review. Regenerate the data and readable records
 with `python3 scripts/build-signal-map-data.py`.
+
+
+## 2026-09-04 · Group → family → signal
+
+The Signal Map now owns nine explicit family rationales. Source readings,
+biology, generated records, F1, the foundation and the session guide link to
+that shared explanation. All 35 members retain their existing family.
+Survival-Rage's boundary with present protective organisation remains open.

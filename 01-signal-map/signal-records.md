@@ -13,6 +13,12 @@ Group: body. Family: essential-supply.
 
 [Interactive record](map.html#breathlessness) · [Fluid reading](emotion/fluid.html#signal-breathlessness) · [Biology and Neurochemistry](grounding/neurochemistry.html#breathlessness)
 
+### Why this family?
+
+Breathlessness, thirst and hunger concern whether necessary inputs—breathable conditions, water and nourishment—meet the organism’s needs. Their shared regulatory problem does not make their physiology the same.
+
+[Group → family → signal](index.html#family-meaning-essential-supply)
+
 ### What does it register?
 
 Ventilation is not meeting the body’s current oxygen demand.
@@ -91,6 +97,12 @@ Status: Working synthesis · individual system · papers pending. [Source](groun
 Group: body. Family: bodily-integrity.
 
 [Interactive record](map.html#pain) · [Fluid reading](emotion/fluid.html#signal-pain) · [Biology and Neurochemistry](grounding/neurochemistry.html#pain)
+
+### Why this family?
+
+Pain concerns possible bodily harm or disruption and the relevance of protection. It is the current single member of this family; pain does not directly measure damage.
+
+[Group → family → signal](index.html#family-meaning-bodily-integrity)
 
 ### What does it register?
 
@@ -171,6 +183,12 @@ Group: body. Family: thermal-balance.
 
 [Interactive record](map.html#overheating) · [Fluid reading](emotion/fluid.html#signal-overheating) · [Biology and Neurochemistry](grounding/neurochemistry.html#overheating)
 
+### Why this family?
+
+Overheating and cold concern temperature conditions that make heat loss, conservation or production relevant. They share a regulatory problem while retaining different detection and response processes.
+
+[Group → family → signal](index.html#family-meaning-thermal-balance)
+
 ### What does it register?
 
 Body temperature is rising beyond its working range.
@@ -249,6 +267,12 @@ Status: Working synthesis · initial paper-level orientation complete. [Source](
 Group: body. Family: thermal-balance.
 
 [Interactive record](map.html#cold) · [Fluid reading](emotion/fluid.html#signal-cold) · [Biology and Neurochemistry](grounding/neurochemistry.html#cold)
+
+### Why this family?
+
+Overheating and cold concern temperature conditions that make heat loss, conservation or production relevant. They share a regulatory problem while retaining different detection and response processes.
+
+[Group → family → signal](index.html#family-meaning-thermal-balance)
 
 ### What does it register?
 
@@ -329,6 +353,12 @@ Group: body. Family: visceral-capacity.
 
 [Interactive record](map.html#needing-to-urinate) · [Fluid reading](emotion/fluid.html#signal-needing-to-urinate) · [Biology and Neurochemistry](grounding/neurochemistry.html#needing-to-urinate)
 
+### Why this family?
+
+The need to urinate and the need to empty the bowels concern filling, storage limits and opportunities for release. Bladder and bowel regulation remain distinct.
+
+[Group → family → signal](index.html#family-meaning-visceral-capacity)
+
 ### What does it register?
 
 The bladder is filling toward the limit it can hold.
@@ -407,6 +437,12 @@ Status: Working synthesis · initial paper-level orientation complete. [Source](
 Group: body. Family: essential-supply.
 
 [Interactive record](map.html#thirst) · [Fluid reading](emotion/fluid.html#signal-thirst) · [Biology and Neurochemistry](grounding/neurochemistry.html#thirst)
+
+### Why this family?
+
+Breathlessness, thirst and hunger concern whether necessary inputs—breathable conditions, water and nourishment—meet the organism’s needs. Their shared regulatory problem does not make their physiology the same.
+
+[Group → family → signal](index.html#family-meaning-essential-supply)
 
 ### What does it register?
 
@@ -487,6 +523,12 @@ Group: body. Family: visceral-capacity.
 
 [Interactive record](map.html#needing-to-empty-the-bowels) · [Fluid reading](emotion/fluid.html#signal-needing-to-empty-the-bowels) · [Biology and Neurochemistry](grounding/neurochemistry.html#needing-to-empty-the-bowels)
 
+### Why this family?
+
+The need to urinate and the need to empty the bowels concern filling, storage limits and opportunities for release. Bladder and bowel regulation remain distinct.
+
+[Group → family → signal](index.html#family-meaning-visceral-capacity)
+
 ### What does it register?
 
 Waste has collected and is ready to be passed.
@@ -565,6 +607,12 @@ Status: Working synthesis · initial paper-level orientation complete. [Source](
 Group: body. Family: essential-supply.
 
 [Interactive record](map.html#hunger) · [Fluid reading](emotion/fluid.html#signal-hunger) · [Biology and Neurochemistry](grounding/neurochemistry.html#hunger)
+
+### Why this family?
+
+Breathlessness, thirst and hunger concern whether necessary inputs—breathable conditions, water and nourishment—meet the organism’s needs. Their shared regulatory problem does not make their physiology the same.
+
+[Group → family → signal](index.html#family-meaning-essential-supply)
 
 ### What does it register?
 
@@ -645,6 +693,12 @@ Group: body. Family: restorative-capacity.
 
 [Interactive record](map.html#tiredness) · [Fluid reading](emotion/fluid.html#signal-tiredness) · [Biology and Neurochemistry](grounding/neurochemistry.html#tiredness)
 
+### Why this family?
+
+Tiredness concerns whether continuing demand remains workable or rest and recovery become relevant. It is the current single member of this family, not a direct measurement of one biological variable.
+
+[Group → family → signal](index.html#family-meaning-restorative-capacity)
+
 ### What does it register?
 
 Energy expenditure is exceeding restoration through rest and sleep.
@@ -723,6 +777,12 @@ Status: Working synthesis · initial paper-level orientation complete. [Source](
 Group: emotion. Family: belonging.
 
 [Interactive record](map.html#love) · [Fluid reading](emotion/fluid.html#signal-love) · [Biology and Neurochemistry](grounding/neurochemistry.html#love)
+
+### Why this family?
+
+Love, trust, gratitude, compassion and admiration concern valued relationships, welfare or qualities. Happiness, joy, pride and hope concern valued experiences, contributions or possibilities. They belong together because value makes care, reliance, appreciation, enjoyment or investment relevant. Compassion can concern suffering, hope an unrealised possibility, and love a bond without reciprocity; a favourable or secure situation is not required.
+
+[Group → family → signal](index.html#family-meaning-belonging)
 
 ### Deeper working analysis
 
@@ -821,6 +881,12 @@ Group: emotion. Family: belonging.
 
 [Interactive record](map.html#trust) · [Fluid reading](emotion/fluid.html#signal-trust) · [Biology and Neurochemistry](grounding/neurochemistry.html#trust)
 
+### Why this family?
+
+Love, trust, gratitude, compassion and admiration concern valued relationships, welfare or qualities. Happiness, joy, pride and hope concern valued experiences, contributions or possibilities. They belong together because value makes care, reliance, appreciation, enjoyment or investment relevant. Compassion can concern suffering, hope an unrealised possibility, and love a bond without reciprocity; a favourable or secure situation is not required.
+
+[Group → family → signal](index.html#family-meaning-belonging)
+
 ### What does it register?
 
 Reliance on a specific person appears safe enough for vulnerability or shared responsibility.
@@ -911,6 +977,12 @@ Vigilance may return and trust may narrow. Disappointment, fear, anger, a bounda
 Group: emotion. Family: belonging.
 
 [Interactive record](map.html#gratitude) · [Fluid reading](emotion/fluid.html#signal-gratitude) · [Biology and Neurochemistry](grounding/neurochemistry.html#gratitude)
+
+### Why this family?
+
+Love, trust, gratitude, compassion and admiration concern valued relationships, welfare or qualities. Happiness, joy, pride and hope concern valued experiences, contributions or possibilities. They belong together because value makes care, reliance, appreciation, enjoyment or investment relevant. Compassion can concern suffering, hope an unrealised possibility, and love a bond without reciprocity; a favourable or secure situation is not required.
+
+[Group → family → signal](index.html#family-meaning-belonging)
 
 ### What does it register?
 
@@ -1003,6 +1075,12 @@ Group: emotion. Family: belonging.
 
 [Interactive record](map.html#compassion) · [Fluid reading](emotion/fluid.html#signal-compassion) · [Biology and Neurochemistry](grounding/neurochemistry.html#compassion)
 
+### Why this family?
+
+Love, trust, gratitude, compassion and admiration concern valued relationships, welfare or qualities. Happiness, joy, pride and hope concern valued experiences, contributions or possibilities. They belong together because value makes care, reliance, appreciation, enjoyment or investment relevant. Compassion can concern suffering, hope an unrealised possibility, and love a bond without reciprocity; a favourable or secure situation is not required.
+
+[Group → family → signal](index.html#family-meaning-belonging)
+
 ### What does it register?
 
 Another person is suffering and their wellbeing matters.
@@ -1093,6 +1171,12 @@ Compassion may remain without becoming action. When care is refused or unavailab
 Group: emotion. Family: belonging.
 
 [Interactive record](map.html#admiration) · [Fluid reading](emotion/fluid.html#signal-admiration) · [Biology and Neurochemistry](grounding/neurochemistry.html#admiration)
+
+### Why this family?
+
+Love, trust, gratitude, compassion and admiration concern valued relationships, welfare or qualities. Happiness, joy, pride and hope concern valued experiences, contributions or possibilities. They belong together because value makes care, reliance, appreciation, enjoyment or investment relevant. Compassion can concern suffering, hope an unrealised possibility, and love a bond without reciprocity; a favourable or secure situation is not required.
+
+[Group → family → signal](index.html#family-meaning-belonging)
 
 ### What does it register?
 
@@ -1185,6 +1269,12 @@ Group: emotion. Family: belonging.
 
 [Interactive record](map.html#happiness) · [Fluid reading](emotion/fluid.html#signal-happiness) · [Biology and Neurochemistry](grounding/neurochemistry.html#happiness)
 
+### Why this family?
+
+Love, trust, gratitude, compassion and admiration concern valued relationships, welfare or qualities. Happiness, joy, pride and hope concern valued experiences, contributions or possibilities. They belong together because value makes care, reliance, appreciation, enjoyment or investment relevant. Compassion can concern suffering, hope an unrealised possibility, and love a bond without reciprocity; a favourable or secure situation is not required.
+
+[Group → family → signal](index.html#family-meaning-belonging)
+
 ### What does it register?
 
 The present experience supports pleasure, nourishment, fit, or wellbeing.
@@ -1275,6 +1365,12 @@ The experience may pass unnoticed or be interrupted when attention and capacity 
 Group: emotion. Family: belonging.
 
 [Interactive record](map.html#joy) · [Fluid reading](emotion/fluid.html#signal-joy) · [Biology and Neurochemistry](grounding/neurochemistry.html#joy)
+
+### Why this family?
+
+Love, trust, gratitude, compassion and admiration concern valued relationships, welfare or qualities. Happiness, joy, pride and hope concern valued experiences, contributions or possibilities. They belong together because value makes care, reliance, appreciation, enjoyment or investment relevant. Compassion can concern suffering, hope an unrealised possibility, and love a bond without reciprocity; a favourable or secure situation is not required.
+
+[Group → family → signal](index.html#family-meaning-belonging)
 
 ### What does it register?
 
@@ -1367,6 +1463,12 @@ Group: emotion. Family: belonging.
 
 [Interactive record](map.html#pride) · [Fluid reading](emotion/fluid.html#signal-pride) · [Biology and Neurochemistry](grounding/neurochemistry.html#pride)
 
+### Why this family?
+
+Love, trust, gratitude, compassion and admiration concern valued relationships, welfare or qualities. Happiness, joy, pride and hope concern valued experiences, contributions or possibilities. They belong together because value makes care, reliance, appreciation, enjoyment or investment relevant. Compassion can concern suffering, hope an unrealised possibility, and love a bond without reciprocity; a favourable or secure situation is not required.
+
+[Group → family → signal](index.html#family-meaning-belonging)
+
 ### What does it register?
 
 An effort, achievement, contribution, expression of integrity, or shared identity has value.
@@ -1457,6 +1559,12 @@ The achievement or contribution can remain real without recognition. Where recog
 Group: emotion. Family: belonging.
 
 [Interactive record](map.html#hope) · [Fluid reading](emotion/fluid.html#signal-hope) · [Biology and Neurochemistry](grounding/neurochemistry.html#hope)
+
+### Why this family?
+
+Love, trust, gratitude, compassion and admiration concern valued relationships, welfare or qualities. Happiness, joy, pride and hope concern valued experiences, contributions or possibilities. They belong together because value makes care, reliance, appreciation, enjoyment or investment relevant. Compassion can concern suffering, hope an unrealised possibility, and love a bond without reciprocity; a favourable or secure situation is not required.
+
+[Group → family → signal](index.html#family-meaning-belonging)
 
 ### What does it register?
 
@@ -1549,6 +1657,12 @@ Group: emotion. Family: belonging-at-risk.
 
 [Interactive record](map.html#shame) · [Fluid reading](emotion/fluid.html#signal-shame) · [Biology and Neurochemistry](grounding/neurochemistry.html#shame)
 
+### Why this family?
+
+Shame and guilt concern standing or possible harm; loneliness concerns missing connection; disappointment an unmet expectation; sadness and grief absence or loss; confusion conflicting information; frustration obstruction; anxiety possible disruption; and stress demand pressing against capacity. Their shared relationship is disruption affecting something that matters. It extends beyond social belonging and includes losses that cannot be restored.
+
+[Group → family → signal](index.html#family-meaning-belonging-at-risk)
+
 ### What does it register?
 
 Belonging, standing, or the acceptable self may be at risk.
@@ -1639,6 +1753,12 @@ Shame may remain prominent while exposure, rejection, or uncertainty continues. 
 Group: emotion. Family: belonging-at-risk.
 
 [Interactive record](map.html#guilt) · [Fluid reading](emotion/fluid.html#signal-guilt) · [Biology and Neurochemistry](grounding/neurochemistry.html#guilt)
+
+### Why this family?
+
+Shame and guilt concern standing or possible harm; loneliness concerns missing connection; disappointment an unmet expectation; sadness and grief absence or loss; confusion conflicting information; frustration obstruction; anxiety possible disruption; and stress demand pressing against capacity. Their shared relationship is disruption affecting something that matters. It extends beyond social belonging and includes losses that cannot be restored.
+
+[Group → family → signal](index.html#family-meaning-belonging-at-risk)
 
 ### What does it register?
 
@@ -1731,6 +1851,12 @@ Group: emotion. Family: belonging-at-risk.
 
 [Interactive record](map.html#loneliness) · [Fluid reading](emotion/fluid.html#signal-loneliness) · [Biology and Neurochemistry](grounding/neurochemistry.html#loneliness)
 
+### Why this family?
+
+Shame and guilt concern standing or possible harm; loneliness concerns missing connection; disappointment an unmet expectation; sadness and grief absence or loss; confusion conflicting information; frustration obstruction; anxiety possible disruption; and stress demand pressing against capacity. Their shared relationship is disruption affecting something that matters. It extends beyond social belonging and includes losses that cannot be restored.
+
+[Group → family → signal](index.html#family-meaning-belonging-at-risk)
+
 ### What does it register?
 
 Needed connection, witness, or belonging is missing.
@@ -1821,6 +1947,12 @@ Loneliness may remain prominent while sadness or anxiety also becomes relevant. 
 Group: emotion. Family: belonging-at-risk.
 
 [Interactive record](map.html#disappointment) · [Fluid reading](emotion/fluid.html#signal-disappointment) · [Biology and Neurochemistry](grounding/neurochemistry.html#disappointment)
+
+### Why this family?
+
+Shame and guilt concern standing or possible harm; loneliness concerns missing connection; disappointment an unmet expectation; sadness and grief absence or loss; confusion conflicting information; frustration obstruction; anxiety possible disruption; and stress demand pressing against capacity. Their shared relationship is disruption affecting something that matters. It extends beyond social belonging and includes losses that cannot be restored.
+
+[Group → family → signal](index.html#family-meaning-belonging-at-risk)
 
 ### What does it register?
 
@@ -1913,6 +2045,12 @@ Group: emotion. Family: belonging-at-risk.
 
 [Interactive record](map.html#sadness) · [Fluid reading](emotion/fluid.html#signal-sadness) · [Biology and Neurochemistry](grounding/neurochemistry.html#sadness)
 
+### Why this family?
+
+Shame and guilt concern standing or possible harm; loneliness concerns missing connection; disappointment an unmet expectation; sadness and grief absence or loss; confusion conflicting information; frustration obstruction; anxiety possible disruption; and stress demand pressing against capacity. Their shared relationship is disruption affecting something that matters. It extends beyond social belonging and includes losses that cannot be restored.
+
+[Group → family → signal](index.html#family-meaning-belonging-at-risk)
+
 ### What does it register?
 
 A needed person, bond, support, or possibility is absent, lost, or was never available.
@@ -2003,6 +2141,12 @@ Sadness may remain or return while loneliness or grief also becomes relevant. Wi
 Group: emotion. Family: belonging-at-risk.
 
 [Interactive record](map.html#grief) · [Fluid reading](emotion/fluid.html#signal-grief) · [Biology and Neurochemistry](grounding/neurochemistry.html#grief)
+
+### Why this family?
+
+Shame and guilt concern standing or possible harm; loneliness concerns missing connection; disappointment an unmet expectation; sadness and grief absence or loss; confusion conflicting information; frustration obstruction; anxiety possible disruption; and stress demand pressing against capacity. Their shared relationship is disruption affecting something that matters. It extends beyond social belonging and includes losses that cannot be restored.
+
+[Group → family → signal](index.html#family-meaning-belonging-at-risk)
 
 ### What does it register?
 
@@ -2095,6 +2239,12 @@ Group: emotion. Family: belonging-at-risk.
 
 [Interactive record](map.html#confusion) · [Fluid reading](emotion/fluid.html#signal-confusion) · [Biology and Neurochemistry](grounding/neurochemistry.html#confusion)
 
+### Why this family?
+
+Shame and guilt concern standing or possible harm; loneliness concerns missing connection; disappointment an unmet expectation; sadness and grief absence or loss; confusion conflicting information; frustration obstruction; anxiety possible disruption; and stress demand pressing against capacity. Their shared relationship is disruption affecting something that matters. It extends beyond social belonging and includes losses that cannot be restored.
+
+[Group → family → signal](index.html#family-meaning-belonging-at-risk)
+
 ### What does it register?
 
 Available information conflicts with the current understanding of the situation.
@@ -2185,6 +2335,12 @@ Confusion may remain prominent while scanning or pausing continues. Anxiety or s
 Group: emotion. Family: belonging-at-risk.
 
 [Interactive record](map.html#frustration) · [Fluid reading](emotion/fluid.html#signal-frustration) · [Biology and Neurochemistry](grounding/neurochemistry.html#frustration)
+
+### Why this family?
+
+Shame and guilt concern standing or possible harm; loneliness concerns missing connection; disappointment an unmet expectation; sadness and grief absence or loss; confusion conflicting information; frustration obstruction; anxiety possible disruption; and stress demand pressing against capacity. Their shared relationship is disruption affecting something that matters. It extends beyond social belonging and includes losses that cannot be restored.
+
+[Group → family → signal](index.html#family-meaning-belonging-at-risk)
 
 ### What does it register?
 
@@ -2277,6 +2433,12 @@ Group: emotion. Family: belonging-at-risk.
 
 [Interactive record](map.html#anxiety) · [Fluid reading](emotion/fluid.html#signal-anxiety) · [Biology and Neurochemistry](grounding/neurochemistry.html#anxiety)
 
+### Why this family?
+
+Shame and guilt concern standing or possible harm; loneliness concerns missing connection; disappointment an unmet expectation; sadness and grief absence or loss; confusion conflicting information; frustration obstruction; anxiety possible disruption; and stress demand pressing against capacity. Their shared relationship is disruption affecting something that matters. It extends beyond social belonging and includes losses that cannot be restored.
+
+[Group → family → signal](index.html#family-meaning-belonging-at-risk)
+
 ### What does it register?
 
 Rupture, loss, exposure, or instability may be approaching.
@@ -2367,6 +2529,12 @@ Anxiety may remain prominent while scanning, reassurance-seeking, or avoidance b
 Group: emotion. Family: belonging-at-risk.
 
 [Interactive record](map.html#stress) · [Fluid reading](emotion/fluid.html#signal-stress) · [Biology and Neurochemistry](grounding/neurochemistry.html#stress)
+
+### Why this family?
+
+Shame and guilt concern standing or possible harm; loneliness concerns missing connection; disappointment an unmet expectation; sadness and grief absence or loss; confusion conflicting information; frustration obstruction; anxiety possible disruption; and stress demand pressing against capacity. Their shared relationship is disruption affecting something that matters. It extends beyond social belonging and includes losses that cannot be restored.
+
+[Group → family → signal](index.html#family-meaning-belonging-at-risk)
 
 ### What does it register?
 
@@ -2459,6 +2627,12 @@ Group: emotion. Family: threat-protection.
 
 [Interactive record](map.html#fear) · [Fluid reading](emotion/fluid.html#signal-fear) · [Biology and Neurochemistry](grounding/neurochemistry.html#fear)
 
+### Why this family?
+
+Fear, anger, disgust and suspicion concern different forms of possible harm, violation, contamination or concealed threat. They belong together because a condition or possible source makes protection, checking, distance or resistance relevant. Feeling the signal does not establish that the perceived threat is accurate or that a particular action is warranted.
+
+[Group → family → signal](index.html#family-meaning-threat-protection)
+
 ### What does it register?
 
 The organism detects a possible source of harm in the present environment.
@@ -2549,6 +2723,12 @@ Fear may remain prominent while escape, resistance, or stillness becomes availab
 Group: emotion. Family: threat-protection.
 
 [Interactive record](map.html#anger) · [Fluid reading](emotion/fluid.html#signal-anger) · [Biology and Neurochemistry](grounding/neurochemistry.html#anger)
+
+### Why this family?
+
+Fear, anger, disgust and suspicion concern different forms of possible harm, violation, contamination or concealed threat. They belong together because a condition or possible source makes protection, checking, distance or resistance relevant. Feeling the signal does not establish that the perceived threat is accurate or that a particular action is warranted.
+
+[Group → family → signal](index.html#family-meaning-threat-protection)
 
 ### What does it register?
 
@@ -2641,6 +2821,12 @@ Group: emotion. Family: threat-protection.
 
 [Interactive record](map.html#disgust) · [Fluid reading](emotion/fluid.html#signal-disgust) · [Biology and Neurochemistry](grounding/neurochemistry.html#disgust)
 
+### Why this family?
+
+Fear, anger, disgust and suspicion concern different forms of possible harm, violation, contamination or concealed threat. They belong together because a condition or possible source makes protection, checking, distance or resistance relevant. Feeling the signal does not establish that the perceived threat is accurate or that a particular action is warranted.
+
+[Group → family → signal](index.html#family-meaning-threat-protection)
+
 ### What does it register?
 
 A substance, person, act, or proximity may be contaminating, degrading, or unsafe.
@@ -2731,6 +2917,12 @@ Disgust may remain prominent while recoil, nausea, avoidance, or vigilance conti
 Group: emotion. Family: threat-protection.
 
 [Interactive record](map.html#suspicion) · [Fluid reading](emotion/fluid.html#signal-suspicion) · [Biology and Neurochemistry](grounding/neurochemistry.html#suspicion)
+
+### Why this family?
+
+Fear, anger, disgust and suspicion concern different forms of possible harm, violation, contamination or concealed threat. They belong together because a condition or possible source makes protection, checking, distance or resistance relevant. Feeling the signal does not establish that the perceived threat is accurate or that a particular action is warranted.
+
+[Group → family → signal](index.html#family-meaning-threat-protection)
 
 ### What does it register?
 
@@ -2823,6 +3015,12 @@ Group: emotion. Family: survival-rage.
 
 [Interactive record](map.html#rage) · [Fluid reading](emotion/fluid.html#signal-rage) · [Biology and Neurochemistry](grounding/neurochemistry.html#rage)
 
+### Why this family?
+
+The current model groups rage, fury and frenzy around different forms of urgent mobilisation when ordinary protection is registered as insufficient or blocked. This does not establish objective life threat or simply mean more intense anger. The boundary between a distinct signal family and a change in protective organisation remains under review with Model 2.
+
+[Group → family → signal](index.html#family-meaning-survival-rage)
+
 ### What does it register?
 
 Survival is at stake and ordinary defence is not enough.
@@ -2914,6 +3112,12 @@ Group: emotion. Family: survival-rage.
 
 [Interactive record](map.html#fury) · [Fluid reading](emotion/fluid.html#signal-fury) · [Biology and Neurochemistry](grounding/neurochemistry.html#fury)
 
+### Why this family?
+
+The current model groups rage, fury and frenzy around different forms of urgent mobilisation when ordinary protection is registered as insufficient or blocked. This does not establish objective life threat or simply mean more intense anger. The boundary between a distinct signal family and a change in protective organisation remains under review with Model 2.
+
+[Group → family → signal](index.html#family-meaning-survival-rage)
+
 ### What does it register?
 
 The danger continues and has a perceived source.
@@ -3004,6 +3208,12 @@ The perceived source of danger may remain central while fury stays prominent or 
 Group: emotion. Family: survival-rage.
 
 [Interactive record](map.html#frenzy) · [Fluid reading](emotion/fluid.html#signal-frenzy) · [Biology and Neurochemistry](grounding/neurochemistry.html#frenzy)
+
+### Why this family?
+
+The current model groups rage, fury and frenzy around different forms of urgent mobilisation when ordinary protection is registered as insufficient or blocked. This does not establish objective life threat or simply mean more intense anger. The boundary between a distinct signal family and a change in protective organisation remains under review with Model 2.
+
+[Group → family → signal](index.html#family-meaning-survival-rage)
 
 ### What does it register?
 

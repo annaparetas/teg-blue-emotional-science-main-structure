@@ -36,7 +36,9 @@ window.TEG_SIGNALS = {
       "breathlessness",
       "thirst",
       "hunger"
-     ]
+     ],
+     "rationale": "Breathlessness, thirst and hunger concern whether necessary inputs—breathable conditions, water and nourishment—meet the organism’s needs. Their shared regulatory problem does not make their physiology the same.",
+     "explanation": "index.html#family-meaning-essential-supply"
     },
     {
      "id": "bodily-integrity",
@@ -47,7 +49,9 @@ window.TEG_SIGNALS = {
      "canon": "index.html#bodily-integrity",
      "members": [
       "pain"
-     ]
+     ],
+     "rationale": "Pain concerns possible bodily harm or disruption and the relevance of protection. It is the current single member of this family; pain does not directly measure damage.",
+     "explanation": "index.html#family-meaning-bodily-integrity"
     },
     {
      "id": "thermal-balance",
@@ -59,7 +63,9 @@ window.TEG_SIGNALS = {
      "members": [
       "overheating",
       "cold"
-     ]
+     ],
+     "rationale": "Overheating and cold concern temperature conditions that make heat loss, conservation or production relevant. They share a regulatory problem while retaining different detection and response processes.",
+     "explanation": "index.html#family-meaning-thermal-balance"
     },
     {
      "id": "visceral-capacity",
@@ -71,7 +77,9 @@ window.TEG_SIGNALS = {
      "members": [
       "needing-to-urinate",
       "needing-to-empty-the-bowels"
-     ]
+     ],
+     "rationale": "The need to urinate and the need to empty the bowels concern filling, storage limits and opportunities for release. Bladder and bowel regulation remain distinct.",
+     "explanation": "index.html#family-meaning-visceral-capacity"
     },
     {
      "id": "restorative-capacity",
@@ -82,7 +90,9 @@ window.TEG_SIGNALS = {
      "canon": "index.html#restorative-capacity",
      "members": [
       "tiredness"
-     ]
+     ],
+     "rationale": "Tiredness concerns whether continuing demand remains workable or rest and recovery become relevant. It is the current single member of this family, not a direct measurement of one biological variable.",
+     "explanation": "index.html#family-meaning-restorative-capacity"
     }
    ]
   },
@@ -94,7 +104,7 @@ window.TEG_SIGNALS = {
     {
      "id": "belonging",
      "name": "Belonging",
-     "relationship": "Something valued is sufficiently available and participation is viable.",
+     "relationship": "Value and possibilities for engagement: someone or something matters in a way that supports care, reliance, appreciation, enjoyment or investment.",
      "members_text": "Love, trust, gratitude, compassion, admiration, happiness, joy, pride and hope",
      "status": "Fluid and Chronic readings complete · individual pages pending",
      "canon": "index.html#belonging",
@@ -110,12 +120,14 @@ window.TEG_SIGNALS = {
       "hope"
      ],
      "association": "Position A · connection and wider participation may make these signals especially readable and usable; the association is not exclusive.",
-     "survival_function": "Connection-preservation and participation in favourable conditions."
+     "survival_function": "Connection-preservation and participation in favourable conditions.",
+     "rationale": "Love, trust, gratitude, compassion and admiration concern valued relationships, welfare or qualities. Happiness, joy, pride and hope concern valued experiences, contributions or possibilities. They belong together because value makes care, reliance, appreciation, enjoyment or investment relevant. Compassion can concern suffering, hope an unrealised possibility, and love a bond without reciprocity; a favourable or secure situation is not required.",
+     "explanation": "index.html#family-meaning-belonging"
     },
     {
      "id": "belonging-at-risk",
      "name": "Belonging-at-Risk",
-     "relationship": "Safety, belonging, support, standing or another valued condition is uncertain, disrupted, obstructed, lost or unavailable.",
+     "relationship": "Disruption affecting something that matters: uncertainty, missing connection, loss, conflicting information, obstruction or demand pressing against capacity.",
      "members_text": "Shame, guilt, loneliness, disappointment, sadness, grief, confusion, frustration, anxiety and stress",
      "status": "Fluid and Chronic readings complete · individual pages pending",
      "canon": "index.html#belonging-at-risk",
@@ -132,12 +144,14 @@ window.TEG_SIGNALS = {
       "stress"
      ],
      "association": "Position A↔B · checking what changed may foreground these signals; no one signal proves the Position.",
-     "survival_function": "Connection-preservation ↔ organism-protection."
+     "survival_function": "Connection-preservation ↔ organism-protection.",
+     "rationale": "Shame and guilt concern standing or possible harm; loneliness concerns missing connection; disappointment an unmet expectation; sadness and grief absence or loss; confusion conflicting information; frustration obstruction; anxiety possible disruption; and stress demand pressing against capacity. Their shared relationship is disruption affecting something that matters. It extends beyond social belonging and includes losses that cannot be restored.",
+     "explanation": "index.html#family-meaning-belonging-at-risk"
     },
     {
      "id": "threat-protection",
      "name": "Threat-Protection",
-     "relationship": "A specific danger, violation, contaminating condition or possible source of harm becomes relevant to protection.",
+     "relationship": "Conditions or possible sources that make protection relevant: harm, violation, contamination or concealed threat.",
      "members_text": "Fear, anger, disgust and suspicion",
      "status": "Fluid and Chronic readings complete · individual pages pending",
      "canon": "index.html#threat-protection",
@@ -148,12 +162,14 @@ window.TEG_SIGNALS = {
       "suspicion"
      ],
      "association": "Position B · protective prioritisation may foreground these signals; the family is not confined to B.",
-     "survival_function": "Organism-protection."
+     "survival_function": "Organism-protection.",
+     "rationale": "Fear, anger, disgust and suspicion concern different forms of possible harm, violation, contamination or concealed threat. They belong together because a condition or possible source makes protection, checking, distance or resistance relevant. Feeling the signal does not establish that the perceived threat is accurate or that a particular action is warranted.",
+     "explanation": "index.html#family-meaning-threat-protection"
     },
     {
      "id": "survival-rage",
      "name": "Survival-Rage",
-     "relationship": "Ordinary protection is registered as insufficient and maximum-force mobilisation becomes relevant.",
+     "relationship": "Ordinary protection is registered as insufficient or blocked, with urgent mobilisation becoming prominent.",
      "members_text": "Rage, fury and frenzy",
      "status": "Fluid and Chronic readings complete · individual pages pending",
      "canon": "index.html#survival-rage",
@@ -163,7 +179,9 @@ window.TEG_SIGNALS = {
       "frenzy"
      ],
      "association": "Position D · maximum force or movement may be foregrounded; neither the emotion nor association proves objective life threat.",
-     "survival_function": "Maximum organism-protection and survival action."
+     "survival_function": "Maximum organism-protection and survival action.",
+     "rationale": "The current model groups rage, fury and frenzy around different forms of urgent mobilisation when ordinary protection is registered as insufficient or blocked. This does not establish objective life threat or simply mean more intense anger. The boundary between a distinct signal family and a change in protective organisation remains under review with Model 2.",
+     "explanation": "index.html#family-meaning-survival-rage"
     }
    ]
   }
@@ -184,6 +202,8 @@ window.TEG_SIGNALS = {
    "grounding": "grounding/neurochemistry.html#breathlessness",
    "grounding_status": "Working synthesis · individual system · papers pending",
    "family": "essential-supply",
+   "family_rationale": "Breathlessness, thirst and hunger concern whether necessary inputs—breathable conditions, water and nourishment—meet the organism’s needs. Their shared regulatory problem does not make their physiology the same.",
+   "family_explanation": "index.html#family-meaning-essential-supply",
    "questions": [
     {
      "question": "What does it register?",
@@ -263,6 +283,8 @@ window.TEG_SIGNALS = {
    "grounding": "grounding/neurochemistry.html#pain",
    "grounding_status": "Working synthesis · individual system · papers pending",
    "family": "bodily-integrity",
+   "family_rationale": "Pain concerns possible bodily harm or disruption and the relevance of protection. It is the current single member of this family; pain does not directly measure damage.",
+   "family_explanation": "index.html#family-meaning-bodily-integrity",
    "questions": [
     {
      "question": "What does it register?",
@@ -342,6 +364,8 @@ window.TEG_SIGNALS = {
    "grounding": "grounding/neurochemistry.html#overheating",
    "grounding_status": "Working synthesis · initial paper-level orientation complete",
    "family": "thermal-balance",
+   "family_rationale": "Overheating and cold concern temperature conditions that make heat loss, conservation or production relevant. They share a regulatory problem while retaining different detection and response processes.",
+   "family_explanation": "index.html#family-meaning-thermal-balance",
    "questions": [
     {
      "question": "What does it register?",
@@ -421,6 +445,8 @@ window.TEG_SIGNALS = {
    "grounding": "grounding/neurochemistry.html#cold",
    "grounding_status": "Working synthesis · initial paper-level orientation complete",
    "family": "thermal-balance",
+   "family_rationale": "Overheating and cold concern temperature conditions that make heat loss, conservation or production relevant. They share a regulatory problem while retaining different detection and response processes.",
+   "family_explanation": "index.html#family-meaning-thermal-balance",
    "questions": [
     {
      "question": "What does it register?",
@@ -500,6 +526,8 @@ window.TEG_SIGNALS = {
    "grounding": "grounding/neurochemistry.html#needing-to-urinate",
    "grounding_status": "Working synthesis · initial paper-level orientation complete",
    "family": "visceral-capacity",
+   "family_rationale": "The need to urinate and the need to empty the bowels concern filling, storage limits and opportunities for release. Bladder and bowel regulation remain distinct.",
+   "family_explanation": "index.html#family-meaning-visceral-capacity",
    "questions": [
     {
      "question": "What does it register?",
@@ -579,6 +607,8 @@ window.TEG_SIGNALS = {
    "grounding": "grounding/neurochemistry.html#thirst",
    "grounding_status": "Working synthesis · individual system · papers pending",
    "family": "essential-supply",
+   "family_rationale": "Breathlessness, thirst and hunger concern whether necessary inputs—breathable conditions, water and nourishment—meet the organism’s needs. Their shared regulatory problem does not make their physiology the same.",
+   "family_explanation": "index.html#family-meaning-essential-supply",
    "questions": [
     {
      "question": "What does it register?",
@@ -658,6 +688,8 @@ window.TEG_SIGNALS = {
    "grounding": "grounding/neurochemistry.html#needing-to-empty-the-bowels",
    "grounding_status": "Working synthesis · initial paper-level orientation complete",
    "family": "visceral-capacity",
+   "family_rationale": "The need to urinate and the need to empty the bowels concern filling, storage limits and opportunities for release. Bladder and bowel regulation remain distinct.",
+   "family_explanation": "index.html#family-meaning-visceral-capacity",
    "questions": [
     {
      "question": "What does it register?",
@@ -737,6 +769,8 @@ window.TEG_SIGNALS = {
    "grounding": "grounding/neurochemistry.html#hunger",
    "grounding_status": "Working synthesis · individual system · papers pending",
    "family": "essential-supply",
+   "family_rationale": "Breathlessness, thirst and hunger concern whether necessary inputs—breathable conditions, water and nourishment—meet the organism’s needs. Their shared regulatory problem does not make their physiology the same.",
+   "family_explanation": "index.html#family-meaning-essential-supply",
    "questions": [
     {
      "question": "What does it register?",
@@ -816,6 +850,8 @@ window.TEG_SIGNALS = {
    "grounding": "grounding/neurochemistry.html#tiredness",
    "grounding_status": "Working synthesis · initial paper-level orientation complete",
    "family": "restorative-capacity",
+   "family_rationale": "Tiredness concerns whether continuing demand remains workable or rest and recovery become relevant. It is the current single member of this family, not a direct measurement of one biological variable.",
+   "family_explanation": "index.html#family-meaning-restorative-capacity",
    "questions": [
     {
      "question": "What does it register?",
@@ -905,6 +941,8 @@ window.TEG_SIGNALS = {
    },
    "grounding": "grounding/neurochemistry.html#love",
    "grounding_status": "Working synthesis · family-level · papers pending",
+   "family_rationale": "Love, trust, gratitude, compassion and admiration concern valued relationships, welfare or qualities. Happiness, joy, pride and hope concern valued experiences, contributions or possibilities. They belong together because value makes care, reliance, appreciation, enjoyment or investment relevant. Compassion can concern suffering, hope an unrealised possibility, and love a bond without reciprocity; a favourable or secure situation is not required.",
+   "family_explanation": "index.html#family-meaning-belonging",
    "questions": [
     {
      "question": "What does it register?",
@@ -987,6 +1025,8 @@ window.TEG_SIGNALS = {
    },
    "grounding": "grounding/neurochemistry.html#trust",
    "grounding_status": "Working synthesis · family-level · papers pending",
+   "family_rationale": "Love, trust, gratitude, compassion and admiration concern valued relationships, welfare or qualities. Happiness, joy, pride and hope concern valued experiences, contributions or possibilities. They belong together because value makes care, reliance, appreciation, enjoyment or investment relevant. Compassion can concern suffering, hope an unrealised possibility, and love a bond without reciprocity; a favourable or secure situation is not required.",
+   "family_explanation": "index.html#family-meaning-belonging",
    "questions": [
     {
      "question": "What does it register?",
@@ -1069,6 +1109,8 @@ window.TEG_SIGNALS = {
    },
    "grounding": "grounding/neurochemistry.html#gratitude",
    "grounding_status": "Working synthesis · family-level · papers pending",
+   "family_rationale": "Love, trust, gratitude, compassion and admiration concern valued relationships, welfare or qualities. Happiness, joy, pride and hope concern valued experiences, contributions or possibilities. They belong together because value makes care, reliance, appreciation, enjoyment or investment relevant. Compassion can concern suffering, hope an unrealised possibility, and love a bond without reciprocity; a favourable or secure situation is not required.",
+   "family_explanation": "index.html#family-meaning-belonging",
    "questions": [
     {
      "question": "What does it register?",
@@ -1151,6 +1193,8 @@ window.TEG_SIGNALS = {
    },
    "grounding": "grounding/neurochemistry.html#compassion",
    "grounding_status": "Working synthesis · family-level · papers pending",
+   "family_rationale": "Love, trust, gratitude, compassion and admiration concern valued relationships, welfare or qualities. Happiness, joy, pride and hope concern valued experiences, contributions or possibilities. They belong together because value makes care, reliance, appreciation, enjoyment or investment relevant. Compassion can concern suffering, hope an unrealised possibility, and love a bond without reciprocity; a favourable or secure situation is not required.",
+   "family_explanation": "index.html#family-meaning-belonging",
    "questions": [
     {
      "question": "What does it register?",
@@ -1233,6 +1277,8 @@ window.TEG_SIGNALS = {
    },
    "grounding": "grounding/neurochemistry.html#admiration",
    "grounding_status": "Working synthesis · family-level · papers pending",
+   "family_rationale": "Love, trust, gratitude, compassion and admiration concern valued relationships, welfare or qualities. Happiness, joy, pride and hope concern valued experiences, contributions or possibilities. They belong together because value makes care, reliance, appreciation, enjoyment or investment relevant. Compassion can concern suffering, hope an unrealised possibility, and love a bond without reciprocity; a favourable or secure situation is not required.",
+   "family_explanation": "index.html#family-meaning-belonging",
    "questions": [
     {
      "question": "What does it register?",
@@ -1315,6 +1361,8 @@ window.TEG_SIGNALS = {
    },
    "grounding": "grounding/neurochemistry.html#happiness",
    "grounding_status": "Working synthesis · family-level · papers pending",
+   "family_rationale": "Love, trust, gratitude, compassion and admiration concern valued relationships, welfare or qualities. Happiness, joy, pride and hope concern valued experiences, contributions or possibilities. They belong together because value makes care, reliance, appreciation, enjoyment or investment relevant. Compassion can concern suffering, hope an unrealised possibility, and love a bond without reciprocity; a favourable or secure situation is not required.",
+   "family_explanation": "index.html#family-meaning-belonging",
    "questions": [
     {
      "question": "What does it register?",
@@ -1397,6 +1445,8 @@ window.TEG_SIGNALS = {
    },
    "grounding": "grounding/neurochemistry.html#joy",
    "grounding_status": "Working synthesis · family-level · papers pending",
+   "family_rationale": "Love, trust, gratitude, compassion and admiration concern valued relationships, welfare or qualities. Happiness, joy, pride and hope concern valued experiences, contributions or possibilities. They belong together because value makes care, reliance, appreciation, enjoyment or investment relevant. Compassion can concern suffering, hope an unrealised possibility, and love a bond without reciprocity; a favourable or secure situation is not required.",
+   "family_explanation": "index.html#family-meaning-belonging",
    "questions": [
     {
      "question": "What does it register?",
@@ -1479,6 +1529,8 @@ window.TEG_SIGNALS = {
    },
    "grounding": "grounding/neurochemistry.html#pride",
    "grounding_status": "Working synthesis · family-level · papers pending",
+   "family_rationale": "Love, trust, gratitude, compassion and admiration concern valued relationships, welfare or qualities. Happiness, joy, pride and hope concern valued experiences, contributions or possibilities. They belong together because value makes care, reliance, appreciation, enjoyment or investment relevant. Compassion can concern suffering, hope an unrealised possibility, and love a bond without reciprocity; a favourable or secure situation is not required.",
+   "family_explanation": "index.html#family-meaning-belonging",
    "questions": [
     {
      "question": "What does it register?",
@@ -1561,6 +1613,8 @@ window.TEG_SIGNALS = {
    },
    "grounding": "grounding/neurochemistry.html#hope",
    "grounding_status": "Working synthesis · family-level · papers pending",
+   "family_rationale": "Love, trust, gratitude, compassion and admiration concern valued relationships, welfare or qualities. Happiness, joy, pride and hope concern valued experiences, contributions or possibilities. They belong together because value makes care, reliance, appreciation, enjoyment or investment relevant. Compassion can concern suffering, hope an unrealised possibility, and love a bond without reciprocity; a favourable or secure situation is not required.",
+   "family_explanation": "index.html#family-meaning-belonging",
    "questions": [
     {
      "question": "What does it register?",
@@ -1643,6 +1697,8 @@ window.TEG_SIGNALS = {
    },
    "grounding": "grounding/neurochemistry.html#shame",
    "grounding_status": "Working synthesis · family-level · papers pending",
+   "family_rationale": "Shame and guilt concern standing or possible harm; loneliness concerns missing connection; disappointment an unmet expectation; sadness and grief absence or loss; confusion conflicting information; frustration obstruction; anxiety possible disruption; and stress demand pressing against capacity. Their shared relationship is disruption affecting something that matters. It extends beyond social belonging and includes losses that cannot be restored.",
+   "family_explanation": "index.html#family-meaning-belonging-at-risk",
    "questions": [
     {
      "question": "What does it register?",
@@ -1725,6 +1781,8 @@ window.TEG_SIGNALS = {
    },
    "grounding": "grounding/neurochemistry.html#guilt",
    "grounding_status": "Working synthesis · family-level · papers pending",
+   "family_rationale": "Shame and guilt concern standing or possible harm; loneliness concerns missing connection; disappointment an unmet expectation; sadness and grief absence or loss; confusion conflicting information; frustration obstruction; anxiety possible disruption; and stress demand pressing against capacity. Their shared relationship is disruption affecting something that matters. It extends beyond social belonging and includes losses that cannot be restored.",
+   "family_explanation": "index.html#family-meaning-belonging-at-risk",
    "questions": [
     {
      "question": "What does it register?",
@@ -1807,6 +1865,8 @@ window.TEG_SIGNALS = {
    },
    "grounding": "grounding/neurochemistry.html#loneliness",
    "grounding_status": "Working synthesis · family-level · papers pending",
+   "family_rationale": "Shame and guilt concern standing or possible harm; loneliness concerns missing connection; disappointment an unmet expectation; sadness and grief absence or loss; confusion conflicting information; frustration obstruction; anxiety possible disruption; and stress demand pressing against capacity. Their shared relationship is disruption affecting something that matters. It extends beyond social belonging and includes losses that cannot be restored.",
+   "family_explanation": "index.html#family-meaning-belonging-at-risk",
    "questions": [
     {
      "question": "What does it register?",
@@ -1889,6 +1949,8 @@ window.TEG_SIGNALS = {
    },
    "grounding": "grounding/neurochemistry.html#disappointment",
    "grounding_status": "Working synthesis · family-level · papers pending",
+   "family_rationale": "Shame and guilt concern standing or possible harm; loneliness concerns missing connection; disappointment an unmet expectation; sadness and grief absence or loss; confusion conflicting information; frustration obstruction; anxiety possible disruption; and stress demand pressing against capacity. Their shared relationship is disruption affecting something that matters. It extends beyond social belonging and includes losses that cannot be restored.",
+   "family_explanation": "index.html#family-meaning-belonging-at-risk",
    "questions": [
     {
      "question": "What does it register?",
@@ -1971,6 +2033,8 @@ window.TEG_SIGNALS = {
    },
    "grounding": "grounding/neurochemistry.html#sadness",
    "grounding_status": "Working synthesis · family-level · papers pending",
+   "family_rationale": "Shame and guilt concern standing or possible harm; loneliness concerns missing connection; disappointment an unmet expectation; sadness and grief absence or loss; confusion conflicting information; frustration obstruction; anxiety possible disruption; and stress demand pressing against capacity. Their shared relationship is disruption affecting something that matters. It extends beyond social belonging and includes losses that cannot be restored.",
+   "family_explanation": "index.html#family-meaning-belonging-at-risk",
    "questions": [
     {
      "question": "What does it register?",
@@ -2053,6 +2117,8 @@ window.TEG_SIGNALS = {
    },
    "grounding": "grounding/neurochemistry.html#grief",
    "grounding_status": "Working synthesis · family-level · papers pending",
+   "family_rationale": "Shame and guilt concern standing or possible harm; loneliness concerns missing connection; disappointment an unmet expectation; sadness and grief absence or loss; confusion conflicting information; frustration obstruction; anxiety possible disruption; and stress demand pressing against capacity. Their shared relationship is disruption affecting something that matters. It extends beyond social belonging and includes losses that cannot be restored.",
+   "family_explanation": "index.html#family-meaning-belonging-at-risk",
    "questions": [
     {
      "question": "What does it register?",
@@ -2135,6 +2201,8 @@ window.TEG_SIGNALS = {
    },
    "grounding": "grounding/neurochemistry.html#confusion",
    "grounding_status": "Working synthesis · family-level · papers pending",
+   "family_rationale": "Shame and guilt concern standing or possible harm; loneliness concerns missing connection; disappointment an unmet expectation; sadness and grief absence or loss; confusion conflicting information; frustration obstruction; anxiety possible disruption; and stress demand pressing against capacity. Their shared relationship is disruption affecting something that matters. It extends beyond social belonging and includes losses that cannot be restored.",
+   "family_explanation": "index.html#family-meaning-belonging-at-risk",
    "questions": [
     {
      "question": "What does it register?",
@@ -2217,6 +2285,8 @@ window.TEG_SIGNALS = {
    },
    "grounding": "grounding/neurochemistry.html#frustration",
    "grounding_status": "Working synthesis · family-level · papers pending",
+   "family_rationale": "Shame and guilt concern standing or possible harm; loneliness concerns missing connection; disappointment an unmet expectation; sadness and grief absence or loss; confusion conflicting information; frustration obstruction; anxiety possible disruption; and stress demand pressing against capacity. Their shared relationship is disruption affecting something that matters. It extends beyond social belonging and includes losses that cannot be restored.",
+   "family_explanation": "index.html#family-meaning-belonging-at-risk",
    "questions": [
     {
      "question": "What does it register?",
@@ -2299,6 +2369,8 @@ window.TEG_SIGNALS = {
    },
    "grounding": "grounding/neurochemistry.html#anxiety",
    "grounding_status": "Working synthesis · family-level · papers pending",
+   "family_rationale": "Shame and guilt concern standing or possible harm; loneliness concerns missing connection; disappointment an unmet expectation; sadness and grief absence or loss; confusion conflicting information; frustration obstruction; anxiety possible disruption; and stress demand pressing against capacity. Their shared relationship is disruption affecting something that matters. It extends beyond social belonging and includes losses that cannot be restored.",
+   "family_explanation": "index.html#family-meaning-belonging-at-risk",
    "questions": [
     {
      "question": "What does it register?",
@@ -2381,6 +2453,8 @@ window.TEG_SIGNALS = {
    },
    "grounding": "grounding/neurochemistry.html#stress",
    "grounding_status": "Working synthesis · family-level · papers pending",
+   "family_rationale": "Shame and guilt concern standing or possible harm; loneliness concerns missing connection; disappointment an unmet expectation; sadness and grief absence or loss; confusion conflicting information; frustration obstruction; anxiety possible disruption; and stress demand pressing against capacity. Their shared relationship is disruption affecting something that matters. It extends beyond social belonging and includes losses that cannot be restored.",
+   "family_explanation": "index.html#family-meaning-belonging-at-risk",
    "questions": [
     {
      "question": "What does it register?",
@@ -2463,6 +2537,8 @@ window.TEG_SIGNALS = {
    },
    "grounding": "grounding/neurochemistry.html#fear",
    "grounding_status": "Working synthesis · family-level · papers pending",
+   "family_rationale": "Fear, anger, disgust and suspicion concern different forms of possible harm, violation, contamination or concealed threat. They belong together because a condition or possible source makes protection, checking, distance or resistance relevant. Feeling the signal does not establish that the perceived threat is accurate or that a particular action is warranted.",
+   "family_explanation": "index.html#family-meaning-threat-protection",
    "questions": [
     {
      "question": "What does it register?",
@@ -2545,6 +2621,8 @@ window.TEG_SIGNALS = {
    },
    "grounding": "grounding/neurochemistry.html#anger",
    "grounding_status": "Working synthesis · family-level · papers pending",
+   "family_rationale": "Fear, anger, disgust and suspicion concern different forms of possible harm, violation, contamination or concealed threat. They belong together because a condition or possible source makes protection, checking, distance or resistance relevant. Feeling the signal does not establish that the perceived threat is accurate or that a particular action is warranted.",
+   "family_explanation": "index.html#family-meaning-threat-protection",
    "questions": [
     {
      "question": "What does it register?",
@@ -2627,6 +2705,8 @@ window.TEG_SIGNALS = {
    },
    "grounding": "grounding/neurochemistry.html#disgust",
    "grounding_status": "Working synthesis · family-level · papers pending",
+   "family_rationale": "Fear, anger, disgust and suspicion concern different forms of possible harm, violation, contamination or concealed threat. They belong together because a condition or possible source makes protection, checking, distance or resistance relevant. Feeling the signal does not establish that the perceived threat is accurate or that a particular action is warranted.",
+   "family_explanation": "index.html#family-meaning-threat-protection",
    "questions": [
     {
      "question": "What does it register?",
@@ -2709,6 +2789,8 @@ window.TEG_SIGNALS = {
    },
    "grounding": "grounding/neurochemistry.html#suspicion",
    "grounding_status": "Working synthesis · family-level · papers pending",
+   "family_rationale": "Fear, anger, disgust and suspicion concern different forms of possible harm, violation, contamination or concealed threat. They belong together because a condition or possible source makes protection, checking, distance or resistance relevant. Feeling the signal does not establish that the perceived threat is accurate or that a particular action is warranted.",
+   "family_explanation": "index.html#family-meaning-threat-protection",
    "questions": [
     {
      "question": "What does it register?",
@@ -2791,6 +2873,8 @@ window.TEG_SIGNALS = {
    },
    "grounding": "grounding/neurochemistry.html#rage",
    "grounding_status": "Working synthesis · family-level · papers pending",
+   "family_rationale": "The current model groups rage, fury and frenzy around different forms of urgent mobilisation when ordinary protection is registered as insufficient or blocked. This does not establish objective life threat or simply mean more intense anger. The boundary between a distinct signal family and a change in protective organisation remains under review with Model 2.",
+   "family_explanation": "index.html#family-meaning-survival-rage",
    "questions": [
     {
      "question": "What does it register?",
@@ -2873,6 +2957,8 @@ window.TEG_SIGNALS = {
    },
    "grounding": "grounding/neurochemistry.html#fury",
    "grounding_status": "Working synthesis · family-level · papers pending",
+   "family_rationale": "The current model groups rage, fury and frenzy around different forms of urgent mobilisation when ordinary protection is registered as insufficient or blocked. This does not establish objective life threat or simply mean more intense anger. The boundary between a distinct signal family and a change in protective organisation remains under review with Model 2.",
+   "family_explanation": "index.html#family-meaning-survival-rage",
    "questions": [
     {
      "question": "What does it register?",
@@ -2955,6 +3041,8 @@ window.TEG_SIGNALS = {
    },
    "grounding": "grounding/neurochemistry.html#frenzy",
    "grounding_status": "Working synthesis · family-level · papers pending",
+   "family_rationale": "The current model groups rage, fury and frenzy around different forms of urgent mobilisation when ordinary protection is registered as insufficient or blocked. This does not establish objective life threat or simply mean more intense anger. The boundary between a distinct signal family and a change in protective organisation remains under review with Model 2.",
+   "family_explanation": "index.html#family-meaning-survival-rage",
    "questions": [
     {
      "question": "What does it register?",
