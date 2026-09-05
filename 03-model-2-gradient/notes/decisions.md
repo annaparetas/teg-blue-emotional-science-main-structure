@@ -3,6 +3,20 @@
 Dated entries, newest first. A decision recorded here changes a canon page
 only when the page is edited and its "last approved" date moves.
 
+## 2026-09-04 · Model 2 process conditions separated from Model 1 access
+
+The first Chronic-row owner-review pass separates two readings that had been
+blurred. Model 2 records organisation, resource allocation and process
+recruitment. Model 1 records how much bodily information, affective sharing
+and mentalizing becomes readable and usable by ME. A Gradient Position may
+shape the conditions in which access changes, but it does not assign an access
+band or configuration.
+
+The Chronic access cells now identify possible patterns rather than automatic
+results. The revision remains working content until Anna confirms the seven
+position-by-position readings. The detailed boundary is recorded in
+[capacity-controller-plan.md](capacity-controller-plan.md).
+
 ## 2026-09-02 · The Gradient reads the Model 1 capacity controls
 
 The ME access controls are no longer set on the Gradient page. They are set
@@ -15,10 +29,10 @@ next stages (per-band readings, depth per capacity) are in
 
 ## 2026-09-02 · Transferred into this folder
 
-- The canon page [index.html](../index.html) absorbs the 23 August companion
+- The canon page [index.html](../index.html) synthesises the 23 August companion
   draft (old `foundation/22`), the 27 August summary from the former main
   structure, and the essentials of the governing premise.
-- [fluid-chronic.html](../fluid-chronic.html) absorbs old `foundation/23`.
+- [fluid-chronic.html](../fluid-chronic.html) synthesises old `foundation/23`.
   Its core definitions were already accepted; the profile stays a proposed
   decision.
 - The old main Gradient page is carried as [positions.html](../positions.html)

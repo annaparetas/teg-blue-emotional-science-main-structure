@@ -225,8 +225,8 @@ window.TEG_READINGS = {
    "Connection and Belonging-at-Risk information remain active together; each new cue can restart the unresolved read.",
    "A wide range of cues is weighted towards protection. Connection signals do not disappear, but arrive inside a defensive field.",
    "Emotional information still forms, while signals relevant to prediction, performance and control receive greater priority than signals that interrupt the plan.",
-   "Maximum-protection information can dominate while fear, shame, pain, care and impact also arise but are overridden, fused or disowned.",
-   "Condition information may remain active while signal formation, differentiation and felt access become compressed by depletion and conservation."
+   "Maximum-protection information may receive priority while fear, shame, pain, care and impact also continue to form. Their conscious differentiation and use are recorded separately.",
+   "Condition information may remain active under depletion and conservation. Whether it becomes differentiated or consciously available is recorded separately."
   ],
   "Interoceptive processing": [
    "Internal state may remain represented as sustained tension, unease or depletion while restorative and self-directed information receives less weight.",
@@ -234,22 +234,22 @@ window.TEG_READINGS = {
    "Orienting-related changes in breath, skin, stomach and muscle tone may recur without settling into a clear, trusted reading.",
    "Defensive bodily information can receive persistent priority while quieter maintenance and connection signals remain harder to use.",
    "Signals supporting effort and output may remain foregrounded while fatigue, pain and recovery demand become normalised or delayed.",
-   "Force and urgent action signals may dominate while pain, injury and internal limits are suppressed or overridden; this does not establish their absence.",
+   "Force and urgent action signals may dominate while pain, injury and internal limits receive less weight or remain less usable; this does not establish their absence.",
    "Internal state may be represented globally as heaviness, numbness, fog or exhaustion, with reduced localisation and differentiation."
   ],
   "Conscious availability to ME": [
-   "Unease, tension or restless flatness remains detectable, while contentment, curiosity, need and preference stay faint.",
+   "One possible pattern is that unease, tension or restless flatness remains detectable while contentment, curiosity, need and preference stay faint.",
    "Another person’s mood and permitted affiliative feelings may be easier to feel than one’s own anger, sadness, limit or direction.",
-   "Feelings are available but fused and distrusted—shame with fear, guilt with anger, love with anticipated loss.",
-   "Fear, anger and alarm become easiest to reach; vulnerability, grief and quieter needs may appear only later.",
-   "Feeling is converted quickly into analysis, judgement or strategic information. Signals that obstruct control are discounted.",
+   "Feelings may be available but fused and distrusted—shame with fear, guilt with anger, love with anticipated loss.",
+   "Fear, anger and alarm may become easiest to reach; vulnerability, grief and quieter needs may appear only later.",
+   "Feeling may be converted quickly into analysis, judgement or strategic information, while signals that obstruct control are discounted.",
    "Urgency, certainty or rage may dominate access while vulnerability, pain, limit and another person’s impact become difficult—not necessarily impossible—to feel.",
-   "Numbness, fog, heaviness or exhaustion leave little differentiated feeling; fragments may appear when capacity briefly returns."
+   "Numbness, fog, heaviness or exhaustion may leave little differentiated feeling; fragments may appear when capacity briefly returns."
   ],
   "Coordinated conscious access": [
    "Continuous monitoring may make needs, preference and self-directed movement difficult to read clearly.",
    "The other person’s state may become easier to read than one’s own signals, limits or direction.",
-   "Signals are noticed but repeatedly checked, so no reading feels sufficient to settle uncertainty.",
+   "Signals may be noticed but repeatedly checked, so no reading feels sufficient to settle uncertainty.",
    "Protective interpretation may reach action before wider context and competing needs can be consulted.",
    "Internal information may be admitted when it serves prediction or management and discounted when it interrupts the plan.",
    "Vulnerability, limit, impact and competing feeling may be overridden or disowned and therefore fail to constrain the required outcome.",
@@ -305,8 +305,8 @@ window.TEG_READINGS = {
    "Another person’s state may become highly available while self–other distinction and access to one’s own position narrow.",
    "Another person’s feeling may be registered and quickly folded into a read of possible danger or rejection.",
    "Sharing may narrow during chronic guarding while remaining more available with selected people or when protection eases.",
-   "Sharing may be selectively suppressed, compartmentalised or used only when it does not interrupt management.",
-   "Another person’s feeling may be reduced, overridden or kept separate from action while cognitive detection remains available.",
+   "Sharing may be selectively narrowed or compartmentalised, or may remain active while being kept separate from action.",
+   "Sharing may narrow; it may also remain active while another person’s feeling is kept separate from action. Cognitive detection can remain available in either case.",
    "Another person’s state may become faint, delayed or difficult to use when low capacity and withdrawal dominate."
   ],
   "Mentalizing": [

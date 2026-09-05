@@ -2,7 +2,7 @@
 
 | Status | Owner | Date | Does not establish |
 | --- | --- | --- | --- |
-| Working plan · stage 1 built | 02 · Model 1 (controls) · 06 · Inner Compass (display) · 03 · Model 2 (territory) | 2 September 2026 | Any new cell text as approved content; every reading is owner content until Anna approves it. |
+| Working plan · stage 1 built · Chronic-row boundary revised | 02 · Model 1 (controls) · 06 · Inner Compass (display) · 03 · Model 2 (territory) | 4 September 2026 | Any new cell text as approved content; every reading is owner content until Anna approves it. |
 
 Anna's plan, 2 September 2026, in two steps. First: Model 1 becomes the
 controller for the ME access capacities that used to sit as sliders on the
@@ -75,7 +75,6 @@ evidence, none of which changes with access.
 
 ## Decisions still needed
 
-- Whether the Compass surface embeds the controls or keeps linking to Model 1.
 - Stage 2 readings.
 - Depth per capacity after the profile decision.
 
@@ -87,3 +86,17 @@ evidence, none of which changes with access.
 - Access configurations do not assign, predict or tend toward a mode. The
   Compass reads mode from organisation, position and plane, then places access
   beside it.
+- The controls remain on Model 1. The Compass reads and displays their setting
+  without embedding another copy of the controls.
+
+## Chronic-row boundary review · 4 September 2026
+
+The first owner-review pass keeps Model 2's process rows static and separates
+them from Model 1's access reading. The Chronic cells describe possible ways
+a process can be recruited, weighted or used within a Position. They do not
+assign an ME access band or configuration. The page now names this boundary
+before the Model 1 interface rows and in the grounding note. It also identifies
+process recruitment, rather than capacity access, as Model 2's territory.
+
+The row language remains working owner content. Anna still needs to confirm
+the seven position-by-position readings before they become approved text.
