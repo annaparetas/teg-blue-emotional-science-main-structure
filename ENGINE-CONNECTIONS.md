@@ -11,11 +11,11 @@ This is a relationship map, not a migration plan. It records how every current f
 
 ## Coverage
 
-- **207 Engine files listed: 207 of 207.**
+- **208 Engine files listed: 208 of 208.**
 - 87 reviewed carry relationships.
 - 13 site-owned presentations with continuing Engine provenance.
 - 17 documented concept connections already present in the site transfer logic.
-- 90 additional explicit concept, visual, archive or repository-support connections.
+- 91 additional explicit concept, visual, archive or repository-support connections.
 
 The count includes tracked content and untracked non-ignored content, including repository guidance such as `.gitignore`. Ignored macOS metadata and Git internals are excluded, making the inventory stable across worktrees.
 
@@ -140,6 +140,7 @@ Run `python3 scripts/build-engine-connections.py --check` after either repositor
 | `evidence/reviews/reduced-pressure-recovery-and-return.md` | [`03-model-2-gradient/return.html`](03-model-2-gradient/return.html)<br>[`04-model-3-esc/index.html`](04-model-3-esc/index.html) | **Additional explicit connection.** Engine evidence comparison separating reduced pressure, recovery and Return; prepared wording awaits site integration. |
 | `evidence/reviews/relational-configuration-clinical-pattern-bridge.md` | [`02-model-1-ess-cls-me/grounding/relational-configuration-clinical-pattern-bridge.md`](02-model-1-ess-cls-me/grounding/relational-configuration-clinical-pattern-bridge.md) | **Reviewed carry relationship.** The Engine file remains the source; the site file is the reviewed, navigable snapshot named in the carry manifest. |
 | `evidence/reviews/relief-avoidance-and-corrective-experience.md` | [`05-frameworks/F03/review.md`](05-frameworks/F03/review.md) | **Additional explicit connection.** Engine evidence comparison for immediate effects and later responding; site integration deferred. |
+| `evidence/reviews/return-connection-solitude-and-restoration.md` | [`03-model-2-gradient/return.html`](03-model-2-gradient/return.html)<br>[`03-model-2-gradient/index.html`](03-model-2-gradient/index.html)<br>[`04-model-3-esc/index.html`](04-model-3-esc/index.html)<br>[`05-frameworks/F08/review.md`](05-frameworks/F08/review.md) | **Additional explicit connection.** Engine Return-assumption audit covering connection, solitude, restoration and A to X; research connection only, with public integration deferred. |
 | `evidence/reviews/rules-enforcement-and-later-behaviour.md` | [`05-frameworks/F04/review.md`](05-frameworks/F04/review.md)<br>[`05-frameworks/F05/review.md`](05-frameworks/F05/review.md)<br>[`05-frameworks/F07/review.md`](05-frameworks/F07/review.md)<br>[`05-frameworks/F12/review.md`](05-frameworks/F12/review.md) | **Additional explicit connection.** Engine institutional enforcement and withdrawal evidence comparison; research connection only, with public integration deferred. |
 | `evidence/reviews/scientific-architecture-inventory.md` | [`evidence/reviews/scientific-architecture-inventory.md`](evidence/reviews/scientific-architecture-inventory.md) | **Reviewed carry relationship.** The Engine file remains the source; the site file is the reviewed, navigable snapshot named in the carry manifest. |
 | `evidence/reviews/scientific-grounding-working-set.md` | [`evidence/notes/sources/scientific-grounding-working-set.md`](evidence/notes/sources/scientific-grounding-working-set.md) | **Reviewed carry relationship.** The Engine file remains the source; the site file is the reviewed, navigable snapshot named in the carry manifest. |
