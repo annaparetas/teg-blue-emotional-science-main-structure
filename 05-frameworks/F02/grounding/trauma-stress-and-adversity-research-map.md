@@ -4,7 +4,7 @@ Status: working research-family register
 Source: user-supplied 37-part research map; the supplied text ends partway through section 37
 Purpose: organise trauma-, stress- and adversity-related knowledge without treating “trauma” as one exposure, mechanism, diagnosis or explanation
 
-F2 companion: [F2 · Trauma, Stress and Adversity Crosswalk](trauma-stress-and-adversity-crosswalk.md)
+F02 companion: [F02 · Trauma, Stress and Adversity Crosswalk](trauma-stress-and-adversity-crosswalk.md)
 
 ## Why this register is needed
 

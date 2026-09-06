@@ -6,9 +6,9 @@ Source section: F10 · Rebuilding Generational Bridges in [The Twelve Frameworks
 
 Governing model premise: [How the Nervous System Organisation Gradient Models Organism Organisation](../../03-model-2-gradient/premise.html)
 
-Developmental foundation: [F2 · Developmental Shaping of Emotional Participation](../F02/review.md)
+Developmental foundation: [F02 · Developmental Shaping of Emotional Participation](../F02/review.md)
 
-Upstream route maps: [F8 · Recovery, Reconnection and Repair as Distinct Routes](../F08/review.md) · [F9 · Neurodivergent Variation, Disability and Environmental Fit](../F09/review.md)
+Upstream route maps: [F08 · Recovery, Reconnection and Repair as Distinct Routes](../F08/review.md) · [F09 · Neurodivergent Variation, Disability and Environmental Fit](../F09/review.md)
 
 Ethical boundary: [Harm, Power and Repair Grounding](../../07-reference/grounding/harm-power-and-repair.md)
 
@@ -220,15 +220,15 @@ Repair can mean rebuilding a relationship. It can also mean refusing to pass the
 
 | Current layer | What F10 receives or contributes | Boundary of the connection |
 | --- | --- | --- |
-| **F1 · evolutionary foundations** | Genetic variation and broad human capacities provide one background to later generations | Evolution does not explain a particular family pattern or turn culture into biological inheritance |
-| **F2 · developmental shaping** | F2 identifies caregiving, learning, context, access and developmental pathways within one child | F10 must specify how a condition crosses generations rather than relabelling F2 as inherited trauma |
-| **F3 · adult maintenance and revision** | Adult expectations, meanings and behaviour routes may affect caregiving and can change | Insight or false coherence does not predict parenting without observed action and context |
-| **F4 · shared rules** | Family, community and institutional rules can remain available across generations | A repeated rule may travel through law, religion, school or economics rather than private family learning alone |
-| **F5 · social valuation** | Status, credibility, property, education and recognition affect which resources and burdens continue | Unequal outcomes cannot be reduced to a caregiver's emotional processing |
-| **F6 · bias and judgement** | Stereotypes shape diagnosis, child protection, parenting assessment, credibility and access to support | Group difference or family history cannot establish individual risk or parenting capacity |
-| **F7 · coercive enforcement** | Violence, surveillance, deprivation, role control and retaliation may recur or be institutionally enabled | Family-systems explanation cannot distribute responsibility away from the person using coercive power |
-| **F8 · recovery routes** | Adult recovery, skill, support, behaviour change and reparation may alter some intergenerational routes | No internal recovery outcome guarantees child safety, attachment, access or later health |
-| **F9 · environmental fit** | Caregivers and children may need different sensory, communication, disability and recovery conditions | Difference is not failed attachment, and normalising a child is not generational repair |
+| **F01 · evolutionary foundations** | Genetic variation and broad human capacities provide one background to later generations | Evolution does not explain a particular family pattern or turn culture into biological inheritance |
+| **F02 · developmental shaping** | F02 identifies caregiving, learning, context, access and developmental pathways within one child | F10 must specify how a condition crosses generations rather than relabelling F02 as inherited trauma |
+| **F03 · adult maintenance and revision** | Adult expectations, meanings and behaviour routes may affect caregiving and can change | Insight or false coherence does not predict parenting without observed action and context |
+| **F04 · shared rules** | Family, community and institutional rules can remain available across generations | A repeated rule may travel through law, religion, school or economics rather than private family learning alone |
+| **F05 · social valuation** | Status, credibility, property, education and recognition affect which resources and burdens continue | Unequal outcomes cannot be reduced to a caregiver's emotional processing |
+| **F06 · bias and judgement** | Stereotypes shape diagnosis, child protection, parenting assessment, credibility and access to support | Group difference or family history cannot establish individual risk or parenting capacity |
+| **F07 · coercive enforcement** | Violence, surveillance, deprivation, role control and retaliation may recur or be institutionally enabled | Family-systems explanation cannot distribute responsibility away from the person using coercive power |
+| **F08 · recovery routes** | Adult recovery, skill, support, behaviour change and reparation may alter some intergenerational routes | No internal recovery outcome guarantees child safety, attachment, access or later health |
+| **F09 · environmental fit** | Caregivers and children may need different sensory, communication, disability and recovery conditions | Difference is not failed attachment, and normalising a child is not generational repair |
 | **Model 1 and Model 2** | Adult and child organisation may shape momentary access, action readiness and recovery | A Gradient Position does not transmit from one nervous system to another or establish caregiving quality |
 | **Chronic organisation** | Repeated conditions may contribute to persistent expectations, recurrence or interrupted recovery within each person | Chronic organisation is not inherited as one family state and cannot be inferred from lineage |
 | **Harm, Power and Repair** | HPR governs child protection, adult responsibility, reparation, access and reconciliation | Understanding lineage never overrides impact, boundaries, safeguarding or the affected person's agency |

@@ -22,27 +22,27 @@ question is actually present.
 
 | Framework | Grounding held here | Grounding elsewhere |
 | --- | --- | --- |
-| F1 | The review's field map and rough timeline; the crosswalk's evolutionary-boundary row; the connections note | Human sociality and the two survival functions (Reference, pending); the timeline's lineage claims await source-level audit in the frozen repository |
-| F2 | [F02/grounding/trauma-stress-and-adversity-crosswalk.md](F02/grounding/trauma-stress-and-adversity-crosswalk.md) and [research map](F02/grounding/trauma-stress-and-adversity-research-map.md); the developmental entries register; the diagram's source list | Chronic scientific spine (Model 2 grounding); the F1 and Fluid–Chronic crosswalk in the frozen repository |
-| F3 | The review's field map | [Six-cluster synthesis](../02-model-1-ess-cls-me/grounding/six-cluster-synthesis-and-F03-construct-families.md) and the configuration-to-clinical-pattern bridge (Model 1 grounding); pilots 05 to 10 (frozen repository) |
+| F01 | The review's field map and rough timeline; the crosswalk's evolutionary-boundary row; the connections note | Human sociality and the two survival functions (Reference, pending); the timeline's lineage claims await source-level audit in the frozen repository |
+| F02 | [F02/grounding/trauma-stress-and-adversity-crosswalk.md](F02/grounding/trauma-stress-and-adversity-crosswalk.md) and [research map](F02/grounding/trauma-stress-and-adversity-research-map.md); the developmental entries register; the diagram's source list | Chronic scientific spine (Model 2 grounding); the F01 and Fluid–Chronic crosswalk in the frozen repository |
+| F03 | The review's field map | [Six-cluster synthesis](../02-model-1-ess-cls-me/grounding/six-cluster-synthesis-and-F03-construct-families.md) and the configuration-to-clinical-pattern bridge (Model 1 grounding); pilots 05 to 10 (frozen repository) |
 
 ## What stays in the frozen working repository
 
 - Reviews F04 to F12 (first pass, 21 August 2026), the old map page
   `frameworks/index.html` and folder guide, until those frameworks transfer.
-- `frameworks/diagrams/F1/` except the timeline, and all of
-  `frameworks/diagrams/F1-Evolution/` and `frameworks/diagrams/originals/`:
-  duplicated and parked F1 diagram work, to be archived. The fifth-pass
+- `frameworks/diagrams/F01/` except the timeline, and all of
+  `frameworks/diagrams/F01-Evolution/` and `frameworks/diagrams/originals/`:
+  duplicated and parked F01 diagram work, to be archived. The fifth-pass
   review retired the one-origin-per-position hooks they carry.
 - `evidence/crosswalks/F01-fluid-chronic-grounding.md`, which routes
-  research families across F1, Fluid and Chronic.
+  research families across F01, Fluid and Chronic.
 - `evidence/reviews/original-frameworks-claim-reassessment.md` and
   `scientific-lineage-and-integrative-grounding.md`, cited by the later
   reviews.
 
 ## Provenance
 
-The twelve frameworks began as the F1–F12 map assembled from legacy
+The twelve frameworks began as the F01–F12 map assembled from legacy
 framework and SPINE materials, with the old titles (Biological Evolution,
 Developmental Calibration, Adult Cognition and False Coherence, Rules
 Regulate, Worth Hierarchies Regulate, Bias Regulates, Domination Regulates,

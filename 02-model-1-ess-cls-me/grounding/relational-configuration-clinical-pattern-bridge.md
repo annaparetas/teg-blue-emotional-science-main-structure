@@ -1,14 +1,14 @@
 # Relational Configuration → Clinical and Personality-Pattern Research Bridge
 
 Status: governing research architecture · all six clinical-pattern clusters and cross-cluster synthesis complete · 19 August 2026
-Scope: three ME-access capacities · relational configurations · F2 · Chronic organisation · F3 · Harm–Power–Repair · clinical and personality research
+Scope: three ME-access capacities · relational configurations · F02 · Chronic organisation · F03 · Harm–Power–Repair · clinical and personality research
 Purpose: connect uneven capacity configurations to relevant research without turning a configuration into a diagnosis or losing the possibility of serious relational danger
 
-Companions: [Relational Capacity Configurations](../me-access.html) · [Chronic Scientific Spine](../../03-model-2-gradient/grounding/chronic-scientific-spine.md) · [Harm, Power and Repair Grounding](../../07-reference/grounding/harm-power-and-repair.md) · [F2 Trauma, Stress and Adversity Crosswalk](../../05-frameworks/F02/grounding/trauma-stress-and-adversity-crosswalk.md)
+Companions: [Relational Capacity Configurations](../me-access.html) · [Chronic Scientific Spine](../../03-model-2-gradient/grounding/chronic-scientific-spine.md) · [Harm, Power and Repair Grounding](../../07-reference/grounding/harm-power-and-repair.md) · [F02 Trauma, Stress and Adversity Crosswalk](../../05-frameworks/F02/grounding/trauma-stress-and-adversity-crosswalk.md)
 
 Evidence companions: [Pilot 05 · Mentalizing, Affective Sharing and Instrumental Use](../../evidence/pilots/PILOT-05-mentalizing-affective-sharing-and-instrumental-use.md) · [Pilot 06 · Entitlement, Self-Threat, Power and Retaliation](../../evidence/pilots/PILOT-06-entitlement-self-threat-power-and-retaliation.md) · [Pilot 07 · People-Pleasing, Dependency, Appeasement and Refusal](../../evidence/pilots/PILOT-07-people-pleasing-dependency-appeasement-and-refusal.md) · [Pilot 08 · Avoidance, Detachment and Chosen Distance](../../evidence/pilots/PILOT-08-avoidance-detachment-and-chosen-distance.md) · [Pilot 09 · Control, Over-Control and Coercive Control](../../evidence/pilots/PILOT-09-control-overcontrol-and-coercive-control.md) · [Pilot 10 · Self–Other Distinction, Identity and Attachment Stress](../../evidence/pilots/PILOT-10-self-other-distinction-identity-and-attachment-stress.md)
 
-Synthesis companion: [Six-Cluster Synthesis and Emerging F3 Construct Families](six-cluster-synthesis-and-F03-construct-families.md)
+Synthesis companion: [Six-Cluster Synthesis and Emerging F03 Construct Families](six-cluster-synthesis-and-F03-construct-families.md)
 
 ## The missing bridge
 
@@ -31,13 +31,13 @@ What can become available to ME?
 CAPACITY QUALITY
 Is it differentiated, accurate, revisable and flexibly recruited?
         ↓
-F2 · DEVELOPMENTAL FORMATION
+F02 · DEVELOPMENTAL FORMATION
 Under what conditions was this pattern learned or left underdeveloped?
         ↓
 CHRONIC ORGANISATION
 Has the pattern become recurrent, generalised, rigid or difficult to update?
         ↓
-F3 · ADULT MAINTENANCE AND USE
+F03 · ADULT MAINTENANCE AND USE
 What explanation, goal, identity or regulation route keeps it in place?
         ↓
 HPR · ACTION, POWER AND IMPACT
@@ -52,7 +52,7 @@ Mentalizing can remain highly developed when bodily self-information and affecti
 
 That asymmetry can be extremely dangerous when it combines with instrumental goals, entitlement, control over resources, low concern, retaliatory response to feedback or repeated willingness to use another person's vulnerability.
 
-It can also appear in roles requiring temporary emotional distance, technical analysis or emergency composure. The configuration supplies **capacity for interpersonal prediction**. F3 and HPR determine how that capacity is organised and used.
+It can also appear in roles requiring temporary emotional distance, technical analysis or emergency composure. The configuration supplies **capacity for interpersonal prediction**. F03 and HPR determine how that capacity is organised and used.
 
 Research must therefore test several separable claims:
 
@@ -71,13 +71,15 @@ The third evidence pass separates the vulnerable side of the field. “People-pl
 
 The fourth evidence pass separates the several meanings of distance. Behavioural withdrawal can reflect fear of evaluation, attachment deactivation, low anticipated reward, overload, shutdown, chosen solitude or a protective boundary. **Distance is the observed form, not its explanation.** Function, present conditions, voluntariness, flexibility, updating and cost determine whether a pattern is fear-maintained, capacity-limited, restorative or condition-matched. Configuration `100` supplies none of those conclusions by itself.
 
-The fifth evidence pass separates the several targets of control. Structure may organise the self, a task, a shared process, another person's behaviour, their inner experience or their practical options. Intolerance of uncertainty, perfectionistic concern and over-controlled coping can explain pressure without establishing coercion. **Option-field restriction** begins where power, imposed cost or credible threat makes another person's refusal or independent action less executable. F3 examines the current justification; HPR establishes what was done and whose routes were reduced.
+The fifth evidence pass separates the several targets of control. Structure may organise the self, a task, a shared process, another person's behaviour, their inner experience or their practical options. Intolerance of uncertainty, perfectionistic concern and over-controlled coping can explain pressure without establishing coercion. **Option-field restriction** begins where power, imposed cost or credible threat makes another person's refusal or independent action less executable. F03 examines the current justification; HPR establishes what was done and whose routes were reduced.
 
 The sixth evidence pass replaces “fusion” with a condition-sensitive profile. Affective sharing, emotional contagion, personal distress, self–other distinction, mentalizing quality and identity continuity can change independently. Under attachment stress, mentalizing may become less balanced or too certain rather than simply disappearing. BPD research is useful for these components but remains too heterogeneous to define one configuration, empathy profile, developmental history or behavioural risk.
 
-## F2 and F3 ownership
+<a id="f2-and-f3-ownership"></a>
 
-F2 can investigate why a capacity configuration developed. Candidate routes include:
+## F02 and F03 ownership
+
+F02 can investigate why a capacity configuration developed. Candidate routes include:
 
 - emotional neglect or invalidation;
 - caregiving in which connection required monitoring rather than mutual feeling;
@@ -88,9 +90,9 @@ F2 can investigate why a capacity configuration developed. Candidate routes incl
 - neurodevelopmental, sensory, health or disability-related variation;
 - continuing threat requiring strategic distance or constant control.
 
-F2 does not decide what the adult does with the resulting capacities.
+F02 does not decide what the adult does with the resulting capacities.
 
-F3 owns:
+F03 owns:
 
 - the adult explanation that preserves the configuration;
 - goals and preferred outcomes;
@@ -224,8 +226,8 @@ These records should be migrated into the Shared Source Record Index and attache
 4. **Avoidance and detachment:** separate personality disorder, attachment, social anxiety, coping, shutdown and chosen distance.
 5. **Control:** separate self-control, compulsive control, interpersonal dominance, psychological control and coercive control.
 6. **Fusion and instability:** mentalization, self–other distinction, emotion regulation and identity research.
-7. **Developmental routes:** connect only supported pathways to F2.
-8. **Adult maintenance and behaviour:** route goals, rationalisation and feedback into F3 and observable impact into HPR.
+7. **Developmental routes:** connect only supported pathways to F02.
+8. **Adult maintenance and behaviour:** route goals, rationalisation and feedback into F03 and observable impact into HPR.
 
 ## Non-negotiable boundaries
 
@@ -236,7 +238,7 @@ These records should be migrated into the Shared Source Record Index and attache
 - People-pleasing can increase vulnerability without transferring responsibility from the person using coercion or manipulation.
 - Trauma and adversity do not predict harmful personality development in one direction.
 - Developmental explanation does not remove adult responsibility.
-- F3 owns goals, justification and adult maintenance; HPR owns action, power, impact and repair.
+- F03 owns goals, justification and adult maintenance; HPR owns action, power, impact and repair.
 - The same person can show different configurations by context and time.
 - Configuration `111` does not guarantee safe or ethical conduct.
 

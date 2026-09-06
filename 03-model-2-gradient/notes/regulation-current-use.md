@@ -3,7 +3,7 @@
 Scientific-facing subtitle: **Current uses of regulation classified by unit, process, outcome and decision need**
 
 Status: Pass 3A first inventory · 21 August 2026
-Scope: current top-level Inner Compass and Gradient pages · F1–F12 reviews · Regulation and Return workbench
+Scope: current top-level Inner Compass and Gradient pages · F01–F12 reviews · Regulation and Return workbench
 Purpose: identify where **regulation** is already precise, where it needs narrowing and where another word would make the process clearer
 
 Companion: [The Regulation Pass](regulation-pass.md)
@@ -55,13 +55,13 @@ F10 uses regulation for changes affecting gene activity and possible epigenetic 
 
 ### Emotion-regulation research
 
-The science protocol, F8, F9 and F12 refer to emotion-regulation research or strategies.
+The science protocol, F08, F09 and F12 refer to emotion-regulation research or strategies.
 
 **Decision: retain as a research family.** Each applied claim should still name the target, strategy, timing and measured outcome. Emotional granularity, affect labelling or bodily attention must not be called regulation merely because they may sometimes influence emotion.
 
 ### Social and institutional regulation as level-specific language
 
-F1 refers to social regulation. F4 examines rules, enforcement and collective organisation. These uses can describe social coordination or conduct-shaping processes when they do not borrow organism-level mechanism.
+F01 refers to social regulation. F04 examines rules, enforcement and collective organisation. These uses can describe social coordination or conduct-shaping processes when they do not borrow organism-level mechanism.
 
 **Decision: narrow.** Prefer the actual process—caregiving, social buffering, coordination, norm enforcement, sanction, resource distribution or control—whenever it is known.
 
@@ -141,15 +141,15 @@ The relational-capacity page says the popular phrase may be better described as 
 
 | Framework | Current use | First decision |
 | --- | --- | --- |
-| **F1** | Viability regulation, regulatory capacities and social regulation | **Retain/narrow:** keep viability processes; name caregiving, social buffering or coordination directly |
-| **F2** | Caregiver stress and regulation; visible settling as evidence | **Narrow:** observe caregiving behaviour, availability, conditions and child outcome; settling does not prove learning |
-| **F3** | Others recruited “to regulate” through closeness, distance, management or control | **Replace:** name support seeking, distance, structure, control, consent and imposed cost separately |
-| **F4** | Historical title “Rules Regulate”; rules alter uncertainty, options and consequences | **Retain decomposed social level:** expectation, participation, enforcement, contestability and distributed effect |
-| **F5** | Historical “Worth Hierarchies Regulate” | **Replace already accepted:** social valuation, status, resources and unequal conditions |
-| **F6** | Historical “Bias Regulates” | **Replace already accepted:** selection, categorisation, judgement and revision; regulation may be one tested contributor |
-| **F7** | Historical “Domination Regulates” | **Replace already accepted:** behaviour, power, enforcement, viable refusal and impact; actor function investigated separately |
-| **F8** | Regulation strategies, affect labelling and mutual regulation | **Narrow:** keep research terms bounded; do not merge recovery, Return, repair or reunion |
-| **F9** | Proposed universal regulatory architecture and emotion regulation under differing conditions | **Reject universality:** name the shared process and preserve neurodivergent, disability and contextual variation |
+| **F01** | Viability regulation, regulatory capacities and social regulation | **Retain/narrow:** keep viability processes; name caregiving, social buffering or coordination directly |
+| **F02** | Caregiver stress and regulation; visible settling as evidence | **Narrow:** observe caregiving behaviour, availability, conditions and child outcome; settling does not prove learning |
+| **F03** | Others recruited “to regulate” through closeness, distance, management or control | **Replace:** name support seeking, distance, structure, control, consent and imposed cost separately |
+| **F04** | Historical title “Rules Regulate”; rules alter uncertainty, options and consequences | **Retain decomposed social level:** expectation, participation, enforcement, contestability and distributed effect |
+| **F05** | Historical “Worth Hierarchies Regulate” | **Replace already accepted:** social valuation, status, resources and unequal conditions |
+| **F06** | Historical “Bias Regulates” | **Replace already accepted:** selection, categorisation, judgement and revision; regulation may be one tested contributor |
+| **F07** | Historical “Domination Regulates” | **Replace already accepted:** behaviour, power, enforcement, viable refusal and impact; actor function investigated separately |
+| **F08** | Regulation strategies, affect labelling and mutual regulation | **Narrow:** keep research terms bounded; do not merge recovery, Return, repair or reunion |
+| **F09** | Proposed universal regulatory architecture and emotion regulation under differing conditions | **Reject universality:** name the shared process and preserve neurodivergent, disability and contextual variation |
 | **F10** | Gene regulation, mutual regulation and child calibration to adult regulation | **Split levels:** retain molecular use; replace caregiver-body shorthand with observable behaviour and context |
 | **F11** | No load-bearing Regulation wording found in the present review | **Do not add by default:** examine ambivalence through information, values, uncertainty, action and responsibility first |
 | **F12** | Collection-wide Regulation warning and route audit | **Retain as the handoff:** it correctly separates organism, emotion, interpersonal, pressure-reduction and imposed-cost questions |

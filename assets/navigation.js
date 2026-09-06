@@ -9,7 +9,7 @@
     ["model-1", "Model 1", "02-model-1-ess-cls-me/index.html"],
     ["model-2", "Model 2", "03-model-2-gradient/index.html"],
     ["model-3", "Model 3", "04-model-3-esc/index.html"],
-    ["frameworks", "F1–F12", "05-frameworks/index.html"],
+    ["frameworks", "F01–F12", "05-frameworks/index.html"],
     ["inner-compass", "Inner Compass", "06-inner-compass-four-modes/index.html"],
     ["reference", "Reference", "07-reference/index.html"]
   ];

@@ -1,14 +1,16 @@
-# F2 · Developmental Shaping of Emotional Participation
+<a id="f2--developmental-shaping-of-emotional-participation"></a>
+
+# F02 · Developmental Shaping of Emotional Participation
 
 Scientific-facing subtitle: **How embodied, cognitive, reflective and relational capacities develop from birth to early adulthood, and how repeated emotional invalidation may shape access, expression, action and self-organisation**
 
 Status: fifth-pass two-job developmental architecture draft · 22 August 2026
 
-Source section: F2 · Developmental Calibration in [The Twelve Frameworks](../index.html)
+Source section: F02 · Developmental Calibration in [The Twelve Frameworks](../index.html)
 
-Current active account: [F2 · What Develops When Emotion Must Be Overridden](diagram.html)
+Current active account: [F02 · What Develops When Emotion Must Be Overridden](diagram.html)
 
-Governing companions: [Scientific Architecture Inventory](../../evidence/reviews/scientific-architecture-inventory.md) · [Project Terminology Ledger](../../GLOSSARY.md) · [F2 · Trauma, Stress and Adversity Crosswalk](grounding/trauma-stress-and-adversity-crosswalk.md)
+Governing companions: [Scientific Architecture Inventory](../../evidence/reviews/scientific-architecture-inventory.md) · [Project Terminology Ledger](../../GLOSSARY.md) · [F02 · Trauma, Stress and Adversity Crosswalk](grounding/trauma-stress-and-adversity-crosswalk.md)
 
 Shared biological premise: [Human Sociality and the Two Survival Functions](../../07-reference/sociality.html)
 
@@ -16,7 +18,7 @@ Emotional-information companion: [Emotions and Feelings · Chronic Survival](../
 
 ## Decision
 
-**F2 has two inseparable developmental jobs.**
+**F02 has two inseparable developmental jobs.**
 
 1. It explains what embodied, emotional, learning, communicative and reflective capacities are available from birth; how a dependent child regulates through their own developing organism within conditions other people often have to provide or change; and how participation in bodily, emotional, relational and reflective information may widen through early adulthood.
 2. It explains how repeated relational responses shape which signals can be noticed, differentiated, trusted, expressed, investigated and acted upon—particularly when preserving access to care, protection or belonging appears to require the child to conceal their information, adopt another person's explanation or practise an acceptable version of themselves.
@@ -35,11 +37,13 @@ Scientific-facing explanatory line:
 
 The word **calibration** can remain when its target is named: calibration of a prediction, recruitment threshold, attentional priority, danger–safety discrimination or expectation that an action will change an outcome. It should not stand for the person's whole developmental organisation.
 
-## The question F2 owns
+<a id="the-question-f2-owns"></a>
+
+## The question F02 owns
 
 > What capacities are available at birth, how do they widen across development, and how may repeated relational outcomes shape whether emotional information can be noticed, identified, expressed, trusted, used for action and included in the child's developing understanding of who they are?
 
-F2 owns developmental learning across seven separable layers:
+F02 owns developmental learning across seven separable layers:
 
 1. condition detection and signal formation;
 2. bodily representation;
@@ -61,9 +65,11 @@ Repeated outcomes can therefore become part of what the child learns about a sig
 
 This is a possible developmental learning route, not a universal account of childhood and not a verdict about one caregiver, culture or adult outcome.
 
-## The developmental story F2 tells
+<a id="the-developmental-story-f2-tells"></a>
 
-F2 follows two processes across the same years:
+## The developmental story F02 tells
+
+F02 follows two processes across the same years:
 
 ```text
 CAPACITIES WIDEN
@@ -90,7 +96,7 @@ Development does not take place first and social learning afterwards. The child'
 
 A newborn is not a blank organism waiting for adults to install settings. From birth, the child already has active capacities for internal and external detection, bodily coordination, arousal and distress, orienting, approach and withdrawal, communication, learning, memory and expectation. These capacities are substantial, but they are not yet adult forms of language, explanation, perspective-taking or deliberate reflective choice.
 
-This creates the asymmetry F2 needs to keep visible:
+This creates the asymmetry F02 needs to keep visible:
 
 > The child can experience, learn and adapt before they can fully explain, compare accounts, leave the relationship or understand the adult as a separate person with their own history, limits and motives.
 
@@ -115,7 +121,7 @@ if its biological translation remains beside it:
 Another person's response can participate in development in at least three
 distinguishable ways:
 
-| Developmental process | Question it answers | F2 significance |
+| Developmental process | Question it answers | F02 significance |
 | --- | --- | --- |
 | **Organism↔organism information loop** | What does another person's response tell the child about their state, the situation and the relationship? | Another response can support differentiation and self-understanding, or make the child's information appear mistaken, dangerous or relationally costly |
 | **Caregiver participation in regulation** | What conditions does another person change, and how does the child's organism reorganise? | Effective action can support updating and recovery; silence or lower visible distress does not establish that the condition changed |
@@ -127,13 +133,13 @@ whether conditions can change and whether recovery can be expected. They can
 also teach that the adult's response must be managed before the child's own
 condition can be addressed.
 
-This is the bridge between F2's two jobs. The relationships through which
+This is the bridge between F02's two jobs. The relationships through which
 emotional participation develops are also the relationships within which some
 signals may become difficult or costly to use.
 
 ### When connection is also protection
 
-Early dependence can couple the two survival-relevant problem-spaces that F1
+Early dependence can couple the two survival-relevant problem-spaces that F01
 keeps distinct. The caregiver is both another person whose availability matters
 and a source of conditions the child cannot yet reliably produce or change
 alone.
@@ -168,7 +174,7 @@ The distinction remains important later. Another person's response may be
 necessary for mutual recognition or relational repair, but not for every form
 of organism-level regulation or Return. A person may eventually update through
 grief, an effective boundary, revised expectation or reorganisation even when
-the original relationship is not restored. F2 therefore distinguishes
+the original relationship is not restored. F02 therefore distinguishes
 **relational restoration**, **organism-level Return** and **Return without
 relational restoration**.
 
@@ -191,13 +197,13 @@ The timeline should remain connected to ESS, CLS and ME without turning them int
 
 - **ESS:** emotional–somatic information is active from birth and continues developing in precision, differentiation, weighting, learned prediction and relation to action.
 - **CLS:** learning, memory, discrimination and prediction have early foundations; language-based comparison, explanation, counterfactual thinking and metacognition widen gradually.
-- **ME:** conscious participation may become more able to notice, name, compare, question, choose and revisit. F2 does not date the beginning of consciousness or place ME above the organism.
+- **ME:** conscious participation may become more able to notice, name, compare, question, choose and revisit. F02 does not date the beginning of consciousness or place ME above the organism.
 
 No system waits for another to finish developing. They participate concurrently and recurrently with different ranges of availability across time and conditions.
 
 ## When emotion is treated as noise, error or wrongdoing
 
-F2 needs a clearer account of invalidation because the social response becomes
+F02 needs a clearer account of invalidation because the social response becomes
 part of what the child can learn about emotional information.
 
 In this framework, **emotion invalidation** is a working description for
@@ -235,7 +241,7 @@ participation may change. They do not have to change together.
 
 ## The acceptable character
 
-The word **character** can remain in F2 if we define what it means here.
+The word **character** can remain in F02 if we define what it means here.
 
 > **The acceptable character is a practised organisation of expression, behaviour, attention and self-explanation built around the version of the child that appears most likely to preserve care, approval, safety or belonging.**
 
@@ -270,7 +276,7 @@ the acceptable character can begin to feel like identity
 
 The important point is not that a hidden “real self” remains intact behind a false mask. The developing person is real throughout. What can diverge are signal, felt access, public expression, available action, relational role and self-explanation. Some parts of experience receive recognition and practice; others remain costly, underdeveloped, context-bound or difficult to include in the person's account of themselves.
 
-Nor does F2 need to conclude that the adults did not love the child. Adults can feel love while also making access to approval, calm, closeness or care conditional in practice. The developmental question is what the child repeatedly had to do, hide, manage or become in order for connection to remain most available.
+Nor does F02 need to conclude that the adults did not love the child. Adults can feel love while also making access to approval, calm, closeness or care conditional in practice. The developmental question is what the child repeatedly had to do, hide, manage or become in order for connection to remain most available.
 
 ### How both information systems can participate
 
@@ -325,7 +331,7 @@ used to reconstruct a person's childhood.
 ### The Regulation warning
 
 Invalidation may reduce visible conflict by producing silence, compliance,
-concealment or an acceptable emotional display. F2 should not call that
+concealment or an acceptable emotional display. F02 should not call that
 co-regulation or successful settling without further evidence. It may be
 **imposed stability**: the interaction became easier for the adult while the
 child carried the uncertainty, inhibition or recovery cost.
@@ -337,7 +343,7 @@ real. But relief does not establish that the original condition changed, the
 emotion became understandable, a viable action became available or recovery
 completed.
 
-F2 should follow regulation through the whole route:
+F02 should follow regulation through the whole route:
 
 ```text
 condition · signal · felt access · interpretation · expression · action
@@ -363,7 +369,7 @@ access to the emotional information.
 
 ### Two opposite interpretive risks
 
-The Chronic page identifies two risks that F2 can now connect developmentally:
+The Chronic page identifies two risks that F02 can now connect developmentally:
 
 - **Feeling–Fact Collapse:** “I feel it, therefore the external conclusion must
   be true.”
@@ -374,23 +380,27 @@ Emotionally literate development avoids choosing between them. It helps the
 person retain the signal as information, test its interpretation against
 conditions and evidence, and keep behaviour and impact on their own plane.
 
-## How F2 connects to the whole
+<a id="how-f2-connects-to-the-whole"></a>
 
-| Current layer | What F2 contributes | Boundary of the contribution |
+## How F02 connects to the whole
+
+| Current layer | What F02 contributes | Boundary of the contribution |
 | --- | --- | --- |
-| **F1 · Foundations of the Fluid Gradient** | F2 receives an inherited repertoire of sensing, affect, defence, relationship, learning, reflection and recovery capacities | Developmental change must not be explained by assigning a response an evolutionary age |
+| **F01 · Foundations of the Fluid Gradient** | F02 receives an inherited repertoire of sensing, affect, defence, relationship, learning, reflection and recovery capacities | Developmental change must not be explained by assigning a response an evolutionary age |
 | **ESS, CLS and ME** | A developmental account of how embodied-affective learning, reflective-symbolic capacities and conscious participation may become differently available and coordinated | ESS, CLS and ME are TEG-Blue constructs; component evidence does not establish them as scientific systems or developmental stages |
 | **Model 1 · coordinated conscious access** | Possible histories of how bodily and situational information became easier, harder or more costly to notice, interpret, express or use | Present access does not reveal one developmental history, and limited report does not prove absent biological representation |
-| **Fluid Gradient** | Learned expectations and action availability may participate in present organisation | Fluid owns correspondence to present conditions; F2 does not assign a childhood cause to a present Position |
-| **Chronic Gradient** | Developmental learning is one possible route into recurrent narrowing, generalisation or updating difficulty | F2 does not define Chronic organisation; persistence, reconstruction, interrupted recovery and continuing adversity require their own evidence |
+| **Fluid Gradient** | Learned expectations and action availability may participate in present organisation | Fluid owns correspondence to present conditions; F02 does not assign a childhood cause to a present Position |
+| **Chronic Gradient** | Developmental learning is one possible route into recurrent narrowing, generalisation or updating difficulty | F02 does not define Chronic organisation; persistence, reconstruction, interrupted recovery and continuing adversity require their own evidence |
 | **Relational Capacity Configurations** | Developmental questions for bodily information access and use, affective sharing and mentalizing | Uneven capacities are not fixed developmental types and do not establish accuracy, concern, morality or prosocial use |
-| **F3 · adult maintenance and revision** | Learned relational expectations, available information, self-explanations and practised response routes | F2 does not explain how an adult presently maintains, revises or acts from them; that is F3's question |
-| **Trauma, stress and adversity grounding** | Research families that may test particular F2 conditions, mechanisms or outcomes | Trauma is not F2's single cause, and exposure, diagnosis or adult outcome cannot prove the F2 pathway occurred |
+| **F03 · adult maintenance and revision** | Learned relational expectations, available information, self-explanations and practised response routes | F02 does not explain how an adult presently maintains, revises or acts from them; that is F03's question |
+| **Trauma, stress and adversity grounding** | Research families that may test particular F02 conditions, mechanisms or outcomes | Trauma is not F02's single cause, and exposure, diagnosis or adult outcome cannot prove the F02 pathway occurred |
 | **Harm, Power and Repair** | Developmental conditions may include punishment, coercion, role reversal, invalidation, support or repair | Internal adaptation does not determine later conduct or remove agency, responsibility, impact or the need for repair |
-| **Filter of Worth and F12** | A developmental route by which externally rewarded qualities may become conditions for self-value, approval and belonging | F2 does not establish the institutional history of those values or reduce every identity, ambition or social role to childhood invalidation |
-| **F8 and F10 · repair and generational change** | A map of the capacities, expectations and relational contingencies that later experience may help revise | F2 does not guarantee that safety alone restores access or that one person's processing prevents every intergenerational route |
+| **Filter of Worth and F12** | A developmental route by which externally rewarded qualities may become conditions for self-value, approval and belonging | F02 does not establish the institutional history of those values or reduce every identity, ambition or social role to childhood invalidation |
+| **F08 and F10 · repair and generational change** | A map of the capacities, expectations and relational contingencies that later experience may help revise | F02 does not guarantee that safety alone restores access or that one person's processing prevents every intergenerational route |
 
-## Reading the original F2 language against the current system
+<a id="reading-the-original-f2-language-against-the-current-system"></a>
+
+## Reading the original F02 language against the current system
 
 ### Preserve, with precise translation
 
@@ -419,17 +429,17 @@ conditions and evidence, and keep behaviour and impact on their own plane.
 
 ## Relationship to ESS, CLS and ME
 
-F2 clarifies development without turning the three TEG-Blue terms into a maturational ladder.
+F02 clarifies development without turning the three TEG-Blue terms into a maturational ladder.
 
 - **ESS:** embodied and affective information is active early; development may change its differentiation, weighting, accessibility and relation to action without proving that signal generation stopped.
 - **CLS:** memory, discrimination and prediction have early foundations; language-based comparison, explanation, counterfactual reasoning and metacognition develop gradually rather than arriving as a separate ruler over emotion.
-- **ME:** conscious participation can widen as the child becomes more able to notice, name, compare, question, choose and revisit. F2 does not date the beginning of consciousness or define ME as an executive controller.
+- **ME:** conscious participation can widen as the child becomes more able to notice, name, compare, question, choose and revisit. F02 does not date the beginning of consciousness or define ME as an executive controller.
 
 The healthy relation is not logic defeating emotion. It is increasing capacity for embodied and reflective information to become jointly available to the person, who may then investigate meaning, conditions, options and consequences.
 
 ## Culture, context and power
 
-F2 should not reduce development to a private caregiver–child nervous-system exchange. Emotional learning also occurs within:
+F02 should not reduce development to a private caregiver–child nervous-system exchange. Emotional learning also occurs within:
 
 - cultural display and interpretation rules;
 - gender, race, class, disability and neurodivergence-related expectations;
@@ -441,52 +451,54 @@ F2 should not reduce development to a private caregiver–child nervous-system e
 
 A limit on expression is not automatically invalidation. Caregivers and communities may constrain expression for immediate safety, coordination or respect while still helping a child recognise and use the underlying information. The key question is what remains readable, expressible and actionable across contexts, and whether support and repair remain possible.
 
-## F2's handoff
+<a id="f2s-handoff"></a>
 
-F2 ends with developmentally shaped possibilities, expectations and practised routes. F3 begins with the adult maintenance-and-revision question:
+## F02's handoff
+
+F02 ends with developmentally shaped possibilities, expectations and practised routes. F03 begins with the adult maintenance-and-revision question:
 
 > Given present conditions and the information now available, what prediction, meaning, self-position, response route and immediate consequence keep a pattern going—or allow it to change?
 
 The clean handoff is:
 
 ```text
-inherited repertoire (F1)
+inherited repertoire (F01)
         ↓
-developmental conditions + repeated relational outcomes (F2)
+developmental conditions + repeated relational outcomes (F02)
         ↓
 access · expression · action availability · learned expectation
         ↓
 present information and whole-organism organisation
         ↓
-adult maintenance, revision and response-route selection (F3)
+adult maintenance, revision and response-route selection (F03)
 ```
 
-F2 can explain how a route may have become available or costly. It cannot reconstruct a person's history from the route they use now.
+F02 can explain how a route may have become available or costly. It cannot reconstruct a person's history from the route they use now.
 
 ## Result of this pass
 
 - **Framework status:** retain.
-- **Collection role:** second Foundational Framework and developmental handoff between F1 and the present system.
-- **Accessible title:** F2 · Developmental Shaping of Emotional Participation.
+- **Collection role:** second Foundational Framework and developmental handoff between F01 and the present system.
+- **Accessible title:** F02 · Developmental Shaping of Emotional Participation.
 - **Scientific-facing subtitle:** How embodied, cognitive, reflective and relational capacities develop from birth to early adulthood, and how repeated emotional invalidation may shape access, expression, action and self-organisation.
 - **Two inseparable jobs:** explain how participation widens through developing capacities, organism↔organism information and caregiver-provided regulatory conditions, then show how the same relational loops can shape which signals remain accessible, credible, expressible and usable.
 - **Developmental timeline:** broad windows now run from birth through early adulthood without becoming universal deadlines or ESS/CLS/ME stages.
 - **Calibration:** retain only when the calibrated target is named.
-- **Architecture:** the current active F2 page already carries the required seven-layer decomposition and major boundaries.
+- **Architecture:** the current active F02 page already carries the required seven-layer decomposition and major boundaries.
 - **Emotion-invalidation route:** now distinguishes the continuing signal from learned changes in trust, access, expression, action, explanation and updating.
 - **Acceptable character:** defined as a practised relationship-preserving organisation of expression, behaviour, attention and self-explanation, not a false person, fixed identity or inevitable outcome.
 - **Dependency coupling:** for a dependent child, preserving caregiver connection may also preserve access to material protection and conditions for recovery; this can make emotional expression relationally costly without requiring conscious choice.
 - **Return distinction:** relational restoration, organism-level Return and Return without relational restoration must not be treated as the same developmental outcome.
 - **Regulation:** visible compliance or role performance may reduce immediate relational pressure without establishing emotional updating, recovery or wider participation.
 - **Chronic handoff:** invalidation is retained as one possible contributor to Chronic participation, not its master cause or a history inferred from present behaviour.
-- **Main protection:** do not equate emotion override with absence of emotion, reduce development to one caregiver mechanism, infer childhood from adult presentation or treat F2 as a general trauma model.
+- **Main protection:** do not equate emotion override with absence of emotion, reduce development to one caregiver mechanism, infer childhood from adult presentation or treat F02 as a general trauma model.
 - **Evidence status:** initial component anchors and research routes exist; this record remains an architectural decision rather than final source-level validation.
 
 ## Grounding science and knowledge fields
 
-F2 requires sciences that can follow change over time and distinguish development from present association. Adult retrospective report and cross-sectional group difference may contribute, but they cannot establish a developmental pathway by themselves.
+F02 requires sciences that can follow change over time and distinguish development from present association. Adult retrospective report and cross-sectional group difference may contribute, but they cannot establish a developmental pathway by themselves.
 
-| Field | What it can ground in F2 | What it cannot establish alone |
+| Field | What it can ground in F02 | What it cannot establish alone |
 | --- | --- | --- |
 | **Developmental psychology and developmental science** | Change in emotion, cognition, relationship, communication and participation across childhood and adolescence | One universal timetable or an individual history inferred from an adult pattern |
 | **Developmental neuroscience** | Maturation and experience-related change in distributed neural systems | That one brain measure explains a relationship, emotion or later behaviour |
@@ -510,4 +522,4 @@ Forensic psychology is a context-specific contributor when developmental knowled
 
 ### Priority evidence
 
-F2 should favour prospective longitudinal studies, repeated developmental observation, natural experiments, within-person change, culturally varied samples and intervention or recovery follow-up. Research should measure the proposed developmental condition, the process expected to change, present context and later participation rather than using diagnosis or adult recollection as a complete developmental record.
+F02 should favour prospective longitudinal studies, repeated developmental observation, natural experiments, within-person change, culturally varied samples and intervention or recovery follow-up. Research should measure the proposed developmental condition, the process expected to change, present context and later participation rather than using diagnosis or adult recollection as a complete developmental record.

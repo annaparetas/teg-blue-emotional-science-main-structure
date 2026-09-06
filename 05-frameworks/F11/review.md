@@ -6,7 +6,7 @@ Source section: F11 · Paradox Holds What Logic Cannot in [The Twelve Frameworks
 
 Governing model premise: [How the Nervous System Organisation Gradient Models Organism Organisation](../../03-model-2-gradient/premise.html)
 
-Revision foundation: [F3 · Adult Pattern Maintenance and Revision](../F03/review.md)
+Revision foundation: [F03 · Adult Pattern Maintenance and Revision](../F03/review.md)
 
 Upstream boundary: [F10 · Intergenerational Pathways, Caregiving and Change](../F10/review.md)
 
@@ -230,15 +230,15 @@ Context can explain behaviour without removing responsibility. Complexity can im
 
 | Current layer | What F11 receives or contributes | Boundary of the connection |
 | --- | --- | --- |
-| **F1 · evolutionary foundations** | Human action may involve competing motives, social needs and action tendencies | Evolution does not make every motive valid or every conflict adaptive |
-| **F2 · developmental shaping** | Capacity to differentiate feeling, perspective, evidence and self–other experience develops unevenly and culturally | Childhood cannot be inferred from adult ambivalence or narrative form |
-| **F3 · adult maintenance and revision** | F3 supplies self-position, expectation, explanation, feedback and revision questions | Coherence is not accuracy, and contradiction is not proof that a false story is breaking open |
-| **F4 · shared rules** | Rules may coordinate competing needs or conceal contradictions among stated values, practice and impact | A rule's internal consistency does not establish fairness or legitimacy |
-| **F5 · social valuation** | Identity and status may create competing belonging, recognition and protection demands | Marginalised people should not be required to integrate devaluation into a shared middle ground |
-| **F6 · bias and judgement** | Differentiation and revision may improve judgement when evidence and procedure remain visible | Complex reasoning can still be biased, strategic or wrong; simple conclusions can be accurate |
-| **F7 · coercive enforcement** | Explanation and responsibility can coexist; actor and affected-person experiences may both be real | Coercion, restricted agency and impact are not neutralised by mutual distress or relational complexity |
-| **F8 · recovery routes** | Recovery may include ambivalence, grief, changing meaning and uneven outcomes | Worsening, oscillation or emotional intensity does not prove recovery or repair |
-| **F9 · environmental fit** | Communication, language, sensory conditions and cognitive access may affect how complexity is expressed | Conventional fluency, eye contact or narrative smoothness is not evidence of greater integration |
+| **F01 · evolutionary foundations** | Human action may involve competing motives, social needs and action tendencies | Evolution does not make every motive valid or every conflict adaptive |
+| **F02 · developmental shaping** | Capacity to differentiate feeling, perspective, evidence and self–other experience develops unevenly and culturally | Childhood cannot be inferred from adult ambivalence or narrative form |
+| **F03 · adult maintenance and revision** | F03 supplies self-position, expectation, explanation, feedback and revision questions | Coherence is not accuracy, and contradiction is not proof that a false story is breaking open |
+| **F04 · shared rules** | Rules may coordinate competing needs or conceal contradictions among stated values, practice and impact | A rule's internal consistency does not establish fairness or legitimacy |
+| **F05 · social valuation** | Identity and status may create competing belonging, recognition and protection demands | Marginalised people should not be required to integrate devaluation into a shared middle ground |
+| **F06 · bias and judgement** | Differentiation and revision may improve judgement when evidence and procedure remain visible | Complex reasoning can still be biased, strategic or wrong; simple conclusions can be accurate |
+| **F07 · coercive enforcement** | Explanation and responsibility can coexist; actor and affected-person experiences may both be real | Coercion, restricted agency and impact are not neutralised by mutual distress or relational complexity |
+| **F08 · recovery routes** | Recovery may include ambivalence, grief, changing meaning and uneven outcomes | Worsening, oscillation or emotional intensity does not prove recovery or repair |
+| **F09 · environmental fit** | Communication, language, sensory conditions and cognitive access may affect how complexity is expressed | Conventional fluency, eye contact or narrative smoothness is not evidence of greater integration |
 | **F10 · intergenerational pathways** | Love and harm, continuity and refusal, compassion and boundary may coexist in family histories | Understanding lineage creates no duty to preserve contact or distribute responsibility equally |
 | **Model 1 · coordinated conscious access** | Bodily, emotional, contextual and reflective information may contribute different parts of a situation | The body and logic are not opposing truth systems, and no signal provides a complete verdict |
 | **Gradient** | Organisation may alter which information and response alternatives are currently accessible | No Position determines binary thought, paradox tolerance, truth or ethical conduct |
@@ -312,7 +312,7 @@ observe outcome and revise without rewriting responsibility
 Four handoffs matter most:
 
 1. **To immediate decision or protection:** when delay creates danger or restricted agency. Complexity should inform proportionate action, not prevent it.
-2. **To F3 and F6:** when the conflict concerns self-explanation, evidence, bias, judgement, feedback and revision.
+2. **To F03 and F06:** when the conflict concerns self-explanation, evidence, bias, judgement, feedback and revision.
 3. **To clinical or therapeutic support:** when ambivalence, grief, narrative difficulty, worsening or cognitive change creates significant distress or impairment. F11 is not a treatment protocol.
 4. **To F12:** when the inquiry moves from individual or relational conflict to competing historical explanations, cultural hierarchy and species-level claims.
 

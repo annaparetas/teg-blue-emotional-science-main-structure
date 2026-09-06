@@ -61,7 +61,7 @@ Until `evidence/` is transferred these remain at
 - `evidence/claims/current-construct-decomposition.md` (constructs NG-01 to
   NG-05, IC-10, IC-11)
 - `evidence/crosswalks/F01-fluid-chronic-grounding.md` (which research
-  families ground F1, Fluid and Chronic)
+  families ground F01, Fluid and Chronic)
 - `development/model-notes/chemical-mediators-and-prolonged-stress.md`
   (shared physiology beneath all three models)
 - `development/registers/shared-source-record-index.md` (the single citation

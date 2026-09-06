@@ -1,16 +1,18 @@
-# F5 · Social Valuation, Status and Unequal Conditions
+<a id="f5--social-valuation-status-and-unequal-conditions"></a>
+
+# F05 · Social Valuation, Status and Unequal Conditions
 
 Status: first-pass architectural review · 21 August 2026
 
-Source section: F5 · Worth Hierarchies Regulate in [The Twelve Frameworks](../index.html)
+Source section: F05 · Worth Hierarchies Regulate in [The Twelve Frameworks](../index.html)
 
 Current foundations: [Scientific Lineage and Integrative Grounding](../../evidence/reviews/scientific-lineage-and-integrative-grounding.md) · [Original Frameworks Claim Reassessment](../../evidence/reviews/original-frameworks-claim-reassessment.md) · [Harm, Power and Repair Grounding](../../07-reference/grounding/harm-power-and-repair.md) · [Current Construct Claim Decomposition](../../evidence/claims/current-construct-decomposition.md)
 
-Upstream boundary: [F4 · Shared Rules and Collective Organisation](../F04/review.md)
+Upstream boundary: [F04 · Shared Rules and Collective Organisation](../F04/review.md)
 
 ## Decision
 
-**Keep F5 as a Foundational Framework, but move from “worth as regulation” to the observable processes of social valuation, status and unequal conditions.**
+**Keep F05 as a Foundational Framework, but move from “worth as regulation” to the observable processes of social valuation, status and unequal conditions.**
 
 Provisional title:
 
@@ -24,13 +26,15 @@ The original title identifies a real problem. Some differences become more than 
 
 “Worth,” however, contains two different questions. Human worth is an ethical commitment; it is not a biological quantity that science can measure. Social valuation is observable. It appears in status, credibility, attention, opportunity, material distribution, policy and the consequences attached to a category or position.
 
-F5 should study that social valuation without suggesting that hierarchy is produced by a shared nervous-system need. Unequal conditions can affect health and organism organisation. Those effects are downstream consequences and feedback routes, not the mechanism that created the hierarchy.
+F05 should study that social valuation without suggesting that hierarchy is produced by a shared nervous-system need. Unequal conditions can affect health and organism organisation. Those effects are downstream consequences and feedback routes, not the mechanism that created the hierarchy.
 
-## The question F5 owns
+<a id="the-question-f5-owns"></a>
+
+## The question F05 owns
 
 > How are people, roles, needs, knowledge and social positions valued differently, through what practices and institutions, and with what effects on recognition, access, conditions and future possibility?
 
-F5 owns questions concerning:
+F05 owns questions concerning:
 
 - which social categories and positions are being distinguished;
 - what value, credibility, competence, deservingness or danger is attached to them;
@@ -71,7 +75,7 @@ Several distinctions follow:
 
 ## The status of the Filter of Worth
 
-**Filter of Worth can remain as a TEG-Blue recognition label, but not as F5's central mechanism.**
+**Filter of Worth can remain as a TEG-Blue recognition label, but not as F05's central mechanism.**
 
 It names a particular confusion:
 
@@ -95,21 +99,25 @@ interpretation, participation, resistance or revision
 
 The label is useful when it helps expose the movement from social treatment to assumed human value. It should not become a score, person-type or hidden explanation for every hierarchy.
 
-## Seven F5 construct families
+<a id="seven-f5-construct-families"></a>
+
+## Seven F05 construct families
 
 | Construct family | Governing question | Boundary |
 | --- | --- | --- |
-| **F5-A · Classification and social boundary** | Which categories, roles or distinctions organise treatment, and how are their boundaries produced or changed? | A category may describe, enable, protect, stigmatise or do several things; classification is not automatically hierarchy |
-| **F5-B · Valuation, status and prestige** | What respect, competence, deservingness or priority is assigned to each position? | Status may be formal, informal, local or contested and does not measure human worth |
-| **F5-C · Recognition and credibility** | Whose experience, knowledge, needs and testimony are treated as legible or authoritative? | Disagreement or correction is not automatically epistemic harm; pattern, power and treatment of evidence matter |
-| **F5-D · Access, resources and exposure** | Who receives protection, time, care, education, income, opportunity or support, and who carries risk, labour, surveillance or deprivation? | Distribution cannot be explained by attitudes alone; policy, history, markets, institutions and material constraints may participate |
-| **F5-E · Reproduction and cumulative effect** | How do advantages and disadvantages continue, compound or change across events, institutions and generations? | Continuity may be social, material, legal, educational, geographic or biological; these routes must not be collapsed |
-| **F5-F · Anticipation, internalisation and participation** | How do people anticipate evaluation and respond through presentation, striving, silence, accommodation, refusal, solidarity or resistance? | A person's response does not prove endorsement, inferiority, pathology or the complete origin of the hierarchy |
-| **F5-G · Contestation, redistribution and recognition repair** | How are categories, criteria, resources and decision processes challenged or revised? | Inclusion language or policy change does not by itself redistribute resources, restore credibility or repair accumulated effects |
+| **F05-A · Classification and social boundary** | Which categories, roles or distinctions organise treatment, and how are their boundaries produced or changed? | A category may describe, enable, protect, stigmatise or do several things; classification is not automatically hierarchy |
+| **F05-B · Valuation, status and prestige** | What respect, competence, deservingness or priority is assigned to each position? | Status may be formal, informal, local or contested and does not measure human worth |
+| **F05-C · Recognition and credibility** | Whose experience, knowledge, needs and testimony are treated as legible or authoritative? | Disagreement or correction is not automatically epistemic harm; pattern, power and treatment of evidence matter |
+| **F05-D · Access, resources and exposure** | Who receives protection, time, care, education, income, opportunity or support, and who carries risk, labour, surveillance or deprivation? | Distribution cannot be explained by attitudes alone; policy, history, markets, institutions and material constraints may participate |
+| **F05-E · Reproduction and cumulative effect** | How do advantages and disadvantages continue, compound or change across events, institutions and generations? | Continuity may be social, material, legal, educational, geographic or biological; these routes must not be collapsed |
+| **F05-F · Anticipation, internalisation and participation** | How do people anticipate evaluation and respond through presentation, striving, silence, accommodation, refusal, solidarity or resistance? | A person's response does not prove endorsement, inferiority, pathology or the complete origin of the hierarchy |
+| **F05-G · Contestation, redistribution and recognition repair** | How are categories, criteria, resources and decision processes challenged or revised? | Inclusion language or policy change does not by itself redistribute resources, restore credibility or repair accumulated effects |
 
 These families are a provisional TEG-Blue integration. They are not validated stages, types or a claim that every hierarchy develops through the same sequence.
 
-## F5 is not a nervous-system theory of inequality
+<a id="f5-is-not-a-nervous-system-theory-of-inequality"></a>
+
+## F05 is not a nervous-system theory of inequality
 
 The original account treats status and resources mainly as ways to stabilise nervous systems. This makes material and political conditions sound secondary to individual regulation.
 
@@ -129,23 +137,27 @@ possible organism-level effects within people
 
 Feedback may run back into behaviour and institutions, but a physiological effect does not turn the original social process into biology.
 
-## How F5 connects to the whole
+<a id="how-f5-connects-to-the-whole"></a>
 
-| Current layer | What F5 receives or contributes | Boundary of the connection |
+## How F05 connects to the whole
+
+| Current layer | What F05 receives or contributes | Boundary of the connection |
 | --- | --- | --- |
-| **F1 · evolutionary foundations** | Broad capacities for social comparison, affiliation, coalition, learning and status sensitivity may contribute to human social life | F1 cannot establish a modern hierarchy, justify inequality or make a social category biologically natural |
-| **F2 · developmental shaping** | Children develop within unequal material, relational and institutional conditions and may learn how their identity or needs are treated | Adult position cannot reconstruct childhood, and developmental effects do not explain the social structure that produced exposure |
-| **F3 · adult maintenance and revision** | Adults interpret status, anticipate evaluation and participate through ambition, accommodation, concealment, solidarity, refusal or change | One inner strategy cannot explain a hierarchy, and status-seeking cannot be assumed to be disguised safety-seeking |
-| **F4 · shared rules** | F4 hands forward rules and practices that distribute recognition, credibility, access, labour, protection or resources unevenly | Not every rule or role difference is a worth hierarchy; patterned valuation and differential consequence must be shown |
+| **F01 · evolutionary foundations** | Broad capacities for social comparison, affiliation, coalition, learning and status sensitivity may contribute to human social life | F01 cannot establish a modern hierarchy, justify inequality or make a social category biologically natural |
+| **F02 · developmental shaping** | Children develop within unequal material, relational and institutional conditions and may learn how their identity or needs are treated | Adult position cannot reconstruct childhood, and developmental effects do not explain the social structure that produced exposure |
+| **F03 · adult maintenance and revision** | Adults interpret status, anticipate evaluation and participate through ambition, accommodation, concealment, solidarity, refusal or change | One inner strategy cannot explain a hierarchy, and status-seeking cannot be assumed to be disguised safety-seeking |
+| **F04 · shared rules** | F04 hands forward rules and practices that distribute recognition, credibility, access, labour, protection or resources unevenly | Not every rule or role difference is a worth hierarchy; patterned valuation and differential consequence must be shown |
 | **Model 1 and Model 2** | Social position and unequal treatment can be part of the present conditions a person detects and organises within | A Gradient Position cannot be inferred from class, race, gender, disability, occupation or status |
 | **Chronic Gradient** | Recurrent discrimination, deprivation, insecurity or exclusion may contribute to repeated demand, constrained action and difficult recovery | Chronic organisation does not prove oppression, and population inequality cannot diagnose an individual nervous system |
-| **Harm, Power and Repair** | F5 identifies unequal status, credibility and resources; HPR examines how power is used, whose agency changes and what repair requires | Asymmetry is not automatically abuse, while absence of visible aggression does not make an unequal arrangement harmless |
-| **F6 · bias** | F5 hands forward the categories and valuations that may shape attention, interpretation, credibility and decision | Bias cannot be inferred only from unequal outcome, and F6 needs its own mechanisms and evidence |
-| **F7 · domination** | F5 can identify durable asymmetries and unequal option fields that may become available for enforcement | Hierarchy does not inevitably become domination; behaviour, authority, imposed cost and restricted agency must be observed |
-| **F8 · repair** | Redistribution, restored recognition, institutional change and changed access may be part of repair | Personal insight or apology does not redistribute resources or repair institutional effects |
+| **Harm, Power and Repair** | F05 identifies unequal status, credibility and resources; HPR examines how power is used, whose agency changes and what repair requires | Asymmetry is not automatically abuse, while absence of visible aggression does not make an unequal arrangement harmless |
+| **F06 · bias** | F05 hands forward the categories and valuations that may shape attention, interpretation, credibility and decision | Bias cannot be inferred only from unequal outcome, and F06 needs its own mechanisms and evidence |
+| **F07 · domination** | F05 can identify durable asymmetries and unequal option fields that may become available for enforcement | Hierarchy does not inevitably become domination; behaviour, authority, imposed cost and restricted agency must be observed |
+| **F08 · repair** | Redistribution, restored recognition, institutional change and changed access may be part of repair | Personal insight or apology does not redistribute resources or repair institutional effects |
 | **F10 · generational bridges** | Resources, neighbourhoods, education, roles, stories, law and institutional treatment can continue or change across generations | Intergenerational inequality must not be reduced to epigenetic or caregiver transmission |
 
-## Reading the original F5 language against the current system
+<a id="reading-the-original-f5-language-against-the-current-system"></a>
+
+## Reading the original F05 language against the current system
 
 ### Preserve, with precise translation
 
@@ -185,11 +197,13 @@ The original alignment gathers useful lineages, but it combines sociological the
 - **System justification** should be retained narrowly and claim by claim. It cannot establish that people in different positions maintain a hierarchy equally or for the same reason.
 - **Intersectionality** helps examine how social positions and power relations are constituted together. It should not be reduced to an individual identity checklist or used as evidence for “both sides” maintaining a filter.
 
-No dedicated F5 claim decomposition or source-level review has yet been completed. The original names should guide the search, not stand as validation of the framework.
+No dedicated F05 claim decomposition or source-level review has yet been completed. The original names should guide the search, not stand as validation of the framework.
 
-## F5's handoffs
+<a id="f5s-handoffs"></a>
 
-F5 receives a rule or practice from F4 only when differential valuation and consequence are visible:
+## F05's handoffs
+
+F05 receives a rule or practice from F04 only when differential valuation and consequence are visible:
 
 ```text
 category, role, rule or institutional practice
@@ -205,11 +219,11 @@ participation, resistance, revision or reproduction
 
 Three handoffs matter most:
 
-1. **To F6:** when the question becomes how categories and valuations shape attention, interpretation, evidence use or judgement.
-2. **To HPR and F7:** when unequal power is used to restrict another person's viable options, enforce an outcome or preserve the hierarchy through imposed cost.
+1. **To F06:** when the question becomes how categories and valuations shape attention, interpretation, evidence use or judgement.
+2. **To HPR and F07:** when unequal power is used to restrict another person's viable options, enforce an outcome or preserve the hierarchy through imposed cost.
 3. **To F10:** when material, social, institutional and narrative routes continue or change across generations.
 
-F5 does not require every hierarchy to progress toward bias or domination. It identifies the sorting and its consequences so later frameworks can ask what happens next.
+F05 does not require every hierarchy to progress toward bias or domination. It identifies the sorting and its consequences so later frameworks can ask what happens next.
 
 ## Result of this pass
 
@@ -219,14 +233,14 @@ F5 does not require every hierarchy to progress toward bias or domination. It id
 - **Filter of Worth:** retain as a TEG-Blue recognition label after decomposition, not as a mechanism, score or person-type.
 - **Core architecture:** use seven construct families—classification, valuation, recognition, distribution, reproduction, internalisation and participation, and contestation and redistribution.
 - **Main protection:** do not reduce hierarchy to nervous-system regulation, infer motive from status, mistake social treatment for human worth or make people carrying disadvantage equally responsible for the structure.
-- **F4 connection:** only rules that create patterned valuation or differential consequence enter F5.
+- **F04 connection:** only rules that create patterned valuation or differential consequence enter F05.
 - **Evidence status:** architectural first pass only; the original source list requires claim-level separation and cross-disciplinary review.
 
 ## Grounding science and knowledge fields
 
-F5 needs fields that can examine inequality at interactional, organisational, population, institutional and historical levels. Individual psychology can inform participation and internalisation, but it cannot ground the social structure alone.
+F05 needs fields that can examine inequality at interactional, organisational, population, institutional and historical levels. Individual psychology can inform participation and internalisation, but it cannot ground the social structure alone.
 
-| Field | What it can ground in F5 | What it cannot establish alone |
+| Field | What it can ground in F05 | What it cannot establish alone |
 | --- | --- | --- |
 | **Sociology and social stratification research** | Class, status, mobility, institutions, social closure, inequality and patterned life chances | A biological hierarchy or one person's motive from their social position |
 | **Social psychology** | Status perception, stigma, social identity, stereotyping, belonging, internalisation and intergroup processes | The material or historical production of a hierarchy by attitudes alone |
@@ -250,4 +264,4 @@ F5 needs fields that can examine inequality at interactional, organisational, po
 
 ### Priority evidence
 
-F5 should combine longitudinal population data, administrative records, audit and correspondence studies, field and survey experiments, natural experiments and policy evaluation with ethnography, interviews, historical research and participatory evidence. Analyses should state the social position, comparator, institution, timescale and outcome; distinguish descriptive inequality from causal explanation; and examine variation within categories rather than treating identity labels as mechanisms.
+F05 should combine longitudinal population data, administrative records, audit and correspondence studies, field and survey experiments, natural experiments and policy evaluation with ethnography, interviews, historical research and participatory evidence. Analyses should state the social position, comparator, institution, timescale and outcome; distinguish descriptive inequality from causal explanation; and examine variation within categories rather than treating identity labels as mechanisms.

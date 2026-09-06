@@ -63,8 +63,8 @@ No arrow is inevitable. Self-threat may help explain pressure on behaviour. It d
 | **ESP-13** | Denial, attack and victim–offender reversal can shift third-party judgements of credibility and responsibility. | Phenomenon | **Supported experimentally.** DARVO is not a truth detector, diagnosis or proof of intent. |
 | **ESP-14** | Retaliation makes future contradiction more costly and can preserve a preferred self-position by changing the information environment. | Integrative mechanism | **Supported as a TEG-Blue synthesis** when behaviour, power and consequence are observed. |
 | **ESP-15** | A challenged self-view becomes a Domination concern only when power is used to enforce an outcome through another person's reduced agency. | Boundary | **Non-negotiable HPR threshold.** Distress, anger, defensiveness, narcissistic traits or authority do not cross it alone. |
-| **ESP-16** | Developmental history may shape self-worth contingencies, sensitivity to status and available regulation routes. | Development | **Plausible but not established by this cluster.** F2 requires separate longitudinal and developmental evidence. |
-| **ESP-17** | Explanation of self-protective pressure does not reduce adult responsibility for repeated retaliation or coercive enforcement. | Application / boundary | **Required architecture.** F3 owns maintenance and justification; HPR owns action, power, impact and repair. |
+| **ESP-16** | Developmental history may shape self-worth contingencies, sensitivity to status and available regulation routes. | Development | **Plausible but not established by this cluster.** F02 requires separate longitudinal and developmental evidence. |
+| **ESP-17** | Explanation of self-protective pressure does not reduce adult responsibility for repeated retaliation or coercive enforcement. | Application / boundary | **Required architecture.** F03 owns maintenance and justification; HPR owns action, power, impact and repair. |
 
 ## The difference between self-protection and position preservation
 
@@ -128,11 +128,13 @@ the protected interpretation appears increasingly uncontested
 the route becomes easier to repeat
 ```
 
-This is one bridge between F3 and HPR. F3 examines the explanation that converts feedback into attack or persecution. HPR examines whether the source actually lost credibility, safety, access or viable refusal.
+This is one bridge between F03 and HPR. F03 examines the explanation that converts feedback into attack or persecution. HPR examines whether the source actually lost credibility, safety, access or viable refusal.
 
 DARVO research supports one specific observer effect within this route: denial, attack and reversal can shift judgements against the harmed person. It does not allow the acronym to settle what happened in an individual case.
 
-## F2 hypotheses—not conclusions
+<a id="f2-hypothesesnot-conclusions"></a>
+
+## F02 hypotheses—not conclusions
 
 Later developmental review may examine whether sensitivity and position-preserving routes are shaped by:
 
@@ -147,9 +149,11 @@ Later developmental review may examine whether sensitivity and position-preservi
 
 None is a universal origin of narcissism, entitlement or harmful behaviour. Trauma does not explain every controlling person, and developmental explanation does not transfer responsibility to the people later subjected to harm.
 
-## F3 ownership
+<a id="f3-ownership"></a>
 
-F3 should examine:
+## F03 ownership
+
+F03 should examine:
 
 - which self-position must be preserved;
 - what contradiction is taken to mean;
@@ -202,6 +206,6 @@ It should not say that insecurity causes domination, that grandiosity always hid
 
 ## Evidence status and next handoff
 
-This pass establishes 17 bounded claims and 14 canonical source records. It grounds the F3–HPR bridge from threatened position through power and retaliation, while leaving developmental origins explicitly open.
+This pass establishes 17 bounded claims and 14 canonical source records. It grounds the F03–HPR bridge from threatened position through power and retaliation, while leaving developmental origins explicitly open.
 
 The next PEND-044 cluster should address **people-pleasing, self-silencing, dependency, appeasement and reduced refusal viability**. This will ground the other side of the relational field without implying that vulnerability causes another person's coercion.

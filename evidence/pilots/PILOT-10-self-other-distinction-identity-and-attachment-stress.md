@@ -4,7 +4,7 @@ Status: first claim-level evidence pass · PEND-044 cluster 6
 Scope: emotional contagion · affective sharing · self–other distinction · personal distress · emotion regulation · affective instability · mentalizing under stress · identity disturbance · self-concept clarity · dissociation · borderline personality research · stigma
 Purpose: replace “fusion” and “unstable personality” with checkable components while preserving the fact that affect, self-access and understanding of another person can change sharply under relational pressure
 
-Companions: [Relational Configuration → Clinical and Personality-Pattern Research Bridge](../../02-model-1-ess-cls-me/grounding/relational-configuration-clinical-pattern-bridge.md) · [F2 Trauma, Stress and Adversity Crosswalk](../../05-frameworks/F02/grounding/trauma-stress-and-adversity-crosswalk.md) · [Harm, Power and Repair Grounding](../../07-reference/grounding/harm-power-and-repair.md) · [Shared Source Record Index](../sources/shared-source-record-index.md)
+Companions: [Relational Configuration → Clinical and Personality-Pattern Research Bridge](../../02-model-1-ess-cls-me/grounding/relational-configuration-clinical-pattern-bridge.md) · [F02 Trauma, Stress and Adversity Crosswalk](../../05-frameworks/F02/grounding/trauma-stress-and-adversity-crosswalk.md) · [Harm, Power and Repair Grounding](../../07-reference/grounding/harm-power-and-repair.md) · [Shared Source Record Index](../sources/shared-source-record-index.md)
 
 ## Intensity is not one mechanism
 
@@ -99,9 +99,11 @@ The diagnostic criteria permit many combinations. Studies also identify differen
 
 This boundary matters because stereotypes around BPD can change how distress is interpreted. A request for help may be dismissed as manipulation; anger may be treated as dangerousness; changing accounts may be treated as deceit without assessing memory, state, context or new information. The framework must describe the observed process before importing the label.
 
-## F2 hypotheses—not conclusions
+<a id="f2-hypothesesnot-conclusions"></a>
 
-F2 may later test whether uneven self–other and identity organisation was shaped by:
+## F02 hypotheses—not conclusions
+
+F02 may later test whether uneven self–other and identity organisation was shaped by:
 
 - temperament and early emotional sensitivity;
 - caregiving that inconsistently marked the child's experience as the child's own;
@@ -115,9 +117,11 @@ F2 may later test whether uneven self–other and identity organisation was shap
 
 No current pattern proves one of these histories. Prospective research finds multiple risk domains and weak disorder specificity.
 
-## F3 ownership
+<a id="f3-ownership"></a>
 
-F3 should examine:
+## F03 ownership
+
+F03 should examine:
 
 - what a strong feeling is taken to prove;
 - how certainty changes as attachment alarm rises;
@@ -128,7 +132,7 @@ F3 should examine:
 - whether alternative accounts can be considered without felt annihilation or abandonment;
 - which behaviours regulate distress and which maintain the cycle.
 
-F3 explains current maintenance. It does not decide whether the other person's account is true or whether harm occurred.
+F03 explains current maintenance. It does not decide whether the other person's account is true or whether harm occurred.
 
 ## HPR ownership
 

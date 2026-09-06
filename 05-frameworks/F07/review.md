@@ -1,18 +1,20 @@
-# F7 · Coercive Enforcement, Power and Restricted Agency
+<a id="f7--coercive-enforcement-power-and-restricted-agency"></a>
+
+# F07 · Coercive Enforcement, Power and Restricted Agency
 
 Status: first-pass architectural review · 21 August 2026
 
-Source section: F7 · Domination Regulates in [The Twelve Frameworks](../index.html)
+Source section: F07 · Domination Regulates in [The Twelve Frameworks](../index.html)
 
 Governing foundation: [Harm, Power and Repair Grounding](../../07-reference/grounding/harm-power-and-repair.md)
 
 Evidence companions: [Pilot 05 · Mentalizing, Affective Sharing and Instrumental Use](../../evidence/pilots/PILOT-05-mentalizing-affective-sharing-and-instrumental-use.md) · [Pilot 06 · Entitlement, Self-Threat, Power and Retaliation](../../evidence/pilots/PILOT-06-entitlement-self-threat-power-and-retaliation.md) · [Pilot 09 · Control, Over-Control and Coercive Control](../../evidence/pilots/PILOT-09-control-overcontrol-and-coercive-control.md)
 
-Upstream boundary: [F6 · Bias, Categorisation and Revisable Judgement](../F06/review.md)
+Upstream boundary: [F06 · Bias, Categorisation and Revisable Judgement](../F06/review.md)
 
 ## Decision
 
-**Keep F7 as a Foundational Framework, but replace the proposed internal domination mechanism with a behavioural, relational and systemic account of coercive enforcement.**
+**Keep F07 as a Foundational Framework, but replace the proposed internal domination mechanism with a behavioural, relational and systemic account of coercive enforcement.**
 
 Provisional title:
 
@@ -24,15 +26,17 @@ Suggested explanatory line:
 
 The original framework is right to mark a threshold between internal pressure and making another person carry the solution. That threshold cannot be found in activation, shame, empathy, diagnosis or developmental history. It becomes visible in behaviour and in what happens to another person's options.
 
-F7 therefore does not explain domination as a way of regulating the actor's nervous system. It asks how an outcome is enforced, what power makes enforcement possible, whose agency changes and what evidence is needed for protection, accountability and repair.
+F07 therefore does not explain domination as a way of regulating the actor's nervous system. It asks how an outcome is enforced, what power makes enforcement possible, whose agency changes and what evidence is needed for protection, accountability and repair.
 
-The Harm, Power and Repair layer already carries the detailed claim architecture. F7 should organise access to that work rather than create a competing mechanism.
+The Harm, Power and Repair layer already carries the detailed claim architecture. F07 should organise access to that work rather than create a competing mechanism.
 
-## The question F7 owns
+<a id="the-question-f7-owns"></a>
+
+## The question F07 owns
 
 > When does influence, authority or control become coercive enforcement, through what use of power, and with what effect on another person's viable refusal, safety, credibility, resources and independent action?
 
-F7 owns questions concerning:
+F07 owns questions concerning:
 
 - what outcome a person, group or institution sought to secure;
 - what formal, relational, material, physical or informational power was available;
@@ -80,7 +84,7 @@ This means:
 
 Power exists in ordinary care, work, education, medicine, government and relationships. It may be legitimate and necessary. The question is how it is used and bounded.
 
-F7 crosses into coercive enforcement when:
+F07 crosses into coercive enforcement when:
 
 > **Fear, punishment, surveillance, restriction, deprivation, force or another power advantage is used to secure an outcome through another person's reduced agency.**
 
@@ -105,18 +109,20 @@ One serious act may justify immediate protection. Recurrence can help establish 
 | **Consent** | Sufficiently informed and voluntary agreement that remains open to revision or withdrawal | An outward yes does not settle consent when refusal carries credible punishment or deprivation |
 | **Retaliation** | Imposed cost following refusal, contradiction, reporting, separation or accountability | Anger, disagreement or withdrawal does not establish retaliation without the behaviour and consequence |
 
-## Eight F7 construct families
+<a id="eight-f7-construct-families"></a>
+
+## Eight F07 construct families
 
 | Construct family | Governing question | Boundary |
 | --- | --- | --- |
-| **F7-A · Power and asymmetry** | What role, resource, authority, credibility or practical advantage could shape the other person's conditions or options? | Asymmetry is not automatically harmful; use, limits and accountability matter |
-| **F7-B · Sought outcome and claimed authority** | What result was being secured, and what right, duty, emergency or entitlement was offered as justification? | A legitimate goal does not validate every method used to achieve it |
-| **F7-C · Enforcement means** | Were fear, threat, punishment, surveillance, restriction, deprivation, force, discrediting or another imposed cost used? | Pressure must be behaviourally described rather than inferred from tone, diagnosis or distress alone |
-| **F7-D · Viable refusal and consent** | Could the person delay, disagree, leave, seek help or retain a separate account without added punishment? | Every choice has constraints; the question is whether power added cost to secure compliance |
-| **F7-E · Pattern, scope and adaptation** | Did enforcement recur, spread across domains, change form, continue after separation or become harder to detect? | Pattern is not required before protection, and one repeated behaviour does not prove one internal mechanism |
-| **F7-F · Impact and option-field restriction** | What changed in safety, movement, money, care, work, relationships, information, health, credibility or legal position? | Impact does not by itself settle intent, but intent is not required for the effect to matter |
-| **F7-G · Social and institutional enablement** | Which norms, bystanders, procedures, technologies or institutions enabled, ignored, amplified or constrained the enforcement? | Institutional failure cannot be reduced to the actor's psychology or one bystander's attitude |
-| **F7-H · Cessation, accountability and repair** | Did the enforcement stop, were options restored, was specific impact recognised, and did conduct change under later pressure? | Apology, shame, insight or temporary calm does not by itself establish repair |
+| **F07-A · Power and asymmetry** | What role, resource, authority, credibility or practical advantage could shape the other person's conditions or options? | Asymmetry is not automatically harmful; use, limits and accountability matter |
+| **F07-B · Sought outcome and claimed authority** | What result was being secured, and what right, duty, emergency or entitlement was offered as justification? | A legitimate goal does not validate every method used to achieve it |
+| **F07-C · Enforcement means** | Were fear, threat, punishment, surveillance, restriction, deprivation, force, discrediting or another imposed cost used? | Pressure must be behaviourally described rather than inferred from tone, diagnosis or distress alone |
+| **F07-D · Viable refusal and consent** | Could the person delay, disagree, leave, seek help or retain a separate account without added punishment? | Every choice has constraints; the question is whether power added cost to secure compliance |
+| **F07-E · Pattern, scope and adaptation** | Did enforcement recur, spread across domains, change form, continue after separation or become harder to detect? | Pattern is not required before protection, and one repeated behaviour does not prove one internal mechanism |
+| **F07-F · Impact and option-field restriction** | What changed in safety, movement, money, care, work, relationships, information, health, credibility or legal position? | Impact does not by itself settle intent, but intent is not required for the effect to matter |
+| **F07-G · Social and institutional enablement** | Which norms, bystanders, procedures, technologies or institutions enabled, ignored, amplified or constrained the enforcement? | Institutional failure cannot be reduced to the actor's psychology or one bystander's attitude |
+| **F07-H · Cessation, accountability and repair** | Did the enforcement stop, were options restored, was specific impact recognised, and did conduct change under later pressure? | Apology, shame, insight or temporary calm does not by itself establish repair |
 
 These families are a routing architecture into HPR. They are not a risk score, legal test, stage model or validated psychological type.
 
@@ -124,7 +130,7 @@ These families are a routing architecture into HPR. They are not a risk score, l
 
 The original account proposes that domination emerges when threat, relief through control, reduced empathy and power combine into a self-reinforcing configuration. This appears explanatory but allows the framework to infer the actor's inner state from the harm.
 
-F7 should reverse the order of inquiry:
+F07 should reverse the order of inquiry:
 
 ```text
 observable act or omission
@@ -144,23 +150,27 @@ Several processes may contribute to recurrence: reward, impunity, social approva
 
 This order protects both sides of the inquiry. It does not use nervous-system language to soften harm, and it does not use evidence of harm to invent a diagnosis or developmental story.
 
-## How F7 connects to the whole
+<a id="how-f7-connects-to-the-whole"></a>
 
-| Current layer | What F7 receives or contributes | Boundary of the connection |
+## How F07 connects to the whole
+
+| Current layer | What F07 receives or contributes | Boundary of the connection |
 | --- | --- | --- |
-| **F1 · evolutionary foundations** | Human capacities for aggression, cooperation, hierarchy, care, learning and collective action may provide broad background | Evolution cannot justify domination or establish the cause of a modern coercive pattern |
-| **F2 · developmental shaping** | Development may shape sensitivity, entitlement, available responses, models of authority and expectations around refusal | Being harmed does not predict becoming harmful, and present conduct cannot reconstruct childhood |
-| **F3 · adult maintenance and revision** | F3 may identify expected consequence, self-position, justification, response route and reaction to feedback | An internal account does not establish coercion; F7 requires observable behaviour, power and restricted agency |
-| **F4 · shared rules** | Rules may authorise legitimate limits or make coercive practices ordinary and difficult to contest | A restrictive rule is not automatically domination; scope, power, necessity, refusal and reviewability matter |
-| **F5 · social valuation** | Unequal status, credibility and resources may expand one party's power and reduce another's routes to support | Hierarchy does not inevitably become coercion, and disadvantage does not imply helplessness |
-| **F6 · bias and judgement** | Categories, stereotypes and justifications may affect whose account is believed or whose agency is treated as legitimate | Bias does not inevitably lead to domination, and coercion can be deliberate without biased perception |
+| **F01 · evolutionary foundations** | Human capacities for aggression, cooperation, hierarchy, care, learning and collective action may provide broad background | Evolution cannot justify domination or establish the cause of a modern coercive pattern |
+| **F02 · developmental shaping** | Development may shape sensitivity, entitlement, available responses, models of authority and expectations around refusal | Being harmed does not predict becoming harmful, and present conduct cannot reconstruct childhood |
+| **F03 · adult maintenance and revision** | F03 may identify expected consequence, self-position, justification, response route and reaction to feedback | An internal account does not establish coercion; F07 requires observable behaviour, power and restricted agency |
+| **F04 · shared rules** | Rules may authorise legitimate limits or make coercive practices ordinary and difficult to contest | A restrictive rule is not automatically domination; scope, power, necessity, refusal and reviewability matter |
+| **F05 · social valuation** | Unequal status, credibility and resources may expand one party's power and reduce another's routes to support | Hierarchy does not inevitably become coercion, and disadvantage does not imply helplessness |
+| **F06 · bias and judgement** | Categories, stereotypes and justifications may affect whose account is believed or whose agency is treated as legitimate | Bias does not inevitably lead to domination, and coercion can be deliberate without biased perception |
 | **Model 1 and Model 2** | Internal organisation may help explain pressure, attention or action readiness | No Gradient Position establishes abuse, intent, dangerousness, innocence or reduced responsibility |
 | **Chronic Gradient** | Recurrence, generalisation or difficult revision within a person may become a separate scientific question | Repeated coercion must be documented behaviourally; Chronic organisation is not the behaviour pattern |
-| **Harm, Power and Repair** | HPR provides F7's governing definitions, twelve claim families, enforcement threshold and repair boundaries | F7 should not duplicate or overrule the HPR evidence architecture |
-| **F8 · repair** | F7 can identify what must stop, what protection is needed and what agency or resource must be restored | Self-reconnection is not sufficient repair; cessation, accountability, restitution and changed later conduct remain necessary |
+| **Harm, Power and Repair** | HPR provides F07's governing definitions, twelve claim families, enforcement threshold and repair boundaries | F07 should not duplicate or overrule the HPR evidence architecture |
+| **F08 · repair** | F07 can identify what must stop, what protection is needed and what agency or resource must be restored | Self-reconnection is not sufficient repair; cessation, accountability, restitution and changed later conduct remain necessary |
 | **F10 · generational bridges** | Rules, violence, resource control, silence, institutional response and repair may affect later generations | Intergenerational effect is not one biological inheritance pathway or inevitable repetition |
 
-## Reading the original F7 language against the current system
+<a id="reading-the-original-f7-language-against-the-current-system"></a>
+
+## Reading the original F07 language against the current system
 
 ### Preserve, with precise translation
 
@@ -197,17 +207,19 @@ The original list combines learning theory, power experiments, empathy research,
 - **Power research** suggests that perspective-taking and other-orientation vary with goals, role construction and accountability. Power does not inevitably reduce concern.
 - **Affective sharing and mentalizing research** shows that social understanding has separable components. Neither low affect sharing nor accurate mentalizing predicts coercive behaviour by itself.
 - **Lesion research** should not be used to explain ordinary domination or infer a brain mechanism from harmful conduct.
-- **The allostatic model of addiction** does not ground an escalation-and-tolerance account of coercive control. The analogy should be retired from F7.
+- **The allostatic model of addiction** does not ground an escalation-and-tolerance account of coercive control. The analogy should be retired from F07.
 - **Coercive-control, violence and stalking research** are the central empirical and conceptual territories because they examine tactics, patterns, autonomy, credible threat and practical restriction.
 - **Moral disengagement** may inform some justifications or reductions in self-sanction. It is not a complete cause of institutional or interpersonal harm.
 - **Institutional isomorphism** concerns organisational similarity and diffusion, not selection for a harmful psychological configuration.
 - **Systems and leverage-point work** may guide institutional intervention but should not be presented as direct evidence of individual mechanism.
 
-HPR and Pilots 05, 06 and 09 provide a stronger existing foundation than the original F7 alignment. Dedicated source review is still needed for institutional domination, violence prevention, bystander systems, risk assessment and repair outcomes.
+HPR and Pilots 05, 06 and 09 provide a stronger existing foundation than the original F07 alignment. Dedicated source review is still needed for institutional domination, violence prevention, bystander systems, risk assessment and repair outcomes.
 
-## F7's handoffs
+<a id="f7s-handoffs"></a>
 
-F7 does not form the final step of a fixed F3–F7 escalation chain. It begins whenever behaviour and power cross the enforcement threshold, regardless of which internal route preceded it.
+## F07's handoffs
+
+F07 does not form the final step of a fixed F03–F07 escalation chain. It begins whenever behaviour and power cross the enforcement threshold, regardless of which internal route preceded it.
 
 The clean assessment sequence is:
 
@@ -229,7 +241,7 @@ Three handoffs matter most:
 
 1. **To immediate protection and appropriate services:** when there is credible danger, coercion, violence, stalking, deprivation or another serious restriction. Framework interpretation must not delay practical protection.
 2. **To HPR:** for the full assessment of power, agency, behaviour, impact, feedback, responsibility and reparation.
-3. **To F8:** only after harmful enforcement has stopped sufficiently for repair work to be possible. F8 cannot turn self-understanding into renewed access, trust or reconciliation.
+3. **To F08:** only after harmful enforcement has stopped sufficiently for repair work to be possible. F08 cannot turn self-understanding into renewed access, trust or reconciliation.
 
 ## Result of this pass
 
@@ -238,17 +250,17 @@ Three handoffs matter most:
 - **Title:** revise from “Domination Regulates” to “Coercive Enforcement, Power and Restricted Agency.”
 - **Domination:** retain only as a carefully defined relational or systemic recognition term, not a nervous-system configuration or person-type.
 - **Core architecture:** use eight construct families—power, sought outcome, enforcement means, viable refusal, pattern, impact, enabling systems, and cessation and repair.
-- **Governing foundation:** Harm, Power and Repair; F7 should not create a competing mechanism.
+- **Governing foundation:** Harm, Power and Repair; F07 should not create a competing mechanism.
 - **Main protection:** do not infer coercion from activation or diagnosis, infer internal mechanism from harm, or allow explanation to replace protection and responsibility.
-- **F6 connection:** perception does not inevitably become enforcement; F7 begins with observed behaviour and power.
-- **F8 connection:** self-reconnection is not relational repair, and no repair process creates entitlement to access or reconciliation.
+- **F06 connection:** perception does not inevitably become enforcement; F07 begins with observed behaviour and power.
+- **F08 connection:** self-reconnection is not relational repair, and no repair process creates entitlement to access or reconciliation.
 - **Evidence status:** architectural first pass with strong internal companions; legal, violence, institutional and intervention claims still require jurisdiction- and claim-specific grounding.
 
 ## Grounding science and knowledge fields
 
-F7 needs disciplines that can examine behaviour, power, law, violence, institutions, impact and repair. Biological and psychological research may inform contributing processes, but they cannot identify coercion without relational and behavioural evidence.
+F07 needs disciplines that can examine behaviour, power, law, violence, institutions, impact and repair. Biological and psychological research may inform contributing processes, but they cannot identify coercion without relational and behavioural evidence.
 
-| Field | What it can ground in F7 | What it cannot establish alone |
+| Field | What it can ground in F07 | What it cannot establish alone |
 | --- | --- | --- |
 | **Sociology of power, family, organisations and institutions** | Authority, dependence, social control, role, institutional enablement and patterned inequality | A nervous-system state or one person's motive inferred from social position |
 | **Criminology and criminal-justice research** | Offending patterns, coercion, stalking, violence, enforcement, victimisation, prevention and system response | Guilt, dangerousness or individual prediction from a category or group association |
@@ -273,4 +285,4 @@ F7 needs disciplines that can examine behaviour, power, law, violence, instituti
 
 ### Priority evidence
 
-F7 should favour behaviourally specified and context-rich evidence: contemporaneous records, reports from affected people, observation, digital and financial records, institutional documents, longitudinal pattern data, legal and administrative evidence, validated risk tools used within their actual limits, and research on later conduct under comparable conditions. Qualitative and survivor-led research is essential for identifying hidden restrictions and meaningful outcomes. Every assessment should record the power available, demanded outcome, response to refusal, imposed cost, changed options, impact, recurrence, jurisdiction and response to accountability.
+F07 should favour behaviourally specified and context-rich evidence: contemporaneous records, reports from affected people, observation, digital and financial records, institutional documents, longitudinal pattern data, legal and administrative evidence, validated risk tools used within their actual limits, and research on later conduct under comparable conditions. Qualitative and survivor-led research is essential for identifying hidden restrictions and meaningful outcomes. Every assessment should record the power available, demanded outcome, response to refusal, imposed cost, changed options, impact, recurrence, jurisdiction and response to accountability.

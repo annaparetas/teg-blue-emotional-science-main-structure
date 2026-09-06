@@ -129,16 +129,16 @@ MANIFEST = [
     ("02-model-1-ess-cls-me/notes/sources/ESS-CLS-legacy-deep-dive.md", "development/model-notes/ESS-CLS-legacy-deep-dive.md", None, None, None),
     ("02-model-1-ess-cls-me/notes/sources/description-collection.md", "development/model-notes/two-biological-information-systems-description-collection.md", None, None, None),
 
-    # 05 · Frameworks · F1, F2, F3
+    # 05 · Frameworks · F01, F02, F03
     ("05-frameworks/F01/review.md", "frameworks/reviews/F01-evolution.md", None, None, None),
     ("05-frameworks/F01/crosswalk.html", "frameworks/crosswalks/F01-evolution-to-fluid-gradient.html", None, None,
-     ("Carried bridge · status working", "The many-to-many handoff from evolutionary capacity to present Fluid organisation. Carried on 2 September 2026. A bridge beside F1, not a second source of truth for the positions.", "index.html", "F1")),
-    ("05-frameworks/F01/timeline.html", "frameworks/diagrams/F1/F1-Timeline.html", None, None,
-     ("Carried visual account · status working", "The provisional eight-expansion evolutionary capacity timeline. Carried on 2 September 2026 as F1's current visual account. An orientation and research map, not a dated ladder. The other F1 diagram files stay in the Development Engine.", "index.html", "F1")),
+     ("Carried bridge · status working", "The many-to-many handoff from evolutionary capacity to present Fluid organisation. Carried on 2 September 2026. A bridge beside F01, not a second source of truth for the positions.", "index.html", "F01")),
+    ("05-frameworks/F01/timeline.html", "frameworks/diagrams/F01/F01-Timeline.html", None, None,
+     ("Carried visual account · status working", "The provisional eight-expansion evolutionary capacity timeline. Carried on 2 September 2026 as F01's current visual account. An orientation and research map, not a dated ladder. The other F01 diagram files stay in the Development Engine.", "index.html", "F01")),
     ("05-frameworks/F01/notes/F01-F02-connections-to-four-support-pages.md", "frameworks/crosswalks/F01-F02-connections-to-four-support-pages.md", None, None, None),
     ("05-frameworks/F02/review.md", "frameworks/reviews/F02-development.md", None, None, None),
-    ("05-frameworks/F02/diagram.html", "frameworks/diagrams/F2-Emotion-Override/F2-emotion-overriding.html", None, None,
-     ("Carried active account · status working", "What develops when emotion must be overridden: the seven layers where learning can intervene, the practice loop, the three forms of ME participation, and what the current sources carry. Carried on 2 September 2026 as F2's current active account.", "index.html", "F2")),
+    ("05-frameworks/F02/diagram.html", "frameworks/diagrams/F02-Emotion-Override/F02-emotion-overriding.html", None, None,
+     ("Carried active account · status working", "What develops when emotion must be overridden: the seven layers where learning can intervene, the practice loop, the three forms of ME participation, and what the current sources carry. Carried on 2 September 2026 as F02's current active account.", "index.html", "F02")),
     ("05-frameworks/F02/notes/developmental-entries.md", "development/registers/F02-developmental-entries.md", None, None, None),
     ("05-frameworks/F02/grounding/trauma-stress-and-adversity-crosswalk.md", "evidence/crosswalks/F02-trauma-stress-and-adversity.md", None, None, None),
     ("05-frameworks/F02/grounding/trauma-stress-and-adversity-research-map.md", "evidence/reviews/trauma-stress-and-adversity-research-map.md", None, None, None),

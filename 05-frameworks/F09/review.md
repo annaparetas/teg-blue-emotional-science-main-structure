@@ -1,18 +1,20 @@
-# F9 · Neurodivergent Variation, Disability and Environmental Fit
+<a id="f9--neurodivergent-variation-disability-and-environmental-fit"></a>
+
+# F09 · Neurodivergent Variation, Disability and Environmental Fit
 
 Status: first-pass architectural review · 21 August 2026
 
-Source section: F9 · Neurodivergent Configuration and Adaptive Fit in [The Twelve Frameworks](../index.html)
+Source section: F09 · Neurodivergent Configuration and Adaptive Fit in [The Twelve Frameworks](../index.html)
 
 Governing model premise: [How the Nervous System Organisation Gradient Models Organism Organisation](../../03-model-2-gradient/premise.html)
 
-Upstream route map: [F8 · Recovery, Reconnection and Repair as Distinct Routes](../F08/review.md)
+Upstream route map: [F08 · Recovery, Reconnection and Repair as Distinct Routes](../F08/review.md)
 
 Current architecture companions: [Current Construct and Claim Decomposition](../../evidence/claims/current-construct-decomposition.md) · [Relational Capacity Configurations](../../02-model-1-ess-cls-me/me-access.html) · [Sensory to Coordinated Conscious Access Track](../../02-model-1-ess-cls-me/processing.html)
 
 ## Decision
 
-**Keep F9 as a Foundational Framework, but reframe it around the interaction among neurocognitive variation, health, task demands, environment, support and power.**
+**Keep F09 as a Foundational Framework, but reframe it around the interaction among neurocognitive variation, health, task demands, environment, support and power.**
 
 Provisional title:
 
@@ -26,13 +28,15 @@ The original framework begins with a useful observation. The same person may com
 
 The observation does not require a choice between *difference* and *disability*. A variation may be neutral or valuable in one setting, disabling in another and intrinsically painful or limiting in a third. An inaccessible environment can create or intensify disability. A health condition or impairment can also matter even in a supportive environment. Both may be true at once.
 
-F9 should therefore resist two reductions: locating every difficulty inside the person, and locating every difficulty outside them. It asks what changes when the person, task, environment, support or relationship changes—and whether the outcome improves in a way that matters to the person.
+F09 should therefore resist two reductions: locating every difficulty inside the person, and locating every difficulty outside them. It asks what changes when the person, task, environment, support or relationship changes—and whether the outcome improves in a way that matters to the person.
 
-## The question F9 owns
+<a id="the-question-f9-owns"></a>
+
+## The question F09 owns
 
 > How do neurocognitive variation, bodily and mental health, task demands, environmental design, social interpretation, support and power interact to shape access, participation, cost and disability?
 
-F9 owns questions concerning:
+F09 owns questions concerning:
 
 - what the person is trying or required to do;
 - which sensory, attentional, cognitive, communicative, motor, interoceptive or recovery demands the task creates;
@@ -50,7 +54,7 @@ It does not own a diagnosis, biological essence, complete description of a perso
 
 ## The governing interaction
 
-F9 should not begin with the question *What is wrong with this person?* It should also not assume that the person has no impairment or health need.
+F09 should not begin with the question *What is wrong with this person?* It should also not assume that the person has no impairment or health need.
 
 It begins here:
 
@@ -79,7 +83,7 @@ The unit of inquiry is the interaction. The person remains more than the interac
 | **Neurodiversity** | Variation in human neurocognitive development and functioning; also used within a political and scholarly paradigm that challenges one idealised norm | It is not one diagnosis, one neurological mechanism or a claim that every variation is neutral in every context |
 | **Neurodivergent** | A community and identity term for people whose neurocognitive functioning diverges from socially dominant expectations | It is not a formal diagnosis, homogeneous biological class or complete account of support needs |
 | **Neurotypical** | A relational term for people treated as fitting dominant neurocognitive expectations | It should not be treated as one scientifically validated brain type; *non-autistic* is more precise when autism status is the actual comparison |
-| **Configuration** | In TEG-Blue, a stated arrangement of access or organisation variables | F9 should not use the word as a synonym for diagnosis, identity, fixed trait profile or hidden nervous-system type |
+| **Configuration** | In TEG-Blue, a stated arrangement of access or organisation variables | F09 should not use the word as a synonym for diagnosis, identity, fixed trait profile or hidden nervous-system type |
 | **Impairment** | A difference or difficulty in body function or structure that may affect activity or wellbeing | It does not determine the person's worth, full capacity, participation or disability without context |
 | **Disability** | Restriction or disadvantage arising through the interaction among bodily or cognitive conditions, activities, participation and environmental or social factors | It is neither only an internal defect nor only an external barrier in every case |
 | **Environmental fit** | The degree to which current conditions allow a person to access, participate, communicate, recover and meet meaningful demands without unnecessary cost | Fit is task- and person-specific; comfort, compliance or invisibility does not establish it |
@@ -93,18 +97,20 @@ The unit of inquiry is the interaction. The person remains more than the interac
 | **Participation** | Involvement in meaningful life situations, roles, activities and relationships, defined with the person rather than only by normative performance | Presence, productivity or compliance does not necessarily mean effective or wanted participation |
 | **Agency** | The person's practical and supported ability to communicate, choose, refuse, direct support and influence what happens | Speech, speed, independence and conventional social presentation are not prerequisites for agency |
 
-## Eight F9 construct families
+<a id="eight-f9-construct-families"></a>
+
+## Eight F09 construct families
 
 | Construct family | Governing question | Boundary |
 | --- | --- | --- |
-| **F9-A · Person, profile and self-description** | What diagnoses, identities, health conditions, strengths, difficulties, preferences and lived descriptions are relevant to this situation? | No label describes the whole person, and group-level findings do not settle an individual's profile |
-| **F9-B · Task, demand and outcome** | What is the person being asked to do, at what pace, for how long, through which channel and according to whose standard of success? | Difficulty cannot be interpreted before the task and its hidden demands are named |
-| **F9-C · Sensory, attentional, cognitive and motor access** | Which aspects of detection, filtering, switching, memory, planning, initiation, movement, language, interoception or recovery are helping or constraining participation? | These are distinct construct families; “sensory processing” and “executive function” should not become catch-all explanations |
-| **F9-D · Communication and mutual interpretation** | Which communication forms are available, what does each person expect and where does meaning become lost between people or systems? | Misunderstanding may be mutual without power, responsibility or burden becoming equal |
-| **F9-E · Environment, barriers and facilitators** | What in the physical, sensory, social, informational, temporal, digital or institutional environment changes access and cost? | An environmental contribution does not prove that all difficulty is external or that one adjustment suits everyone |
-| **F9-F · Adaptation, masking and cumulative cost** | What strategies maintain outward performance, why are they used, what agency do they provide and what immediate or delayed cost follows? | Effort and distress should be measured rather than assumed; unmasking should not be prescribed where it would reduce safety or choice |
-| **F9-G · Overload, fatigue, health and recovery** | What changed in energy, skills, tolerance, sleep, mood, pain, daily functioning and support needs, and what explanations require assessment? | Burnout language must not delay evaluation of depression, catatonia, sleep disorder, medication effects, pain, infection or other medical and psychological conditions |
-| **F9-H · Accessibility, support and outcome testing** | Which redesign, accommodation, technology, communication support, assistance or demand change improves meaningful participation with acceptable cost? | Visible performance alone is insufficient; benefit, autonomy, sustainability, safety and person-defined outcome all matter |
+| **F09-A · Person, profile and self-description** | What diagnoses, identities, health conditions, strengths, difficulties, preferences and lived descriptions are relevant to this situation? | No label describes the whole person, and group-level findings do not settle an individual's profile |
+| **F09-B · Task, demand and outcome** | What is the person being asked to do, at what pace, for how long, through which channel and according to whose standard of success? | Difficulty cannot be interpreted before the task and its hidden demands are named |
+| **F09-C · Sensory, attentional, cognitive and motor access** | Which aspects of detection, filtering, switching, memory, planning, initiation, movement, language, interoception or recovery are helping or constraining participation? | These are distinct construct families; “sensory processing” and “executive function” should not become catch-all explanations |
+| **F09-D · Communication and mutual interpretation** | Which communication forms are available, what does each person expect and where does meaning become lost between people or systems? | Misunderstanding may be mutual without power, responsibility or burden becoming equal |
+| **F09-E · Environment, barriers and facilitators** | What in the physical, sensory, social, informational, temporal, digital or institutional environment changes access and cost? | An environmental contribution does not prove that all difficulty is external or that one adjustment suits everyone |
+| **F09-F · Adaptation, masking and cumulative cost** | What strategies maintain outward performance, why are they used, what agency do they provide and what immediate or delayed cost follows? | Effort and distress should be measured rather than assumed; unmasking should not be prescribed where it would reduce safety or choice |
+| **F09-G · Overload, fatigue, health and recovery** | What changed in energy, skills, tolerance, sleep, mood, pain, daily functioning and support needs, and what explanations require assessment? | Burnout language must not delay evaluation of depression, catatonia, sleep disorder, medication effects, pain, infection or other medical and psychological conditions |
+| **F09-H · Accessibility, support and outcome testing** | Which redesign, accommodation, technology, communication support, assistance or demand change improves meaningful participation with acceptable cost? | Visible performance alone is insufficient; benefit, autonomy, sustainability, safety and person-defined outcome all matter |
 
 These families do not form a profile score or diagnostic instrument. They provide a way to locate a barrier precisely enough to change it and then observe what follows.
 
@@ -125,7 +131,7 @@ No one answer cancels the others.
 
 ## Environmental change is an intervention and a source of evidence
 
-The source proposes a clear test: change the environment and observe what changes. F9 should preserve this as a method while narrowing the conclusion.
+The source proposes a clear test: change the environment and observe what changes. F09 should preserve this as a method while narrowing the conclusion.
 
 Examples include:
 
@@ -157,7 +163,7 @@ The correction must not become a universal symmetry claim.
 - Some misunderstandings are ordinary; others involve neglect, coercion, prejudice or refusal to use available communication.
 - Mutual difference does not make impact, authority or responsibility equal.
 
-F9 can therefore relocate the communication question from *Does this person have empathy?* to *Who understood what, through which channel, under what conditions, and what changed when each side adjusted?*
+F09 can therefore relocate the communication question from *Does this person have empathy?* to *Who understood what, through which channel, under what conditions, and what changed when each side adjusted?*
 
 ## Masking and camouflaging require route-specific language
 
@@ -175,7 +181,7 @@ Camouflaging research includes at least:
 
 These routes may be partly conscious or automatic, wanted or compelled, helpful or harmful. Some are not unique to autistic people. Current measurement often relies on self-report or a discrepancy between internal report and outward observation, and samples have not represented the full autistic population evenly.
 
-F9 should ask:
+F09 should ask:
 
 ```text
 What is being hidden, changed or compensated for?
@@ -194,7 +200,7 @@ Participatory and qualitative research has made autistic burnout visible as an e
 
 The source phrase *reorganisation of the resting state* is not yet established. Connecting autistic burnout directly to allostatic overload also risks turning a broad stress concept into a specific mechanism without matching evidence.
 
-F9 should keep several levels distinct:
+F09 should keep several levels distinct:
 
 - the person's account of exhaustion, reduced tolerance and increased support need;
 - observed changes in daily functioning and access;
@@ -206,25 +212,29 @@ F9 should keep several levels distinct:
 
 Autistic burnout is not X, Z, Chronic organisation or one fixed baseline shift. A person in burnout may move across Gradient Positions while remaining exhausted and disabled. Rest, solitude, sensory relief, demand reduction, care and community support may help some people; no single route should be promised or withheld.
 
-## How F9 connects to the whole
+<a id="how-f9-connects-to-the-whole"></a>
 
-| Current layer | What F9 receives or contributes | Boundary of the connection |
+## How F09 connects to the whole
+
+| Current layer | What F09 receives or contributes | Boundary of the connection |
 | --- | --- | --- |
-| **F1 · evolutionary foundations** | Human populations contain substantial developmental, sensory, cognitive and communicative variation | Evolution does not sort current people into superior, defective or naturally specialised nervous-system types |
-| **F2 · developmental shaping** | Development and experience may alter skills, thresholds, strategies and access across time | Neurodivergence is not simply maladaptive calibration, and present performance cannot reconstruct one developmental cause |
-| **F3 · adult maintenance and revision** | F9 supplies alternative explanations involving disability, neurodivergence, health, communication and task design | A repeated response is not false coherence when the environment keeps recreating the same barrier |
-| **F4 · shared rules** | Rules determine which communication, pace, posture, sensory tolerance and work style count as normal or competent | A common norm is not automatically necessary, neutral or accessible |
-| **F5 · social valuation** | Ableism, sanism, stigma and unequal credibility affect recognition, opportunity, diagnosis, support and cost | Social devaluation does not mean every difficulty is produced by prejudice alone |
-| **F6 · bias and judgement** | Diagnostic, gendered, racialised and communication biases can shape who is recognised and whose report is believed | Bias correction does not replace careful clinical or functional assessment |
-| **F7 · coercive enforcement** | Forced normalisation, restraint, seclusion, punishment, inaccessible consent and withdrawal of support may restrict agency | Neurodivergence or disability never establishes dangerousness, innocence or acceptable conduct |
-| **F8 · recovery routes** | Environmental change, accommodation and reduced cost may be central recovery routes | Unmasking is not completed recovery, and being accepted is not the only route through which capacity may return |
+| **F01 · evolutionary foundations** | Human populations contain substantial developmental, sensory, cognitive and communicative variation | Evolution does not sort current people into superior, defective or naturally specialised nervous-system types |
+| **F02 · developmental shaping** | Development and experience may alter skills, thresholds, strategies and access across time | Neurodivergence is not simply maladaptive calibration, and present performance cannot reconstruct one developmental cause |
+| **F03 · adult maintenance and revision** | F09 supplies alternative explanations involving disability, neurodivergence, health, communication and task design | A repeated response is not false coherence when the environment keeps recreating the same barrier |
+| **F04 · shared rules** | Rules determine which communication, pace, posture, sensory tolerance and work style count as normal or competent | A common norm is not automatically necessary, neutral or accessible |
+| **F05 · social valuation** | Ableism, sanism, stigma and unequal credibility affect recognition, opportunity, diagnosis, support and cost | Social devaluation does not mean every difficulty is produced by prejudice alone |
+| **F06 · bias and judgement** | Diagnostic, gendered, racialised and communication biases can shape who is recognised and whose report is believed | Bias correction does not replace careful clinical or functional assessment |
+| **F07 · coercive enforcement** | Forced normalisation, restraint, seclusion, punishment, inaccessible consent and withdrawal of support may restrict agency | Neurodivergence or disability never establishes dangerousness, innocence or acceptable conduct |
+| **F08 · recovery routes** | Environmental change, accommodation and reduced cost may be central recovery routes | Unmasking is not completed recovery, and being accepted is not the only route through which capacity may return |
 | **Model 1 · coordinated conscious access** | Sensory thresholds, attention, language, interoception and communication may affect what information becomes consciously usable | Different access is not lesser humanity, failed intuition or evidence of moral character |
 | **Gradient** | The same sixteen organism-level lenses should be applied while allowing person-specific thresholds, demands and supports | No diagnosis, identity or sensory profile maps directly to X, A, A↔B, B, C, D or Z |
 | **Chronic organisation** | Ongoing mismatch, repeated overload and interrupted recovery may contribute to recurrence or persistent protective demand | Autism, ADHD, dyslexia or another neurodivergence is not Chronic organisation |
 | **Relational Capacity Configurations** | Bodily information, affective sharing and mentalizing access may vary by task, relationship and organisation | A TEG-Blue access configuration is not an autistic, ADHD or personality profile |
 | **F10 · generational bridges** | Children and caregivers may have different access, sensory and communication needs that shape family interaction | Difference must not be read as failed attachment, and family support must not become normalisation |
 
-## Reading the original F9 language against the current system
+<a id="reading-the-original-f9-language-against-the-current-system"></a>
+
+## Reading the original F09 language against the current system
 
 ### Preserve, with precise translation
 
@@ -267,11 +277,13 @@ The source alignment combines a political paradigm, disability models, interacti
 - **Universal Design for Learning** offers education-specific design principles across engagement, representation and action or expression. Accessibility outcomes need evaluation, and UDL should not be presented as biological evidence or a complete design framework for workplaces, healthcare and public space.
 - **Reasonable accommodation and universal design** also have legal and human-rights meanings. Their duties and thresholds depend on jurisdiction; scientific fit and legal entitlement answer related but different questions.
 
-Authoritative guidance supports the interactional direction. The WHO describes functioning and disability in context and includes environmental factors rather than inferring performance from impairment alone. NICE recommends communication and environmental adjustments in services for autistic adults. The UN disability-rights framework treats denial of reasonable accommodation as discrimination and defines universal design while preserving assistive routes for particular groups. These sources support F9's boundaries; they do not establish one TEG-Blue mechanism.
+Authoritative guidance supports the interactional direction. The WHO describes functioning and disability in context and includes environmental factors rather than inferring performance from impairment alone. NICE recommends communication and environmental adjustments in services for autistic adults. The UN disability-rights framework treats denial of reasonable accommodation as discrimination and defines universal design while preserving assistive routes for particular groups. These sources support F09's boundaries; they do not establish one TEG-Blue mechanism.
 
-## F9's handoffs
+<a id="f9s-handoffs"></a>
 
-F9 replaces accommodation-as-afterthought with an iterative access question:
+## F09's handoffs
+
+F09 replaces accommodation-as-afterthought with an iterative access question:
 
 ```text
 Name the person's goal and the actual task
@@ -291,7 +303,7 @@ Four handoffs matter most:
 
 1. **To appropriate health and diagnostic assessment:** when the person wants assessment, when a diagnosis could open useful support or when pain, sudden change, severe exhaustion, skill loss, catatonia, sleep disturbance, mood change or another health concern requires investigation.
 2. **To accessibility, education, employment and service design:** when avoidable barriers can be removed for many people at once while individual adjustments remain available.
-3. **To Model 1, Model 2 and F8:** when the question concerns changing sensory access, organisation, recovery, participation or cost within the person under specified conditions.
+3. **To Model 1, Model 2 and F08:** when the question concerns changing sensory access, organisation, recovery, participation or cost within the person under specified conditions.
 4. **To HPR and safeguarding:** when difference or dependency is being used to discredit consent, justify coercion, remove agency, punish harmless behaviour or conceal neglect and abuse.
 
 ## Result of this pass
@@ -311,9 +323,9 @@ Four handoffs matter most:
 
 ## Grounding science and knowledge fields
 
-F9 needs disciplines that can examine biological and cognitive variation, disability, communication, daily participation, design, rights and lived experience. Neurodivergent and disabled people must participate in deciding which questions and outcomes matter.
+F09 needs disciplines that can examine biological and cognitive variation, disability, communication, daily participation, design, rights and lived experience. Neurodivergent and disabled people must participate in deciding which questions and outcomes matter.
 
-| Field | What it can ground in F9 | What it cannot establish alone |
+| Field | What it can ground in F09 | What it cannot establish alone |
 | --- | --- | --- |
 | **Neurodiversity studies and critical autism studies** | Paradigm, identity, language, epistemic justice, norm critique and community priorities | One biological theory, a uniform community position or the support needs of every individual |
 | **Disability studies and crip theory** | Social, relational, political and cultural accounts of disability, access, dependency and normality | Individual diagnosis, physiology or the claim that impairment never matters |
@@ -341,7 +353,7 @@ F9 needs disciplines that can examine biological and cognitive variation, disabi
 
 ### Priority evidence
 
-F9 should favour research that names the people, task, environment, support and outcome rather than comparing broad diagnostic groups without context. Particularly useful evidence includes within-person environmental and task manipulations, longitudinal studies, naturalistic observation, co-designed intervention research, communication-partner studies, accessibility and implementation outcomes, participatory qualitative work, and measures of effort and delayed recovery alongside visible performance.
+F09 should favour research that names the people, task, environment, support and outcome rather than comparing broad diagnostic groups without context. Particularly useful evidence includes within-person environmental and task manipulations, longitudinal studies, naturalistic observation, co-designed intervention research, communication-partner studies, accessibility and implementation outcomes, participatory qualitative work, and measures of effort and delayed recovery alongside visible performance.
 
 Sampling must improve. Research should include people with higher support needs, intellectual disability, minimal or no speech, varied communication routes, children and older adults, and people across race, culture, gender, class, geography and diagnostic access. Self-report, observation, task performance, physiological measures and proxy report should remain distinct. Proxy evidence may be necessary and valuable, but it should not silently replace the person's communication or perspective.
 

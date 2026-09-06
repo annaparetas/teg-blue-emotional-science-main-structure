@@ -1,18 +1,20 @@
-# F8 · Recovery, Reconnection and Repair as Distinct Routes
+<a id="f8--recovery-reconnection-and-repair-as-distinct-routes"></a>
+
+# F08 · Recovery, Reconnection and Repair as Distinct Routes
 
 Status: first-pass architectural review · 21 August 2026
 
-Source section: F8 · Self-Reconnection and Repair Pathway in [The Twelve Frameworks](../index.html)
+Source section: F08 · Self-Reconnection and Repair Pathway in [The Twelve Frameworks](../index.html)
 
 Governing model premise: [How the Nervous System Organisation Gradient Models Organism Organisation](../../03-model-2-gradient/premise.html)
 
-Upstream boundaries: [F3 · Adult Pattern Maintenance and Revision](../F03/review.md) · [F7 · Coercive Enforcement, Power and Restricted Agency](../F07/review.md) · [Harm, Power and Repair Grounding](../../07-reference/grounding/harm-power-and-repair.md)
+Upstream boundaries: [F03 · Adult Pattern Maintenance and Revision](../F03/review.md) · [F07 · Coercive Enforcement, Power and Restricted Agency](../F07/review.md) · [Harm, Power and Repair Grounding](../../07-reference/grounding/harm-power-and-repair.md)
 
 Current terminology companions: [Current Construct and Claim Decomposition](../../evidence/claims/current-construct-decomposition.md) · [Regulation and Return · Settled Concepts](../../03-model-2-gradient/notes/regulation-and-return-concepts.md) · [Return to Baseline](../../03-model-2-gradient/return.html)
 
 ## Decision
 
-**Keep F8 as a Foundational Framework, but replace one self-reconnection and repair pathway with a map of several related routes whose outcomes must be assessed separately.**
+**Keep F08 as a Foundational Framework, but replace one self-reconnection and repair pathway with a map of several related routes whose outcomes must be assessed separately.**
 
 Provisional title:
 
@@ -26,13 +28,15 @@ The original framework recognises something important: change is not completed b
 
 Its difficulty is that it gives several different changes one name. A person may recognise an inner state, gain a skill, revise an expectation, begin Return, recover physiologically, stop a harmful behaviour, make reparation or rebuild a relationship. These events may support one another. None establishes all the others.
 
-F8 should therefore organise a field of routes, not prescribe one staircase. The practical question is not whether the person is moving through the correct rhythm. It is what is changing, what remains constrained, what conditions are current, whose outcome is being measured and what further work belongs on a different evidence plane.
+F08 should therefore organise a field of routes, not prescribe one staircase. The practical question is not whether the person is moving through the correct rhythm. It is what is changing, what remains constrained, what conditions are current, whose outcome is being measured and what further work belongs on a different evidence plane.
 
-## The question F8 owns
+<a id="the-question-f8-owns"></a>
+
+## The question F08 owns
 
 > After restriction, persistence or harm, what conditions, access, capacities, learning and recovery are changing—and which additional behavioural, material or relational processes must not be inferred from internal change?
 
-F8 owns questions concerning:
+F08 owns questions concerning:
 
 - whether danger, deprivation, coercion, overload or another constraining condition is still present;
 - which bodily, emotional, reflective, relational and action-related information is available to the person;
@@ -92,18 +96,20 @@ The framework must identify the route and the person whose outcome is being desc
 | **Forgiveness** | A personal moral, emotional, spiritual or relational process whose meaning varies | It is not the same as excusing, forgetting, trusting, withdrawing protection or reconciling |
 | **Reconciliation** | A voluntary rebuilding of relationship or cooperation by the people involved | It is not the required endpoint of recovery or reparation and may be unsafe or unwanted |
 
-## Eight F8 construct families
+<a id="eight-f8-construct-families"></a>
+
+## Eight F08 construct families
 
 | Construct family | Governing question | Boundary |
 | --- | --- | --- |
-| **F8-A · Conditions and protection** | What danger, demand, deprivation, dependency, exclusion or material pressure remains, and what protection or accommodation is available? | Internal work cannot make an unsafe condition safe; subjective and externally assessed safety must both be considered without substituting one for the other |
-| **F8-B · Access and self-reconnection** | Which bodily, emotional, reflective, relational and contextual information is becoming more noticeable, distinguishable or usable? | More awareness is not always more accuracy, and inward attention may be difficult, unwanted or clinically inappropriate in some conditions |
-| **F8-C · Capacity, skill and support** | What can the person do now, under which conditions, with what assistance, cost and reliability? | A capacity may be uneven, context-bound, newly developing, temporarily constrained or supported externally; the route cannot be inferred from appearance |
-| **F8-D · Updating and generalisation** | What expectation, meaning, discrimination, action route or consequence is changing, and does that change travel across contexts? | Insight, one corrective experience or improvement in a protected setting does not establish broad or permanent revision |
-| **F8-E · Return and recovery profile** | Which physiological, experiential, relational and practical channels are widening or rebuilding, at what rate and with what remaining cost? | No single biomarker, mood, behaviour or Gradient Position establishes completed Return or recovery |
-| **F8-F · Conduct, accountability and reparation** | If another person was affected, has the behaviour stopped, has impact been specifically owned, have resources or options been restored and does change hold under later pressure? | The actor's recovery is not reparation, and understanding why harm occurred does not remove responsibility |
-| **F8-G · Trust, access and possible reconciliation** | What does the affected person want, what boundaries remain, and what evidence would be needed for any form of renewed reliance or contact? | Forgiveness, trust, access and reconciliation are distinct, voluntary and never owed |
-| **F8-H · Maintenance, recurrence and changing needs** | What supports later participation, detects recurrence, responds to setbacks and adapts when health, context, power or resources change? | A setback is information for reassessment, not proof of moral failure or evidence that all previous change was false |
+| **F08-A · Conditions and protection** | What danger, demand, deprivation, dependency, exclusion or material pressure remains, and what protection or accommodation is available? | Internal work cannot make an unsafe condition safe; subjective and externally assessed safety must both be considered without substituting one for the other |
+| **F08-B · Access and self-reconnection** | Which bodily, emotional, reflective, relational and contextual information is becoming more noticeable, distinguishable or usable? | More awareness is not always more accuracy, and inward attention may be difficult, unwanted or clinically inappropriate in some conditions |
+| **F08-C · Capacity, skill and support** | What can the person do now, under which conditions, with what assistance, cost and reliability? | A capacity may be uneven, context-bound, newly developing, temporarily constrained or supported externally; the route cannot be inferred from appearance |
+| **F08-D · Updating and generalisation** | What expectation, meaning, discrimination, action route or consequence is changing, and does that change travel across contexts? | Insight, one corrective experience or improvement in a protected setting does not establish broad or permanent revision |
+| **F08-E · Return and recovery profile** | Which physiological, experiential, relational and practical channels are widening or rebuilding, at what rate and with what remaining cost? | No single biomarker, mood, behaviour or Gradient Position establishes completed Return or recovery |
+| **F08-F · Conduct, accountability and reparation** | If another person was affected, has the behaviour stopped, has impact been specifically owned, have resources or options been restored and does change hold under later pressure? | The actor's recovery is not reparation, and understanding why harm occurred does not remove responsibility |
+| **F08-G · Trust, access and possible reconciliation** | What does the affected person want, what boundaries remain, and what evidence would be needed for any form of renewed reliance or contact? | Forgiveness, trust, access and reconciliation are distinct, voluntary and never owed |
+| **F08-H · Maintenance, recurrence and changing needs** | What supports later participation, detects recurrence, responds to setbacks and adapts when health, context, power or resources change? | A setback is information for reassessment, not proof of moral failure or evidence that all previous change was false |
 
 These families are assessment routes, not stages. More than one may operate at once, some may be irrelevant and progress in one may occur while another remains unchanged.
 
@@ -137,13 +143,13 @@ A capacity may be:
 - unnecessary in one culture or setting but expected in another;
 - obscured by a measurement that rewards speech, speed, eye contact or normative social performance.
 
-F8 should not decide which of these is the person's hidden essence. It should ask what is observable now, where the capacity appears, what makes access easier or harder, what support is acceptable and whether the change matters in everyday life.
+F08 should not decide which of these is the person's hidden essence. It should ask what is observable now, where the capacity appears, what makes access easier or harder, what support is acceptable and whether the change matters in everyday life.
 
 ## Nonlinearity without a prescribed oscillation
 
 Change may involve approach and retreat. It may also be steady, delayed, abrupt, domain-specific, cyclical, interrupted by current conditions or invisible to an outside observer. Calling every fluctuation the nervous system's test of whether territory is survivable turns a possible interpretation into a master mechanism.
 
-F8 can preserve the humane point without fixing one rhythm:
+F08 can preserve the humane point without fixing one rhythm:
 
 - variation does not automatically mean failure;
 - the meaning of a setback depends on the conditions and outcome being measured;
@@ -161,7 +167,7 @@ The original map says insight and experience update two different systems throug
 
 Insight is itself an experience and may change attention, meaning, action and relationship. Practice can change what becomes available without producing a conscious explanation. Reliable conditions may change expectation gradually. A changed account may coexist with unchanged physiological recruitment, and a behavioural change may occur before the person can explain it.
 
-F8 should therefore track several outcomes rather than assign information and sustained conditions to two systems:
+F08 should therefore track several outcomes rather than assign information and sustained conditions to two systems:
 
 ```text
 present conditions + bodily and sensory information + meaning + relationship
@@ -174,25 +180,29 @@ present conditions + bodily and sensory information + meaning + relationship
 
 The important correction remains: verbal insight is not a substitute for observing later participation, conduct and recovery. It is also not irrelevant simply because another channel changes more slowly.
 
-## How F8 connects to the whole
+<a id="how-f8-connects-to-the-whole"></a>
 
-| Current layer | What F8 receives or contributes | Boundary of the connection |
+## How F08 connects to the whole
+
+| Current layer | What F08 receives or contributes | Boundary of the connection |
 | --- | --- | --- |
-| **F1 · evolutionary foundations** | Broad capacities for learning, recovery, care, cooperation and adaptation make change possible | Evolution does not establish an original healthy state to which every person must return |
-| **F2 · developmental shaping** | Development helps explain why access, expectation, skill and support needs differ | Present difficulty cannot reveal whether a pathway was blocked, absent or formed differently |
-| **F3 · adult maintenance and revision** | F3 identifies expectations, meanings, response routes and revision conditions that F8 can follow over time | A coherent new account is not by itself behavioural, physiological or relational repair |
-| **F4 · shared rules** | Group rules can support voice, help-seeking, boundaries, learning and accountability | A rule that names safety does not establish safe conditions or equal power |
-| **F5 · social valuation** | Recognition, credibility, housing, income, status and service access may expand or restrict recovery routes | Recovery cannot be reduced to personal resilience while unequal conditions continue |
-| **F6 · bias and judgement** | Revisable judgement can improve assessment, feedback and the interpretation of setbacks | Categorising a person as healed, resistant, unsafe or unrecoverable can itself distort the route |
-| **F7 · coercive enforcement** | F7 identifies what must stop and which agency, resource or option has been restricted | Self-reconnection cannot substitute for protection, cessation, accountability or restored agency |
+| **F01 · evolutionary foundations** | Broad capacities for learning, recovery, care, cooperation and adaptation make change possible | Evolution does not establish an original healthy state to which every person must return |
+| **F02 · developmental shaping** | Development helps explain why access, expectation, skill and support needs differ | Present difficulty cannot reveal whether a pathway was blocked, absent or formed differently |
+| **F03 · adult maintenance and revision** | F03 identifies expectations, meanings, response routes and revision conditions that F08 can follow over time | A coherent new account is not by itself behavioural, physiological or relational repair |
+| **F04 · shared rules** | Group rules can support voice, help-seeking, boundaries, learning and accountability | A rule that names safety does not establish safe conditions or equal power |
+| **F05 · social valuation** | Recognition, credibility, housing, income, status and service access may expand or restrict recovery routes | Recovery cannot be reduced to personal resilience while unequal conditions continue |
+| **F06 · bias and judgement** | Revisable judgement can improve assessment, feedback and the interpretation of setbacks | Categorising a person as healed, resistant, unsafe or unrecoverable can itself distort the route |
+| **F07 · coercive enforcement** | F07 identifies what must stop and which agency, resource or option has been restricted | Self-reconnection cannot substitute for protection, cessation, accountability or restored agency |
 | **Model 1 · coordinated conscious access** | Greater access and differentiation may give ME more information with which to participate | Bodily access, affective sharing and mentalizing do not establish accuracy, care or acceptable behaviour |
-| **Gradient and Return** | F8 can observe changing organisation, updating and access to wider capacities across Return | Return is not a treatment, moral achievement, completed recovery or relational repair |
-| **Chronic organisation** | F8 examines persistence, reconstruction, generalisation, threshold change and recovery opportunity | Chronic does not mean permanent, damaged identity or mismatch when adverse conditions are still present |
-| **Harm, Power and Repair** | HPR governs protection, behaviour, impact, accountability, reparation and affected-person agency | F8 must not turn an actor's internal progress into evidence that repair is complete |
-| **F9 · adaptive fit** | F9 can ask which environments, supports and accommodations allow capacities to be used without excessive cost | Difference from a normative route is not failed healing |
+| **Gradient and Return** | F08 can observe changing organisation, updating and access to wider capacities across Return | Return is not a treatment, moral achievement, completed recovery or relational repair |
+| **Chronic organisation** | F08 examines persistence, reconstruction, generalisation, threshold change and recovery opportunity | Chronic does not mean permanent, damaged identity or mismatch when adverse conditions are still present |
+| **Harm, Power and Repair** | HPR governs protection, behaviour, impact, accountability, reparation and affected-person agency | F08 must not turn an actor's internal progress into evidence that repair is complete |
+| **F09 · adaptive fit** | F09 can ask which environments, supports and accommodations allow capacities to be used without excessive cost | Difference from a normative route is not failed healing |
 | **F10 · generational bridges** | Later family and community conditions may transmit support, silence, resources, rules, harm and repair practices | No person's healing guarantees a particular outcome in the next generation |
 
-## Reading the original F8 language against the current system
+<a id="reading-the-original-f8-language-against-the-current-system"></a>
+
+## Reading the original F08 language against the current system
 
 ### Preserve, with precise translation
 
@@ -210,7 +220,7 @@ The important correction remains: verbal insight is not a substitute for observi
 
 | Map wording or implication | Why it needs care | Safer direction |
 | --- | --- | --- |
-| F3–F7 are substitutes for something original that was missing | It makes diverse social, cognitive and harmful processes one deficit chain and assumes an original natural arrangement | Ask what process is occurring now and what conditions, capacities, rules or power maintain it |
+| F03–F07 are substitutes for something original that was missing | It makes diverse social, cognitive and harmful processes one deficit chain and assumes an original natural arrangement | Ask what process is occurring now and what conditions, capacities, rules or power maintain it |
 | “Building the original is what repair is” | Skills may be new, adapted or externally supported; repair after harm has actor- and affected-person requirements | Separate self-reconnection, capacity development, behaviour change and reparation |
 | Blocked pathway versus pathway never built | The binary is rarely observable and excludes uneven, contextual, altered and differently supported capacity | Describe where the capacity is available, constrained, developing or costly and test support needs |
 | Felt safety must come before capacity | It merges several kinds of safety and creates a universal order | Assess actual conditions, subjective experience, viable agency and the specific capacity together |
@@ -237,11 +247,13 @@ The proposed alignment contains useful clinical and research vocabularies, but t
 - **Tronick's still-face and mutual-regulation work** informs early dyadic coordination and mismatch. It does not directly establish one adult trauma-recovery sequence or make relational reunion necessary.
 - **Psychological safety** in Edmondson's research is an organisational construct concerning interpersonal risk-taking, voice, teamwork and learning. It should be used within that scope rather than as a synonym for felt bodily safety or freedom from harm.
 
-Current authoritative guidance also argues against one route. SAMHSA describes recovery as person-driven, holistic and occurring through many pathways. NICE recommends several structured PTSD interventions, with attention to preference, risk, symptoms, trained delivery and ongoing review. These sources concern particular service and diagnostic contexts; they support plural, specified routes rather than validating F8 as a whole.
+Current authoritative guidance also argues against one route. SAMHSA describes recovery as person-driven, holistic and occurring through many pathways. NICE recommends several structured PTSD interventions, with attention to preference, risk, symptoms, trained delivery and ongoing review. These sources concern particular service and diagnostic contexts; they support plural, specified routes rather than validating F08 as a whole.
 
-## F8's handoffs
+<a id="f8s-handoffs"></a>
 
-F8 should replace the map's fixed reversal chain with a route-selection question:
+## F08's handoffs
+
+F08 should replace the map's fixed reversal chain with a route-selection question:
 
 ```text
 What is current?
@@ -262,7 +274,7 @@ Four handoffs matter most:
 1. **To immediate protection and appropriate services:** when danger, coercion, self-harm risk, violence, severe impairment or urgent health need is present. A conceptual framework must not replace clinical, safeguarding, legal or emergency assessment.
 2. **To Model 1 access and Model 2 Return work:** when the question concerns changing access, participation, organisation, updating or recovery within the person.
 3. **To HPR:** when behaviour has affected another person's safety, agency, credibility, resources or future options. Cessation, accountability and reparation remain on their own evidence plane.
-4. **To F9:** when access and participation depend on sensory, cognitive, communicative, environmental or social fit rather than correction towards a normative form.
+4. **To F09:** when access and participation depend on sensory, cognitive, communicative, environmental or social fit rather than correction towards a normative form.
 
 ## Result of this pass
 
@@ -280,9 +292,9 @@ Four handoffs matter most:
 
 ## Grounding science and knowledge fields
 
-F8 needs fields that can examine recovery across body, experience, everyday participation, material conditions, behaviour and relationship. No single discipline can decide what recovery means for a person or establish all forms of repair.
+F08 needs fields that can examine recovery across body, experience, everyday participation, material conditions, behaviour and relationship. No single discipline can decide what recovery means for a person or establish all forms of repair.
 
-| Field | What it can ground in F8 | What it cannot establish alone |
+| Field | What it can ground in F08 | What it cannot establish alone |
 | --- | --- | --- |
 | **Recovery science and psychiatric rehabilitation** | Person-defined recovery, participation, hope, functioning, support, citizenship and multiple pathways | One universal endpoint, stage sequence or requirement to eliminate every symptom |
 | **Clinical psychology and psychotherapy process and outcome research** | Treatment outcomes, therapeutic alliance, rupture, mechanisms, skills, preference, dropout and adverse effects | A general account of social repair or the safety of a specific relationship without direct assessment |
@@ -310,7 +322,7 @@ F8 needs fields that can examine recovery across body, experience, everyday part
 
 ### Priority evidence
 
-F8 should favour longitudinal and multi-method evidence that names the person, condition, route and outcome being studied. Depending on the claim, this may include controlled treatment studies, comparative effectiveness research, mechanism experiments, everyday functioning and participation measures, physiological recovery across multiple channels, later behaviour under comparable conditions, affected-person reports, service and implementation data, qualitative research and participatory work.
+F08 should favour longitudinal and multi-method evidence that names the person, condition, route and outcome being studied. Depending on the claim, this may include controlled treatment studies, comparative effectiveness research, mechanism experiments, everyday functioning and participation measures, physiological recovery across multiple channels, later behaviour under comparable conditions, affected-person reports, service and implementation data, qualitative research and participatory work.
 
 Every intervention claim should record benefit, adverse effects, dropout, accessibility, preference, contraindications, who was excluded from the evidence and whether change generalised beyond the research or treatment setting. Every repair claim should separately record cessation, impact, accountability, restored agency or resources, later conduct and the affected person's freedom over trust and access. No single symptom score, biomarker, narrative of insight or relationship outcome should stand for the whole route.
 

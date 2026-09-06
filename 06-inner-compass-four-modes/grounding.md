@@ -10,7 +10,7 @@
 | --- | --- | --- |
 | The mode-to-formation mapping | TEG-Blue integration | A compression of Model 2's fourteen formations. It inherits their grounding and adds none of its own. |
 | Modes as regulation dependencies | TEG-Blue integration | Follows from the accepted regulation table in the decision; not a separate empirical claim. |
-| Dominance versus Domination | Architectural and ethical boundary | Rests on coercive-control, dominance and accountability research on the conduct side (see Behaviour and responsibility and F7); no autonomic profile is claimed. |
+| Dominance versus Domination | Architectural and ethical boundary | Rests on coercive-control, dominance and accountability research on the conduct side (see Behaviour and responsibility and F07); no autonomic profile is claimed. |
 | Detectability of the four states in language | Established at group level, within limits | Paretas-Artacho (2026), pre-registered natural-language study of Reddit conflict posts: all four states detectable; classifications tracked community verdicts; Protection did not cluster separately. |
 | The gate: return to Connection predicted by perspective-holding markers | Established at group level, within limits | Same study: de-escalators showed 78 percent higher complexity-marker rates. Version 2.0 names the mechanism Interoceptive Self-Awareness. In the current architecture that is the first capacity, bodily information access and use, not a single bridge. |
 

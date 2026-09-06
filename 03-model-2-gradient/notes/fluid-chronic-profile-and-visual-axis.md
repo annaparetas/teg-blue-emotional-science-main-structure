@@ -231,7 +231,7 @@ This decision does not:
 - create a validated measure;
 - establish thresholds between reference configurations;
 - turn the profile into a diagnostic formulation;
-- decide how trauma-specific evidence will alter F2;
+- decide how trauma-specific evidence will alter F02;
 - determine responsibility from internal organisation;
 - authorise implementation before the terminology and visual relationship are approved.
 

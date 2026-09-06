@@ -1,8 +1,10 @@
-# Six-Cluster Synthesis and Emerging F3 Construct Families
+<a id="six-cluster-synthesis-and-emerging-f3-construct-families"></a>
+
+# Six-Cluster Synthesis and Emerging F03 Construct Families
 
 Status: governing synthesis · Pilots 05–10 integrated · 19 August 2026
 Scope: relational capacities · adult maintenance and revision · Chronic organisation · Harm–Power–Repair
-Purpose: identify what the six clinical-pattern evidence pilots jointly establish, what emerging F3 may own and what must remain with other architectural owners
+Purpose: identify what the six clinical-pattern evidence pilots jointly establish, what emerging F03 may own and what must remain with other architectural owners
 
 Evidence base: [Pilot 05 · Mentalizing, Affective Sharing and Instrumental Use](../../evidence/pilots/PILOT-05-mentalizing-affective-sharing-and-instrumental-use.md) · [Pilot 06 · Entitlement, Self-Threat, Power and Retaliation](../../evidence/pilots/PILOT-06-entitlement-self-threat-power-and-retaliation.md) · [Pilot 07 · People-Pleasing, Dependency, Appeasement and Refusal](../../evidence/pilots/PILOT-07-people-pleasing-dependency-appeasement-and-refusal.md) · [Pilot 08 · Avoidance, Detachment and Chosen Distance](../../evidence/pilots/PILOT-08-avoidance-detachment-and-chosen-distance.md) · [Pilot 09 · Control, Over-Control and Coercive Control](../../evidence/pilots/PILOT-09-control-overcontrol-and-coercive-control.md) · [Pilot 10 · Self–Other Distinction, Identity and Attachment Stress](../../evidence/pilots/PILOT-10-self-other-distinction-identity-and-attachment-stress.md)
 
@@ -12,11 +14,11 @@ Architecture companions: [Relational Configuration → Clinical and Personality-
 
 The six clusters do not reveal six personalities or six deeper Gradient layers. They reveal recurring **adult maintenance-and-revision questions** that can appear across many capacity configurations, diagnoses, developmental histories and present conditions.
 
-Emerging F3 should therefore own neither “False Coherence” as one master mechanism nor a catalogue of personality types. Its defensible centre is:
+Emerging F03 should therefore own neither “False Coherence” as one master mechanism nor a catalogue of personality types. Its defensible centre is:
 
-> **F3 examines how adults interpret, anticipate, organise and revise relational responses around currently available information, learned expectations, valued self-positions and experienced consequences.**
+> **F03 examines how adults interpret, anticipate, organise and revise relational responses around currently available information, learned expectations, valued self-positions and experienced consequences.**
 
-F3 can describe a maintenance route only after the relevant capacity and present-condition questions have been separated. It cannot establish developmental origin, biological state, diagnosis, truth, harm or coercion.
+F03 can describe a maintenance route only after the relevant capacity and present-condition questions have been separated. It cannot establish developmental origin, biological state, diagnosis, truth, harm or coercion.
 
 ## What all six clusters establish
 
@@ -42,17 +44,21 @@ A new account may change language without changing felt access, expectation, ava
 
 ### 6 · Refusal is both an internal and relational question
 
-**Refusal access** asks whether a person can locate, represent and express a no. **Viable refusal** asks whether that no can be enacted without coercive punishment or loss of essential options. F3 may examine the expectation around refusal; HPR must establish the surrounding power and consequences.
+**Refusal access** asks whether a person can locate, represent and express a no. **Viable refusal** asks whether that no can be enacted without coercive punishment or loss of essential options. F03 may examine the expectation around refusal; HPR must establish the surrounding power and consequences.
 
 ### 7 · Serious danger becomes visible at the conjunction
 
 No capacity combination, diagnosis, intensity level or coping style supplies a dangerousness verdict. Concern rises through the conjunction of goal, capacity use, entitlement, power, behaviour, option-field restriction, impact, recurrence and response to feedback.
 
-## The emerging F3 construct families
+<a id="the-emerging-f3-construct-families"></a>
+
+## The emerging F03 construct families
 
 These are provisional scientific-facing families, not final public labels. Each family must later be decomposed into definition, phenomenon, mechanism, development, application and boundary claims.
 
-### F3-A · Relational prediction and expected consequence
+<a id="f3-a--relational-prediction-and-expected-consequence"></a>
+
+### F03-A · Relational prediction and expected consequence
 
 **Working question:** What does the person expect will happen if they disclose, disagree, depend, withdraw, make an error, lose status or allow another person to act independently?
 
@@ -60,7 +66,9 @@ This family includes anticipated rejection, abandonment, humiliation, engulfment
 
 **Does not establish:** that the prediction is developmentally acquired, inaccurate, unconscious or pathological.
 
-### F3-B · Meaning assignment and felt certainty
+<a id="f3-b--meaning-assignment-and-felt-certainty"></a>
+
+### F03-B · Meaning assignment and felt certainty
 
 **Working question:** What is a feeling, contradiction, delay, boundary, error or another person’s response taken to mean, and how certain does that interpretation become?
 
@@ -68,7 +76,9 @@ This family includes appraisal, attribution, ungrounded certainty, hypermentaliz
 
 **Does not establish:** hidden bodily truth, deliberate deception, “denial”, or that another person’s account is correct.
 
-### F3-C · Self-position and identity-contingent maintenance
+<a id="f3-c--self-position-and-identity-contingent-maintenance"></a>
+
+### F03-C · Self-position and identity-contingent maintenance
 
 **Working question:** Which valued self-position, role, status, belonging claim or identity continuity is being protected, and what would revision appear to cost?
 
@@ -76,7 +86,9 @@ This family includes contingent self-worth, approval dependence, correctness or 
 
 **Does not establish:** narcissism, fragility, a False Self, childhood origin or harmful behaviour.
 
-### F3-D · Relational response-route selection
+<a id="f3-d--relational-response-route-selection"></a>
+
+### F03-D · Relational response-route selection
 
 **Working question:** Given the information and options presently available, which route is recruited—pause, seek support, reassure, accommodate, appease, negotiate, structure, withdraw, conceal, impose, retaliate or repair?
 
@@ -84,7 +96,9 @@ The route must be described behaviourally and in context. The same person may us
 
 **Does not establish:** one stable personality, one autonomic state or one inevitable sequence. When a route imposes cost or removes another person’s options, HPR becomes the governing owner.
 
-### F3-E · Relief, reinforcement and replacement
+<a id="f3-e--relief-reinforcement-and-replacement"></a>
+
+### F03-E · Relief, reinforcement and replacement
 
 **Working question:** What immediate effect makes the route more likely to recur, and what longer-term capacities, goals or relationships does it support or replace?
 
@@ -92,7 +106,9 @@ This family includes brief reassurance relief, conflict reduction, restored self
 
 **Does not establish:** a unitary regulation mechanism, “incomplete completion” or Chronic organisation. Chronic owns recurrence, generalisation, rigidity, accumulating cost and updating difficulty.
 
-### F3-F · Feedback, revision and repair readiness
+<a id="f3-f--feedback-revision-and-repair-readiness"></a>
+
+### F03-F · Feedback, revision and repair readiness
 
 **Working question:** What happens when new information, contradiction, another person’s impact, a failed prediction or changed conditions enter the system?
 
@@ -111,7 +127,9 @@ Track whether the account can be checked; confidence can change; another perspec
 | Control, over-control and coercive control | What do uncertainty, error and independent action mean? | self-structure · planning · reassurance · monitoring · interpersonal demand | Can the strategy loosen when conditions, evidence or another person’s needs change? | HPR begins when authority, cost or threat restricts another person’s executable options. |
 | Self–other distinction and attachment stress | What does strong affect appear to prove, and whose state is it? | certainty · proximity seeking · accusation · withdrawal · rapid repair seeking | Can source, state and confidence be re-separated as intensity changes? | Distress does not prove harm or excuse it; conduct and impact require direct assessment. |
 
-## Replacing the legacy F3 umbrellas
+<a id="replacing-the-legacy-f3-umbrellas"></a>
+
+## Replacing the legacy F03 umbrellas
 
 | Legacy phrase | Current treatment | Safer decomposition |
 | --- | --- | --- |
@@ -126,20 +144,22 @@ Track whether the account can be checked; confidence can change; another perspec
 
 ## Ownership boundaries
 
-| Owner | Governing question | Must not be assigned to F3 |
+| Owner | Governing question | Must not be assigned to F03 |
 | --- | --- | --- |
-| **F1** | What relevant capacities are biologically available? | evolutionary origin or a fixed processing sequence |
-| **F2** | How may development shape access, interpretation, expression, action and expectation? | a reconstructed personal history from current presentation |
+| **F01** | What relevant capacities are biologically available? | evolutionary origin or a fixed processing sequence |
+| **F02** | How may development shape access, interpretation, expression, action and expectation? | a reconstructed personal history from current presentation |
 | **Inner Compass / ESS–CLS** | What information becomes available, readable, representable and usable now? | a moral or diagnostic verdict from uneven access |
 | **Fluid** | How is the organism presently organised in relation to current conditions? | adult narrative maintenance or developmental origin |
 | **Chronic** | How recurrent, generalised, rigid, costly and difficult to update is the organisation? | one act, one intense state or one coping preference |
-| **F3** | What adult prediction, meaning, self-position, response route and reinforcement pattern maintains or revises participation? | diagnosis, historical certainty, truth, harm or coercion |
+| **F03** | What adult prediction, meaning, self-position, response route and reinforcement pattern maintains or revises participation? | diagnosis, historical certainty, truth, harm or coercion |
 | **HPR** | What was done, with what power, impact, recurrence and response to accountability? | inferred inner state as a substitute for behavioural evidence |
 | **Return** | What capacities become available again as organisation updates? | reconciliation, restitution or restored trust |
 
-## F3 claim discipline
+<a id="f3-claim-discipline"></a>
 
-Every future F3 construct must keep at least these variables visible:
+## F03 claim discipline
+
+Every future F03 construct must keep at least these variables visible:
 
 1. **Trigger or changed condition:** what entered the situation?
 2. **Available information:** bodily, affective, represented-other and contextual information.
@@ -168,14 +188,14 @@ The following statements are sufficiently bounded for later interface work:
 - Structure can support agency; coercive control begins when power or imposed cost restricts another person’s options.
 - Strong affective sharing does not itself mean loss of self–other distinction.
 - Understanding another person does not guarantee concern or restraint.
-- F3 examines maintenance and revision; HPR evaluates behaviour, power, impact and repair.
+- F03 examines maintenance and revision; HPR evaluates behaviour, power, impact and repair.
 
 ## Language not ready for active pages
 
 Do not yet publish:
 
 - a False Coherence score or type;
-- F3 profiles attached to the eight capacity combinations;
+- F03 profiles attached to the eight capacity combinations;
 - a Discomfort-to-Harm pathway;
 - an external-regulation ladder;
 - diagnostic or dangerousness interpretations;
@@ -186,9 +206,9 @@ Do not yet publish:
 
 ## Scientific status and next handoff
 
-The synthesis is strong enough to govern architecture and terminology because it integrates the bounded findings and corrections already reviewed in Pilots 05–10. It is not yet a complete evidence review of adult maintenance as one field. The proposed F3 families are **provisional integrations** supported by component literatures, not validated TEG-Blue constructs.
+The synthesis is strong enough to govern architecture and terminology because it integrates the bounded findings and corrections already reviewed in Pilots 05–10. It is not yet a complete evidence review of adult maintenance as one field. The proposed F03 families are **provisional integrations** supported by component literatures, not validated TEG-Blue constructs.
 
-The next scientific task is to decompose F3-A through F3-F into claim types and map existing canonical sources before commissioning new searches. Priority should go to:
+The next scientific task is to decompose F03-A through F03-F into claim types and map existing canonical sources before commissioning new searches. Priority should go to:
 
 1. meaning assignment, felt certainty and revision under self- or relationship-relevant pressure;
 2. immediate relief versus durable updating;
@@ -196,4 +216,4 @@ The next scientific task is to decompose F3-A through F3-F into claim types and 
 4. narrative change versus changes in access, action and later conduct;
 5. branching response routes without a defence-to-domination sequence.
 
-The next implementation task remains the combinatorial field. It should consume this architecture only after the F3 claim decomposition identifies which variables can be represented responsibly.
+The next implementation task remains the combinatorial field. It should consume this architecture only after the F03 claim decomposition identifies which variables can be represented responsibly.

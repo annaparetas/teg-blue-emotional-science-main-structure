@@ -152,26 +152,28 @@ This distinction matters ethically:
 
 The following are internal working notes only. Do not use them as public lead language until the public framework decision changes.
 
-- `F1` explains the design and evolution of the acute protective system.
-- `F2` begins to explain how protective mechanisms become organized into repeatable patterns.
-- `F3` begins to explain how repeated patterns become chronic.
-- `F4`, `F5`, and `F6` are later social and systemic amplification layers where chronic states can be reinforced, rewarded, normalized, or scaled.
+- `F01` explains the design and evolution of the acute protective system.
+- `F02` begins to explain how protective mechanisms become organized into repeatable patterns.
+- `F03` begins to explain how repeated patterns become chronic.
+- `F04`, `F05`, and `F06` are later social and systemic amplification layers where chronic states can be reinforced, rewarded, normalized, or scaled.
 
-This file does not define the full F1-F6 architecture. It only records the current acute/chronic logic so later methodology and Engine work have a stable source.
+This file does not define the full F01-F06 architecture. It only records the current acute/chronic logic so later methodology and Engine work have a stable source.
 
-## F1-F3 Regulation Thread
+<a id="f1-f3-regulation-thread"></a>
 
-F1, F2, and F3 should be held together by a regulation thread, not led by specialized physiology language.
+## F01-F03 Regulation Thread
+
+F01, F02, and F03 should be held together by a regulation thread, not led by specialized physiology language.
 
 Use the top-level language to explain what the system is doing:
 
-- `F1`: how activation, regulation, return, and repair are designed to move when the protective system is responsive.
-- `F2`: how repeated conditions train the system into recognizable routes for protection, management, shutdown, connection-preservation, or repair.
-- `F3`: how those routes can become rigid, costly, and chronically online when return and repair are no longer easily available.
+- `F01`: how activation, regulation, return, and repair are designed to move when the protective system is responsive.
+- `F02`: how repeated conditions train the system into recognizable routes for protection, management, shutdown, connection-preservation, or repair.
+- `F03`: how those routes can become rigid, costly, and chronically online when return and repair are no longer easily available.
 
 Homeostasis, allostasis, stress physiology, and allostatic load may help underwrite parts of this sequence, but they should sit below the primary explanation as source-trace or research-note language.
 
-Do not make F1, F2, or F3 top-of-page explanations about homeostasis or allostatic load. The public-facing doorway, if these layers are ever translated, should stay functional and legible:
+Do not make F01, F02, or F03 top-of-page explanations about homeostasis or allostatic load. The public-facing doorway, if these layers are ever translated, should stay functional and legible:
 
 > How activation rises, how regulation tries to meet it, how return becomes possible, and what happens when the pattern gets stuck.
 
@@ -188,7 +190,7 @@ requires that depth.
 
 Public general pages should still not lead with:
 
-- F1-F6
+- F01-F06
 - L0-L6 or raw ATLAS row architecture
 - chronic-state typologies presented as identities
 - diagnostic labels

@@ -316,92 +316,92 @@ replaced by The Emotional–Somatic Cycle on 23 August 2026.
 
 ## Frameworks and product
 
-**F1–F12 · Foundational Frameworks** · Approved as lenses · 05.
+**F01–F12 · Foundational Frameworks** · Approved as lenses · 05.
 Coordinating explanatory layers, each owning one question and handing a
-bounded contribution to the next. Four movements: F1–F3 foundations and
-participation; F4–F7 collective conditions and power; F8–F10 change, access
+bounded contribution to the next. Four movements: F01–F03 foundations and
+participation; F04–F07 collective conditions and power; F08–F10 change, access
 and continuity; F11–F12 integration and reflection. Numbering is
 navigation, not sequence. Not established scientific theories.
 
-**F1 · Foundations of the Fluid Gradient** · Working (fifth pass) · 05.
+**F01 · Foundations of the Fluid Gradient** · Working (fifth pass) · 05.
 Evolutionary foundations of present-responsive whole-organism organisation.
 Two timescales: capacities became available; capacities organise together.
 Many-to-many into the positions; positions are not evolutionary stages.
 Old title: Biological Evolution.
 
-**F2 · Developmental Shaping of Emotional Participation** · Working (fifth
+**F02 · Developmental Shaping of Emotional Participation** · Working (fifth
 pass) · 05. Two inseparable jobs: capacities widen from birth, and repeated
 relational outcomes shape what can be noticed, trusted, expressed, acted on
 and included in the self. Seven separable layers. Old title: Developmental
 Calibration; "calibration" survives only with its target named.
 
-**Emotion invalidation** · Working · F2. Repeated interactions in which a
+**Emotion invalidation** · Working · F02. Repeated interactions in which a
 child's emotional experience or report is treated as meaningless, false,
 excessive, shameful, dangerous, inconvenient or proof the child is the
 problem, without helping them examine signal, situation, interpretation and
 action separately. Not every disagreement, correction or limit.
 
-**The acceptable character** · Working · F2. A practised organisation of
+**The acceptable character** · Working · F02. A practised organisation of
 expression, behaviour, attention and self-explanation built around the
 version of the child most likely to preserve care, approval, safety or
 belonging. A relationship-preserving role, not a false person or a type.
 
-**F3 · Adult Pattern Maintenance and Revision** · Working (second pass) ·
+**F03 · Adult Pattern Maintenance and Revision** · Working (second pass) ·
 05. How prediction, meaning, self-position, response routes, immediate
 consequences and feedback keep an adult pattern going or let it change. Six
-construct families (F3-A to F3-F). Old title: Adult Cognition and False
+construct families (F03-A to F03-F). Old title: Adult Cognition and False
 Coherence; False Coherence survives only as a historical recognition label,
 decomposed.
 
-**Route audit** · Working · F3 and 04. The minimum questions whenever
+**Route audit** · Working · F03 and 04. The minimum questions whenever
 maintenance, relief, revision or reinforcement is claimed: what condition
 was present; what information was available; what action or inhibition
 occurred; what changed immediately; what changed later; who carried the
 cost, what power was involved, did viable refusal remain.
 
-**F4 · Shared Rules and Collective Organisation** · Working (first pass) ·
+**F04 · Shared Rules and Collective Organisation** · Working (first pass) ·
 05. How groups create, transmit, apply and revise explicit and implicit
 expectations, and how those shape participation, belonging, behaviour and
-access. Six construct families (F4-A to F4-F). A family, group, culture or
+access. Six construct families (F04-A to F04-F). A family, group, culture or
 institution is not one nervous system. Old title: Rules Regulate.
 
-**F5 · Social Valuation, Status and Unequal Conditions** · Working (first
+**F05 · Social Valuation, Status and Unequal Conditions** · Working (first
 pass) · 05. The observable processes by which groups and institutions rank
 people, roles, needs or knowledge, and what those rankings do to
 recognition, credibility, protection, access, resources and exposure. Human
 worth is an ethical commitment; social valuation is what is observed.
-Seven construct families (F5-A to F5-G). Old title: Worth Hierarchies
+Seven construct families (F05-A to F05-G). Old title: Worth Hierarchies
 Regulate; the Filter of Worth survives as a decomposed recognition label.
 
-**F6 · Bias, Categorisation and Revisable Judgement** · Working (first
+**F06 · Bias, Categorisation and Revisable Judgement** · Working (first
 pass) · 05. How prior learning, categories, affect, identity, incentives and
 institutional practice shape what is noticed, weighted, inferred, decided
 and corrected. "Bias" must say which of its meanings it names before it is
-explained. Seven construct families (F6-A to F6-G). Bias is not a shared
+explained. Seven construct families (F06-A to F06-G). Bias is not a shared
 Chronic state. Old title: Bias Regulates.
 
-**F7 · Coercive Enforcement, Power and Restricted Agency** · Working
+**F07 · Coercive Enforcement, Power and Restricted Agency** · Working
 (first pass) · 05. How power, threats, punishment, surveillance,
 restriction, deprivation or force make another person's refusal or
 independent action meaningfully less possible. The enforcement threshold is
 where the conduct plane begins; Domination is not an internal
-configuration. Eight construct families (F7-A to F7-H). Old title:
+configuration. Eight construct families (F07-A to F07-H). Old title:
 Domination Regulates.
 
-**F8 · Recovery, Reconnection and Repair as Distinct Routes** · Working
+**F08 · Recovery, Reconnection and Repair as Distinct Routes** · Working
 (first pass) · 05. What may change within a person (conditions, access,
 capacity, updating, recovery) and the additional work required when
 behaviour has affected another person's safety, agency or trust. Several
 observable routes, assessed separately, replace one pathway. Eight construct
-families (F8-A to F8-H). Old title: Self-Reconnection and Repair Pathway.
+families (F08-A to F08-H). Old title: Self-Reconnection and Repair Pathway.
 
-**F9 · Neurodivergent Variation, Disability and Environmental Fit** ·
+**F09 · Neurodivergent Variation, Disability and Environmental Fit** ·
 Working (first pass) · 05. How differences in sensing, attention,
 communication, movement, learning and recovery interact with environments,
 support and power to shape access, participation, disability and cost.
 Difference, disability, distress and mismatch stay separate; autistic
-burnout is not a Gradient Position. Eight construct families (F9-A to
-F9-H). Old title: Neurodivergent Configuration and Adaptive Fit.
+burnout is not a Gradient Position. Eight construct families (F09-A to
+F09-H). Old title: Neurodivergent Configuration and Adaptive Fit.
 
 **F10 · Intergenerational Pathways, Caregiving and Change** · Working
 (first pass) · 05. How health, caregiving, learning, relationships,
@@ -453,7 +453,7 @@ Three planes, described separately before being read together:
 organisation, behaviour pattern, power use. Organisation ≠ behaviour
 pattern ≠ power use.
 
-**Enforcement threshold** · Approved · 07 and F7. Where power, threats,
+**Enforcement threshold** · Approved · 07 and F07. Where power, threats,
 punishment, surveillance, restriction, deprivation or force make another
 person's refusal or independent action meaningfully less possible. The
 conduct plane begins here; legitimate authority can be bounded without
@@ -489,3 +489,7 @@ letters named retired legacy systems).
 
 Nothing outstanding from the old ledger for the transferred concepts. The
 display decisions listed under Model 2 remain open there.
+
+## Framework identifier notation · 6 September 2026
+
+Write F01–F12 in active framework references. In F03-C-04, F03 identifies the framework, C the claim family and 04 the claim. Evidence-family letters and source IDs remain separate. See [the migration decision](05-frameworks/notes/decisions.md#2026-09-06--framework-identifiers).

@@ -1,39 +1,45 @@
-# F2 · Trauma, Stress and Adversity Crosswalk
+<a id="f2--trauma-stress-and-adversity-crosswalk"></a>
+
+# F02 · Trauma, Stress and Adversity Crosswalk
 
 Status: working claim-and-evidence routing document
-Parent files: [F2 · Emotion Override](../diagram.html) · [Trauma, Stress and Adversity Research Map](trauma-stress-and-adversity-research-map.md)
-Purpose: identify which trauma-, stress- and adversity research families can ground particular F2 claims without turning trauma into F2's single cause or explanation
+Parent files: [F02 · Emotion Override](../diagram.html) · [Trauma, Stress and Adversity Research Map](trauma-stress-and-adversity-research-map.md)
+Purpose: identify which trauma-, stress- and adversity research families can ground particular F02 claims without turning trauma into F02's single cause or explanation
 
 ## The central decision
 
-F2 should not become a general trauma model. Its narrower scientific task is to examine how development and repeated relational outcomes may shape whether emotional information can be accessed, identified, expressed, trusted and used for action.
+F02 should not become a general trauma model. Its narrower scientific task is to examine how development and repeated relational outcomes may shape whether emotional information can be accessed, identified, expressed, trusted and used for action.
 
 Trauma, stress and adversity research can strengthen that account in three different ways:
 
 1. **Direct developmental grounding:** evidence about emotion socialisation, attachment, caregiving, neglect, learning, controllability and early development.
 2. **Mechanism bridges:** evidence about conditioning, interoception, dissociation, stress physiology, defensive responding and updating.
-3. **Downstream checks:** diagnostic and outcome research that may show consequences or correlates but cannot establish the F2 developmental route.
+3. **Downstream checks:** diagnostic and outcome research that may show consequences or correlates but cannot establish the F02 developmental route.
 
-> **F2 describes a possible developmental learning process. Exposure categories, diagnoses and adult outcomes do not prove that process occurred in an individual.**
+> **F02 describes a possible developmental learning process. Exposure categories, diagnoses and adult outcomes do not prove that process occurred in an individual.**
 
-## F2 claim-family crosswalk
+<a id="f2-claim-family-crosswalk"></a>
 
-| F2 question or layer | Most relevant research families | What they may ground | Boundary |
+## F02 claim-family crosswalk
+
+| F02 question or layer | Most relevant research families | What they may ground | Boundary |
 | --- | --- | --- | --- |
 | **What can occur before reflective explanation?** | TSR-23 defensive survival circuits · TSR-34 preverbal and infant stress learning · TSR-35 infant and neonatal pain | Detection, affective learning, defensive organisation and pain-related learning can occur before autobiographical narration or mature symbolic interpretation. | Preverbal learning is not proof of a stored narrative, a particular later symptom or an unremembered event. |
 | **Under what developmental conditions is access shaped?** | TSR-04 developmental trauma · TSR-05 childhood maltreatment · TSR-10 deprivation and neglect · TSR-30 threat and deprivation · TSR-31 social determinants · TSR-32 harshness and unpredictability | Timing, repetition, material conditions, threat, deprivation and unpredictability can be separated rather than collapsed into “trauma”. | These exposure families do not specify one resulting organisation or Gradient Position. |
 | **How can relationships change the meaning and cost of emotion?** | TSR-11 attachment · TSR-12 social buffering · TSR-13 co-regulation · TSR-14 emotion socialisation · TSR-15 emotional invalidation · TSR-16 childhood emotional maltreatment · TSR-18 parentification | Caregiver response can affect whether expression brings support, dismissal, punishment, role reversal or repair; relational outcomes can therefore become part of what the child learns about a signal. | Attachment classification is not a diagnosis; parental response is dynamic and bidirectional; one interaction does not establish a durable rule. |
 | **How might bodily pressure remain while clear identification narrows?** | TSR-07 dissociation · TSR-19 alexithymia · TSR-20 interoception · TSR-21 emotion differentiation · TSR-22 somatic and body-memory research | Access, identification, bodily representation and verbal description need to remain distinct; difficulty naming emotion is not equivalent to absence of affective processing. | Bodily sensation does not verify a historical narrative, and alexithymia is not a trauma-specific marker. |
 | **How can expression be inhibited without erasing emotion?** | TSR-14 emotion socialisation · TSR-15 invalidation · TSR-16 emotional maltreatment · TSR-17 shame and humiliation · TSR-24 conditioning and extinction | Repeated consequences can shape expression, avoidance and anticipatory prediction; shame and social cost may be part of the learning environment. | Inhibition in one context is not global incapacity, and short-term experimental suppression is not evidence of a childhood pathway. |
-| **How can action become unavailable or seem ineffective?** | TSR-25 generalisation and discrimination · TSR-26 controllability and escape learning · TSR-27 learned helplessness research · TSR-28 entrapment and defeat · TSR-29 tonic immobility and freezing | F2's action layer can distinguish accurate detection from whether refusal, escape, protest, help-seeking or repair is possible and changes the outcome. | Immobility is not consent; inaction is not proof of deficient motivation; the original global helplessness account should not be repeated as settled mechanism. |
+| **How can action become unavailable or seem ineffective?** | TSR-25 generalisation and discrimination · TSR-26 controllability and escape learning · TSR-27 learned helplessness research · TSR-28 entrapment and defeat · TSR-29 tonic immobility and freezing | F02's action layer can distinguish accurate detection from whether refusal, escape, protest, help-seeking or repair is possible and changes the outcome. | Immobility is not consent; inaction is not proof of deficient motivation; the original global helplessness account should not be repeated as settled mechanism. |
 | **How might a relational rule become generalised?** | TSR-24 conditioning/extinction · TSR-25 generalisation/discrimination · TSR-32 unpredictability · TSR-08 stress sensitisation · TSR-09 allostatic load | Repetition, uncertain contingencies and generalisation may make a previously useful prediction easier to recruit across contexts. | Persistence does not mean a rule is permanently active or impervious to discrimination, safety learning and updating. |
 | **What may affect later updating or return?** | TSR-08 sensitisation · TSR-12 buffering · TSR-13 co-regulation · TSR-24 extinction/safety learning · TSR-25 discrimination · Candidate K resilience/recovery · Candidate L treatment mechanisms | New relational outcomes, controllability, safety learning and supported practice may help test and revise older expectations. | Recovery should not be reduced to cognitive correction or the removal of all activation. |
-| **What routes may begin before birth or cross generations?** | TSR-33 prenatal stress · TSR-36 intergenerational pathways · TSR-37 epigenetics | F2 should keep biological, relational, social and structural transmission routes visible and separate. | Prenatal association is not “foetal trauma”; intergenerational is not automatically transgenerational; epigenetic findings do not establish inherited trauma memories. |
-| **What research belongs downstream rather than inside the F2 mechanism?** | TSR-02 PTSD · TSR-03 CPTSD · TSR-06 ACE epidemiology · TSR-09 allostatic load · Candidate H sleep · Candidate J pain/functioning · Candidate N comorbidity | These literatures can test later symptoms, health burden, impairment and heterogeneity associated with exposure or stress. | Diagnosis, ACE count or later impairment cannot reconstruct how emotion override formed. |
+| **What routes may begin before birth or cross generations?** | TSR-33 prenatal stress · TSR-36 intergenerational pathways · TSR-37 epigenetics | F02 should keep biological, relational, social and structural transmission routes visible and separate. | Prenatal association is not “foetal trauma”; intergenerational is not automatically transgenerational; epigenetic findings do not establish inherited trauma memories. |
+| **What research belongs downstream rather than inside the F02 mechanism?** | TSR-02 PTSD · TSR-03 CPTSD · TSR-06 ACE epidemiology · TSR-09 allostatic load · Candidate H sleep · Candidate J pain/functioning · Candidate N comorbidity | These literatures can test later symptoms, health burden, impairment and heterogeneity associated with exposure or stress. | Diagnosis, ACE count or later impairment cannot reconstruct how emotion override formed. |
 
-## F2's seven layers: evidence-routing questions
+<a id="f2s-seven-layers-evidence-routing-questions"></a>
 
-The present F2 page proposes seven places at which developmental learning may matter. Each needs a more exact research question.
+## F02's seven layers: evidence-routing questions
+
+The present F02 page proposes seven places at which developmental learning may matter. Each needs a more exact research question.
 
 ### 1 · Signal generation
 
@@ -91,7 +97,9 @@ The present F2 page proposes seven places at which developmental learning may ma
 
 **Do not claim:** that the proposed sequence is universal, that beliefs are purely verbal, or that one current expectation identifies one childhood history.
 
-## Research families with the highest immediate value for F2
+<a id="research-families-with-the-highest-immediate-value-for-f2"></a>
+
+## Research families with the highest immediate value for F02
 
 ### Tier 1 · Build the developmental mechanism
 
@@ -121,7 +129,7 @@ The present F2 page proposes seven places at which developmental learning may ma
 - social determinants and structural adversity;
 - prenatal, intergenerational and epigenetic research.
 
-Tier 3 is not less important. It is less direct for the particular mechanism F2 proposes.
+Tier 3 is not less important. It is less direct for the particular mechanism F02 proposes.
 
 ## Concepts that can now improve materially
 
@@ -136,7 +144,9 @@ Tier 3 is not less important. It is less direct for the particular mechanism F2 
 | The emotion was suppressed | Specify whether visible expression, attention, identification, subjective access or action was reduced. |
 | The pattern comes from childhood | Development is one possible route; present context, later learning, health and social conditions may also contribute. |
 
-## What this changes in the F2 research programme
+<a id="what-this-changes-in-the-f2-research-programme"></a>
+
+## What this changes in the F02 research programme
 
 The next source review should be organised around claims, not around the umbrella word *trauma*:
 
@@ -148,9 +158,11 @@ The next source review should be organised around claims, not around the umbrell
 6. What protective relationships, repair processes or later experiences change the route?
 7. Which findings replicate across cultures, social conditions, emotions and caregiver relationships?
 
-## Non-negotiable F2 boundaries
+<a id="non-negotiable-f2-boundaries"></a>
 
-- F2 is not a diagnosis or trauma-screening instrument.
+## Non-negotiable F02 boundaries
+
+- F02 is not a diagnosis or trauma-screening instrument.
 - It cannot infer childhood history from present organisation.
 - It cannot equate low expression, emotional restraint or cultural display rules with pathology.
 - It cannot treat caregiver influence as the only developmental route.

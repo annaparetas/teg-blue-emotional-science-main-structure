@@ -3,7 +3,7 @@
 Scientific-facing subtitle: **Distinguishing organism regulation, pressure reduction, recovery, updating and socially imposed stability across levels of analysis**
 
 Status: Pass 3 opening architecture · 21 August 2026
-Scope: Two Biological Information Systems · Nervous System Gradient · Inner Compass · ME · F1–F12 · Return · Harm, Power and Repair
+Scope: Two Biological Information Systems · Nervous System Gradient · Inner Compass · ME · F01–F12 · Return · Harm, Power and Repair
 Purpose: define what Regulation can mean in each part of TEG-Blue before carrying the term through the model and the twelve Foundational Frameworks
 
 Current companions: [The Two Biological Information Systems · Model Sketch](../../02-model-1-ess-cls-me/notes/model-sketch.md) · [ESS–CLS Legacy Deep Dive](../../02-model-1-ess-cls-me/notes/sources/ESS-CLS-legacy-deep-dive.md) · [Regulation and Return · Settled Concepts](regulation-and-return-concepts.md) · [Pilot 01 · Allostasis, Resource Allocation and Return](../../evidence/pilots/PILOT-01-allostasis-resource-allocation-and-return.md) · [F12 · The Human Retrospective](../../05-frameworks/F12/review.md) · [Governing Gradient premise](../premise.html)
@@ -210,21 +210,23 @@ The key question is not **which system regulates**. It is:
 
 > **What information and capacity were available, what process was recruited, what did the person do, and what changed for whom?**
 
-## First F1–F12 routing map
+<a id="first-f1f12-routing-map"></a>
+
+## First F01–F12 routing map
 
 This table opens the pass. It does not yet add Regulation claims to the twelve reviews.
 
 | Framework | Regulation question to test | Main boundary |
 | --- | --- | --- |
-| **F1 · Evolutionary foundations** | Which histories of viability maintenance, action, learning, social coordination and restoration contribute to current capacities? | No single evolutionary regulation system or ladder |
-| **F2 · Developmental shaping** | How do repeated conditions shape attention, emotional access, strategy learning, support seeking and updating? | No caregiver event or regulation style determines one adult outcome |
-| **F3 · Adult maintenance and revision** | When does an action change the condition, reduce pressure, reinforce a route or protect a coherent account? | Relief is one possible contributor, not the whole persistence mechanism |
-| **F4 · Shared rules** | How do rules organise expression, support, evidence, sanction and acceptable responses? | A group is not a nervous system and order is not proof of safety |
-| **F5 · Social valuation** | Which behaviours, presentations and costs are rewarded, hidden or transferred through the Filter of Worth? | Status cannot reveal private regulation or inherent worth |
-| **F6 · Bias and judgement** | How may uncertainty, identity, emotion, criteria and feedback affect selection and revision? | Bias is not one regulation mechanism |
-| **F7 · Coercive enforcement** | When is stability secured through threat, punishment, force or restricted refusal? | Define coercion through behaviour and power, not actor relief |
-| **F8 · Recovery routes** | Which conditions, capacities and actions support change, recovery, Return and repair? | These outcomes remain separable |
-| **F9 · Neurodivergence and fit** | How do environment, communication, sensory conditions and support affect demand and usable strategies? | Difference is not dysregulation, incapacity or one required norm |
+| **F01 · Evolutionary foundations** | Which histories of viability maintenance, action, learning, social coordination and restoration contribute to current capacities? | No single evolutionary regulation system or ladder |
+| **F02 · Developmental shaping** | How do repeated conditions shape attention, emotional access, strategy learning, support seeking and updating? | No caregiver event or regulation style determines one adult outcome |
+| **F03 · Adult maintenance and revision** | When does an action change the condition, reduce pressure, reinforce a route or protect a coherent account? | Relief is one possible contributor, not the whole persistence mechanism |
+| **F04 · Shared rules** | How do rules organise expression, support, evidence, sanction and acceptable responses? | A group is not a nervous system and order is not proof of safety |
+| **F05 · Social valuation** | Which behaviours, presentations and costs are rewarded, hidden or transferred through the Filter of Worth? | Status cannot reveal private regulation or inherent worth |
+| **F06 · Bias and judgement** | How may uncertainty, identity, emotion, criteria and feedback affect selection and revision? | Bias is not one regulation mechanism |
+| **F07 · Coercive enforcement** | When is stability secured through threat, punishment, force or restricted refusal? | Define coercion through behaviour and power, not actor relief |
+| **F08 · Recovery routes** | Which conditions, capacities and actions support change, recovery, Return and repair? | These outcomes remain separable |
+| **F09 · Neurodivergence and fit** | How do environment, communication, sensory conditions and support affect demand and usable strategies? | Difference is not dysregulation, incapacity or one required norm |
 | **F10 · Intergenerational pathways** | What biological, developmental, relational, material and cultural processes carry regulation conditions or practices forward? | Transmission is not duplication or inherited blame |
 | **F11 · Ambivalence and complexity** | How can conflicting signals, values, predictions and actions remain present without premature closure? | Resolution is not suppression of one side and complexity does not remove action |
 | **F12 · Human retrospective** | How have cultures and institutions authorised some forms of control, restraint, expression and evidence over others? | No universal history or one regulation mechanism across scales |
@@ -265,7 +267,7 @@ The Regulation pass will require different evidence for different levels.
 ### 3A · Definition and separation — first inventory complete
 
 - establish the working distinctions above;
-- collect present uses of **regulation** across active files and F1–F12;
+- collect present uses of **regulation** across active files and F01–F12;
 - classify each use by unit, process, target, outcome and evidence status;
 - identify uses that should be replaced by a more precise word.
 
@@ -277,7 +279,9 @@ First inventory: [The Regulation Language Inventory](regulation-current-use.md).
 - keep route function separate from surface behaviour;
 - connect immediate outcome with recurrence, cost, power and Return.
 
-### 3C · F1–F12 pass
+<a id="3c--f1f12-pass"></a>
+
+### 3C · F01–F12 pass
 
 - decide what Regulation question belongs to each framework;
 - identify where the term should not appear;
@@ -294,4 +298,4 @@ First inventory: [The Regulation Language Inventory](regulation-current-use.md).
 
 ## First stopping point
 
-This opening architecture does not decide every Regulation claim. It makes the work traceable. The next step is an inventory of how the term is currently used across the active model and F1–F12, followed by a replace, retain, narrow or route decision for each use.
+This opening architecture does not decide every Regulation claim. It makes the work traceable. The next step is an inventory of how the term is currently used across the active model and F01–F12, followed by a replace, retain, narrow or route decision for each use.

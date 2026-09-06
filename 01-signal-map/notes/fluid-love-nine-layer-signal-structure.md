@@ -102,7 +102,7 @@ This structure is an accepted ESM-S1 conceptual baseline. It is not a claim that
 - **Model 2** owns present organism organisation, resource allocation, action-readiness, transition and Return.
 - **Model 3 (ESC)** owns response becoming feedback through time, completion, carryover, updating, learning and later entry.
 - **Fluid–Chronic foundation/profile** owns present-responsive flexibility versus recurrent narrowing, generalisation and recovery profile.
-- **F2** owns developmental propositions about how repeated caregiver responses may shape learned access, meaning and response availability.
+- **F02** owns developmental propositions about how repeated caregiver responses may shape learned access, meaning and response availability.
 - **Behaviour/HPR** owns conduct, consent, power, impact, accountability and repair.
 - **Later bounded evidence work** owns clause-level evidence status, supporting and limiting literature, alternatives and gaps.
 

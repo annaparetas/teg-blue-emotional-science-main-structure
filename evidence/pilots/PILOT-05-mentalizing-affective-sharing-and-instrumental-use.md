@@ -4,7 +4,7 @@ Status: first claim-level evidence pass · PEND-044 cluster 1
 Scope: configurations where mentalizing is in an upper band and affective sharing is in a lower band · empathy asymmetry · psychopathy · Machiavellianism · narcissistic functioning · manipulation
 Purpose: test when another person can become cognitively readable without becoming affectively shared, and what further conditions are needed before that asymmetry can support manipulation or harm
 
-Companions: [Relational Configuration → Clinical and Personality-Pattern Research Bridge](../../02-model-1-ess-cls-me/grounding/relational-configuration-clinical-pattern-bridge.md) · [F2 Trauma, Stress and Adversity Crosswalk](../../05-frameworks/F02/grounding/trauma-stress-and-adversity-crosswalk.md) · [Harm, Power and Repair Grounding](../../07-reference/grounding/harm-power-and-repair.md) · [Shared Source Record Index](../sources/shared-source-record-index.md)
+Companions: [Relational Configuration → Clinical and Personality-Pattern Research Bridge](../../02-model-1-ess-cls-me/grounding/relational-configuration-clinical-pattern-bridge.md) · [F02 Trauma, Stress and Adversity Crosswalk](../../05-frameworks/F02/grounding/trauma-stress-and-adversity-crosswalk.md) · [Harm, Power and Repair Grounding](../../07-reference/grounding/harm-power-and-repair.md) · [Shared Source Record Index](../sources/shared-source-record-index.md)
 
 ## What the research lets us see
 
@@ -51,7 +51,7 @@ The separation between affective sharing and empathic concern is especially impo
 | **MAI-11** | Some people who bully or manipulate show usable social understanding rather than global social-cognitive incompetence. | Phenomenon | **Supported in bounded samples.** One child study found higher social-cognitive performance among ringleader bullies; it cannot establish a universal manipulator profile. |
 | **MAI-12** | Effective manipulation requires usable information about another person's likely response or available options, but not necessarily sophisticated, accurate or consciously reflective mentalizing across domains. | Definition / boundary | **Retained as a TEG-Blue synthesis.** Manipulation may use learned scripts, reinforcement, role knowledge, vulnerability cues, deception or control of material options. |
 | **MAI-13** | Mentalizing without affective sharing can increase capacity for calculated interpersonal harm when combined with instrumental goals and weak constraints. | Application | **Plausible and partially supported.** No source permits a direct dangerousness inference from capacity asymmetry alone. |
-| **MAI-14** | Developmental adversity, protection, control or reduced affiliative learning can be candidate routes into some asymmetries. | Development | **Researchable, not yet established here.** Heterogeneous developmental routes must be reviewed separately and owned by F2. |
+| **MAI-14** | Developmental adversity, protection, control or reduced affiliative learning can be candidate routes into some asymmetries. | Development | **Researchable, not yet established here.** Heterogeneous developmental routes must be reviewed separately and owned by F02. |
 | **MAI-15** | A configuration where mentalizing is in an upper band and affective sharing is in a lower band is not a personality disorder, manipulation score or dangerousness score. | Boundary | **Non-negotiable.** Diagnosis and risk require wider, longitudinal and behavioural evidence. |
 
 ## The correction to “all manipulative people”
@@ -83,9 +83,9 @@ elevated capacity for calculated interpersonal harm
 This is an explanatory conjunction, not a validated risk equation. Each line belongs to a different part of the architecture:
 
 - the first two lines describe capacity and capacity quality;
-- F2 investigates supported developmental routes;
+- F02 investigates supported developmental routes;
 - Chronic describes recurrence, rigidity and difficult updating;
-- F3 owns goals, justification, selective recruitment and response to feedback;
+- F03 owns goals, justification, selective recruitment and response to feedback;
 - HPR owns observable action, power, impact, accountability and repair.
 
 The configuration must never carry the behavioural verdict by itself.
@@ -108,13 +108,15 @@ A person may manipulate through narrow but effective knowledge: which threat pro
 
 Clinical and experimental studies offer the clearest evidence for variable recruitment. One clinical study found impaired emotional empathy but no group-level cognitive-empathy deficit in people diagnosed with NPD. Experimental work found that perspective-taking instructions altered self-reported and physiological responses among participants higher in maladaptive narcissistic traits.
 
-This does not mean that all narcissistic people possess accurate mentalizing and choose not to care. It suggests that empathic functioning can be multidimensional, motivationally influenced and context-dependent. F3 can later examine entitlement, self-protection, status threat, justification and selective disengagement without treating them as consequences of one slider position.
+This does not mean that all narcissistic people possess accurate mentalizing and choose not to care. It suggests that empathic functioning can be multidimensional, motivationally influenced and context-dependent. F03 can later examine entitlement, self-protection, status threat, justification and selective disengagement without treating them as consequences of one slider position.
 
 ### Bullying, coercion and learned interpersonal prediction
 
 Research on ringleader bullying provides a bounded example of harmful conduct accompanied by usable social cognition. It does not establish that all bullies are skilled mind-readers or that social cognition caused the bullying. It does show that interventions based only on teaching perspective-taking can miss cases where the capacity is already available and the problem lies in goals, group reward, concern, power or behavioural consequence.
 
-## F2 developmental hypotheses to test later
+<a id="f2-developmental-hypotheses-to-test-later"></a>
+
+## F02 developmental hypotheses to test later
 
 The framework may examine whether some asymmetries develop through:
 
@@ -129,9 +131,11 @@ The framework may examine whether some asymmetries develop through:
 
 None is yet attached causally to configuration `001` or `101`. Similar adult patterns can emerge through different routes, and similar histories can lead to very different adult conduct.
 
-## F3 and HPR handoff
+<a id="f3-and-hpr-handoff"></a>
 
-F3 should distinguish:
+## F03 and HPR handoff
+
+F03 should distinguish:
 
 - what outcome the person is trying to obtain;
 - whether another person's state is treated as information, relationship or obstacle;
@@ -167,7 +171,7 @@ The term makes the configuration visible without claiming that affective sharing
 
 ### Add “empathic concern” as a separate research variable
 
-Empathic concern should not become a fourth slider yet. It belongs first in the capacity-quality and F3/HPR bridge because concern may be present, absent, selective, overridden or behaviourally ineffective. Evidence should determine whether it later requires a distinct visual control.
+Empathic concern should not become a fourth slider yet. It belongs first in the capacity-quality and F03/HPR bridge because concern may be present, absent, selective, overridden or behaviourally ineffective. Evidence should determine whether it later requires a distinct visual control.
 
 ## What this permits TEG-Blue to say
 
@@ -179,4 +183,4 @@ It should not say that mentalizing without affective sharing is inherently dange
 
 This first pass establishes 15 bounded claims and 11 canonical source records. It is sufficient to govern terminology and the research architecture. It is not sufficient to implement a diagnosis-like interpretation, dangerousness output or fixed personality card.
 
-The next PEND-044 cluster should migrate and reassess the old-engine evidence on **entitlement, threatened self-concept, narcissistic antagonism, power and retaliation**. That cluster will clarify the F3 and HPR conditions that can turn interpersonal information into organised domination.
+The next PEND-044 cluster should migrate and reassess the old-engine evidence on **entitlement, threatened self-concept, narcissistic antagonism, power and retaliation**. That cluster will clarify the F03 and HPR conditions that can turn interpersonal information into organised domination.

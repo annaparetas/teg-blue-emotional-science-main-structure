@@ -5,7 +5,7 @@ Owner: Model 3 · change through time
 Scope: the shared ESC sequence, the Fluid Cycle and the Chronic Cognitive-Override Cycle
 Evidence status: component-grounded TEG-Blue synthesis; not a validated natural cycle or clinical instrument
 
-Companions: [Canonical Emotional-Somatic Cycle](../cycle.html) · [Signal Recruitment, Persistence and Recovery](../../01-signal-map/grounding/recruitment-persistence-and-recovery.html) · [ESC Cognitive-Override Grounding](ESC-cognitive-override-grounding.md) · [Science Grounding Protocol](../../evidence/protocol.html) · [F1, Fluid and Chronic Scientific Grounding Crosswalk](../../05-frameworks/F01/index.html) · [Fluid Gradient Organisation Science Matrix](../../03-model-2-gradient/grounding/fluid-gradient-organisation-science-matrix.md) · [Chronic Scientific Spine](../../03-model-2-gradient/grounding/chronic-scientific-spine.md) · [ESS and CLS Component Claim Decomposition](../../02-model-1-ess-cls-me/grounding/ESS-CLS-component-decomposition.md)
+Companions: [Canonical Emotional-Somatic Cycle](../cycle.html) · [Signal Recruitment, Persistence and Recovery](../../01-signal-map/grounding/recruitment-persistence-and-recovery.html) · [ESC Cognitive-Override Grounding](ESC-cognitive-override-grounding.md) · [Science Grounding Protocol](../../evidence/protocol.html) · [F01, Fluid and Chronic Scientific Grounding Crosswalk](../../05-frameworks/F01/index.html) · [Fluid Gradient Organisation Science Matrix](../../03-model-2-gradient/grounding/fluid-gradient-organisation-science-matrix.md) · [Chronic Scientific Spine](../../03-model-2-gradient/grounding/chronic-scientific-spine.md) · [ESS and CLS Component Claim Decomposition](../../02-model-1-ess-cls-me/grounding/ESS-CLS-component-decomposition.md)
 
 ## Why this file exists
 
@@ -60,7 +60,7 @@ The label applies to the claim as phrased here. It is not a rating of the whole 
 | **ESC-10** | Repeated activation, prolonged activation, blunted responding, poor coordination or interrupted recovery may contribute to cumulative cost through different routes. | Outcome · boundary | **BRIDGE–B** | Chronic spine and allostasis records; not one load profile or biomarker. |
 | **ESC-11** | Other people and relationships can alter stress recruitment, available action, interpretation and recovery, while relational contact is not automatically safe or beneficial. | Mechanism · relational boundary | **BRIDGE–B** | Models 1 and 2 own relational inputs and capacity; Model 3 shows timing. |
 | **ESC-12** | Return and recovery are multidimensional: response channels may change at different rates, and wider capacity can become available without every channel reaching one baseline. | Phenomenon · definition | **BRIDGE–B** | Return is cross-model; Model 3 owns sequencing after the response. |
-| **ESC-13** | Feedback and consequences can change later weighting, expectation, retrieval, response availability and contextual discrimination; learning and integration are therefore possible outputs of both completion and carryover routes. | Learning · development | **BRIDGE–B** | Updating belongs across Models 1–3 and F8–F12 handoffs. |
+| **ESC-13** | Feedback and consequences can change later weighting, expectation, retrieval, response availability and contextual discrimination; learning and integration are therefore possible outputs of both completion and carryover routes. | Learning · development | **BRIDGE–B** | Updating belongs across Models 1–3 and F08–F12 handoffs. |
 | **ESC-14** | Neither the cycle form nor its internal route establishes observable behaviour, intent, harm, power, responsibility or repair. | Ethical boundary | **DIRECT–A** for the inference boundary; **TEG-BLUE–U** for any behavioural prediction | Behaviour and Responsibility remains the separate owner. |
 
 ## Claim notes and scientific boundaries
@@ -173,7 +173,7 @@ The proposed ESC handoff is: **current organisation shapes attention and retriev
 
 - **What research can ground:** new learning, context-sensitive retrieval, outcome updating, changed action–outcome expectation and the persistence of earlier learning.
 - **Bias handoff:** confirmation, disconfirmation, interpretation, attention, retrieval and belief-perseverance research may help specify why available feedback does or does not revise a working CLS account; these routes must remain distinct from one another and from learning itself.
-- **Framework handoff:** this claim gives F8–F12 a model-level base without making learning or integration one final step that every cycle must achieve.
+- **Framework handoff:** this claim gives F08–F12 a model-level base without making learning or integration one final step that every cycle must achieve.
 - **Do not infer:** that exposure to new information guarantees learning, or that insight alone changes emotional-somatic weighting.
 
 ### ESC-14 · Behaviour, harm and responsibility

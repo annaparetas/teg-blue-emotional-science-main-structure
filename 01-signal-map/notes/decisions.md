@@ -23,14 +23,14 @@ Anna approved the grouping explanation across both signal groups: five
 Body-condition families share internal regulatory problems; four Emotion
 families share relationships to significant conditions. The map now owns one
 rationale per family. Fluid, Chronic, biology, the interactive map and generated
-records connect each signal back to that rationale. Foundation, F1, glossary
+records connect each signal back to that rationale. Foundation, F01, glossary
 and session guide point to the same relationship.
 
 The four short Emotion-family descriptions now reflect the approved account
 of value and engagement, disruption, protective relevance and ordinary
 protection registered as insufficient. Membership is unchanged. Survival-Rage's
 boundary with protective organisation remains explicitly under review.
-The F1 family review remains a record of the proposal and its open questions.
+The F01 family review remains a record of the proposal and its open questions.
 
 ## 2026-09-04 · Connected records for individual signals
 
@@ -95,7 +95,7 @@ The Fluid roster no longer says "one condition, one direction", no longer
 describes the families as built from "the evolved function of each
 emotion-signal", and labels the two survival functions as an organising
 synthesis rather than an exhaustive taxonomy. These are the three phrasings
-the F1 and F2 connections note of 20 August flagged as sounding more settled
+the F01 and F02 connections note of 20 August flagged as sounding more settled
 than the evidence allows. The family table and family intros had already been
 decoupled from Positions on 2 September; the copies in the Development
 Engine's working tree still carry the older coupled wording and are not
@@ -116,7 +116,7 @@ Development Engine continues to own later research and full provenance. A
 later Engine finding crosses into these files only through review, an explicit
 site edit and a dated decision entry.
 
-Still open from the same note: an upstream F1 and F2 block on the Fluid page
+Still open from the same note: an upstream F01 and F02 block on the Fluid page
 before the four guiding questions, and a matching bridge on the
 neurochemistry page after the research rule. Not added in this pass.
 
@@ -229,7 +229,7 @@ Signals as a separate section, and Fury and Frenzy as working cells.
 
 - Individual emotion records: split out of the rosters as each is reviewed.
   Love first; its evidence review is deferred.
-- Nine-layer filter and schema: cross-owner review with Models 1 to 3, F2 and
+- Nine-layer filter and schema: cross-owner review with Models 1 to 3, F02 and
   Behaviour/HPR pending.
 - ~~Gradient-page duplicate of the emotion tables: drop when Model 2 moves.~~
   Done 2 September 2026: Model 2 transferred and the duplicate dropped.

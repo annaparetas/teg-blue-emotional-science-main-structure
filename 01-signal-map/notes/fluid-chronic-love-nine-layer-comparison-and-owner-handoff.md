@@ -44,8 +44,8 @@ Fluid and Chronic are not two kinds of Love.
 | **3 · Physiological participation** | Distributed processes may participate in affiliation, care, salience, motivation, learning and readiness for connection. | The same broad participation may coexist with uncertainty, loss or protection recruitment while restoration remains incomplete. | **Constant.** No physiological configuration is Love itself. | Model 2 · later evidence triage |
 | **4 · Representation and salience** | Relevant information can receive weight while remaining open to context and new information. | Weight may be sustained or repeatedly renewed; approval, rejection or accessibility cues may dominate while settling information receives less weight. | **Constant.** Salience changes do not change the emotion. | Model 1 · Model 2 · Fluid–Chronic |
 | **5 · Felt access** | Love-related information may become available as variable felt experience and remain distinguishable from other feelings. | Access may be partial, mixed, delayed, indirect or restricted; another signal or pressure change may become more available than Love. | **Constant.** Felt form and access do not define identity. | Model 1 · later evidence triage |
-| **6 · Differentiation and naming** | ME may distinguish Love from attraction, longing, fear, gratitude, obligation, reassurance needs and thought. | Joined experiences may be named as one state, only one signal may be named, or conceptual and felt access may diverge. | **Constant.** Naming and misnaming do not create or transform emotions. | ESM · Model 1 · F2 |
-| **7 · Interpretation and meaning** | ME may hold Love alongside evidence about reciprocity, safety, consent, compatibility, boundaries and viability. | Partial or uneven access may support a coherent meaning organised around preserving connection or preventing loss while competing information enters less readily. | **Constant.** Love supplies value, not relational verdicts. | Model 1 · F2 · later evidence triage |
+| **6 · Differentiation and naming** | ME may distinguish Love from attraction, longing, fear, gratitude, obligation, reassurance needs and thought. | Joined experiences may be named as one state, only one signal may be named, or conceptual and felt access may diverge. | **Constant.** Naming and misnaming do not create or transform emotions. | ESM · Model 1 · F02 |
+| **7 · Interpretation and meaning** | ME may hold Love alongside evidence about reciprocity, safety, consent, compatibility, boundaries and viability. | Partial or uneven access may support a coherent meaning organised around preserving connection or preventing loss while competing information enters less readily. | **Constant.** Love supplies value, not relational verdicts. | Model 1 · F02 · later evidence triage |
 | **8 · Use, expression, inhibition and action** | Condition-responsive expression, restraint, distance or no action may remain available; automatic readiness can coexist with deliberate participation. | Readiness may organise around maintaining access, reducing pressure, suppressing experience or regaining control; familiar regulation-support or substitute routes may narrow alternatives. | **Constant.** No route is Love and Love authorises none. | Model 1 · Model 2 · Behaviour/HPR |
 | **9 · Feedback and later course** | Response can clarify reciprocity or viability and support condition-specific completion and updating while Love remains. | Immediate pressure may change without answering the original condition; consequences may create new signals and later recruitment from an altered starting point. | **Constant.** Later signals and outcomes do not retrospectively redefine Love. | Model 3 (ESC) · Fluid–Chronic · Behaviour/HPR |
 
@@ -77,7 +77,7 @@ Fluid and Chronic are not two kinds of Love.
 | Present resource allocation, salience and readiness | ESM describes the needed interface | Model 2 owns organism organisation |
 | Persistence, recurrence, generalisation and recovery profile | ESM supplies Love-specific comparison | Fluid–Chronic owner reviews profile language |
 | Response, feedback, completion, carryover and later entry | ESM marks Love-specific inputs and outcomes | Model 3 (ESC) owns temporal relations |
-| Developmental learning and caregiver-shaped access or meaning | Kept as an explicit dependency | F2 owner reviews; no developmental cause settled here |
+| Developmental learning and caregiver-shaped access or meaning | Kept as an explicit dependency | F02 owner reviews; no developmental cause settled here |
 | Regulation-support and substitute response routes | ESM distinguishes route from outcome | Model 1, Model 2 and Model 3 review mechanisms |
 | Harm, coercion, power, accountability and repair | Explicitly excluded from emotion inference | Behaviour/HPR owns the separate conduct record |
 | Scientific status | Placeholders below | Later bounded evidence work determines status |
@@ -96,8 +96,8 @@ These are inventory questions, not literature conclusions. The attempted evidenc
 | **CL-E06** | Co-occurring emotional and bodily information may become consciously available in mixed, partial, delayed or context-dependent forms | Model 1 | **Inventory needed.** Distinguish empirical access findings from the TEG-Blue layer structure. |
 | **CL-E07** | Emotional differentiation and granularity can separate Love from coexisting fear, shame, grief, anger, longing and reassurance needs | Model 1 · ESM | **Supporting and limiting review needed.** Test cultural, linguistic and construct boundaries. |
 | **CL-E08** | Bodily-information access, affective-sharing access and mentalizing access can vary partly independently | Model 1 | **Existing pilot adjacency only.** Test dissociations, measurement limits and whether the three-capacity framing remains integration. |
-| **CL-E09** | Detailed interpretation or mentalizing can remain available while bodily or affective access is reduced | Model 1 · F2 | **Competing literature required.** Avoid inferring accuracy, empathy or developmental cause from capacity configuration. |
-| **CL-E10** | Learned approval, rejection, loss or bond-preservation information may become weighted alongside Love without changing its identity | F2 · Fluid–Chronic | **Developmental and learning review needed.** Separate current function from proposed origin. |
+| **CL-E09** | Detailed interpretation or mentalizing can remain available while bodily or affective access is reduced | Model 1 · F02 | **Competing literature required.** Avoid inferring accuracy, empathy or developmental cause from capacity configuration. |
+| **CL-E10** | Learned approval, rejection, loss or bond-preservation information may become weighted alongside Love without changing its identity | F02 · Fluid–Chronic | **Developmental and learning review needed.** Separate current function from proposed origin. |
 | **CL-E11** | Co-regulation or another person's response can reduce immediate pressure without resolving reciprocity, viability or event completion | Model 2 · Model 3 | **Supporting and limiting review needed.** Separate state change, social regulation and completion. |
 | **CL-E12** | A substitute response route can be negatively reinforced by short-term relief while the original condition remains unanswered | Model 3 · Behaviour/HPR | **Mechanism review needed.** Define route, relief and outcome; test habit, avoidance and reinforcement alternatives. |
 | **CL-E13** | Familiar response routes may recur or generalise as present information has less influence | Fluid–Chronic · Model 3 | **Inventory needed.** Test recurrence, generalisation, updating and reversibility; avoid deterministic loops. |
@@ -131,7 +131,9 @@ These are inventory questions, not literature conclusions. The attempted evidenc
 - Which comparative terms describe a profile rather than a fixed state: persistence, repeated recruitment, generalisation, narrower routes, reduced updating and incomplete recovery?
 - What observations would distinguish a recurrent Chronic pattern from an acute but proportionate Fluid response?
 
-### F2
+<a id="f2"></a>
+
+### F02
 
 - Which developmental pathways may shape access, differentiation, meaning and familiar response routes?
 - How should multiple pathways and present-day updating constrain any caregiver-origin explanation?

@@ -56,7 +56,7 @@ case; detailed work deferred.
 ## 2026-08-23 · Two survival functions named
 
 Organism-protection and connection-preservation adopted as working
-architectural language bridging F1 and the Signal Map. They identify the
+architectural language bridging F01 and the Signal Map. They identify the
 larger condition at stake; they do not divide emotions into two groups.
 
 ## Open

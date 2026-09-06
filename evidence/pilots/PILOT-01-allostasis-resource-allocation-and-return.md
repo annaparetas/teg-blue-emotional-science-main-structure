@@ -185,7 +185,7 @@ The source record should therefore remain the reusable evidence unit. Crosswalks
 - Claim architecture: **completed for this pilot**.
 - Initial source records: **completed**.
 - Contradictory and critical literature: **partly reviewed**.
-- Resource-allocation terminology and multiple Chronic routes: **implemented in the current Inner Compass/Gradient, F1 and F2 pages on 19 August 2026**.
+- Resource-allocation terminology and multiple Chronic routes: **implemented in the current Inner Compass/Gradient, F01 and F02 pages on 19 August 2026**.
 - Return as a multidimensional profile: **accepted at the architectural level; source-level recovery review and cross-page reconciliation remain pending**.
 - Further active-page changes: **not authorised by this first-pass evidence alone**.
 

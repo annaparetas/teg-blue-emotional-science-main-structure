@@ -1,7 +1,7 @@
 # Chronic Scientific Spine
 
 Status: governing first evidence pass · 19 August 2026
-Scope: NG-02 Chronic organisation · NG-04 Fluid–Chronic depth · ESS-04 learned weighting · IC-10 Updating · IC-11 Return · F2 development
+Scope: NG-02 Chronic organisation · NG-04 Fluid–Chronic depth · ESS-04 learned weighting · IC-10 Updating · IC-11 Return · F02 development
 Purpose: provide one source-bounded account of the different routes through which organisation may become recurrent, generalised, narrowed, persistent or difficult to update
 
 Companions: [Signal Recruitment, Persistence and Recovery](../../01-signal-map/grounding/recruitment-persistence-and-recovery.html) · [Pilot 03 · Learning, Controllability, Generalisation and Updating](../../evidence/pilots/PILOT-03-learning-controllability-generalisation-and-updating.md) · [Pilot 04 · ESS Condition-Reading and Emotional Significance](../../evidence/pilots/PILOT-04-ess-condition-reading-and-emotional-significance.md) · [Shared Source Record Index](../../evidence/sources/shared-source-record-index.md)
@@ -158,4 +158,4 @@ These claims belong together. Separating them would weaken both the scientific a
 
 This spine now governs the definition and routes of Chronic organisation. It completes the first evidence pass for ESS-04 learned weighting and establishes the profile dimensions required by PEND-008.
 
-The next scientific pass should add trauma-specific and developmental contradictory evidence to the routes needed by F2. Implementation in active diagrams should wait until those claims have been reviewed and the multidimensional Fluid–Chronic profile has been agreed.
+The next scientific pass should add trauma-specific and developmental contradictory evidence to the routes needed by F02. Implementation in active diagrams should wait until those claims have been reviewed and the multidimensional Fluid–Chronic profile has been agreed.

@@ -4,7 +4,7 @@ Status: approved and implemented in current active pages · 19 August 2026
 Evidence base: Pilots 01–03
 Purpose: decide the language for resource allocation, Chronic routes and bodily information access before changing active framework files
 
-Implementation boundary: the current Inner Compass/Gradient, F1 and F2 pages have been updated. Historical diagrams, F1 skeletons and working panels retain earlier language as provenance. Source-level evidence remains first-pass and continues through the Pending Tasks Register.
+Implementation boundary: the current Inner Compass/Gradient, F01 and F02 pages have been updated. Historical diagrams, F01 skeletons and working panels retain earlier language as provenance. Source-level evidence remains first-pass and continues through the Pending Tasks Register.
 
 ## Decision summary
 
@@ -274,7 +274,7 @@ This is a TEG-Blue synthesis. Each arrow remains a claim to ground; the sequence
 3. Update the settled Regulation and Return concepts, preserving a short decision history.
 4. Search all active files for the retired language and classify each occurrence before replacing it.
 5. Update shared Inner Compass and Gradient pages.
-6. Update F2 where the access dimensions appear.
-7. Update F1 separately in the Foundational Diagrams repository.
+6. Update F02 where the access dimensions appear.
+7. Update F01 separately in the Foundational Diagrams repository.
 
 No active framework page should be changed through an automatic global substitution. The surrounding claim determines the correct replacement.

@@ -88,7 +88,7 @@ The working Love identity still requires bounded evidence triage before public s
 | **Model 2 · The Nervous System Organisation Gradient** | Distributed physiological participation; present salience, resource allocation, action-readiness, controllability, transition and Return availability. | A unique Love state, Love Position, completed Return or behavioural prediction. |
 | **Model 3 (ESC)** | Response becoming feedback; condition-specific completion and non-completion; carryover; updating; learning; later entry. | A fixed temporal pathway, compulsory next emotion or ESM ownership of recursion. |
 | **Fluid–Chronic foundation/profile** | Persistence, repeated recruitment, generalisation, present-information sensitivity, responsiveness to updating and recovery profile. | A binary person type, diagnosis, severity scale or changed emotion identity. |
-| **F2 / developmental owner** | Learned access, emotional meanings and familiar response availability associated with developmental history. | One caregiver cause, inevitable developmental pathway or retrospective certainty. |
+| **F02 / developmental owner** | Learned access, emotional meanings and familiar response availability associated with developmental history. | One caregiver cause, inevitable developmental pathway or retrospective certainty. |
 | **Behaviour/HPR** | Consent, observable conduct, coercion, power, impact, accountability, boundaries, stopping harm and repair. | That internal relief, emotion or organisation settles ethical status. |
 
 ## Architectural statements versus unresolved empirical claims

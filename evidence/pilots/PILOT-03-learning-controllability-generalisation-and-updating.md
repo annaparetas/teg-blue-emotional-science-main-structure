@@ -1,7 +1,7 @@
 # Pilot 03 · Learning, Controllability, Generalisation and Updating
 
 Status: first claim-level evidence pass
-Scope: IC-07 Situation Signals · IC-10 Updating · IC-11 Return · NG-01 Fluid organisation · NG-02 Chronic organisation · NG-04 Fluid–Chronic depth · F2 action and emotion-belief layers
+Scope: IC-07 Situation Signals · IC-10 Updating · IC-11 Return · NG-01 Fluid organisation · NG-02 Chronic organisation · NG-04 Fluid–Chronic depth · F02 action and emotion-belief layers
 Purpose: identify distinct learning routes through which present organisation may remain flexible, become context-bound, generalise or resist updating
 
 ## The central distinction
@@ -22,8 +22,8 @@ The scientific difference is not “learned versus unlearned”. It concerns wha
 | **LCU-03 · Discrimination between danger and safety is distinct from response intensity.** | Measurement / mechanism | IC-07 · NG-04 | **Supported.** Strong responding to danger and poor differentiation between danger and safety are different profiles. |
 | **LCU-04 · Extinction usually creates competing learning rather than simply erasing acquisition.** | Learning mechanism | IC-10 · IC-11 | **Supported as the dominant account**, with context, time and task affecting retrieval. |
 | **LCU-05 · Reduced responding can later reverse through renewal, reinstatement, spontaneous recovery or reacquisition.** | Learning phenomenon | NG-02 · NG-04 | **Supported in conditioning research.** These phenomena should not be treated as the explanation for every human relapse. |
-| **LCU-06 · Control over an aversive event changes later behavioural and neurobiological consequences.** | Mechanism / action | F2 action · NG-01 · NG-02 | **Supported strongly in animal research and more selectively in humans.** Actual control, perceived control and social power must remain distinct. |
-| **LCU-07 · The original learned-helplessness theory has been substantially revised around neural processing of control.** | Theory correction | F2 action · NG-02 | **Supported.** Use controllability and action–outcome learning rather than global helplessness shorthand. |
+| **LCU-06 · Control over an aversive event changes later behavioural and neurobiological consequences.** | Mechanism / action | F02 action · NG-01 · NG-02 | **Supported strongly in animal research and more selectively in humans.** Actual control, perceived control and social power must remain distinct. |
+| **LCU-07 · The original learned-helplessness theory has been substantially revised around neural processing of control.** | Theory correction | F02 action · NG-02 | **Supported.** Use controllability and action–outcome learning rather than global helplessness shorthand. |
 | **LCU-08 · Updating may change expectation, weighting, retrieval or action without removing every earlier association.** | Integrative mechanism | IC-10 · IC-11 | **Supported as a multi-route definition.** Updating is not one memory event or proof that earlier detection was wrong. |
 | **LCU-09 · Ongoing danger can maintain a response that still corresponds to present conditions.** | Boundary | NG-01 · NG-02 | **Non-negotiable.** Persistence alone does not establish overgeneralisation or Chronic mismatch. |
 

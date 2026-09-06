@@ -48,3 +48,6 @@ For Model 2 work, begin with [the Gradient session guide](03-model-2-gradient/SE
 Use `positions.html` as the current table source and the governing premise's
 sixteen lenses for each position. Regenerate connected records after source
 edits. Preserve the Engine provenance and the later site access-boundary revisions.
+
+Framework notation: use F01–F12 in active content and session guidance; preserve
+claim-family letters and source IDs. See [the framework decisions](05-frameworks/notes/decisions.md).

@@ -4,7 +4,7 @@ Status: first claim-level evidence pass · PEND-044 cluster 4
 Scope: behavioural withdrawal · social anxiety · avoidant personality functioning · attachment avoidance · safety behaviour · experiential avoidance · detachment · social reward · shutdown · solitude · boundary-setting
 Purpose: decompose outward distance into distinguishable phenomena, functions and conditions so that TEG-Blue neither diagnoses withdrawal nor mistakes protection and chosen solitude for pathology
 
-Companions: [Relational Configuration → Clinical and Personality-Pattern Research Bridge](../../02-model-1-ess-cls-me/grounding/relational-configuration-clinical-pattern-bridge.md) · [F2 Trauma, Stress and Adversity Crosswalk](../../05-frameworks/F02/grounding/trauma-stress-and-adversity-crosswalk.md) · [Chronic Scientific Spine](../../03-model-2-gradient/grounding/chronic-scientific-spine.md) · [Shared Source Record Index](../sources/shared-source-record-index.md)
+Companions: [Relational Configuration → Clinical and Personality-Pattern Research Bridge](../../02-model-1-ess-cls-me/grounding/relational-configuration-clinical-pattern-bridge.md) · [F02 Trauma, Stress and Adversity Crosswalk](../../05-frameworks/F02/grounding/trauma-stress-and-adversity-crosswalk.md) · [Chronic Scientific Spine](../../03-model-2-gradient/grounding/chronic-scientific-spine.md) · [Shared Source Record Index](../sources/shared-source-record-index.md)
 
 ## Distance is the visible form, not its explanation
 
@@ -101,9 +101,11 @@ A boundary may disappoint another person and remain valid. HPR should distinguis
 
 The form “no contact” cannot settle which one occurred.
 
-## F2 hypotheses—not conclusions
+<a id="f2-hypothesesnot-conclusions"></a>
 
-F2 may later test whether a recurrent pattern was shaped by:
+## F02 hypotheses—not conclusions
+
+F02 may later test whether a recurrent pattern was shaped by:
 
 - behavioural inhibition or sensitivity to social evaluation;
 - rejection, ridicule, exclusion or chronic peer victimisation;
@@ -117,9 +119,11 @@ F2 may later test whether a recurrent pattern was shaped by:
 
 These are heterogeneous candidate routes. No present pattern proves a childhood history.
 
-## F3 and HPR ownership
+<a id="f3-and-hpr-ownership"></a>
 
-F3 should examine the current prediction, valued direction, self-explanation, relief cycle, identity and capacity to update. It asks whether distance preserves a life the person chooses or increasingly replaces it.
+## F03 and HPR ownership
+
+F03 should examine the current prediction, valued direction, self-explanation, relief cycle, identity and capacity to update. It asks whether distance preserves a life the person chooses or increasingly replaces it.
 
 HPR should examine what happened before and after access was reduced, whether another person respected the boundary, whether withdrawal was used to punish or coerce, and whether practical safety required disengagement. A person does not owe renewed access merely because the other person requests “repair”.
 

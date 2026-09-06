@@ -56,7 +56,7 @@ not as a fourth question.
 
 The two-cycle rebuild prototype, the Fluid and Chronic cycle claims
 grounded, the cognitive-override routes grounded, the belief-maintenance
-research routes added, F3's relationship to ESC refined.
+research routes added, F03's relationship to ESC refined.
 
 ## Open
 
@@ -67,4 +67,4 @@ research routes added, F3's relationship to ESC refined.
 - Updating the cycle page's boundary section from the earlier four evidence
   labels to the three levels.
 - Reconciling the archived core source pack.
-- Checking F3's route audit against this page's completion profile.
+- Checking F03's route audit against this page's completion profile.

@@ -114,7 +114,7 @@ Love can remain genuine when it is not reciprocated.
 - **Model 2 · The Nervous System Organisation Gradient** owns present organisation, resource allocation, salience, action-readiness, controllability, transition and Return availability.
 - **Model 3 (ESC)** owns response becoming feedback through time, completion and non-completion, carryover, updating, learning and later entry.
 - **Fluid–Chronic foundation/profile** owns persistence, recurrence, generalisation, context sensitivity, responsiveness to updating and recovery profile.
-- **F2** owns developmental propositions about learned emotional access, meanings and familiar response availability.
+- **F02** owns developmental propositions about learned emotional access, meanings and familiar response availability.
 - **Behaviour/HPR** owns observable conduct, consent, power, impact, accountability, boundaries and repair.
 - **Later bounded evidence work** owns clause-level evidence status, supporting and limiting literature, alternatives and gaps.
 

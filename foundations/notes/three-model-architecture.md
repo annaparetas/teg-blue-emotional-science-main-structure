@@ -7,7 +7,7 @@ Accessible orientation: **Emotions as Information · The Emotional Signal Map ·
 Scientific-facing subtitle: **Emotional information, biological processing, nervous-system organisation and event change within one organism**
 
 Status: first public orientation and three-model coupling implemented · Model 1 and Model 2 names approved 26 August 2026 · detailed model development continues
-Scope: Emotional information · Body and Situation Signals · ESS · CLS · ME · coordinated conscious access · Nervous System Organisation Gradient · ESC · Regulation · Return · Learning · Integration · F1–F12
+Scope: Emotional information · Body and Situation Signals · ESS · CLS · ME · coordinated conscious access · Nervous System Organisation Gradient · ESC · Regulation · Return · Learning · Integration · F01–F12
 Purpose: establish what sits underneath the three proposed models, what question each model owns, and how completion, updating, Return, recovery, learning, integration and repair connect without becoming one outcome
 
 Current companions: [Public orientation · Emotions as Information](../../index.html) · [Shared Event Record](../../04-model-3-esc/shared-event-record.html) · [Signal Recruitment, Persistence and Recovery](../../01-signal-map/grounding/recruitment-persistence-and-recovery.html) · [The Two Biological Information Systems · Model Sketch](../../02-model-1-ess-cls-me/notes/model-sketch.md) · [The Regulation Pass](../../03-model-2-gradient/notes/regulation-pass.md) · [Emotions and Feelings · Fluid Gradient](../../01-signal-map/emotion/fluid.html) · [Emotions and Feelings · Chronic Survival](../../01-signal-map/emotion/chronic.html) · [The Emotional-Somatic Cycle](../../04-model-3-esc/cycle.html) · [Main Nervous System Gradient](../../03-model-2-gradient/index.html) · [Foundational Frameworks](../../05-frameworks/index.html)
@@ -90,7 +90,7 @@ and ME
 information processing      present organisation        change through time
 and participation           and Fluid–Chronic depth     and what enters next
                          ↕
-FOUNDATIONAL FRAMEWORKS F1–F12
+FOUNDATIONAL FRAMEWORKS F01–F12
 
 biological history · development · repeated learning · shared rules ·
 social valuation · judgement · power · recovery · environmental fit ·
@@ -314,7 +314,7 @@ These terms connect the architecture but should not become synonyms.
 | **Baseline re-access** | Renewed access to Baseline X where the active Gradient architecture supports that description | Nervous System Gradient | Should not be used as a universal physiological set point |
 | **Recovery** | Rebuilding after demand across physiological, cognitive, experiential, sleep, pain, metabolic and other channels | ESC outcome and Gradient support layer | Different channels can change at different rates |
 | **Restoration** | Resource rebuilding or renewed availability of restorative processes | Gradient and physiology support pages | Not identical to Return or limited to one observable state |
-| **Repair** | Action concerning impact, responsibility, restitution, protection and possible relational rebuilding | Harm, Power and Repair; F8 handoff | Another person's Return does not repair harm |
+| **Repair** | Action concerning impact, responsibility, restitution, protection and possible relational rebuilding | Harm, Power and Repair; F08 handoff | Another person's Return does not repair harm |
 | **Carryover** | Residual activation, changed weighting, expectation, depleted capacity, learned route or accumulated cost entering later conditions | ESC | A decomposable description, not an emotion stored intact in tissue |
 | **Learning** | Change carried beyond the immediate event in weighting, prediction, skill, expectation, readiness, concept, narrative or action tendency | Cross-model; ESC follows what enters later cycles, Model 1 distinguishes participating processes, and the Gradient locates changed recruitment | Learning is not necessarily accurate, beneficial, conscious, generalised or permanent; harmful and protective routes can also be learned |
 | **Integration** | A process through which relevant emotional–somatic, reflective–symbolic, contextual, relational and impact information can remain differentiated while becoming mutually usable in later understanding, choice and action | Cross-model, with responsible integration examined in F11 | Not fusion, complete agreement, one smooth narrative, calm, recovery, reconciliation, ethical conduct or a score by which people can be ranked |
@@ -398,10 +398,10 @@ The twelve Foundational Frameworks should not be inserted as extra stages in ESC
 
 | Framework group | Main contribution to test |
 | --- | --- |
-| **F1–F3** | Biological history, development, adult maintenance and revision of signal access, organisation and repeated routes |
-| **F4–F7** | Shared rules, social valuation, judgement, power, enforcement, whose information counts and who carries the cost |
-| **F8 · Recovery routes** | Which changes concern access, capacity, learning, recovery, Return, conduct, relationship or repair; whether learning transfers beyond the setting in which it first appeared |
-| **F9 · Environmental fit** | How sensory, communicative, cognitive and material conditions shape access, learning, participation and cost; integration is not conformity, fluent expression or one normative processing style |
+| **F01–F03** | Biological history, development, adult maintenance and revision of signal access, organisation and repeated routes |
+| **F04–F07** | Shared rules, social valuation, judgement, power, enforcement, whose information counts and who carries the cost |
+| **F08 · Recovery routes** | Which changes concern access, capacity, learning, recovery, Return, conduct, relationship or repair; whether learning transfers beyond the setting in which it first appeared |
+| **F09 · Environmental fit** | How sensory, communicative, cognitive and material conditions shape access, learning, participation and cost; integration is not conformity, fluent expression or one normative processing style |
 | **F10 · Intergenerational pathways** | Which biological, developmental, caregiving, learning, material and institutional routes carry continuity or change across generations; transmission is not duplication |
 | **F11 · Responsible integration** | How relevant experience and context can be held together while claims remain on their own evidence planes and necessary choices preserve impact, agency and responsibility |
 | **F12 · Human retrospective** | How personal and collective learning, emotional authority, shared literacy and institutional revision may change across history; education and integration do not guarantee ethical conduct or the end of manipulation |
@@ -432,7 +432,7 @@ The active [public orientation](../../index.html) leads with **Emotions as Infor
 3. **Why three models are needed:** processing, present organisation and change through time are different questions.
 4. **One event through three views:** use one ordinary example rather than three disconnected definitions.
 5. **Shared vocabulary:** regulation, completion, updating, Return, recovery, restoration, repair, carryover, learning and integration.
-6. **Foundational Framework connection:** show F1–F12 as explanatory layers rather than stages.
+6. **Foundational Framework connection:** show F01–F12 as explanatory layers rather than stages.
 7. **Scientific and ethical boundary:** information is not instruction; mechanism is not justification.
 
 ## Implementation sequence
@@ -494,7 +494,7 @@ pipeline or a validated biological mechanism.
 
 ### Pass 5 · Foundational Framework connections
 
-- add the standard connection block to F1–F12;
+- add the standard connection block to F01–F12;
 - define what each framework contributes and what it cannot establish;
 - preserve biological, personal, relational, social, institutional and historical levels.
 

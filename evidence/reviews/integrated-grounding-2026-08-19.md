@@ -1,7 +1,7 @@
 # Integrated Grounding Review · 19 August 2026
 
 Status: PEND-001 completed
-Scope: all scientific-grounding documents and active F1/F2/Inner Compass/Gradient changes created or revised on 19 August 2026
+Scope: all scientific-grounding documents and active F01/F02/Inner Compass/Gradient changes created or revised on 19 August 2026
 Purpose: decide what remains authoritative, what overlaps legitimately, what is stale and which three tasks follow
 
 Companions: [Scientific Architecture Inventory](scientific-architecture-inventory.md) · [Project Terminology Ledger](../../GLOSSARY.md) · [Pending Tasks Register](../../STATUS.md)
@@ -12,7 +12,7 @@ The work now has a coherent scientific architecture. The central layers no longe
 
 Three things are established at the level required to continue:
 
-1. **The explanatory layers have distinct ownership.** F1, F2, the Inner Compass, Fluid, Chronic and Harm–Power–Repair ask different questions and hand work forward rather than explaining one another by substitution.
+1. **The explanatory layers have distinct ownership.** F01, F02, the Inner Compass, Fluid, Chronic and Harm–Power–Repair ask different questions and hand work forward rather than explaining one another by substitution.
 2. **The unit of grounding is the claim, not the whole TEG-Blue construct.** Definition, phenomenon, mechanism, development, application and boundary claims can require different evidence.
 3. **The main terminology corrections are coherent across current active pages.** Resource allocation, multiple Chronic routes and bodily information access/use have replaced the earlier universal or one-dimensional language.
 
@@ -48,8 +48,8 @@ The project should now move from architecture into evidence infrastructure and o
 | --- | --- | --- |
 | [Original Frameworks → Current Claims](original-frameworks-claim-reassessment.md) | Historical lineage crosswalk | **Keep; not evidence of whole-system validation** |
 | [Trauma, Stress and Adversity Research Map](../../05-frameworks/F02/grounding/trauma-stress-and-adversity-research-map.md) | Typed trauma/adversity research-family register | **Keep; intake and source review incomplete** |
-| [F2 · Trauma, Stress and Adversity Crosswalk](../../05-frameworks/F02/grounding/trauma-stress-and-adversity-crosswalk.md) | Routes research families to F2's distinct layers | **Keep; not itself evidence** |
-| [F1, Fluid and Chronic Scientific Grounding Crosswalk](../../05-frameworks/F01/index.html) | Keeps evolutionary, present-responsive and persistence questions separate | **Keep; claim-level review incomplete** |
+| [F02 · Trauma, Stress and Adversity Crosswalk](../../05-frameworks/F02/grounding/trauma-stress-and-adversity-crosswalk.md) | Routes research families to F02's distinct layers | **Keep; not itself evidence** |
+| [F01, Fluid and Chronic Scientific Grounding Crosswalk](../../05-frameworks/F01/index.html) | Keeps evolutionary, present-responsive and persistence questions separate | **Keep; claim-level review incomplete** |
 | [Terminology and Concept Improvement Register](../notes/terminology-and-concept-improvement.md) | Develops candidate improvements and unresolved pressure | **Keep subordinate to the terminology ledger** |
 
 ### Level 4 · First-pass evidence
@@ -67,12 +67,12 @@ The project should now move from architecture into evidence infrastructure and o
 The active HTML pages remain the current explanatory surface. They are downstream of the governing architecture and do not replace it.
 
 - The Inner Compass and Gradient pages in this repository contain the approved 19 August terminology corrections.
-- F1 and F2 in the `Foundational-Diagrams` repository contain their approved corrections through commits `9814003` and `ca5fbb3`.
+- F01 and F02 in the `Foundational-Diagrams` repository contain their approved corrections through commits `9814003` and `ca5fbb3`.
 - Active wording is current enough to use, but not every active claim has completed source-level grounding.
 
 ### Level 6 · Historical and development material
 
-F1 Markdown skeletons, working panels, old diagrams, original framework tables and superseded notes remain useful provenance. They must not override the active pages, terminology ledger or later decision records.
+F01 Markdown skeletons, working panels, old diagrams, original framework tables and superseded notes remain useful provenance. They must not override the active pages, terminology ledger or later decision records.
 
 ## Legitimate overlap that should remain
 
@@ -84,11 +84,15 @@ The registry answers “What is this construct and who owns it?” The decomposi
 
 The ledger records decisions. The improvement register develops candidates. When they differ, the ledger governs.
 
-### Trauma map versus F2 crosswalk
+<a id="trauma-map-versus-f2-crosswalk"></a>
 
-The trauma map classifies research families by knowledge role. The F2 crosswalk asks where those families may inform F2. Neither should absorb the other.
+### Trauma map versus F02 crosswalk
 
-### F1/Fluid/Chronic crosswalk versus Chronic spine
+The trauma map classifies research families by knowledge role. The F02 crosswalk asks where those families may inform F02. Neither should absorb the other.
+
+<a id="f1fluidchronic-crosswalk-versus-chronic-spine"></a>
+
+### F01/Fluid/Chronic crosswalk versus Chronic spine
 
 The crosswalk assigns research families across layers. The future Chronic spine must define Chronic's own claims and evidence routes. The crosswalk should not become that governing document.
 
@@ -116,7 +120,7 @@ Pilot 02 still names RC-01 as *Interoceptive access*. The governing term is now 
 
 ### Three Corrections status
 
-The decision file says “implementation in progress”. The approved changes have been implemented in the current active Inner Compass/Gradient, F1 and F2 pages. Historical scaffolds intentionally retain old language.
+The decision file says “implementation in progress”. The approved changes have been implemented in the current active Inner Compass/Gradient, F01 and F02 pages. Historical scaffolds intentionally retain old language.
 
 ### Scientific Grounding Working-Set Review
 
@@ -172,7 +176,7 @@ The method and claim IDs exist, but there is no shared source index connecting t
 
 ### Chronic research to one governing document
 
-Learning, trauma, Return, F2 and HPR all feed Chronic, but no one file currently owns the combined Chronic claim structure.
+Learning, trauma, Return, F02 and HPR all feed Chronic, but no one file currently owns the combined Chronic claim structure.
 
 ### Terminology decisions to implementation history
 
@@ -191,7 +195,7 @@ The following reclassification is enough:
 - mark the Scientific Grounding Working-Set Review as a completed milestone whose next-step guidance is superseded;
 - keep Three Corrections as a decision history and update its implementation state;
 - keep pilot claim decisions and update only their status blocks;
-- preserve historical F1 panels and skeletons as provenance;
+- preserve historical F01 panels and skeletons as provenance;
 - keep interaction ideas parked until the underlying dimensions stabilise.
 
 ## The three tasks that follow

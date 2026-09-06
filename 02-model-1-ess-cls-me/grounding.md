@@ -49,7 +49,7 @@ natural kinds.
   borderline features) as candidate routes, never as diagnoses attached to
   codes. Governing research architecture, 19 August 2026.
 - [grounding/six-cluster-synthesis-and-F03-construct-families.md](grounding/six-cluster-synthesis-and-F03-construct-families.md)
-  · what the six clinical-pattern pilots jointly establish, and the six F3
+  · what the six clinical-pattern pilots jointly establish, and the six F03
   construct families that describe how a configuration is maintained or
   revised. Governing synthesis, 19 August 2026.
 - [processing.html](processing.html) · the sensory and biological processing

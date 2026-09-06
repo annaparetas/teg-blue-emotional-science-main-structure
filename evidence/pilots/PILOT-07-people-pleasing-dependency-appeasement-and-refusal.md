@@ -4,7 +4,7 @@ Status: first claim-level evidence pass · PEND-044 cluster 3
 Scope: self-silencing · unmitigated communion · dependency · rejection sensitivity · reassurance seeking · appeasement · non-resistance · coercive control · consent and refusal
 Purpose: replace “people-pleasing” with checkable components and explain how another person's affect or anticipated rejection may narrow self-expression without assigning responsibility for coercion to the person adapting to it
 
-Companions: [Relational Configuration → Clinical and Personality-Pattern Research Bridge](../../02-model-1-ess-cls-me/grounding/relational-configuration-clinical-pattern-bridge.md) · [F2 Trauma, Stress and Adversity Crosswalk](../../05-frameworks/F02/grounding/trauma-stress-and-adversity-crosswalk.md) · [Harm, Power and Repair Grounding](../../07-reference/grounding/harm-power-and-repair.md) · [Shared Source Record Index](../sources/shared-source-record-index.md)
+Companions: [Relational Configuration → Clinical and Personality-Pattern Research Bridge](../../02-model-1-ess-cls-me/grounding/relational-configuration-clinical-pattern-bridge.md) · [F02 Trauma, Stress and Adversity Crosswalk](../../05-frameworks/F02/grounding/trauma-stress-and-adversity-crosswalk.md) · [Harm, Power and Repair Grounding](../../07-reference/grounding/harm-power-and-repair.md) · [Shared Source Record Index](../sources/shared-source-record-index.md)
 
 ## What “people-pleasing” may be describing
 
@@ -131,13 +131,15 @@ These can coexist. They must not be collapsed.
 | own preference is difficult to locate | preference is clear but cannot be enacted safely |
 | guilt or distress follows saying no | punishment, deprivation or force follows saying no |
 | reassurance temporarily restores connection | compliance prevents an imposed consequence |
-| F2/F3 investigate formation and maintenance | HPR establishes power, option field and reduced agency |
+| F02/F03 investigate formation and maintenance | HPR establishes power, option field and reduced agency |
 
 Calling externally constrained compliance “people-pleasing” can hide coercion by relocating the problem inside the person with less power.
 
-## F2 hypotheses—not conclusions
+<a id="f2-hypothesesnot-conclusions"></a>
 
-F2 may later test whether particular patterns were shaped by:
+## F02 hypotheses—not conclusions
+
+F02 may later test whether particular patterns were shaped by:
 
 - emotional neglect, inconsistent responsiveness or repeated rejection;
 - conditional regard and approval tied to compliance;
@@ -151,9 +153,11 @@ F2 may later test whether particular patterns were shaped by:
 
 The evidence must distinguish perceived, learned and materially real dependence. It must also avoid treating individualistic autonomy as the universal standard of health.
 
-## F3 ownership
+<a id="f3-ownership"></a>
 
-F3 should examine:
+## F03 ownership
+
+F03 should examine:
 
 - what the person expects will happen if they disagree;
 - whether another person's emotion is treated as information or command;

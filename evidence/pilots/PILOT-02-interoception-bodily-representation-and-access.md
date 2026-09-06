@@ -1,26 +1,26 @@
 # Pilot 02 · Interoception, Bodily Representation and Conscious Access
 
 Status: first claim-level evidence pass
-Scope: IC-02 Detection and transmission · IC-04 ESS · IC-06 Body Signals · IC-08 ME · IC-09 Conscious Participation · RC-01 Bodily information access and use · F2 layers 1–4
+Scope: IC-02 Detection and transmission · IC-04 ESS · IC-06 Body Signals · IC-08 ME · IC-09 Conscious Participation · RC-01 Bodily information access and use · F02 layers 1–4
 Purpose: distinguish bodily sensing, nervous-system processing, subjective access, attention, report, accuracy and interpretation
 
 ## Why these distinctions matter
 
 “The body sends a signal” can describe several different events. A physiological variable may change. Receptors and afferent pathways may detect some aspect of that change. The nervous system may integrate it with other information. Attention may or may not turn towards it. A person may feel something without identifying it, identify it without interpreting its cause accurately, or report confidence that does not match performance on a task.
 
-F2 and the Inner Compass become more grounded when these steps remain separate.
+F02 and the Inner Compass become more grounded when these steps remain separate.
 
 ## Claim register
 
 | Pilot claim | Type | Current connection | Initial decision |
 | --- | --- | --- | --- |
 | **IBA-01 · Interoception concerns nervous-system processing of signals related to internal bodily states.** | Definition | IC-02 · IC-06 | **Supported**, while definitions vary in whether they include sensing alone or sensing, integration, interpretation and regulation. |
-| **IBA-02 · Much interoceptive processing occurs without high-resolution conscious access.** | Phenomenon | IC-04 · IC-08 · F2 access | **Supported in principle.** Non-conscious processing should not be equated with hidden autobiographical knowledge. |
+| **IBA-02 · Much interoceptive processing occurs without high-resolution conscious access.** | Phenomenon | IC-04 · IC-08 · F02 access | **Supported in principle.** Non-conscious processing should not be equated with hidden autobiographical knowledge. |
 | **IBA-03 · Bodily change, neural representation, attention, subjective sensation, identification and report are distinguishable.** | Phenomenon / measurement | IC-02 · IC-06 · IC-09 · RC-01 | **Strongly supported as a research design requirement.** |
-| **IBA-04 · Objective task performance, self-reported sensibility, attention and metacognitive correspondence are not interchangeable measures.** | Measurement | RC-01 · F2 access/identification | **Supported**, with taxonomies still being refined. |
+| **IBA-04 · Objective task performance, self-reported sensibility, attention and metacognitive correspondence are not interchangeable measures.** | Measurement | RC-01 · F02 access/identification | **Supported**, with taxonomies still being refined. |
 | **IBA-05 · Interoceptive information can contribute to affect and action without uniquely determining an emotion or its cause.** | Mechanism boundary | IC-04 · IC-06 | **Supported as a component relation.** One bodily pattern should not be assigned to one emotion or Gradient Position. |
 | **IBA-06 · Present interpretation combines bodily information with context, prior learning, concepts and other sensory information.** | Mechanism family | IC-04 · IC-05 · IC-07 | **Supported broadly; predictive formulations remain theory-sensitive.** |
-| **IBA-07 · Adversity or PTSD may be associated with some interoceptive differences, but no single profile reconstructs trauma history.** | Development / outcome | F2 · NG-02 | **Evidence is heterogeneous and measurement language is inconsistent.** Keep as a research question, not a model assumption. |
+| **IBA-07 · Adversity or PTSD may be associated with some interoceptive differences, but no single profile reconstructs trauma history.** | Development / outcome | F02 · NG-02 | **Evidence is heterogeneous and measurement language is inconsistent.** Keep as a research question, not a model assumption. |
 | **IBA-08 · Body Signals are a TEG-Blue functional grouping broader than interoception.** | Definition / synthesis | IC-06 | **Retain.** Body Signals may involve interoception, nociception, somatosensation, proprioception, metabolic and immune signalling, learned meaning and conscious report. |
 
 ## Process decomposition
@@ -108,7 +108,7 @@ Prefer:
 
 > Bodily change may be sensed and processed without becoming clearly felt. When some information becomes subjectively available, attention, differentiation, concepts, language and context may affect what the person can identify and report.
 
-This protects the F2 distinction between signal generation, bodily representation, access and identification.
+This protects the F02 distinction between signal generation, bodily representation, access and identification.
 
 ### Decision 3 · Separate access from accuracy
 
@@ -132,7 +132,7 @@ Avoid formulations such as “the insula creates bodily awareness” or “traum
 
 ## What this pilot changes
 
-The current IC-06 Body Signals definition and boundary are already well aligned with the evidence. The most significant improvement belongs in F2 and RC-01: “interoceptive access” should become a family of measurable questions rather than one capacity that is simply high or low.
+The current IC-06 Body Signals definition and boundary are already well aligned with the evidence. The most significant improvement belongs in F02 and RC-01: “interoceptive access” should become a family of measurable questions rather than one capacity that is simply high or low.
 
 Recommended dimensions are:
 
@@ -151,8 +151,8 @@ Recommended dimensions are:
 - Initial source records: **completed**.
 - Measurement boundaries: **completed at first-pass level**.
 - Trauma-specific review: **preliminary**.
-- RC-01 rename and access-dimension boundaries: **implemented in the current Inner Compass/Gradient, F1 and F2 pages on 19 August 2026**.
+- RC-01 rename and access-dimension boundaries: **implemented in the current Inner Compass/Gradient, F01 and F02 pages on 19 August 2026**.
 - ESS-05 component handoff and source-level measurement records: **decomposed; further grounding remains pending**.
 - Further active-page changes: **not authorised by this preliminary trauma-specific review**.
 
-Pilot 03 has completed the first learning/updating pass. The remaining task is to connect those findings to ESS-05 and F2 through shared source records without assuming that every access difference was produced by adversity.
+Pilot 03 has completed the first learning/updating pass. The remaining task is to connect those findings to ESS-05 and F02 through shared source records without assuming that every access difference was produced by adversity.

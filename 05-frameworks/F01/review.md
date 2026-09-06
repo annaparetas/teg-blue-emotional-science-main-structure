@@ -1,18 +1,20 @@
-# F1 · Foundations of the Fluid Gradient
+<a id="f1--foundations-of-the-fluid-gradient"></a>
+
+# F01 · Foundations of the Fluid Gradient
 
 Scientific-facing subtitle: **Evolutionary foundations of present-responsive whole-organism organisation across changing internal, environmental and relational conditions**
 
 Status: fifth-pass completion-structure and dependency bridge draft · 22 August 2026
 
-Source section: F1 · Biological Evolution in [The Twelve Frameworks](../index.html)
+Source section: F01 · Biological Evolution in [The Twelve Frameworks](../index.html)
 
-Current visual account: [F1 · Evolutionary Capacity Timeline](timeline.html)
+Current visual account: [F01 · Evolutionary Capacity Timeline](timeline.html)
 
-Current bridge into present organisation: [F1 → Fluid Gradient · Evolutionary Capacity and Present Organisation Crosswalk](crosswalk.html)
+Current bridge into present organisation: [F01 → Fluid Gradient · Evolutionary Capacity and Present Organisation Crosswalk](crosswalk.html)
 
 Canonical shared biological premise: [Human Sociality and the Two Survival Functions](../../07-reference/sociality.html)
 
-Extended evidence-and-architecture working account: [F1 · Evolutionary foundations of ESS and CLS](../index.html)
+Extended evidence-and-architecture working account: [F01 · Evolutionary foundations of ESS and CLS](../index.html)
 
 Governing companions: [How the Nervous System Organisation Gradient models organism organisation](../../03-model-2-gradient/premise.html) · [The Nervous System Organisation Gradient](../../03-model-2-gradient/index.html) · [Scientific Architecture Inventory](../../evidence/reviews/scientific-architecture-inventory.md) · [Project Terminology Ledger](../../GLOSSARY.md)
 
@@ -20,7 +22,7 @@ Detailed emotional-information companion: [Emotions and Feelings · The Fluid Gr
 
 ## Decision
 
-**F1 explains the evolutionary foundations of the whole Fluid Gradient.**
+**F01 explains the evolutionary foundations of the whole Fluid Gradient.**
 
 It does not explain emotion alone, and it does not present the seven Gradient Positions as seven stages in evolution. It asks how a layered repertoire of viability sensing, bodily coordination, action, care, communication, learning, prediction, reflection and recovery became available—and how those capacities can participate together in present-responsive organisation now.
 
@@ -30,17 +32,19 @@ Emotion belongs inside that account as one important form of biological informat
 
 The three current surfaces have different jobs:
 
-- **F1-Timeline** owns the provisional eight-expansion deep-time orientation.
-- **F1 → Fluid Gradient crosswalk** owns the compact many-to-many handoff from evolutionary capacity to present Fluid organisation.
+- **F01-Timeline** owns the provisional eight-expansion deep-time orientation.
+- **F01 → Fluid Gradient crosswalk** owns the compact many-to-many handoff from evolutionary capacity to present Fluid organisation.
 - **The Nervous System Organisation Gradient** remains the canonical source for the full seven-position table and its detailed rows.
 
-The bridge table should remain beside F1 rather than becoming a second full table inside the governing organism-organisation premise. The governing premise defines how every Position must be modelled; the canonical Model 2 page defines the current Position content. This keeps the bridge visible without creating two sources of truth.
+The bridge table should remain beside F01 rather than becoming a second full table inside the governing organism-organisation premise. The governing premise defines how every Position must be modelled; the canonical Model 2 page defines the current Position content. This keeps the bridge visible without creating two sources of truth.
 
-## The question F1 owns
+<a id="the-question-f1-owns"></a>
+
+## The question F01 owns
 
 > How did organisms acquire and retain capacities to detect consequential conditions, reorganise physiology, attention, feeling, thought, relationship and action around them, and update, recover and Return as conditions change—and how does the Fluid Gradient organise those capacities in the present without turning its Positions into evolutionary stages?
 
-F1 owns the deep-time foundations and evolutionary availability of:
+F01 owns the deep-time foundations and evolutionary availability of:
 
 - viability maintenance and internal condition sensing;
 - sensitivity to environmental opportunities and constraints;
@@ -53,11 +57,11 @@ F1 owns the deep-time foundations and evolutionary availability of:
 - language, symbolic representation and cumulative culture;
 - updating, recovery, restoration and renewed availability.
 
-F1 does not own how this repertoire is calibrated during one person's development, how a particular present event is organised, why an organisation becomes chronic, or what a person does to someone else.
+F01 does not own how this repertoire is calibrated during one person's development, how a particular present event is organised, why an organisation becomes chronic, or what a person does to someone else.
 
 ## Two timescales, one explanation
 
-F1 must keep two clocks visible.
+F01 must keep two clocks visible.
 
 ### Deep time: capacities became available
 
@@ -67,7 +71,7 @@ Different capacities have different and overlapping evolutionary histories. Late
 
 The Fluid Gradient describes how a living person may organise across a present event. X, A, A↔B, B, C, D and Z are **Positions within a current whole-organism model**. They are not geological periods, species levels, brain layers or steps from primitive to advanced.
 
-This gives F1 its central distinction:
+This gives F01 its central distinction:
 
 ```text
 EVOLUTIONARY CAPACITY FIELD
@@ -100,11 +104,11 @@ This is a provisional orientation map, not a dated ladder. Its purpose is to hel
 | **Language, symbolic modelling and cumulative culture** | Referring to absent events, sharing explanations, transmitting knowledge, building plans and norms, and coordinating beyond immediate perception | Expands reflective-symbolic participation and the ways present meaning can alter organisation | Language did not create cognition or replace emotional–somatic information |
 | **Expanded flexibility, updating and recovery** | Changing course when conditions change, ending costly mobilisation, restoring resources and making other actions available again | Helps explain why Fluid organisation depends on responsiveness, reversibility and renewed availability | Return is not one universal pathway, and restoration is not exclusive to X |
 
-The sequence is deliberately rough. It identifies a research programme: each row needs comparative evidence, lineage-specific qualification and careful distinction among homology, convergence and analogy. F1 should not use an approximate ordering as proof that any present Position has one age or one biological purpose.
+The sequence is deliberately rough. It identifies a research programme: each row needs comparative evidence, lineage-specific qualification and careful distinction among homology, convergence and analogy. F01 should not use an approximate ordering as proof that any present Position has one age or one biological purpose.
 
 ## Before symbolic language
 
-F1 needs to reach back before humans could explain their experience in words. But the precise proposition is not that humans once communicated **only through emotions**.
+F01 needs to reach back before humans could explain their experience in words. But the precise proposition is not that humans once communicated **only through emotions**.
 
 Before symbolic language—and still today—social-affective communication could involve:
 
@@ -123,7 +127,7 @@ Language later expanded what humans could do with that information. People could
 
 ## Overlapping survival-relevant problem-spaces
 
-Two recurring problem-spaces help organise F1, provided that we do not mistake them for a complete biological taxonomy.
+Two recurring problem-spaces help organise F01, provided that we do not mistake them for a complete biological taxonomy.
 
 ### Organism protection
 
@@ -183,7 +187,7 @@ It also requires three outcomes to remain separate:
 Another nervous system may be necessary for the first outcome. It is not
 therefore necessary for every form of regulation, updating or Return.
 
-F1 should therefore distinguish **connection being available** from **connection-preservation becoming necessary because access appears uncertain or at risk**. Position A can include relational availability, play, exploration and cooperation; it should not be reduced to the defence of attachment.
+F01 should therefore distinguish **connection being available** from **connection-preservation becoming necessary because access appears uncertain or at risk**. Position A can include relational availability, play, exploration and cooperation; it should not be reduced to the defence of attachment.
 
 ## How the evolutionary repertoire participates in the Fluid Gradient
 
@@ -201,22 +205,24 @@ The Gradient is a present-event organisation of inherited, developed and current
 
 Each Position is an integrated present configuration. Multiple neural, autonomic, endocrine, immune, metabolic, perceptual, cognitive, motor and relational processes may participate. The labels make differences in organisation discussable; they do not name seven separate biological systems.
 
-## Emotion within F1
+<a id="emotion-within-f1"></a>
+
+## Emotion within F01
 
 Emotion is one domain through which consequential conditions can become biologically relevant. A feeling can change attention, priority, bodily preparation, interpretation, relationship and action without functioning as a complete explanation or command.
 
-F1 carries four principles:
+F01 carries four principles:
 
 1. **Emotion is biological information, not an instruction.** A feeling may indicate that something matters without proving the cause, establishing the complete meaning or authorising one response.
 2. **Emotional events involve the whole organism.** Neural, autonomic, endocrine, immune, metabolic, motor, perceptual, cognitive and relational processes may participate. No one chemical, organ or pathway is the emotion.
 3. **Body Signals and Situation Signals identify the condition being registered, not two sealed biological systems.** Cold and hunger have different initiating conditions from fear, grief or relational uncertainty, but all are embodied, contextual and open to learning and conscious participation.
 4. **Fluid does not mean unlearned, calm or biologically pure.** It describes a present-responsive comparison in which information, action and new evidence can still alter organisation.
 
-The detailed account belongs in [Emotions and Feelings · The Fluid Gradient](../../01-signal-map/emotion/fluid.html). That page can explain named emotions, signal families, proposed functions, felt experience, conditions and updating. F1 explains why such capacities can participate at all. It should not assign every emotion one evolved purpose, one Gradient Position or one completion route.
+The detailed account belongs in [Emotions and Feelings · The Fluid Gradient](../../01-signal-map/emotion/fluid.html). That page can explain named emotions, signal families, proposed functions, felt experience, conditions and updating. F01 explains why such capacities can participate at all. It should not assign every emotion one evolved purpose, one Gradient Position or one completion route.
 
 ## ESS, CLS and ME
 
-F1 must not become an old-emotional-brain/new-rational-brain story.
+F01 must not become an old-emotional-brain/new-rational-brain story.
 
 - **ESS and CLS are equally important, biological, concurrent and recurrent forms of information processing.**
 - Emotional–somatic capacities have deep evolutionary histories; so do learning, memory, discrimination, prediction, planning and social inference.
@@ -242,22 +248,26 @@ conditions become detectable
         · resources and wider participation can become available again
 ```
 
-F1 can investigate why flexibility, reversibility, recovery and restoration would matter to organisms with finite resources. It should not assume that every action reaches completion, that recovery follows one sequence, or that Return always requires relationship. Exact pathways belong to the Gradient's ESC, Return, autonomic, neurochemical and emotional-information accounts.
+F01 can investigate why flexibility, reversibility, recovery and restoration would matter to organisms with finite resources. It should not assume that every action reaches completion, that recovery follows one sequence, or that Return always requires relationship. Exact pathways belong to the Gradient's ESC, Return, autonomic, neurochemical and emotional-information accounts.
 
-## How F1 connects to the whole
+<a id="how-f1-connects-to-the-whole"></a>
 
-| Current layer | What F1 contributes | Boundary of the contribution |
+## How F01 connects to the whole
+
+| Current layer | What F01 contributes | Boundary of the contribution |
 | --- | --- | --- |
-| **F2 · developmental shaping** | An inherited and evolving repertoire available to be shaped through development, relationship and repeated conditions | F1 does not explain calibration, suppression, invalidation, attachment pattern or childhood adaptation through evolutionary age |
-| **Model 1 · ESS · CLS · ME** | Foundations of bodily information, situation-relevant information, affect, action readiness and reflective-symbolic participation | F1 does not establish one anatomical pathway, an infallible body signal or a detached cognitive controller |
+| **F02 · developmental shaping** | An inherited and evolving repertoire available to be shaped through development, relationship and repeated conditions | F01 does not explain calibration, suppression, invalidation, attachment pattern or childhood adaptation through evolutionary age |
+| **Model 1 · ESS · CLS · ME** | Foundations of bodily information, situation-relevant information, affect, action readiness and reflective-symbolic participation | F01 does not establish one anatomical pathway, an infallible body signal or a detached cognitive controller |
 | **Fluid Gradient** | The many-to-many participation of viability, sensing, action, care, communication, learning and recovery capacities in present organisation | Evolutionary order is not the order of Gradient Positions, and older responses are not worse responses |
-| **Return** | The biological availability of updating, recovery and restorative processes | F1 does not establish one universal return sequence or make restoration exclusive to X |
-| **Chronic Gradient** | A repertoire that repeated conditions and learning may recruit, narrow or make difficult to revise | F1 does not explain learned persistence, generalisation, reconstruction or interrupted recovery |
+| **Return** | The biological availability of updating, recovery and restorative processes | F01 does not establish one universal return sequence or make restoration exclusive to X |
+| **Chronic Gradient** | A repertoire that repeated conditions and learning may recruit, narrow or make difficult to revise | F01 does not explain learned persistence, generalisation, reconstruction or interrupted recovery |
 | **Relational capacity** | Why caregiving, coordination and social resources can matter biologically | Connection is not automatically safe, beneficial, reciprocal or metabolically costless |
 | **Harm, Power and Repair** | No direct inference from evolutionary or defensive organisation | Protection does not determine behaviour, coercion, responsibility, morality or repair |
-| **F12 · cultural retrospective** | Embodied, social and reflective-symbolic capacities that cultures may recognise, suppress, reward or organise differently | F1 does not prove a historical moment when cognition displaced emotion or establish one cause of cultural disconnection |
+| **F12 · cultural retrospective** | Embodied, social and reflective-symbolic capacities that cultures may recognise, suppress, reward or organise differently | F01 does not prove a historical moment when cognition displaced emotion or establish one cause of cultural disconnection |
 
-## Reading the original F1 language against the current system
+<a id="reading-the-original-f1-language-against-the-current-system"></a>
+
+## Reading the original F01 language against the current system
 
 ### Preserve, with precise translation
 
@@ -266,7 +276,7 @@ F1 can investigate why flexibility, reversibility, recovery and restoration woul
 | Life orients towards what sustains it and away from harm | Living systems regulate viability and respond to consequential gradients; “safety–threat orientation” is an accessible TEG-Blue translation, not the literal question every organism asks |
 | Nervous systems inherited rather than invented the viability problem | Nervous systems expanded the coordination, learning and action possibilities available to living organisms |
 | Protection and connection both matter | Organism protection and connection preservation are overlapping, survival-relevant problem-spaces; they are not an exhaustive taxonomy |
-| What is inherited is architecture rather than calibration | Keep the handoff: inherited capacities become part of the input to F2's developmental question |
+| What is inherited is architecture rather than calibration | Keep the handoff: inherited capacities become part of the input to F02's developmental question |
 | Sustained demand can carry cost | Route present-demand and cumulative-cost claims through allostasis, recovery and Chronic evidence rather than treating cost as one inherited state |
 
 ### Narrow, revise or retire
@@ -282,9 +292,11 @@ F1 can investigate why flexibility, reversibility, recovery and restoration woul
 | Old hardware in new conditions | Too general to explain a present difficulty | Name the precise mismatch, present conditions, learned expectation and affected capacity claim by claim |
 | The body protects connection | Can obscure harmful or materially coercive relationships | Distinguish connection availability, preservation under possible loss, expected support, actual safety, power and available action |
 
-## F1's handoff
+<a id="f1s-handoff"></a>
 
-F1 ends with an available, layered repertoire. F2 begins with how repeated experience, invalidation, relationship and material conditions shape access, expectation, expression and action within that repertoire.
+## F01's handoff
+
+F01 ends with an available, layered repertoire. F02 begins with how repeated experience, invalidation, relationship and material conditions shape access, expectation, expression and action within that repertoire.
 
 ```text
 evolutionary availability and retained capacities
@@ -298,12 +310,12 @@ present whole-organism organisation
 updating, recovery or possible persistence
 ```
 
-F1 is foundational because it supplies the deep-time conditions of possibility. It does not explain every later outcome.
+F01 is foundational because it supplies the deep-time conditions of possibility. It does not explain every later outcome.
 
 ## Result of this pass
 
 - **Framework status:** retain.
-- **Accessible name:** F1 · Foundations of the Fluid Gradient.
+- **Accessible name:** F01 · Foundations of the Fluid Gradient.
 - **Scientific-facing subtitle:** Evolutionary foundations of present-responsive whole-organism organisation across changing internal, environmental and relational conditions.
 - **Primary subject:** the whole Fluid Gradient, not emotion alone.
 - **Organising device:** two timescales connected by a many-to-many evolutionary capacity field.
@@ -318,9 +330,9 @@ F1 is foundational because it supplies the deep-time conditions of possibility. 
 
 ## Grounding science and knowledge fields
 
-This map identifies the fields F1 needs. It does not mean that a finding in any one field validates the full evolutionary sequence or the TEG-Blue systems built from it.
+This map identifies the fields F01 needs. It does not mean that a finding in any one field validates the full evolutionary sequence or the TEG-Blue systems built from it.
 
-| Field | What it can ground in F1 | What it cannot establish alone |
+| Field | What it can ground in F01 | What it cannot establish alone |
 | --- | --- | --- |
 | **Evolutionary biology and phylogenetics** | Common ancestry, divergence, conservation and the historical distribution of traits | The purpose of a present human feeling or a simple ladder from old to new |
 | **Evolutionary developmental biology** | How developmental processes and evolutionary change interact across lineages | A direct route from species history to one person's developmental pattern |
@@ -338,8 +350,8 @@ This map identifies the fields F1 needs. It does not mean that a finding in any 
 | **Cultural evolution and gene–culture coevolution research** | How socially learned practices and biological processes may influence one another over time | A single universal culture sequence or biological validation of a modern norm |
 | **History and philosophy of biology** | Clarification of adaptation, function, homology, analogy, levels of selection and inference limits | Empirical support for a biological claim without corresponding evidence |
 
-Forensic psychology is not a core grounding field for F1. It becomes relevant later only where evolutionary claims are applied to legal or administrative questions, and even there it cannot convert an evolutionary possibility into an opinion about one person's motive or responsibility.
+Forensic psychology is not a core grounding field for F01. It becomes relevant later only where evolutionary claims are applied to legal or administrative questions, and even there it cannot convert an evolutionary possibility into an opinion about one person's motive or responsibility.
 
 ### Priority evidence
 
-F1 should favour comparative datasets, phylogenetic methods, field and laboratory animal-behaviour research, cross-species physiology, developmental and communication studies, fossil and archaeological evidence, and reviews that distinguish homology from analogy. Human social interpretation should remain connected to anthropology and history rather than being derived from biology alone.
+F01 should favour comparative datasets, phylogenetic methods, field and laboratory animal-behaviour research, cross-species physiology, developmental and communication studies, fossil and archaeological evidence, and reviews that distinguish homology from analogy. Human social interpretation should remain connected to anthropology and history rather than being derived from biology alone.

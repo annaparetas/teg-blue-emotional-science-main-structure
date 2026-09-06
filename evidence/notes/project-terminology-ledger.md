@@ -1,7 +1,7 @@
 # Project Terminology Ledger
 
 Status: first governing ledger · 19 August 2026
-Scope: terminology shared across the Inner Compass, F1, F2, Fluid, Chronic and Harm–Power–Repair
+Scope: terminology shared across the Inner Compass, F01, F02, Fluid, Chronic and Harm–Power–Repair
 Purpose: keep accessible TEG-Blue language connected to precise formal descriptions without treating the two as identical
 
 Companion: [Scientific Architecture Inventory](../reviews/scientific-architecture-inventory.md)
@@ -32,7 +32,7 @@ The formal description is not presented as a standard scientific construct unles
 
 | Display term or territory | Formal description | Scientific territory | Boundary | State |
 | --- | --- | --- | --- | --- |
-| **Resource allocation emphasis** | The changing participation and prioritisation of physiological, attentional, motor and regulatory resources under present demand | Allostasis, metabolic regulation, stress energetics, fatigue and recovery | Not one measurable energy pool or a unique resource state for each Gradient reference | **Implemented** in current Inner Compass/Gradient pages, F1 and F2 · 19 August 2026 |
+| **Resource allocation emphasis** | The changing participation and prioritisation of physiological, attentional, motor and regulatory resources under present demand | Allostasis, metabolic regulation, stress energetics, fatigue and recovery | Not one measurable energy pool or a unique resource state for each Gradient reference | **Implemented** in current Inner Compass/Gradient pages, F01 and F02 · 19 August 2026 |
 | **Relational coordination** at A | Resources participate in reciprocal social attention, communication and coordination under sufficiently supportive conditions | Social coordination, attachment, social buffering, interpersonal regulation and affiliation | Does not mean that connection stores energy, is metabolically costless, or proves safety | **Implemented** · 19 August 2026 |
 | **Chronic organisation** | Recurrent narrowing, generalisation, persistence or difficult revision in recruitment, access, interpretation, action or recovery | Learning, controllability, generalisation, discrimination, context retrieval, recovery and continuing adversity | Does not mean continuous activation, permanence, diagnosis or absence of present danger | **Implemented** as the architectural term · 19 August 2026 |
 | **Chronic routes** | Distinct routes including persistence, interrupted recovery, later reconstruction, lowered thresholds, generalisation, reduced discrimination, context-bound updating, restricted action expectancy, repeated mental reactivation and continuing adverse conditions | Learning and recovery sciences across several timescales | No one route defines every Chronic pattern | **Implemented** in current grounding and handoff language · 19 August 2026 |

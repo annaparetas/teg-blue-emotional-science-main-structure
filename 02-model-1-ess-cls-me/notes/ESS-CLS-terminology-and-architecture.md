@@ -1,7 +1,7 @@
 # ESS and CLS · Terminology and Architecture Decision
 
 Status: names and educational architecture retained · 19 August 2026
-Scope: IC-04 ESS · IC-05 CLS · their relationship with ME, the Inner Compass, F1, F2, Fluid and Chronic
+Scope: IC-04 ESS · IC-05 CLS · their relationship with ME, the Inner Compass, F01, F02, Fluid and Chronic
 Purpose: define the two-system educational model with enough scientific care to preserve what it explains
 
 Companions: [Scientific Architecture Inventory](../../evidence/reviews/scientific-architecture-inventory.md) · [Project Terminology Ledger](../../GLOSSARY.md) · [Current Construct Claim Decomposition](../../evidence/claims/current-construct-decomposition.md)
@@ -214,13 +214,17 @@ Hurt can signal real harm. Hurt can also arise when a boundary is set, an entitl
 
 ## Consequences for the wider architecture
 
-### F1
+<a id="f1"></a>
 
-F1 may trace the foundations and expansion of the capacities grouped by ESS and CLS. It must continue to state that these are present-day TEG-Blue integrations, not two evolutionary taxa or seven biological stages.
+### F01
 
-### F2
+F01 may trace the foundations and expansion of the capacities grouped by ESS and CLS. It must continue to state that these are present-day TEG-Blue integrations, not two evolutionary taxa or seven biological stages.
 
-F2 should preserve the developmental asymmetry at the centre of the model: a child can be affected, organise action and learn emotional-relational patterns before they can explain the situation through mature language and reflection. Broad early cognition should not be denied simply because later reflective capacities belong to CLS.
+<a id="f2"></a>
+
+### F02
+
+F02 should preserve the developmental asymmetry at the centre of the model: a child can be affected, organise action and learn emotional-relational patterns before they can explain the situation through mature language and reflection. Broad early cognition should not be denied simply because later reflective capacities belong to CLS.
 
 ### Inner Compass
 

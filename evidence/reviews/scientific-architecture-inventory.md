@@ -1,7 +1,7 @@
 # Scientific Architecture Inventory
 
 Status: first integrated inventory · 19 August 2026
-Scope: the Inner Compass, F1, F2, the Fluid and Chronic Gradients, trauma and adversity grounding, and Harm–Power–Repair
+Scope: the Inner Compass, F01, F02, the Fluid and Chronic Gradients, trauma and adversity grounding, and Harm–Power–Repair
 Purpose: show what each part of the system is responsible for, how the parts hand work to one another, and which document governs each kind of claim
 
 Companion: [Project Terminology Ledger](../../GLOSSARY.md)
@@ -24,21 +24,21 @@ The architecture is coherent when each file answers its own question and hands t
 | Layer | Governing question | What it owns | What it hands forward | What it must not claim |
 | --- | --- | --- | --- | --- |
 | **Scientific grounding protocol** | What kind of claim is being made, and what evidence could support it? | Claim types, evidence roles, confidence, boundaries and source records | A disciplined method for every other layer | That resemblance to an external framework validates TEG-Blue |
-| **F1 · Evolutionary foundations** | How did relevant regulatory capacities emerge, diversify and become combined? | Deep-time availability of viability regulation, sensing, affect/action, defence, relational coordination and reflective-symbolic capacities | Inherited capacities available to development and present organisation | A seven-stage evolutionary sequence, a developmental explanation, or an evolutionary age for a present response |
-| **F2 · Developmental emotion overriding** | How may repeated relational outcomes shape access to, interpretation of, expression of and action from emotional information? | Developmental learning across signal generation, representation, access, identification, expression, action and beliefs about emotion | Learned expectations, access patterns and action availability | That trauma is the sole cause, that adult behaviour reveals childhood history, or that overriding emotion means no emotion occurred |
+| **F01 · Evolutionary foundations** | How did relevant regulatory capacities emerge, diversify and become combined? | Deep-time availability of viability regulation, sensing, affect/action, defence, relational coordination and reflective-symbolic capacities | Inherited capacities available to development and present organisation | A seven-stage evolutionary sequence, a developmental explanation, or an evolutionary age for a present response |
+| **F02 · Developmental emotion overriding** | How may repeated relational outcomes shape access to, interpretation of, expression of and action from emotional information? | Developmental learning across signal generation, representation, access, identification, expression, action and beliefs about emotion | Learned expectations, access patterns and action availability | That trauma is the sole cause, that adult behaviour reveals childhood history, or that overriding emotion means no emotion occurred |
 | **Inner Compass** | How can bodily and situational information participate in felt meaning, reflection and action now? | Conditions, sensing and signalling, whole-organism response organisation, Body Signals, Situation Signals, ME, Conscious Participation, Updating and Return | Information and capacities used in present organisation and later learning | A single anatomical pathway, a detached conscious controller, or a fixed signal-to-behaviour chain |
 | **Fluid Gradient** | How may whole-organism organisation vary while remaining sufficiently responsive to present conditions? | Present-responsive organisation, action availability, contextual discrimination, resource allocation and Return | The event and recovery patterns from which learning may occur | A universal sequence, seven natural biological states, or calm as the definition of correspondence |
 | **Chronic Gradient** | How may recruitment, access, interpretation, action or recovery become recurrently narrowed, generalised, persistent or difficult to revise? | Persistence routes, thresholds, discrimination, context retrieval, action expectancy, reconstruction, interrupted recovery and continuing demand | Developmental and present mechanisms that require claim-level evidence | One depth or severity score, permanence, absence of present danger, or incomplete Return as the sole route |
-| **Trauma, stress and adversity grounding** | Which exposures, responses, developmental conditions, mechanisms, diagnoses, outcomes and recovery processes are relevant to a specific claim? | Typed research-family intake and source-search routes | Bounded evidence for F2, Chronic and selected Inner Compass claims | One umbrella trauma mechanism or an inference from present response to past exposure |
+| **Trauma, stress and adversity grounding** | Which exposures, responses, developmental conditions, mechanisms, diagnoses, outcomes and recovery processes are relevant to a specific claim? | Typed research-family intake and source-search routes | Bounded evidence for F02, Chronic and selected Inner Compass claims | One umbrella trauma mechanism or an inference from present response to past exposure |
 | **Harm, Power and Repair** | What happened between people, who carried the cost, how was power used, and what followed feedback? | Behaviour, agency, coercion, impact, responsibility, protection, repair and recurrence | A parallel assessment of relational action and consequence | That internal protection determines behaviour, intent, morality, coercion or exoneration |
 | **Construct registry and claim decomposition** | What exactly does each current construct claim? | Stable IDs and definition, phenomenon, mechanism, development, application and boundary claims | Exact units for source records and wording decisions | A second explanatory theory or a substitute for source-level review |
 
 ## The sequence of handoffs
 
 ```text
-Evolutionary availability (F1)
+Evolutionary availability (F01)
         ↓
-Developmental shaping of access, expectation and action (F2)
+Developmental shaping of access, expectation and action (F02)
         ↓
 Conditions, bodily and situational information, meaning and participation (Inner Compass)
         ↓
@@ -71,9 +71,9 @@ This sequence is a TEG-Blue organising structure. It is not one established biol
 | Document | Role | Proper use |
 | --- | --- | --- |
 | [Original Frameworks → Current Claims](original-frameworks-claim-reassessment.md) | Lineage crosswalk | Identify whether an earlier framework directly informs, partially informs, contextualises or challenges a current claim |
-| [F1, Fluid and Chronic Scientific Grounding Crosswalk](../../05-frameworks/F01/index.html) | Framework-layer routing | Keep evolutionary availability, present organisation and learned persistence separate |
+| [F01, Fluid and Chronic Scientific Grounding Crosswalk](../../05-frameworks/F01/index.html) | Framework-layer routing | Keep evolutionary availability, present organisation and learned persistence separate |
 | [Trauma, Stress and Adversity Research Map](../../05-frameworks/F02/grounding/trauma-stress-and-adversity-research-map.md) | Typed research-family register | Distinguish exposure, response, development, mechanism, diagnosis, outcome and recovery |
-| [F2 · Trauma, Stress and Adversity Crosswalk](../../05-frameworks/F02/grounding/trauma-stress-and-adversity-crosswalk.md) | F2 evidence route | Search for evidence against F2's seven separable layers |
+| [F02 · Trauma, Stress and Adversity Crosswalk](../../05-frameworks/F02/grounding/trauma-stress-and-adversity-crosswalk.md) | F02 evidence route | Search for evidence against F02's seven separable layers |
 | [Harm, Power and Repair Grounding](../../07-reference/grounding/harm-power-and-repair.md) | Behavioural and ethical claim family | Examine action, power, impact and repair without deriving them from Gradient organisation |
 
 ### Claim-level evidence documents
@@ -90,7 +90,7 @@ Their terminology decisions have begun to move into active pages. Their source r
 
 Active HTML pages explain the current model. They are downstream of the grounding architecture: a term should reach them only after its meaning, claim type and boundary are clear.
 
-The active F1 and F2 pages live in the separate `Foundational-Diagrams` repository. Inner Compass and Gradient pages live in this repository. Cross-repository changes therefore need separate commits even when they implement one decision.
+The active F01 and F02 pages live in the separate `Foundational-Diagrams` repository. Inner Compass and Gradient pages live in this repository. Cross-repository changes therefore need separate commits even when they implement one decision.
 
 ### Development scaffolds and historical material
 
@@ -100,8 +100,8 @@ Skeleton Markdown files, working panels, original diagrams and archived pages pr
 
 | Question | Primary owner | Supporting layers |
 | --- | --- | --- |
-| Where did a capacity become possible? | F1 | comparative, evolutionary and affective science |
-| How was access, expression or action shaped during development? | F2 | trauma/adversity, attachment, learning and socialisation research |
+| Where did a capacity become possible? | F01 | comparative, evolutionary and affective science |
+| How was access, expression or action shaped during development? | F02 | trauma/adversity, attachment, learning and socialisation research |
 | What information is available and how may ME participate now? | Inner Compass | interoception, affect, appraisal, cognition and action research |
 | Does organisation correspond sufficiently to present conditions? | Fluid | threat imminence, affordance, allostasis, action and contextual learning |
 | Why might a pattern persist or recur? | Chronic | learning, generalisation, controllability, recovery, reconstruction and continuing conditions |
@@ -113,7 +113,7 @@ Skeleton Markdown files, working panels, original diagrams and archived pages pr
 
 ### Development and persistence
 
-F2 and Chronic overlap, but they are not interchangeable. F2 examines how repeated relational consequences may shape access, meaning, expression and action. Chronic describes recurrent narrowing or persistence across several possible routes. F2 may contribute to Chronic organisation; it does not define every Chronic route.
+F02 and Chronic overlap, but they are not interchangeable. F02 examines how repeated relational consequences may shape access, meaning, expression and action. Chronic describes recurrent narrowing or persistence across several possible routes. F02 may contribute to Chronic organisation; it does not define every Chronic route.
 
 ### Inner Compass and Fluid organisation
 
@@ -136,7 +136,7 @@ Return concerns changes in protective demand, recovery, updating and renewed cap
 1. **ESS and CLS need source-level component grounding.** Their names and two-system educational architecture are retained, and their fifteen component claim families are now decomposed. The next task is to test the component claims while keeping their functional status, interaction and limits explicit.
 2. **The Gradient's reference terms remain partly unsettled.** Position, Baseline, Strategic Management, Power Mobilisation and Shutdown still carry more than one claim.
 3. **Fluid–Chronic needs a multidimensional profile.** Threshold, context sensitivity, access, action range, persistence and recovery should not collapse into one depth.
-4. **The Chronic scientific spine remains distributed.** Its central claim families are visible, but they do not yet have one governing Chronic document equivalent to the F1 and F2 pages.
+4. **The Chronic scientific spine remains distributed.** Its central claim families are visible, but they do not yet have one governing Chronic document equivalent to the F01 and F02 pages.
 5. **Source records need a shared index.** The same study should be recorded once and linked to every relevant claim rather than summarised independently in several maps.
 6. **Active-page implementation needs a traceable record.** Accepted terminology should show where it has been implemented and where historical language remains intentionally preserved.
 

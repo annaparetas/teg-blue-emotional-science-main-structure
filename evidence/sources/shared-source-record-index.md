@@ -606,7 +606,7 @@ All records below are **first-pass** unless a later review states otherwise.
 - **Cannot establish:** NPD functioning, stable empathic capacity, real-world helping, harm reduction or that people simply choose whether to empathise.
 - **Decision:** **supports motivational and situational recruitment as one route**.
 - **Review depth:** first-pass.
-- **Implementation use:** F3 recruitment hypothesis with clinical boundary.
+- **Implementation use:** F03 recruitment hypothesis with clinical boundary.
 
 <a id="src-mai-s09"></a>
 ## MAI-S09 · Sutton, Smith and Swettenham 1999 · Social cognition and bullying
@@ -634,7 +634,7 @@ All records below are **first-pass** unless a later review states otherwise.
 - **Cannot establish:** adult psychopathy, fixed development, a single causal mechanism, inevitability of harm or a TEG-Blue configuration.
 - **Decision:** **supports bounded developmental candidates**.
 - **Review depth:** first-pass.
-- **Implementation use:** F2 hypothesis routing only.
+- **Implementation use:** F02 hypothesis routing only.
 
 <a id="src-mai-s11"></a>
 ## MAI-S11 · Waller and Wagner 2019 · Threat sensitivity and affiliative reward
@@ -646,7 +646,7 @@ All records below are **first-pass** unless a later review states otherwise.
 - **Useful result:** provides testable developmental hypotheses involving social bonding reward and threat sensitivity rather than one adversity story.
 - **Claim links:** MAI-14.
 - **Cannot establish:** that the proposed dual pathway is proven, that caregiving alone causes CU traits, that connection was never learned or that adult harmful behaviour is inevitable.
-- **Decision:** **contextualises candidate F2 mechanisms**.
+- **Decision:** **contextualises candidate F02 mechanisms**.
 - **Review depth:** first-pass.
 - **Implementation use:** developmental hypothesis only.
 
@@ -664,7 +664,7 @@ All records below are **first-pass** unless a later review states otherwise.
 - **Cannot establish:** self-knowledge accuracy, flexibility, moral conduct, narcissism, coercion or individual response to contradiction.
 - **Decision:** **supports structural construct separation**.
 - **Review depth:** first-pass.
-- **Implementation use:** F3 self-position terminology only.
+- **Implementation use:** F03 self-position terminology only.
 
 <a id="src-esp-s02"></a>
 ## ESP-S02 · Crocker et al. 2003 · Contingencies of self-worth
@@ -678,7 +678,7 @@ All records below are **first-pass** unless a later review states otherwise.
 - **Cannot establish:** that contingent worth is pathological, globally fragile or the cause of retaliation, entitlement or harmful control.
 - **Decision:** **supports domain-specific self-worth dependence**.
 - **Review depth:** first-pass.
-- **Implementation use:** F2 hypothesis and F3 self-position content.
+- **Implementation use:** F02 hypothesis and F03 self-position content.
 
 <a id="src-esp-s03"></a>
 ## ESP-S03 · Tangney et al. 1996 · Shame, guilt and anger routes
@@ -692,7 +692,7 @@ All records below are **first-pass** unless a later review states otherwise.
 - **Cannot establish:** that shame causes aggression, that guilt guarantees repair, an event-level emotion or a Domination Formation.
 - **Decision:** **supports differentiated average response routes**.
 - **Review depth:** first-pass.
-- **Implementation use:** F3 response-route hypothesis with emotion boundary.
+- **Implementation use:** F03 response-route hypothesis with emotion boundary.
 
 <a id="src-esp-s04"></a>
 ## ESP-S04 · Bushman and Baumeister 1998 · Threatened egotism and aggression
@@ -720,7 +720,7 @@ All records below are **first-pass** unless a later review states otherwise.
 - **Cannot establish:** legitimate claims, diagnosis, coercion, actual power use or the restriction of another person's agency.
 - **Decision:** **supports entitlement as a component construct**.
 - **Review depth:** first-pass.
-- **Implementation use:** F3 expectation/claim distinction.
+- **Implementation use:** F03 expectation/claim distinction.
 
 <a id="src-esp-s06"></a>
 ## ESP-S06 · Kjærvik and Bushman 2021 · Narcissism and aggression
@@ -832,7 +832,7 @@ All records below are **first-pass** unless a later review states otherwise.
 - **Cannot establish:** coercion, Domination, deliberate silencing or an inevitable effect of formal hierarchy.
 - **Decision:** **supports one corrective-information suppression route**.
 - **Review depth:** first-pass.
-- **Implementation use:** F3–HPR feedback-field bridge.
+- **Implementation use:** F03–HPR feedback-field bridge.
 
 <a id="src-esp-s14"></a>
 ## ESP-S14 · Harsey and Freyd 2020 · DARVO and observer judgement
@@ -904,7 +904,7 @@ All records below are **first-pass** unless a later review states otherwise.
 - **Cannot establish:** objective rejection accuracy, appeasement as the necessary response, diagnosis or developmental cause.
 - **Decision:** **supports a cognitive-affective rejection-expectancy route**.
 - **Review depth:** first-pass.
-- **Implementation use:** F3 interpretation and response-route hypothesis.
+- **Implementation use:** F03 interpretation and response-route hypothesis.
 
 <a id="src-pdr-s05"></a>
 ## PDR-S05 · Gao et al. 2017 · Rejection sensitivity and mental health
@@ -928,11 +928,11 @@ All records below are **first-pass** unless a later review states otherwise.
 - **Population / level:** child and adult samples with retrospective or measured maltreatment and rejection-sensitivity data.
 - **Phenomenon studied:** association between child maltreatment types and later rejection sensitivity.
 - **Useful result:** found a small positive average association, stronger for emotional than physical abuse.
-- **Claim links:** PDR-08 and PDR-11 · F2 development.
+- **Claim links:** PDR-08 and PDR-11 · F02 development.
 - **Cannot establish:** causation for an individual, inevitability, one mediating mechanism, appeasement or adult relationship conduct.
 - **Decision:** **supports one heterogeneous developmental risk association**.
 - **Review depth:** first-pass.
-- **Implementation use:** F2 hypothesis with non-deterministic boundary.
+- **Implementation use:** F02 hypothesis with non-deterministic boundary.
 
 <a id="src-pdr-s07"></a>
 ## PDR-S07 · Starr and Davila 2008 · Excessive reassurance seeking
@@ -1393,7 +1393,7 @@ All records below are **first-pass** unless a later review states otherwise.
 - **Claim links:** SID-09, SID-10 and SID-16.
 - **Cannot establish:** one neural pathway, universal development, trauma history from diagnosis or direct causality.
 - **Decision:** **contextualises the model; do not present it as settled mechanism**.
-- **Implementation use:** F2/F3 hypothesis boundary.
+- **Implementation use:** F02/F03 hypothesis boundary.
 
 <a id="src-sid-s06"></a>
 ## SID-S06 · Sorgi-Wilson and McCloskey 2022 · Emotion-regulation strategies in BPD
@@ -1458,7 +1458,7 @@ All records below are **first-pass** unless a later review states otherwise.
 - **Claim links:** SID-16 and SID-17.
 - **Cannot establish:** invalidation as a specific cause, an individual's childhood, parental intent or one developmental route.
 - **Decision:** **challenges loose developmental use of “invalidating environment”**.
-- **Implementation use:** F2 measurement boundary.
+- **Implementation use:** F02 measurement boundary.
 
 <a id="src-sid-s11"></a>
 ## SID-S11 · Stepp, Lazarus and Byrd 2016 · Prospective BPD risk factors
@@ -1775,7 +1775,7 @@ All records below are **first-pass** unless a later review states otherwise.
 Continue source migration in this order:
 
 1. cross-cluster synthesis and duplicate-claim consolidation for completed PEND-044;
-2. F2 developmental sources;
+2. F02 developmental sources;
 3. trauma/adversity source records;
 4. remaining HPR and old-engine sources;
 5. Return and connection citations currently marked unverified.

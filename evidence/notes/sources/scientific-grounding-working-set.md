@@ -1,7 +1,7 @@
 # Scientific Grounding Working-Set Review
 
 Status: completed milestone review · next-step guidance superseded 19 August 2026
-Scope: the scientific-grounding files created in this working session, including the later F1/Fluid/Chronic crosswalk
+Scope: the scientific-grounding files created in this working session, including the later F01/Fluid/Chronic crosswalk
 Purpose: decide what each file should continue to do, identify overlap and establish the next responsible phase
 
 Current handoff: the three recommended pilots were completed. Use the [Integrated Grounding Review](../../reviews/integrated-grounding-2026-08-19.md) and [Pending Tasks Register](../../../STATUS.md) for present authority and next work.
@@ -30,8 +30,8 @@ The next phase should therefore deepen evidence rather than create another broad
 | [Terminology and Concept Improvement Register](../terminology-and-concept-improvement.md) | Language and concept audit | Records terms that improve precision and exposes conflations | A second definitions file competing with the claim decomposition | **Convert accepted decisions into the construct definitions over time.** |
 | [Harm, Power and Repair Grounding](../../../07-reference/grounding/harm-power-and-repair.md) | Behavioural and ethical claim family | Keeps internal protection separate from power, coercion, impact, responsibility and repair | A nervous-system explanation of harmful behaviour | **Preserve as a parallel assessment plane.** |
 | [Trauma, Stress and Adversity Research Map](../../../05-frameworks/F02/grounding/trauma-stress-and-adversity-research-map.md) | Typed research-family intake | Separates exposure, response, development, mechanism, diagnosis, outcome and recovery | One umbrella trauma theory or a list of famous names | **Keep as the trauma research index.** |
-| [F2 · Trauma, Stress and Adversity Crosswalk](../../../05-frameworks/F02/grounding/trauma-stress-and-adversity-crosswalk.md) | Claim-to-family routing for F2 | Connects evidence to signal generation, representation, access, identification, expression, action and emotion belief | Evidence that adult behaviour reveals childhood history | **Use as the source-search plan for F2.** |
-| [F1, Fluid and Chronic Scientific Grounding Crosswalk](../../../05-frameworks/F01/index.html) | Framework-layer routing | Separates evolutionary availability, present organisation and learned persistence across 31 research families | A claim that one theory grounds the whole Gradient | **Use to build three smaller scientific spines.** |
+| [F02 · Trauma, Stress and Adversity Crosswalk](../../../05-frameworks/F02/grounding/trauma-stress-and-adversity-crosswalk.md) | Claim-to-family routing for F02 | Connects evidence to signal generation, representation, access, identification, expression, action and emotion belief | Evidence that adult behaviour reveals childhood history | **Use as the source-search plan for F02.** |
+| [F01, Fluid and Chronic Scientific Grounding Crosswalk](../../../05-frameworks/F01/index.html) | Framework-layer routing | Separates evolutionary availability, present organisation and learned persistence across 31 research families | A claim that one theory grounds the whole Gradient | **Use to build three smaller scientific spines.** |
 
 ## What is working well
 
@@ -56,8 +56,8 @@ The working set consistently separates:
 
 ### The framework layers now have clearer ownership
 
-- F1 owns evolutionary availability.
-- F2 owns developmental shaping of access and participation.
+- F01 owns evolutionary availability.
+- F02 owns developmental shaping of access and participation.
 - Fluid owns present-condition correspondence, flexible action, updating and Return.
 - Chronic owns recurrent recruitment, narrowing, generalisation, persistence and difficult updating.
 - Harm, Power and Repair owns relational action, coercion, impact, accountability and repair.
@@ -84,11 +84,13 @@ The trauma register contains 37 families plus missing candidates; the new crossw
 
 **Decision:** keep broad maps for coverage, but build narrow evidence spines for each active framework.
 
-### F1 lives in a separate repository
+<a id="f1-lives-in-a-separate-repository"></a>
 
-The F1 active file belongs to the Foundational Diagrams repository, while the present crosswalk lives with the Inner Compass grounding system.
+### F01 lives in a separate repository
 
-**Decision:** keep the evidence architecture here until it stabilises. When claims are ready, implement F1 changes in its own repository through a separate, traceable commit.
+The F01 active file belongs to the Foundational Diagrams repository, while the present crosswalk lives with the Inner Compass grounding system.
+
+**Decision:** keep the evidence architecture here until it stabilises. When claims are ready, implement F01 changes in its own repository through a separate, traceable commit.
 
 ## The architecture to use from now on
 
@@ -133,14 +135,14 @@ Begin with three areas that affect several files:
 
 1. **allostasis, resource allocation and Return** — IC-03, IC-10, IC-11, NG-01, NG-02 and NG-04;
 2. **interoception, bodily representation and conscious access** — IC-02, IC-04, IC-06, IC-08, IC-09 and RC-01;
-3. **learning, controllability, generalisation and updating** — IC-07, IC-10, NG-02, NG-04 and the F2 action/belief layers.
+3. **learning, controllability, generalisation and updating** — IC-07, IC-10, NG-02, NG-04 and the F02 action/belief layers.
 
 These pilots will show whether the registry and claim structure work before hundreds of sources are added.
 
 ### 3 · Build a narrow spine for each framework
 
-- F1: viability, sensing, affect/action, defence, relationship and reflective-symbolic capacity.
-- F2: relational learning, access, identification, expression, action and learned expectation.
+- F01: viability, sensing, affect/action, defence, relationship and reflective-symbolic capacity.
+- F02: relational learning, access, identification, expression, action and learned expectation.
 - Fluid: correspondence, action availability, contextual discrimination, regulation and Return.
 - Chronic: recruitment threshold, weighting, generalisation, restricted action, persistence and updating.
 - Harm/Power/Repair: agency, coercion, impact, feedback, responsibility and recurrence.
@@ -176,4 +178,4 @@ The present work suggests that the following areas may change materially once so
 
 The working set is ready to move from **mapping** to **claim-level evidence records**.
 
-The best next action is not another comprehensive framework list. It is a small, demanding pilot that tests the method on allostasis/Return, interoception/access and learning/updating. Once those three bridges are grounded, we can see which parts of the Inner Compass, F1, F2 and the Fluid–Chronic depth model require revision and which already hold.
+The best next action is not another comprehensive framework list. It is a small, demanding pilot that tests the method on allostasis/Return, interoception/access and learning/updating. Once those three bridges are grounded, we can see which parts of the Inner Compass, F01, F02 and the Fluid–Chronic depth model require revision and which already hold.

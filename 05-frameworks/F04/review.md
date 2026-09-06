@@ -1,16 +1,18 @@
-# F4 · Shared Rules and Collective Organisation
+<a id="f4--shared-rules-and-collective-organisation"></a>
+
+# F04 · Shared Rules and Collective Organisation
 
 Status: first-pass architectural review · 21 August 2026
 
-Source section: F4 · Rules Regulate in [The Twelve Frameworks](../index.html)
+Source section: F04 · Rules Regulate in [The Twelve Frameworks](../index.html)
 
 Current foundations: [Scientific Lineage and Integrative Grounding](../../evidence/reviews/scientific-lineage-and-integrative-grounding.md) · [Scientific Architecture Inventory](../../evidence/reviews/scientific-architecture-inventory.md) · [Project Terminology Ledger](../../GLOSSARY.md) · [Harm, Power and Repair Grounding](../../07-reference/grounding/harm-power-and-repair.md)
 
-Upstream boundary: [F3 · Adult Pattern Maintenance and Revision](../F03/review.md) · [Six-Cluster Synthesis and Emerging F3 Construct Families](../../02-model-1-ess-cls-me/grounding/six-cluster-synthesis-and-F03-construct-families.md)
+Upstream boundary: [F03 · Adult Pattern Maintenance and Revision](../F03/review.md) · [Six-Cluster Synthesis and Emerging F03 Construct Families](../../02-model-1-ess-cls-me/grounding/six-cluster-synthesis-and-F03-construct-families.md)
 
 ## Decision
 
-**Keep F4 as a Foundational Framework, but revise both its title and its movement from personal adaptation to group rule.**
+**Keep F04 as a Foundational Framework, but revise both its title and its movement from personal adaptation to group rule.**
 
 Provisional title:
 
@@ -24,13 +26,15 @@ Suggested explanatory line:
 
 The phrase becomes misleading, however, if regulation is read as calm, health or one nervous-system mechanism. A rule may support coordination or safety. It may also produce ambiguity, exclusion, concealment, unequal cost or coercive compliance. Different people may experience the same rule differently because their roles, resources and ability to refuse are different.
 
-F4 therefore belongs at the social, cultural and systemic level of TEG-Blue. It can examine how collective expectations organise conditions. It should not turn a family, group, culture or institution into a single nervous system.
+F04 therefore belongs at the social, cultural and systemic level of TEG-Blue. It can examine how collective expectations organise conditions. It should not turn a family, group, culture or institution into a single nervous system.
 
-## The question F4 owns
+<a id="the-question-f4-owns"></a>
+
+## The question F04 owns
 
 > How does an expectation become shared, repeated, authorised, enforced or revised within a group, and whose participation or options change as it operates?
 
-F4 owns questions concerning:
+F04 owns questions concerning:
 
 - how explicit rules and implicit norms emerge;
 - who communicates, models or authorises them;
@@ -69,7 +73,7 @@ Several distinctions follow:
 
 ## Working vocabulary
 
-F4 needs several terms rather than one broad use of “rule.”
+F04 needs several terms rather than one broad use of “rule.”
 
 | Term | Working meaning | Boundary |
 | --- | --- | --- |
@@ -80,30 +84,34 @@ F4 needs several terms rather than one broad use of “rule.”
 | **Policy or institutional rule** | A formally authorised expectation connected to procedures, roles, resources or sanctions | Formal legitimacy does not settle fairness, proportionality or impact |
 | **Cultural meaning** | A shared or contested field of interpretation through which conduct, identity and value become understandable | A culture is not internally uniform and cannot be represented by one rule or voice |
 
-These are working distinctions for architecture. Each will need claim-level grounding before it becomes an active F4 model.
+These are working distinctions for architecture. Each will need claim-level grounding before it becomes an active F04 model.
 
-## Six F4 construct families
+<a id="six-f4-construct-families"></a>
+
+## Six F04 construct families
 
 The original account becomes clearer when the single idea of “rules regulating” is separated into six questions.
 
 | Construct family | Governing question | Boundary |
 | --- | --- | --- |
-| **F4-A · Formation and source** | Where did the expectation come from, who names it, and what problem or purpose is it understood to address? | Origin stories may be disputed; present function cannot be inferred from historical origin |
-| **F4-B · Transmission and participation** | How do people learn, repeat, negotiate, resist or reinterpret the expectation? | Repetition does not prove internalisation, agreement or one developmental mechanism |
-| **F4-C · Coordination and collective function** | What does the rule help the group organise: safety, care, timing, identity, knowledge, work, boundaries or continuity? | A stated purpose may differ from actual effects, and useful coordination does not remove unequal cost |
-| **F4-D · Authority, consequence and enforcement** | Who can require compliance, grant exceptions, impose consequences or make refusal costly? | Authority is not automatically coercive; HPR owns the enforcement threshold and assessment of reduced agency |
-| **F4-E · Distribution and differential effect** | Who gains predictability, access, recognition or resources, and who carries effort, silence, risk or exclusion? | Unequal effect does not by itself establish intent; systematic worth-sorting hands to F5 |
-| **F4-F · Visibility, contestability and revision** | Can the rule be named, questioned, appealed, tested against consequences and changed? | Stability is not proof of rigidity, and change is not proof that repair or redistribution has occurred |
+| **F04-A · Formation and source** | Where did the expectation come from, who names it, and what problem or purpose is it understood to address? | Origin stories may be disputed; present function cannot be inferred from historical origin |
+| **F04-B · Transmission and participation** | How do people learn, repeat, negotiate, resist or reinterpret the expectation? | Repetition does not prove internalisation, agreement or one developmental mechanism |
+| **F04-C · Coordination and collective function** | What does the rule help the group organise: safety, care, timing, identity, knowledge, work, boundaries or continuity? | A stated purpose may differ from actual effects, and useful coordination does not remove unequal cost |
+| **F04-D · Authority, consequence and enforcement** | Who can require compliance, grant exceptions, impose consequences or make refusal costly? | Authority is not automatically coercive; HPR owns the enforcement threshold and assessment of reduced agency |
+| **F04-E · Distribution and differential effect** | Who gains predictability, access, recognition or resources, and who carries effort, silence, risk or exclusion? | Unequal effect does not by itself establish intent; systematic worth-sorting hands to F05 |
+| **F04-F · Visibility, contestability and revision** | Can the rule be named, questioned, appealed, tested against consequences and changed? | Stability is not proof of rigidity, and change is not proof that repair or redistribution has occurred |
 
 These construct families are a provisional TEG-Blue integration. They are not validated stages, types or a universal sequence of norm formation.
 
-## F4 is not a group nervous-system model
+<a id="f4-is-not-a-group-nervous-system-model"></a>
+
+## F04 is not a group nervous-system model
 
 The original sentence—“What one nervous system does with a story, many nervous systems do with rules”—creates a useful bridge but the wrong unit of explanation.
 
 Groups do not detect, feel, predict or Return as one organism. People within them may coordinate, imitate, disagree, comply, conceal, lead, resist or enforce. Documents, procedures, technologies, roles, money, architecture and law can also keep a pattern in place after the original participants have left.
 
-F4 should therefore examine at least four connected but distinct objects:
+F04 should therefore examine at least four connected but distinct objects:
 
 ```text
 individual participation
@@ -117,22 +125,26 @@ material and institutional arrangements
 
 Influence runs in more than one direction. An individual can help maintain or challenge a rule, while the rule changes the conditions, consequences and available actions that person encounters. Neither level can replace the other.
 
-## How F4 connects to the whole
+<a id="how-f4-connects-to-the-whole"></a>
 
-| Current layer | What F4 receives or contributes | Boundary of the connection |
+## How F04 connects to the whole
+
+| Current layer | What F04 receives or contributes | Boundary of the connection |
 | --- | --- | --- |
-| **F1 · evolutionary foundations** | Broad capacities for social learning, communication, cooperation, competition, affiliation and collective action | F1 cannot establish the origin, function or legitimacy of a specific modern rule |
-| **F2 · developmental shaping** | Socialisation may shape how a person notices, interprets, follows, questions or anticipates consequences around rules | Children also encounter peers, institutions, media and material conditions directly; adult mediation is not the only route |
-| **F3 · adult maintenance and revision** | Adults interpret rules, anticipate consequences and choose among compliance, negotiation, refusal, concealment, enforcement or revision | A personal pattern cannot be scaled directly into a collective rule; F4 requires group- and system-level evidence |
+| **F01 · evolutionary foundations** | Broad capacities for social learning, communication, cooperation, competition, affiliation and collective action | F01 cannot establish the origin, function or legitimacy of a specific modern rule |
+| **F02 · developmental shaping** | Socialisation may shape how a person notices, interprets, follows, questions or anticipates consequences around rules | Children also encounter peers, institutions, media and material conditions directly; adult mediation is not the only route |
+| **F03 · adult maintenance and revision** | Adults interpret rules, anticipate consequences and choose among compliance, negotiation, refusal, concealment, enforcement or revision | A personal pattern cannot be scaled directly into a collective rule; F04 requires group- and system-level evidence |
 | **Model 1 and Model 2** | A rule may be part of the present conditions a person accurately detects and organises within | The group does not occupy a Gradient Position, and compliance cannot reveal one person's nervous-system organisation |
 | **Chronic Gradient** | Repeated rule exposure may contribute to recurrent expectation, inhibited participation or difficult updating within a person | Institutional persistence and individual Chronic organisation are different phenomena and timescales |
-| **Harm, Power and Repair** | F4 identifies the expectation, authority, consequence and option field; HPR tests whether enforcement restricts agency or produces harm | An unpopular or restrictive rule is not automatically coercive; behaviour, power, proportionality, refusal and impact must be examined |
-| **F5 · worth hierarchies** | F4 hands forward rules that systematically rank whose needs, knowledge, status, access or resources matter | Not every division of role or difference in outcome is a worth hierarchy; F5 needs evidence of patterned sorting |
-| **F6 · bias** | Repeated norms may shape attention, credibility and what is treated as ordinary or thinkable | F4 cannot infer a hidden bias from rule-following alone, and F6 requires its own review |
+| **Harm, Power and Repair** | F04 identifies the expectation, authority, consequence and option field; HPR tests whether enforcement restricts agency or produces harm | An unpopular or restrictive rule is not automatically coercive; behaviour, power, proportionality, refusal and impact must be examined |
+| **F05 · worth hierarchies** | F04 hands forward rules that systematically rank whose needs, knowledge, status, access or resources matter | Not every division of role or difference in outcome is a worth hierarchy; F05 needs evidence of patterned sorting |
+| **F06 · bias** | Repeated norms may shape attention, credibility and what is treated as ordinary or thinkable | F04 cannot infer a hidden bias from rule-following alone, and F06 requires its own review |
 | **F10 · generational bridges** | Rules, stories, practices, institutions and material conditions may continue across generations | Intergenerational continuity is not automatically genetic or epigenetic transmission |
 | **Return and repair** | A person may regain flexibility within a rule-bound context; a group may separately revise its rule or address its effects | Individual Return does not constitute institutional change, and policy change does not by itself repair accumulated harm |
 
-## Reading the original F4 language against the current system
+<a id="reading-the-original-f4-language-against-the-current-system"></a>
+
+## Reading the original F04 language against the current system
 
 ### Preserve, with precise translation
 
@@ -149,7 +161,7 @@ Influence runs in more than one direction. An individual can help maintain or ch
 
 | Map wording or implication | Why it needs care | Safer direction |
 | --- | --- | --- |
-| “What one nervous system does with a story, many nervous systems do with rules” | It treats a collective as an aggregated organism and makes F3 the cause of F4 | Examine reciprocal influence among individuals, interactions, norms, authority and institutional arrangements |
+| “What one nervous system does with a story, many nervous systems do with rules” | It treats a collective as an aggregated organism and makes F03 the cause of F04 | Examine reciprocal influence among individuals, interactions, norms, authority and institutional arrangements |
 | A rule is “whatever a group absorbs because it stabilises” | It assumes agreement, absorption and regulatory purpose; rules may be imposed, contested, ignored or maintained materially | Identify the expectation, source, participation, enforcement, practical effect and degree of contestability |
 | “Boys don't cry” and “I don't do emotions” are the same operation | One is a group norm and the other a personal statement; either can have several meanings | Use the contrast to examine how a person may repeat, resist or reinterpret a social norm without collapsing the levels |
 | Rules become common sense because they stop being visible | Some norms become taken for granted, but people differently positioned may see the rule very clearly | Ask who can name the rule, who benefits from its invisibility and what happens when it is questioned |
@@ -162,7 +174,7 @@ Influence runs in more than one direction. An individual can help maintain or ch
 
 ## Evidence status of the original source list
 
-The original alignment table is a lineage inventory, not yet an F4 evidence base.
+The original alignment table is a lineage inventory, not yet an F04 evidence base.
 
 - **Bourdieu and social reproduction** may help examine habit, role, resource and institutional continuity. This is a social and interpretive contribution, not a nervous-system mechanism.
 - **Social norms, conformity and obedience research** may inform specific questions about expectation, authority and participation. Classic demonstrations do not establish one universal path from pressure to compliance and require claim-specific historical and methodological review.
@@ -171,11 +183,13 @@ The original alignment table is a lineage inventory, not yet an F4 evidence base
 - **Emotion socialisation research** can inform learning about expression, response and consequence. It cannot by itself establish a permanent loss of access to emotion.
 - **Caregiving research in nonhuman animals**, including work associated with Meaney, cannot directly ground human intergenerational transmission of social rules.
 
-No dedicated F4 claim decomposition or source-level review has yet been completed. The construct families above should govern that work; they should not be treated as already validated by the names in the original map.
+No dedicated F04 claim decomposition or source-level review has yet been completed. The construct families above should govern that work; they should not be treated as already validated by the names in the original map.
 
-## F4's handoffs
+<a id="f4s-handoffs"></a>
 
-F4 is better represented as a field of questions than as one step in a fixed F3–F7 escalation chain:
+## F04's handoffs
+
+F04 is better represented as a field of questions than as one step in a fixed F03–F07 escalation chain:
 
 ```text
 expectation, practice or rule
@@ -191,11 +205,11 @@ contest, revision, persistence or enforcement
 
 Three handoffs need to remain especially clear:
 
-1. **To F5:** when rules repeatedly sort worth, credibility, access, labour, protection or resources.
+1. **To F05:** when rules repeatedly sort worth, credibility, access, labour, protection or resources.
 2. **To HPR:** when power or imposed cost makes refusal, contradiction, exit or independent action meaningfully less possible.
 3. **To F10:** when the question becomes how practices, stories, roles and material conditions continue or change across generations.
 
-F6 and F7 may later add perception and enforcement questions, but F4 should not pre-commit them to a universal escalation sequence.
+F06 and F07 may later add perception and enforcement questions, but F04 should not pre-commit them to a universal escalation sequence.
 
 ## Result of this pass
 
@@ -204,15 +218,15 @@ F6 and F7 may later add perception and enforcement questions, but F4 should not 
 - **Title:** revise from “Rules Regulate” to “Shared Rules and Collective Organisation.”
 - **Core architecture:** use six construct families—formation, transmission, collective function, authority and enforcement, differential effect, and contestability and revision.
 - **Main protection:** do not infer shared belief from compliance, collective nervous-system organisation from group behaviour, or institutional persistence from one person's adaptation.
-- **F3 connection:** reciprocal rather than a direct scale-up from private coherence to public rule.
-- **F5 connection:** hand forward patterned worth-sorting rather than assuming every rule creates hierarchy.
-- **Evidence status:** architectural first pass only; the original sources require a dedicated F4 claim decomposition and source-level review.
+- **F03 connection:** reciprocal rather than a direct scale-up from private coherence to public rule.
+- **F05 connection:** hand forward patterned worth-sorting rather than assuming every rule creates hierarchy.
+- **Evidence status:** architectural first pass only; the original sources require a dedicated F04 claim decomposition and source-level review.
 
 ## Grounding science and knowledge fields
 
-F4 is the first framework whose main unit of analysis is explicitly collective. Individual psychology remains relevant, but it cannot explain a norm, organisation or institution on its own.
+F04 is the first framework whose main unit of analysis is explicitly collective. Individual psychology remains relevant, but it cannot explain a norm, organisation or institution on its own.
 
-| Field | What it can ground in F4 | What it cannot establish alone |
+| Field | What it can ground in F04 | What it cannot establish alone |
 | --- | --- | --- |
 | **Sociology** | Norms, roles, institutions, socialisation, organisations, stratification, collective action and social change | A biological mechanism or one person's motive inferred from group position |
 | **Social psychology** | Conformity, influence, identity, belonging, minority influence, authority and group decision-making | The persistence of a law, economy or institution without structural evidence |
@@ -234,8 +248,8 @@ F4 is the first framework whose main unit of analysis is explicitly collective. 
 | **Science and technology studies** | How classifications, expertise, technologies and measurement practices help organise institutions and social reality | That every scientific category is merely social or empirically empty |
 | **Ethics and political philosophy** | Legitimacy, rights, authority, justice, responsibility and the difference between coordination and domination | Empirical proof of how a rule operates in practice |
 
-“Human behaviour” is best treated here as a cross-disciplinary subject rather than one separate science. Behavioural and social sciences can study action, cognition, emotion, relationships, groups and institutions, but F4 should name the particular discipline and level needed for each claim.
+“Human behaviour” is best treated here as a cross-disciplinary subject rather than one separate science. Behavioural and social sciences can study action, cognition, emotion, relationships, groups and institutions, but F04 should name the particular discipline and level needed for each claim.
 
 ### Priority evidence
 
-F4 should combine ethnography, interviews, observation, surveys, experiments, social-network analysis, organisational and administrative records, policy evaluation, historical comparison and participatory research. The strongest account will compare the stated rule with actual practice, identify authority and sanctions, examine who can refuse or appeal, and trace different effects across positions within the group.
+F04 should combine ethnography, interviews, observation, surveys, experiments, social-network analysis, organisational and administrative records, policy evaluation, historical comparison and participatory research. The strongest account will compare the stated rule with actual practice, identify authority and sanctions, examine who can refuse or appeal, and trace different effects across positions within the group.

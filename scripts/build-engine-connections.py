@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import importlib.util
 import sys
 import subprocess
@@ -34,6 +35,16 @@ def load_carry_module():
 # Each value is: (site targets, relationship statement).
 # An empty target tuple means repository inventory rather than a content home.
 EXTRA_RELATIONSHIPS: dict[str, tuple[tuple[str, ...], str]] = {
+    'evidence/claims/F03-maintenance-and-revision-claim-map.md': (('05-frameworks/F03/review.md',), 'Engine claim questions and evidence status for F03; public-page integration remains deferred.'),
+    'evidence/reviews/F03-family-names-and-evidence-decisions.md': (('05-frameworks/F03/review.md',), 'Accepted Engine research family names and evidence decisions; this connection does not transfer them into site canon.'),
+    'evidence/reviews/disagreement-confidence-and-revision.md': (('05-frameworks/F03/review.md',), 'Engine evidence comparison for interpretation, confidence and feedback use; site integration deferred.'),
+    'evidence/reviews/expected-rejection-and-partner-response.md': (('05-frameworks/F03/review.md',), 'Engine evidence comparison for expected relational outcomes; site integration deferred.'),
+    'evidence/reviews/options-consequences-and-response-selection.md': (('05-frameworks/F03/review.md',), 'Engine evidence comparison for options, consequences and response selection; site integration deferred.'),
+    'evidence/reviews/reduced-pressure-recovery-and-return.md': (('03-model-2-gradient/return.html', '04-model-3-esc/index.html'), 'Engine evidence comparison separating reduced pressure, recovery and Return; prepared wording awaits site integration.'),
+    'evidence/reviews/relief-avoidance-and-corrective-experience.md': (('05-frameworks/F03/review.md',), 'Engine evidence comparison for immediate effects and later responding; site integration deferred.'),
+    'evidence/reviews/self-belief-clarity-worth-and-feedback.md': (('05-frameworks/F03/review.md', '05-frameworks/F02/review.md'), 'Engine self-belief and feedback comparison with the queued F02 childhood-access handoff; site integration deferred.'),
+    "development/decisions/framework-identifiers.md": (("05-frameworks/notes/decisions.md", "GLOSSARY.md"), "Approved framework-identifier notation and compatibility decision."),
+    "development/registers/framework-identifier-migration.json": (("05-frameworks/notes/decisions.md",), "Framework identifier, anchor and path migration register; includes legacy compatibility routes."),
     'development/decisions/me-access-dials-consolidation.md': (("02-model-1-ess-cls-me/notes/access-consolidation.md", "02-model-1-ess-cls-me/me-access.html"), 'Approved cross-repository access consolidation; records current ownership and the bounded implementation.'),
     'development/audits/me-access-dials/README.md': (("02-model-1-ess-cls-me/notes/access-consolidation.md", "02-model-1-ess-cls-me/me-access.html"), 'Historical pre-implementation audit approved for consolidation; current ownership is in the dated decision.'),
     'development/audits/me-access-dials/file-inventory.csv': (("02-model-1-ess-cls-me/notes/access-consolidation.md", "02-model-1-ess-cls-me/me-access.html"), 'Historical full-file disposition inventory supporting the approved consolidation.'),
@@ -57,21 +68,21 @@ EXTRA_RELATIONSHIPS: dict[str, tuple[tuple[str, ...], str]] = {
     "development/model-notes/what-a-behaviour-costs.md": (("03-model-2-gradient/index.html", "07-reference/behaviour.html"), "Working conceptual connection between Gradient organisation and observable behaviour, impact and responsibility."),
     "emotions-as-information.html": (("00-emotions-as-information/index.html",), "Concept connection to the site's Emotions as Information page; the Engine file remains intact."),
     "frameworks/diagrams/.gitignore": (("05-frameworks/index.html",), "Engine diagram-workspace support connected to the Frameworks area; the ignore rule remains Engine-local."),
-    "frameworks/diagrams/F1-Evolution/F1-evolution.html": (("05-frameworks/F01/index.html",), "Working F01 diagram connection; the full visual development file remains in the Engine."),
-    "frameworks/diagrams/F1-Evolution/F1-evolution.md": (("05-frameworks/F01/index.html",), "Working F01 diagram-source connection; the source remains in the Engine."),
-    "frameworks/diagrams/F1-Evolution/working-panels/panel-01-evolutionary-gradient.md": (("05-frameworks/F01/index.html",), "Working-panel connection to F01's evolutionary gradient."),
-    "frameworks/diagrams/F1-Evolution/working-panels/panel-02-restorative-foundation.md": (("05-frameworks/F01/index.html",), "Working-panel connection to F01's restorative foundation."),
-    "frameworks/diagrams/F1-Evolution/working-panels/panel-03-defensive-repertoire.md": (("05-frameworks/F01/index.html",), "Working-panel connection to F01's defensive repertoire."),
-    "frameworks/diagrams/F1-Evolution/working-panels/panel-04-regulation-through-relationship.md": (("05-frameworks/F01/index.html",), "Working-panel connection to F01's regulation-through-relationship account."),
-    "frameworks/diagrams/F1-Evolution/working-panels/panel-b-working.md": (("05-frameworks/F01/index.html",), "Working-panel connection to F01 visual development."),
-    "frameworks/diagrams/F1/F1-diagram.html": (("05-frameworks/F01/index.html",), "Working F01 visual connection; the diagram remains in the Engine."),
-    "frameworks/diagrams/F1/F1-origins-owed.md": (("05-frameworks/F01/index.html",), "F01 origins and attribution connection; the detailed record remains in the Engine."),
+    "frameworks/diagrams/F01-Evolution/F01-evolution.html": (("05-frameworks/F01/index.html",), "Working F01 diagram connection; the full visual development file remains in the Engine."),
+    "frameworks/diagrams/F01-Evolution/F01-evolution.md": (("05-frameworks/F01/index.html",), "Working F01 diagram-source connection; the source remains in the Engine."),
+    "frameworks/diagrams/F01-Evolution/working-panels/panel-01-evolutionary-gradient.md": (("05-frameworks/F01/index.html",), "Working-panel connection to F01's evolutionary gradient."),
+    "frameworks/diagrams/F01-Evolution/working-panels/panel-02-restorative-foundation.md": (("05-frameworks/F01/index.html",), "Working-panel connection to F01's restorative foundation."),
+    "frameworks/diagrams/F01-Evolution/working-panels/panel-03-defensive-repertoire.md": (("05-frameworks/F01/index.html",), "Working-panel connection to F01's defensive repertoire."),
+    "frameworks/diagrams/F01-Evolution/working-panels/panel-04-regulation-through-relationship.md": (("05-frameworks/F01/index.html",), "Working-panel connection to F01's regulation-through-relationship account."),
+    "frameworks/diagrams/F01-Evolution/working-panels/panel-b-working.md": (("05-frameworks/F01/index.html",), "Working-panel connection to F01 visual development."),
+    "frameworks/diagrams/F01/F01-diagram.html": (("05-frameworks/F01/index.html",), "Working F01 visual connection; the diagram remains in the Engine."),
+    "frameworks/diagrams/F01/F01-origins-owed.md": (("05-frameworks/F01/index.html",), "F01 origins and attribution connection; the detailed record remains in the Engine."),
     "frameworks/diagrams/F1/F1-panel-D1-parked.html": (("05-frameworks/F01/index.html",), "Parked Engine panel connected to F01; this map does not change its Engine status."),
     "frameworks/diagrams/F1/F1-panel-E-parked.html": (("05-frameworks/F01/index.html",), "Parked Engine panel connected to F01; this map does not change its Engine status."),
-    "frameworks/diagrams/F1/F1-panels.md": (("05-frameworks/F01/index.html",), "F01 panel-plan connection; the working plan remains in the Engine."),
-    "frameworks/diagrams/F1/F1-scientific-grounding.html": (("05-frameworks/F01/index.html", "evidence/index.html"), "F01 grounding connection across the framework and evidence areas."),
-    "frameworks/diagrams/F1/F1-state-profiles.html": (("05-frameworks/F01/index.html", "03-model-2-gradient/index.html"), "Working connection between F01 state profiles and Gradient organisation."),
-    "frameworks/diagrams/F1/F1.html": (("05-frameworks/F01/index.html",), "Working F01 diagram connection; the full Engine version remains intact."),
+    "frameworks/diagrams/F01/F01-panels.md": (("05-frameworks/F01/index.html",), "F01 panel-plan connection; the working plan remains in the Engine."),
+    "frameworks/diagrams/F01/F01-scientific-grounding.html": (("05-frameworks/F01/index.html", "evidence/index.html"), "F01 grounding connection across the framework and evidence areas."),
+    "frameworks/diagrams/F01/F01-state-profiles.html": (("05-frameworks/F01/index.html", "03-model-2-gradient/index.html"), "Working connection between F01 state profiles and Gradient organisation."),
+    "frameworks/diagrams/F01/F01.html": (("05-frameworks/F01/index.html",), "Working F01 diagram connection; the full Engine version remains intact."),
     "frameworks/diagrams/README.md": (("05-frameworks/index.html",), "Framework visual-library connection; the Engine remains the home of diagram development and history."),
     "frameworks/diagrams/originals/00 - The Emotional MetaMap of TEG-Blue.png": (("index.html", "05-frameworks/index.html"), "Original whole-architecture artwork connected to the site spine and Frameworks map."),
     "frameworks/diagrams/originals/01-F1 - Map 1 — The Emotional Gradient — Public in general Diagram Edition.png": (("05-frameworks/F01/index.html",), "Original Map 1 artwork connected to F01."),
@@ -146,6 +157,13 @@ def relationships(files: list[str]):
 
     for source, (targets, statement) in EXTRA_RELATIONSHIPS.items():
         rows[source] = (targets, statement, "Additional explicit connection")
+
+    migration = json.loads((ENGINE / "development/registers/framework-identifier-migration.json").read_text())
+    for move in migration["paths"]:
+        if move["repo"] != ENGINE.name:
+            continue
+        targets, _, _ = rows[move["new"]]
+        rows[move["old"]] = (targets, "Legacy framework path; compatibility route to " + move["new"] + ".", "Additional explicit connection")
 
     return rows
 

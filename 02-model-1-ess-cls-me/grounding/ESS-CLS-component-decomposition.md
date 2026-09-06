@@ -81,7 +81,7 @@ The research territories route later evidence work. Their presence does not mean
 - **Application:** separates “the response is occurring” from “I can feel, identify, explain and use it”.
 - **Boundary:** felt access is not owned by ESS alone and is not one high/low capacity. Self-report, task performance, confidence, differentiation, interpretation and action use must remain separate.
 - **Research territories:** interoception and metacognition · alexithymia and emotional awareness · emotion differentiation · attention · language and conceptual development.
-- **Cross-construct ownership:** RC-01 Bodily information access and use · IC-08 ME · IC-09 Conscious Participation · F2 access and identification layers.
+- **Cross-construct ownership:** RC-01 Bodily information access and use · IC-08 ME · IC-09 Conscious Participation · F02 access and identification layers.
 
 ## ESS-06 · Action readiness
 

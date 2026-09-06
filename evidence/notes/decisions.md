@@ -21,8 +21,8 @@ Dated entries, newest first.
   Map grounding).
 - Not carried here because they already live with their concept: the ESS
   and CLS and ESC component decompositions, the configuration bridge, the
-  six-cluster synthesis, the Fluid matrix, the Chronic spine, the F1 and
-  F2 crosswalks, the trauma research map, the ESC cognitive-override
+  six-cluster synthesis, the Fluid matrix, the Chronic spine, the F01 and
+  F02 crosswalks, the trauma research map, the ESC cognitive-override
   grounding and the ESC core source pack, and the Harm, Power and Repair
   grounding (Reference).
 - The 19 August 2026 reviews are dated records. They described what each

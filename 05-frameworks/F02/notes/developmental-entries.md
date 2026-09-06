@@ -1,18 +1,20 @@
-# F2 · Developmental Entries
+<a id="f2--developmental-entries"></a>
+
+# F02 · Developmental Entries
 
 Scientific-facing subtitle: **Working register for candidate developmental processes linking social information, emotional participation, self-understanding and learned behaviour**
 
 **Status:** capture and integration register · evidence audit pending · 22 August 2026
 
-**Framework owner:** [F2 · Developmental Shaping of Emotional Participation](../review.md)
+**Framework owner:** [F02 · Developmental Shaping of Emotional Participation](../review.md)
 
 **Governing premise:** [How the Nervous System Gradient Models Organism Organisation](../../../03-model-2-gradient/premise.html)
 
 ## Purpose
 
-This file holds developmental observations that may later help F2 explain how human capacities become available, shaped and practised across relationships.
+This file holds developmental observations that may later help F02 explain how human capacities become available, shaped and practised across relationships.
 
-An entry does not enter F2 merely because it fits the model. Each one must distinguish:
+An entry does not enter F02 merely because it fits the model. Each one must distinguish:
 
 - the observation being described;
 - established constructs and evidence;
@@ -20,7 +22,7 @@ An entry does not enter F2 merely because it fits the model. Each one must disti
 - which model owns each part of the explanation;
 - what the idea can and cannot explain about later behaviour.
 
-The register allows the idea to develop without making the current F2 draft heavier before its internal connections are ready.
+The register allows the idea to develop without making the current F02 draft heavier before its internal connections are ready.
 
 ---
 
@@ -28,7 +30,7 @@ The register allows the idea to develop without making the current F2 draft heav
 
 Scientific-facing subtitle: **Bidirectional social-information acquisition, contingent response and developmental updating across infant–caregiver interaction**
 
-**Entry status:** captured · terminology decomposition required · evidence audit pending · F2 integration pending
+**Entry status:** captured · terminology decomposition required · evidence audit pending · F02 integration pending
 
 ### The observation
 
@@ -99,7 +101,7 @@ their response becomes additional information about
 my state · the situation · the relationship · available action
 ```
 
-This second direction is especially important for F2. It suggests that self-understanding does not develop through inward observation alone. Other people's contingent responses may help make some internal changes more noticeable, differentiated, nameable and usable.
+This second direction is especially important for F02. It suggests that self-understanding does not develop through inward observation alone. Other people's contingent responses may help make some internal changes more noticeable, differentiated, nameable and usable.
 
 ### Three processes that should remain distinguishable
 
@@ -115,7 +117,7 @@ Mirroring may participate in all three. It should not become a synonym for all t
 
 ### Developmental boundary at birth
 
-F2 should avoid saying that a newborn has no capacity to regulate independently. Newborns arrive with active endogenous capacities for arousal modulation, orientation, withdrawal, sleep–wake organisation, signalling and learning. At the same time, their survival and much of their state organisation depend heavily on what other people do.
+F02 should avoid saying that a newborn has no capacity to regulate independently. Newborns arrive with active endogenous capacities for arousal modulation, orientation, withdrawal, sleep–wake organisation, signalling and learning. At the same time, their survival and much of their state organisation depend heavily on what other people do.
 
 A more precise formulation is:
 
@@ -136,7 +138,7 @@ A response may:
 - misread, ignore, amplify, shame or override the signal;
 - communicate what the relationship appears able or willing to tolerate.
 
-The caregiver therefore does not function as a neutral mirror. The response can reflect, transform, interpret, act, misattune or impose meaning. F2 needs to follow which of these occurred.
+The caregiver therefore does not function as a neutral mirror. The response can reflect, transform, interpret, act, misattune or impose meaning. F02 needs to follow which of these occurred.
 
 ### How the loop can support emotional participation
 
@@ -215,7 +217,7 @@ Another person's response may:
 
 These are not interchangeable outcomes. A child becoming quiet may indicate lower pressure, inhibition, attention to the adult, fatigue, changed conditions or recovery. The observed synchrony or stillness does not decide which occurred.
 
-F2 should therefore ask:
+F02 should therefore ask:
 
 1. What information did each person detect?
 2. How did each person's response change the other's conditions?
@@ -246,16 +248,16 @@ The proposed organism↔organism information loop may connect these territories.
 
 | Model owner | What it owns |
 | --- | --- |
-| **F1 · Foundations of the Fluid Gradient** | The evolutionary availability of social detection, signalling, care, coordination and learning across lineages; not the claim that mirroring is one ancient mechanism |
-| **F2 · Developmental Shaping of Emotional Participation** | How repeated social feedback may shape emotional access, differentiation, expression, action, self–other distinction and self-explanation across development |
+| **F01 · Foundations of the Fluid Gradient** | The evolutionary availability of social detection, signalling, care, coordination and learning across lineages; not the claim that mirroring is one ancient mechanism |
+| **F02 · Developmental Shaping of Emotional Participation** | How repeated social feedback may shape emotional access, differentiation, expression, action, self–other distinction and self-explanation across development |
 | **Two Biological Information Systems** | How emotional–somatic and reflective–symbolic information may participate concurrently in detecting, interpreting and learning from the loop |
 | **ESC and the Inner Compass sequence** | The live event: signal, organisation, action, another person's response, feedback, updating, escalation, completion and Return |
-| **Chronic Gradient and F3** | How a learnt route may persist, recur, generalise, become easier to recruit or remain difficult to update |
+| **Chronic Gradient and F03** | How a learnt route may persist, recur, generalise, become easier to recruit or remain difficult to update |
 | **Behaviour, Harm, Power and Repair** | What the person does with available information, the power used, impact, response to feedback, recurrence and repair |
 
 ### Behaviour boundary
 
-F2 may help explain the developmental origins of capacities and learnt response routes. It cannot establish the origin of a present behaviour from the behaviour alone.
+F02 may help explain the developmental origins of capacities and learnt response routes. It cannot establish the origin of a present behaviour from the behaviour alone.
 
 The same early interaction pattern may contribute to different later outcomes. Similar adult behaviours can also arise through different developmental histories, present conditions, goals, values and opportunities.
 
@@ -295,11 +297,13 @@ The evidence pass should also examine comparative social cognition, developmenta
 9. Which developmental findings are longitudinal, experimentally supported, observational, retrospective or theoretical?
 10. How far can any developmental result travel before it becomes an unsupported explanation of adult behaviour?
 
-### Possible F2 integration paragraph
+<a id="possible-f2-integration-paragraph"></a>
+
+### Possible F02 integration paragraph
 
 > A child does not learn to understand emotional information by looking inward alone. From the beginning, changes in the child alter other people, and their responses become part of the information the child receives next. A sufficiently contingent response may help connect bodily change, situation, expression, action and outcome. A dismissive or punitive response may instead teach that the signal is relationally costly, even while the underlying emotional–somatic activity continues. Across repetition, the child may learn not only what a feeling appears to mean, but which version of themselves keeps connection most available.
 
-This paragraph is a working synthesis. It should enter F2 only after the relevant claims have been decomposed and grounded.
+This paragraph is a working synthesis. It should enter F02 only after the relevant claims have been decomposed and grounded.
 
 ---
 
@@ -309,9 +313,9 @@ This paragraph is a working synthesis. It should enter F2 only after the relevan
 
 Scientific-facing subtitle: **Caregiver-provided conditions, infant physiological regulation and bidirectional biobehavioural coordination**
 
-**Entry status:** captured · original wording substantially revised · initial F1/F2 integration completed · evidence audit pending
+**Entry status:** captured · original wording substantially revised · initial F01/F02 integration completed · evidence audit pending
 
-**F1 handoff:** [Early dependency couples connection-preservation and organism-protection](../../F01/crosswalk.html#survival-bridge-title)
+**F01 handoff:** [Early dependency couples connection-preservation and organism-protection](../../F01/crosswalk.html#survival-bridge-title)
 
 **Shared biological premise:** [Human Sociality and the Two Survival Functions](../../../07-reference/sociality.html#development)
 
@@ -333,7 +337,7 @@ The original wording goes further than this observation can presently carry.
 - Another person's response can support lower demand, effective action, updating, recovery and sleep or rest.
 - Repeated interaction may contribute to expectations about whether distress brings help, whether conditions can change and whether recovery is likely.
 
-These points can support F2. They do not require the claim that the infant has no regulatory capacity of its own.
+These points can support F02. They do not require the claim that the infant has no regulatory capacity of its own.
 
 ### The central correction
 
@@ -381,7 +385,7 @@ A more precise accessible formulation is:
 
 Mammalian infants vary substantially. Some species are highly altricial; others are mobile and comparatively developed soon after birth. Thermoregulation, feeding behaviour, sensory availability, parental care and social dependence differ across species and developmental stages.
 
-F1 may investigate the evolutionary distribution of parental care and social buffering. F2 should focus on human development unless a comparative claim has been checked species by species.
+F01 may investigate the evolutionary distribution of parental care and social buffering. F02 should focus on human development unless a comparative claim has been checked species by species.
 
 The phrase “a mammalian infant” should therefore not carry a universal human developmental claim.
 
@@ -440,7 +444,9 @@ and does demand reduce, updating occur or recovery become available?
 
 Mirroring, detection or synchrony may provide information. They are not, by themselves, proof that regulation succeeded.
 
-### F2 developmental significance
+<a id="f2-developmental-significance"></a>
+
+### F02 developmental significance
 
 Repeated caregiver-provided changes can teach more than immediate relief.
 
@@ -478,7 +484,7 @@ If this route repeats, the child may practise the version of themselves that mak
 
 The acceptable character may therefore become a **relational regulation strategy**: calm, cheerful, undemanding, mature or helpful behaviour reduces immediate relational pressure while the child's own information remains backgrounded.
 
-F2 must not call this co-regulation merely because two people became quieter.
+F02 must not call this co-regulation merely because two people became quieter.
 
 ### Regulation audit
 
@@ -499,12 +505,12 @@ For every “borrowed regulation” claim, ask:
 
 | Model owner | What it owns |
 | --- | --- |
-| **F1 · Foundations of the Fluid Gradient** | Comparative evolution of parental care, social buffering, thermal strategies, signalling and dependence, with species-specific boundaries |
-| **F2 · Developmental Shaping of Emotional Participation** | How caregiver-provided conditions and repeated outcomes may shape signal use, expectation, expression, action and self-explanation |
+| **F01 · Foundations of the Fluid Gradient** | Comparative evolution of parental care, social buffering, thermal strategies, signalling and dependence, with species-specific boundaries |
+| **F02 · Developmental Shaping of Emotional Participation** | How caregiver-provided conditions and repeated outcomes may shape signal use, expectation, expression, action and self-explanation |
 | **Autonomic Organisation and Pathways** | Specific autonomic participation without reducing the interaction to one vagal pathway |
 | **Two Biological Information Systems** | How emotional–somatic and reflective–symbolic information participate in detecting conditions, learning relational consequences and later explaining experience |
 | **ESC, Regulation and Return** | The live sequence from condition and signal through caregiver action, changed conditions, feedback, updating, recovery or interrupted Return |
-| **Chronic Gradient and F3** | How expectations about help, recovery, expression or relational cost may persist, recur or generalise |
+| **Chronic Gradient and F03** | How expectations about help, recovery, expression or relational cost may persist, recur or generalise |
 | **Behaviour, Harm, Power and Repair** | What caregivers and later adults do, the impact produced, alternatives, response to feedback and repair |
 
 ### Evidence routes to examine
@@ -534,7 +540,7 @@ For every “borrowed regulation” claim, ask:
 9. What evidence supports a specific vagal contribution, and what would justify naming ventral vagal participation rather than distributed autonomic regulation?
 10. What later developmental outcomes are supported prospectively rather than inferred retrospectively?
 
-### Possible F2 integration paragraph
+### Possible F02 integration paragraph
 
 > A young infant regulates through its own developing organism, but many of the conditions that make regulation and recovery possible must be provided or changed by other people. A caregiver may alter warmth, nourishment, contact, movement, sensory demand, protection or opportunities for rest. The infant detects those changes and reorganises through its own physiological systems. Across repetition, the child can learn not only that distress changes, but whether signals bring effective help, whether connection remains available and whether recovery can be expected.
 
@@ -546,7 +552,7 @@ This formulation retains developmental dependence without treating regulation as
 
 Scientific-facing subtitle: **Relationally contingent completion, protective resolution and their coupling during early dependence**
 
-**Entry status:** captured · initial integration completed across F1, F2, Fluid emotions and Return · evidence audit pending
+**Entry status:** captured · initial integration completed across F01, F02, Fluid emotions and Return · evidence audit pending
 
 ### The observation
 
@@ -615,11 +621,11 @@ preserve.
 
 | Model owner | What it owns |
 | --- | --- |
-| **F1 · Foundations of the Fluid Gradient** | Evolutionary availability of both problem-spaces and their coupling through care and dependence |
-| **F2 · Developmental Shaping of Emotional Participation** | How early coupling can shape expression, help-seeking, role performance, acceptable-self learning and later expectation |
+| **F01 · Foundations of the Fluid Gradient** | Evolutionary availability of both problem-spaces and their coupling through care and dependence |
+| **F02 · Developmental Shaping of Emotional Participation** | How early coupling can shape expression, help-seeking, role performance, acceptable-self learning and later expectation |
 | **Fluid emotions** | Which condition a signal concerns and which completion pathways could allow it to update |
 | **ESC, Regulation and Return** | Whether the live route produced relational restoration, organism-level Return, Return without repair or continued demand |
-| **Chronic Gradient and F3** | How unresolved demand, repeated relational cost or practised protection may persist or generalise |
+| **Chronic Gradient and F03** | How unresolved demand, repeated relational cost or practised protection may persist or generalise |
 | **Behaviour, Harm, Power and Repair** | Whether another person's conduct was responsive, withholding, coercive, harmful, accountable or reparative |
 
 ### Evidence routes to examine
@@ -648,7 +654,7 @@ as such.
 
 Scientific-facing subtitle: **Process, developmental level and proposed relation**
 
-**Entry status:** captured · decomposition pending · evidence audit pending · F2 integration pending
+**Entry status:** captured · decomposition pending · evidence audit pending · F02 integration pending
 
 #### The observation
 
@@ -666,13 +672,15 @@ What becomes available when, and what can repeated experience teach at each poin
 
 What information changes, what problem is organisation solving, and what counts as updating, relief, recovery or repair?
 
-#### F2 connection
+<a id="f2-connection"></a>
 
-Which F2 capacity, timeline window, invalidation route or acceptable-character process could this entry clarify?
+#### F02 connection
+
+Which F02 capacity, timeline window, invalidation route or acceptable-character process could this entry clarify?
 
 #### Ownership and handoffs
 
-What belongs to F1, F2, the Two Systems model, ESC, Chronic/F3 or the behaviour and harm plane?
+What belongs to F01, F02, the Two Systems model, ESC, Chronic/F03 or the behaviour and harm plane?
 
 #### Boundaries
 

@@ -8,9 +8,9 @@ Governing model premise: [How the Nervous System Organisation Gradient Models Or
 
 Upstream differentiation method: [F11 · Ambivalence, Complexity and Responsible Integration](../F11/review.md)
 
-Social-valuation boundary: [F5 · Social Valuation, Status and Unequal Conditions](../F05/review.md)
+Social-valuation boundary: [F05 · Social Valuation, Status and Unequal Conditions](../F05/review.md)
 
-Power boundary: [F7 · Coercive Enforcement, Power and Restricted Agency](../F07/review.md) · [Harm, Power and Repair Grounding](../../07-reference/grounding/harm-power-and-repair.md)
+Power boundary: [F07 · Coercive Enforcement, Power and Restricted Agency](../F07/review.md) · [Harm, Power and Repair Grounding](../../07-reference/grounding/harm-power-and-repair.md)
 
 ## Decision
 
@@ -24,7 +24,7 @@ Suggested explanatory line:
 
 > How some cultures learned to mistrust emotional and bodily information, what became easier to sustain when those signals were poorly understood, and what may become possible when people and institutions learn to read them more accurately.
 
-F12 stands slightly outside the F1–F11 sequence. It turns around and asks what the whole collection can help us notice about human history and present social organisation.
+F12 stands slightly outside the F01–F11 sequence. It turns around and asks what the whole collection can help us notice about human history and present social organisation.
 
 The original framework identifies a consequential pattern. Influential strands of Western philosophy, religion, science, law, administration and organisational life have often treated reason as detached, trustworthy and properly human while treating emotion as irrational, private, feminine, primitive, disruptive or in need of control. These traditions were neither universal nor internally consistent. They existed alongside philosophical, cultural, clinical, artistic, spiritual and Indigenous traditions that understood bodily and relational knowledge differently.
 
@@ -48,7 +48,7 @@ Consumption, status, control, overwork, appeasement, avoidance, dissociation and
 
 These are not interchangeable.
 
-The later regulation pass should carry the following sequence through F1–F12:
+The later regulation pass should carry the following sequence through F01–F12:
 
 ```text
 detected or predicted condition
@@ -229,7 +229,7 @@ Immediate relief is evidence of an outcome. It is not proof that the behaviour w
 
 ## The Filter of Worth as an institutional selection corridor
 
-F5 retains **Filter of Worth** as a TEG-Blue recognition label. It names the confusion through which social access, recognition or protection is treated as evidence of inherent human value, while exclusion is treated as evidence of inadequacy.
+F05 retains **Filter of Worth** as a TEG-Blue recognition label. It names the confusion through which social access, recognition or protection is treated as evidence of inherent human value, while exclusion is treated as evidence of inadequacy.
 
 F12 adds a retrospective question: can the filter also describe how institutions repeatedly select which presentations and behaviours look suitable for authority?
 
@@ -370,15 +370,15 @@ The TEG-Blue proposition is that more coordinated access to emotional–somatic 
 
 | Current layer | What F12 receives or contributes | Boundary of the connection |
 | --- | --- | --- |
-| **F1 · evolutionary foundations** | Human affective, interoceptive, cognitive, relational and learning capacities provide the biological background | Evolution does not establish one original social order, moral direction or cultural destiny |
-| **F2 · developmental shaping** | Children learn emotion concepts, expression rules, self–other distinctions and what information relationships permit | Developmental learning is not the entire origin of a cultural hierarchy |
-| **F3 · adult maintenance and revision** | People build explanations around what they can access and may revise when new information becomes usable | Cognition is not the enemy; narrative can conceal, investigate or correct |
-| **F4 · shared rules** | Institutions formalise which expressions, evidence and roles are acceptable | Rules are not collective nervous systems and cannot be explained by arousal alone |
-| **F5 · social valuation** | Filter of Worth helps identify which people, knowledge and behaviours gain credibility, protection and advancement | It remains a decomposed recognition label, not one hidden selection mechanism |
-| **F6 · bias and judgement** | Categories and authority can shape attention, credibility and evidence use | Emotional literacy does not remove bias; procedures and revision remain necessary |
-| **F7 · coercive enforcement** | Control may be rewarded as decisiveness while affected people carry restricted agency and cost | Harm must be established through behaviour, power and impact, not inferred from emotional unawareness |
-| **F8 · recovery routes** | Reconnection may improve access to previously unread experience and alternative action | F12 explains why reconnection matters; it does not own treatment, recovery or Return |
-| **F9 · environmental fit** | Sensory, communicative and cognitive difference affects whose information looks legible or authoritative | Neurodivergence is not greater embodiment, lesser rationality or resistance to manipulation |
+| **F01 · evolutionary foundations** | Human affective, interoceptive, cognitive, relational and learning capacities provide the biological background | Evolution does not establish one original social order, moral direction or cultural destiny |
+| **F02 · developmental shaping** | Children learn emotion concepts, expression rules, self–other distinctions and what information relationships permit | Developmental learning is not the entire origin of a cultural hierarchy |
+| **F03 · adult maintenance and revision** | People build explanations around what they can access and may revise when new information becomes usable | Cognition is not the enemy; narrative can conceal, investigate or correct |
+| **F04 · shared rules** | Institutions formalise which expressions, evidence and roles are acceptable | Rules are not collective nervous systems and cannot be explained by arousal alone |
+| **F05 · social valuation** | Filter of Worth helps identify which people, knowledge and behaviours gain credibility, protection and advancement | It remains a decomposed recognition label, not one hidden selection mechanism |
+| **F06 · bias and judgement** | Categories and authority can shape attention, credibility and evidence use | Emotional literacy does not remove bias; procedures and revision remain necessary |
+| **F07 · coercive enforcement** | Control may be rewarded as decisiveness while affected people carry restricted agency and cost | Harm must be established through behaviour, power and impact, not inferred from emotional unawareness |
+| **F08 · recovery routes** | Reconnection may improve access to previously unread experience and alternative action | F12 explains why reconnection matters; it does not own treatment, recovery or Return |
+| **F09 · environmental fit** | Sensory, communicative and cognitive difference affects whose information looks legible or authoritative | Neurodivergence is not greater embodiment, lesser rationality or resistance to manipulation |
 | **F10 · intergenerational pathways** | Language, care, material conditions, institutions and cultural practices may continue or change across generations | Cultural continuity is not biological inheritance of disconnection |
 | **F11 · responsible integration** | F11 keeps multiple historical routes, levels and evidence types distinct | Complexity cannot turn competing historical propositions into equal facts |
 | **Model 1 · coordinated conscious access** | Coordinated access may make bodily information, differentiated feeling, context and direction more consciously readable | Coordinated conscious access is not the underlying biological evaluation or a truth detector |
@@ -451,13 +451,13 @@ normalised confusion among confidence, control, safety and leadership
         ↓
 literacy, evidence, viable refusal and institutional revision
         ↺
-new regulation pass through F1–F12
+new regulation pass through F01–F12
 ```
 
 Four handoffs matter most:
 
 1. **To the regulation pass:** define organism regulation, emotion regulation, interpersonal regulation, pressure reduction, completion, imposed cost, updating and Return before describing their role in each framework.
-2. **To F5, F7 and HPR:** develop the Filter of Worth selection corridor through observable advancement criteria, power use, feedback treatment and effects on people with less authority.
+2. **To F05, F07 and HPR:** develop the Filter of Worth selection corridor through observable advancement criteria, power use, feedback treatment and effects on people with less authority.
 3. **To the public educational model:** explain ESS, CLS, nervous-system organisation and ME without dualism, diagnosis or promises of manipulation immunity.
 4. **To future historical research:** replace the single retrospective story with route-specific, cross-cultural and participatory inquiry whose evidence status remains visible.
 
@@ -474,7 +474,7 @@ Four handoffs matter most:
 - **Manipulation:** literacy may reduce some vulnerabilities, but collective protection also requires safe contradiction, corroboration, viable refusal and accountable institutions.
 - **Technology:** treat it as increased capacity that may support understanding or intensify control.
 - **Human possibility:** show evidence of learnable capacities and changeable institutions without promising inevitable progress.
-- **Collection dependency:** mark a future regulation pass across F1–F12 as required work.
+- **Collection dependency:** mark a future regulation pass across F01–F12 as required work.
 - **Evidence status:** architectural first pass; the historical synthesis remains a TEG-Blue proposition requiring route-, period-, culture- and institution-specific grounding.
 
 ## Grounding science and knowledge fields

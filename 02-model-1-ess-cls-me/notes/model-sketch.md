@@ -3,7 +3,7 @@
 Status: first collection-level sketch · 21 August 2026
 Public working name: **The Two Biological Information Systems**
 Scientific-facing subtitle: **Emotional–somatic and reflective–symbolic processing within one organism**
-Scope: ESS · CLS · ME · Inner Compass · Nervous System Gradient · F1–F12
+Scope: ESS · CLS · ME · Inner Compass · Nervous System Gradient · F01–F12
 Purpose: gather the current architecture into one provisional model before public-page writing, later evidence review and implementation, while providing the starting point for the Regulation pass
 
 Current companions: [ESS and CLS · Terminology and Architecture Decision](ESS-CLS-terminology-and-architecture.md) · [ESS and CLS · Component Claim Decomposition](../grounding/ESS-CLS-component-decomposition.md) · [ESS Condition-Reading and Emotional Significance](../../evidence/pilots/PILOT-04-ess-condition-reading-and-emotional-significance.md) · [The Human Retrospective](../../05-frameworks/F12/review.md) · [Active ESS, CLS and ME page](../index.html) · [Governing Gradient premise](../../03-model-2-gradient/premise.html)
@@ -24,7 +24,7 @@ The two names do different work. The accessible name supports orientation and co
 This sketch develops the current model. It does not make every earlier statement current again.
 
 1. The governing Gradient premise and active project architecture set the scientific and ethical boundaries.
-2. The F1–F12 reviews show what each Foundational Framework may contribute and what it must not be asked to prove.
+2. The F01–F12 reviews show what each Foundational Framework may contribute and what it must not be asked to prove.
 3. Current terminology decisions and claim decompositions define the working ESS and CLS architecture.
 4. Legacy material is provenance. It may contribute a useful observation, distinction, metaphor or diagram only after **preserve, revise, retire or unresolved** review.
 
@@ -218,7 +218,7 @@ The distinctions are conditional rather than a fixed ladder. Difficulty at one p
 
 **This section is a placeholder for a full Regulation pass. It must not be treated as a finished theory.**
 
-The word **regulation** is currently doing too many kinds of work across TEG-Blue. Before it is carried through ESS, CLS or F1–F12, the project must distinguish at least:
+The word **regulation** is currently doing too many kinds of work across TEG-Blue. Before it is carried through ESS, CLS or F01–F12, the project must distinguish at least:
 
 - organism regulation and viability maintenance;
 - nervous-system organisation;
@@ -324,15 +324,15 @@ This is a direction of possibility, not a promise of immunity.
 
 | Framework | Contribution to the model | Boundary carried forward |
 | --- | --- | --- |
-| **F1 · Evolutionary foundations** | Biological histories of sensing, viability regulation, affect, action, learning, relationship and reflection | ESS and CLS are present-day educational integrations, not evolutionary stages |
-| **F2 · Developmental shaping** | How access, differentiation, weighting, language, interpretation and participation may develop | No single childhood pathway, caregiver event or developmental destiny |
-| **F3 · Adult maintenance and revision** | How expectation, explanation, response and consequence may maintain or revise patterns | Narrative is neither the enemy nor a direct reading of hidden biology |
-| **F4 · Shared rules** | How groups teach which information, expression and accounts are acceptable | A group is not a collective nervous system |
-| **F5 · Social valuation** | Filter of Worth and the distribution of credibility, status, protection and access | Social reward is not proof of inherent worth or private emotional organisation |
-| **F6 · Bias and judgement** | Selection, categorisation, criteria, uncertainty, evidence use and revision | Bias is not one regulation mechanism and literacy does not remove it |
-| **F7 · Coercive enforcement** | Behaviour, power, imposed cost, viable refusal and restricted agency | Domination cannot be identified from a feeling, style or proposed motive |
-| **F8 · Recovery routes** | Multiple routes through which participation, access, action and conditions may change | Insight does not update one system while experience updates another sealed system |
-| **F9 · Environmental fit** | How sensory, communicative, cognitive and material fit affects usable access | Difference is not lesser rationality, greater embodiment or resistance to manipulation |
+| **F01 · Evolutionary foundations** | Biological histories of sensing, viability regulation, affect, action, learning, relationship and reflection | ESS and CLS are present-day educational integrations, not evolutionary stages |
+| **F02 · Developmental shaping** | How access, differentiation, weighting, language, interpretation and participation may develop | No single childhood pathway, caregiver event or developmental destiny |
+| **F03 · Adult maintenance and revision** | How expectation, explanation, response and consequence may maintain or revise patterns | Narrative is neither the enemy nor a direct reading of hidden biology |
+| **F04 · Shared rules** | How groups teach which information, expression and accounts are acceptable | A group is not a collective nervous system |
+| **F05 · Social valuation** | Filter of Worth and the distribution of credibility, status, protection and access | Social reward is not proof of inherent worth or private emotional organisation |
+| **F06 · Bias and judgement** | Selection, categorisation, criteria, uncertainty, evidence use and revision | Bias is not one regulation mechanism and literacy does not remove it |
+| **F07 · Coercive enforcement** | Behaviour, power, imposed cost, viable refusal and restricted agency | Domination cannot be identified from a feeling, style or proposed motive |
+| **F08 · Recovery routes** | Multiple routes through which participation, access, action and conditions may change | Insight does not update one system while experience updates another sealed system |
+| **F09 · Environmental fit** | How sensory, communicative, cognitive and material fit affects usable access | Difference is not lesser rationality, greater embodiment or resistance to manipulation |
 | **F10 · Intergenerational pathways** | How biological, developmental, relational, material and cultural pathways may carry conditions and learning across generations | Transmission is not duplication, biological destiny or inherited moral responsibility |
 | **F11 · Ambivalence and complexity** | How apparently conflicting information, feeling, value and action tendency may coexist and require responsible differentiation | Complexity does not make every interpretation equally accurate or remove the need to decide and act |
 | **F12 · Human retrospective** | How emotional authority, unread information, pressure-reducing routes, institutional selection and future literacy connect | No universal history, diagnosis of leaders or promise that education ends violence |
@@ -443,7 +443,7 @@ Legacy language should never be copied into the public model only because it is 
 
 1. **Light Pass 1 · complete:** compare the sketch with the legacy deep dive and record preserve, revise, retire and unresolved decisions. No further archive mining is required now.
 2. **Light Pass 2 · complete for orientation:** identify present component coverage and route unfinished evidence work without trying to complete every pilot now.
-3. **Next deep pass · opened:** define Regulation before threading it through the model or F1–F12. See [The Regulation Pass](../../03-model-2-gradient/notes/regulation-pass.md).
+3. **Next deep pass · opened:** define Regulation before threading it through the model or F01–F12. See [The Regulation Pass](../../03-model-2-gradient/notes/regulation-pass.md).
 4. Test the relationship among felt access, Inner Compass, ME and Conscious Participation.
 5. Build a claim register with direct sources, measures, population limits and disconfirming evidence.
 6. Draft two diagrams: a full scientific architecture and a simpler public teaching version.

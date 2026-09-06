@@ -49,7 +49,7 @@ The amount of structure does not settle what kind of control is present.
 | **CTL-14** | Power can change attention, inhibition and approach, but possession of power does not establish abuse. | Mechanism / boundary | **Theoretically and empirically supported with moderator limits.** |
 | **CTL-15** | Coercive control is best assessed as a patterned option-field restriction, not a count of isolated disagreements or acts. | Definition / application | **Supported.** Intent, credible threat, experienced restriction and practical effect all require attention. |
 | **CTL-16** | Coercive control is associated with PTSD and depression, but cross-sectional evidence cannot establish one consequence or route for every survivor. | Phenomenon | **Supported meta-analytically with design limits.** |
-| **CTL-17** | Anxiety, trauma history, intolerance of uncertainty or over-controlled coping may explain pressure to control; they do not establish or excuse coercive behaviour. | F2/F3/HPR boundary | **Non-negotiable.** |
+| **CTL-17** | Anxiety, trauma history, intolerance of uncertainty or over-controlled coping may explain pressure to control; they do not establish or excuse coercive behaviour. | F02/F03/HPR boundary | **Non-negotiable.** |
 | **CTL-18** | Chronic organisation is rigidity and failed updating across conditions—not the use of strong structure when conditions genuinely require it. | Boundary | **Supported by the governing Chronic architecture.** |
 | **CTL-19** | No three-capacity configuration predicts coercive control. HPR requires evidence of behaviour, power, reduced options, impact and response to resistance. | Boundary | **Non-negotiable.** |
 
@@ -82,7 +82,7 @@ A person may plan because the risk is real. Another may repeatedly plan because 
 
 Someone can work carefully, pursue excellence and revise after mistakes without organising their worth around flawless performance. Perfectionistic concerns become more relevant when mistakes invite harsh self-judgement, discrepancy remains chronically salient, or standards persist despite clear cost.
 
-This distinction matters socially. Demanding work from oneself does not provide authority to demand another person's compliance. F3 should examine when a personal standard silently becomes a rule for everyone nearby.
+This distinction matters socially. Demanding work from oneself does not provide authority to demand another person's compliance. F03 should examine when a personal standard silently becomes a rule for everyone nearby.
 
 ## Psychological control targets the person from inside
 
@@ -106,9 +106,11 @@ surveillance · isolation · degradation · resource control · intimidation · 
 
 Intent may be difficult to establish. The behaviour, credible threat, patterned restriction and consequences can still be examined. This is why HPR records the option field rather than diagnosing the person using control.
 
-## F2 hypotheses—not conclusions
+<a id="f2-hypothesesnot-conclusions"></a>
 
-F2 may later test whether recurrent control-related patterns were shaped by:
+## F02 hypotheses—not conclusions
+
+F02 may later test whether recurrent control-related patterns were shaped by:
 
 - unpredictable environments in which anticipation improved safety;
 - punishment of mistakes, uncertainty, spontaneity or emotional expression;
@@ -122,9 +124,11 @@ F2 may later test whether recurrent control-related patterns were shaped by:
 
 These routes can produce very different adult behaviour. Being controlled does not predict becoming coercive.
 
-## F3 ownership
+<a id="f3-ownership"></a>
 
-F3 should examine:
+## F03 ownership
+
+F03 should examine:
 
 - what uncertainty, error or disagreement is taken to mean;
 - whether self-worth depends on correctness, productivity or obedience;
@@ -134,7 +138,7 @@ F3 should examine:
 - whether feedback can revise the strategy;
 - whether control is justified as care while preserving the controller's preferred outcome.
 
-F3 explains current organisation. It does not determine whether coercion occurred.
+F03 explains current organisation. It does not determine whether coercion occurred.
 
 ## HPR ownership
 
