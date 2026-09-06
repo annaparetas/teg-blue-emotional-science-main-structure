@@ -11,11 +11,11 @@ This is a relationship map, not a migration plan. It records how every current f
 
 ## Coverage
 
-- **198 Engine files listed: 198 of 198.**
+- **199 Engine files listed: 199 of 199.**
 - 87 reviewed carry relationships.
 - 13 site-owned presentations with continuing Engine provenance.
 - 17 documented concept connections already present in the site transfer logic.
-- 81 additional explicit concept, visual, archive or repository-support connections.
+- 82 additional explicit concept, visual, archive or repository-support connections.
 
 The count includes tracked content and untracked non-ignored content, including repository guidance such as `.gitignore`. Ignored macOS metadata and Git internals are excluded, making the inventory stable across worktrees.
 
@@ -128,6 +128,7 @@ Run `python3 scripts/build-engine-connections.py --check` after either repositor
 | `evidence/reviews/fluid-gradient-organisation-science-matrix.md` | [`03-model-2-gradient/grounding/fluid-gradient-organisation-science-matrix.md`](03-model-2-gradient/grounding/fluid-gradient-organisation-science-matrix.md) | **Reviewed carry relationship.** The Engine file remains the source; the site file is the reviewed, navigable snapshot named in the carry manifest. |
 | `evidence/reviews/harm-power-and-repair.md` | [`07-reference/grounding/harm-power-and-repair.md`](07-reference/grounding/harm-power-and-repair.md) | **Reviewed carry relationship.** The Engine file remains the source; the site file is the reviewed, navigable snapshot named in the carry manifest. |
 | `evidence/reviews/integrated-grounding-2026-08-19.md` | [`evidence/reviews/integrated-grounding-2026-08-19.md`](evidence/reviews/integrated-grounding-2026-08-19.md) | **Reviewed carry relationship.** The Engine file remains the source; the site file is the reviewed, navigable snapshot named in the carry manifest. |
+| `evidence/reviews/interpersonal-support-and-stress-buffering.md` | [`03-model-2-gradient/return.html`](03-model-2-gradient/return.html)<br>[`04-model-3-esc/index.html`](04-model-3-esc/index.html)<br>[`05-frameworks/F08/review.md`](05-frameworks/F08/review.md) | **Additional explicit connection.** Engine acute-support evidence comparison and recovery/Return boundaries; research connection only, with public integration deferred. |
 | `evidence/reviews/options-consequences-and-response-selection.md` | [`05-frameworks/F03/review.md`](05-frameworks/F03/review.md) | **Additional explicit connection.** Engine evidence comparison for options, consequences and response selection; site integration deferred. |
 | `evidence/reviews/original-frameworks-claim-reassessment.md` | [`evidence/reviews/original-frameworks-claim-reassessment.md`](evidence/reviews/original-frameworks-claim-reassessment.md) | **Reviewed carry relationship.** The Engine file remains the source; the site file is the reviewed, navigable snapshot named in the carry manifest. |
 | `evidence/reviews/reduced-pressure-recovery-and-return.md` | [`03-model-2-gradient/return.html`](03-model-2-gradient/return.html)<br>[`04-model-3-esc/index.html`](04-model-3-esc/index.html) | **Additional explicit connection.** Engine evidence comparison separating reduced pressure, recovery and Return; prepared wording awaits site integration. |
