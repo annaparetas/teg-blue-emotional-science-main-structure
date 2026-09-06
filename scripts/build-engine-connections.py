@@ -35,6 +35,7 @@ def load_carry_module():
 # Each value is: (site targets, relationship statement).
 # An empty target tuple means repository inventory rather than a content home.
 EXTRA_RELATIONSHIPS: dict[str, tuple[tuple[str, ...], str]] = {
+    'evidence/reviews/action-control-and-demand-change.md': (('02-model-1-ess-cls-me/index.html', '03-model-2-gradient/return.html', '04-model-3-esc/index.html', '05-frameworks/F03/review.md'), 'Engine evidence comparison of action, actual demand change and perceived control; research connection only, with public integration deferred.'),
     'evidence/claims/F03-maintenance-and-revision-claim-map.md': (('05-frameworks/F03/review.md',), 'Engine claim questions and evidence status for F03; public-page integration remains deferred.'),
     'evidence/reviews/F03-family-names-and-evidence-decisions.md': (('05-frameworks/F03/review.md',), 'Accepted Engine research family names and evidence decisions; this connection does not transfer them into site canon.'),
     'evidence/reviews/disagreement-confidence-and-revision.md': (('05-frameworks/F03/review.md',), 'Engine evidence comparison for interpretation, confidence and feedback use; site integration deferred.'),
