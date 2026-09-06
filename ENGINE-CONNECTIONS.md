@@ -11,11 +11,11 @@ This is a relationship map, not a migration plan. It records how every current f
 
 ## Coverage
 
-- **206 Engine files listed: 206 of 206.**
+- **207 Engine files listed: 207 of 207.**
 - 87 reviewed carry relationships.
 - 13 site-owned presentations with continuing Engine provenance.
 - 17 documented concept connections already present in the site transfer logic.
-- 89 additional explicit concept, visual, archive or repository-support connections.
+- 90 additional explicit concept, visual, archive or repository-support connections.
 
 The count includes tracked content and untracked non-ignored content, including repository guidance such as `.gitignore`. Ignored macOS metadata and Git internals are excluded, making the inventory stable across worktrees.
 
@@ -126,6 +126,7 @@ Run `python3 scripts/build-engine-connections.py --check` after either repositor
 | `evidence/reviews/apology-restitution-conduct-and-trust.md` | [`03-model-2-gradient/return.html`](03-model-2-gradient/return.html)<br>[`04-model-3-esc/index.html`](04-model-3-esc/index.html)<br>[`05-frameworks/F08/review.md`](05-frameworks/F08/review.md) | **Additional explicit connection.** Engine Repair evidence comparison separating apology, restitution, subsequent conduct, trust and affected-person recovery; research connection only, with public integration deferred. |
 | `evidence/reviews/chronic-scientific-spine.md` | [`03-model-2-gradient/grounding/chronic-scientific-spine.md`](03-model-2-gradient/grounding/chronic-scientific-spine.md) | **Reviewed carry relationship.** The Engine file remains the source; the site file is the reviewed, navigable snapshot named in the carry manifest. |
 | `evidence/reviews/disagreement-confidence-and-revision.md` | [`05-frameworks/F03/review.md`](05-frameworks/F03/review.md) | **Additional explicit connection.** Engine evidence comparison for interpretation, confidence and feedback use; site integration deferred. |
+| `evidence/reviews/emotion-regulation-strategy-context-and-cost.md` | [`02-model-1-ess-cls-me/me-access.html`](02-model-1-ess-cls-me/me-access.html)<br>[`03-model-2-gradient/index.html`](03-model-2-gradient/index.html)<br>[`04-model-3-esc/index.html`](04-model-3-esc/index.html)<br>[`05-frameworks/F03/review.md`](05-frameworks/F03/review.md) | **Additional explicit connection.** Engine emotion-regulation comparison of targets, timing, costs, context and choice; research connection only, with public integration deferred. |
 | `evidence/reviews/expected-rejection-and-partner-response.md` | [`05-frameworks/F03/review.md`](05-frameworks/F03/review.md) | **Additional explicit connection.** Engine evidence comparison for expected relational outcomes; site integration deferred. |
 | `evidence/reviews/fluid-gradient-organisation-science-matrix.md` | [`03-model-2-gradient/grounding/fluid-gradient-organisation-science-matrix.md`](03-model-2-gradient/grounding/fluid-gradient-organisation-science-matrix.md) | **Reviewed carry relationship.** The Engine file remains the source; the site file is the reviewed, navigable snapshot named in the carry manifest. |
 | `evidence/reviews/harm-power-and-repair.md` | [`07-reference/grounding/harm-power-and-repair.md`](07-reference/grounding/harm-power-and-repair.md) | **Reviewed carry relationship.** The Engine file remains the source; the site file is the reviewed, navigable snapshot named in the carry manifest. |
