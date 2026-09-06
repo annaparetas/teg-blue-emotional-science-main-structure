@@ -11,11 +11,11 @@ This is a relationship map, not a migration plan. It records how every current f
 
 ## Coverage
 
-- **201 Engine files listed: 201 of 201.**
+- **202 Engine files listed: 202 of 202.**
 - 87 reviewed carry relationships.
 - 13 site-owned presentations with continuing Engine provenance.
 - 17 documented concept connections already present in the site transfer logic.
-- 84 additional explicit concept, visual, archive or repository-support connections.
+- 85 additional explicit concept, visual, archive or repository-support connections.
 
 The count includes tracked content and untracked non-ignored content, including repository guidance such as `.gitignore`. Ignored macOS metadata and Git internals are excluded, making the inventory stable across worktrees.
 
@@ -141,6 +141,7 @@ Run `python3 scripts/build-engine-connections.py --check` after either repositor
 | `evidence/reviews/scientific-lineage-and-integrative-grounding.md` | [`evidence/reviews/scientific-lineage-and-integrative-grounding.md`](evidence/reviews/scientific-lineage-and-integrative-grounding.md) | **Reviewed carry relationship.** The Engine file remains the source; the site file is the reviewed, navigable snapshot named in the carry manifest. |
 | `evidence/reviews/self-belief-clarity-worth-and-feedback.md` | [`05-frameworks/F03/review.md`](05-frameworks/F03/review.md)<br>[`05-frameworks/F02/review.md`](05-frameworks/F02/review.md) | **Additional explicit connection.** Engine self-belief and feedback comparison with the queued F02 childhood-access handoff; site integration deferred. |
 | `evidence/reviews/six-cluster-synthesis-and-F03-construct-families.md` | [`02-model-1-ess-cls-me/grounding/six-cluster-synthesis-and-F03-construct-families.md`](02-model-1-ess-cls-me/grounding/six-cluster-synthesis-and-F03-construct-families.md) | **Reviewed carry relationship.** The Engine file remains the source; the site file is the reviewed, navigable snapshot named in the carry manifest. |
+| `evidence/reviews/task-completion-and-continuing-responses.md` | [`03-model-2-gradient/return.html`](03-model-2-gradient/return.html)<br>[`04-model-3-esc/index.html`](04-model-3-esc/index.html)<br>[`05-frameworks/F08/review.md`](05-frameworks/F08/review.md) | **Additional explicit connection.** Engine task-completion evidence comparison separating task endpoints, continuing cognition and recovery; research connection only, with public integration deferred. |
 | `evidence/reviews/trauma-stress-and-adversity-research-map.md` | [`05-frameworks/F02/grounding/trauma-stress-and-adversity-research-map.md`](05-frameworks/F02/grounding/trauma-stress-and-adversity-research-map.md) | **Reviewed carry relationship.** The Engine file remains the source; the site file is the reviewed, navigable snapshot named in the carry manifest. |
 
 ## `foundation/`
