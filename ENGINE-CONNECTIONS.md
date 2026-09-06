@@ -11,11 +11,11 @@ This is a relationship map, not a migration plan. It records how every current f
 
 ## Coverage
 
-- **205 Engine files listed: 205 of 205.**
+- **206 Engine files listed: 206 of 206.**
 - 87 reviewed carry relationships.
 - 13 site-owned presentations with continuing Engine provenance.
 - 17 documented concept connections already present in the site transfer logic.
-- 88 additional explicit concept, visual, archive or repository-support connections.
+- 89 additional explicit concept, visual, archive or repository-support connections.
 
 The count includes tracked content and untracked non-ignored content, including repository guidance such as `.gitignore`. Ignored macOS metadata and Git internals are excluded, making the inventory stable across worktrees.
 
@@ -134,6 +134,7 @@ Run `python3 scripts/build-engine-connections.py --check` after either repositor
 | `evidence/reviews/observation-monitoring-and-later-behaviour.md` | [`04-model-3-esc/index.html`](04-model-3-esc/index.html)<br>[`05-frameworks/F04/review.md`](05-frameworks/F04/review.md)<br>[`05-frameworks/F05/review.md`](05-frameworks/F05/review.md)<br>[`05-frameworks/F07/review.md`](05-frameworks/F07/review.md)<br>[`05-frameworks/F12/review.md`](05-frameworks/F12/review.md) | **Additional explicit connection.** Engine observation and later-behaviour evidence comparison; research connection only, with public integration deferred. |
 | `evidence/reviews/options-consequences-and-response-selection.md` | [`05-frameworks/F03/review.md`](05-frameworks/F03/review.md) | **Additional explicit connection.** Engine evidence comparison for options, consequences and response selection; site integration deferred. |
 | `evidence/reviews/original-frameworks-claim-reassessment.md` | [`evidence/reviews/original-frameworks-claim-reassessment.md`](evidence/reviews/original-frameworks-claim-reassessment.md) | **Reviewed carry relationship.** The Engine file remains the source; the site file is the reviewed, navigable snapshot named in the carry manifest. |
+| `evidence/reviews/physiological-regulation-and-whole-system-inference.md` | [`03-model-2-gradient/index.html`](03-model-2-gradient/index.html)<br>[`03-model-2-gradient/premise.html`](03-model-2-gradient/premise.html)<br>[`02-model-1-ess-cls-me/me-access.html`](02-model-1-ess-cls-me/me-access.html)<br>[`04-model-3-esc/index.html`](04-model-3-esc/index.html) | **Additional explicit connection.** Engine physiological regulation and organisation-inference comparison; research connection only, with public integration deferred. |
 | `evidence/reviews/practical-help-workload-and-provider-cost.md` | [`02-model-1-ess-cls-me/index.html`](02-model-1-ess-cls-me/index.html)<br>[`03-model-2-gradient/return.html`](03-model-2-gradient/return.html)<br>[`04-model-3-esc/index.html`](04-model-3-esc/index.html)<br>[`05-frameworks/F03/review.md`](05-frameworks/F03/review.md) | **Additional explicit connection.** Engine practical-help evidence comparison separating task change, recipient appraisal, choice and provider cost; research connection only, with public integration deferred. |
 | `evidence/reviews/reduced-pressure-recovery-and-return.md` | [`03-model-2-gradient/return.html`](03-model-2-gradient/return.html)<br>[`04-model-3-esc/index.html`](04-model-3-esc/index.html) | **Additional explicit connection.** Engine evidence comparison separating reduced pressure, recovery and Return; prepared wording awaits site integration. |
 | `evidence/reviews/relational-configuration-clinical-pattern-bridge.md` | [`02-model-1-ess-cls-me/grounding/relational-configuration-clinical-pattern-bridge.md`](02-model-1-ess-cls-me/grounding/relational-configuration-clinical-pattern-bridge.md) | **Reviewed carry relationship.** The Engine file remains the source; the site file is the reviewed, navigable snapshot named in the carry manifest. |
