@@ -3,6 +3,7 @@
   const readingPage = location.pathname.match(/\/emotion\/(fluid|chronic)\.html$/)?.[1];
   const isRecords = location.pathname.endsWith('/01-signal-map/map.html');
   const isBiology = location.pathname.endsWith('/grounding/neurochemistry.html');
+  const isExplorer = location.pathname.endsWith('/grounding/evidence-connections.html');
   const links = [...document.querySelectorAll('[data-signal-target], [data-signal-return], .signal-reading-route')];
   const bases = new Map(links.map(link => [link, link.href]));
 
@@ -12,10 +13,10 @@
     try { hash = decodeURIComponent(location.hash.slice(1)); } catch (_) {}
     const entry = isBiology ? document.getElementById(hash)?.closest('.entry') : null;
     // Read identifiers from the generated registry; query values never become arbitrary routes.
-    const candidate = isRecords ? document.body.dataset.signalId
+    const candidate = isRecords || isExplorer ? document.body.dataset.signalId || params.get('signal')
       : entry?.id || (readingPage && hash.startsWith('signal-') ? hash.slice(7) : params.get('signal'));
     const signal = Object.hasOwn(signals, candidate) ? signals[candidate] : null;
-    let reading = readingPage || (isRecords && document.body.dataset.signalReading) || params.get('reading');
+    let reading = readingPage || ((isRecords || isExplorer) && document.body.dataset.signalReading) || params.get('reading');
     if (reading !== 'chronic' || (signal && !signal.chronic)) reading = 'fluid';
     return { signal, reading, entry };
   }
@@ -48,6 +49,16 @@
         link.hidden = !signal || isRecords;
         if (signal) link.textContent = `← Return to ${signal.name} · ${reading === 'chronic' ? 'Chronic' : 'Fluid'} signal record`;
       }
+    });
+
+    // Individual biology entries keep their own signal while sharing the chosen reading.
+    document.querySelectorAll('[data-explore-signal]').forEach(link => {
+      const id = link.dataset.exploreSignal;
+      if (!Object.hasOwn(signals, id)) return;
+      const url = new URL(link.href);
+      url.searchParams.set('signal', id);
+      url.searchParams.set('reading', signals[id].chronic ? reading : 'fluid');
+      link.href = url.href;
     });
 
     // Keep the biology page's existing links back to the source roster.

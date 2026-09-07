@@ -6,6 +6,20 @@ transferred. Dates only; no commit hashes, branch names or session codes.
 
 Last updated: 6 September 2026.
 
+## Signal Map evidence explorer · 6 September 2026
+
+Anna approved the [evidence connections explorer](01-signal-map/grounding/evidence-connections.html)
+as a working child of Biology and Neurochemistry. The reviewed diagram now has
+one site home, an entry preview, signal-specific routes and links back from
+recovery and Model 2's Return page. Its 53 nodes, 115 recorded links and scores
+are preserved. Nine Belonging-at-Risk questions and 31 chemical-link decisions
+are visible as working grounding; three links remain unresolved. The existing
+site taxonomy and Model 2 definitions are unchanged. The broader evidence
+consolidation remains pending. See the [transfer decision](01-signal-map/notes/decisions.md#2026-09-06--evidence-connections-explorer).
+
+A dedicated **Evidence connections** button now appears throughout the
+**Emotions and Signal Map** navigation, including its top and bottom bars.
+
 ## Framework notation and research connections · 6 September 2026
 
 Active framework identifiers use F01–F12, with legacy URLs and section links preserved. The completed Engine research is registered in the connection map; its family naming and evidence decisions remain Engine research until the separate site integration. The naming migration does not change scientific claims or evidence strength.
@@ -23,8 +37,8 @@ Active framework identifiers use F01–F12, with legacy URLs and section links p
 | Folder | Status | Last approved | Open | Next |
 | --- | --- | --- | --- | --- |
 | Foundations | Approved texts · working synthesis | 20 Aug 2026 (texts carried as governing) | Anna to confirm the canon page as the settled synthesis. Whether the compact formulation names Inner Compass as the product. Candidate "educational translation framework" language. | Anna reads the page. |
-| 00 · Emotions as Information | Approved | 2 Sept 2026 | Umbrella name is a working name. | None pending. Revisit only if the Signal Map changes the family level. |
-| 01 · Emotional Signal Map | Approved structure and unified navigation · working records | 4 Sept 2026 | All 35 signals have connected records linked to the two complete readings; separate standalone emotion pages have not been introduced. Love evidence remains explicitly deferred. The nine-layer filter awaits cross-owner review. Individual paper-level evidence for Rage, Fury and Frenzy has not yet been separated. | Resume Love claim-level evidence when that work is reopened; the connected record structure already exists. |
+| 00 · Emotions as Information | Approved | 2 Sept 2026 (content) · 6 Sept 2026 (evidence navigation) | Umbrella name is a working name. | None pending. Revisit only if the Signal Map changes the family level. |
+| 01 · Emotional Signal Map | Approved structure and unified navigation · working records | 4 Sept 2026 (structure) · 6 Sept 2026 (working explorer and navigation) | All 35 signals have connected records linked to the two complete readings; separate standalone emotion pages have not been introduced. Love evidence remains explicitly deferred. The nine-layer filter awaits cross-owner review. Individual paper-level evidence for Rage, Fury and Frenzy has not yet been separated. | Resume Love claim-level evidence when that work is reopened; the connected record structure already exists. |
 | 02 · Model 1 · ESS · CLS · ME | Approved names, relationship, consolidated access explanation, ME access capacity architecture, twelve band readings and eight public configuration descriptions · working component definitions | 4 Sept 2026 (capacity name, primary processing relationships, graded dials, band readings, literal configuration descriptions, no mode inference, approved access consolidation) | Anna to confirm the remaining canon-page definitions (ESS seven components, CLS eight, ME, access, timing without a clock). Felt access, non-CLS cognition, non-verbal reflection, concern, integration and testability remain open. M1-S1 handoff to export. | Anna reads the remaining Model 1 canon definitions; configuration research interpretation continues in the Development Engine. |
 | 03 · Model 2 · Gradient | Approved name, positions, rules, Model 1 access boundary and revised Chronic access rows · working definitions | 26 Aug 2026 (name, positions, premise) · 4 Sept 2026 (Model 2 process recruitment separated from Model 1 access; Chronic access rows) | Other position-by-position definitions remain under owner review. Display names (Baseline, Strategic Management, Power Mobilisation, Shutdown; "Gradient Position"). Fluid–Chronic profile proposed, revision required. Regulation architecture complete; its first bounded pressure/recovery/Return evidence review is ready for owner review. Fluid Return fields remain incomplete and Chronic routes unwritten. Depth is the overview; intermediate-layers is its detailed expansion. **Correction flagged:** the 27 Aug summary labelled X and A↔B differently from every table; canon follows the tables. | Review the prepared Return-workbench wording and evidence; retain the separate position-name and X / A↔B owner decisions. |
 | 04 · Model 3 · ESC | Approved name, ownership, two-cycle architecture · working grounding | 23 Aug 2026 (canonical page, name) · 27 Aug 2026 (ESC is Model 3) | Anna to confirm the canon page. Expanded name (Emotional–Somatic–Cognitive–Logical Cycle) proposed, not adopted. Claim-level grounding of completion, carryover, Return and learning. Cycle page's boundary labels to move to the three levels. The site core-source-pack copy remains archived; the Engine intake now has seven of twenty sources mapped to canonical records, with review limits recorded. | Anna reads the canon page; then F04–F12. |

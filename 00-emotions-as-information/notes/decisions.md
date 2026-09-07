@@ -3,6 +3,14 @@
 Dated entries, newest first. A decision recorded here changes the canon page
 only when the page is edited and its "last approved" date moves.
 
+## 2026-09-06 · Evidence connections button
+
+Anna approved a visible Evidence connections button in the shared Emotions
+and Signal Map navigation. It leads to the working explorer beneath Biology
+and Neurochemistry, preserving the selected signal and Fluid/Chronic reading.
+The [Signal Map transfer decision](../../01-signal-map/notes/decisions.md#2026-09-06--evidence-connections-explorer)
+records the diagram's scope and ownership. Foundation definitions are unchanged.
+
 ## 2026-09-04 · Emotions menu and two-level reading navigation
 
 Anna approved the Model 2 navigation pattern for Emotions and the Signal Map.

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore recorded connections among sensory inputs, emotions and neurochemistry, with evidence, limits and questions about recovery and Return.">
+  <title>Sensory inputs, emotions and neurochemistry · Signal Map</title>
+  <link rel="stylesheet" href="../../assets/teg-blue.css">
+  <link rel="stylesheet" href="../../assets/signal-depth.css">
+  <link rel="stylesheet" href="../../assets/presentation/shared.css">
+  <link rel="stylesheet" href="../../assets/presentation/theme.css">
+  <link rel="stylesheet" href="../../assets/evidence-connections.css">
+<!-- Site presentation -->
+<link rel="stylesheet" href="../../assets/presentation/shared.css">
+<link rel="stylesheet" href="../../assets/presentation/overview.css">
+<link rel="stylesheet" href="../../assets/presentation/theme.css">
+<script defer src="../../assets/presentation/layout.js"></script>
+<!-- /Site presentation -->
+</head>
+<body data-page="signal-map" data-root="../../">
+  <a class="skip-link" href="#explorer">Skip to the diagram</a>
+  <header data-site-header></header>
+  <main class="shell evidence-page">
+    <nav class="signal-depth" aria-label="Explore emotional information">
+      <p class="signal-depth__label">Emotions and Signal Map</p>
+      <div class="signal-depth__levels"><a data-signal-target="overview" href="../../00-emotions-as-information/index.html">Emotions as Information</a><span aria-hidden="true">→</span><a data-signal-target="map" href="../index.html">Signal Map</a><span aria-hidden="true">→</span><a data-signal-target="records" href="../map.html">Signal records</a></div>
+      <div class="signal-depth__detail"><span>Examine:</span><a data-signal-target="families" href="../index.html#family-relationships">Groups and families</a><a data-signal-target="fluid" href="../emotion/fluid.html">Fluid</a><a data-signal-target="chronic" href="../emotion/chronic.html">Chronic</a><a data-signal-target="biology" href="neurochemistry.html">Biology and Neurochemistry</a><a class="signal-depth__explorer" data-signal-target="evidence" href="evidence-connections.html" aria-current="page">Evidence connections</a><a data-signal-target="recovery" href="recruitment-persistence-and-recovery.html">Recruitment and recovery</a></div>
+      <a class="signal-depth__return" data-signal-return href="../map.html" hidden>← Return to signal record</a>
+    </nav>
+    <nav class="evidence-breadcrumb" aria-label="Biology reading depth"><a data-signal-target="biology" href="neurochemistry.html">Biology and Neurochemistry</a><span aria-hidden="true">→</span><span aria-current="page">Evidence connections</span></nav>
+    <header class="evidence-intro">
+      <p class="evidence-status">Working evidence map · reviewed 6 September 2026</p>
+      <h1>Sensory inputs, emotions<br class="wide-break"> and neurochemistry</h1>
+      <p>Follow a recorded connection to see what supports it, what remains uncertain and which questions it raises about recovery and Return.</p>
+      <p class="evidence-scope">This view covers three emotion families and selected sensory channels. The <a href="../index.html#family-relationships">Signal Map holds the full roster</a>. Family membership here is a working research grouping.</p>
+    </header>
+
+    <section id="explorer" aria-label="Explore the evidence connections">
+      <div class="evidence-controls">
+        <label class="evidence-select">Inspect a node<select data-inspect><option value="">Whole network</option></select></label>
+        <fieldset><legend>Show layers</legend><div class="evidence-layers">
+          <label><input type="checkbox" data-layer="family" checked> Families</label>
+          <label><input type="checkbox" data-layer="emotion" checked> Emotions / states</label>
+          <label><input type="checkbox" data-layer="chemical" checked> Neurochemicals</label>
+          <label><input type="checkbox" data-layer="sensory" checked> Sensory channels</label>
+        </div></fieldset>
+      </div>
+      <p class="evidence-key">Circle area shows centrality among the recorded links. Solid lines show membership or task evidence; dotted lines include conditional, indirect, unresolved and proposed links. <a href="#diagram-method">How to read this map</a></p>
+      <p data-missing-signal hidden></p>
+      <a class="evidence-jump" href="#connection-detail">Read the selected node’s evidence ↓</a>
+      <div class="evidence-layout">
+        <div class="evidence-graph"><div data-plot></div><p data-count class="evidence-count" aria-live="polite"></p></div>
+        <section id="connection-detail" class="evidence-detail" aria-label="Selected node and its evidence"><div data-detail aria-live="polite"></div></section>
+      </div>
+      <noscript><p>The interactive diagram needs JavaScript. You can still read <a href="neurochemistry.html">the biological records</a>, <a href="recruitment-persistence-and-recovery.html">recruitment and recovery</a> and <a href="../../03-model-2-gradient/return.html">Model 2: Return</a>.</p></noscript>
+    </section>
+
+    <section id="diagram-method" class="evidence-method" aria-labelledby="method-title">
+      <h2 id="method-title">How to read this map</h2>
+      <p>The diagram records which concepts and findings have been connected in this review. Select an emotion, chemical or sensory channel to inspect its links and open the underlying sources.</p>
+      <details><summary>What does circle size mean?</summary>
+        <p>Eigenvector centrality gives a larger score to a node connected to other well-connected nodes. This calculation uses 53 nodes and 115 undirected links, with equal weight for every recorded link. The largest score is scaled to 1; circle area follows that score.</p>
+        <p>Membership, candidate associations and measured null results all participate in that calculation. The score therefore describes the structure of this evidence map. It cannot establish biological importance, activation strength, causal direction or the strength of evidence. Hiding a layer leaves every score unchanged.</p>
+      </details>
+      <details><summary>What has been reviewed, and what is still open?</summary>
+        <p>The Belonging-at-Risk pass scoped nine entries and assessed 31 proposed chemical links: 7 human task or daily-observation findings, 7 null or conditional findings, 2 null results, 12 indirect links and 3 unresolved links. The unresolved links are Shame–noradrenaline, Guilt–dopamine and Disappointment–noradrenaline.</p>
+        <p>The remaining links retain their earlier source notes and limitations. This view omits Grief, Survival-Rage and the Body-condition signal roster; sensory channels shown here are a different layer. An omitted or isolated node is a gap in this map’s coverage.</p>
+        <p>The conditional membership notes remain working interpretations. The <a href="../index.html#family-relationships">approved family definitions</a> continue to own the site’s taxonomy. Sharing a chemical does not define a family.</p>
+      </details>
+      <details><summary>How do evidence labels and Return questions work?</summary>
+        <p>Each link keeps its own study conditions, source and limits. Where shown, DIRECT, BRIDGE, INDIRECT and TEG-BLUE describe the relationship to a claim; A, B, C, M and U describe evidence strength. Read the <a href="../../evidence/protocol.html">evidence protocol</a> for the full definitions.</p>
+        <p>A reduction in pressure, a measured biological recovery and renewed usable capacities answer different questions. The Return prompts ask what has become available again in a particular episode. They do not infer a Gradient Position or a person’s organisation from an emotion.</p>
+      </details>
+      <p class="evidence-provenance">Source: the reviewed eigenvector diagram and the Development Engine’s Belonging-at-Risk link audit. <a href="../notes/decisions.md#2026-09-06--evidence-connections-explorer">Read the transfer decision and provenance</a>.</p>
+    </section>
+    <nav class="evidence-next" aria-label="Continue or return"><a data-signal-target="biology" href="neurochemistry.html">← Biology and Neurochemistry</a><a data-signal-return href="../map.html" hidden>← Return to signal record</a><a data-evidence-route="recovery" href="recruitment-persistence-and-recovery.html">Recruitment and recovery →</a><a data-evidence-route="return" href="../../03-model-2-gradient/return.html">Model 2: Return →</a></nav>
+  </main>
+  <footer data-site-footer></footer>
+  <script src="../../assets/navigation.js"></script>
+  <script src="../data/signals.js"></script>
+  <script src="../data/evidence-connections.js"></script>
+  <script src="../../assets/evidence-connections.js"></script>
+  <script src="../../assets/signal-depth.js?v=20260906-evidence"></script>
+</body>
+</html>

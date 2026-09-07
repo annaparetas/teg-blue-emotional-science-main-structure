@@ -11,6 +11,10 @@ that the process is absent.
 2. Find the signal in the [Emotion Map](index.html). Open its [interactive record](map.html) or its section in [the generated signal records](signal-records.md).
 3. Follow its exact Fluid and Chronic source links. Keep the signal's identity and family constant while comparing its participation. Body signals currently have no individual Chronic tables.
 4. Read its Biology and Neurochemistry entry, including evidence status and limits. Family-level associations do not establish an individual emotion's mechanism.
+   The [evidence connections explorer](grounding/evidence-connections.html)
+   provides a working view of selected sensory, emotion and chemical links.
+   Inspect each link's source and limits. Its centrality scores describe the
+   recorded graph; its conditional family notes do not replace site membership.
 5. Consult the model owner only for the question that needs it. Record what is still unresolved before drafting a synthesis.
 
 ## Follow group → family → signal

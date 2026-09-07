@@ -29,12 +29,23 @@
     ]
   },
   {
+    "path": "01-signal-map/grounding/evidence-connections.html",
+    "active": true,
+    "reason": "Active navigable page",
+    "stylesheets": [
+      "../../assets/teg-blue.css",
+      "../../assets/signal-depth.css",
+      "../../assets/evidence-connections.css"
+    ]
+  },
+  {
     "path": "01-signal-map/grounding/neurochemistry.html",
     "active": true,
     "reason": "Active navigable page",
     "stylesheets": [
       "../../assets/page-responsibility.css",
-      "../../assets/signal-depth.css?v=20260904-navigation"
+      "../../assets/signal-depth.css?v=20260904-navigation",
+      "../../assets/evidence-connections.css"
     ]
   },
   {
@@ -43,7 +54,8 @@
     "reason": "Active navigable page",
     "stylesheets": [
       "../../assets/page-responsibility.css",
-      "../../assets/signal-depth.css?v=20260904-navigation"
+      "../../assets/signal-depth.css?v=20260904-navigation",
+      "../../assets/evidence-connections.css"
     ]
   },
   {
@@ -196,7 +208,8 @@
     "reason": "Active navigable page",
     "stylesheets": [
       "../assets/page-responsibility.css",
-      "../assets/gradient-navigation.css"
+      "../assets/gradient-navigation.css",
+      "../assets/evidence-connections.css"
     ]
   },
   {

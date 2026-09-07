@@ -1,5 +1,49 @@
 # Decisions · Emotional Signal Map
 
+## 2026-09-06 · Evidence connections explorer
+
+Anna approved placing the reviewed diagram beneath Biology and Neurochemistry,
+with an entry preview, emotion-specific links and a path back to the selected
+signal. [Sensory inputs, emotions and neurochemistry](../grounding/evidence-connections.html)
+is its single site home. It is working evidence navigation.
+
+Anna also approved a visible **Evidence connections** button in the shared
+**Emotions and Signal Map** navigation. It appears in every top and bottom
+navigation bar across the eight reading pages, preserves the selected signal
+and reading, and marks the explorer as the current page when open.
+
+The site snapshot preserves all 53 nodes, 115 undirected recorded links and
+eigenvector-centrality scores from `belonging-risk-reviewed.html`, reviewed
+6 September 2026. Circle area describes connectivity in that recorded graph.
+Membership, null, indirect and unresolved links remain in the calculation;
+the score does not measure biological importance or evidence strength.
+
+The Development Engine sources are
+`evidence/reviews/belonging-at-risk-and-return.md`,
+`evidence/reviews/belonging-at-risk-link-audit.csv`,
+`evidence/reviews/belonging-at-risk-link-sources.json` and
+`evidence/reviews/belonging-at-risk-diagram-review.json`. Earlier sensory and
+chemical links retain the separate diagram task's review notes and sources.
+The site data records a hash of the reviewed visualization source. Its original
+inline version and both tasks' research files remain preserved.
+
+The transfer includes the 31 link decisions and nine conditional membership
+and Return questions as working grounding. It does not replace the approved
+family roster, assign emotion-specific Gradient Positions or extend the
+review to the omitted signals. Grief, Survival-Rage and Body-condition signals
+remain available through their existing records. The diagram states its
+limited coverage explicitly.
+
+Links preserve the selected signal and Fluid/Chronic reading. Recruitment and
+recovery and Model 2's Return page provide a route back to the diagram. When
+arriving from a Chronic reading, the Return page states its existing Fluid
+scope while preserving the Chronic reading for the return trip. No Model 2
+definition or Return claim changes in this navigation transfer.
+
+The standalone page uses ordinary website links in place of the original
+Codex follow-up action. The page, presentation and navigation are site-owned;
+the Engine retains the complete research and source extraction.
+
 Dated entries, newest first. A decision recorded here changes the canon page
 only when the page is edited and its "last approved" date moves.
 

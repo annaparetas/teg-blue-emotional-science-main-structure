@@ -5,6 +5,8 @@
 .signal-depth a{display:inline-block;padding:6px 8px;color:inherit;text-decoration:none;border-radius:5px}
 .signal-depth a:hover{text-decoration:underline}
 .signal-depth a[aria-current=page]{background:#174e59;color:white;font-weight:700}
+.signal-depth a.signal-depth__explorer{padding:8px 12px;border:1px solid var(--cyan-deep,#087f91);background:var(--surface-2,#e2f0f1);font-weight:700}
+.signal-depth a.signal-depth__explorer[aria-current=page]{background:var(--cyan-deep,#087f91);color:var(--bg,#fff)}
 .signal-depth a:focus-visible,.signal-detail summary:focus-visible{outline:3px solid #16899d;outline-offset:3px}
 .signal-depth__return{display:block!important;margin-top:8px;font-weight:750}
 .signal-depth [hidden]{display:none!important}
