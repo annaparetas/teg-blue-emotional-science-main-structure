@@ -4,6 +4,22 @@ The model describes present organism-level resource and capacity organisation
 across Fluid and Chronic reference positions. Read a position as an organisation
 in a context, not a whole person, emotion, behaviour, diagnosis or moral category.
 
+## Current scope · Chronic work is open
+
+Anna opened Chronic research on 6 September 2026 after the deliberately
+Fluid-focused phase. Every task must declare Fluid, Chronic or an explicit
+comparison and stay within it. The shared premise predates this permission;
+neither its existence nor an old “Fluid only” task scope should override the
+[current protocol](../evidence/protocol.html#research-scope).
+
+Begin with the existing Chronic spine: map its persistence routes to the
+sixteen lenses, identify evidence and gaps, and develop the PEND-008 profile
+alongside PEND-010's Return questions. F02 receives claims about childhood
+conditions, emotion override and access. Those claims need their own evidence;
+they are not a blanket hold on other Chronic questions. Keep completed Fluid
+reviews bounded and preserve the separate status of research, working page
+wording and approved model definitions.
+
 ## Follow the explanation
 
 1. [Model overview](index.html): what the Gradient describes and the ownership boundaries.
@@ -20,7 +36,7 @@ and offers an explicit return link. Exact source links can also open the relevan
 cell in the original table. Model 2 uses Model → position → processes → updating;
 it does not borrow the Signal Map's group and family taxonomy.
 
-## One premise for Fluid and Chronic; two unfinished developments
+## One premise for Fluid and Chronic; two developments now open
 
 There is one [shared governing premise](premise.html#fluid-chronic), not a
 missing second premise page. The B example illustrates present-demand
@@ -32,8 +48,9 @@ to the existing comparison and scientific spine explicit.
   It does not supply a separate premise or infer usual organisation from one
   access configuration.
 - [PEND-010](../../inner-compass-nervous-system-organization-gradient/development/roadmap.md#pend-010--write-the-chronic-side-of-the-return-companion-work)
-  develops the Chronic Return companion. Existing Chronic definitions and
-  persistence routes do not complete that matrix.
+  now begins research and drafting for the Chronic Return companion. Existing
+  definitions and persistence routes provide its starting point; they do not
+  complete the matrix.
 - The [6 September Return revision](notes/decisions.md#2026-09-06--shared-premise-and-return-page-preparation)
   prepares the first Model 2 page package from the completed Regulation evidence
   consolidation. It remains working wording for review. PEND-024 keeps four

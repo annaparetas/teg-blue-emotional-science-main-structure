@@ -43,6 +43,7 @@ ESM_S1 = "codex/esm-s1-emotional-signal-map"   # newer signal-map text
 # provenance; the site owns the current curated presentation. The date records
 # the owner decision that changed the transfer mode.
 GRADUATED_SITE_FILES = {
+    "evidence/protocol.html": "6 September 2026",
     "02-model-1-ess-cls-me/me-access.html": "4 September 2026",
     "02-model-1-ess-cls-me/access.html": "4 September 2026",
     "02-model-1-ess-cls-me/processing.html": "4 September 2026",

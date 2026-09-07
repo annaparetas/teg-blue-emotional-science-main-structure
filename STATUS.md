@@ -6,6 +6,23 @@ transferred. Dates only; no commit hashes, branch names or session codes.
 
 Last updated: 6 September 2026.
 
+## Chronic research opened · 6 September 2026
+
+Anna has explicitly opened Chronic work after the Fluid-focused phase.
+The strict rule now requires every review to declare Fluid, Chronic or an
+explicit comparison and remain within that scope. The
+[approved protocol update](evidence/protocol.html#research-scope) opens Chronic
+evidence and drafting; it does not treat existing Chronic pages as completed
+science. The [evidence decision](evidence/notes/decisions.md#2026-09-06--chronic-research-opened-with-explicit-scope)
+records the owner boundaries and changed prerequisites.
+
+Next: map the existing Chronic spine's routes to the sixteen lenses, evidence
+and missing comparisons. Develop PEND-008's profile alongside PEND-010's
+Chronic Return questions and coordinate with PEND-056. F02 receives childhood
+and emotion-override claims; those reviews are not a blanket prerequisite for
+every Chronic question. Finish the current Model 2 page preparation and keep
+the remaining Regulation owner handoffs visible.
+
 ## Model 2 page revisions prepared · 6 September 2026
 
 The [governing premise](03-model-2-gradient/premise.html#fluid-chronic) now makes

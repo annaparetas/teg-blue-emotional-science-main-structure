@@ -4,6 +4,22 @@ This repository is the canonical, navigable TEG-Blue site. It holds one canon
 page per conceptual owner, the connected site structure and curated grounding
 or working context needed to understand each concept.
 
+## Current research scope · authorised 6 September 2026
+
+Chronic research is now open. The earlier Fluid-only working restriction does
+not govern the whole programme. Each task must declare **Fluid**, **Chronic**
+or an **explicit comparison**, and keep its evidence and conclusions within
+that scope. Do not silently shift a Fluid task into Chronic explanation.
+
+The [evidence protocol](evidence/protocol.html#research-scope) records the current
+rule. Start Chronic work from the existing scientific spine and named owner
+questions. PEND-008's profile and PEND-010's Return research may develop together;
+their unfinished state does not prohibit starting. F02 evidence requirements
+apply to childhood and emotion-override claims. Research permission does not
+approve new mechanisms, complete a matrix or activate unrelated paused tasks.
+
+## Site ownership and transfer
+
 The active development engine remains
 `../inner-compass-nervous-system-organization-gradient/`. Its research,
 owner reviews, experiments, branches and full provenance do not become site
