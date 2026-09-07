@@ -2,6 +2,33 @@
 
 Dated entries, newest first.
 
+## 2026-09-06 · Inner Compass participation and Model 4 development
+
+Anna accepted this direction in **Connect tools to new engine**
+(`01a07a00-457d-7991-a862-4e9f9dcb71df`) and asked the coordinating task to
+register it for development:
+
+> The Inner Compass describes how ME recognises the organisation currently shaping experience, what possibilities become available, and how ME can participate in maintaining or changing that organisation.
+
+Its governing question is what enables or constrains ME's participation in
+movement across the Four-Mode Gradient. The accepted direction includes
+maintaining fitting protection, graded and context-dependent participation,
+and organisation changing without conscious direction. A visited position and
+a mode repeatedly returned to require different timeframes and evidence.
+
+[PEND-056](../../../inner-compass-nervous-system-organization-gradient/development/roadmap.md#pend-056)
+owns the new definition package after Regulation consolidation. The
+[source proposal](../../../inner-compass-nervous-system-organization-gradient/development/model-notes/inner-compass-tool-requirements-and-model-4-proposal.md)
+contains the fifteen-tool review and eight cases. Four comparable mode records,
+the fourteen-reading crosswalk, self/observer reading rules and an ownership
+comparison must make the proposal concrete before tool reconnection.
+
+This reopens the earlier “not Model 4” designation for a recorded architecture
+decision. It does not rename canonical pages or transfer Models 1–3's
+responsibilities. Access, organisation, timecourse, conduct and power remain
+distinct while the model, map and product roles are developed. `.com` tool
+implementation is paused pending the engine definitions.
+
 ## 2026-09-04 · Mixed or unknown becomes an explicit open reading
 
 The working Compass view now preserves what is known when the plane cannot be
@@ -107,6 +134,9 @@ Power–Domination rejected; deferred items listed.
 
 ## Open
 
+- PEND-056: develop the accepted participation account, four mode records and
+  fourteen-reading crosswalk; decide Model 4 designation and detailed ownership
+  before canonical migration and `.com` tool reconnection.
 - The deferred items in the decision: mixed-result presentation, visual
   grammar and palette, subtitle pair, release gate for public power
   findings, the three candidate names.

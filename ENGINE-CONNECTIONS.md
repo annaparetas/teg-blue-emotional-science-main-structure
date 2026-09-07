@@ -11,11 +11,11 @@ This is a relationship map, not a migration plan. It records how every current f
 
 ## Coverage
 
-- **212 Engine files listed: 212 of 212.**
+- **213 Engine files listed: 213 of 213.**
 - 87 reviewed carry relationships.
 - 13 site-owned presentations with continuing Engine provenance.
 - 17 documented concept connections already present in the site transfer logic.
-- 95 additional explicit concept, visual, archive or repository-support connections.
+- 96 additional explicit concept, visual, archive or repository-support connections.
 
 The count includes tracked content and untracked non-ignored content, including repository guidance such as `.gitignore`. Ignored macOS metadata and Git internals are excluded, making the inventory stable across worktrees.
 
@@ -80,6 +80,7 @@ Run `python3 scripts/build-engine-connections.py --check` after either repositor
 | `development/model-notes/chronic-love-nine-layer-signal-structure.md` | [`01-signal-map/notes/chronic-love-nine-layer-signal-structure.md`](01-signal-map/notes/chronic-love-nine-layer-signal-structure.md) | **Reviewed carry relationship.** The Engine file remains the source; the site file is the reviewed, navigable snapshot named in the carry manifest. |
 | `development/model-notes/fluid-chronic-emotion-analysis-reference-schema.md` | [`01-signal-map/notes/fluid-chronic-emotion-analysis-reference-schema.md`](01-signal-map/notes/fluid-chronic-emotion-analysis-reference-schema.md) | **Reviewed carry relationship.** The Engine file remains the source; the site file is the reviewed, navigable snapshot named in the carry manifest. |
 | `development/model-notes/fluid-love-nine-layer-signal-structure.md` | [`01-signal-map/notes/fluid-love-nine-layer-signal-structure.md`](01-signal-map/notes/fluid-love-nine-layer-signal-structure.md) | **Reviewed carry relationship.** The Engine file remains the source; the site file is the reviewed, navigable snapshot named in the carry manifest. |
+| `development/model-notes/inner-compass-tool-requirements-and-model-4-proposal.md` | [`06-inner-compass-four-modes/index.html`](06-inner-compass-four-modes/index.html)<br>[`06-inner-compass-four-modes/notes/decisions.md`](06-inner-compass-four-modes/notes/decisions.md)<br>[`STATUS.md`](STATUS.md) | **Additional explicit connection.** Accepted Inner Compass participation direction and proposed Model 4 development, tracked by PEND-056 after Regulation consolidation; four-mode definitions, ownership, designation and tool reconnection remain pending. |
 | `development/model-notes/interaction-ideas.md` | [`02-model-1-ess-cls-me/me-access.html`](02-model-1-ess-cls-me/me-access.html)<br>[`03-model-2-gradient/index.html`](03-model-2-gradient/index.html)<br>[`06-inner-compass-four-modes/compass.html`](06-inner-compass-four-modes/compass.html) | **Additional explicit connection.** Historical interaction-design proposal, implemented in ME Access Dials; retained for provenance rather than as a request for another controller. |
 | `development/model-notes/nine-layer-emotional-signal-participation-filter.md` | [`01-signal-map/notes/nine-layer-emotional-signal-participation-filter.md`](01-signal-map/notes/nine-layer-emotional-signal-participation-filter.md) | **Reviewed carry relationship.** The Engine file remains the source; the site file is the reviewed, navigable snapshot named in the carry manifest. |
 | `development/model-notes/regulation-and-return-concepts.md` | [`03-model-2-gradient/notes/regulation-and-return-concepts.md`](03-model-2-gradient/notes/regulation-and-return-concepts.md) | **Reviewed carry relationship.** The Engine file remains the source; the site file is the reviewed, navigable snapshot named in the carry manifest. |
