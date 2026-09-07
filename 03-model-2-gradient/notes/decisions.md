@@ -3,6 +3,72 @@
 Dated entries, newest first. A decision recorded here changes a canon page
 only when the page is edited and its "last approved" date moves.
 
+## 2026-09-06 · Shared premise and Return page preparation
+
+**Status: working page revisions prepared for Anna's review.** Anna asked
+whether the governing premise had a Chronic version and authorised the next
+page-preparation step after the Regulation consolidation. The existing
+approved premise, positions and owner boundaries remain in force; this
+entry does not approve new position mechanisms or complete the open matrices.
+
+**Owner and source.** Model 2 owns the shared premise and Gradient Return
+questions. The exact research input is the Engine's
+[fourteen-route consolidation](../../../inner-compass-nervous-system-organization-gradient/evidence/reviews/regulation-route-consolidation.md),
+especially its Model 2 terms-and-table handoff and live .org allocation
+cross-check. The existing [Fluid / Chronic definitions](../fluid-chronic.html)
+and [Chronic scientific spine](../grounding/chronic-scientific-spine.md) supply
+the shared-premise reading route. No new source grade is assigned.
+
+Prepared page changes:
+
+- [Governing premise](../premise.html#fluid-chronic): explicitly applies to
+  both readings, with paired B questions and links to the existing Chronic
+  comparison and grounding. Its sixteen lenses remain unchanged. Continuing
+  adversity is distinguished from persistence despite changed conditions.
+- [Fluid / Chronic comparison](../fluid-chronic.html#proposition): links back
+  to the shared premise. This is navigation and scope clarification, not a
+  new Chronic definition.
+- [Return workbench](../return.html): separates regulation, measured recovery,
+  specified renewal and Return relative to present conditions. The full
+  restoration row retains each organising priority and asks what renewal
+  actually occurs. A's coordination costs and possible benefits are named
+  separately; no A → X necessity or exclusive renewal at X follows.
+- “Present organising demand” replaces “Regulatory task.” Candidate research
+  anchors no longer claim that arousal identifies X or A, that generic bonding
+  evidence establishes renewal, or that all recovery uses one reference.
+  The strategy row asks about tactic, target, context and result without
+  assigning strategy families to Positions.
+- The [historical concepts](regulation-and-return-concepts.md) and
+  [archived workbench](sources/regulation-and-return-workbench.html) retain
+  their source text with a prominent current-reading notice.
+
+**Open work.** PEND-008 revises the multidimensional persistence and flexibility
+profile; PEND-010 separately develops the Chronic Return companion. PEND-024
+retains all four unfilled Fluid rows. PEND-023/026 retain specific renewal,
+timing and citation questions. PEND-025 retains reconciliation in the Engine
+companions and other active pages; historical notices do not count as
+rewriting them. The remaining Model 1/Model 3, Signal Map and F01–F12
+consolidation handoffs are not implemented by this Model 2 package.
+
+**Git scope.** Prepared from site main `72f653f` on
+`codex/m2-return-page-preparation`, in the isolated
+`.worktrees/m2-return-page-preparation/teg-blue-emotional-science-main-structure`
+worktree. The eight changed files are the three pages, two historical notices,
+this decision record, the session guide and `STATUS.md`. The Engine and
+live .org files, original Gradient table, generated records and another
+task's connection-map changes are outside this package.
+
+**Verification.** All 166 site HTML/Markdown files pass the local-link check;
+the new Markdown heading links resolve. Model 2 and Signal Map generated data
+remain current, including sixteen lenses and both readings for all seven
+positions. The carry ownership report passes. Desktop (1440 px) and mobile
+(390 px) browser checks cover the shared-premise route, Chronic B context,
+the return to its record, the evidence-map entry, table keyboard scrolling,
+four unfilled rows and the disabled Chronic matrix. No page script errors,
+duplicate IDs or page-width overflow were found. The preview's existing
+missing favicon is the only recorded network warning. Both historical source
+bodies remain unchanged beneath their notices.
+
 ## 2026-09-04 · Model 2 dropdown in the shared header
 
 Anna approved a Model 2 dropdown like the Emotions menu. It lists the overview,
@@ -153,10 +219,14 @@ Working source: the archived
   Sustained Threat Management / Persistent Demand Management; Power
   Mobilisation / Extreme Defensive Mobilisation; Shutdown as umbrella;
   "Gradient Position" vs "reference organisation".
-- Regulation: pass the first definition gate.
+- Regulation: the architecture and bounded evidence consolidation are complete;
+  review the prepared Model 2 Return wording and integrate the remaining owner
+  handoffs. This does not complete every position-specific mechanism.
 - Profile: revise the visual implementation with the capacity-configuration
   work.
-- Return matrices: Fluid descriptions unwritten; Chronic routes not started.
-- Merge depth and intermediate-layers into one page.
+- Return matrices: four Fluid rows remain unfilled; the Chronic companion is
+  still open under PEND-010, separately from the PEND-008 profile revision.
+- Depth is the overview and intermediate-layers its detailed expansion; full
+  editorial consolidation remains open.
 - Row-level grounding against the shared source record.
 - The X / A↔B labelling correction above.

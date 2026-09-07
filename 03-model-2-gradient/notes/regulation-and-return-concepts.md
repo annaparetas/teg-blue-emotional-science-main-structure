@@ -1,5 +1,14 @@
 # Regulation and Return · settled concepts
 
+> **Historical record · current reading updated 6 September 2026.** “Settled”
+> below records the 12 August discussion. The
+> [consolidated evidence and eleven Return dispositions](../../../inner-compass-nervous-system-organization-gradient/evidence/reviews/regulation-route-consolidation.md)
+> narrow or retire several older claims, including obligatory A → X routing
+> and renewal occurring only at X. Read the
+> [current working Return page](../return.html) and
+> [dated revision record](decisions.md#2026-09-06--shared-premise-and-return-page-preparation)
+> for the prepared wording. The historical text below is preserved.
+
 Every concept currently load-bearing in the Return model, with what it is, what
 work it does, and whether it was settled in the 12 August 2026 session or
 carried from earlier files.

@@ -20,6 +20,25 @@ and offers an explicit return link. Exact source links can also open the relevan
 cell in the original table. Model 2 uses Model → position → processes → updating;
 it does not borrow the Signal Map's group and family taxonomy.
 
+## One premise for Fluid and Chronic; two unfinished developments
+
+There is one [shared governing premise](premise.html#fluid-chronic), not a
+missing second premise page. The B example illustrates present-demand
+mobilisation; the shared-scope section makes the Chronic questions and the route
+to the existing comparison and scientific spine explicit.
+
+- [PEND-008](../../inner-compass-nervous-system-organization-gradient/development/roadmap.md#pend-008--replace-one-fluidchronic-depth-with-a-multidimensional-profile)
+  revises the persistence and flexibility profile and its visual expression.
+  It does not supply a separate premise or infer usual organisation from one
+  access configuration.
+- [PEND-010](../../inner-compass-nervous-system-organization-gradient/development/roadmap.md#pend-010--write-the-chronic-side-of-the-return-companion-work)
+  develops the Chronic Return companion. Existing Chronic definitions and
+  persistence routes do not complete that matrix.
+- The [6 September Return revision](notes/decisions.md#2026-09-06--shared-premise-and-return-page-preparation)
+  prepares the first Model 2 page package from the completed Regulation evidence
+  consolidation. It remains working wording for review. PEND-024 keeps four
+  Fluid rows open; PEND-025 retains the remaining cross-page reconciliation.
+
 ## Answer the same sixteen questions
 
 The questions are read directly from [the governing premise](premise.html#lenses).
