@@ -7,14 +7,16 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 SITE = Path(__file__).resolve().parents[1]
-ENGINE = SITE.parent / "inner-compass-nervous-system-organization-gradient"
+ENGINE_NAMES = ("teg-blue-development", "inner-compass-nervous-system-organization-gradient")
+SITE_NAMES = ("teg-blue-framework-site", "teg-blue-emotional-science-main-structure")
+ENGINE = next((SITE.parent / name for name in ENGINE_NAMES if (SITE.parent / name).is_dir()), SITE.parent / ENGINE_NAMES[0])
 
 class Handler(SimpleHTTPRequestHandler):
     def translate_path(self, path: str) -> str:
         parts = unquote(urlsplit(path).path).lstrip("/").split("/")
         root = SITE
-        if parts[0] in {SITE.name, ENGINE.name}:
-            root = SITE if parts.pop(0) == SITE.name else ENGINE
+        if parts[0] in SITE_NAMES + ENGINE_NAMES:
+            root = SITE if parts.pop(0) in SITE_NAMES else ENGINE
         target = root.joinpath(*parts).resolve()
         if not target.is_relative_to(root.resolve()) or ".git" in parts:
             return str(SITE / ".unavailable-preview-path")

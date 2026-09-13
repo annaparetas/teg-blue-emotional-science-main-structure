@@ -1,4 +1,4 @@
-# TEG-Blue Emotional Science
+# TEG-Blue Framework Site
 
 This is the canonical, navigable TEG-Blue site: emotions as information and
 its Emotional Signal Map, three connected models, the twelve frameworks, the
@@ -7,7 +7,7 @@ Inner Compass with its four modes, and the shared reference distinctions.
 For individual emotion work, start with the [Signal Map session guide](01-signal-map/SESSION-GUIDE.md) and [connected signal records](01-signal-map/signal-records.md).
 
 The deep research and development work remains active in the sibling
-`inner-compass-nervous-system-organization-gradient/` repository. Approved
+`teg-blue-development/` repository. Approved
 canon and explicitly labelled working or grounding material can be carried
 from that Development Engine into the concept that owns it here.
 
@@ -18,6 +18,12 @@ active site. The transfer register in [STATUS.md](STATUS.md) records what has
 moved and what remains open. [ENGINE-CONNECTIONS.md](ENGINE-CONNECTIONS.md)
 records the non-destructive relationship between every current Development
 Engine file and the relevant site concept or repository control.
+
+Folder-name clarification · 13 September 2026: this repository is
+`teg-blue-framework-site/` under the parent `teg-blue-emotional-science/`.
+The former Claude-designed sibling mentioned above was moved to Desktop by
+Anna with `-claude` appended. It is not the new workspace parent. Old repository
+paths remain compatibility symlinks so existing sessions and links keep working.
 
 Start with [index.html](index.html).
 
@@ -164,7 +170,7 @@ biology and Return connect. Generate the position data and readable records with
 
 ## Connected site and Engine preview
 
-Run `python3 scripts/serve.py` from this repository. The site opens at the preview root; the Engine is mounted under `/inner-compass-nervous-system-organization-gradient/`. This shared server resolves sibling links to ME Access Dials and keeps both repositories on one browser origin. A plain server exposing only the Engine folder cannot follow the consolidated site routes.
+Run `python3 scripts/serve.py` from this repository. The site opens at the preview root; the Development Engine is mounted under `/teg-blue-development/`. Old repository URL prefixes remain supported. This shared server resolves sibling links to ME Access Dials and keeps both repositories on one browser origin. A plain server exposing only the Engine folder cannot follow the consolidated site routes.
 
 
 ## Presentation review

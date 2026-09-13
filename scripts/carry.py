@@ -34,8 +34,9 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
-ENGINE = ROOT.parent / "inner-compass-nervous-system-organization-gradient"
-ENGINE_REL = "../inner-compass-nervous-system-organization-gradient"
+ENGINE_NAMES = ("teg-blue-development", "inner-compass-nervous-system-organization-gradient")
+ENGINE = next((ROOT.parent / name for name in ENGINE_NAMES if (ROOT.parent / name).is_dir()), ROOT.parent / ENGINE_NAMES[0])
+ENGINE_REL = f"../{ENGINE.name}"
 ESM_S1 = "codex/esm-s1-emotional-signal-map"   # newer signal-map text
 
 # These files crossed from the Engine as reviewed snapshots and then graduated
@@ -365,8 +366,8 @@ def rewrite(link: str, old_dir: str, new_dir: str) -> str:
     if parsed.scheme or parsed.netloc or link.startswith("#") or not link:
         return link
     old_path = posixpath.normpath(posixpath.join(old_dir, parsed.path))
-    site_prefix = "../teg-blue-emotional-science-main-structure/"
-    if old_path.startswith(site_prefix):
+    site_prefix = next((prefix for prefix in ("../teg-blue-framework-site/", "../teg-blue-emotional-science-main-structure/") if old_path.startswith(prefix)), None)
+    if site_prefix is not None:
         # Engine links can now point directly to their graduated site owner.
         target, keep = old_path[len(site_prefix):], parsed.fragment
     elif old_path.startswith("../"):

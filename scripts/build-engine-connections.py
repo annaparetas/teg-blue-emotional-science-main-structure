@@ -14,7 +14,8 @@ from urllib.parse import quote
 
 
 ROOT = Path(__file__).resolve().parents[1]
-ENGINE = ROOT.parent / "inner-compass-nervous-system-organization-gradient"
+ENGINE_NAMES = ("teg-blue-development", "inner-compass-nervous-system-organization-gradient")
+ENGINE = next((ROOT.parent / name for name in ENGINE_NAMES if (ROOT.parent / name).is_dir()), ROOT.parent / ENGINE_NAMES[0])
 OUTPUT = ROOT / "ENGINE-CONNECTIONS.md"
 CARRY_PATH = ROOT / "scripts" / "carry.py"
 
@@ -176,7 +177,8 @@ def relationships(files: list[str]):
 
     migration = json.loads((ENGINE / "development/registers/framework-identifier-migration.json").read_text())
     for move in migration["paths"]:
-        if move["repo"] != ENGINE.name:
+        # Dated records retain their original repository name after a folder move.
+        if move["repo"] not in ENGINE_NAMES:
             continue
         targets, _, _ = rows[move["new"]]
         rows[move["old"]] = (targets, "Legacy framework path; compatibility route to " + move["new"] + ".", "Additional explicit connection")

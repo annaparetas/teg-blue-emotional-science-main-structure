@@ -21,7 +21,7 @@ approve new mechanisms, complete a matrix or activate unrelated paused tasks.
 ## Site ownership and transfer
 
 The active development engine remains
-`../inner-compass-nervous-system-organization-gradient/`. Its research,
+`../teg-blue-development/`. Its research,
 owner reviews, experiments, branches and full provenance do not become site
 authority merely because a file has been carried here.
 
@@ -29,7 +29,7 @@ Before editing:
 
 1. identify the exact Anna-approved decision being transferred;
 2. identify its conceptual owner and source in
-   `../inner-compass-nervous-system-organization-gradient/`;
+   `../teg-blue-development/`;
 3. preserve the distinction among approved architecture, provisional ideas and
    open decisions;
 4. label carried research, working notes and unresolved owner language as
@@ -48,6 +48,12 @@ Before editing:
     preserve their Engine provenance, but do not overwrite them from an older
     Engine snapshot; later Engine research crosses through an explicit review,
     a site edit and a dated decision entry.
+
+Path clarification · 13 September 2026: this repository is now
+`teg-blue-framework-site/` inside the parent `teg-blue-emotional-science/`.
+Item 9 refers to the former Claude-designed sibling structure, since moved to
+Desktop by Anna with `-claude` appended; it does not refer to the new parent.
+Old repository names remain compatibility symlinks, not extra site copies.
 
 After editing, verify local links, HTML structure, keyboard access, responsive
 layout, generated Signal Map data, the ownership report and Git scope. Commit
